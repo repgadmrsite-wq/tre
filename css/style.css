@@ -96,7 +96,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
     position: relative;
     padding: 220px 0 200px 0;
-    background: url('https://images.unsplash.com/photo-1599699499802-54f3d64c6984?q=80&w=1920') no-repeat center center;
+    background: url('https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=1920') no-repeat center center;
     background-size: cover;
     color: var(--white-color);
 }
@@ -279,4 +279,100 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
     pointer-events: none;
     z-index: 100;
+}
+
+/* --- LOGIN PAGE --- */
+.login-page-body {
+    padding-top: 0;
+}
+.login-container {
+    display: flex;
+    min-height: 100vh;
+}
+.login-form-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+.login-form {
+    max-width: 400px;
+    width: 100%;
+}
+.login-brand {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--dark-color);
+    text-decoration: none;
+}
+.login-art-side {
+    flex: 1;
+    background: url('https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=800') no-repeat center center;
+    background-size: cover;
+}
+@media (max-width: 991.98px) {
+    .login-art-side {
+        display: none;
+    }
+    .login-form-wrapper {
+        padding: 1rem;
+    }
+}
+
+/* --- DASHBOARD --- */
+.dashboard-body {
+    background-color: var(--bg-light);
+}
+.dashboard-wrapper {
+    display: flex;
+}
+.dashboard-sidebar {
+    width: 260px;
+    background-color: var(--dark-color);
+    min-height: 100vh;
+    color: var(--white-color);
+}
+.sidebar-header {
+    padding: 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.sidebar-brand {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--white-color);
+}
+.sidebar-nav {
+    padding: 1rem;
+}
+.sidebar-nav .nav-item {
+    margin-bottom: 0.5rem;
+}
+.sidebar-nav .nav-link {
+    display: flex;
+    align-items: center;
+    color: rgba(255,255,255,0.7);
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+}
+.sidebar-nav .nav-link:hover {
+    background-color: rgba(255,255,255,0.1);
+    color: var(--white-color);
+}
+.sidebar-nav .nav-link.active {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+.sidebar-nav .nav-link i {
+    margin-left: 0.75rem;
+    font-size: 1.1rem;
+}
+.dashboard-content {
+    flex-grow: 1;
+}
+.stat-card .stat-icon {
+    font-size: 3rem;
+    opacity: 0.3;
 }
