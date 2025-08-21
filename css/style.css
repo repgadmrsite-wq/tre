@@ -1,179 +1,187 @@
 /* Import Vazirmatn font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800&display=swap');
 
-/* --- Custom Colors & Theme --- */
+/* --- THEME VARIABLES --- */
 :root {
-    --aurora-pink: #ff00c3;
-    --aurora-blue: #007cf0;
-    --aurora-green: #00dfa2;
-    --dark-bg: #111827; /* Dark blue-gray */
-    --light-text: #f9fafb;
-    --subtle-text: #9ca3af;
-    --glass-bg: rgba(31, 41, 55, 0.5); /* Semi-transparent dark gray */
-    --glass-border: rgba(255, 255, 255, 0.1);
+    /* --- Light Theme (Default) --- */
+    --bg-color: #f8f9fa;
+    --text-color: #212529;
+    --subtle-text-color: #6c757d;
+    --primary-accent: #0d6efd;
+    --secondary-accent: #6f42c1;
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(0, 0, 0, 0.1);
+    --form-bg: #ffffff;
+    --form-border: #ced4da;
+    --card-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    --aurora-opacity: 0; /* Hidden in light mode */
 }
 
-/* --- Aurora Background & General Styles --- */
+body.dark {
+    /* --- Dark Theme --- */
+    --bg-color: #111827;
+    --text-color: #f9fafb;
+    --subtle-text-color: #9ca3af;
+    --primary-accent: #00aaff;
+    --secondary-accent: #ff00c3;
+    --glass-bg: rgba(31, 41, 55, 0.5);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --form-bg: rgba(17, 24, 39, 0.7);
+    --form-border: var(--glass-border);
+    --card-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    --aurora-opacity: 0.3; /* Visible in dark mode */
+}
+
+/* --- GENERAL STYLES --- */
 body {
     font-family: 'Vazirmatn', sans-serif;
     direction: rtl;
     text-align: right;
-    background-color: var(--dark-bg);
-    color: var(--light-text);
+    background-color: var(--bg-color);
+    color: var(--text-color);
     position: relative;
     overflow-x: hidden;
-    padding-top: 70px; /* Offset for fixed navbar */
+    padding-top: 70px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-color);
+    font-weight: 700 !important;
+}
+
+/* --- AURORA BACKGROUND (Dark Mode Only) --- */
 body::before,
 body::after {
     content: "";
     position: absolute;
     z-index: -1;
     filter: blur(100px);
-    opacity: 0.3;
-    pointer-events: none; /* Make sure they don't interfere with clicks */
+    opacity: var(--aurora-opacity);
+    pointer-events: none;
+    transition: opacity 0.5s ease;
 }
-
 body::before {
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, var(--aurora-blue), transparent 60%);
-    top: -150px;
-    left: -150px;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, var(--primary-accent), transparent 60%);
+    top: -150px; left: -150px;
     animation: move-aurora-1 20s infinite alternate;
 }
-
 body::after {
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, var(--aurora-pink), transparent 70%);
-    bottom: -200px;
-    right: -200px;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, var(--secondary-accent), transparent 70%);
+    bottom: -200px; right: -200px;
     animation: move-aurora-2 25s infinite alternate;
 }
+@keyframes move-aurora-1 { to { transform: translate(100px, 150px) rotate(30deg); } }
+@keyframes move-aurora-2 { to { transform: translate(-150px, -100px) rotate(-40deg); } }
 
-@keyframes move-aurora-1 {
-    to { transform: translate(100px, 150px) rotate(30deg); }
-}
-
-@keyframes move-aurora-2 {
-    to { transform: translate(-150px, -100px) rotate(-40deg); }
-}
-
-/* Ensure content sits above the background */
+/* --- LAYOUT --- */
 header, main, footer {
     position: relative;
     z-index: 10;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    color: var(--light-text);
-    font-weight: 700 !important;
-}
-
-/* --- Glassmorphism Component Style --- */
+/* --- COMPONENTS --- */
 .glass-card {
     background: var(--glass-bg);
     border-radius: 1rem;
     border: 1px solid var(--glass-border);
     backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    box-shadow: var(--card-shadow);
     transition: all 0.3s ease;
 }
 
-/* --- Header --- */
 .navbar {
     background: var(--glass-bg);
     border-bottom: 1px solid var(--glass-border);
     backdrop-filter: blur(10px);
+    box-shadow: var(--card-shadow);
 }
-.navbar-brand {
-    font-size: 1.5rem;
-    color: var(--light-text);
+.navbar-brand, .nav-link:hover, .nav-link.active {
+    color: var(--text-color);
 }
 .nav-link {
     font-weight: 500;
-    color: var(--subtle-text);
+    color: var(--subtle-text-color);
 }
-.nav-link:hover, .nav-link.active {
-    color: var(--light-text);
+.navbar-toggler {
+    border-color: var(--glass-border);
 }
+.navbar-toggler-icon {
+    filter: invert(var(--is-dark, 0)); /* Quick hack for toggler icon color */
+}
+body.dark { --is-dark: 1; }
 
-/* --- Hero Section --- */
+#theme-toggle {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+.theme-icon-dark { display: none; }
+.theme-icon-light { display: inline-block; }
+body.dark .theme-icon-dark { display: inline-block; }
+body.dark .theme-icon-light { display: none; }
+
+
 #hero {
     padding: 6rem 0;
-    color: white;
 }
 #hero h1 {
     font-size: 4rem;
     font-weight: 800 !important;
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+#hero .lead {
+    color: var(--subtle-text-color);
 }
 
-/* --- Reservation Form --- */
-#reservation .glass-card {
-    border: 1px solid var(--glass-border);
-}
 .form-label {
-    color: var(--subtle-text);
+    color: var(--subtle-text-color);
 }
 .form-control, .form-select {
-    background-color: rgba(17, 24, 39, 0.7); /* Darker transparent */
-    border: 1px solid var(--glass-border);
-    color: var(--light-text);
+    background-color: var(--form-bg);
+    border: 1px solid var(--form-border);
+    color: var(--text-color);
 }
-.form-control::placeholder {
-    color: var(--subtle-text);
-}
+.form-control::placeholder { color: var(--subtle-text-color); }
 .form-control:focus, .form-select:focus {
-    background-color: rgba(17, 24, 39, 0.9);
-    border-color: var(--aurora-blue);
-    box-shadow: 0 0 0 0.25rem rgba(0, 124, 240, 0.25);
-    color: var(--light-text);
+    background-color: var(--form-bg);
+    border-color: var(--primary-accent);
+    box-shadow: 0 0 0 0.25rem rgba(from var(--primary-accent) r g b / 0.25);
+    color: var(--text-color);
 }
 
-/* --- Motorcycles Section --- */
-#motorcycles .card {
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    transition: all 0.3s ease;
-    overflow: hidden;
-}
 #motorcycles .card:hover {
     transform: translateY(-10px);
-    border-color: rgba(255, 255, 255, 0.3);
+    border-color: var(--primary-accent);
 }
-#motorcycles .card-title {
-    color: var(--light-text);
+#motorcycles .card-title { color: var(--text-color); }
+#motorcycles .card-text { color: var(--subtle-text-color); }
+.price-tag {
+    color: var(--text-color);
+    font-weight: 700;
 }
 
-/* --- Common Button Style --- */
 .btn-accent {
-    background: linear-gradient(45deg, var(--aurora-pink), var(--aurora-blue));
+    background: linear-gradient(45deg, var(--secondary-accent), var(--primary-accent));
     color: white;
     border: none;
     border-radius: 50px;
     padding: 0.75rem 1.5rem;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 .btn-accent:hover {
     color: white;
     transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
 
-/* --- How it works Section --- */
-.timeline-step {
-    position: relative;
-}
 .timeline-icon {
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(45deg, var(--aurora-blue), var(--aurora-green));
+    width: 80px; height: 80px;
+    background: linear-gradient(45deg, var(--primary-accent), var(--secondary-accent));
     border-radius: 50%;
     margin: 0 auto 1rem;
     display: flex;
@@ -187,35 +195,37 @@ h1, h2, h3, h4, h5, h6 {
     .timeline-step:not(:last-child)::after {
         content: '';
         position: absolute;
-        top: 40px;
-        left: 50%;
+        top: 40px; left: 50%;
         transform: translateY(-50%);
         width: calc(100% - 80px);
         height: 2px;
-        background-color: var(--glass-border);
+        background-color: var(--form-border);
         z-index: -1;
     }
 }
 
-/* --- Animations --- */
+#testimonials .blockquote-footer {
+    color: var(--subtle-text-color) !important;
+}
+
+#how-it-works .timeline-step p, #about .lead {
+    color: var(--subtle-text-color);
+}
+
 .fade-in-section {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
-.fade-in-section.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-}
+.fade-in-section.is-visible { opacity: 1; transform: translateY(0); }
 
-/* --- Footer --- */
 #footer {
     background-color: transparent;
     border-top: 1px solid var(--glass-border);
 }
 #footer, #footer a {
-    color: var(--subtle-text);
+    color: var(--subtle-text-color);
 }
 #footer a:hover {
-    color: var(--light-text) !important;
+    color: var(--text-color) !important;
 }

@@ -11,6 +11,9 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
+    <!-- Persian Datepicker CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.css">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -24,7 +27,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item">
                         <a class="nav-link active" href="#hero">خانه</a>
                     </li>
@@ -36,6 +39,12 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#footer">تماس با ما</a>
+                    </li>
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <button id="theme-toggle" class="btn btn-outline-secondary">
+                            <i class="bi bi-moon-stars-fill theme-icon-dark"></i>
+                            <i class="bi bi-brightness-high-fill theme-icon-light"></i>
+                        </button>
                     </li>
                 </ul>
             </div>
@@ -72,12 +81,18 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
-                                        <label for="start-date" class="form-label">تاریخ شروع</label>
-                                        <input type="text" class="form-control" id="start-date" placeholder="مثال: ۱۴۰۳/۰۷/۱۰">
+                                        <label class="form-label">تاریخ و ساعت شروع</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" data-jdp id="start-date" placeholder="انتخاب تاریخ">
+                                            <input type="time" class="form-control" id="start-time">
+                                        </div>
                                     </div>
                                     <div class="col-md-6 mb-3">
-                                        <label for="end-date" class="form-label">تاریخ پایان</label>
-                                        <input type="text" class="form-control" id="end-date" placeholder="مثال: ۱۴۰۳/۰۷/۱۲">
+                                        <label class="form-label">تاریخ و ساعت پایان</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" data-jdp id="end-date" placeholder="انتخاب تاریخ">
+                                            <input type="time" class="form-control" id="end-time">
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -106,7 +121,7 @@
                     <!-- Motorcycle 1 -->
                     <div class="col">
                         <div class="card glass-card h-100">
-                            <img src="https://via.placeholder.com/400x300.png?text=Vespa" class="card-img-top" alt="وسپا برقی">
+                            <img src="img/vespa.jpg" class="card-img-top" alt="وسپا برقی">
                             <div class="card-body p-4 d-flex flex-column">
                                 <h5 class="card-title">وسپا برقی</h5>
                                 <p class="card-text">یک انتخاب کلاسیک و دوست‌دار محیط زیست برای گشت و گذار در جزیره.</p>
@@ -120,7 +135,7 @@
                     <!-- Motorcycle 2 -->
                     <div class="col">
                         <div class="card glass-card h-100">
-                            <img src="https://via.placeholder.com/400x300.png?text=Scooter" class="card-img-top" alt="اسکوتر شهری">
+                            <img src="img/scooter.jpg" class="card-img-top" alt="اسکوتر شهری">
                             <div class="card-body p-4 d-flex flex-column">
                                 <h5 class="card-title">اسکوتر شهری</h5>
                                 <p class="card-text">یک گزینه اقتصادی و سریع برای ترددهای روزانه.</p>
@@ -134,7 +149,7 @@
                     <!-- Motorcycle 3 -->
                     <div class="col">
                         <div class="card glass-card h-100">
-                            <img src="https://via.placeholder.com/400x300.png?text=Cruiser" class="card-img-top" alt="موتور کروزر">
+                            <img src="img/cruiser.jpg" class="card-img-top" alt="موتور کروزر">
                             <div class="card-body p-4 d-flex flex-column">
                                 <h5 class="card-title">موتور کروزر</h5>
                                 <p class="card-text">برای تجربه‌ای متفاوت و هیجان‌انگیز در جاده‌های ساحلی.</p>
@@ -159,21 +174,21 @@
                             <i class="bi bi-scooter"></i>
                         </div>
                         <h3 class="h5 mt-3">۱. انتخاب موتور</h3>
-                        <p class="text-muted">موتور مورد علاقه خود را از لیست انتخاب کنید.</p>
+                        <p>موتور مورد علاقه خود را از لیست انتخاب کنید.</p>
                     </div>
                     <div class="col-md-4 timeline-step">
                         <div class="timeline-icon">
                             <i class="bi bi-card-checklist"></i>
                         </div>
                         <h3 class="h5 mt-3">۲. ثبت مشخصات</h3>
-                        <p class="text-muted">فرم کوتاه اطلاعات و زمانبندی را تکمیل کنید.</p>
+                        <p>فرم کوتاه اطلاعات و زمانبندی را تکمیل کنید.</p>
                     </div>
                     <div class="col-md-4 timeline-step">
                         <div class="timeline-icon">
                             <i class="bi bi-geo-alt-fill"></i>
                         </div>
                         <h3 class="h5 mt-3">۳. تحویل در محل</h3>
-                        <p class="text-muted">موتور را در محل دلخواه تحویل گرفته و لذت ببرید.</p>
+                        <p>موتور را در محل دلخواه تحویل گرفته و لذت ببرید.</p>
                     </div>
                 </div>
             </div>
@@ -204,7 +219,7 @@
                 <div class="row">
                     <div class="col-lg-8 mx-auto text-center">
                         <h2 class="display-5">درباره کیش‌ران</h2>
-                        <p class="lead text-white-50">ما در کیش‌ران معتقدیم که سفر به کیش باید با خاطرات خوش همراه باشد. به همین دلیل، با فراهم کردن موتورهای باکیفیت و فرآیندی آسان برای اجاره، تلاش می‌کنیم تا بهترین تجربه را برای شما رقم بزنیم. هدف ما، رضایت و لبخند شماست.</p>
+                        <p class="lead">ما در کیش‌ران معتقدیم که سفر به کیش باید با خاطرات خوش همراه باشد. به همین دلیل، با فراهم کردن موتورهای باکیفیت و فرآیندی آسان برای اجاره، تلاش می‌کنیم تا بهترین تجربه را برای شما رقم بزنیم. هدف ما، رضایت و لبخند شماست.</p>
                     </div>
                 </div>
             </div>
@@ -227,6 +242,9 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <!-- Persian Datepicker JS -->
+    <script type="text/javascript" src="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.js"></script>
 
     <!-- Custom JS -->
     <script src="js/script.js"></script>
