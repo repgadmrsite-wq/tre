@@ -6,7 +6,6 @@
     <title>کیش‌ران - اجاره موتور در کیش</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -18,12 +17,11 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link active" href="#hero">خانه</a></li>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">خانه</a></li>
                     <li class="nav-item"><a class="nav-link" href="#motorcycles">موتورها</a></li>
                     <li class="nav-item"><a class="nav-link" href="#how-it-works">چطور کار می‌کند؟</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">درباره ما</a></li>
-                    <li class="nav-item ms-lg-3"><a href="login.html" class="btn btn-primary">ورود / ثبت نام</a></li>
                 </ul>
             </div>
         </div>
@@ -32,19 +30,24 @@
     <main>
         <section id="hero">
             <div class="container text-center">
-                <h1 class="hero-title">آزادی را در کیش تجربه کنید</h1>
-                <p class="hero-subtitle">با کیش‌ران، هر لحظه یک ماجراجویی جدید است.</p>
+                <h1 class="hero-title">سفری به‌یادماندنی در جزیره</h1>
+                <p class="hero-subtitle">با موتورهای ما، هر گوشه از کیش را آزادانه کشف کنید.</p>
+                 <a href="#booking-form" class="btn btn-primary mt-4">شروع رزرو</a>
             </div>
         </section>
 
-        <div class="booking-form-container container">
-             <form class="row g-3 align-items-center">
-                <div class="col-lg-4"><input type="text" class="form-control form-control-lg" placeholder="کجا؟ (مثلا: اسکله تفریحی)"></div>
-                <div class="col-lg-3"><input type="text" class="form-control form-control-lg" data-jdp placeholder="تاریخ شروع"></div>
-                <div class="col-lg-3"><input type="text" class="form-control form-control-lg" data-jdp placeholder="تاریخ پایان"></div>
-                <div class="col-lg-2"><button type="submit" class="btn btn-primary btn-lg w-100">جستجو</button></div>
-            </form>
-        </div>
+        <section id="booking-form" class="section">
+            <div class="container">
+                <div class="booking-form-container">
+                     <form class="row g-3 align-items-center">
+                        <div class="col-lg-4"><input type="text" class="form-control form-control-lg" placeholder="کجا؟ (مثلا: اسکله تفریحی)"></div>
+                        <div class="col-lg-3"><input type="text" class="form-control form-control-lg" data-jdp placeholder="تاریخ شروع"></div>
+                        <div class="col-lg-3"><input type="text" class="form-control form-control-lg" data-jdp placeholder="تاریخ پایان"></div>
+                        <div class="col-lg-2"><button type="submit" class="btn btn-primary btn-lg w-100">جستجو</button></div>
+                    </form>
+                </div>
+            </div>
+        </section>
 
         <section id="trust-features" class="section text-center fade-in">
             <div class="container">
@@ -62,22 +65,22 @@
             </div>
         </section>
 
-        <section id="motorcycles" class="section bg-light fade-in">
+        <section id="motorcycles" class="section fade-in">
             <div class="container">
-                <h2 class="section-title text-center">موتور مورد علاقه خود را پیدا کنید</h2>
+                <h2 class="section-title">موتور مورد علاقه خود را پیدا کنید</h2>
                 <div class="row">
-                    <div class="col-lg-4 col-md-6 mb-4"><div class="motorcycle-card" data-id="scooter"><a href="#"><img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=800" class="card-img-top" alt="اسکوتر برقی"><div class="card-body"><h5 class="card-title">اسکوتر برقی</h5><p class="card-text">سریع، بی‌صدا و دوست‌دار محیط زیست</p></div><div class="card-footer"><span class="card-price">شروع از ساعتی ۹۰ تومان</span></div></a></div></div>
-                    <div class="col-lg-4 col-md-6 mb-4"><div class="motorcycle-card" data-id="classic"><a href="#"><img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=800" class="card-img-top" alt="موتور کلاسیک"><div class="card-body"><h5 class="card-title">موتور کلاسیک</h5><p class="card-text">زیبا، قدرتمند و مناسب برای گشت‌وگذار</p></div><div class="card-footer"><span class="card-price">شروع از ساعتی ۱۲۰ تومان</span></div></a></div></div>
-                    <div class="col-lg-4 col-md-6 mb-4"><div class="motorcycle-card" data-id="cruiser"><a href="#"><img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=800" class="card-img-top" alt="موتور کروزر"><div class="card-body"><h5 class="card-title">موتور کروزر</h5><p class="card-text">برای سفرهای طولانی و تجربه‌ای هیجان‌انگیز</p></div><div class="card-footer"><span class="card-price">شروع از ساعتی ۱۵۰ تومان</span></div></a></div></div>
+                    <div class="col-lg-4 col-md-6 mb-4"><div class="motorcycle-card"><a href="#"><img src="https://images.unsplash.com/photo-1620759398110-42f213327350?q=80&w=800" class="card-img-top" alt="اسکوتر برقی"><div class="card-body"><h5 class="card-title">اسکوتر برقی</h5><p class="card-text">سریع، بی‌صدا و دوست‌دار محیط زیست</p></div><div class="card-footer"><span class="card-price">شروع از ساعتی ۹۰ تومان</span></div></a></div></div>
+                    <div class="col-lg-4 col-md-6 mb-4"><div class="motorcycle-card"><a href="#"><img src="https://images.pexels.com/photos/1715193/pexels-photo-1715193.jpeg?auto=compress&cs=tinysrgb&w=800" class="card-img-top" alt="موتور کلاسیک"><div class="card-body"><h5 class="card-title">موتور کلاسیک</h5><p class="card-text">زیبا، قدرتمند و مناسب برای گشت‌وگذار</p></div><div class="card-footer"><span class="card-price">شروع از ساعتی ۱۲۰ تومان</span></div></a></div></div>
+                    <div class="col-lg-4 col-md-6 mb-4"><div class="motorcycle-card"><a href="#"><img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=800" class="card-img-top" alt="موتور کروزر"><div class="card-body"><h5 class="card-title">موتور کروزر</h5><p class="card-text">برای سفرهای طولانی و تجربه‌ای هیجان‌انگیز</p></div><div class="card-footer"><span class="card-price">شروع از ساعتی ۱۵۰ تومان</span></div></a></div></div>
                 </div>
             </div>
         </section>
 
         <section id="how-it-works" class="section fade-in">
             <div class="container">
-                <h2 class="section-title text-center">چطور کار می‌کند؟</h2>
+                <h2 class="section-title">چطور کار می‌کند؟</h2>
                 <div class="row align-items-center">
-                    <div class="col-md-6"><img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=800" alt="انیمیشن پیدا کردن موتور" class="img-fluid rounded"></div>
+                    <div class="col-md-6"><img src="https://www.li.me/hubfs/Lime_Web_6_23_2023/Gifs/scooter-unlock-animation.gif" alt="انیمیشن پیدا کردن موتور" class="img-fluid rounded"></div>
                     <div class="col-md-6">
                         <ul class="how-it-works-list">
                             <li><div class="list-number">۱</div><div><h5>پیدا کن</h5><p>نزدیک‌ترین موتور به خود را روی نقشه پیدا کنید.</p></div></li>
@@ -89,116 +92,16 @@
             </div>
         </section>
 
-        <section id="faq" class="section">
-            <div class="container">
-                <h2 class="section-title text-center">سوالات متداول</h2>
-                <div class="accordion" id="faqAccordion">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                چه مدارکی برای اجاره موتور لازم است؟
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                برای اجاره موتور تنها به کارت ملی و گواهینامه رانندگی معتبر نیاز دارید. در صورتی که گواهینامه ندارید، می‌توانید از موتورهای برقی که نیاز به گواهینامه ندارند استفاده کنید.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                آیا کلاه ایمنی هم به همراه موتور ارائه می‌شود؟
-                            </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                بله، به تعداد سرنشینان کلاه ایمنی استاندارد و تمیز به صورت رایگان در اختیار شما قرار می‌گیرد. ایمنی شما اولویت ماست.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                وضعیت بنزین موتورها به چه صورت است؟
-                            </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                تمام موتورها با باک پر به شما تحویل داده می‌شوند و شما نیز باید در زمان بازگرداندن، باک موتور را پر تحویل دهید. برای موتورهای برقی نیز، با شارژ کامل تحویل داده می‌شوند.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="map-section" class="section bg-light">
-            <div class="container">
-                <h2 class="section-title text-center">جزیره را کاوش کنید</h2>
-                <div id="map"></div>
-            </div>
-        </section>
-
-        <section id="about" class="section bg-light fade-in">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <h2 class="section-title">درباره کیش‌ران</h2>
-                        <p>ما در کیش‌ران به دنبال ایجاد تجربه‌ای متفاوت و به‌یادماندنی از سفر در جزیره کیش هستیم. با فراهم آوردن دسترسی آسان به موتورهای باکیفیت و مدرن، به شما کمک می‌کنیم تا با آزادی کامل، تمام زیبایی‌های جزیره را کشف کنید. هدف ما، ارائه یک سرویس سریع، امن و قابل اعتماد برای تمام ساکنین و گردشگران عزیز است.</p>
-                    </div>
-                    <div class="col-md-6"><img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=800" class="img-fluid rounded" alt="دو نفر در حال موتور سواری"></div>
-                </div>
-            </div>
-        </section>
     </main>
 
     <footer id="footer" class="section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-4 mb-lg-0"><h5 class="footer-brand">کیش‌ران</h5><p>آزادی گشت‌وگذار در جزیره زیبای کیش.</p></div>
-                <div class="col-lg-2 col-6"><h6 class="footer-title">لینک‌ها</h6><ul class="list-unstyled"><li><a href="#">موتورها</a></li><li><a href="#">درباره ما</a></li><li><a href="#">سوالات متداول</a></li></ul></div>
-                <div class="col-lg-2 col-6"><h6 class="footer-title">پشتیبانی</h6><ul class="list-unstyled"><li><a href="#">تماس با ما</a></li><li><a href="#">قوانین</a></li><li><a href="#">حریم خصوصی</a></li></ul></div>
-                <div class="col-lg-4"><h6 class="footer-title">ما را دنبال کنید</h6><div class="social-icons"><a href="#"><i class="bi bi-instagram"></i></a><a href="#"><i class="bi bi-telegram"></i></a><a href="#"><i class="bi bi-whatsapp"></i></a></div></div>
-            </div>
-            <hr><p class="copyright text-center">&copy; 2024 کیش‌ران. تمام حقوق محفوظ است.</p>
+        <div class="container text-center">
+            <p>&copy; 2024 کیش‌ران. تمام حقوق محفوظ است.</p>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.js"></script>
     <script src="js/script.js"></script>
-
-    <!-- Motorcycle Details Modal -->
-    <div class="modal fade" id="motorcycleModal" tabindex="-1" aria-labelledby="motorcycleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="motorcycleModalLabel">...</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <img id="modal-img" src="" class="img-fluid rounded" alt="تصویر موتور">
-                        </div>
-                        <div class="col-md-6">
-                            <p id="modal-desc">...</p>
-                            <ul id="modal-specs" class="list-unstyled">
-                                <!-- Specs will be populated by JS -->
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <span id="modal-price" class="fw-bold">...</span>
-                    <button type="button" class="btn btn-primary">همین الان رزرو کن</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Google Maps API -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly" async></script>
 </body>
 </html>
