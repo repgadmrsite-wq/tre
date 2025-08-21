@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تنظیمات - پنل ادمین</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard-body">
+
+    <div class="dashboard-wrapper">
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="sidebar-brand">کیش‌ران - ادمین</a>
+            </div>
+            <ul class="sidebar-nav">
+                <li class="nav-item">
+                    <a href="admin.html" class="nav-link">
+                        <i class="bi bi-grid-1x2-fill"></i>
+                        <span>داشبورد</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="bookings.html" class="nav-link">
+                        <i class="bi bi-card-list"></i>
+                        <span>رزروها</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="users.html" class="nav-link">
+                        <i class="bi bi-people-fill"></i>
+                        <span>کاربران</span>
+                    </a>
+                </li>
+                 <li class="nav-item">
+                    <a href="motorcycles.html" class="nav-link">
+                        <i class="bi bi-bicycle"></i>
+                        <span>موتورها</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="settings.html" class="nav-link active">
+                        <i class="bi bi-gear-fill"></i>
+                        <span>تنظیمات</span>
+                    </a>
+                </li>
+                <li class="nav-item mt-auto">
+                    <a href="index.html" class="nav-link">
+                        <i class="bi bi-box-arrow-right"></i>
+                        <span>بازگشت به سایت</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-content">
+            <div class="container-fluid p-4">
+                <h1 class="h3 mb-4">تنظیمات سایت</h1>
+
+                <div class="row">
+                    <div class="col-md-8">
+                        <!-- General Settings -->
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">تنظیمات عمومی</h5>
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="siteName" class="form-label">نام سایت</label>
+                                        <input type="text" class="form-control" id="siteName" value="کیش‌ران">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="siteDescription" class="form-label">شعار سایت (در هیرو)</label>
+                                        <input type="text" class="form-control" id="siteDescription" value="آزادی را در کیش تجربه کنید">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">ذخیره تغییرات</button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- Contact Info Settings -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">اطلاعات تماس</h5>
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="phoneNumber" class="form-label">شماره تماس (نمایش در فوتر)</label>
+                                        <input type="tel" class="form-control" id="phoneNumber" value="09123456789">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="address" class="form-label">آدرس (نمایش در فوتر)</label>
+                                        <input type="text" class="form-control" id="address" value="جزیره کیش، فلان خیابان، فلان مرکز خرید">
+                                    </div>
+                                     <div class="mb-3">
+                                        <label for="instagram" class="form-label">لینک اینستاگرام</label>
+                                        <input type="url" class="form-control" id="instagram" value="#">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">ذخیره تغییرات</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
