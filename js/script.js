@@ -13,7 +13,24 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // --- Persian Datepicker Initialization ---
-    // Initialize datepicker on all elements with data-jdp attribute
     jalaliDatepicker.startWatch({});
+
+    // --- Scroll-Reveal Animation Logic ---
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    const fadeElms = document.querySelectorAll('.fade-in');
+    fadeElms.forEach(el => observer.observe(el));
 
 });

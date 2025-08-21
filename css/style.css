@@ -3,7 +3,8 @@
 
 /* --- DESIGN SYSTEM & VARIABLES --- */
 :root {
-    --primary-color: #00D09C;
+    /* Colors */
+    --primary-color: #00D09C; /* Electric Teal */
     --primary-hover: #00b88a;
     --dark-color: #0d1a26;
     --text-color: #212529;
@@ -11,13 +12,23 @@
     --white-color: #ffffff;
     --bg-light: #f7f9fc;
     --border-color: #e6e9ec;
+
+    /* Typography */
     --font-family-sans-serif: 'Vazirmatn', sans-serif;
+    --font-size-base: 1rem;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+
+    /* Spacing */
     --section-padding: 80px;
 }
 
 /* --- BASE & RESET --- */
 body {
     font-family: var(--font-family-sans-serif);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-normal);
     color: var(--text-color);
     background-color: var(--white-color);
     direction: rtl;
@@ -26,35 +37,31 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
     color: var(--dark-color);
-}
-
-a {
-    color: var(--primary-color);
-    text-decoration: none;
-}
-a:hover {
-    color: var(--primary-hover);
 }
 
 /* --- UTILITIES --- */
 .section {
     padding: var(--section-padding) 0;
 }
+
 .section-title {
     font-size: 2.5rem;
-    font-weight: 800;
+    font-weight: var(--font-weight-extrabold);
     margin-bottom: 3rem;
+    color: var(--dark-color);
 }
+
 .btn-primary {
     background-color: var(--primary-color);
     border-color: var(--primary-color);
-    font-weight: 700;
-    padding: 0.8rem 2rem;
+    font-weight: var(--font-weight-bold);
+    padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
     transition: all 0.3s ease;
 }
+
 .btn-primary:hover {
     background-color: var(--primary-hover);
     border-color: var(--primary-hover);
@@ -69,23 +76,27 @@ a:hover {
 .navbar-brand {
     font-weight: 800;
 }
+/* This class will be added via JS on scroll */
 .navbar.scrolled {
     background-color: var(--white-color);
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
     padding: 0.5rem 0;
 }
 .navbar.scrolled .nav-link, .navbar.scrolled .navbar-brand {
-    color: var(--dark-color) !important;
+    color: var(--text-color) !important;
 }
 .navbar-dark .navbar-toggler-icon {
     filter: invert(1);
 }
+.navbar.scrolled .navbar-toggler-icon {
+    filter: none;
+}
 
-/* --- HERO SECTION --- */
+/* --- HERO & BOOKING FORM --- */
 #hero {
     position: relative;
     padding: 220px 0 200px 0;
-    background: url('https://www.li.me/hubfs/Lime_Web_6_23_2023/Image/Lime_Scooter_on_Street.jpg') no-repeat center center;
+    background: url('https://images.unsplash.com/photo-1599699499802-54f3d64c6984?q=80&w=1920') no-repeat center center;
     background-size: cover;
     color: var(--white-color);
 }
@@ -93,29 +104,31 @@ a:hover {
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background-color: rgba(13, 26, 38, 0.6);
+    background: linear-gradient(to top, rgba(13, 26, 38, 0.8), rgba(13, 26, 38, 0.4));
 }
 .hero-title {
     font-size: 4.5rem;
     font-weight: 800;
     color: var(--white-color);
     position: relative;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 .hero-subtitle {
     font-size: 1.25rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.9);
     position: relative;
 }
-
-/* --- BOOKING FORM --- */
 .booking-form-container {
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
-    background-color: var(--white-color);
     position: relative;
     z-index: 20;
     margin-top: -120px;
+    margin-bottom: var(--section-padding);
+}
+.booking-form-container form {
+    background-color: var(--white-color);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
 }
 
 /* --- TRUST FEATURES --- */
@@ -124,6 +137,9 @@ a:hover {
     color: var(--primary-color);
     margin-bottom: 1rem;
     display: inline-block;
+}
+.feature-item p {
+    color: var(--text-light);
 }
 
 /* --- MOTORCYCLE CARDS --- */
@@ -194,18 +210,13 @@ a:hover {
     margin-top: 1.5rem;
 }
 
-/* --- RESPONSIVE ADJUSTMENTS --- */
-@media (max-width: 991.98px) {
-    .hero-title {
-        font-size: 3rem;
-    }
-    .booking-form-container .row > div {
-        margin-bottom: 1rem;
-    }
-    .booking-form-container .row > div:last-child {
-        margin-bottom: 0;
-    }
-    .navbar.scrolled .navbar-toggler-icon, .navbar-dark .navbar-toggler-icon {
-        filter: none; /* Ensure toggler is visible on all backgrounds */
-    }
+/* --- ANIMATIONS --- */
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.fade-in.is-visible {
+    opacity: 1;
+    transform: translateY(0);
 }
