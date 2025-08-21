@@ -247,38 +247,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* --- MAP SECTION --- */
-.map-container {
-    position: relative;
-    max-width: 900px;
-    margin: auto;
+#map {
+    height: 450px;
+    width: 100%;
     border-radius: 1rem;
-    overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-.map-point {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: var(--primary-color);
-    border-radius: 50%;
-    border: 3px solid var(--white-color);
-    cursor: pointer;
-    transform: translate(-50%, -50%);
-    transition: all 0.2s ease;
-}
-.map-point:hover {
-    transform: translate(-50%, -50%) scale(1.2);
-}
-#map-tooltip {
-    position: absolute;
-    background-color: var(--dark-color);
-    color: var(--white-color);
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    display: none;
-    pointer-events: none;
-    z-index: 100;
 }
 
 /* --- LOGIN PAGE --- */

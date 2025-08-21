@@ -133,17 +133,10 @@
             </div>
         </section>
 
-        <section id="map-section" class="section">
+        <section id="map-section" class="section bg-light">
             <div class="container">
                 <h2 class="section-title text-center">جزیره را کاوش کنید</h2>
-                <div class="map-container">
-                    <img src="https://via.placeholder.com/1200x800.png?text=%D9%86%D9%82%D8%B4%D9%87%20%DA%A9%DB%8C%D8%B4" alt="نقشه جزیره کیش" class="img-fluid">
-                    <div class="map-point" style="top: 45%; left: 55%;" data-name="اسکله بزرگ تفریحی"></div>
-                    <div class="map-point" style="top: 70%; left: 30%;" data-name="کشتی یونانی"></div>
-                    <div class="map-point" style="top: 25%; left: 65%;" data-name="پلاژ بانوان"></div>
-                    <div class="map-point" style="top: 50%; left: 40%;" data-name="شهر زیرزمینی کاریز"></div>
-                </div>
-                <div id="map-tooltip"></div>
+                <div id="map"></div>
             </div>
         </section>
 
@@ -204,5 +197,8 @@
             </div>
         </div>
     </div>
+
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly" async></script>
 </body>
 </html>
