@@ -17,22 +17,22 @@
 <body>
 
     <!-- Header -->
-    <header class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <header class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand fw-bold" href="#">کیش‌ران</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">خانه</a>
+                        <a class="nav-link active" href="#hero">خانه</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#motorcycles">موتورها</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">درباره ما</a>
+                        <a class="nav-link" href="#how-it-works">مراحل اجاره</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#footer">تماس با ما</a>
@@ -49,26 +49,68 @@
                 <div class="col-lg-8 col-md-10 mx-auto">
                     <h1 class="display-3">کیش را متفاوت تجربه کن</h1>
                     <p class="lead my-4">با موتورهای ما، هر گوشه از جزیره زیر پای شماست. آزادانه بگرد و خاطره بساز!</p>
-                    <p>
-                        <a href="#motorcycles" class="btn btn-warning fw-bold">اجاره موتور</a>
-                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reservation Section -->
+        <section id="reservation" class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="glass-card p-4 p-md-5">
+                            <h2 class="text-center mb-4">رزرو سریع و آنلاین</h2>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="motorcycle-select" class="form-label">نوع موتور</label>
+                                    <select class="form-select" id="motorcycle-select">
+                                        <option selected>یک موتور انتخاب کنید...</option>
+                                        <option value="1">وسپا برقی</option>
+                                        <option value="2">اسکوتر شهری</option>
+                                        <option value="3">موتور کروزر</option>
+                                    </select>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="start-date" class="form-label">تاریخ شروع</label>
+                                        <input type="text" class="form-control" id="start-date" placeholder="مثال: ۱۴۰۳/۰۷/۱۰">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="end-date" class="form-label">تاریخ پایان</label>
+                                        <input type="text" class="form-control" id="end-date" placeholder="مثال: ۱۴۰۳/۰۷/۱۲">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="name" class="form-label">نام و نام خانوادگی</label>
+                                        <input type="text" class="form-control" id="name">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="phone" class="form-label">شماره تماس</label>
+                                        <input type="tel" class="form-control" id="phone">
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-accent w-100 mt-3 fw-bold">ثبت رزرو</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Motorcycles Section -->
         <section id="motorcycles" class="py-5 fade-in-section">
-            <div class="container" style="padding-top: 15vh;">
-                <h2 class="text-center mb-5 display-5">موتور مورد علاقه خود را انتخاب کنید</h2>
+            <div class="container">
+                <h2 class="text-center mb-5 display-5">موتورهای موجود</h2>
                 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 g-lg-5">
                     <!-- Motorcycle 1 -->
                     <div class="col">
-                        <div class="card">
+                        <div class="card glass-card h-100">
                             <img src="https://via.placeholder.com/400x300.png?text=Vespa" class="card-img-top" alt="وسپا برقی">
-                            <div class="card-body p-4">
+                            <div class="card-body p-4 d-flex flex-column">
                                 <h5 class="card-title">وسپا برقی</h5>
                                 <p class="card-text">یک انتخاب کلاسیک و دوست‌دار محیط زیست برای گشت و گذار در جزیره.</p>
-                                <div class="mt-4 d-flex justify-content-between align-items-center">
+                                <div class="mt-auto pt-3 d-flex justify-content-between align-items-center">
                                     <a href="#" class="btn btn-accent fw-bold">اجاره و اطلاعات</a>
                                     <span class="price-tag">ساعتی ۱۲۰ تومان</span>
                                 </div>
@@ -77,12 +119,12 @@
                     </div>
                     <!-- Motorcycle 2 -->
                     <div class="col">
-                        <div class="card">
+                        <div class="card glass-card h-100">
                             <img src="https://via.placeholder.com/400x300.png?text=Scooter" class="card-img-top" alt="اسکوتر شهری">
-                            <div class="card-body p-4">
+                            <div class="card-body p-4 d-flex flex-column">
                                 <h5 class="card-title">اسکوتر شهری</h5>
-                                <p class="card-text">یک گزینه اقتصادی و سریع برای ترددهای روزانه و لذت بردن از هوای کیش.</p>
-                                <div class="mt-4 d-flex justify-content-between align-items-center">
+                                <p class="card-text">یک گزینه اقتصادی و سریع برای ترددهای روزانه.</p>
+                                <div class="mt-auto pt-3 d-flex justify-content-between align-items-center">
                                     <a href="#" class="btn btn-accent fw-bold">اجاره و اطلاعات</a>
                                     <span class="price-tag">ساعتی ۹۰ تومان</span>
                                 </div>
@@ -91,12 +133,12 @@
                     </div>
                     <!-- Motorcycle 3 -->
                     <div class="col">
-                        <div class="card">
+                        <div class="card glass-card h-100">
                             <img src="https://via.placeholder.com/400x300.png?text=Cruiser" class="card-img-top" alt="موتور کروزر">
-                            <div class="card-body p-4">
+                            <div class="card-body p-4 d-flex flex-column">
                                 <h5 class="card-title">موتور کروزر</h5>
-                                <p class="card-text">برای کسانی که به دنبال تجربه‌ای متفاوت و هیجان‌انگیز در جاده‌های ساحلی هستند.</p>
-                                <div class="mt-4 d-flex justify-content-between align-items-center">
+                                <p class="card-text">برای تجربه‌ای متفاوت و هیجان‌انگیز در جاده‌های ساحلی.</p>
+                                <div class="mt-auto pt-3 d-flex justify-content-between align-items-center">
                                     <a href="#" class="btn btn-accent fw-bold">اجاره و اطلاعات</a>
                                     <span class="price-tag">ساعتی ۱۵۰ تومان</span>
                                 </div>
@@ -138,16 +180,16 @@
         </section>
 
         <!-- Testimonials Section -->
-        <section id="testimonials" class="py-5 bg-light fade-in-section">
+        <section id="testimonials" class="py-5 fade-in-section">
             <div class="container">
-                <h2 class="text-center mb-5">مشتریان ما چه می‌گویند؟</h2>
+                <h2 class="text-center mb-5 display-5">مشتریان ما چه می‌گویند؟</h2>
                 <div class="row">
-                    <div class="col-md-6 mx-auto">
-                        <div class="card text-center">
-                            <div class="card-body">
+                    <div class="col-md-8 mx-auto">
+                        <div class="card glass-card text-center">
+                            <div class="card-body p-5">
                                 <blockquote class="blockquote mb-0">
                                     <p>"تجربه فوق‌العاده‌ای بود! موتورها تمیز و سالم بودند و فرآیند تحویل خیلی سریع انجام شد. حتماً دوباره از کیش‌ران موتور می‌گیرم."</p>
-                                    <footer class="blockquote-footer mt-3">سارا از تهران</footer>
+                                    <footer class="blockquote-footer mt-3" style="color: var(--subtle-text);">سارا از تهران</footer>
                                 </blockquote>
                             </div>
                         </div>
@@ -160,9 +202,9 @@
         <section id="about" class="py-5 fade-in-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8 mx-auto text-center">
-                        <h2>درباره کیش‌ران</h2>
-                        <p class="lead">ما در کیش‌ران معتقدیم که سفر به کیش باید با خاطرات خوش همراه باشد. به همین دلیل، با فراهم کردن موتورهای باکیفیت و فرآیندی آسان برای اجاره، تلاش می‌کنیم تا بهترین تجربه را برای شما رقم بزنیم. هدف ما، رضایت و لبخند شماست.</p>
+                    <div class="col-lg-8 mx-auto text-center">
+                        <h2 class="display-5">درباره کیش‌ران</h2>
+                        <p class="lead text-white-50">ما در کیش‌ران معتقدیم که سفر به کیش باید با خاطرات خوش همراه باشد. به همین دلیل، با فراهم کردن موتورهای باکیفیت و فرآیندی آسان برای اجاره، تلاش می‌کنیم تا بهترین تجربه را برای شما رقم بزنیم. هدف ما، رضایت و لبخند شماست.</p>
                     </div>
                 </div>
             </div>
@@ -170,15 +212,15 @@
     </main>
 
     <!-- Footer -->
-    <footer id="footer" class="py-4 bg-dark text-white">
+    <footer id="footer" class="py-5 mt-5">
         <div class="container text-center">
             <p>کیش‌ران &copy; 2024. تمام حقوق محفوظ است.</p>
             <p>آدرس: جزیره کیش، فلان خیابان، فلان مرکز خرید</p>
             <p>تلفن تماس: 09123456789</p>
             <div>
-                <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-4"></i></a>
-                <a href="#" class="text-white me-3"><i class="bi bi-telegram fs-4"></i></a>
-                <a href="#" class="text-white"><i class="bi bi-whatsapp fs-4"></i></a>
+                <a href="#" class="text-white me-3 fs-4"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="text-white me-3 fs-4"><i class="bi bi-telegram"></i></a>
+                <a href="#" class="text-white fs-4"><i class="bi bi-whatsapp"></i></a>
             </div>
         </div>
     </footer>
