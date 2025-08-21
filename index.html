@@ -27,7 +27,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-center">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link active" href="#hero">خانه</a>
                     </li>
@@ -40,12 +40,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#footer">تماس با ما</a>
                     </li>
-                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-                        <button id="theme-toggle" class="btn btn-outline-secondary">
-                            <i class="bi bi-moon-stars-fill theme-icon-dark"></i>
-                            <i class="bi bi-brightness-high-fill theme-icon-light"></i>
-                        </button>
-                    </li>
                 </ul>
             </div>
         </div>
@@ -53,60 +47,61 @@
 
     <main>
         <!-- Hero Section -->
-        <section id="hero" class="text-center container-fluid">
-            <div class="row">
-                <div class="col-lg-8 col-md-10 mx-auto">
-                    <h1 class="display-3">کیش را متفاوت تجربه کن</h1>
-                    <p class="lead my-4">با موتورهای ما، هر گوشه از جزیره زیر پای شماست. آزادانه بگرد و خاطره بساز!</p>
+        <section id="hero" class="d-flex align-items-center">
+            <div class="container text-center">
+                <h1 class="hero-title mb-3">اجاره موتور در کیش، سریع و آسان</h1>
+                <p class="hero-subtitle mb-4">بهترین راه برای گشت و گذار در جزیره زیبای کیش</p>
+
+                <div class="booking-form-container">
+                    <form class="row g-3 align-items-center">
+                        <div class="col-lg-4">
+                            <label for="motorcycle-select" class="visually-hidden">نوع موتور</label>
+                            <select class="form-select form-select-lg" id="motorcycle-select">
+                                <option selected>چه نوع موتوری؟</option>
+                                <option value="1">وسپا برقی</option>
+                                <option value="2">اسکوتر شهری</option>
+                                <option value="3">موتور کروزر</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-3">
+                             <label for="start-date" class="visually-hidden">تاریخ شروع</label>
+                            <input type="text" class="form-control form-control-lg" data-jdp id="start-date" placeholder="تاریخ شروع">
+                        </div>
+                        <div class="col-lg-3">
+                             <label for="end-date" class="visually-hidden">تاریخ پایان</label>
+                            <input type="text" class="form-control form-control-lg" data-jdp id="end-date" placeholder="تاریخ پایان">
+                        </div>
+                        <div class="col-lg-2">
+                            <button type="submit" class="btn btn-primary btn-lg w-100">جستجو</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>
 
-        <!-- Reservation Section -->
-        <section id="reservation" class="py-5">
+        <!-- Trust Features Section -->
+        <section id="trust-features" class="section">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <div class="glass-card p-4 p-md-5">
-                            <h2 class="text-center mb-4">رزرو سریع و آنلاین</h2>
-                            <form>
-                                <div class="mb-3">
-                                    <label for="motorcycle-select" class="form-label">نوع موتور</label>
-                                    <select class="form-select" id="motorcycle-select">
-                                        <option selected>یک موتور انتخاب کنید...</option>
-                                        <option value="1">وسپا برقی</option>
-                                        <option value="2">اسکوتر شهری</option>
-                                        <option value="3">موتور کروزر</option>
-                                    </select>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6 mb-3">
-                                        <label class="form-label">تاریخ و ساعت شروع</label>
-                                        <div class="input-group">
-                                            <input type="text" class="form-control" data-jdp id="start-date" placeholder="انتخاب تاریخ">
-                                            <input type="time" class="form-control" id="start-time">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label class="form-label">تاریخ و ساعت پایان</label>
-                                        <div class="input-group">
-                                            <input type="text" class="form-control" data-jdp id="end-date" placeholder="انتخاب تاریخ">
-                                            <input type="time" class="form-control" id="end-time">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6 mb-3">
-                                        <label for="name" class="form-label">نام و نام خانوادگی</label>
-                                        <input type="text" class="form-control" id="name">
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label for="phone" class="form-label">شماره تماس</label>
-                                        <input type="tel" class="form-control" id="phone">
-                                    </div>
-                                </div>
-                                <button type="submit" class="btn btn-accent w-100 mt-3 fw-bold">ثبت رزرو</button>
-                            </form>
+                <div class="row text-center">
+                    <div class="col-md-4 mb-4">
+                        <div class="feature-item">
+                            <i class="bi bi-shield-check feature-icon"></i>
+                            <h5 class="mt-3">بیمه کامل</h5>
+                            <p>تمام سفرهای شما تحت پوشش کامل بیمه قرار می‌گیرد.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="feature-item">
+                            <i class="bi bi-headset feature-icon"></i>
+                            <h5 class="mt-3">پشتیبانی ۲۴ ساعته</h5>
+                            <p>تیم ما در تمام ساعات شبانه‌روز آماده پاسخگویی است.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="feature-item">
+                            <i class="bi bi-unlock-fill feature-icon"></i>
+                            <h5 class="mt-3">تحویل آسان</h5>
+                            <p>موتور را در هر کجای جزیره که بخواهید تحویل بگیرید.</p>
                         </div>
                     </div>
                 </div>
@@ -114,48 +109,54 @@
         </section>
 
         <!-- Motorcycles Section -->
-        <section id="motorcycles" class="py-5 fade-in-section">
+        <section id="motorcycles" class="section bg-light">
             <div class="container">
-                <h2 class="text-center mb-5 display-5">موتورهای موجود</h2>
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 g-lg-5">
+                <h2 class="section-title text-center">موتورهای محبوب ما</h2>
+                <div class="row">
                     <!-- Motorcycle 1 -->
-                    <div class="col">
-                        <div class="card glass-card h-100">
-                            <img src="img/vespa.jpg" class="card-img-top" alt="وسپا برقی">
-                            <div class="card-body p-4 d-flex flex-column">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="motorcycle-card">
+                            <img src="https://images.unsplash.com/photo-1502744338259-c2b3c192d42a?q=80&w=800" class="card-img-top" alt="وسپا برقی">
+                            <div class="card-body">
                                 <h5 class="card-title">وسپا برقی</h5>
-                                <p class="card-text">یک انتخاب کلاسیک و دوست‌دار محیط زیست برای گشت و گذار در جزیره.</p>
-                                <div class="mt-auto pt-3 d-flex justify-content-between align-items-center">
-                                    <a href="#" class="btn btn-accent fw-bold">اجاره و اطلاعات</a>
-                                    <span class="price-tag">ساعتی ۱۲۰ تومان</span>
+                                <div class="card-specs">
+                                    <span><i class="bi bi-person-fill"></i> ۲ نفره</span>
+                                    <span><i class="bi bi-speedometer2"></i> اتوماتیک</span>
+                                </div>
+                                <div class="card-price">
+                                    شروع از <strong>ساعتی ۱۲۰ تومان</strong>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- Motorcycle 2 -->
-                    <div class="col">
-                        <div class="card glass-card h-100">
-                            <img src="img/scooter.jpg" class="card-img-top" alt="اسکوتر شهری">
-                            <div class="card-body p-4 d-flex flex-column">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="motorcycle-card">
+                            <img src="https://images.pexels.com/photos/236999/pexels-photo-236999.jpeg?auto=compress&cs=tinysrgb&w=800" class="card-img-top" alt="اسکوتر شهری">
+                            <div class="card-body">
                                 <h5 class="card-title">اسکوتر شهری</h5>
-                                <p class="card-text">یک گزینه اقتصادی و سریع برای ترددهای روزانه.</p>
-                                <div class="mt-auto pt-3 d-flex justify-content-between align-items-center">
-                                    <a href="#" class="btn btn-accent fw-bold">اجاره و اطلاعات</a>
-                                    <span class="price-tag">ساعتی ۹۰ تومان</span>
+                                <div class="card-specs">
+                                    <span><i class="bi bi-person-fill"></i> ۲ نفره</span>
+                                    <span><i class="bi bi-speedometer2"></i> اتوماتیک</span>
+                                </div>
+                                <div class="card-price">
+                                    شروع از <strong>ساعتی ۹۰ تومان</strong>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- Motorcycle 3 -->
-                    <div class="col">
-                        <div class="card glass-card h-100">
-                            <img src="img/cruiser.jpg" class="card-img-top" alt="موتور کروزر">
-                            <div class="card-body p-4 d-flex flex-column">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="motorcycle-card">
+                            <img src="https://images.pexels.com/photos/1715193/pexels-photo-1715193.jpeg?auto=compress&cs=tinysrgb&w=800" class="card-img-top" alt="موتور کروزر">
+                            <div class="card-body">
                                 <h5 class="card-title">موتور کروزر</h5>
-                                <p class="card-text">برای تجربه‌ای متفاوت و هیجان‌انگیز در جاده‌های ساحلی.</p>
-                                <div class="mt-auto pt-3 d-flex justify-content-between align-items-center">
-                                    <a href="#" class="btn btn-accent fw-bold">اجاره و اطلاعات</a>
-                                    <span class="price-tag">ساعتی ۱۵۰ تومان</span>
+                                <div class="card-specs">
+                                    <span><i class="bi bi-person-fill"></i> ۲ نفره</span>
+                                    <span><i class="bi bi-gear-fill"></i> دنده‌ای</span>
+                                </div>
+                                <div class="card-price">
+                                    شروع از <strong>ساعتی ۱۵۰ تومان</strong>
                                 </div>
                             </div>
                         </div>
@@ -165,48 +166,38 @@
         </section>
 
         <!-- How it works Section -->
-        <section id="how-it-works" class="py-5 fade-in-section">
+        <section id="how-it-works" class="section">
             <div class="container">
-                <h2 class="text-center mb-5 display-5">اجاره فقط در ۳ مرحله ساده</h2>
-                <div class="row text-center g-4 timeline">
-                    <div class="col-md-4 timeline-step">
-                        <div class="timeline-icon">
-                            <i class="bi bi-scooter"></i>
-                        </div>
-                        <h3 class="h5 mt-3">۱. انتخاب موتور</h3>
-                        <p>موتور مورد علاقه خود را از لیست انتخاب کنید.</p>
+                <h2 class="section-title text-center">اجاره فقط در ۳ مرحله ساده</h2>
+                <div class="row text-center">
+                    <div class="col-md-4 work-step">
+                        <i class="bi bi-mouse2-fill step-icon"></i>
+                        <h5 class="mt-3">۱. انتخاب و رزرو</h5>
+                        <p class="text-muted">موتور و تاریخ مورد نظر خود را از فرم بالا انتخاب کنید.</p>
                     </div>
-                    <div class="col-md-4 timeline-step">
-                        <div class="timeline-icon">
-                            <i class="bi bi-card-checklist"></i>
-                        </div>
-                        <h3 class="h5 mt-3">۲. ثبت مشخصات</h3>
-                        <p>فرم کوتاه اطلاعات و زمانبندی را تکمیل کنید.</p>
+                    <div class="col-md-4 work-step">
+                        <i class="bi bi-credit-card-2-front-fill step-icon"></i>
+                        <h5 class="mt-3">۲. تایید و پرداخت</h5>
+                        <p class="text-muted">اطلاعات خود را تایید کرده و پرداخت را نهایی کنید.</p>
                     </div>
-                    <div class="col-md-4 timeline-step">
-                        <div class="timeline-icon">
-                            <i class="bi bi-geo-alt-fill"></i>
-                        </div>
-                        <h3 class="h5 mt-3">۳. تحویل در محل</h3>
-                        <p>موتور را در محل دلخواه تحویل گرفته و لذت ببرید.</p>
+                    <div class="col-md-4 work-step">
+                        <i class="bi bi-key-fill step-icon"></i>
+                        <h5 class="mt-3">۳. تحویل و لذت</h5>
+                        <p class="text-muted">موتور خود را تحویل گرفته و از کیش‌گردی لذت ببرید!</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Testimonials Section -->
-        <section id="testimonials" class="py-5 fade-in-section">
+        <section id="testimonials" class="section bg-light">
             <div class="container">
-                <h2 class="text-center mb-5 display-5">مشتریان ما چه می‌گویند؟</h2>
+                <h2 class="section-title text-center">مشتریان ما چه می‌گویند؟</h2>
                 <div class="row">
                     <div class="col-md-8 mx-auto">
-                        <div class="card glass-card text-center">
-                            <div class="card-body p-5">
-                                <blockquote class="blockquote mb-0">
-                                    <p>"تجربه فوق‌العاده‌ای بود! موتورها تمیز و سالم بودند و فرآیند تحویل خیلی سریع انجام شد. حتماً دوباره از کیش‌ران موتور می‌گیرم."</p>
-                                    <footer class="blockquote-footer mt-3" style="color: var(--subtle-text);">سارا از تهران</footer>
-                                </blockquote>
-                            </div>
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">"تجربه فوق‌العاده‌ای بود! موتورها تمیز و سالم بودند و فرآیند تحویل خیلی سریع انجام شد. حتماً دوباره از کیش‌ران موتور می‌گیرم."</p>
+                            <footer class="testimonial-author mt-3">سارا از تهران</footer>
                         </div>
                     </div>
                 </div>
@@ -214,7 +205,7 @@
         </section>
 
         <!-- About Section -->
-        <section id="about" class="py-5 fade-in-section">
+        <section id="about" class="section">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 mx-auto text-center">

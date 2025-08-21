@@ -1,231 +1,165 @@
-/* Import Vazirmatn font from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800&display=swap');
+/* Import Vazirmatn font */
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&display=swap');
 
-/* --- THEME VARIABLES --- */
 :root {
-    /* --- Light Theme (Default) --- */
-    --bg-color: #f8f9fa;
-    --text-color: #212529;
-    --subtle-text-color: #6c757d;
-    --primary-accent: #0d6efd;
-    --secondary-accent: #6f42c1;
-    --glass-bg: rgba(255, 255, 255, 0.7);
-    --glass-border: rgba(0, 0, 0, 0.1);
-    --form-bg: #ffffff;
-    --form-border: #ced4da;
-    --card-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
-    --aurora-opacity: 0; /* Hidden in light mode */
+    --primary-color: #006aff; /* A vibrant, modern blue */
+    --text-color-dark: #212529;
+    --text-color-light: #6c757d;
+    --bg-light: #f8f9fa;
+    --border-color: #dee2e6;
+    --font-family-sans-serif: 'Vazirmatn', sans-serif;
 }
 
-body.dark {
-    /* --- Dark Theme --- */
-    --bg-color: #111827;
-    --text-color: #f9fafb;
-    --subtle-text-color: #9ca3af;
-    --primary-accent: #00aaff;
-    --secondary-accent: #ff00c3;
-    --glass-bg: rgba(31, 41, 55, 0.5);
-    --glass-border: rgba(255, 255, 255, 0.1);
-    --form-bg: rgba(17, 24, 39, 0.7);
-    --form-border: var(--glass-border);
-    --card-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    --aurora-opacity: 0.3; /* Visible in dark mode */
-}
-
-/* --- GENERAL STYLES --- */
 body {
-    font-family: 'Vazirmatn', sans-serif;
+    font-family: var(--font-family-sans-serif);
+    background-color: #fff;
+    color: var(--text-color-dark);
     direction: rtl;
     text-align: right;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    position: relative;
-    overflow-x: hidden;
-    padding-top: 70px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    padding-top: 72px; /* Offset for fixed header */
 }
 
-h1, h2, h3, h4, h5, h6 {
-    color: var(--text-color);
-    font-weight: 700 !important;
+/* General utility classes */
+.section-title {
+    font-weight: 800;
+    margin-bottom: 3rem;
 }
 
-/* --- AURORA BACKGROUND (Dark Mode Only) --- */
-body::before,
-body::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    filter: blur(100px);
-    opacity: var(--aurora-opacity);
-    pointer-events: none;
-    transition: opacity 0.5s ease;
-}
-body::before {
-    width: 400px; height: 400px;
-    background: radial-gradient(circle, var(--primary-accent), transparent 60%);
-    top: -150px; left: -150px;
-    animation: move-aurora-1 20s infinite alternate;
-}
-body::after {
-    width: 500px; height: 500px;
-    background: radial-gradient(circle, var(--secondary-accent), transparent 70%);
-    bottom: -200px; right: -200px;
-    animation: move-aurora-2 25s infinite alternate;
-}
-@keyframes move-aurora-1 { to { transform: translate(100px, 150px) rotate(30deg); } }
-@keyframes move-aurora-2 { to { transform: translate(-150px, -100px) rotate(-40deg); } }
-
-/* --- LAYOUT --- */
-header, main, footer {
-    position: relative;
-    z-index: 10;
+.section {
+    padding: 60px 0;
 }
 
-/* --- COMPONENTS --- */
-.glass-card {
-    background: var(--glass-bg);
+/* --- Header --- */
+.navbar {
+    border-bottom: 1px solid var(--border-color);
+    background-color: #fff !important;
+}
+
+/* --- Hero Section --- */
+#hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/1715193/pexels-photo-1715193.jpeg?auto=compress&cs=tinysrgb&w=1260');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    color: #fff;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.booking-form-container {
+    background-color: #fff;
+    padding: 2rem;
     border-radius: 1rem;
-    border: 1px solid var(--glass-border);
-    backdrop-filter: blur(10px);
-    box-shadow: var(--card-shadow);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.booking-form-container .form-control,
+.booking-form-container .form-select {
+    border: 1px solid var(--border-color);
+    padding: 0.75rem 1rem;
+}
+
+.booking-form-container .btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+
+/* --- Trust Features --- */
+.feature-item .feature-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+}
+
+/* --- Motorcycle Cards --- */
+#motorcycles {
+    background-color: var(--bg-light);
+}
+
+.motorcycle-card {
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    overflow: hidden;
     transition: all 0.3s ease;
 }
 
-.navbar {
-    background: var(--glass-bg);
-    border-bottom: 1px solid var(--glass-border);
-    backdrop-filter: blur(10px);
-    box-shadow: var(--card-shadow);
-}
-.navbar-brand, .nav-link:hover, .nav-link.active {
-    color: var(--text-color);
-}
-.nav-link {
-    font-weight: 500;
-    color: var(--subtle-text-color);
-}
-.navbar-toggler {
-    border-color: var(--glass-border);
-}
-.navbar-toggler-icon {
-    filter: invert(var(--is-dark, 0)); /* Quick hack for toggler icon color */
-}
-body.dark { --is-dark: 1; }
-
-#theme-toggle {
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-}
-.theme-icon-dark { display: none; }
-.theme-icon-light { display: inline-block; }
-body.dark .theme-icon-dark { display: inline-block; }
-body.dark .theme-icon-light { display: none; }
-
-
-#hero {
-    padding: 6rem 0;
-}
-#hero h1 {
-    font-size: 4rem;
-    font-weight: 800 !important;
-}
-#hero .lead {
-    color: var(--subtle-text-color);
+.motorcycle-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
-.form-label {
-    color: var(--subtle-text-color);
-}
-.form-control, .form-select {
-    background-color: var(--form-bg);
-    border: 1px solid var(--form-border);
-    color: var(--text-color);
-}
-.form-control::placeholder { color: var(--subtle-text-color); }
-.form-control:focus, .form-select:focus {
-    background-color: var(--form-bg);
-    border-color: var(--primary-accent);
-    box-shadow: 0 0 0 0.25rem rgba(from var(--primary-accent) r g b / 0.25);
-    color: var(--text-color);
+.motorcycle-card .card-body {
+    padding: 1.5rem;
 }
 
-#motorcycles .card:hover {
-    transform: translateY(-10px);
-    border-color: var(--primary-accent);
-}
-#motorcycles .card-title { color: var(--text-color); }
-#motorcycles .card-text { color: var(--subtle-text-color); }
-.price-tag {
-    color: var(--text-color);
+.motorcycle-card .card-title {
+    font-size: 1.25rem;
     font-weight: 700;
 }
 
-.btn-accent {
-    background: linear-gradient(45deg, var(--secondary-accent), var(--primary-accent));
-    color: white;
-    border: none;
-    border-radius: 50px;
-    padding: 0.75rem 1.5rem;
-    transition: all 0.3s ease;
-}
-.btn-accent:hover {
-    color: white;
-    transform: scale(1.05);
-}
-
-.timeline-icon {
-    width: 80px; height: 80px;
-    background: linear-gradient(45deg, var(--primary-accent), var(--secondary-accent));
-    border-radius: 50%;
-    margin: 0 auto 1rem;
+.motorcycle-card .card-specs {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 2.5rem;
+    gap: 1rem;
+    color: var(--text-color-light);
+    margin: 0.75rem 0;
 }
 
-@media (min-width: 768px) {
-    .timeline-step:not(:last-child)::after {
-        content: '';
-        position: absolute;
-        top: 40px; left: 50%;
-        transform: translateY(-50%);
-        width: calc(100% - 80px);
-        height: 2px;
-        background-color: var(--form-border);
-        z-index: -1;
+.motorcycle-card .card-specs i {
+    margin-left: 0.25rem;
+    color: var(--primary-color);
+}
+
+.motorcycle-card .card-price {
+    font-size: 1.1rem;
+    color: var(--text-color-dark);
+    margin-top: 1rem;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1rem;
+}
+
+/* --- How it Works Section --- */
+#how-it-works .work-step {
+    text-align: center;
+}
+#how-it-works .work-step .step-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* --- Testimonial Section --- */
+.testimonial-card {
+    background-color: var(--bg-light);
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+.testimonial-text {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--text-color-dark);
+}
+.testimonial-author {
+    color: var(--text-color-light);
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 991.98px) {
+    .booking-form-container .row > div {
+        margin-bottom: 1rem;
     }
-}
-
-#testimonials .blockquote-footer {
-    color: var(--subtle-text-color) !important;
-}
-
-#how-it-works .timeline-step p, #about .lead {
-    color: var(--subtle-text-color);
-}
-
-.fade-in-section {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-.fade-in-section.is-visible { opacity: 1; transform: translateY(0); }
-
-#footer {
-    background-color: transparent;
-    border-top: 1px solid var(--glass-border);
-}
-#footer, #footer a {
-    color: var(--subtle-text-color);
-}
-#footer a:hover {
-    color: var(--text-color) !important;
+    .booking-form-container .row > div:last-child {
+        margin-bottom: 0;
+    }
 }
