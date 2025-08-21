@@ -1,0 +1,86 @@
+/* Import Vazirmatn font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700&display=swap');
+
+/* --- General Styles --- */
+body {
+    font-family: 'Vazirmatn', sans-serif;
+    direction: rtl;
+    text-align: right;
+    font-weight: 400; /* Default font weight */
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand, .fw-bold {
+    font-weight: 700 !important; /* Bolder headings and specific elements */
+}
+
+/* --- Custom Colors & Theme --- */
+:root {
+    --bs-primary: #005c99; /* A custom, slightly deeper blue */
+    --bs-primary-rgb: 0, 92, 153;
+    --bs-warning: #ffc107;
+}
+
+/* Apply the custom primary color to the hero section */
+#hero {
+    background-color: var(--bs-primary);
+}
+
+/* --- Header --- */
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-weight: 500;
+}
+
+/* --- Hero Section --- */
+#hero .btn-warning {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+#hero .btn-warning:hover {
+    background-color: #ffca2c;
+    border-color: #ffca2c;
+}
+
+/* --- Motorcycles Section --- */
+.card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border: none;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.card-title {
+    color: var(--bs-primary);
+}
+
+/* --- How it works Section --- */
+#how-it-works .p-4 {
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+#how-it-works .p-4:hover {
+    background-color: #f8f9fa; /* light bg */
+    border-color: var(--bs-primary) !important;
+}
+
+#how-it-works .bi {
+    color: var(--bs-primary);
+}
+
+
+/* --- Footer --- */
+#footer a {
+    transition: color 0.2s ease-in-out;
+}
+
+#footer a:hover {
+    color: var(--bs-warning) !important;
+}
