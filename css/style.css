@@ -1,86 +1,178 @@
 /* Import Vazirmatn font from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800&display=swap');
 
 /* --- General Styles --- */
 body {
     font-family: 'Vazirmatn', sans-serif;
     direction: rtl;
     text-align: right;
-    font-weight: 400; /* Default font weight */
+    font-weight: 400;
+    background-color: #fafdff; /* A very light blue-ish white */
 }
 
-h1, h2, h3, h4, h5, h6, .navbar-brand, .fw-bold {
-    font-weight: 700 !important; /* Bolder headings and specific elements */
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+    font-weight: 700 !important;
+}
+
+.fw-bold {
+    font-weight: 800 !important; /* Make main action buttons pop */
 }
 
 /* --- Custom Colors & Theme --- */
 :root {
-    --bs-primary: #005c99; /* A custom, slightly deeper blue */
-    --bs-primary-rgb: 0, 92, 153;
-    --bs-warning: #ffc107;
-}
-
-/* Apply the custom primary color to the hero section */
-#hero {
-    background-color: var(--bs-primary);
+    --brand-primary: #0a7ea3;
+    --brand-secondary: #00c6c9;
+    --brand-accent: #ff8c00; /* A vibrant orange */
+    --bs-primary: var(--brand-primary);
+    --bs-primary-rgb: 10, 126, 163;
 }
 
 /* --- Header --- */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(10px);
+}
 .navbar-brand {
     font-size: 1.5rem;
+    color: var(--brand-primary);
 }
-
 .nav-link {
     font-weight: 500;
 }
 
 /* --- Hero Section --- */
+#hero {
+    background: linear-gradient(45deg, var(--brand-primary), var(--brand-secondary));
+    padding: 8rem 0; /* More vertical space */
+    color: white;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    margin-bottom: -10vh; /* Pull the next section up */
+    z-index: 10;
+}
+
+#hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800 !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#hero .lead {
+    font-size: 1.25rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
 #hero .btn-warning {
-    padding: 0.75rem 1.5rem;
-    font-size: 1.1rem;
-    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    background-color: var(--brand-accent);
+    border-color: var(--brand-accent);
+    color: white;
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 50px; /* Pill shape */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 #hero .btn-warning:hover {
-    background-color: #ffca2c;
-    border-color: #ffca2c;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    background-color: #ff9d23;
+    border-color: #ff9d23;
 }
 
 /* --- Motorcycles Section --- */
-.card {
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+#motorcycles .card {
     border: none;
+    border-radius: 1rem;
+    overflow: hidden; /* Ensures the image corners are clipped */
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+#motorcycles .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
 }
 
-.card-title {
-    color: var(--bs-primary);
+#motorcycles .card-title {
+    color: var(--brand-primary);
+    font-weight: 700;
 }
+
+.price-tag {
+    color: var(--brand-primary);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.btn-accent {
+    background-color: var(--brand-accent);
+    color: white;
+    border-radius: 50px;
+    padding: 0.5rem 1.2rem;
+    transition: all 0.2s ease;
+}
+
+.btn-accent:hover {
+    background-color: #ff9d23;
+    color: white;
+    transform: scale(1.05);
+}
+
 
 /* --- How it works Section --- */
-#how-it-works .p-4 {
-    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+.timeline-step {
+    position: relative;
 }
 
-#how-it-works .p-4:hover {
-    background-color: #f8f9fa; /* light bg */
-    border-color: var(--bs-primary) !important;
+.timeline-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(45deg, var(--brand-primary), var(--brand-secondary));
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2.5rem;
+    box-shadow: 0 0 0 5px #fafdff;
 }
 
-#how-it-works .bi {
-    color: var(--bs-primary);
+@media (min-width: 768px) {
+    .timeline-step:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        top: 40px; /* Vertically center with the icon */
+        left: 50%;
+        transform: translateY(-50%);
+        width: calc(100% - 80px);
+        height: 2px;
+        background-color: #e0e0e0;
+        z-index: -1;
+    }
+}
+
+/* --- Animations --- */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 
 /* --- Footer --- */
+#footer {
+    background-color: #2c3e50; /* A darker, more professional blue-gray */
+}
 #footer a {
     transition: color 0.2s ease-in-out;
 }
-
 #footer a:hover {
-    color: var(--bs-warning) !important;
+    color: var(--brand-secondary) !important;
 }
