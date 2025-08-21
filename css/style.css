@@ -1,165 +1,211 @@
 /* Import Vazirmatn font */
 @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&display=swap');
 
+/* --- DESIGN SYSTEM & VARIABLES --- */
 :root {
-    --primary-color: #006aff; /* A vibrant, modern blue */
-    --text-color-dark: #212529;
-    --text-color-light: #6c757d;
-    --bg-light: #f8f9fa;
-    --border-color: #dee2e6;
+    --primary-color: #00D09C;
+    --primary-hover: #00b88a;
+    --dark-color: #0d1a26;
+    --text-color: #212529;
+    --text-light: #5f6f7f;
+    --white-color: #ffffff;
+    --bg-light: #f7f9fc;
+    --border-color: #e6e9ec;
     --font-family-sans-serif: 'Vazirmatn', sans-serif;
+    --section-padding: 80px;
 }
 
+/* --- BASE & RESET --- */
 body {
     font-family: var(--font-family-sans-serif);
-    background-color: #fff;
-    color: var(--text-color-dark);
+    color: var(--text-color);
+    background-color: var(--white-color);
     direction: rtl;
     text-align: right;
-    padding-top: 72px; /* Offset for fixed header */
+    line-height: 1.7;
 }
 
-/* General utility classes */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: var(--dark-color);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+a:hover {
+    color: var(--primary-hover);
+}
+
+/* --- UTILITIES --- */
+.section {
+    padding: var(--section-padding) 0;
+}
 .section-title {
+    font-size: 2.5rem;
     font-weight: 800;
     margin-bottom: 3rem;
 }
-
-.section {
-    padding: 60px 0;
-}
-
-/* --- Header --- */
-.navbar {
-    border-bottom: 1px solid var(--border-color);
-    background-color: #fff !important;
-}
-
-/* --- Hero Section --- */
-#hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/1715193/pexels-photo-1715193.jpeg?auto=compress&cs=tinysrgb&w=1260');
-    background-size: cover;
-    background-position: center;
-    padding: 100px 0;
-    color: #fff;
-}
-
-.hero-title {
-    font-size: 3.5rem;
-    font-weight: 800;
-}
-
-.hero-subtitle {
-    font-size: 1.25rem;
-    font-weight: 400;
-}
-
-.booking-form-container {
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.booking-form-container .form-control,
-.booking-form-container .form-select {
-    border: 1px solid var(--border-color);
-    padding: 0.75rem 1rem;
-}
-
-.booking-form-container .btn-primary {
+.btn-primary {
     background-color: var(--primary-color);
     border-color: var(--primary-color);
+    font-weight: 700;
+    padding: 0.8rem 2rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+    transform: translateY(-2px);
 }
 
+/* --- HEADER --- */
+.navbar {
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+.navbar-brand {
+    font-weight: 800;
+}
+.navbar.scrolled {
+    background-color: var(--white-color);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    padding: 0.5rem 0;
+}
+.navbar.scrolled .nav-link, .navbar.scrolled .navbar-brand {
+    color: var(--dark-color) !important;
+}
+.navbar-dark .navbar-toggler-icon {
+    filter: invert(1);
+}
 
-/* --- Trust Features --- */
+/* --- HERO SECTION --- */
+#hero {
+    position: relative;
+    padding: 220px 0 200px 0;
+    background: url('https://www.li.me/hubfs/Lime_Web_6_23_2023/Image/Lime_Scooter_on_Street.jpg') no-repeat center center;
+    background-size: cover;
+    color: var(--white-color);
+}
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(13, 26, 38, 0.6);
+}
+.hero-title {
+    font-size: 4.5rem;
+    font-weight: 800;
+    color: var(--white-color);
+    position: relative;
+}
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.8);
+    position: relative;
+}
+
+/* --- BOOKING FORM --- */
+.booking-form-container {
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+    background-color: var(--white-color);
+    position: relative;
+    z-index: 20;
+    margin-top: -120px;
+}
+
+/* --- TRUST FEATURES --- */
 .feature-item .feature-icon {
     font-size: 3rem;
     color: var(--primary-color);
+    margin-bottom: 1rem;
+    display: inline-block;
 }
 
-/* --- Motorcycle Cards --- */
+/* --- MOTORCYCLE CARDS --- */
 #motorcycles {
     background-color: var(--bg-light);
 }
-
 .motorcycle-card {
-    background-color: #fff;
     border: 1px solid var(--border-color);
     border-radius: 1rem;
     overflow: hidden;
     transition: all 0.3s ease;
+    background-color: var(--white-color);
 }
-
 .motorcycle-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
 }
-
-.motorcycle-card .card-body {
-    padding: 1.5rem;
+.motorcycle-card .card-img-top {
+    height: 250px;
+    object-fit: cover;
 }
-
-.motorcycle-card .card-title {
-    font-size: 1.25rem;
+.motorcycle-card .card-body { padding: 1.5rem; }
+.motorcycle-card .card-title { font-size: 1.25rem; font-weight: 700; }
+.motorcycle-card .card-text { color: var(--text-light); }
+.motorcycle-card .card-footer {
+    background: none;
+    border-top: 1px solid var(--border-color);
+    padding: 1rem 1.5rem;
     font-weight: 700;
 }
 
-.motorcycle-card .card-specs {
+/* --- HOW IT WORKS --- */
+.how-it-works-list {
+    list-style: none;
+    padding: 0;
+}
+.how-it-works-list li {
     display: flex;
-    gap: 1rem;
-    color: var(--text-color-light);
-    margin: 0.75rem 0;
+    align-items: flex-start;
+    margin-bottom: 2rem;
 }
-
-.motorcycle-card .card-specs i {
-    margin-left: 0.25rem;
+.how-it-works-list .list-number {
+    font-size: 2rem;
+    font-weight: 800;
     color: var(--primary-color);
+    margin-left: 1.5rem;
+    line-height: 1;
+}
+.how-it-works-list h5 { font-weight: 700; }
+.how-it-works-list p { color: var(--text-light); }
+
+/* --- FOOTER --- */
+#footer {
+    background-color: var(--dark-color);
+    color: rgba(255,255,255,0.7);
+}
+#footer .footer-brand { color: var(--white-color); }
+#footer .footer-title { color: var(--white-color); font-weight: 700; }
+#footer a { color: rgba(255,255,255,0.7); }
+#footer a:hover { color: var(--white-color); }
+#footer .social-icons a {
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+}
+#footer .copyright {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
 }
 
-.motorcycle-card .card-price {
-    font-size: 1.1rem;
-    color: var(--text-color-dark);
-    margin-top: 1rem;
-    border-top: 1px solid var(--border-color);
-    padding-top: 1rem;
-}
-
-/* --- How it Works Section --- */
-#how-it-works .work-step {
-    text-align: center;
-}
-#how-it-works .work-step .step-icon {
-    font-size: 3rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-/* --- Testimonial Section --- */
-.testimonial-card {
-    background-color: var(--bg-light);
-    padding: 2rem;
-    border-radius: 1rem;
-    text-align: center;
-}
-.testimonial-text {
-    font-size: 1.2rem;
-    font-style: italic;
-    color: var(--text-color-dark);
-}
-.testimonial-author {
-    color: var(--text-color-light);
-}
-
-/* --- Responsive Adjustments --- */
+/* --- RESPONSIVE ADJUSTMENTS --- */
 @media (max-width: 991.98px) {
+    .hero-title {
+        font-size: 3rem;
+    }
     .booking-form-container .row > div {
         margin-bottom: 1rem;
     }
     .booking-form-container .row > div:last-child {
         margin-bottom: 0;
+    }
+    .navbar.scrolled .navbar-toggler-icon, .navbar-dark .navbar-toggler-icon {
+        filter: none; /* Ensure toggler is visible on all backgrounds */
     }
 }
