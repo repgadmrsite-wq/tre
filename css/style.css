@@ -1,188 +1,117 @@
-/* Import Vazirmatn font */
+/*
+  Kish-Ran - Main Stylesheet
+  Version: 2.0 (Rebuild)
+  Author: Jules
+*/
+
+/* 1. FONT IMPORT */
 @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&display=swap');
 
+/* 2. DESIGN SYSTEM & VARIABLES */
 :root {
-    --primary-color: #006aff;
-    --text-color-dark: #212529;
-    --text-color-light: #6c757d;
-    --bg-light: #f8f9fa;
-    --border-color: #dee2e6;
-    --border-color-dark: #444;
-    --white-color: #ffffff;
-    --font-family-sans-serif: 'Vazirmatn', sans-serif;
-    --section-padding: 80px;
+    --primary-color: #0d6efd; /* Bootstrap's default blue for consistency */
+    --secondary-color: #6c757d; /* Bootstrap's default secondary */
+    --success-color: #198754;
+    --danger-color: #dc3545;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+
+    --font-family-main: 'Vazirmatn', sans-serif;
+    --text-color: var(--dark-color);
+    --body-bg: #ffffff;
+
+    --border-radius-sm: 0.25rem;
+    --border-radius-md: 0.5rem;
+    --border-radius-lg: 1rem;
+
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+    --shadow-md: 0 5px 15px rgba(0,0,0,0.1);
 }
 
+/* 3. BASE & GLOBAL STYLES */
 body {
-    font-family: var(--font-family-sans-serif);
-    background-color: var(--white-color);
-    color: var(--text-color-dark);
+    font-family: var(--font-family-main);
+    color: var(--text-color);
+    background-color: var(--body-bg);
     direction: rtl;
     text-align: right;
-    padding-top: 72px; /* For fixed-top navbar */
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 a {
     color: var(--primary-color);
     text-decoration: none;
-}
-a:hover {
-    color: #0056b3;
+    transition: color 0.2s ease-in-out;
 }
 
+a:hover {
+    color: color-mix(in srgb, var(--primary-color), black 15%);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--dark-color);
+}
+
+/* 4. UTILITIES */
 .section {
-    padding: var(--section-padding) 0;
+    padding: 80px 0;
 }
 
 .section-title {
     font-weight: 800;
+    font-size: 2.5rem;
     margin-bottom: 3rem;
+    text-align: center;
 }
 
-/* --- HEADER --- */
-.navbar {
-    background-color: var(--white-color) !important;
-    border-bottom: 1px solid var(--border-color);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+/* 5. COMPONENT STYLES (Overrides & Custom) */
+
+/* Buttons */
+.btn {
+    font-weight: 500;
+    border-radius: var(--border-radius-md);
+    padding: 0.75rem 1.5rem;
+    transition: all 0.2s ease-in-out;
 }
 
-/* --- HERO SECTION --- */
-#hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.pexels.com/photos/1715193/jpeg?auto=compress&cs=tinysrgb&w=1260');
-    background-size: cover;
-    background-position: center;
-    padding: 120px 0;
-    color: var(--white-color);
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
 }
-.hero-title {
-    font-size: 3.5rem;
+
+.btn-primary:hover {
+    background-color: color-mix(in srgb, var(--primary-color), black 15%);
+    border-color: color-mix(in srgb, var(--primary-color), black 15%);
+}
+
+
+/* Forms */
+.form-control {
+    border-radius: var(--border-radius-md);
+    padding: 0.75rem 1.25rem;
+    border: 1px solid #ced4da; /* Bootstrap default */
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    overflow: hidden; /* Ensures content respects the border-radius */
+}
+
+/* Navbar */
+.navbar-brand {
     font-weight: 800;
-    color: var(--white-color);
-}
-.hero-subtitle {
-    font-size: 1.25rem;
-    color: rgba(255,255,255,0.9);
-}
-.booking-form-container {
-    background-color: var(--white-color);
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    max-width: 900px;
-    margin: -60px auto 0;
-    position: relative;
-    z-index: 10;
-}
-
-/* --- TRUST FEATURES --- */
-.feature-item .feature-icon {
-    font-size: 3rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-.feature-item p {
-    color: var(--text-color-light);
-}
-
-/* --- MOTORCYCLE CARDS --- */
-#motorcycles {
-    background-color: var(--bg-light);
-}
-.motorcycle-card {
-    background-color: var(--white-color);
-    border: 1px solid var(--border-color);
-    border-radius: 1rem;
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-.motorcycle-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-}
-.motorcycle-card .card-img-top {
-    height: 220px;
-    object-fit: cover;
-}
-.motorcycle-card .card-body { padding: 1.5rem; }
-.motorcycle-card .card-title { font-weight: 700; }
-.motorcycle-card .card-specs {
-    display: flex;
-    gap: 1rem;
-    color: var(--text-color-light);
-    margin: 0.75rem 0;
-}
-.motorcycle-card .card-specs i {
-    margin-left: 0.25rem;
-}
-.motorcycle-card .card-price {
-    font-size: 1.1rem;
-    margin-top: 1rem;
-    border-top: 1px solid var(--border-color);
-    padding-top: 1rem;
-}
-
-/* --- HOW IT WORKS --- */
-.work-step .step-icon {
-    font-size: 3rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-/* --- FOOTER --- */
-#footer {
-    background-color: var(--text-color-dark);
-    color: var(--text-color-light);
-}
-#footer a {
-    color: var(--text-color-light);
-}
-#footer a:hover {
-    color: var(--white-color);
-}
-#footer .footer-title {
-    color: var(--white-color);
-    margin-bottom: 1rem;
-}
-#footer .social-icons a {
     font-size: 1.5rem;
-    margin: 0 0.5rem;
-}
-#footer .copyright {
-    border-top: 1px solid var(--border-color-dark);
-    padding-top: 1.5rem;
-    margin-top: 1.5rem;
-    color: var(--text-color-light);
-}
-
-/* --- RESPONSIVE STYLES --- */
-@media (max-width: 991.98px) {
-    /* Medium devices (tablets, less than 992px) */
-    .hero-title {
-        font-size: 3rem;
-    }
-}
-
-@media (max-width: 767.98px) {
-    /* Small devices (landscape phones, less than 768px) */
-    #hero {
-        padding: 100px 0;
-    }
-
-    .hero-title {
-        font-size: 2.5rem;
-    }
-
-    .booking-form-container {
-        margin-top: -50px;
-        padding: 1.5rem;
-        border-radius: 0.75rem;
-    }
-
-    .section {
-        padding: 60px 0;
-    }
-
-    .section-title {
-        margin-bottom: 2rem;
-    }
 }
