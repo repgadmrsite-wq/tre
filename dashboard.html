@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>داشبورد کاربر - کیش‌ران</title>
+    <title>داشبورد کاربر - KISH UP</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
@@ -78,7 +78,7 @@
     <!-- Sidebar -->
     <aside class="sidebar d-flex flex-column p-0">
         <div class="sidebar-header text-center">
-            <a class="navbar-brand fs-4 text-white" href="index.html">کیش‌ران</a>
+            <a class="navbar-brand fs-4 text-white" href="index.html">KISH UP</a>
         </div>
         <ul class="nav flex-column my-4">
             <li class="nav-item">
@@ -114,7 +114,7 @@
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <h1 class="h2">داشبورد</h1>
                 <div class="d-flex align-items-center">
-                    <span class="me-3 d-none d-md-inline">خوش آمدید، کاربر عزیز</span>
+                    <span id="user-welcome" class="me-3 d-none d-md-inline">خوش آمدید، کاربر عزیز</span>
                     <img src="https://i.pravatar.cc/40" class="rounded-circle" alt="User Avatar">
                 </div>
             </div>
@@ -127,7 +127,7 @@
                             <div class="fs-2 text-primary me-3"><i class="bi bi-journal-check"></i></div>
                             <div>
                                 <h5 class="mb-0 text-muted">کل رزروها</h5>
-                                <p class="fs-4 fw-bold mb-0">۵</p>
+                                <p id="stats-total-bookings" class="fs-4 fw-bold mb-0">۰</p>
                             </div>
                         </div>
                     </div>
@@ -138,7 +138,7 @@
                             <div class="fs-2 text-success me-3"><i class="bi bi-bicycle"></i></div>
                             <div>
                                 <h5 class="mb-0 text-muted">سفرهای انجام شده</h5>
-                                <p class="fs-4 fw-bold mb-0">۳</p>
+                                <p id="stats-completed-trips" class="fs-4 fw-bold mb-0">۰</p>
                             </div>
                         </div>
                     </div>
@@ -149,7 +149,7 @@
                             <div class="fs-2 text-warning me-3"><i class="bi bi-wallet2"></i></div>
                             <div>
                                 <h5 class="mb-0 text-muted">مجموع پرداخت</h5>
-                                <p class="fs-4 fw-bold mb-0">۱,۲۰۰,۰۰۰ تومان</p>
+                                <p id="stats-total-spent" class="fs-4 fw-bold mb-0">۰ تومان</p>
                             </div>
                         </div>
                     </div>
@@ -172,35 +172,8 @@
                                 <th class="text-end">مبلغ</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>اسکوتر وسپا</td>
-                                <td>۱۴۰۳/۰۵/۰۱</td>
-                                <td>۱۴۰۳/۰۵/۰۳</td>
-                                <td><span class="badge bg-success-subtle text-success-emphasis rounded-pill">تکمیل شده</span></td>
-                                <td class="text-end">۳۶۰,۰۰۰ تومان</td>
-                            </tr>
-                            <tr>
-                                <td>موتور کروزر</td>
-                                <td>۱۴۰۳/۰۶/۱۰</td>
-                                <td>۱۴۰۳/۰۶/۱۱</td>
-                                <td><span class="badge bg-warning-subtle text-warning-emphasis rounded-pill">در انتظار</span></td>
-                                <td class="text-end">۲۵۰,۰۰۰ تومان</td>
-                            </tr>
-                            <tr>
-                                <td>موتور برقی</td>
-                                <td>۱۴۰۳/۰۴/۱۵</td>
-                                <td>۱۴۰۳/۰۴/۱۵</td>
-                                <td><span class="badge bg-danger-subtle text-danger-emphasis rounded-pill">لغو شده</span></td>
-                                <td class="text-end">۱۵۰,۰۰۰ تومان</td>
-                            </tr>
-                             <tr>
-                                <td>موتور کروزر</td>
-                                <td>۱۴۰۳/۰۳/۲۰</td>
-                                <td>۱۴۰۳/۰۳/۲۲</td>
-                                <td><span class="badge bg-success-subtle text-success-emphasis rounded-pill">تکمیل شده</span></td>
-                                <td class="text-end">۵۰۰,۰۰۰ تومان</td>
-                            </tr>
+                        <tbody id="bookings-table-body">
+                            <!-- Rows will be inserted here by JavaScript -->
                         </tbody>
                     </table>
                 </div>
