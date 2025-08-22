@@ -2,6 +2,25 @@
 
 document.addEventListener("DOMContentLoaded", function() {
 
+    // --- Theme Toggle Logic ---
+    const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+        // On page load, check for saved theme
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark');
+        }
+        // On button click
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            // Save preference
+            if (document.body.classList.contains('dark')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.removeItem('theme');
+            }
+        });
+    }
+
     // --- Navbar Scroll Effect ---
     const navbar = document.querySelector('.navbar');
     if (navbar) {
