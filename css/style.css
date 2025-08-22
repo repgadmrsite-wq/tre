@@ -1,171 +1,188 @@
-/* --- FONT IMPORTS --- */
-@import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Vazirmatn:wght@400;500;700&display=swap');
+/* Import Vazirmatn font */
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&display=swap');
 
-/* --- THEME VARIABLES --- */
 :root {
-    /* --- Light Theme (Default) --- */
-    --primary-color: #b38e56; /* A more subtle, classic gold */
-    --primary-hover: #a17d4a;
-    --bg-color: #ffffff;
+    --primary-color: #006aff;
+    --text-color-dark: #212529;
+    --text-color-light: #6c757d;
     --bg-light: #f8f9fa;
-    --card-bg: #ffffff;
-    --text-color: #212529;
-    --text-light: #6c757d;
-    --headings-color: #000000;
     --border-color: #dee2e6;
-    --shadow-color: rgba(0,0,0,0.1);
-    --hero-text-color: #ffffff;
-    --hero-overlay: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.2));
+    --border-color-dark: #444;
+    --white-color: #ffffff;
+    --font-family-sans-serif: 'Vazirmatn', sans-serif;
+    --section-padding: 80px;
 }
 
-body.dark {
-    /* --- Dark Theme --- */
-    --primary-color: #D4AF37;
-    --primary-hover: #c09e34;
-    --bg-color: #181818;
-    --bg-light: #1f1f1f;
-    --card-bg: #222222;
-    --text-color: #f0f0f0;
-    --text-light: #a0a0a0;
-    --headings-color: #ffffff;
-    --border-color: #333333;
-    --shadow-color: rgba(0,0,0,0.3);
-    --hero-text-color: #ffffff;
-    --hero-overlay: linear-gradient(to top, rgba(24, 24, 24, 1) 5%, rgba(24, 24, 24, 0.1) 100%);
-}
-
-/* --- TYPOGRAPHY & BASE --- */
 body {
-    font-family: 'Vazirmatn', sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
+    font-family: var(--font-family-sans-serif);
+    background-color: var(--white-color);
+    color: var(--text-color-dark);
     direction: rtl;
     text-align: right;
-    line-height: 1.8;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    padding-top: 72px; /* For fixed-top navbar */
 }
-h1, h2, h3, h4, h5, h6, .hero-title, .navbar-brand {
-    font-family: 'Lalezar', cursive;
-    color: var(--headings-color);
-    font-weight: 400;
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+a:hover {
+    color: #0056b3;
+}
+
+.section {
+    padding: var(--section-padding) 0;
+}
+
+.section-title {
+    font-weight: 800;
+    margin-bottom: 3rem;
 }
 
 /* --- HEADER --- */
 .navbar {
-    padding: 1rem 0;
-    transition: all 0.3s ease;
-    background-color: transparent;
-    position: absolute; /* Changed from fixed */
-    width: 100%;
-    z-index: 100;
+    background-color: var(--white-color) !important;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
 }
-.navbar .nav-link { color: var(--hero-text-color); }
-.navbar-brand { color: var(--hero-text-color) !important; }
 
-/* --- HERO --- */
+/* --- HERO SECTION --- */
 #hero {
-    position: relative;
-    padding: 250px 0 200px 0;
-    text-align: center;
-    color: var(--hero-text-color);
-    background: url('https://images.unsplash.com/photo-1669593926296-661681f2f2f0?q=80&w=1920') no-repeat center center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.pexels.com/photos/1715193/jpeg?auto=compress&cs=tinysrgb&w=1260');
     background-size: cover;
-}
-#hero::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: var(--hero-overlay);
+    background-position: center;
+    padding: 120px 0;
+    color: var(--white-color);
 }
 .hero-title {
-    font-size: 7rem;
-    position: relative;
-    text-shadow: 0 5px 20px rgba(0,0,0,0.5);
-    color: var(--hero-text-color);
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--white-color);
 }
 .hero-subtitle {
     font-size: 1.25rem;
-    color: rgba(255,255,255,0.8);
-    position: relative;
+    color: rgba(255,255,255,0.9);
 }
-
-/* --- BOOKING FORM --- */
-#booking-form {
-    padding: 0;
-    margin-top: -120px;
+.booking-form-container {
+    background-color: var(--white-color);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    max-width: 900px;
+    margin: -60px auto 0;
     position: relative;
     z-index: 10;
 }
-.booking-form-container {
-    background: var(--card-bg);
-    padding: 2.5rem;
-    border-radius: 1rem;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 25px 60px var(--shadow-color);
-}
-.booking-form-container .form-control,
-.booking-form-container .form-select {
-    background-color: var(--bg-color);
-    border-color: var(--border-color);
-    color: var(--text-color);
-}
-.booking-form-container .form-control::placeholder { color: var(--text-light); }
 
-/* --- OTHER SECTIONS --- */
-#motorcycles, #about {
+/* --- TRUST FEATURES --- */
+.feature-item .feature-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+.feature-item p {
+    color: var(--text-color-light);
+}
+
+/* --- MOTORCYCLE CARDS --- */
+#motorcycles {
     background-color: var(--bg-light);
 }
-.feature-item p, .how-it-works-list p, .motorcycle-card .card-text {
-    color: var(--text-light);
-}
 .motorcycle-card {
-    background-color: var(--card-bg);
+    background-color: var(--white-color);
     border: 1px solid var(--border-color);
-    box-shadow: 0 5px 15px var(--shadow-color);
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
 }
-.motorcycle-card .card-footer {
+.motorcycle-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+.motorcycle-card .card-img-top {
+    height: 220px;
+    object-fit: cover;
+}
+.motorcycle-card .card-body { padding: 1.5rem; }
+.motorcycle-card .card-title { font-weight: 700; }
+.motorcycle-card .card-specs {
+    display: flex;
+    gap: 1rem;
+    color: var(--text-color-light);
+    margin: 0.75rem 0;
+}
+.motorcycle-card .card-specs i {
+    margin-left: 0.25rem;
+}
+.motorcycle-card .card-price {
+    font-size: 1.1rem;
+    margin-top: 1rem;
     border-top: 1px solid var(--border-color);
-    color: var(--primary-color);
+    padding-top: 1rem;
 }
-.how-it-works-list .list-number { color: var(--primary-color); }
+
+/* --- HOW IT WORKS --- */
+.work-step .step-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
 
 /* --- FOOTER --- */
 #footer {
-    background-color: #111;
-    color: #a0a0a0;
+    background-color: var(--text-color-dark);
+    color: var(--text-color-light);
 }
-#footer .footer-brand, #footer .footer-title { color: #fff; }
-#footer a { color: #a0a0a0; }
-#footer a:hover { color: var(--primary-color); }
-#footer .copyright { border-top: 1px solid #333; }
-
-/* --- THEME TOGGLE --- */
-#theme-toggle {
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    background: transparent;
-    border-color: rgba(255,255,255,0.5);
-    color: #fff;
-    transition: all 0.3s ease;
+#footer a {
+    color: var(--text-color-light);
 }
-#theme-toggle:hover {
-    background-color: rgba(255,255,255,0.1);
-    border-color: #fff;
+#footer a:hover {
+    color: var(--white-color);
 }
-body:not(.dark) #theme-toggle {
-    border-color: var(--border-color);
-    color: var(--text-color);
+#footer .footer-title {
+    color: var(--white-color);
+    margin-bottom: 1rem;
 }
-body:not(.dark) #theme-toggle:hover {
-    background-color: var(--bg-light);
+#footer .social-icons a {
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+}
+#footer .copyright {
+    border-top: 1px solid var(--border-color-dark);
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+    color: var(--text-color-light);
 }
 
-.theme-icon-dark { display: none; }
-.theme-icon-light { display: inline-block; }
-body.dark .theme-icon-dark { display: inline-block; }
-body.dark .theme-icon-light { display: none; }
+/* --- RESPONSIVE STYLES --- */
+@media (max-width: 991.98px) {
+    /* Medium devices (tablets, less than 992px) */
+    .hero-title {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    /* Small devices (landscape phones, less than 768px) */
+    #hero {
+        padding: 100px 0;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .booking-form-container {
+        margin-top: -50px;
+        padding: 1.5rem;
+        border-radius: 0.75rem;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .section-title {
+        margin-bottom: 2rem;
+    }
+}
