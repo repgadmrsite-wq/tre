@@ -31,7 +31,7 @@ function setLoggedInUser(user) {
 
 function logout() {
   localStorage.removeItem('loggedInUser');
-  window.location.href = 'login.html';
+  window.location.href = 'login.php';
 }
 
 function setupLogin() {
@@ -45,7 +45,7 @@ function setupLogin() {
     const user = users.find(u => u.email === email && u.password === password);
     if (user) {
       setLoggedInUser(user);
-      window.location.href = user.role === 'admin' ? 'admin.html' : 'dashboard.html';
+      window.location.href = user.role === 'admin' ? 'admin.php' : 'dashboard.html';
     } else {
       alert('اطلاعات ورود نادرست است');
     }
@@ -55,7 +55,7 @@ function setupLogin() {
 function loadUserDashboard() {
   const user = getLoggedInUser();
   if (!user || user.role !== 'user') {
-    window.location.href = 'login.html';
+    window.location.href = 'login.php';
     return;
   }
   const welcomeSpan = document.getElementById('welcomeUser');
@@ -137,7 +137,7 @@ function updateUserStats(user) {
 function loadAdminDashboard() {
   const user = getLoggedInUser();
   if (!user || user.role !== 'admin') {
-    window.location.href = 'login.html';
+    window.location.href = 'login.php';
     return;
   }
   renderAdminStats();
@@ -245,11 +245,11 @@ function renderStatusBadge(status) {
 document.addEventListener('DOMContentLoaded', () => {
   initData();
   const page = window.location.pathname.split('/').pop();
-  if (page === 'login.html') {
+  if (page === 'login.php') {
     setupLogin();
   } else if (page === 'dashboard.html') {
     loadUserDashboard();
-  } else if (page === 'admin.html') {
+  } else if (page === 'admin.php') {
     loadAdminDashboard();
   }
 });
