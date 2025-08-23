@@ -10,8 +10,11 @@ CREATE TABLE admins (
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
+    phone VARCHAR(20),
     email VARCHAR(100) NOT NULL UNIQUE,
-    password VARCHAR(32) NOT NULL
+    password VARCHAR(32) NOT NULL,
+    status ENUM('regular','vip','blocked') DEFAULT 'regular',
+    note TEXT
 ) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 CREATE TABLE motorcycles (
@@ -55,8 +58,8 @@ CREATE TABLE bookings (
 INSERT INTO admins (name, email, password) VALUES
 ('مدیر', 'admin@example.com', '0192023a7bbd73250516f069df18b500');
 
-INSERT INTO users (name, email, password) VALUES
-('کاربر نمونه', 'user@example.com', '6ad14ba9986e3615423dfca256d04e3f');
+INSERT INTO users (name, phone, email, password, status, note) VALUES
+('کاربر نمونه', '09120000000', 'user@example.com', '6ad14ba9986e3615423dfca256d04e3f', 'regular', '');
 
 INSERT INTO motorcycles (model, plate, color, capacity, description, status, price_per_hour, price_half_day, price_per_day, price_per_week, price_per_month, insurance, year, mileage, available) VALUES
 ('اسکوتر وسپا', '11ک123-45', 'قرمز', 150, 'اسکوتر شهری', 'active', 30000, 70000, 120000, 750000, 2800000, 'بیمه شخص ثالث', 2022, 5000, 1),

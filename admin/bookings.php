@@ -15,7 +15,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_booking'])) {
     $status = $_POST['status'];
     $amount = (int)$_POST['amount'];
     if ($user_id && $motor_id && $start && $end) {
-        $pdo->prepare('INSERT INTO bookings (user_id, motorcycle_id, start_date, end_date, status, amount) VALUES (?,?,?,?,?,?)')->execute([$user_id, $motor_id, $start, $end, $status, $amount]);
+        $st = $pdo->prepare('SELECT status FROM users WHERE id=?');
+        $st->execute([$user_id]);
+        $userStatus = $st->fetchColumn();
+        if ($userStatus !== 'blocked') {
+            $pdo->prepare('INSERT INTO bookings (user_id, motorcycle_id, start_date, end_date, status, amount) VALUES (?,?,?,?,?,?)')->execute([$user_id, $motor_id, $start, $end, $status, $amount]);
+        } else {
+            $_SESSION['error'] = 'کاربر بلاک شده است';
+        }
     }
     header('Location: bookings.php');
     exit;
@@ -71,7 +78,7 @@ $stmt = $pdo->prepare($query);
 $stmt->execute($params);
 $bookings = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-$users = $pdo->query('SELECT id, name FROM users ORDER BY name')->fetchAll(PDO::FETCH_ASSOC);
+$users = $pdo->query('SELECT id, name, status FROM users ORDER BY name')->fetchAll(PDO::FETCH_ASSOC);
 $motors = $pdo->query('SELECT id, model FROM motorcycles ORDER BY model')->fetchAll(PDO::FETCH_ASSOC);
 
 $editBooking = null;
@@ -112,6 +119,9 @@ if (isset($_GET['edit'])) {
   <main class="main-content">
     <div class="container-fluid">
       <h1 class="h3 mb-4">مدیریت رزروها</h1>
+      <?php if (!empty($_SESSION['error'])): ?>
+        <div class="alert alert-danger"><?= $_SESSION['error']; unset($_SESSION['error']); ?></div>
+      <?php endif; ?>
       <form method="post" class="row g-2 mb-4">
         <?php if($editBooking): ?>
           <input type="hidden" name="update_booking" value="1">
@@ -123,7 +133,7 @@ if (isset($_GET['edit'])) {
           <select name="user_id" class="form-select" required>
             <option value="">مشتری</option>
             <?php foreach($users as $u): ?>
-              <option value="<?= $u['id']; ?>" <?= isset($editBooking['user_id']) && $editBooking['user_id']==$u['id'] ? 'selected' : ''; ?>><?= htmlspecialchars($u['name']); ?></option>
+              <option value="<?= $u['id']; ?>" <?= isset($editBooking['user_id']) && $editBooking['user_id']==$u['id'] ? 'selected' : ''; ?> <?= $u['status']=='blocked' ? 'disabled' : ''; ?>><?= htmlspecialchars($u['name']); ?><?= $u['status']=='blocked' ? ' (بلاک)' : ''; ?></option>
             <?php endforeach; ?>
           </select>
         </div>
