@@ -11,16 +11,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt = $pdo->prepare('SELECT id, name, email, password FROM admins WHERE email = ? LIMIT 1');
     $stmt->execute([$email]);
     $admin = $stmt->fetch();
-    if ($admin && $admin['password'] === $password) {
-        $_SESSION['user'] = [
-            'id' => $admin['id'],
-            'name' => $admin['name'],
-            'email' => $admin['email'],
-            'role' => 'admin'
-        ];
-        header('Location: admin.php');
-        exit;
-    }
+      if ($admin && $admin['password'] === $password) {
+          $_SESSION['user'] = [
+              'id' => $admin['id'],
+              'name' => $admin['name'],
+              'email' => $admin['email'],
+              'role' => 'admin'
+          ];
+          header('Location: admin/admin.php');
+          exit;
+      }
 
     // check regular users table
     $stmt = $pdo->prepare('SELECT id, name, email, password FROM users WHERE email = ? LIMIT 1');
