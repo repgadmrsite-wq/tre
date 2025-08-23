@@ -46,8 +46,7 @@ $overdue = $pdo->query("SELECT u.name user_name,m.name moto_name,b.end_date FROM
   <title>داشبورد مدیریت - کیش‌ران</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/admin.css">
+  <link rel="stylesheet" href="../css/admin-panel.css">
 </head>
 <body>
 <div class="dashboard-layout">
@@ -210,6 +209,6 @@ const dailyRevenue = <?= json_encode($dailyRevenue); ?>;
 const monthlyLabels = <?= json_encode($monthlyLabels); ?>;
 const monthlyRevenue = <?= json_encode($monthlyRevenue); ?>;
 </script>
-<script src="../js/script-admin.js"></script>
+<script src="../js/admin-panel.js"></script>
 </body>
 </html>

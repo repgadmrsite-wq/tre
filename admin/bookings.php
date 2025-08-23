@@ -32,8 +32,7 @@ $bookings = $pdo->query("SELECT b.id, m.name AS motor_name, u.name AS user_name,
   <title>مدیریت رزروها - کیش‌ران</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/admin.css">
+  <link rel="stylesheet" href="../css/admin-panel.css">
 </head>
 <body>
 <div class="dashboard-layout">
