@@ -85,7 +85,7 @@ foreach ($revenueQueries as $key => $range) {
             <li class="nav-item">
                 <a class="nav-link active" href="#"><i class="bi bi-speedometer2"></i><span>داشبورد</span></a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-calendar2-check"></i><span>رزروهای من</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="bookings.php"><i class="bi bi-calendar2-check"></i><span>رزروهای من</span></a></li>
             <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-person-circle"></i><span>پروفایل</span></a></li>
         </ul>
         <div class="mt-auto p-3">
