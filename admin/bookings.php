@@ -14,12 +14,39 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_booking'])) {
     $end = $_POST['end_date'];
     $status = $_POST['status'];
     $amount = (int)$_POST['amount'];
+    $discount_code = trim($_POST['discount_code']);
+    $discount_id = null;
     if ($user_id && $motor_id && $start && $end) {
         $st = $pdo->prepare('SELECT status FROM users WHERE id=?');
         $st->execute([$user_id]);
         $userStatus = $st->fetchColumn();
         if ($userStatus !== 'blocked') {
-            $pdo->prepare('INSERT INTO bookings (user_id, motorcycle_id, start_date, end_date, status, amount) VALUES (?,?,?,?,?,?)')->execute([$user_id, $motor_id, $start, $end, $status, $amount]);
+            if ($discount_code) {
+                $dstmt = $pdo->prepare('SELECT * FROM discounts WHERE code=?');
+                $dstmt->execute([$discount_code]);
+                if ($disc = $dstmt->fetch(PDO::FETCH_ASSOC)) {
+                    $today = date('Y-m-d');
+                    if ((!$disc['start_date'] || $disc['start_date'] <= $today) && (!$disc['end_date'] || $disc['end_date'] >= $today) &&
+                        (!$disc['usage_limit'] || $disc['used'] < $disc['usage_limit']) &&
+                        (!$disc['vip_only'] || $userStatus=='vip') &&
+                        (!$disc['motor_id'] || $disc['motor_id']==$motor_id)) {
+                        $ustmt = $pdo->prepare('SELECT used_count FROM discount_usages WHERE discount_id=? AND user_id=?');
+                        $ustmt->execute([$disc['id'],$user_id]);
+                        $usedCount = $ustmt->fetchColumn() ?: 0;
+                        if (!$disc['per_user_limit'] || $usedCount < $disc['per_user_limit']) {
+                            $discount_id = $disc['id'];
+                            if ($disc['type']=='percent') {
+                                $amount = max(0, $amount - floor($amount * $disc['value']/100));
+                            } else {
+                                $amount = max(0, $amount - $disc['value']);
+                            }
+                            $pdo->prepare('UPDATE discounts SET used=used+1 WHERE id=?')->execute([$discount_id]);
+                            $pdo->prepare('INSERT INTO discount_usages (discount_id,user_id,used_count) VALUES (?,?,1) ON DUPLICATE KEY UPDATE used_count=used_count+1')->execute([$discount_id,$user_id]);
+                        }
+                    }
+                }
+            }
+            $pdo->prepare('INSERT INTO bookings (user_id, motorcycle_id, start_date, end_date, status, amount, discount_id) VALUES (?,?,?,?,?,?,?)')->execute([$user_id, $motor_id, $start, $end, $status, $amount, $discount_id]);
         } else {
             $_SESSION['error'] = 'کاربر بلاک شده است';
         }
@@ -35,7 +62,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_booking'])) {
     $end = $_POST['end_date'];
     $status = $_POST['status'];
     $amount = (int)$_POST['amount'];
-    $pdo->prepare('UPDATE bookings SET user_id=?, motorcycle_id=?, start_date=?, end_date=?, status=?, amount=? WHERE id=?')->execute([$user_id, $motor_id, $start, $end, $status, $amount, $id]);
+    $discount_id = (int)($_POST['discount_id'] ?? 0) ?: null;
+    $pdo->prepare('UPDATE bookings SET user_id=?, motorcycle_id=?, start_date=?, end_date=?, status=?, amount=?, discount_id=? WHERE id=?')->execute([$user_id, $motor_id, $start, $end, $status, $amount, $discount_id, $id]);
     header('Location: bookings.php');
     exit;
 }
@@ -66,7 +94,7 @@ $filterMotor = (int)($_GET['motor'] ?? 0);
 $filterStatus = $_GET['status'] ?? '';
 $filterStart = $_GET['start'] ?? '';
 $filterEnd = $_GET['end'] ?? '';
-$query = "SELECT b.id, m.model AS motor_model, u.name AS user_name, b.start_date, b.end_date, b.status, b.amount FROM bookings b JOIN users u ON b.user_id=u.id JOIN motorcycles m ON b.motorcycle_id=m.id WHERE 1=1";
+$query = "SELECT b.id, m.model AS motor_model, u.name AS user_name, b.start_date, b.end_date, b.status, b.amount, d.code AS discount_code FROM bookings b JOIN users u ON b.user_id=u.id JOIN motorcycles m ON b.motorcycle_id=m.id LEFT JOIN discounts d ON b.discount_id=d.id WHERE 1=1";
 $params = [];
 if ($filterUser) { $query .= ' AND b.user_id=?'; $params[] = $filterUser; }
 if ($filterMotor) { $query .= ' AND b.motorcycle_id=?'; $params[] = $filterMotor; }
@@ -84,7 +112,7 @@ $motors = $pdo->query('SELECT id, model FROM motorcycles ORDER BY model')->fetch
 $editBooking = null;
 if (isset($_GET['edit'])) {
     $id = (int)$_GET['edit'];
-    $stmt = $pdo->prepare('SELECT * FROM bookings WHERE id=?');
+    $stmt = $pdo->prepare('SELECT b.*, d.code AS discount_code FROM bookings b LEFT JOIN discounts d ON b.discount_id=d.id WHERE b.id=?');
     $stmt->execute([$id]);
     $editBooking = $stmt->fetch(PDO::FETCH_ASSOC);
 }
@@ -108,6 +136,8 @@ if (isset($_GET['edit'])) {
     <ul class="nav flex-column my-4">
       <li class="nav-item"><a class="nav-link" href="admin.php"><i class="bi bi-speedometer2"></i><span>داشبورد</span></a></li>
       <li class="nav-item"><a class="nav-link active" href="bookings.php"><i class="bi bi-calendar-week"></i><span>رزروها</span></a></li>
+      <li class="nav-item"><a class="nav-link" href="finance.php"><i class="bi bi-receipt"></i><span>مالی</span></a></li>
+      <li class="nav-item"><a class="nav-link" href="discounts.php"><i class="bi bi-ticket-perforated"></i><span>تخفیف‌ها</span></a></li>
       <li class="nav-item"><a class="nav-link" href="admins.php"><i class="bi bi-shield-lock"></i><span>مدیران</span></a></li>
       <li class="nav-item"><a class="nav-link" href="users.php"><i class="bi bi-people-fill"></i><span>کاربران</span></a></li>
       <li class="nav-item"><a class="nav-link" href="motors.php"><i class="bi bi-bicycle"></i><span>موتورها</span></a></li>
@@ -126,6 +156,7 @@ if (isset($_GET['edit'])) {
         <?php if($editBooking): ?>
           <input type="hidden" name="update_booking" value="1">
           <input type="hidden" name="booking_id" value="<?= $editBooking['id']; ?>">
+          <input type="hidden" name="discount_id" value="<?= $editBooking['discount_id']; ?>">
         <?php else: ?>
           <input type="hidden" name="add_booking" value="1">
         <?php endif; ?>
@@ -156,6 +187,7 @@ if (isset($_GET['edit'])) {
             <option value="cancelled" <?= isset($editBooking['status']) && $editBooking['status']=='cancelled' ? 'selected' : ''; ?>>لغو شده</option>
           </select>
         </div>
+        <div class="col-md-2"><input type="text" name="discount_code" class="form-control" placeholder="کد تخفیف" value="<?= $editBooking['discount_code'] ?? ''; ?>" <?= $editBooking ? 'readonly' : '' ?>></div>
         <div class="col-md-2"><input type="number" name="amount" class="form-control" placeholder="مبلغ" value="<?= $editBooking['amount'] ?? ''; ?>" required></div>
         <div class="col-md-2"><button class="btn btn-primary w-100" type="submit"><?= $editBooking ? 'ویرایش' : 'افزودن'; ?></button></div>
       </form>
@@ -192,7 +224,7 @@ if (isset($_GET['edit'])) {
       </form>
       <div class="table-responsive">
         <table class="table table-striped table-hover mb-0">
-          <thead><tr><th>#</th><th>کاربر</th><th>موتور</th><th>شروع</th><th>پایان</th><th>وضعیت</th><th>مبلغ</th><th>عملیات</th></tr></thead>
+          <thead><tr><th>#</th><th>کاربر</th><th>موتور</th><th>شروع</th><th>پایان</th><th>وضعیت</th><th>تخفیف</th><th>مبلغ</th><th>عملیات</th></tr></thead>
           <tbody>
             <?php foreach ($bookings as $b): ?>
             <tr>
@@ -202,6 +234,7 @@ if (isset($_GET['edit'])) {
               <td><?= $b['start_date']; ?></td>
               <td><?= $b['end_date']; ?></td>
               <td><?= $b['status']; ?></td>
+              <td><?= $b['discount_code'] ?? '-'; ?></td>
               <td><?= number_format($b['amount']); ?></td>
               <td>
                 <a href="contract.php?id=<?= $b['id']; ?>" class="btn btn-sm btn-secondary">قرارداد</a>

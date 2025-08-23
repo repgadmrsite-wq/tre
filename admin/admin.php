@@ -7,7 +7,7 @@ if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'admin') {
     exit;
 }
 
-$totalRevenue = $pdo->query('SELECT COALESCE(SUM(amount),0) FROM bookings')->fetchColumn();
+$totalRevenue = $pdo->query("SELECT COALESCE(SUM(amount),0) FROM payments WHERE status='paid'")->fetchColumn();
 $totalUsers = $pdo->query('SELECT COUNT(*) FROM users')->fetchColumn();
 $totalAdmins = $pdo->query('SELECT COUNT(*) FROM admins')->fetchColumn();
 $totalMotors = $pdo->query('SELECT COUNT(*) FROM motorcycles')->fetchColumn();
@@ -22,13 +22,13 @@ $activeMotors = $pdo->query("SELECT COUNT(*) FROM motorcycles WHERE status='acti
 $maintenanceMotors = $pdo->query("SELECT COUNT(*) FROM motorcycles WHERE status='maintenance'")->fetchColumn();
 $reservedMotors = $pdo->query("SELECT COUNT(*) FROM bookings WHERE status='confirmed' AND CURDATE() BETWEEN start_date AND end_date")->fetchColumn();
 
-$dailyStmt = $pdo->query("SELECT DATE(start_date) d, SUM(amount) r FROM bookings WHERE start_date >= DATE_SUB(CURDATE(), INTERVAL 6 DAY) GROUP BY d ORDER BY d");
+$dailyStmt = $pdo->query("SELECT DATE(p.paid_at) d, SUM(p.amount) r FROM payments p WHERE p.status='paid' AND p.paid_at >= DATE_SUB(CURDATE(), INTERVAL 6 DAY) GROUP BY d ORDER BY d");
 $dailyMap = [];
 while($row = $dailyStmt->fetch(PDO::FETCH_ASSOC)){ $dailyMap[$row['d']] = (int)$row['r']; }
 $dailyLabels = [];$dailyRevenue = [];
 for($i=6;$i>=0;$i--){$d=date('Y-m-d',strtotime("-$i day"));$dailyLabels[]=$d;$dailyRevenue[]=$dailyMap[$d]??0;}
 
-$monthlyStmt = $pdo->query("SELECT DATE_FORMAT(start_date,'%Y-%m') m, SUM(amount) r FROM bookings WHERE start_date >= DATE_SUB(CURDATE(), INTERVAL 11 MONTH) GROUP BY m ORDER BY m");
+$monthlyStmt = $pdo->query("SELECT DATE_FORMAT(p.paid_at,'%Y-%m') m, SUM(p.amount) r FROM payments p WHERE p.status='paid' AND p.paid_at >= DATE_SUB(CURDATE(), INTERVAL 11 MONTH) GROUP BY m ORDER BY m");
 $monthlyMap = [];
 while($row=$monthlyStmt->fetch(PDO::FETCH_ASSOC)){ $monthlyMap[$row['m']] = (int)$row['r']; }
 $monthlyLabels=[];$monthlyRevenue=[];
@@ -57,6 +57,8 @@ $overdue = $pdo->query("SELECT u.name user_name,m.model motor_model,b.end_date F
     <ul class="nav flex-column my-4">
       <li class="nav-item"><a class="nav-link active" href="admin.php"><i class="bi bi-speedometer2"></i><span>داشبورد</span></a></li>
       <li class="nav-item"><a class="nav-link" href="bookings.php"><i class="bi bi-calendar-week"></i><span>رزروها</span></a></li>
+      <li class="nav-item"><a class="nav-link" href="finance.php"><i class="bi bi-receipt"></i><span>مالی</span></a></li>
+      <li class="nav-item"><a class="nav-link" href="discounts.php"><i class="bi bi-ticket-perforated"></i><span>تخفیف‌ها</span></a></li>
       <li class="nav-item"><a class="nav-link" href="admins.php"><i class="bi bi-shield-lock"></i><span>مدیران</span></a></li>
       <li class="nav-item"><a class="nav-link" href="users.php"><i class="bi bi-people-fill"></i><span>کاربران</span></a></li>
       <li class="nav-item"><a class="nav-link" href="motors.php"><i class="bi bi-bicycle"></i><span>موتورها</span></a></li>

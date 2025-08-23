@@ -43,6 +43,31 @@ CREATE TABLE motorcycle_images (
     FOREIGN KEY (motorcycle_id) REFERENCES motorcycles(id) ON DELETE CASCADE
 ) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
+CREATE TABLE discounts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    code VARCHAR(50) NOT NULL UNIQUE,
+    type ENUM('percent','fixed') NOT NULL,
+    value INT NOT NULL,
+    start_date DATE,
+    end_date DATE,
+    usage_limit INT DEFAULT NULL,
+    used INT DEFAULT 0,
+    per_user_limit INT DEFAULT NULL,
+    vip_only TINYINT(1) DEFAULT 0,
+    motor_id INT DEFAULT NULL,
+    FOREIGN KEY (motor_id) REFERENCES motorcycles(id) ON DELETE SET NULL
+) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+CREATE TABLE discount_usages (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    discount_id INT NOT NULL,
+    user_id INT NOT NULL,
+    used_count INT DEFAULT 0,
+    UNIQUE(discount_id,user_id),
+    FOREIGN KEY (discount_id) REFERENCES discounts(id) ON DELETE CASCADE,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
 CREATE TABLE bookings (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
@@ -50,9 +75,23 @@ CREATE TABLE bookings (
     start_date DATE NOT NULL,
     end_date DATE NOT NULL,
     status ENUM('pending','confirmed','in_use','returned','cancelled') DEFAULT 'pending',
+    discount_id INT DEFAULT NULL,
     amount INT NOT NULL,
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
-    FOREIGN KEY (motorcycle_id) REFERENCES motorcycles(id) ON DELETE CASCADE
+    FOREIGN KEY (motorcycle_id) REFERENCES motorcycles(id) ON DELETE CASCADE,
+    FOREIGN KEY (discount_id) REFERENCES discounts(id) ON DELETE SET NULL
+) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+CREATE TABLE payments (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    booking_id INT NOT NULL,
+    user_id INT NOT NULL,
+    amount INT NOT NULL,
+    method ENUM('online','cash','pos') NOT NULL,
+    status ENUM('paid','pending') DEFAULT 'paid',
+    paid_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (booking_id) REFERENCES bookings(id) ON DELETE CASCADE,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 ) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 INSERT INTO admins (name, email, password) VALUES
@@ -65,3 +104,6 @@ INSERT INTO motorcycles (model, plate, color, capacity, description, status, pri
 ('اسکوتر وسپا', '11ک123-45', 'قرمز', 150, 'اسکوتر شهری', 'active', 30000, 70000, 120000, 750000, 2800000, 'بیمه شخص ثالث', 2022, 5000, 1),
 ('موتور کروزر', '22د456-78', 'مشکی', 250, 'کروز با قدرت بالا', 'maintenance', 50000, 110000, 180000, 1100000, 4000000, 'بیمه کامل', 2021, 12000, 0),
 ('موتور برقی', '33ه789-01', 'سفید', 100, 'برقی کم صدا', 'active', 20000, 50000, 90000, 550000, 2000000, 'بیمه پایه', 2023, 2000, 1);
+
+INSERT INTO discounts (code, type, value, start_date, end_date, usage_limit, per_user_limit, vip_only, motor_id) VALUES
+('OFF10','percent',10,NULL,NULL,NULL,NULL,0,NULL);
