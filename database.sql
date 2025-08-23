@@ -46,7 +46,7 @@ CREATE TABLE bookings (
     motorcycle_id INT NOT NULL,
     start_date DATE NOT NULL,
     end_date DATE NOT NULL,
-    status ENUM('pending','confirmed','cancelled') DEFAULT 'pending',
+    status ENUM('pending','confirmed','in_use','returned','cancelled') DEFAULT 'pending',
     amount INT NOT NULL,
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
     FOREIGN KEY (motorcycle_id) REFERENCES motorcycles(id) ON DELETE CASCADE
