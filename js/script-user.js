@@ -11,4 +11,26 @@ document.addEventListener('DOMContentLoaded', function(){
             });
         }
     }
+
+    if (typeof revenueStats !== 'undefined') {
+        var pie = document.getElementById('revenuePie');
+        if (pie) {
+            new Chart(pie, {
+                type: 'pie',
+                data: {
+                    labels: ['روزانه','ماهانه','سالانه'],
+                    datasets: [{ data: [revenueStats.daily, revenueStats.monthly, revenueStats.yearly], backgroundColor: ['#4caf50','#2196f3','#ff9800'] }]
+                }
+            });
+        }
+    }
+
+    if (typeof upcomingCount !== 'undefined' && upcomingCount > 0) {
+        var modalEl = document.getElementById('reminderModal');
+        if (modalEl) {
+            var reminderModal = new bootstrap.Modal(modalEl);
+            reminderModal.show();
+        }
+    }
 });
+

@@ -6,3 +6,6 @@
 .sidebar .sidebar-header { padding:1.5rem; border-bottom:1px solid rgba(255,255,255,0.1); }
 .main-content { flex-grow:1; padding:2rem; overflow-y:auto; }
 @media (max-width:767.98px){ .sidebar{width:70px;} .sidebar .sidebar-header .navbar-brand, .sidebar .nav-link span{display:none;} .sidebar .nav-link{justify-content:center;} .sidebar .nav-link i{margin-left:0;} }
+
+.stat-card{border-radius:1rem;box-shadow:0 2px 6px rgba(0,0,0,0.1);transition:transform .2s,box-shadow .2s;}
+.stat-card:hover{transform:translateY(-4px);box-shadow:0 4px 12px rgba(0,0,0,0.15);}

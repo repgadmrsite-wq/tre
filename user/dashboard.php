@@ -30,6 +30,15 @@ foreach ($statQueries as $key => $range) {
     $stats[$key] = (int)$stmt->fetchColumn();
 }
 
+$statusCounts = ['confirmed' => 0, 'in_use' => 0, 'cancelled' => 0];
+$statusStmt = $pdo->prepare('SELECT status, COUNT(*) AS c FROM bookings WHERE user_id = ? GROUP BY status');
+$statusStmt->execute([$user_id]);
+foreach ($statusStmt as $row) {
+    if (isset($statusCounts[$row['status']])) {
+        $statusCounts[$row['status']] = (int)$row['c'];
+    }
+}
+
 $currentStmt = $pdo->prepare('SELECT b.*, m.model FROM bookings b JOIN motorcycles m ON b.motorcycle_id = m.id WHERE b.user_id = ? AND b.status IN ("confirmed","in_use") AND ? BETWEEN b.start_date AND b.end_date ORDER BY b.start_date');
 $currentStmt->execute([$user_id, $today]);
 $currentBookings = $currentStmt->fetchAll();
@@ -37,10 +46,23 @@ $currentBookings = $currentStmt->fetchAll();
 $upcomingStmt = $pdo->prepare('SELECT b.*, m.model FROM bookings b JOIN motorcycles m ON b.motorcycle_id = m.id WHERE b.user_id = ? AND b.start_date > ? AND b.start_date <= DATE_ADD(?, INTERVAL 7 DAY) AND b.status IN ("pending","confirmed") ORDER BY b.start_date');
 $upcomingStmt->execute([$user_id, $today, $today]);
 $upcomingBookings = $upcomingStmt->fetchAll();
+$upcomingCount = count($upcomingBookings);
 
 $paymentStmt = $pdo->prepare('SELECT DATE_FORMAT(paid_at, "%Y-%m") AS period, SUM(amount) AS total FROM payments WHERE user_id = ? GROUP BY period ORDER BY period');
 $paymentStmt->execute([$user_id]);
 $paymentData = $paymentStmt->fetchAll();
+
+$revenueQueries = [
+    'daily' => [$today, $today],
+    'monthly' => [$startOfMonth, $endOfMonth],
+    'yearly' => [$startOfYear, $endOfYear]
+];
+$revenueStats = [];
+foreach ($revenueQueries as $key => $range) {
+    $stmt = $pdo->prepare('SELECT COALESCE(SUM(amount),0) FROM payments WHERE user_id = ? AND paid_at BETWEEN ? AND ?');
+    $stmt->execute([$user_id, $range[0], $range[1]]);
+    $revenueStats[$key] = (float)$stmt->fetchColumn();
+}
 ?>
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
@@ -78,16 +100,36 @@ $paymentData = $paymentStmt->fetchAll();
             </div>
             <div class="row g-4 mb-4">
                 <div class="col-md-3 col-sm-6">
-                    <div class="card p-3 text-center"><h6>امروز</h6><p class="fs-4 fw-bold mb-0"><?= $stats['today'] ?></p></div>
+                    <div class="card stat-card p-3 text-center"><h6>امروز</h6><p class="fs-4 mb-0"><?= $stats['today'] ?></p></div>
                 </div>
                 <div class="col-md-3 col-sm-6">
-                    <div class="card p-3 text-center"><h6>این هفته</h6><p class="fs-4 fw-bold mb-0"><?= $stats['week'] ?></p></div>
+                    <div class="card stat-card p-3 text-center"><h6>این هفته</h6><p class="fs-4 mb-0"><?= $stats['week'] ?></p></div>
                 </div>
                 <div class="col-md-3 col-sm-6">
-                    <div class="card p-3 text-center"><h6>این ماه</h6><p class="fs-4 fw-bold mb-0"><?= $stats['month'] ?></p></div>
+                    <div class="card stat-card p-3 text-center"><h6>این ماه</h6><p class="fs-4 mb-0"><?= $stats['month'] ?></p></div>
                 </div>
                 <div class="col-md-3 col-sm-6">
-                    <div class="card p-3 text-center"><h6>امسال</h6><p class="fs-4 fw-bold mb-0"><?= $stats['year'] ?></p></div>
+                    <div class="card stat-card p-3 text-center"><h6>امسال</h6><p class="fs-4 mb-0"><?= $stats['year'] ?></p></div>
+                </div>
+            </div>
+            <div class="row g-4 mb-4">
+                <div class="col-md-4 col-sm-6">
+                    <div class="card stat-card bg-primary text-white p-3 text-center">
+                        <h6>رزروهای تایید شده</h6>
+                        <p class="fs-4 mb-0"><?= $statusCounts['confirmed'] ?></p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="card stat-card bg-success text-white p-3 text-center">
+                        <h6>رزروهای فعال</h6>
+                        <p class="fs-4 mb-0"><?= $statusCounts['in_use'] ?></p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="card stat-card bg-danger text-white p-3 text-center">
+                        <h6>رزروهای لغو شده</h6>
+                        <p class="fs-4 mb-0"><?= $statusCounts['cancelled'] ?></p>
+                    </div>
                 </div>
             </div>
             <div class="row g-4">
@@ -112,7 +154,7 @@ $paymentData = $paymentStmt->fetchAll();
                 </div>
                 <div class="col-lg-6">
                     <div class="card h-100">
-                        <div class="card-header bg-white border-bottom-0"><h5 class="mb-0">یادآوری‌ها</h5></div>
+                        <div class="card-header bg-white border-bottom-0"><h5 class="mb-0"><i class="bi bi-bell me-2"></i>یادآوری‌ها</h5></div>
                         <div class="card-body">
                             <?php if (count($upcomingBookings) > 0): ?>
                             <ul class="list-group list-group-flush">
@@ -134,10 +176,39 @@ $paymentData = $paymentStmt->fetchAll();
                 <div class="card-header bg-white border-bottom-0"><h5 class="card-title mb-0">گزارش پرداخت‌ها</h5></div>
                 <div class="card-body"><canvas id="paymentsChart" height="120"></canvas></div>
             </div>
+            <div class="card mt-4">
+                <div class="card-header bg-white border-bottom-0"><h5 class="card-title mb-0">درآمد روزانه / ماهانه / سالانه</h5></div>
+                <div class="card-body"><canvas id="revenuePie" height="120"></canvas></div>
+            </div>
         </div>
     </main>
 </div>
-<script>var paymentData = <?= json_encode($paymentData); ?>;</script>
+<div class="modal fade" id="reminderModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"><i class="bi bi-bell me-2"></i>یادآوری رزروهای نزدیک</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <?php if ($upcomingCount > 0): ?>
+        <ul class="list-group list-group-flush">
+            <?php foreach ($upcomingBookings as $b): ?>
+            <li class="list-group-item"><?= htmlspecialchars($b['model']) ?> (<?= $b['start_date'] ?>)</li>
+            <?php endforeach; ?>
+        </ul>
+        <?php else: ?>
+        <p class="mb-0">یادآوری فعلی ندارید.</p>
+        <?php endif; ?>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+var paymentData = <?= json_encode($paymentData); ?>;
+var revenueStats = <?= json_encode($revenueStats); ?>;
+var upcomingCount = <?= $upcomingCount; ?>;
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script src="../js/script-user.js"></script>
