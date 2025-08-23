@@ -1,0 +1,8 @@
+.dashboard-layout { display:flex; min-height:100vh; }
+.sidebar { width:280px; background-color:var(--dark-color,#212529); color:#fff; flex-shrink:0; transition:width .3s ease; }
+.sidebar .nav-link { color:rgba(255,255,255,0.7); padding:0.85rem 1.5rem; display:flex; align-items:center; border-right:3px solid transparent; }
+.sidebar .nav-link i { margin-left:0.75rem; font-size:1.2rem; width:24px; text-align:center; }
+.sidebar .nav-link.active, .sidebar .nav-link:hover { color:#fff; background-color:var(--primary-color); border-right-color:var(--bs-warning); }
+.sidebar .sidebar-header { padding:1.5rem; border-bottom:1px solid rgba(255,255,255,0.1); }
+.main-content { flex-grow:1; padding:2rem; overflow-y:auto; }
+@media (max-width:767.98px){ .sidebar{width:70px;} .sidebar .sidebar-header .navbar-brand, .sidebar .nav-link span{display:none;} .sidebar .nav-link{justify-content:center;} .sidebar .nav-link i{margin-left:0;} }

@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'email' => $user['email'],
             'role' => 'user'
         ];
-        header('Location: dashboard.html');
+        header('Location: user/dashboard.php');
         exit;
     }
 
