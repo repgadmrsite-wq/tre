@@ -34,9 +34,9 @@ while($row=$monthlyStmt->fetch(PDO::FETCH_ASSOC)){ $monthlyMap[$row['m']] = (int
 $monthlyLabels=[];$monthlyRevenue=[];
 for($i=11;$i>=0;$i--){$m=date('Y-m',strtotime("-$i month"));$monthlyLabels[]=$m;$monthlyRevenue[]=$monthlyMap[$m]??0;}
 
-$ongoing = $pdo->query("SELECT u.name user_name,m.name moto_name,b.end_date FROM bookings b JOIN users u ON b.user_id=u.id JOIN motorcycles m ON b.motorcycle_id=m.id WHERE b.status='confirmed' AND CURDATE() BETWEEN b.start_date AND b.end_date ORDER BY b.end_date LIMIT 5")->fetchAll(PDO::FETCH_ASSOC);
-$upcoming = $pdo->query("SELECT u.name user_name,m.name moto_name,b.start_date FROM bookings b JOIN users u ON b.user_id=u.id JOIN motorcycles m ON b.motorcycle_id=m.id WHERE b.status='confirmed' AND b.start_date > CURDATE() AND b.start_date <= DATE_ADD(CURDATE(),INTERVAL 7 DAY) ORDER BY b.start_date LIMIT 5")->fetchAll(PDO::FETCH_ASSOC);
-$overdue = $pdo->query("SELECT u.name user_name,m.name moto_name,b.end_date FROM bookings b JOIN users u ON b.user_id=u.id JOIN motorcycles m ON b.motorcycle_id=m.id WHERE b.status='confirmed' AND b.end_date < CURDATE() ORDER BY b.end_date")->fetchAll(PDO::FETCH_ASSOC);
+$ongoing = $pdo->query("SELECT u.name user_name,m.model motor_model,b.end_date FROM bookings b JOIN users u ON b.user_id=u.id JOIN motorcycles m ON b.motorcycle_id=m.id WHERE b.status='confirmed' AND CURDATE() BETWEEN b.start_date AND b.end_date ORDER BY b.end_date LIMIT 5")->fetchAll(PDO::FETCH_ASSOC);
+$upcoming = $pdo->query("SELECT u.name user_name,m.model motor_model,b.start_date FROM bookings b JOIN users u ON b.user_id=u.id JOIN motorcycles m ON b.motorcycle_id=m.id WHERE b.status='confirmed' AND b.start_date > CURDATE() AND b.start_date <= DATE_ADD(CURDATE(),INTERVAL 7 DAY) ORDER BY b.start_date LIMIT 5")->fetchAll(PDO::FETCH_ASSOC);
+$overdue = $pdo->query("SELECT u.name user_name,m.model motor_model,b.end_date FROM bookings b JOIN users u ON b.user_id=u.id JOIN motorcycles m ON b.motorcycle_id=m.id WHERE b.status='confirmed' AND b.end_date < CURDATE() ORDER BY b.end_date")->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
@@ -167,7 +167,7 @@ $overdue = $pdo->query("SELECT u.name user_name,m.name moto_name,b.end_date FROM
             <div class="card-header">رزروهای جاری</div>
             <ul class="list-group list-group-flush">
             <?php if ($ongoing): foreach($ongoing as $o): ?>
-              <li class="list-group-item d-flex justify-content-between"><span><?= htmlspecialchars($o['user_name']); ?> - <?= htmlspecialchars($o['moto_name']); ?></span><span><?= $o['end_date']; ?></span></li>
+              <li class="list-group-item d-flex justify-content-between"><span><?= htmlspecialchars($o['user_name']); ?> - <?= htmlspecialchars($o['motor_model']); ?></span><span><?= $o['end_date']; ?></span></li>
             <?php endforeach; else: ?><li class="list-group-item">موردی نیست</li><?php endif; ?>
             </ul>
           </div>
@@ -177,7 +177,7 @@ $overdue = $pdo->query("SELECT u.name user_name,m.name moto_name,b.end_date FROM
             <div class="card-header">رزروهای نزدیک</div>
             <ul class="list-group list-group-flush">
             <?php if ($upcoming): foreach($upcoming as $u): ?>
-              <li class="list-group-item d-flex justify-content-between"><span><?= htmlspecialchars($u['user_name']); ?> - <?= htmlspecialchars($u['moto_name']); ?></span><span><?= $u['start_date']; ?></span></li>
+              <li class="list-group-item d-flex justify-content-between"><span><?= htmlspecialchars($u['user_name']); ?> - <?= htmlspecialchars($u['motor_model']); ?></span><span><?= $u['start_date']; ?></span></li>
             <?php endforeach; else: ?><li class="list-group-item">موردی نیست</li><?php endif; ?>
             </ul>
           </div>
@@ -191,7 +191,7 @@ $overdue = $pdo->query("SELECT u.name user_name,m.name moto_name,b.end_date FROM
             <div class="card-header bg-danger text-white">هشدار تحویل‌ندادن</div>
             <ul class="list-group list-group-flush">
             <?php foreach($overdue as $ov): ?>
-              <li class="list-group-item d-flex justify-content-between"><span><?= htmlspecialchars($ov['user_name']); ?> - <?= htmlspecialchars($ov['moto_name']); ?></span><span><?= $ov['end_date']; ?></span></li>
+              <li class="list-group-item d-flex justify-content-between"><span><?= htmlspecialchars($ov['user_name']); ?> - <?= htmlspecialchars($ov['motor_model']); ?></span><span><?= $ov['end_date']; ?></span></li>
             <?php endforeach; ?>
             </ul>
           </div>

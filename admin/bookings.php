@@ -22,7 +22,7 @@ if (isset($_GET['cancel'])) {
     exit;
 }
 
-$bookings = $pdo->query("SELECT b.id, m.name AS motor_name, u.name AS user_name, b.start_date, b.end_date, b.status, b.amount FROM bookings b JOIN users u ON b.user_id=u.id JOIN motorcycles m ON b.motorcycle_id=m.id ORDER BY b.id DESC")->fetchAll();
+$bookings = $pdo->query("SELECT b.id, m.model AS motor_model, u.name AS user_name, b.start_date, b.end_date, b.status, b.amount FROM bookings b JOIN users u ON b.user_id=u.id JOIN motorcycles m ON b.motorcycle_id=m.id ORDER BY b.id DESC")->fetchAll();
 ?>
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
@@ -62,7 +62,7 @@ $bookings = $pdo->query("SELECT b.id, m.name AS motor_name, u.name AS user_name,
             <tr>
               <td><?= $b['id']; ?></td>
               <td><?= htmlspecialchars($b['user_name']); ?></td>
-              <td><?= htmlspecialchars($b['motor_name']); ?></td>
+              <td><?= htmlspecialchars($b['motor_model']); ?></td>
               <td><?= $b['start_date']; ?></td>
               <td><?= $b['end_date']; ?></td>
               <td><?= $b['status']; ?></td>
