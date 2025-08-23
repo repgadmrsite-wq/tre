@@ -5,23 +5,39 @@ require_once __DIR__ . '/includes/db.php';
 $error = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = trim($_POST['email']);
-    $password = trim($_POST['password']);
-    $stmt = $pdo->prepare('SELECT id, name, email, password, role FROM users WHERE email = ? LIMIT 1');
+    $password = md5(trim($_POST['password']));
+
+    // check admin table first
+    $stmt = $pdo->prepare('SELECT id, name, email, password FROM admins WHERE email = ? LIMIT 1');
+    $stmt->execute([$email]);
+    $admin = $stmt->fetch();
+    if ($admin && $admin['password'] === $password) {
+        $_SESSION['user'] = [
+            'id' => $admin['id'],
+            'name' => $admin['name'],
+            'email' => $admin['email'],
+            'role' => 'admin'
+        ];
+        header('Location: admin.php');
+        exit;
+    }
+
+    // check regular users table
+    $stmt = $pdo->prepare('SELECT id, name, email, password FROM users WHERE email = ? LIMIT 1');
     $stmt->execute([$email]);
     $user = $stmt->fetch();
-    if ($user && password_verify($password, $user['password'])) {
+    if ($user && $user['password'] === $password) {
         $_SESSION['user'] = [
             'id' => $user['id'],
             'name' => $user['name'],
             'email' => $user['email'],
-            'role' => $user['role']
+            'role' => 'user'
         ];
-        $redirect = $user['role'] === 'admin' ? 'admin.php' : 'dashboard.html';
-        header('Location: ' . $redirect);
+        header('Location: dashboard.html');
         exit;
-    } else {
-        $error = 'اطلاعات ورود نادرست است';
     }
+
+    $error = 'اطلاعات ورود نادرست است';
 }
 ?>
 <!DOCTYPE html>

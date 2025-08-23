@@ -1,9 +1,15 @@
+CREATE TABLE admins (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(32) NOT NULL
+);
+
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL UNIQUE,
-    password VARCHAR(255) NOT NULL,
-    role ENUM('user','admin') DEFAULT 'user'
+    password VARCHAR(32) NOT NULL
 );
 
 CREATE TABLE motorcycles (
@@ -24,9 +30,11 @@ CREATE TABLE bookings (
     FOREIGN KEY (motorcycle_id) REFERENCES motorcycles(id) ON DELETE CASCADE
 );
 
-INSERT INTO users (name, email, password, role) VALUES
-('مدیر', 'admin@example.com', '$2y$12$7FbEGOv5QPEi7n5XK4KnfuFXmOucpGfVUvdzlx08JWvvY9/Qp/3Ry', 'admin'),
-('کاربر نمونه', 'user@example.com', '$2y$12$ii7WwZtQ/FQxd7bo85iEk.3qAI/1b0bJyLfVO19fdKjNTRxywzEQW', 'user');
+INSERT INTO admins (name, email, password) VALUES
+('مدیر', 'admin@example.com', '0192023a7bbd73250516f069df18b500');
+
+INSERT INTO users (name, email, password) VALUES
+('کاربر نمونه', 'user@example.com', '6ad14ba9986e3615423dfca256d04e3f');
 
 INSERT INTO motorcycles (name, price_per_day) VALUES
 ('اسکوتر وسپا', 120000),

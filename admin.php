@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_motor'])) {
         $stmt = $pdo->prepare('INSERT INTO motorcycles (name, price_per_day) VALUES (?, ?)');
         $stmt->execute([$name, $price]);
     }
-    header('Location: admin.php');
+    header('Location: admin.php#motors');
     exit;
 }
 
@@ -25,16 +25,39 @@ if (isset($_GET['delete_motor'])) {
     $id = (int)$_GET['delete_motor'];
     $stmt = $pdo->prepare('DELETE FROM motorcycles WHERE id = ?');
     $stmt->execute([$id]);
-    header('Location: admin.php');
+    header('Location: admin.php#motors');
+    exit;
+}
+
+// handle add admin form
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_admin'])) {
+    $name = trim($_POST['admin_name']);
+    $email = trim($_POST['admin_email']);
+    $pass = md5(trim($_POST['admin_password']));
+    if ($name && $email && $_POST['admin_password']) {
+        $stmt = $pdo->prepare('INSERT INTO admins (name, email, password) VALUES (?, ?, ?)');
+        $stmt->execute([$name, $email, $pass]);
+    }
+    header('Location: admin.php#admins');
+    exit;
+}
+
+// handle delete admin request
+if (isset($_GET['delete_admin'])) {
+    $id = (int)$_GET['delete_admin'];
+    $stmt = $pdo->prepare('DELETE FROM admins WHERE id = ?');
+    $stmt->execute([$id]);
+    header('Location: admin.php#admins');
     exit;
 }
 
 $totalRevenue = $pdo->query('SELECT COALESCE(SUM(amount),0) FROM bookings')->fetchColumn();
-$newUsers = $pdo->query('SELECT COUNT(*) FROM users')->fetchColumn();
+$totalUsers = $pdo->query('SELECT COUNT(*) FROM users')->fetchColumn();
+$totalAdmins = $pdo->query('SELECT COUNT(*) FROM admins')->fetchColumn();
 $pendingBookings = $pdo->query("SELECT COUNT(*) FROM bookings WHERE status='pending'")->fetchColumn();
-$errorsCount = 0; // placeholder
 
-$users = $pdo->query('SELECT id, name, email, role FROM users ORDER BY id DESC')->fetchAll();
+$admins = $pdo->query('SELECT id, name, email FROM admins ORDER BY id DESC')->fetchAll();
+$users = $pdo->query('SELECT id, name, email FROM users ORDER BY id DESC')->fetchAll();
 $bookings = $pdo->query('SELECT b.id, m.name AS motor_name, u.name AS user_name, b.start_date, b.end_date, b.status, b.amount FROM bookings b JOIN users u ON b.user_id=u.id JOIN motorcycles m ON b.motorcycle_id=m.id ORDER BY b.id DESC')->fetchAll();
 $motors = $pdo->query('SELECT id, name, price_per_day FROM motorcycles ORDER BY id DESC')->fetchAll();
 ?>
@@ -66,6 +89,12 @@ $motors = $pdo->query('SELECT id, name, price_per_day FROM motorcycles ORDER BY 
         <a class="nav-link" href="#bookings">
           <i class="bi bi-calendar-week"></i>
           <span>مدیریت رزروها</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#admins">
+          <i class="bi bi-shield-lock"></i>
+          <span>مدیریت مدیران</span>
         </a>
       </li>
       <li class="nav-item">
@@ -114,7 +143,7 @@ $motors = $pdo->query('SELECT id, name, price_per_day FROM motorcycles ORDER BY 
             <div class="card-body d-flex align-items-center justify-content-between">
               <div>
                 <h5 class="card-title">کاربران</h5>
-                <p class="fs-3 fw-bold mb-0"><?= $newUsers; ?></p>
+                <p class="fs-3 fw-bold mb-0"><?= $totalUsers; ?></p>
               </div>
               <i class="bi bi-people-fill fs-1 opacity-50"></i>
             </div>
@@ -132,15 +161,60 @@ $motors = $pdo->query('SELECT id, name, price_per_day FROM motorcycles ORDER BY 
           </div>
         </div>
         <div class="col-xl-3 col-md-6">
-          <div class="card text-white bg-danger">
+          <div class="card text-white bg-info">
             <div class="card-body d-flex align-items-center justify-content-between">
               <div>
-                <h5 class="card-title">خطاها</h5>
-                <p class="fs-3 fw-bold mb-0"><?= $errorsCount; ?></p>
+                <h5 class="card-title">مدیران</h5>
+                <p class="fs-3 fw-bold mb-0"><?= $totalAdmins; ?></p>
               </div>
-              <i class="bi bi-exclamation-triangle-fill fs-1 opacity-50"></i>
+              <i class="bi bi-shield-lock fs-1 opacity-50"></i>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div id="admins" class="card mt-4">
+        <div class="card-header bg-white border-bottom-0">
+          <h5 class="card-title mb-0">مدیریت مدیران</h5>
+        </div>
+        <div class="card-body">
+          <form method="post" class="row g-2">
+            <input type="hidden" name="add_admin" value="1">
+            <div class="col-md-3">
+              <input type="text" name="admin_name" class="form-control" placeholder="نام" required>
+            </div>
+            <div class="col-md-4">
+              <input type="email" name="admin_email" class="form-control" placeholder="ایمیل" required>
+            </div>
+            <div class="col-md-3">
+              <input type="password" name="admin_password" class="form-control" placeholder="رمز عبور" required>
+            </div>
+            <div class="col-md-2">
+              <button class="btn btn-primary w-100" type="submit">افزودن</button>
+            </div>
+          </form>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-striped table-hover mb-0">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>نام</th>
+                <th>ایمیل</th>
+                <th class="text-end">حذف</th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php foreach ($admins as $a): ?>
+                <tr>
+                  <td><?= $a['id']; ?></td>
+                  <td><?= htmlspecialchars($a['name']); ?></td>
+                  <td><?= htmlspecialchars($a['email']); ?></td>
+                  <td class="text-end"><a class="btn btn-sm btn-danger" href="?delete_admin=<?= $a['id']; ?>" onclick="return confirm('حذف شود؟')">حذف</a></td>
+                </tr>
+              <?php endforeach; ?>
+            </tbody>
+          </table>
         </div>
       </div>
 
@@ -155,7 +229,6 @@ $motors = $pdo->query('SELECT id, name, price_per_day FROM motorcycles ORDER BY 
                 <th>#</th>
                 <th>نام</th>
                 <th>ایمیل</th>
-                <th>نقش</th>
               </tr>
             </thead>
             <tbody>
@@ -164,7 +237,6 @@ $motors = $pdo->query('SELECT id, name, price_per_day FROM motorcycles ORDER BY 
                   <td><?= $u['id']; ?></td>
                   <td><?= htmlspecialchars($u['name']); ?></td>
                   <td><?= htmlspecialchars($u['email']); ?></td>
-                  <td><?= htmlspecialchars($u['role']); ?></td>
                 </tr>
               <?php endforeach; ?>
             </tbody>
