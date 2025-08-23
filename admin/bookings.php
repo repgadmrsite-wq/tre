@@ -2,7 +2,7 @@
 session_start();
 require_once __DIR__ . '/../includes/db.php';
 
-if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'admin') {
+if (!isset($_SESSION['user']) || $_SESSION['user']['role'] === 'user') {
     header('Location: ../login.php');
     exit;
 }
@@ -47,6 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_booking'])) {
                 }
             }
             $pdo->prepare('INSERT INTO bookings (user_id, motorcycle_id, start_date, end_date, status, amount, discount_id) VALUES (?,?,?,?,?,?,?)')->execute([$user_id, $motor_id, $start, $end, $status, $amount, $discount_id]);
+            $pdo->prepare('INSERT INTO notifications (message) VALUES (?)')->execute(["رزرو جدید ثبت شد"]);
         } else {
             $_SESSION['error'] = 'کاربر بلاک شده است';
         }

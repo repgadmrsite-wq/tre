@@ -2,7 +2,7 @@
 session_start();
 require_once __DIR__ . '/../includes/db.php';
 
-if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'admin') {
+if (!isset($_SESSION['user']) || $_SESSION['user']['role'] === 'user') {
     header('Location: ../login.php');
     exit;
 }
@@ -23,10 +23,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_motor'])) {
     $year = (int)$_POST['year'];
     $mileage = (int)$_POST['mileage'];
     $available = (int)($_POST['available'] ?? 1);
+    $lat = $_POST['lat'] ? (float)$_POST['lat'] : null;
+    $lng = $_POST['lng'] ? (float)$_POST['lng'] : null;
 
     if ($model && $price_day) {
-        $stmt = $pdo->prepare('INSERT INTO motorcycles (model, plate, color, capacity, description, status, price_per_hour, price_half_day, price_per_day, price_per_week, price_per_month, insurance, year, mileage, available) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
-        $stmt->execute([$model, $plate, $color, $capacity, $description, $status, $price_hour, $price_half, $price_day, $price_week, $price_month, $insurance, $year, $mileage, $available]);
+        $stmt = $pdo->prepare('INSERT INTO motorcycles (model, plate, color, capacity, description, status, price_per_hour, price_half_day, price_per_day, price_per_week, price_per_month, insurance, year, mileage, available, lat, lng) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
+        $stmt->execute([$model, $plate, $color, $capacity, $description, $status, $price_hour, $price_half, $price_day, $price_week, $price_month, $insurance, $year, $mileage, $available, $lat, $lng]);
         $motorId = $pdo->lastInsertId();
         if (!empty($_FILES['images']['name'][0])) {
             $uploadDir = __DIR__ . '/../uploads/';
@@ -64,8 +66,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_motor'])) {
     $year = (int)$_POST['year'];
     $mileage = (int)$_POST['mileage'];
     $available = (int)($_POST['available'] ?? 1);
-    $stmt = $pdo->prepare('UPDATE motorcycles SET model=?, plate=?, color=?, capacity=?, description=?, status=?, price_per_hour=?, price_half_day=?, price_per_day=?, price_per_week=?, price_per_month=?, insurance=?, year=?, mileage=?, available=? WHERE id=?');
-    $stmt->execute([$model, $plate, $color, $capacity, $description, $status, $price_hour, $price_half, $price_day, $price_week, $price_month, $insurance, $year, $mileage, $available, $id]);
+    $lat = $_POST['lat'] ? (float)$_POST['lat'] : null;
+    $lng = $_POST['lng'] ? (float)$_POST['lng'] : null;
+    $stmt = $pdo->prepare('UPDATE motorcycles SET model=?, plate=?, color=?, capacity=?, description=?, status=?, price_per_hour=?, price_half_day=?, price_per_day=?, price_per_week=?, price_per_month=?, insurance=?, year=?, mileage=?, available=?, lat=?, lng=? WHERE id=?');
+    $stmt->execute([$model, $plate, $color, $capacity, $description, $status, $price_hour, $price_half, $price_day, $price_week, $price_month, $insurance, $year, $mileage, $available, $lat, $lng, $id]);
     if (!empty($_FILES['images']['name'][0])) {
         $uploadDir = __DIR__ . '/../uploads/';
         for ($i = 0; $i < count($_FILES['images']['name']); $i++) {
@@ -164,6 +168,8 @@ $motors = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <div class="col-md-3"><input type="text" name="insurance" class="form-control" placeholder="بیمه" value="<?= htmlspecialchars($editMotor['insurance'] ?? ''); ?>"></div>
         <div class="col-md-2"><input type="number" name="year" class="form-control" placeholder="سال ساخت" value="<?= htmlspecialchars($editMotor['year'] ?? ''); ?>"></div>
         <div class="col-md-2"><input type="number" name="mileage" class="form-control" placeholder="کیلومتر" value="<?= htmlspecialchars($editMotor['mileage'] ?? ''); ?>"></div>
+        <div class="col-md-2"><input type="text" name="lat" class="form-control" placeholder="lat" value="<?= htmlspecialchars($editMotor['lat'] ?? ''); ?>"></div>
+        <div class="col-md-2"><input type="text" name="lng" class="form-control" placeholder="lng" value="<?= htmlspecialchars($editMotor['lng'] ?? ''); ?>"></div>
         <div class="col-md-2">
           <select name="status" class="form-select">
             <option value="active" <?= isset($editMotor['status']) && $editMotor['status']==='active' ? 'selected' : ''; ?>>فعال</option>

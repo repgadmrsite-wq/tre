@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once __DIR__ . '/../includes/db.php';
-if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'admin') {
+if (!isset($_SESSION['user']) || $_SESSION['user']['role'] === 'user') {
     header('Location: ../login.php');
     exit;
 }
@@ -17,6 +17,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_payment'])) {
     if ($uid) {
         $stmt = $pdo->prepare('INSERT INTO payments (booking_id, user_id, amount, method, status) VALUES (?,?,?,?,?)');
         $stmt->execute([$booking_id, $uid, $amount, $method, $status]);
+        if($status==='paid'){
+            $pdo->prepare('INSERT INTO notifications (user_id,message) VALUES (?,?)')->execute([$uid,"پرداخت موفق ثبت شد"]);
+        } else {
+            $pdo->prepare('INSERT INTO notifications (user_id,message) VALUES (?,?)')->execute([$uid,"پرداخت معلق است"]);
+        }
     }
     header('Location: finance.php');
     exit;

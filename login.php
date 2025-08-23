@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = md5(trim($_POST['password']));
 
     // check admin table first
-    $stmt = $pdo->prepare('SELECT id, name, email, password FROM admins WHERE email = ? LIMIT 1');
+    $stmt = $pdo->prepare('SELECT id, name, email, password, role FROM admins WHERE email = ? LIMIT 1');
     $stmt->execute([$email]);
     $admin = $stmt->fetch();
       if ($admin && $admin['password'] === $password) {
@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
               'id' => $admin['id'],
               'name' => $admin['name'],
               'email' => $admin['email'],
-              'role' => 'admin'
+              'role' => $admin['role']
           ];
           header('Location: admin/admin.php');
           exit;

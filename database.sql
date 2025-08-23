@@ -4,7 +4,16 @@ CREATE TABLE admins (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL UNIQUE,
-    password VARCHAR(32) NOT NULL
+    password VARCHAR(32) NOT NULL,
+    role ENUM('super','support','accountant','mechanic') DEFAULT 'support'
+) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+CREATE TABLE admin_logs (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    admin_id INT NOT NULL,
+    action TEXT NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (admin_id) REFERENCES admins(id) ON DELETE CASCADE
 ) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 CREATE TABLE users (
@@ -33,7 +42,9 @@ CREATE TABLE motorcycles (
     insurance VARCHAR(100),
     year INT,
     mileage INT,
-    available TINYINT(1) DEFAULT 1
+    available TINYINT(1) DEFAULT 1,
+    lat DECIMAL(10,8) DEFAULT NULL,
+    lng DECIMAL(11,8) DEFAULT NULL
 ) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 CREATE TABLE motorcycle_images (
@@ -94,8 +105,46 @@ CREATE TABLE payments (
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 ) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
-INSERT INTO admins (name, email, password) VALUES
-('مدیر', 'admin@example.com', '0192023a7bbd73250516f069df18b500');
+CREATE TABLE reviews (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    motorcycle_id INT NOT NULL,
+    rating TINYINT NOT NULL,
+    comment TEXT,
+    status ENUM('pending','approved','rejected') DEFAULT 'pending',
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (motorcycle_id) REFERENCES motorcycles(id) ON DELETE CASCADE
+) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+CREATE TABLE maintenance (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    motorcycle_id INT NOT NULL,
+    service_date DATE NOT NULL,
+    mileage INT,
+    notes TEXT,
+    cost INT DEFAULT 0,
+    FOREIGN KEY (motorcycle_id) REFERENCES motorcycles(id) ON DELETE CASCADE
+) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+CREATE TABLE notifications (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT DEFAULT NULL,
+    admin_id INT DEFAULT NULL,
+    message TEXT NOT NULL,
+    is_read TINYINT(1) DEFAULT 0,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (admin_id) REFERENCES admins(id) ON DELETE CASCADE
+) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+CREATE TABLE settings (
+    setting_key VARCHAR(50) PRIMARY KEY,
+    setting_value VARCHAR(255)
+) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+INSERT INTO admins (name, email, password, role) VALUES
+('مدیر', 'admin@example.com', '0192023a7bbd73250516f069df18b500','super');
 
 INSERT INTO users (name, phone, email, password, status, note) VALUES
 ('کاربر نمونه', '09120000000', 'user@example.com', '6ad14ba9986e3615423dfca256d04e3f', 'regular', '');
