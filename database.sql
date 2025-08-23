@@ -19,7 +19,8 @@ CREATE TABLE motorcycles (
     name VARCHAR(100) NOT NULL,
     price_per_hour INT NOT NULL,
     price_half_day INT NOT NULL,
-    price_per_day INT NOT NULL
+    price_per_day INT NOT NULL,
+    status ENUM('active','maintenance','sold') DEFAULT 'active'
 ) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 CREATE TABLE bookings (
@@ -40,7 +41,7 @@ INSERT INTO admins (name, email, password) VALUES
 INSERT INTO users (name, email, password) VALUES
 ('کاربر نمونه', 'user@example.com', '6ad14ba9986e3615423dfca256d04e3f');
 
-INSERT INTO motorcycles (name, price_per_hour, price_half_day, price_per_day) VALUES
-('اسکوتر وسپا', 30000, 70000, 120000),
-('موتور کروزر', 50000, 110000, 180000),
-('موتور برقی', 20000, 50000, 90000);
+INSERT INTO motorcycles (name, price_per_hour, price_half_day, price_per_day, status) VALUES
+('اسکوتر وسپا', 30000, 70000, 120000, 'active'),
+('موتور کروزر', 50000, 110000, 180000, 'maintenance'),
+('موتور برقی', 20000, 50000, 90000, 'active');

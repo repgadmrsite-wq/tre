@@ -12,6 +12,31 @@ $totalUsers = $pdo->query('SELECT COUNT(*) FROM users')->fetchColumn();
 $totalAdmins = $pdo->query('SELECT COUNT(*) FROM admins')->fetchColumn();
 $totalMotors = $pdo->query('SELECT COUNT(*) FROM motorcycles')->fetchColumn();
 $pendingBookings = $pdo->query("SELECT COUNT(*) FROM bookings WHERE status='pending'")->fetchColumn();
+
+$todayBookings = $pdo->query("SELECT COUNT(*) FROM bookings WHERE DATE(start_date)=CURDATE()")->fetchColumn();
+$weekBookings = $pdo->query("SELECT COUNT(*) FROM bookings WHERE YEARWEEK(start_date,1)=YEARWEEK(CURDATE(),1)")->fetchColumn();
+$monthBookings = $pdo->query("SELECT COUNT(*) FROM bookings WHERE YEAR(start_date)=YEAR(CURDATE()) AND MONTH(start_date)=MONTH(CURDATE())")->fetchColumn();
+$yearBookings = $pdo->query("SELECT COUNT(*) FROM bookings WHERE YEAR(start_date)=YEAR(CURDATE())")->fetchColumn();
+
+$activeMotors = $pdo->query("SELECT COUNT(*) FROM motorcycles WHERE status='active'")->fetchColumn();
+$maintenanceMotors = $pdo->query("SELECT COUNT(*) FROM motorcycles WHERE status='maintenance'")->fetchColumn();
+$reservedMotors = $pdo->query("SELECT COUNT(*) FROM bookings WHERE status='confirmed' AND CURDATE() BETWEEN start_date AND end_date")->fetchColumn();
+
+$dailyStmt = $pdo->query("SELECT DATE(start_date) d, SUM(amount) r FROM bookings WHERE start_date >= DATE_SUB(CURDATE(), INTERVAL 6 DAY) GROUP BY d ORDER BY d");
+$dailyMap = [];
+while($row = $dailyStmt->fetch(PDO::FETCH_ASSOC)){ $dailyMap[$row['d']] = (int)$row['r']; }
+$dailyLabels = [];$dailyRevenue = [];
+for($i=6;$i>=0;$i--){$d=date('Y-m-d',strtotime("-$i day"));$dailyLabels[]=$d;$dailyRevenue[]=$dailyMap[$d]??0;}
+
+$monthlyStmt = $pdo->query("SELECT DATE_FORMAT(start_date,'%Y-%m') m, SUM(amount) r FROM bookings WHERE start_date >= DATE_SUB(CURDATE(), INTERVAL 11 MONTH) GROUP BY m ORDER BY m");
+$monthlyMap = [];
+while($row=$monthlyStmt->fetch(PDO::FETCH_ASSOC)){ $monthlyMap[$row['m']] = (int)$row['r']; }
+$monthlyLabels=[];$monthlyRevenue=[];
+for($i=11;$i>=0;$i--){$m=date('Y-m',strtotime("-$i month"));$monthlyLabels[]=$m;$monthlyRevenue[]=$monthlyMap[$m]??0;}
+
+$ongoing = $pdo->query("SELECT u.name user_name,m.name moto_name,b.end_date FROM bookings b JOIN users u ON b.user_id=u.id JOIN motorcycles m ON b.motorcycle_id=m.id WHERE b.status='confirmed' AND CURDATE() BETWEEN b.start_date AND b.end_date ORDER BY b.end_date LIMIT 5")->fetchAll(PDO::FETCH_ASSOC);
+$upcoming = $pdo->query("SELECT u.name user_name,m.name moto_name,b.start_date FROM bookings b JOIN users u ON b.user_id=u.id JOIN motorcycles m ON b.motorcycle_id=m.id WHERE b.status='confirmed' AND b.start_date > CURDATE() AND b.start_date <= DATE_ADD(CURDATE(),INTERVAL 7 DAY) ORDER BY b.start_date LIMIT 5")->fetchAll(PDO::FETCH_ASSOC);
+$overdue = $pdo->query("SELECT u.name user_name,m.name moto_name,b.end_date FROM bookings b JOIN users u ON b.user_id=u.id JOIN motorcycles m ON b.motorcycle_id=m.id WHERE b.status='confirmed' AND b.end_date < CURDATE() ORDER BY b.end_date")->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
@@ -94,9 +119,97 @@ $pendingBookings = $pdo->query("SELECT COUNT(*) FROM bookings WHERE status='pend
           </div>
         </div>
       </div>
+      <div class="row g-4 mt-1">
+        <div class="col-xl-6">
+          <div class="card h-100">
+            <div class="card-header">آمار رزروها</div>
+            <div class="card-body">
+              <div class="row text-center">
+                <div class="col-3"><h6>امروز</h6><p class="fs-4 mb-0"><?= $todayBookings; ?></p></div>
+                <div class="col-3"><h6>هفته</h6><p class="fs-4 mb-0"><?= $weekBookings; ?></p></div>
+                <div class="col-3"><h6>ماه</h6><p class="fs-4 mb-0"><?= $monthBookings; ?></p></div>
+                <div class="col-3"><h6>سال</h6><p class="fs-4 mb-0"><?= $yearBookings; ?></p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-6">
+          <div class="card h-100">
+            <div class="card-header">وضعیت موتورها</div>
+            <div class="card-body">
+              <ul class="list-unstyled mb-0">
+                <li>فعال: <?= $activeMotors; ?></li>
+                <li>رزرو شده: <?= $reservedMotors; ?></li>
+                <li>در تعمیر: <?= $maintenanceMotors; ?></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4 mt-1">
+        <div class="col-lg-6">
+          <div class="card">
+            <div class="card-header">درآمد روزانه</div>
+            <div class="card-body"><canvas id="dailyRevenueChart" height="150"></canvas></div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card">
+            <div class="card-header">درآمد ماهانه</div>
+            <div class="card-body"><canvas id="monthlyRevenueChart" height="150"></canvas></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4 mt-1">
+        <div class="col-lg-6">
+          <div class="card h-100">
+            <div class="card-header">رزروهای جاری</div>
+            <ul class="list-group list-group-flush">
+            <?php if ($ongoing): foreach($ongoing as $o): ?>
+              <li class="list-group-item d-flex justify-content-between"><span><?= htmlspecialchars($o['user_name']); ?> - <?= htmlspecialchars($o['moto_name']); ?></span><span><?= $o['end_date']; ?></span></li>
+            <?php endforeach; else: ?><li class="list-group-item">موردی نیست</li><?php endif; ?>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card h-100">
+            <div class="card-header">رزروهای نزدیک</div>
+            <ul class="list-group list-group-flush">
+            <?php if ($upcoming): foreach($upcoming as $u): ?>
+              <li class="list-group-item d-flex justify-content-between"><span><?= htmlspecialchars($u['user_name']); ?> - <?= htmlspecialchars($u['moto_name']); ?></span><span><?= $u['start_date']; ?></span></li>
+            <?php endforeach; else: ?><li class="list-group-item">موردی نیست</li><?php endif; ?>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <?php if ($overdue): ?>
+      <div class="row g-4 mt-1">
+        <div class="col-12">
+          <div class="card border-danger">
+            <div class="card-header bg-danger text-white">هشدار تحویل‌ندادن</div>
+            <ul class="list-group list-group-flush">
+            <?php foreach($overdue as $ov): ?>
+              <li class="list-group-item d-flex justify-content-between"><span><?= htmlspecialchars($ov['user_name']); ?> - <?= htmlspecialchars($ov['moto_name']); ?></span><span><?= $ov['end_date']; ?></span></li>
+            <?php endforeach; ?>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <?php endif; ?>
     </div>
   </main>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script>
+const dailyLabels = <?= json_encode($dailyLabels); ?>;
+const dailyRevenue = <?= json_encode($dailyRevenue); ?>;
+const monthlyLabels = <?= json_encode($monthlyLabels); ?>;
+const monthlyRevenue = <?= json_encode($monthlyRevenue); ?>;
+</script>
+<script src="../js/script-admin.js"></script>
 </body>
 </html>
