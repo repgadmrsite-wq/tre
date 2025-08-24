@@ -173,4 +173,23 @@ document.addEventListener('DOMContentLoaded', function(){
             }
         });
     }
+
+    var cancelForm = document.getElementById('cancelForm');
+    if (cancelForm) {
+        document.querySelectorAll('.btn-cancel-booking').forEach(function(btn){
+            btn.addEventListener('click', function(){
+                if (confirm('از لغو این رزرو مطمئنید؟')) {
+                    cancelForm.booking_id.value = this.dataset.id;
+                    cancelForm.submit();
+                }
+            });
+        });
+        document.querySelectorAll('.btn-change-date').forEach(function(btn){
+            btn.addEventListener('click', function(){
+                document.getElementById('editBookingId').value = this.dataset.id;
+                document.getElementById('editStart').value = this.dataset.start;
+                document.getElementById('editEnd').value = this.dataset.end;
+            });
+        });
+    }
 });
