@@ -5,9 +5,32 @@ if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'user') {
     exit;
 }
 require_once __DIR__ . '/../includes/db.php';
+require_once __DIR__ . '/../includes/csrf.php';
 
 $user = $_SESSION['user'];
 $user_id = $user['id'];
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    csrf_validate();
+    $amount = (int)($_POST['amount'] ?? 0);
+    if ($amount > 0) {
+        $pdo->beginTransaction();
+        $pdo->prepare('UPDATE users SET wallet_balance = wallet_balance + ? WHERE id = ?')->execute([$amount, $user_id]);
+        $pdo->prepare('INSERT INTO wallet_transactions (user_id, amount, type, description) VALUES (?,?,"credit","شارژ حساب")')->execute([$user_id, $amount]);
+        $pdo->commit();
+        $_SESSION['user']['wallet_balance'] = ($_SESSION['user']['wallet_balance'] ?? 0) + $amount;
+    }
+    header('Location: payments.php');
+    exit;
+}
+
+$balanceStmt = $pdo->prepare('SELECT wallet_balance FROM users WHERE id=?');
+$balanceStmt->execute([$user_id]);
+$wallet_balance = (int)$balanceStmt->fetchColumn();
+
+$transStmt = $pdo->prepare('SELECT amount, type, description, created_at FROM wallet_transactions WHERE user_id=? ORDER BY created_at DESC');
+$transStmt->execute([$user_id]);
+$transactions = $transStmt->fetchAll(PDO::FETCH_ASSOC);
 
 $start = $_GET['start'] ?? '';
 $end = $_GET['end'] ?? '';
@@ -77,6 +100,12 @@ for ($i = 5; $i >= 0; $i--) {
     <main class="main-content">
         <div class="container-fluid">
             <h1 class="h2 mb-4">پرداخت‌ها</h1>
+            <div class="card mb-4">
+                <div class="card-body d-flex justify-content-between align-items-center">
+                    <div>موجودی فعلی: <strong><?= number_format($wallet_balance) ?> تومان</strong></div>
+                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#topupModal">شارژ حساب</button>
+                </div>
+            </div>
             <form method="get" class="row g-3 mb-4">
                 <div class="col-md-3"><input type="date" name="start" value="<?= htmlspecialchars($start) ?>" class="form-control" placeholder="از تاریخ"></div>
                 <div class="col-md-3"><input type="date" name="end" value="<?= htmlspecialchars($end) ?>" class="form-control" placeholder="تا تاریخ"></div>
@@ -122,8 +151,44 @@ for ($i = 5; $i >= 0; $i--) {
                     <p class="text-muted">پرداختی یافت نشد.</p>
                 <?php endif; ?>
             </div>
+            <div class="card mb-4">
+                <div class="card-header bg-white border-bottom-0"><h5 class="mb-0">تراکنش‌های کیف پول</h5></div>
+                <div class="card-body">
+                    <?php if (count($transactions) > 0): ?>
+                        <?php foreach ($transactions as $t): ?>
+                        <div class="d-flex justify-content-between border-bottom py-2">
+                            <div><?= $t['description'] ?: ($t['type']==='credit'?'واریز':'برداشت') ?></div>
+                            <div class="<?= $t['type']==='credit'?'text-success':'text-danger' ?>">
+                                <?= $t['type']==='credit' ? '+' : '-' ?><?= number_format($t['amount']) ?>
+                            </div>
+                            <div class="text-muted small"><?= $t['created_at'] ?></div>
+                        </div>
+                        <?php endforeach; ?>
+                    <?php else: ?>
+                        <p class="text-muted mb-0">تراکنشی ثبت نشده است.</p>
+                    <?php endif; ?>
+                </div>
+            </div>
         </div>
     </main>
+</div>
+<div class="modal fade" id="topupModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <form class="modal-content" method="post">
+        <?= csrf_input() ?>
+        <div class="modal-header">
+            <h5 class="modal-title">شارژ حساب</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <label for="amount" class="form-label">مبلغ (تومان)</label>
+            <input type="number" name="amount" id="amount" class="form-control" min="1000" required>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">افزایش موجودی</button>
+        </div>
+    </form>
+  </div>
 </div>
 <script>
 var financeLabels = <?= json_encode($labels) ?>;

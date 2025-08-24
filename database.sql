@@ -25,7 +25,8 @@ CREATE TABLE users (
     status ENUM('regular','vip','blocked') DEFAULT 'regular',
     note TEXT,
     language ENUM('fa','en') DEFAULT 'fa',
-    notify_email TINYINT(1) DEFAULT 1
+    notify_email TINYINT(1) DEFAULT 1,
+    wallet_balance INT DEFAULT 0
 ) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 CREATE TABLE motorcycles (
@@ -107,6 +108,16 @@ CREATE TABLE payments (
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 ) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
+CREATE TABLE wallet_transactions (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    amount INT NOT NULL,
+    type ENUM('credit','debit') NOT NULL,
+    description VARCHAR(255) DEFAULT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
 CREATE TABLE reviews (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
@@ -179,8 +190,8 @@ CREATE TABLE settings (
 INSERT INTO admins (name, email, password, role) VALUES
 ('مدیر', 'admin@example.com', '$2y$12$IWOcs0d0Q.uPO4D6xmeK2ex3Tz7V1guW3Yf16Kk2Qsz5EFHnpp91C','super');
 
-INSERT INTO users (name, phone, email, password, status, note) VALUES
-('کاربر نمونه', '09120000000', 'user@example.com', '$2y$12$1tKh0T5SbKtQP3wy4nPfCO2lv9MNXbgnTUZeIMhLIcQhYH7MnUq86', 'regular', '');
+INSERT INTO users (name, phone, email, password, status, note, language, notify_email, wallet_balance) VALUES
+('کاربر نمونه', '09120000000', 'user@example.com', '$2y$12$1tKh0T5SbKtQP3wy4nPfCO2lv9MNXbgnTUZeIMhLIcQhYH7MnUq86', 'regular', '', 'fa', 1, 0);
 
 INSERT INTO motorcycles (model, plate, color, capacity, description, status, price_per_hour, price_half_day, price_per_day, price_per_week, price_per_month, insurance, year, mileage, available) VALUES
 ('اسکوتر وسپا', '11ک123-45', 'قرمز', 150, 'اسکوتر شهری', 'active', 30000, 70000, 120000, 750000, 2800000, 'بیمه شخص ثالث', 2022, 5000, 1),

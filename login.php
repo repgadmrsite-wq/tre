@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         // check regular users table
-        $stmt = $pdo->prepare('SELECT id, name, email, password, language, notify_email FROM users WHERE email = ? LIMIT 1');
+        $stmt = $pdo->prepare('SELECT id, name, email, password, language, notify_email, wallet_balance FROM users WHERE email = ? LIMIT 1');
         $stmt->execute([$email]);
         $user = $stmt->fetch();
         if ($user && password_verify($password, $user['password'])) {
@@ -66,7 +66,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 'email' => $user['email'],
                 'role' => 'user',
                 'language' => $user['language'],
-                'notify_email' => $user['notify_email']
+                'notify_email' => $user['notify_email'],
+                'wallet_balance' => $user['wallet_balance']
             ];
             $pdo->prepare('DELETE FROM login_attempts WHERE ip = ? AND email = ""')->execute([$ip]);
             $pdo->prepare('DELETE FROM login_attempts WHERE ip = "" AND email = ?')->execute([$email]);

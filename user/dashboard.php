@@ -9,6 +9,11 @@ require_once __DIR__ . '/../includes/db.php';
 $user = $_SESSION['user'];
 $user_id = $user['id'];
 
+$balanceStmt = $pdo->prepare('SELECT wallet_balance FROM users WHERE id=?');
+$balanceStmt->execute([$user_id]);
+$wallet_balance = (int)$balanceStmt->fetchColumn();
+$_SESSION['user']['wallet_balance'] = $wallet_balance;
+
 $today = date('Y-m-d');
 $startOfWeek = date('Y-m-d', strtotime('monday this week'));
 $endOfWeek = date('Y-m-d', strtotime('sunday this week'));
@@ -135,6 +140,15 @@ foreach ($revenueQueries as $key => $range) {
                     <div class="card stat-card bg-danger text-white p-3 text-center">
                         <h6>رزروهای لغو شده</h6>
                         <p class="fs-4 mb-0"><?= $statusCounts['cancelled'] ?></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4 mb-4">
+                <div class="col-md-4 col-sm-6">
+                    <div class="card stat-card p-3 text-center">
+                        <h6>موجودی کیف پول</h6>
+                        <p class="fs-4 mb-0"><?= number_format($wallet_balance) ?></p>
+                        <a href="payments.php" class="btn btn-sm btn-primary mt-2">شارژ حساب</a>
                     </div>
                 </div>
             </div>
