@@ -87,7 +87,7 @@ foreach ($revenueQueries as $key => $range) {
             </li>
             <li class="nav-item"><a class="nav-link" href="bookings.php"><i class="bi bi-calendar2-check"></i><span>رزروهای من</span></a></li>
             <li class="nav-item"><a class="nav-link" href="payments.php"><i class="bi bi-wallet2"></i><span>پرداخت‌ها</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-person-circle"></i><span>پروفایل</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="profile.php"><i class="bi bi-person-circle"></i><span>پروفایل</span></a></li>
         </ul>
         <div class="mt-auto p-3">
             <a class="nav-link" href="../logout.php"><i class="bi bi-box-arrow-right"></i><span>خروج از حساب</span></a>
