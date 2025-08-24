@@ -22,3 +22,10 @@
 .star-rating i.bi-star-fill{color:#ffc107;}
 .review-card{border-radius:1rem;box-shadow:0 2px 6px rgba(0,0,0,0.1);}
 .rating-circle{width:50px;height:50px;border-radius:50%;background:conic-gradient(#ffc107 var(--percent),#eee 0);display:flex;align-items:center;justify-content:center;font-weight:700;}
+.filter-bar .form-control,
+.filter-bar .form-select{border-radius:50rem;}
+.motor-card{border-radius:1rem;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,0.1);cursor:pointer;transition:transform .2s,box-shadow .2s;}
+.motor-card:hover{transform:scale(1.02);box-shadow:0 4px 12px rgba(0,0,0,0.15);}
+.motor-card img{height:180px;object-fit:cover;}
+.modal .carousel-item img{transition:transform .3s;}
+.modal .carousel-item:hover img{transform:scale(1.05);}
