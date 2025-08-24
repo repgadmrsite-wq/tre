@@ -178,6 +178,5 @@ for ($i=11;$i>=0;$i--) { $m=date('Y-m',strtotime("-$i month")); $monthlyLabels[]
 const monthlyLabels = <?= json_encode($monthlyLabels); ?>;
 const monthlyRevenue = <?= json_encode($monthlyRevenue); ?>;
 </script>
-<script src="../js/admin-panel.js"></script>
 </body>
 </html>

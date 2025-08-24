@@ -28,3 +28,5 @@ if (!isset($activePage)) { $activePage = ''; }
     <a class="nav-link" href="../logout.php"><i class="bi bi-box-arrow-right"></i><span>خروج</span></a>
   </div>
 </aside>
+<div id="admin-toast-container" class="position-fixed top-0 end-0 p-3" style="z-index:1080"></div>
+<script src="../js/admin-panel.js"></script>

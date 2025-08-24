@@ -44,4 +44,52 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }
   }
+  // Toast notifications polling for admins
+  const container = document.getElementById('admin-toast-container');
+  const shown = new Set();
+
+  function playBeep() {
+    try {
+      const ctx = new (window.AudioContext || window.webkitAudioContext)();
+      const osc = ctx.createOscillator();
+      osc.frequency.value = 880;
+      osc.connect(ctx.destination);
+      osc.start();
+      setTimeout(() => { osc.stop(); ctx.close(); }, 200);
+    } catch (e) {}
+  }
+
+  function showToast(msg, id) {
+    if (!container) return;
+    const wrapper = document.createElement('div');
+    wrapper.className = 'toast align-items-center text-bg-primary border-0';
+    wrapper.setAttribute('role','alert');
+    wrapper.setAttribute('aria-live','assertive');
+    wrapper.setAttribute('aria-atomic','true');
+    wrapper.innerHTML = '<div class="d-flex"><div class="toast-body">'+msg+'</div><button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button></div>';
+    container.appendChild(wrapper);
+    const toast = new bootstrap.Toast(wrapper, {delay:5000});
+    toast.show();
+  }
+
+  async function fetchNotes() {
+    try {
+      const res = await fetch('notifications.php?ajax=1');
+      if (!res.ok) return;
+      const data = await res.json();
+      data.forEach(n => {
+        if (!shown.has(n.id)) {
+          shown.add(n.id);
+          showToast(n.message, n.id);
+          playBeep();
+          fetch('notifications.php?read=' + n.id);
+        }
+      });
+    } catch (e) {
+      // ignore errors
+    }
+  }
+
+  fetchNotes();
+  setInterval(fetchNotes, 10000);
 });

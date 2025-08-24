@@ -51,7 +51,7 @@ function tickets_close(PDO $pdo, int $ticket_id) {
     $pdo->prepare('UPDATE tickets SET status="closed" WHERE id=?')->execute([$ticket_id]);
 }
 
-if (basename(__FILE__) === basename($_SERVER['SCRIPT_FILENAME'])) {
+if (realpath(__FILE__) === realpath($_SERVER['SCRIPT_FILENAME'])) {
     header('Content-Type: application/json; charset=utf-8');
     $method = $_SERVER['REQUEST_METHOD'];
     if ($method === 'GET') {

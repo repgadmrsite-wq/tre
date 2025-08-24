@@ -3,6 +3,14 @@ session_start();
 require_once __DIR__ . '/../includes/db.php';
 require_once __DIR__ . '/../includes/admin_auth.php';
 
+if (isset($_GET['ajax'])) {
+    header('Content-Type: application/json; charset=utf-8');
+    $stmt = $pdo->prepare('SELECT id,message FROM notifications WHERE (admin_id IS NULL OR admin_id = ?) AND is_read=0 ORDER BY created_at DESC');
+    $stmt->execute([$_SESSION['user']['id']]);
+    echo json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
+    exit;
+}
+
 if (isset($_GET['read'])) {
     $id=(int)$_GET['read'];
     $pdo->prepare('UPDATE notifications SET is_read=1 WHERE id=?')->execute([$id]);

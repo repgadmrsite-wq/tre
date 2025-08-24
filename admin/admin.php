@@ -191,6 +191,5 @@ const dailyRevenue = <?= json_encode($dailyRevenue); ?>;
 const monthlyLabels = <?= json_encode($monthlyLabels); ?>;
 const monthlyRevenue = <?= json_encode($monthlyRevenue); ?>;
 </script>
-<script src="../js/admin-panel.js"></script>
 </body>
 </html>
