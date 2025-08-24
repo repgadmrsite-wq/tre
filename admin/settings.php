@@ -1,12 +1,14 @@
 <?php
 session_start();
 require_once __DIR__ . '/../includes/db.php';
+require_once __DIR__ . '/../includes/csrf.php';
 if (!isset($_SESSION['user']) || $_SESSION['user']['role'] === 'user') {
     header('Location: ../login.php');
     exit;
 }
 
 if ($_SERVER['REQUEST_METHOD']==='POST') {
+    csrf_validate();
     foreach(['currency','language','work_hours'] as $key){
         if(isset($_POST[$key])){
             $stmt=$pdo->prepare('REPLACE INTO settings (setting_key,setting_value) VALUES (?,?)');
@@ -41,6 +43,7 @@ foreach($pdo->query('SELECT setting_key,setting_value FROM settings') as $row){$
     <div class="container-fluid">
       <h1 class="h3 mb-4">تنظیمات کلی</h1>
       <form method="post" class="row g-3">
+        <?= csrf_input(); ?>
         <div class="col-md-4">
           <label class="form-label">واحد پولی</label>
           <input type="text" name="currency" class="form-control" value="<?= $settings['currency']??'تومان'; ?>">

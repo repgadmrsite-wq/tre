@@ -5,12 +5,14 @@ if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'user') {
     exit;
 }
 require_once __DIR__ . '/../includes/db.php';
+require_once __DIR__ . '/../includes/csrf.php';
 
 $user = $_SESSION['user'];
 $user_id = $user['id'];
 $message = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    csrf_validate();
     $language = $_POST['language'] === 'en' ? 'en' : 'fa';
     $notify = isset($_POST['notify_email']) ? 1 : 0;
     $stmt = $pdo->prepare('UPDATE users SET language = ?, notify_email = ? WHERE id = ?');
@@ -63,6 +65,7 @@ $prefs = $stmt->fetch();
             <h1 class="h2 mb-4">تنظیمات</h1>
             <?php if ($message): ?><div class="alert alert-success" role="alert"><?= $message ?></div><?php endif; ?>
             <form method="post" class="card p-3 shadow-sm" style="max-width:500px;">
+                <?= csrf_input(); ?>
                 <div class="mb-3">
                     <label class="form-label">زبان</label>
                     <select name="language" class="form-select">

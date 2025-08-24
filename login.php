@@ -1,9 +1,11 @@
 <?php
 session_start();
 require_once __DIR__ . '/includes/db.php';
+require_once __DIR__ . '/includes/csrf.php';
 
 $error = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    csrf_validate();
     $email = trim($_POST['email']);
     $password = trim($_POST['password']);
 
@@ -79,6 +81,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <div class="alert alert-danger"><?= $error; ?></div>
             <?php endif; ?>
             <form method="post">
+                <?= csrf_input(); ?>
                 <div class="form-floating mb-3">
                     <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com" required>
                     <label for="email">آدرس ایمیل</label>

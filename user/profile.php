@@ -5,6 +5,7 @@ if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'user') {
     exit;
 }
 require_once __DIR__ . '/../includes/db.php';
+require_once __DIR__ . '/../includes/csrf.php';
 
 $user = $_SESSION['user'];
 $user_id = $user['id'];
@@ -12,6 +13,7 @@ $message = '';
 $error = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    csrf_validate();
     if (isset($_POST['update_profile'])) {
         $name = trim($_POST['name']);
         $email = trim($_POST['email']);
@@ -88,6 +90,7 @@ $info = $stmt->fetch();
                     <div class="card form-card p-4">
                         <h5 class="mb-3">اطلاعات شخصی</h5>
                         <form method="post">
+                            <?= csrf_input(); ?>
                             <input type="hidden" name="update_profile" value="1">
                             <div class="mb-3">
                                 <label class="form-label">نام</label>
@@ -109,6 +112,7 @@ $info = $stmt->fetch();
                     <div class="card form-card p-4">
                         <h5 class="mb-3"><i class="bi bi-shield-lock me-2"></i>تغییر رمز عبور</h5>
                         <form method="post">
+                            <?= csrf_input(); ?>
                             <input type="hidden" name="change_password" value="1">
                             <div class="mb-3">
                                 <label class="form-label">رمز عبور فعلی</label>

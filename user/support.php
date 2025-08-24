@@ -5,11 +5,13 @@ if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'user') {
     exit;
 }
 require_once __DIR__ . '/../includes/db.php';
+require_once __DIR__ . '/../includes/csrf.php';
 
 $user = $_SESSION['user'];
 $user_id = $user['id'];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    csrf_validate();
     $subject = trim($_POST['subject'] ?? '');
     $message = trim($_POST['message'] ?? '');
     if ($subject && $message) {
@@ -62,6 +64,7 @@ $tickets = $stmt->fetchAll();
         <div class="container-fluid">
             <h1 class="h2 mb-4">پشتیبانی</h1>
             <form method="post" class="card p-3 mb-4 shadow-sm">
+                <?= csrf_input(); ?>
                 <div class="mb-3">
                     <label class="form-label">موضوع</label>
                     <input type="text" name="subject" class="form-control" required>

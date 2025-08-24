@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once __DIR__ . '/../includes/db.php';
+require_once __DIR__ . '/../includes/csrf.php';
 
 if (!isset($_SESSION['user']) || $_SESSION['user']['role'] === 'user') {
     header('Location: ../login.php');
@@ -8,6 +9,7 @@ if (!isset($_SESSION['user']) || $_SESSION['user']['role'] === 'user') {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_user'])) {
+    csrf_validate();
     $name = trim($_POST['user_name']);
     $phone = trim($_POST['user_phone']);
     $email = trim($_POST['user_email']);
@@ -23,6 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_user'])) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_user'])) {
+    csrf_validate();
     $id = (int)$_POST['user_id'];
     $status = $_POST['status'];
     $note = trim($_POST['note']);
@@ -75,6 +78,7 @@ $users = $pdo->query('SELECT u.id, u.name, u.phone, u.email, u.status, u.note, C
     <div class="container-fluid">
       <h1 class="h3 mb-4">مدیریت کاربران</h1>
       <form method="post" class="row g-2 mb-4">
+        <?= csrf_input(); ?>
         <input type="hidden" name="add_user" value="1">
         <div class="col-md-2"><input type="text" name="user_name" class="form-control" placeholder="نام" required></div>
         <div class="col-md-2"><input type="text" name="user_phone" class="form-control" placeholder="تلفن"></div>
@@ -106,6 +110,7 @@ $users = $pdo->query('SELECT u.id, u.name, u.phone, u.email, u.status, u.note, C
               <td><?= htmlspecialchars($u['note']); ?></td>
               <td>
                 <form method="post" class="d-flex flex-wrap align-items-center gap-1">
+                  <?= csrf_input(); ?>
                   <input type="hidden" name="update_user" value="1">
                   <input type="hidden" name="user_id" value="<?= $u['id']; ?>">
                   <select name="status" class="form-select form-select-sm">

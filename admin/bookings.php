@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once __DIR__ . '/../includes/db.php';
+require_once __DIR__ . '/../includes/csrf.php';
 
 if (!isset($_SESSION['user']) || $_SESSION['user']['role'] === 'user') {
     header('Location: ../login.php');
@@ -8,6 +9,7 @@ if (!isset($_SESSION['user']) || $_SESSION['user']['role'] === 'user') {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_booking'])) {
+    csrf_validate();
     $user_id = (int)$_POST['user_id'];
     $motor_id = (int)$_POST['motorcycle_id'];
     $start = $_POST['start_date'];
@@ -56,6 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_booking'])) {
     exit;
 }
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_booking'])) {
+    csrf_validate();
     $id = (int)$_POST['booking_id'];
     $user_id = (int)$_POST['user_id'];
     $motor_id = (int)$_POST['motorcycle_id'];
@@ -154,6 +157,7 @@ if (isset($_GET['edit'])) {
         <div class="alert alert-danger"><?= $_SESSION['error']; unset($_SESSION['error']); ?></div>
       <?php endif; ?>
       <form method="post" class="row g-2 mb-4">
+        <?= csrf_input(); ?>
         <?php if($editBooking): ?>
           <input type="hidden" name="update_booking" value="1">
           <input type="hidden" name="booking_id" value="<?= $editBooking['id']; ?>">

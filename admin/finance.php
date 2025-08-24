@@ -1,12 +1,14 @@
 <?php
 session_start();
 require_once __DIR__ . '/../includes/db.php';
+require_once __DIR__ . '/../includes/csrf.php';
 if (!isset($_SESSION['user']) || $_SESSION['user']['role'] === 'user') {
     header('Location: ../login.php');
     exit;
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_payment'])) {
+    csrf_validate();
     $booking_id = (int)$_POST['booking_id'];
     $amount = (int)$_POST['amount'];
     $method = $_POST['method'];
@@ -87,6 +89,7 @@ for ($i=11;$i>=0;$i--) { $m=date('Y-m',strtotime("-$i month")); $monthlyLabels[]
     <div class="container-fluid">
       <h1 class="h3 mb-4">گزارش پرداخت‌ها</h1>
       <form method="post" class="row g-2 mb-4">
+        <?= csrf_input(); ?>
         <input type="hidden" name="add_payment" value="1">
         <div class="col-md-4">
           <select name="booking_id" class="form-select" required>

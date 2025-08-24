@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once __DIR__ . '/../includes/db.php';
+require_once __DIR__ . '/../includes/csrf.php';
 if (!isset($_SESSION['user']) || $_SESSION['user']['role'] === 'user') {
     header('Location: ../login.php');
     exit;
@@ -8,6 +9,7 @@ if (!isset($_SESSION['user']) || $_SESSION['user']['role'] === 'user') {
 
 $msg='';
 if($_SERVER['REQUEST_METHOD']==='POST'){
+    csrf_validate();
     $type=$_POST['type'];
     $content=trim($_POST['content']);
     if($content){$msg='پیام ثبت شد و برای ارسال صف خواهد شد.';}
@@ -38,6 +40,7 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
       <h1 class="h3 mb-4">ارسال پیام گروهی</h1>
       <?php if($msg):?><div class="alert alert-success"><?= $msg; ?></div><?php endif; ?>
       <form method="post" class="mb-3">
+        <?= csrf_input(); ?>
         <div class="mb-3">
           <label class="form-label">نوع پیام</label>
           <select name="type" class="form-select"><option value="sms">پیامک</option><option value="email">ایمیل</option></select>

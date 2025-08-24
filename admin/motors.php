@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once __DIR__ . '/../includes/db.php';
+require_once __DIR__ . '/../includes/csrf.php';
 
 if (!isset($_SESSION['user']) || $_SESSION['user']['role'] === 'user') {
     header('Location: ../login.php');
@@ -8,6 +9,7 @@ if (!isset($_SESSION['user']) || $_SESSION['user']['role'] === 'user') {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_motor'])) {
+    csrf_validate();
     $model = trim($_POST['model']);
     $plate = trim($_POST['plate']);
     $color = trim($_POST['color']);
@@ -50,6 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_motor'])) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_motor'])) {
+    csrf_validate();
     $id = (int)$_POST['motor_id'];
     $model = trim($_POST['model']);
     $plate = trim($_POST['plate']);
@@ -155,6 +158,7 @@ $motors = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <div class="container-fluid">
       <h1 class="h3 mb-4">مدیریت موتورها</h1>
       <form method="post" enctype="multipart/form-data" class="row g-2 mb-4">
+        <?= csrf_input(); ?>
         <?php if($editMotor): ?>
           <input type="hidden" name="update_motor" value="1">
           <input type="hidden" name="motor_id" value="<?= $editMotor['id']; ?>">

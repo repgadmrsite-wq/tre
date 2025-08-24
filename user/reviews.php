@@ -5,12 +5,14 @@ if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'user') {
     exit;
 }
 require_once __DIR__ . '/../includes/db.php';
+require_once __DIR__ . '/../includes/csrf.php';
 
 $user = $_SESSION['user'];
 $user_id = $user['id'];
 
 // handle form submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    csrf_validate();
     $motor_id = (int)$_POST['motor_id'];
     $rating = max(1, min(5, (int)$_POST['rating']));
     $comment = trim($_POST['comment']);
@@ -80,6 +82,7 @@ $motors = $motorsStmt->fetchAll();
                         </div>
                     </div>
                     <form method="post" class="mb-3">
+                        <?= csrf_input(); ?>
                         <input type="hidden" name="motor_id" value="<?= $m['id'] ?>">
                         <div class="star-rating mb-2" data-current="<?= (int)$m['user_rating'] ?>">
                             <input type="hidden" name="rating" value="<?= (int)$m['user_rating'] ?>">

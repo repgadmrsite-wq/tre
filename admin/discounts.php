@@ -1,12 +1,14 @@
 <?php
 session_start();
 require_once __DIR__ . '/../includes/db.php';
+require_once __DIR__ . '/../includes/csrf.php';
 if (!isset($_SESSION['user']) || $_SESSION['user']['role'] === 'user') {
     header('Location: ../login.php');
     exit;
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_discount'])) {
+    csrf_validate();
     $code = trim($_POST['code']);
     $type = $_POST['type'];
     $value = (int)$_POST['value'];
@@ -67,6 +69,7 @@ $discounts = $pdo->query("SELECT d.*, COALESCE(SUM(u.used_count),0) AS used_tota
     <div class="container-fluid">
       <h1 class="h3 mb-4">کدهای تخفیف</h1>
       <form method="post" class="row g-2 mb-4">
+        <?= csrf_input(); ?>
         <input type="hidden" name="add_discount" value="1">
         <div class="col-md-2"><input type="text" name="code" class="form-control" placeholder="کد" required></div>
         <div class="col-md-2">

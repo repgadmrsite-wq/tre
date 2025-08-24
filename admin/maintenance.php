@@ -1,12 +1,14 @@
 <?php
 session_start();
 require_once __DIR__ . '/../includes/db.php';
+require_once __DIR__ . '/../includes/csrf.php';
 if (!isset($_SESSION['user']) || $_SESSION['user']['role'] === 'user') {
     header('Location: ../login.php');
     exit;
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    csrf_validate();
     $motor = (int)$_POST['motorcycle_id'];
     $date = $_POST['service_date'];
     $mileage = (int)$_POST['mileage'];
@@ -52,6 +54,7 @@ $motors = $pdo->query('SELECT id,model FROM motorcycles ORDER BY model')->fetchA
     <div class="container-fluid">
       <h1 class="h3 mb-4">ثبت سرویس جدید</h1>
       <form method="post" class="row g-2 mb-4">
+        <?= csrf_input(); ?>
         <div class="col-md-3"><select name="motorcycle_id" class="form-select" required>
           <?php foreach($motors as $m): ?><option value="<?= $m['id']; ?>"><?= htmlspecialchars($m['model']); ?></option><?php endforeach; ?>
         </select></div>

@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once __DIR__ . '/../includes/db.php';
+require_once __DIR__ . '/../includes/csrf.php';
 
 if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'super') {
     header('Location: admin.php');
@@ -8,6 +9,7 @@ if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'super') {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_admin'])) {
+    csrf_validate();
     $name = trim($_POST['admin_name']);
     $email = trim($_POST['admin_email']);
     $role = $_POST['admin_role'];
@@ -68,6 +70,7 @@ $admins = $pdo->query('SELECT id, name, email, role FROM admins ORDER BY id DESC
     <div class="container-fluid">
       <h1 class="h3 mb-4">مدیریت مدیران</h1>
       <form method="post" class="row g-2 mb-4">
+        <?= csrf_input(); ?>
         <input type="hidden" name="add_admin" value="1">
         <div class="col-md-2"><input type="text" name="admin_name" class="form-control" placeholder="نام" required></div>
         <div class="col-md-3"><input type="email" name="admin_email" class="form-control" placeholder="ایمیل" required></div>
