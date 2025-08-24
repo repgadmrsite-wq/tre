@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt = $pdo->prepare('SELECT id, name, email, password, role FROM admins WHERE email = ? LIMIT 1');
         $stmt->execute([$email]);
         $admin = $stmt->fetch();
-        if ($admin && md5($password) === $admin['password']) {
+        if ($admin && password_verify($password, $admin['password'])) {
             session_regenerate_id(true);
             $_SESSION['user'] = [
                 'id' => $admin['id'],
@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt = $pdo->prepare('SELECT id, name, email, password, language, notify_email FROM users WHERE email = ? LIMIT 1');
         $stmt->execute([$email]);
         $user = $stmt->fetch();
-        if ($user && md5($password) === $user['password']) {
+        if ($user && password_verify($password, $user['password'])) {
             session_regenerate_id(true);
             $_SESSION['user'] = [
                 'id' => $user['id'],

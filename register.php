@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     if (!$errors) {
-        $hashed = md5($password);
+        $hashed = password_hash($password, PASSWORD_DEFAULT);
         $stmt = $pdo->prepare('INSERT INTO users (name, phone, email, password, status, language, notify_email) VALUES (?,?,?,?,"regular","fa",1)');
         $stmt->execute([$name, $phone, $email, $hashed]);
         header('Location: login.php?registered=1');
