@@ -156,3 +156,7 @@ INSERT INTO motorcycles (model, plate, color, capacity, description, status, pri
 
 INSERT INTO discounts (code, type, value, start_date, end_date, usage_limit, per_user_limit, vip_only, motor_id) VALUES
 ('OFF10','percent',10,NULL,NULL,NULL,NULL,0,NULL);
+
+INSERT INTO notifications (user_id, message, is_read) VALUES
+(1,'یادآوری: موتورتان را فردا تحویل بگیرید.',0),
+(1,'پرداخت شما با موفقیت ثبت شد.',0);

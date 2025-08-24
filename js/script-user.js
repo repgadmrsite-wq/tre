@@ -1,4 +1,26 @@
 document.addEventListener('DOMContentLoaded', function(){
+    fetch('notifications.php?ajax=1')
+        .then(res => res.json())
+        .then(list => {
+            list.forEach(function(n){
+                showUserToast(n.message);
+                fetch('notifications.php?read=' + n.id);
+            });
+        });
+    function showUserToast(msg){
+        var container=document.getElementById('toast-container');
+        if(!container){
+            container=document.createElement('div');
+            container.id='toast-container';
+            container.className='toast-container position-fixed bottom-0 end-0 p-3';
+            document.body.appendChild(container);
+        }
+        var toastEl=document.createElement('div');
+        toastEl.className='toast align-items-center text-bg-dark border-0';
+        toastEl.innerHTML='<div class="d-flex"><div class="toast-body"><i class="bi bi-bell me-2"></i>'+msg+'</div><button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button></div>';
+        container.appendChild(toastEl);
+        new bootstrap.Toast(toastEl,{delay:5000}).show();
+    }
     if (typeof paymentData !== 'undefined') {
         var labels = paymentData.map(function(i){return i.period;});
         var data = paymentData.map(function(i){return i.total;});
