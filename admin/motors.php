@@ -3,6 +3,40 @@ session_start();
 require_once __DIR__ . '/../includes/db.php';
 require_once __DIR__ . '/../includes/csrf.php';
 
+function saveMotorImages($pdo, $motorId) {
+    if (empty($_FILES['images']['name'][0])) {
+        return;
+    }
+    $uploadDir = __DIR__ . '/../uploads/';
+    if (!is_dir($uploadDir)) {
+        mkdir($uploadDir, 0755, true);
+    }
+    $allowed = ['image/jpeg' => 'jpg', 'image/png' => 'png'];
+    $maxSize = 2 * 1024 * 1024; // 2MB
+    $finfo = finfo_open(FILEINFO_MIME_TYPE);
+    for ($i = 0; $i < count($_FILES['images']['name']); $i++) {
+        if ($_FILES['images']['error'][$i] !== UPLOAD_ERR_OK) {
+            continue;
+        }
+        if ($_FILES['images']['size'][$i] > $maxSize) {
+            continue;
+        }
+        $tmp = $_FILES['images']['tmp_name'][$i];
+        $mime = finfo_file($finfo, $tmp);
+        if (!isset($allowed[$mime])) {
+            continue;
+        }
+        $ext = $allowed[$mime];
+        $name = bin2hex(random_bytes(8)) . '.' . $ext;
+        $target = $uploadDir . $name;
+        if (move_uploaded_file($tmp, $target)) {
+            $path = 'uploads/' . $name;
+            $pdo->prepare('INSERT INTO motorcycle_images (motorcycle_id, image_path) VALUES (?,?)')->execute([$motorId, $path]);
+        }
+    }
+    finfo_close($finfo);
+}
+
 if (!isset($_SESSION['user']) || $_SESSION['user']['role'] === 'user') {
     header('Location: ../login.php');
     exit;
@@ -32,20 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_motor'])) {
         $stmt = $pdo->prepare('INSERT INTO motorcycles (model, plate, color, capacity, description, status, price_per_hour, price_half_day, price_per_day, price_per_week, price_per_month, insurance, year, mileage, available, lat, lng) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
         $stmt->execute([$model, $plate, $color, $capacity, $description, $status, $price_hour, $price_half, $price_day, $price_week, $price_month, $insurance, $year, $mileage, $available, $lat, $lng]);
         $motorId = $pdo->lastInsertId();
-        if (!empty($_FILES['images']['name'][0])) {
-            $uploadDir = __DIR__ . '/../uploads/';
-            for ($i = 0; $i < count($_FILES['images']['name']); $i++) {
-                if ($_FILES['images']['error'][$i] === UPLOAD_ERR_OK) {
-                    $tmp = $_FILES['images']['tmp_name'][$i];
-                    $name = time() . '_' . $i . '_' . basename($_FILES['images']['name'][$i]);
-                    $target = $uploadDir . $name;
-                    if (move_uploaded_file($tmp, $target)) {
-                        $path = 'uploads/' . $name;
-                        $pdo->prepare('INSERT INTO motorcycle_images (motorcycle_id, image_path) VALUES (?,?)')->execute([$motorId, $path]);
-                    }
-                }
-            }
-        }
+        saveMotorImages($pdo, $motorId);
     }
     header('Location: motors.php');
     exit;
@@ -73,20 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_motor'])) {
     $lng = $_POST['lng'] ? (float)$_POST['lng'] : null;
     $stmt = $pdo->prepare('UPDATE motorcycles SET model=?, plate=?, color=?, capacity=?, description=?, status=?, price_per_hour=?, price_half_day=?, price_per_day=?, price_per_week=?, price_per_month=?, insurance=?, year=?, mileage=?, available=?, lat=?, lng=? WHERE id=?');
     $stmt->execute([$model, $plate, $color, $capacity, $description, $status, $price_hour, $price_half, $price_day, $price_week, $price_month, $insurance, $year, $mileage, $available, $lat, $lng, $id]);
-    if (!empty($_FILES['images']['name'][0])) {
-        $uploadDir = __DIR__ . '/../uploads/';
-        for ($i = 0; $i < count($_FILES['images']['name']); $i++) {
-            if ($_FILES['images']['error'][$i] === UPLOAD_ERR_OK) {
-                $tmp = $_FILES['images']['tmp_name'][$i];
-                $name = time() . '_' . $i . '_' . basename($_FILES['images']['name'][$i]);
-                $target = $uploadDir . $name;
-                if (move_uploaded_file($tmp, $target)) {
-                    $path = 'uploads/' . $name;
-                    $pdo->prepare('INSERT INTO motorcycle_images (motorcycle_id, image_path) VALUES (?,?)')->execute([$id, $path]);
-                }
-            }
-        }
-    }
+    saveMotorImages($pdo, $id);
     header('Location: motors.php');
     exit;
 }
