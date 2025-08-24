@@ -2,6 +2,7 @@
 session_start();
 require_once __DIR__ . '/../includes/db.php';
 require_once __DIR__ . '/../includes/csrf.php';
+require_once __DIR__ . '/../includes/notify.php';
 require_once __DIR__ . '/../includes/admin_auth.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_booking'])) {
@@ -95,17 +96,17 @@ if (isset($_GET['email'])) {
     $stmt->execute([$id]);
     if ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         $message = "رزرو شما برای موتور {$row['model']} ثبت شد.";
-        @mail($row['email'], 'تایید رزرو', $message);
+        sendEmail($row['email'], 'تایید رزرو', $message);
     }
     header('Location: bookings.php');
     exit;
 }
 if (isset($_GET['sms'])) {
     $id = (int)$_GET['sms'];
-    $stmt = $pdo->prepare('SELECT b.id, u.name FROM bookings b JOIN users u ON b.user_id=u.id WHERE b.id=?');
+    $stmt = $pdo->prepare('SELECT b.id, u.name, u.phone FROM bookings b JOIN users u ON b.user_id=u.id WHERE b.id=?');
     $stmt->execute([$id]);
     if ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-        file_put_contents(__DIR__.'/../sms.log', "SMS to {$row['name']} for booking {$row['id']}\n", FILE_APPEND);
+        sendSMS($row['phone'], 'رزرو شما ثبت شد');
     }
     header('Location: bookings.php');
     exit;

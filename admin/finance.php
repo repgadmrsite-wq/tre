@@ -2,6 +2,7 @@
 session_start();
 require_once __DIR__ . '/../includes/db.php';
 require_once __DIR__ . '/../includes/csrf.php';
+require_once __DIR__ . '/../includes/notify.php';
 require_once __DIR__ . '/../includes/admin_auth.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_payment'])) {
@@ -20,16 +21,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_payment'])) {
         header('Location: finance.php');
         exit;
     }
-    $user_id = $pdo->prepare('SELECT user_id FROM bookings WHERE id=?');
-    $user_id->execute([$booking_id]);
-    $uid = $user_id->fetchColumn();
-    if ($uid) {
+    $info = $pdo->prepare('SELECT u.id, u.email, u.phone FROM bookings b JOIN users u ON b.user_id=u.id WHERE b.id=?');
+    $info->execute([$booking_id]);
+    if ($u = $info->fetch(PDO::FETCH_ASSOC)) {
         $stmt = $pdo->prepare('INSERT INTO payments (booking_id, user_id, amount, method, status) VALUES (?,?,?,?,?)');
-        $stmt->execute([$booking_id, $uid, $amount, $method, $status]);
+        $stmt->execute([$booking_id, $u['id'], $amount, $method, $status]);
         if($status==='paid'){
-            $pdo->prepare('INSERT INTO notifications (user_id,message) VALUES (?,?)')->execute([$uid,"پرداخت موفق ثبت شد"]);
+            $pdo->prepare('INSERT INTO notifications (user_id,message) VALUES (?,?)')->execute([$u['id'],"پرداخت موفق ثبت شد"]);
+            sendEmail($u['email'], 'وضعیت پرداخت', 'پرداخت شما با موفقیت ثبت شد');
         } else {
-            $pdo->prepare('INSERT INTO notifications (user_id,message) VALUES (?,?)')->execute([$uid,"پرداخت معلق است"]);
+            $pdo->prepare('INSERT INTO notifications (user_id,message) VALUES (?,?)')->execute([$u['id'],"پرداخت معلق است"]);
+            sendEmail($u['email'], 'وضعیت پرداخت', 'پرداخت شما در انتظار تایید است');
         }
     }
     header('Location: finance.php');
