@@ -6,6 +6,7 @@ if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'user') {
 }
 require_once __DIR__ . '/../includes/db.php';
 require_once __DIR__ . '/../includes/csrf.php';
+require_once __DIR__ . '/../includes/notify.php';
 
 $user = $_SESSION['user'];
 $user_id = $user['id'];
@@ -17,6 +18,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($subject && $message) {
         $stmt = $pdo->prepare('INSERT INTO tickets (user_id, subject, message) VALUES (?,?,?)');
         $stmt->execute([$user_id, $subject, $message]);
+        $pdo->prepare('INSERT INTO notifications (message) VALUES (?)')
+            ->execute(["تیکت جدید توسط {$user['name']} ثبت شد"]);
+        foreach ($pdo->query('SELECT email FROM admins')->fetchAll(PDO::FETCH_COLUMN) as $adminEmail) {
+            sendEmail($adminEmail, 'تیکت جدید', "کاربر {$user['name']} تیکت جدیدی با موضوع {$subject} ثبت کرد");
+        }
     }
     header('Location: support.php');
     exit;

@@ -56,6 +56,7 @@ $overdue = $pdo->query("SELECT u.name user_name,m.model motor_model,b.end_date F
       <li class="nav-item"><a class="nav-link" href="finance.php"><i class="bi bi-receipt"></i><span>مالی</span></a></li>
       <li class="nav-item"><a class="nav-link" href="discounts.php"><i class="bi bi-ticket-perforated"></i><span>تخفیف‌ها</span></a></li>
       <li class="nav-item"><a class="nav-link" href="reviews.php"><i class="bi bi-chat-left-text"></i><span>نظرات</span></a></li>
+      <li class="nav-item"><a class="nav-link" href="tickets.php"><i class="bi bi-life-preserver"></i><span>تیکت‌ها</span></a></li>
       <li class="nav-item"><a class="nav-link" href="maintenance.php"><i class="bi bi-wrench"></i><span>سرویس‌ها</span></a></li>
       <li class="nav-item"><a class="nav-link" href="map.php"><i class="bi bi-geo"></i><span>نقشه</span></a></li>
       <li class="nav-item"><a class="nav-link" href="reports.php"><i class="bi bi-graph-up"></i><span>گزارش‌ها</span></a></li>

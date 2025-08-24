@@ -20,6 +20,7 @@ $accessMap = [
     'reports.php'      => ['accountant'],
     'notifications.php'=> ['support'],
     'reviews.php'      => ['support'],
+    'tickets.php'      => ['support'],
     'marketing.php'    => ['support'],
     'map.php'          => ['support','mechanic'],
     'logs.php'         => [],
