@@ -1,10 +1,7 @@
 <?php
 session_start();
 require_once __DIR__ . '/../includes/db.php';
-if (!isset($_SESSION['user']) || $_SESSION['user']['role'] === 'user') {
-    header('Location: ../login.php');
-    exit;
-}
+require_once __DIR__ . '/../includes/admin_auth.php';
 $id = (int)($_GET['id'] ?? 0);
 $stmt = $pdo->prepare("SELECT b.*, u.name AS user_name, m.model, m.plate FROM bookings b JOIN users u ON b.user_id=u.id JOIN motorcycles m ON b.motorcycle_id=m.id WHERE b.id=?");
 $stmt->execute([$id]);

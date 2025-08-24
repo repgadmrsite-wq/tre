@@ -1,10 +1,7 @@
 <?php
 session_start();
 require_once __DIR__ . '/../includes/db.php';
-if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'super') {
-    header('Location: admin.php');
-    exit;
-}
+require_once __DIR__ . '/../includes/admin_auth.php';
 $logs=$pdo->query('SELECT l.id,a.name,l.action,l.created_at FROM admin_logs l JOIN admins a ON l.admin_id=a.id ORDER BY l.id DESC LIMIT 100')->fetchAll();
 ?>
 <!DOCTYPE html>

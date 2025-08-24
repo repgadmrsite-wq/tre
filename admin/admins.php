@@ -2,11 +2,7 @@
 session_start();
 require_once __DIR__ . '/../includes/db.php';
 require_once __DIR__ . '/../includes/csrf.php';
-
-if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'super') {
-    header('Location: admin.php');
-    exit;
-}
+require_once __DIR__ . '/../includes/admin_auth.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_admin'])) {
     csrf_validate();

@@ -1,11 +1,7 @@
 <?php
 session_start();
 require_once __DIR__ . '/../includes/db.php';
-
-if (!isset($_SESSION['user']) || $_SESSION['user']['role'] === 'user') {
-    header('Location: ../login.php');
-    exit;
-}
+require_once __DIR__ . '/../includes/admin_auth.php';
 
 $totalRevenue = $pdo->query("SELECT COALESCE(SUM(amount),0) FROM payments WHERE status='paid'")->fetchColumn();
 $totalUsers = $pdo->query('SELECT COUNT(*) FROM users')->fetchColumn();

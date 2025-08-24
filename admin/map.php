@@ -1,10 +1,7 @@
 <?php
 session_start();
 require_once __DIR__ . '/../includes/db.php';
-if (!isset($_SESSION['user']) || $_SESSION['user']['role'] === 'user') {
-    header('Location: ../login.php');
-    exit;
-}
+require_once __DIR__ . '/../includes/admin_auth.php';
 $motors=$pdo->query('SELECT id,model,lat,lng,status FROM motorcycles WHERE lat IS NOT NULL AND lng IS NOT NULL')->fetchAll();
 ?>
 <!DOCTYPE html>

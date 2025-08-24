@@ -37,10 +37,7 @@ function saveMotorImages($pdo, $motorId) {
     finfo_close($finfo);
 }
 
-if (!isset($_SESSION['user']) || $_SESSION['user']['role'] === 'user') {
-    header('Location: ../login.php');
-    exit;
-}
+require_once __DIR__ . '/../includes/admin_auth.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_motor'])) {
     csrf_validate();
