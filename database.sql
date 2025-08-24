@@ -149,12 +149,16 @@ CREATE TABLE login_attempts (
 CREATE TABLE tickets (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
+    admin_id INT DEFAULT NULL,
+    category VARCHAR(50) DEFAULT NULL,
     subject VARCHAR(150) NOT NULL,
     message TEXT NOT NULL,
     response TEXT,
     status ENUM('open','answered','closed') DEFAULT 'open',
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+    responded_at DATETIME DEFAULT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (admin_id) REFERENCES admins(id) ON DELETE SET NULL
 ) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 CREATE TABLE settings (

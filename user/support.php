@@ -15,8 +15,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     csrf_validate();
     $subject = trim($_POST['subject'] ?? '');
     $message = trim($_POST['message'] ?? '');
+    $category = trim($_POST['category'] ?? '');
     if ($subject && $message) {
-        tickets_create($pdo, $user_id, $subject, $message);
+        tickets_create($pdo, $user_id, $subject, $message, $category ?: null);
     }
     header('Location: support.php');
     exit;
@@ -66,6 +67,14 @@ $tickets = tickets_get($pdo, ['user_id' => $user_id]);
                 <div class="mb-3">
                     <label class="form-label">موضوع</label>
                     <input type="text" name="subject" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">دسته‌بندی</label>
+                    <select name="category" class="form-select">
+                        <option value="">عمومی</option>
+                        <option value="مالی">مالی</option>
+                        <option value="فنی">فنی</option>
+                    </select>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">پیام</label>

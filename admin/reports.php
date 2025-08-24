@@ -15,6 +15,12 @@ if (isset($_GET['export']) && $_GET['export']==='bookings') {
 $activeUsers=$pdo->query("SELECT COUNT(*) FROM users WHERE status!='blocked'")->fetchColumn();
 $inactiveUsers=$pdo->query("SELECT COUNT(*) FROM users WHERE status='blocked'")->fetchColumn();
 $revenueMonthly=$pdo->query("SELECT COALESCE(SUM(amount),0) FROM payments WHERE status='paid' AND YEAR(paid_at)=YEAR(CURDATE()) AND MONTH(paid_at)=MONTH(CURDATE())")->fetchColumn();
+$ticketTotal=$pdo->query("SELECT COUNT(*) FROM tickets")->fetchColumn();
+$ticketOpen=$pdo->query("SELECT COUNT(*) FROM tickets WHERE status='open'")->fetchColumn();
+$ticketAvg=$pdo->query("SELECT AVG(TIMESTAMPDIFF(HOUR,created_at,responded_at)) FROM tickets WHERE responded_at IS NOT NULL")->fetchColumn();
+$ticketCats=$pdo->query("SELECT COALESCE(category,'نامشخص') cat, COUNT(*) c FROM tickets GROUP BY category")->fetchAll(PDO::FETCH_ASSOC);
+$ticketCatLabels=json_encode(array_column($ticketCats,'cat'));
+$ticketCatCounts=json_encode(array_map('intval',array_column($ticketCats,'c')));
 ?>
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
@@ -43,10 +49,33 @@ $revenueMonthly=$pdo->query("SELECT COALESCE(SUM(amount),0) FROM payments WHERE 
           <div class="card"><div class="card-body"><h5 class="card-title">درآمد ماه جاری</h5><p class="fs-3 mb-0"><?= number_format($revenueMonthly); ?> تومان</p></div></div>
         </div>
       </div>
+      <div class="row mb-4">
+        <div class="col-md-4">
+          <div class="card"><div class="card-body"><h5 class="card-title">کل تیکت‌ها</h5><p class="fs-3 mb-0"><?= $ticketTotal; ?></p></div></div>
+        </div>
+        <div class="col-md-4">
+          <div class="card"><div class="card-body"><h5 class="card-title">تیکت‌های باز</h5><p class="fs-3 mb-0"><?= $ticketOpen; ?></p></div></div>
+        </div>
+        <div class="col-md-4">
+          <div class="card"><div class="card-body"><h5 class="card-title">میانگین زمان پاسخ‌گویی (ساعت)</h5><p class="fs-3 mb-0"><?= $ticketAvg ? round($ticketAvg,1) : 0; ?></p></div></div>
+        </div>
+      </div>
+      <div class="row mb-4">
+        <div class="col-md-6">
+          <div class="card"><div class="card-body"><canvas id="ticketCats" height="200"></canvas></div></div>
+        </div>
+      </div>
       <a href="?export=bookings" class="btn btn-outline-primary">دانلود CSV رزروها</a>
     </div>
   </main>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+const catCtx=document.getElementById('ticketCats');
+if(catCtx){
+  new Chart(catCtx,{type:'doughnut',data:{labels:<?= $ticketCatLabels ?>,datasets:[{data:<?= $ticketCatCounts ?>,backgroundColor:['#0d6efd','#198754','#dc3545','#ffc107','#0dcaf0']}]},options:{plugins:{legend:{position:'bottom'}}}});
+}
+</script>
 </body>
 </html>

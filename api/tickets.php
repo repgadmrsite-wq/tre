@@ -19,9 +19,9 @@ function tickets_get(PDO $pdo, array $opts = []) {
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
-function tickets_create(PDO $pdo, int $user_id, string $subject, string $message) {
-    $stmt = $pdo->prepare('INSERT INTO tickets (user_id, subject, message) VALUES (?,?,?)');
-    $stmt->execute([$user_id, $subject, $message]);
+function tickets_create(PDO $pdo, int $user_id, string $subject, string $message, ?string $category = null) {
+    $stmt = $pdo->prepare('INSERT INTO tickets (user_id, subject, message, category) VALUES (?,?,?,?)');
+    $stmt->execute([$user_id, $subject, $message, $category]);
     $ticket_id = $pdo->lastInsertId();
     $admins = $pdo->query('SELECT id,email FROM admins')->fetchAll(PDO::FETCH_ASSOC);
     foreach ($admins as $a) {
@@ -33,7 +33,7 @@ function tickets_create(PDO $pdo, int $user_id, string $subject, string $message
 }
 
 function tickets_reply(PDO $pdo, int $ticket_id, int $admin_id, string $response) {
-    $stmt = $pdo->prepare('UPDATE tickets SET response=?, status="answered", admin_id=? WHERE id=?');
+    $stmt = $pdo->prepare('UPDATE tickets SET response=?, status="answered", admin_id=?, responded_at=NOW() WHERE id=?');
     $stmt->execute([$response, $admin_id, $ticket_id]);
     $info = $pdo->prepare('SELECT u.email, u.phone, u.id FROM tickets t JOIN users u ON t.user_id=u.id WHERE t.id=?');
     $info->execute([$ticket_id]);
@@ -67,8 +67,9 @@ if (basename(__FILE__) === basename($_SERVER['SCRIPT_FILENAME'])) {
     } elseif ($method === 'POST' && isset($_SESSION['user'])) {
         $subject = trim($_POST['subject'] ?? '');
         $message = trim($_POST['message'] ?? '');
+        $category = trim($_POST['category'] ?? '');
         if ($subject && $message) {
-            $id = tickets_create($pdo, $_SESSION['user']['id'], $subject, $message);
+            $id = tickets_create($pdo, $_SESSION['user']['id'], $subject, $message, $category ?: null);
             echo json_encode(['id' => $id]);
         } else {
             http_response_code(422);
