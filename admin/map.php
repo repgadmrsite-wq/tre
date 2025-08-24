@@ -17,14 +17,7 @@ $motors=$pdo->query('SELECT id,model,lat,lng,status FROM motorcycles WHERE lat I
 </head>
 <body>
 <div class="dashboard-layout">
-  <aside class="sidebar d-flex flex-column p-0">
-    <div class="sidebar-header text-center"><a class="navbar-brand fs-4 text-white" href="../index.html">کیش‌ران - ادمین</a></div>
-    <ul class="nav flex-column my-4">
-      <li class="nav-item"><a class="nav-link" href="admin.php"><i class="bi bi-speedometer2"></i><span>داشبورد</span></a></li>
-      <li class="nav-item"><a class="nav-link active" href="map.php"><i class="bi bi-geo"></i><span>نقشه</span></a></li>
-    </ul>
-    <div class="mt-auto p-3"><a class="nav-link" href="../logout.php"><i class="bi bi-box-arrow-right"></i><span>خروج</span></a></div>
-  </aside>
+  <?php $activePage='map'; include 'sidebar.php'; ?>
   <main class="main-content">
     <div class="container-fluid">
       <h1 class="h3 mb-4">موقعیت موتورها</h1>

@@ -21,19 +21,7 @@ $notes=$pdo->query('SELECT id,message,is_read,created_at FROM notifications WHER
 </head>
 <body>
 <div class="dashboard-layout">
-  <aside class="sidebar d-flex flex-column p-0">
-    <div class="sidebar-header text-center">
-      <a class="navbar-brand fs-4 text-white" href="../index.html">کیش‌ران - ادمین</a>
-    </div>
-    <ul class="nav flex-column my-4">
-      <li class="nav-item"><a class="nav-link" href="admin.php"><i class="bi bi-speedometer2"></i><span>داشبورد</span></a></li>
-      <li class="nav-item"><a class="nav-link" href="bookings.php"><i class="bi bi-calendar-week"></i><span>رزروها</span></a></li>
-      <li class="nav-item"><a class="nav-link active" href="notifications.php"><i class="bi bi-bell"></i><span>اعلان‌ها</span></a></li>
-    </ul>
-    <div class="mt-auto p-3">
-      <a class="nav-link" href="../logout.php"><i class="bi bi-box-arrow-right"></i><span>خروج</span></a>
-    </div>
-  </aside>
+  <?php $activePage='notifications'; include 'sidebar.php'; ?>
   <main class="main-content">
     <div class="container-fluid">
       <h1 class="h3 mb-4">اعلان‌ها</h1>

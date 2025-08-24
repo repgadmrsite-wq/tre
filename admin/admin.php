@@ -46,32 +46,7 @@ $overdue = $pdo->query("SELECT u.name user_name,m.model motor_model,b.end_date F
 </head>
 <body>
 <div class="dashboard-layout">
-  <aside class="sidebar d-flex flex-column p-0">
-    <div class="sidebar-header text-center">
-      <a class="navbar-brand fs-4 text-white" href="../index.html">کیش‌ران - ادمین</a>
-    </div>
-    <ul class="nav flex-column my-4">
-      <li class="nav-item"><a class="nav-link active" href="admin.php"><i class="bi bi-speedometer2"></i><span>داشبورد</span></a></li>
-      <li class="nav-item"><a class="nav-link" href="bookings.php"><i class="bi bi-calendar-week"></i><span>رزروها</span></a></li>
-      <li class="nav-item"><a class="nav-link" href="finance.php"><i class="bi bi-receipt"></i><span>مالی</span></a></li>
-      <li class="nav-item"><a class="nav-link" href="discounts.php"><i class="bi bi-ticket-perforated"></i><span>تخفیف‌ها</span></a></li>
-      <li class="nav-item"><a class="nav-link" href="reviews.php"><i class="bi bi-chat-left-text"></i><span>نظرات</span></a></li>
-      <li class="nav-item"><a class="nav-link" href="tickets.php"><i class="bi bi-life-preserver"></i><span>تیکت‌ها</span></a></li>
-      <li class="nav-item"><a class="nav-link" href="maintenance.php"><i class="bi bi-wrench"></i><span>سرویس‌ها</span></a></li>
-      <li class="nav-item"><a class="nav-link" href="map.php"><i class="bi bi-geo"></i><span>نقشه</span></a></li>
-      <li class="nav-item"><a class="nav-link" href="reports.php"><i class="bi bi-graph-up"></i><span>گزارش‌ها</span></a></li>
-      <li class="nav-item"><a class="nav-link" href="marketing.php"><i class="bi bi-megaphone"></i><span>مارکتینگ</span></a></li>
-      <li class="nav-item"><a class="nav-link" href="admins.php"><i class="bi bi-shield-lock"></i><span>مدیران</span></a></li>
-      <li class="nav-item"><a class="nav-link" href="logs.php"><i class="bi bi-list-check"></i><span>گزارش فعالیت</span></a></li>
-      <li class="nav-item"><a class="nav-link" href="users.php"><i class="bi bi-people-fill"></i><span>کاربران</span></a></li>
-      <li class="nav-item"><a class="nav-link" href="motors.php"><i class="bi bi-bicycle"></i><span>موتورها</span></a></li>
-      <li class="nav-item"><a class="nav-link" href="notifications.php"><i class="bi bi-bell"></i><span>اعلان‌ها</span></a></li>
-      <li class="nav-item"><a class="nav-link" href="settings.php"><i class="bi bi-gear"></i><span>تنظیمات</span></a></li>
-    </ul>
-    <div class="mt-auto p-3">
-      <a class="nav-link" href="../logout.php"><i class="bi bi-box-arrow-right"></i><span>خروج</span></a>
-    </div>
-  </aside>
+  <?php $activePage='dashboard'; include 'sidebar.php'; ?>
   <main class="main-content">
     <div class="container-fluid">
       <div class="d-flex justify-content-between align-items-center mb-4">

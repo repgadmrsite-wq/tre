@@ -45,23 +45,7 @@ $discounts = $pdo->query("SELECT d.*, COALESCE(SUM(u.used_count),0) AS used_tota
 </head>
 <body>
 <div class="dashboard-layout">
-  <aside class="sidebar d-flex flex-column p-0">
-    <div class="sidebar-header text-center">
-      <a class="navbar-brand fs-4 text-white" href="../index.html">کیش‌ران - ادمین</a>
-    </div>
-    <ul class="nav flex-column my-4">
-      <li class="nav-item"><a class="nav-link" href="admin.php"><i class="bi bi-speedometer2"></i><span>داشبورد</span></a></li>
-      <li class="nav-item"><a class="nav-link" href="bookings.php"><i class="bi bi-calendar-week"></i><span>رزروها</span></a></li>
-      <li class="nav-item"><a class="nav-link" href="finance.php"><i class="bi bi-receipt"></i><span>مالی</span></a></li>
-      <li class="nav-item"><a class="nav-link active" href="discounts.php"><i class="bi bi-ticket-perforated"></i><span>تخفیف‌ها</span></a></li>
-      <li class="nav-item"><a class="nav-link" href="admins.php"><i class="bi bi-shield-lock"></i><span>مدیران</span></a></li>
-      <li class="nav-item"><a class="nav-link" href="users.php"><i class="bi bi-people-fill"></i><span>کاربران</span></a></li>
-      <li class="nav-item"><a class="nav-link" href="motors.php"><i class="bi bi-bicycle"></i><span>موتورها</span></a></li>
-    </ul>
-    <div class="mt-auto p-3">
-      <a class="nav-link" href="../logout.php"><i class="bi bi-box-arrow-right"></i><span>خروج</span></a>
-    </div>
-  </aside>
+  <?php $activePage='discounts'; include 'sidebar.php'; ?>
   <main class="main-content">
     <div class="container-fluid">
       <h1 class="h3 mb-4">کدهای تخفیف</h1>

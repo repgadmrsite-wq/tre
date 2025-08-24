@@ -28,14 +28,7 @@ foreach($pdo->query('SELECT setting_key,setting_value FROM settings') as $row){$
 </head>
 <body>
 <div class="dashboard-layout">
-  <aside class="sidebar d-flex flex-column p-0">
-    <div class="sidebar-header text-center"><a class="navbar-brand fs-4 text-white" href="../index.html">کیش‌ران - ادمین</a></div>
-    <ul class="nav flex-column my-4">
-      <li class="nav-item"><a class="nav-link" href="admin.php"><i class="bi bi-speedometer2"></i><span>داشبورد</span></a></li>
-      <li class="nav-item"><a class="nav-link active" href="settings.php"><i class="bi bi-gear"></i><span>تنظیمات</span></a></li>
-    </ul>
-    <div class="mt-auto p-3"><a class="nav-link" href="../logout.php"><i class="bi bi-box-arrow-right"></i><span>خروج</span></a></div>
-  </aside>
+  <?php $activePage='settings'; include 'sidebar.php'; ?>
   <main class="main-content">
     <div class="container-fluid">
       <h1 class="h3 mb-4">تنظیمات کلی</h1>
