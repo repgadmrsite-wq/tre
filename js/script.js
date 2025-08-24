@@ -211,13 +211,12 @@
         { name: "پارک شهر" }
     ];
 
-    // کلید API برای وب سرویس جستجوی نشان. برای استفاده از جستجوی مکان،
-    // این مقدار باید با کلید معتبر شما جایگزین شود. در غیر این صورت از داده‌های محلی استفاده خواهد شد.
-    // API keys: service key for data services (search, distance matrix) and map key for rendering maps
-    const NESHAN_SERVICE_API_KEY = 'service.6f92c26cc02a47c6ac592bd12d083463';
-    const NESHAN_MAP_API_KEY = 'web.3149369ad73f47aca745b15b9b87ee55';
+    // کلیدهای API نشان از طریق اسکریپت پیکربندی سراسری تزریق می‌شوند تا
+    // امکان تغییر آن‌ها در محیط‌های مختلف بدون ویرایش فایل جاوااسکریپت فراهم شود.
+    const NESHAN_SERVICE_API_KEY = window.NESHAN_SERVICE_API_KEY || '';
+    const NESHAN_MAP_API_KEY = window.NESHAN_MAP_API_KEY || '';
     // Search API key (service) used to fetch suggestions; fallback to local landmarks when empty
-    const NESHAN_SEARCH_API_KEY = NESHAN_SERVICE_API_KEY;
+    const NESHAN_SEARCH_API_KEY = window.NESHAN_SEARCH_API_KEY || NESHAN_SERVICE_API_KEY;
 
     // Reservation state (stores user selections)
     const reservationState = {
