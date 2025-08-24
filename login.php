@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       }
 
     // check regular users table
-    $stmt = $pdo->prepare('SELECT id, name, email, password FROM users WHERE email = ? LIMIT 1');
+    $stmt = $pdo->prepare('SELECT id, name, email, password, language, notify_email FROM users WHERE email = ? LIMIT 1');
     $stmt->execute([$email]);
     $user = $stmt->fetch();
     if ($user && $user['password'] === $password) {
@@ -31,7 +31,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'id' => $user['id'],
             'name' => $user['name'],
             'email' => $user['email'],
-            'role' => 'user'
+            'role' => 'user',
+            'language' => $user['language'],
+            'notify_email' => $user['notify_email']
         ];
         header('Location: user/dashboard.php');
         exit;
