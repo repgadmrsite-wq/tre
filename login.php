@@ -4,44 +4,70 @@ require_once __DIR__ . '/includes/db.php';
 require_once __DIR__ . '/includes/csrf.php';
 
 $error = '';
+$ip = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
+$lockoutSeconds = 900; // 15 minutes
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     csrf_validate();
     $email = trim($_POST['email']);
     $password = trim($_POST['password']);
 
-    // check admin table first
-    $stmt = $pdo->prepare('SELECT id, name, email, password, role FROM admins WHERE email = ? LIMIT 1');
-    $stmt->execute([$email]);
-    $admin = $stmt->fetch();
-      if ($admin && password_verify($password, $admin['password'])) {
-          $_SESSION['user'] = [
-              'id' => $admin['id'],
-              'name' => $admin['name'],
-              'email' => $admin['email'],
-              'role' => $admin['role']
-          ];
-          header('Location: admin/admin.php');
-          exit;
-      }
+    // rate limiting
+    $stmt = $pdo->prepare('SELECT attempts, last_attempt FROM login_attempts WHERE ip = ?');
+    $stmt->execute([$ip]);
+    $attempt = $stmt->fetch();
+    if ($attempt && $attempt['attempts'] >= 5 && time() - strtotime($attempt['last_attempt']) < $lockoutSeconds) {
+        $error = 'تعداد تلاش‌های ناموفق زیاد است. لطفاً بعداً دوباره تلاش کنید.';
+    } else {
+        if ($attempt && time() - strtotime($attempt['last_attempt']) >= $lockoutSeconds) {
+            $pdo->prepare('DELETE FROM login_attempts WHERE ip = ?')->execute([$ip]);
+            $attempt = null;
+        }
 
-    // check regular users table
-    $stmt = $pdo->prepare('SELECT id, name, email, password, language, notify_email FROM users WHERE email = ? LIMIT 1');
-    $stmt->execute([$email]);
-    $user = $stmt->fetch();
-    if ($user && password_verify($password, $user['password'])) {
-        $_SESSION['user'] = [
-            'id' => $user['id'],
-            'name' => $user['name'],
-            'email' => $user['email'],
-            'role' => 'user',
-            'language' => $user['language'],
-            'notify_email' => $user['notify_email']
-        ];
-        header('Location: user/dashboard.php');
-        exit;
+        // check admin table first
+        $stmt = $pdo->prepare('SELECT id, name, email, password, role FROM admins WHERE email = ? LIMIT 1');
+        $stmt->execute([$email]);
+        $admin = $stmt->fetch();
+        if ($admin && password_verify($password, $admin['password'])) {
+            session_regenerate_id(true);
+            $_SESSION['user'] = [
+                'id' => $admin['id'],
+                'name' => $admin['name'],
+                'email' => $admin['email'],
+                'role' => $admin['role']
+            ];
+            $pdo->prepare('DELETE FROM login_attempts WHERE ip = ?')->execute([$ip]);
+            header('Location: admin/admin.php');
+            exit;
+        }
+
+        // check regular users table
+        $stmt = $pdo->prepare('SELECT id, name, email, password, language, notify_email FROM users WHERE email = ? LIMIT 1');
+        $stmt->execute([$email]);
+        $user = $stmt->fetch();
+        if ($user && password_verify($password, $user['password'])) {
+            session_regenerate_id(true);
+            $_SESSION['user'] = [
+                'id' => $user['id'],
+                'name' => $user['name'],
+                'email' => $user['email'],
+                'role' => 'user',
+                'language' => $user['language'],
+                'notify_email' => $user['notify_email']
+            ];
+            $pdo->prepare('DELETE FROM login_attempts WHERE ip = ?')->execute([$ip]);
+            header('Location: user/dashboard.php');
+            exit;
+        }
+
+        // failed login: increment attempts
+        if ($attempt) {
+            $pdo->prepare('UPDATE login_attempts SET attempts = attempts + 1, last_attempt = NOW() WHERE ip = ?')->execute([$ip]);
+        } else {
+            $pdo->prepare('INSERT INTO login_attempts (ip, attempts, last_attempt) VALUES (?, 1, NOW())')->execute([$ip]);
+        }
+        $error = 'اطلاعات ورود نادرست است';
     }
-
-    $error = 'اطلاعات ورود نادرست است';
 }
 ?>
 <!DOCTYPE html>

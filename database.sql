@@ -140,6 +140,12 @@ CREATE TABLE notifications (
     FOREIGN KEY (admin_id) REFERENCES admins(id) ON DELETE CASCADE
 ) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
+CREATE TABLE login_attempts (
+    ip VARCHAR(45) PRIMARY KEY,
+    attempts INT NOT NULL DEFAULT 0,
+    last_attempt DATETIME NOT NULL
+) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
 CREATE TABLE tickets (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
