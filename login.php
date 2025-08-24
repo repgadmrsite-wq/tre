@@ -126,7 +126,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             مرا به خاطر بسپار
                         </label>
                     </div>
-                      <a href="#" class="small">فراموشی رمز عبور؟</a>
+                      <a href="forgot.php" class="small">فراموشی رمز عبور؟</a>
                 </div>
                 <button class="w-100 btn btn-lg btn-primary" type="submit">ورود</button>
                 <hr class="my-4">
