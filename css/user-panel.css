@@ -29,3 +29,5 @@
 .motor-card img{height:180px;object-fit:cover;}
 .modal .carousel-item img{transition:transform .3s;}
 .modal .carousel-item:hover img{transform:scale(1.05);}
+#motorMap{height:500px;border-radius:1rem;box-shadow:0 2px 6px rgba(0,0,0,0.1);}
+.mini-map{height:200px;border-radius:1rem;box-shadow:0 2px 6px rgba(0,0,0,0.1);}

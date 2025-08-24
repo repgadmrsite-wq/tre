@@ -84,5 +84,45 @@ document.addEventListener('DOMContentLoaded', function(){
             });
         }
     });
-});
 
+    if (typeof mapMotors !== 'undefined') {
+        var map = L.map('motorMap').setView([26.5307, 53.9800], 12);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors' }).addTo(map);
+        var greenIcon = new L.Icon({iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png', shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png', iconSize:[25,41], iconAnchor:[12,41], popupAnchor:[1,-34], shadowSize:[41,41]});
+        var redIcon = new L.Icon({iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png', shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png', iconSize:[25,41], iconAnchor:[12,41], popupAnchor:[1,-34], shadowSize:[41,41]});
+        var markers = [];
+        mapMotors.forEach(function(m){
+            if(m.lat && m.lng){
+                var marker = L.marker([m.lat, m.lng], {icon: m.available==1 ? greenIcon : redIcon}).addTo(map).bindPopup('<strong>'+m.model+'</strong>');
+                markers.push({marker: marker, available: m.available==1});
+            }
+        });
+        function applyFilter(){
+            var showAvail = document.getElementById('filterAvailable').checked;
+            var showRes = document.getElementById('filterReserved').checked;
+            markers.forEach(function(obj){
+                var show = (obj.available && showAvail) || (!obj.available && showRes);
+                if(show){ map.addLayer(obj.marker);} else { map.removeLayer(obj.marker);} });
+        }
+        document.getElementById('filterAvailable').addEventListener('change', applyFilter);
+        document.getElementById('filterReserved').addEventListener('change', applyFilter);
+    }
+
+    var locInput = document.getElementById('locationSearch');
+    if (locInput) {
+        var miniMap;
+        locInput.addEventListener('change', function(){
+            var opt = Array.from(document.getElementById('locationList').options).find(o => o.value === this.value);
+            if(opt){
+                var lat = parseFloat(opt.dataset.lat), lng = parseFloat(opt.dataset.lng);
+                if(!miniMap){
+                    miniMap = L.map('pickupMap', {zoomControl:false}).setView([lat,lng], 14);
+                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors' }).addTo(miniMap);
+                } else {
+                    miniMap.setView([lat,lng],14);
+                }
+                L.marker([lat,lng]).addTo(miniMap);
+            }
+        });
+    }
+});
