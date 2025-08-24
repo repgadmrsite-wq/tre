@@ -4,7 +4,7 @@ CREATE TABLE admins (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL UNIQUE,
-    password VARCHAR(32) NOT NULL,
+    password VARCHAR(255) NOT NULL,
     role ENUM('super','support','accountant','mechanic') DEFAULT 'support'
 ) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
@@ -21,7 +21,7 @@ CREATE TABLE users (
     name VARCHAR(100) NOT NULL,
     phone VARCHAR(20),
     email VARCHAR(100) NOT NULL UNIQUE,
-    password VARCHAR(32) NOT NULL,
+    password VARCHAR(255) NOT NULL,
     status ENUM('regular','vip','blocked') DEFAULT 'regular',
     note TEXT,
     language ENUM('fa','en') DEFAULT 'fa',
@@ -157,10 +157,10 @@ CREATE TABLE settings (
 ) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 INSERT INTO admins (name, email, password, role) VALUES
-('مدیر', 'admin@example.com', '0192023a7bbd73250516f069df18b500','super');
+('مدیر', 'admin@example.com', '$2y$12$IWOcs0d0Q.uPO4D6xmeK2ex3Tz7V1guW3Yf16Kk2Qsz5EFHnpp91C','super');
 
 INSERT INTO users (name, phone, email, password, status, note) VALUES
-('کاربر نمونه', '09120000000', 'user@example.com', '6ad14ba9986e3615423dfca256d04e3f', 'regular', '');
+('کاربر نمونه', '09120000000', 'user@example.com', '$2y$12$1tKh0T5SbKtQP3wy4nPfCO2lv9MNXbgnTUZeIMhLIcQhYH7MnUq86', 'regular', '');
 
 INSERT INTO motorcycles (model, plate, color, capacity, description, status, price_per_hour, price_half_day, price_per_day, price_per_week, price_per_month, insurance, year, mileage, available) VALUES
 ('اسکوتر وسپا', '11ک123-45', 'قرمز', 150, 'اسکوتر شهری', 'active', 30000, 70000, 120000, 750000, 2800000, 'بیمه شخص ثالث', 2022, 5000, 1),

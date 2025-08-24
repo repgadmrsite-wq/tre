@@ -5,13 +5,13 @@ require_once __DIR__ . '/includes/db.php';
 $error = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = trim($_POST['email']);
-    $password = md5(trim($_POST['password']));
+    $password = trim($_POST['password']);
 
     // check admin table first
     $stmt = $pdo->prepare('SELECT id, name, email, password, role FROM admins WHERE email = ? LIMIT 1');
     $stmt->execute([$email]);
     $admin = $stmt->fetch();
-      if ($admin && $admin['password'] === $password) {
+      if ($admin && password_verify($password, $admin['password'])) {
           $_SESSION['user'] = [
               'id' => $admin['id'],
               'name' => $admin['name'],
@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt = $pdo->prepare('SELECT id, name, email, password, language, notify_email FROM users WHERE email = ? LIMIT 1');
     $stmt->execute([$email]);
     $user = $stmt->fetch();
-    if ($user && $user['password'] === $password) {
+    if ($user && password_verify($password, $user['password'])) {
         $_SESSION['user'] = [
             'id' => $user['id'],
             'name' => $user['name'],

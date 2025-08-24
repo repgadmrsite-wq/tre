@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_admin'])) {
     $name = trim($_POST['admin_name']);
     $email = trim($_POST['admin_email']);
     $role = $_POST['admin_role'];
-    $pass = md5(trim($_POST['admin_password']));
+    $pass = password_hash(trim($_POST['admin_password']), PASSWORD_DEFAULT);
     if ($name && $email && $_POST['admin_password']) {
         $stmt = $pdo->prepare('INSERT INTO admins (name, email, password, role) VALUES (?, ?, ?, ?)');
         $stmt->execute([$name, $email, $pass, $role]);

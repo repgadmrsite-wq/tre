@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_user'])) {
     $name = trim($_POST['user_name']);
     $phone = trim($_POST['user_phone']);
     $email = trim($_POST['user_email']);
-    $pass = md5(trim($_POST['user_password']));
+    $pass = password_hash(trim($_POST['user_password']), PASSWORD_DEFAULT);
     $status = $_POST['user_status'];
     $note = trim($_POST['user_note']);
     if ($name && $email && $_POST['user_password']) {
