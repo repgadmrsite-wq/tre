@@ -69,26 +69,7 @@
         }
     ];
 
-    const reviewsData = [
-        {
-            name: "حسین رضایی",
-            date: "1403/05/10",
-            photo: "https://i.pravatar.cc/100?img=1",
-            content: "تجربه رزرو با KISHUP فوق‌العاده بود. همه چیز مرتب و سریع بود."
-        },
-        {
-            name: "لیلا حسینی",
-            date: "1403/05/12",
-            photo: "https://i.pravatar.cc/100?img=2",
-            content: "موتور برقی خیلی تمیز و نو بود. از خدمات KISHUP راضی هستم."
-        },
-        {
-            name: "امیر محمدی",
-            date: "1403/05/15",
-            photo: "https://i.pravatar.cc/100?img=3",
-            content: "پیشنهادهای ویژه خیلی به‌صرفه بود. حتماً دوباره استفاده می‌کنم."
-        }
-    ];
+    let reviewsData = [];
 
     /**
      * لیست مکان‌های شناخته‌شدهٔ جزیرهٔ کیش برای استفاده در پیشنهادات محلی.
@@ -985,22 +966,30 @@
     }
 
     /* ============ Reviews Rendering ============ */
-    function renderReviews() {
+    async function renderReviews() {
         const reviewsGrid = document.getElementById('reviews-grid');
         if (!reviewsGrid) return;
+        reviewsGrid.innerHTML = '<p class="loading-text">در حال بارگذاری...</p>';
+        try {
+            const res = await fetch('api/reviews.php');
+            reviewsData = await res.json();
+        } catch (err) {
+            reviewsGrid.innerHTML = '<p>خطا در بارگذاری نظرات</p>';
+            return;
+        }
         reviewsGrid.innerHTML = '';
         reviewsData.forEach(review => {
             const card = document.createElement('div');
             card.className = 'review-card';
             card.innerHTML = `
                 <div class="reviewer">
-                    <img src="${review.photo}" alt="${review.name}">
+                    <img src="https://i.pravatar.cc/100?u=${review.user_id}" alt="${review.name}">
                     <div class="reviewer-info">
                         <p class="reviewer-name">${review.name}</p>
-                        <p class="review-date">${review.date}</p>
+                        <p class="review-date">${review.created_at.split(' ')[0]}</p>
                     </div>
                 </div>
-                <p>${review.content}</p>
+                <p>${review.comment}</p>
             `;
             reviewsGrid.appendChild(card);
         });
