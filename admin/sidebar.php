@@ -11,6 +11,7 @@ if (!isset($activePage)) { $activePage = ''; }
     <li class="nav-item"><a class="nav-link <?= $activePage==='finance' ? 'active' : '' ?>" href="finance.php"><i class="bi bi-receipt"></i><span>مالی</span></a></li>
     <li class="nav-item"><a class="nav-link <?= $activePage==='discounts' ? 'active' : '' ?>" href="discounts.php"><i class="bi bi-ticket-perforated"></i><span>تخفیف‌ها</span></a></li>
     <li class="nav-item"><a class="nav-link <?= $activePage==='reviews' ? 'active' : '' ?>" href="reviews.php"><i class="bi bi-chat-left-text"></i><span>نظرات</span></a></li>
+    <li class="nav-item"><a class="nav-link <?= $activePage==='photos' ? 'active' : '' ?>" href="photos.php"><i class="bi bi-camera"></i><span>عکس‌ها</span></a></li>
     <li class="nav-item"><a class="nav-link <?= $activePage==='tickets' ? 'active' : '' ?>" href="tickets.php"><i class="bi bi-life-preserver"></i><span>تیکت‌ها</span></a></li>
     <li class="nav-item"><a class="nav-link <?= $activePage==='maintenance' ? 'active' : '' ?>" href="maintenance.php"><i class="bi bi-wrench"></i><span>سرویس‌ها</span></a></li>
     <li class="nav-item"><a class="nav-link <?= $activePage==='map' ? 'active' : '' ?>" href="map.php"><i class="bi bi-geo"></i><span>نقشه</span></a></li>

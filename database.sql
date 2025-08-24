@@ -193,3 +193,11 @@ INSERT INTO discounts (code, type, value, start_date, end_date, usage_limit, per
 INSERT INTO notifications (user_id, message, is_read) VALUES
 (1,'یادآوری: موتورتان را فردا تحویل بگیرید.',0),
 (1,'پرداخت شما با موفقیت ثبت شد.',0);
+CREATE TABLE gallery_photos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    image_path VARCHAR(255) NOT NULL,
+    approved TINYINT(1) DEFAULT 0,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;

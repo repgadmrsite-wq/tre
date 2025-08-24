@@ -255,6 +255,7 @@
         populateModelFilter();
         renderReadyList();
         renderReviews();
+        renderMemories();
         // User/Admin panels have been removed from the public interface
         setupFilters();
         setupLocationSearch();
@@ -992,6 +993,23 @@
             `;
             reviewsGrid.appendChild(card);
         });
+    }
+
+    async function renderMemories() {
+        const container = document.getElementById('memory-grid');
+        if (!container) return;
+        try {
+            const res = await fetch('api/photos.php');
+            const list = await res.json();
+            container.innerHTML = '';
+            list.forEach(src => {
+                const img = document.createElement('img');
+                img.src = src;
+                container.appendChild(img);
+            });
+        } catch (e) {
+            console.error('photos', e);
+        }
     }
 
     /* ============ Location Search ============ */

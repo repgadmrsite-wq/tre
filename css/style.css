@@ -901,6 +901,17 @@ special-card .special-content {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+    gap: 10px;
+}
+.memory-grid img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: var(--radius-medium);
+}
 .review-card {
     background-color: var(--card-bg);
     border: 1px solid var(--border-color);

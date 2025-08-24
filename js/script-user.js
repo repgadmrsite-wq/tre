@@ -192,4 +192,31 @@ document.addEventListener('DOMContentLoaded', function(){
             });
         });
     }
+
+    // floating photo upload button
+    var fab = document.createElement('button');
+    fab.type = 'button';
+    fab.className = 'photo-fab btn btn-primary rounded-circle';
+    fab.innerHTML = '<i class="bi bi-camera"></i>';
+    document.body.appendChild(fab);
+
+    var fileInput = document.createElement('input');
+    fileInput.type = 'file';
+    fileInput.accept = 'image/jpeg,image/png';
+    fileInput.style.display = 'none';
+    document.body.appendChild(fileInput);
+
+    fab.addEventListener('click', function(){
+        fileInput.click();
+    });
+
+    fileInput.addEventListener('change', function(){
+        if (!fileInput.files.length) return;
+        var fd = new FormData();
+        fd.append('photo', fileInput.files[0]);
+        fetch('photo_upload.php', { method: 'POST', body: fd })
+            .then(r => r.json())
+            .then(function(resp){ alert(resp.message || 'ارسال شد'); fileInput.value=''; })
+            .catch(function(){ alert('خطا در ارسال تصویر'); });
+    });
 });
