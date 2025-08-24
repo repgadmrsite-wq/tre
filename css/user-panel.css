@@ -9,3 +9,10 @@
 
 .stat-card{border-radius:1rem;box-shadow:0 2px 6px rgba(0,0,0,0.1);transition:transform .2s,box-shadow .2s;}
 .stat-card:hover{transform:translateY(-4px);box-shadow:0 4px 12px rgba(0,0,0,0.15);}
+
+.payment-card{border-radius:1rem;box-shadow:0 2px 6px rgba(0,0,0,0.1);}
+.payment-paid{border-right:5px solid #28a745;}
+.payment-pending{border-right:5px solid #dc3545;}
+.method-online{background-color:rgba(13,110,253,.05);}
+.method-cash{background-color:rgba(25,135,84,.05);}
+.method-pos{background-color:rgba(255,193,7,.1);}

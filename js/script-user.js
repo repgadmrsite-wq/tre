@@ -25,6 +25,22 @@ document.addEventListener('DOMContentLoaded', function(){
         }
     }
 
+    if (typeof financeLabels !== 'undefined') {
+        var fctx = document.getElementById('financeChart');
+        if (fctx) {
+            new Chart(fctx, {
+                data: {
+                    labels: financeLabels,
+                    datasets: [
+                        { type: 'bar', label: 'این ماه', data: financeCurrent, backgroundColor: 'rgba(54,162,235,0.5)', borderColor: 'rgb(54,162,235)', borderWidth: 1 },
+                        { type: 'line', label: 'ماه قبل', data: financePrev, borderColor: 'rgb(255,99,132)', tension: 0.3, fill: false }
+                    ]
+                },
+                options: { scales: { y: { beginAtZero: true } } }
+            });
+        }
+    }
+
     if (typeof upcomingCount !== 'undefined' && upcomingCount > 0) {
         var modalEl = document.getElementById('reminderModal');
         if (modalEl) {
