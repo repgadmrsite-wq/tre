@@ -66,5 +66,23 @@ document.addEventListener('DOMContentLoaded', function(){
             help.className = 'form-text ' + cls;
         });
     }
+
+    document.querySelectorAll('.star-rating').forEach(function(container){
+        var input = container.querySelector('input[name="rating"]');
+        var current = parseInt(container.getAttribute('data-current')) || 0;
+        var stars = container.querySelectorAll('i');
+        setStars(current);
+        stars.forEach(function(star){
+            star.addEventListener('mouseover', function(){ setStars(star.dataset.value); });
+            star.addEventListener('mouseout', function(){ setStars(current); });
+            star.addEventListener('click', function(){ current = star.dataset.value; input.value = current; setStars(current); });
+        });
+        function setStars(val){
+            stars.forEach(function(s){
+                s.classList.toggle('bi-star-fill', s.dataset.value <= val);
+                s.classList.toggle('bi-star', s.dataset.value > val);
+            });
+        }
+    });
 });
 
