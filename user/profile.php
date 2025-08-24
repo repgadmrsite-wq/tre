@@ -30,13 +30,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt = $pdo->prepare('SELECT password FROM users WHERE id = ?');
         $stmt->execute([$user_id]);
         $stored = $stmt->fetchColumn();
-        if (!password_verify($current, $stored)) {
+        if (md5($current) !== $stored) {
             $error = 'رمز عبور فعلی نادرست است.';
         } elseif ($new !== $confirm) {
             $error = 'رمز عبور جدید با تکرار آن مطابقت ندارد.';
         } else {
             $stmt = $pdo->prepare('UPDATE users SET password = ? WHERE id = ?');
-            $stmt->execute([password_hash($new, PASSWORD_DEFAULT), $user_id]);
+            $stmt->execute([md5($new), $user_id]);
             $message = 'رمز عبور با موفقیت تغییر کرد.';
         }
     }

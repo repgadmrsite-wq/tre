@@ -204,7 +204,7 @@ $motors = $stmt->fetchAll(PDO::FETCH_ASSOC);
       <?php if (!empty($_SESSION['error'])): ?>
         <div class="alert alert-danger"><?= $_SESSION['error']; unset($_SESSION['error']); ?></div>
       <?php endif; ?>
-      <form method="post" enctype="multipart/form-data" class="row g-2 mb-4">
+      <form method="post" enctype="multipart/form-data" class="row g-2 mb-4 card p-3">
         <?= csrf_input(); ?>
         <?php if($editMotor): ?>
           <input type="hidden" name="update_motor" value="1">
@@ -244,13 +244,13 @@ $motors = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <div class="col-md-12"><input type="file" name="images[]" class="form-control" multiple></div>
         <div class="col-md-3"><button class="btn btn-primary w-100" type="submit"><?= $editMotor ? 'ویرایش' : 'افزودن'; ?></button></div>
       </form>
-      <form method="get" class="row g-2 mb-4">
+      <form method="get" class="row g-2 mb-4 card p-3">
         <div class="col-md-3"><input type="text" name="model" value="<?= htmlspecialchars($filterModel); ?>" class="form-control" placeholder="فیلتر مدل"></div>
         <div class="col-md-3"><input type="number" name="capacity" value="<?= $filterCapacity ?: ''; ?>" class="form-control" placeholder="حداقل ظرفیت"></div>
         <div class="col-md-3"><input type="number" name="price" value="<?= $filterPrice ?: ''; ?>" class="form-control" placeholder="حداکثر قیمت روزانه"></div>
         <div class="col-md-3"><button class="btn btn-secondary w-100" type="submit">اعمال فیلتر</button></div>
       </form>
-      <div class="table-responsive">
+      <div class="table-responsive card p-3">
         <table class="table table-striped table-hover mb-0">
           <thead><tr><th>#</th><th>تصویر</th><th>مدل</th><th>روزانه</th><th>وضعیت</th><th>موجودی</th><th>ویرایش</th><th>حذف</th></tr></thead>
           <tbody>

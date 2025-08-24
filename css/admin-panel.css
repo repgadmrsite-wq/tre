@@ -40,6 +40,22 @@ body {
     padding: 2rem;
     overflow-y: auto;
 }
+
+/* cards & forms */
+.card,
+.form-card {
+    border-radius: 1rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.form-control,
+.form-select {
+    border-radius: .5rem;
+}
+
+.btn {
+    border-radius: .5rem;
+}
 .table-actions .btn {
     padding: 0.25rem 0.5rem;
     font-size: 0.875rem;

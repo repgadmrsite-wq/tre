@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_user'])) {
     $name = trim($_POST['user_name']);
     $phone = trim($_POST['user_phone']);
     $email = trim($_POST['user_email']);
-    $pass = password_hash(trim($_POST['user_password']), PASSWORD_DEFAULT);
+    $pass = md5(trim($_POST['user_password']));
     $status = $_POST['user_status'];
     $note = trim($_POST['user_note']);
     if ($name && $email && $_POST['user_password']) {
@@ -73,7 +73,7 @@ $users = $pdo->query('SELECT u.id, u.name, u.phone, u.email, u.status, u.note, C
   <main class="main-content">
     <div class="container-fluid">
       <h1 class="h3 mb-4">مدیریت کاربران</h1>
-      <form method="post" class="row g-2 mb-4">
+      <form method="post" class="row g-2 mb-4 card p-3">
         <?= csrf_input(); ?>
         <input type="hidden" name="add_user" value="1">
         <div class="col-md-2"><input type="text" name="user_name" class="form-control" placeholder="نام" required></div>
@@ -90,7 +90,7 @@ $users = $pdo->query('SELECT u.id, u.name, u.phone, u.email, u.status, u.note, C
         <div class="col-md-12"><input type="text" name="user_note" class="form-control" placeholder="یادداشت"></div>
         <div class="col-md-2"><button class="btn btn-primary w-100" type="submit">افزودن</button></div>
       </form>
-      <div class="table-responsive">
+      <div class="table-responsive card p-3">
         <table class="table table-striped table-hover mb-0">
           <thead><tr><th>#</th><th>نام</th><th>تلفن</th><th>ایمیل</th><th>رزروها</th><th>پرداخت</th><th>وضعیت</th><th>یادداشت</th><th>ویرایش</th><th>حذف</th></tr></thead>
           <tbody>
