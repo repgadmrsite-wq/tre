@@ -103,9 +103,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <a class="navbar-brand fs-2" href="index.html">کیش‌ران</a>
                 <h1 class="h3 my-3 fw-normal">ورود به حساب کاربری</h1>
             </div>
-            <?php if ($error): ?>
-                <div class="alert alert-danger"><?= $error; ?></div>
-            <?php endif; ?>
+              <?php if (isset($_GET['registered'])): ?>
+                  <div class="alert alert-success">ثبت‌نام با موفقیت انجام شد. اکنون وارد شوید.</div>
+              <?php endif; ?>
+              <?php if ($error): ?>
+                  <div class="alert alert-danger"><?= $error; ?></div>
+              <?php endif; ?>
             <form method="post">
                 <?= csrf_input(); ?>
                 <div class="form-floating mb-3">
@@ -123,13 +126,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             مرا به خاطر بسپار
                         </label>
                     </div>
-                    <a href="#" class="small">فراموشی رمز عبور؟</a>
+                      <a href="#" class="small">فراموشی رمز عبور؟</a>
                 </div>
                 <button class="w-100 btn btn-lg btn-primary" type="submit">ورود</button>
                 <hr class="my-4">
-                <p class="text-center small">
-                    حساب کاربری ندارید؟ <a href="#">ایجاد حساب کاربری</a>
-                </p>
+                  <p class="text-center small">
+                      حساب کاربری ندارید؟ <a href="register.php">ایجاد حساب کاربری</a>
+                  </p>
                 <p class="text-center mt-4">
                     <a href="index.html" class="text-muted small"><i class="bi bi-arrow-right-short"></i> بازگشت به صفحه اصلی</a>
                 </p>
