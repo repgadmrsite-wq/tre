@@ -13,15 +13,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = trim($_POST['password']);
 
     // rate limiting
-    $stmt = $pdo->prepare('SELECT attempts, last_attempt FROM login_attempts WHERE ip = ?');
+    $stmt = $pdo->prepare('SELECT attempts, last_attempt FROM login_attempts WHERE ip = ? AND email = ""');
     $stmt->execute([$ip]);
-    $attempt = $stmt->fetch();
-    if ($attempt && $attempt['attempts'] >= 5 && time() - strtotime($attempt['last_attempt']) < $lockoutSeconds) {
+    $ipAttempt = $stmt->fetch();
+
+    $stmt = $pdo->prepare('SELECT attempts, last_attempt FROM login_attempts WHERE ip = "" AND email = ?');
+    $stmt->execute([$email]);
+    $emailAttempt = $stmt->fetch();
+
+    $ipBlocked = $ipAttempt && $ipAttempt['attempts'] >= 5 && time() - strtotime($ipAttempt['last_attempt']) < $lockoutSeconds;
+    $emailBlocked = $emailAttempt && $emailAttempt['attempts'] >= 5 && time() - strtotime($emailAttempt['last_attempt']) < $lockoutSeconds;
+
+    if ($ipBlocked || $emailBlocked) {
         $error = 'تعداد تلاش‌های ناموفق زیاد است. لطفاً بعداً دوباره تلاش کنید.';
     } else {
-        if ($attempt && time() - strtotime($attempt['last_attempt']) >= $lockoutSeconds) {
-            $pdo->prepare('DELETE FROM login_attempts WHERE ip = ?')->execute([$ip]);
-            $attempt = null;
+        if ($ipAttempt && time() - strtotime($ipAttempt['last_attempt']) >= $lockoutSeconds) {
+            $pdo->prepare('DELETE FROM login_attempts WHERE ip = ? AND email = ""')->execute([$ip]);
+            $ipAttempt = null;
+        }
+        if ($emailAttempt && time() - strtotime($emailAttempt['last_attempt']) >= $lockoutSeconds) {
+            $pdo->prepare('DELETE FROM login_attempts WHERE ip = "" AND email = ?')->execute([$email]);
+            $emailAttempt = null;
         }
 
         // check admin table first
@@ -36,7 +48,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 'email' => $admin['email'],
                 'role' => $admin['role']
             ];
-            $pdo->prepare('DELETE FROM login_attempts WHERE ip = ?')->execute([$ip]);
+            $pdo->prepare('DELETE FROM login_attempts WHERE ip = ? AND email = ""')->execute([$ip]);
+            $pdo->prepare('DELETE FROM login_attempts WHERE ip = "" AND email = ?')->execute([$email]);
             header('Location: admin/admin.php');
             exit;
         }
@@ -55,16 +68,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 'language' => $user['language'],
                 'notify_email' => $user['notify_email']
             ];
-            $pdo->prepare('DELETE FROM login_attempts WHERE ip = ?')->execute([$ip]);
+            $pdo->prepare('DELETE FROM login_attempts WHERE ip = ? AND email = ""')->execute([$ip]);
+            $pdo->prepare('DELETE FROM login_attempts WHERE ip = "" AND email = ?')->execute([$email]);
             header('Location: user/dashboard.php');
             exit;
         }
 
-        // failed login: increment attempts
-        if ($attempt) {
-            $pdo->prepare('UPDATE login_attempts SET attempts = attempts + 1, last_attempt = NOW() WHERE ip = ?')->execute([$ip]);
+        // failed login: increment attempts for IP and email
+        if ($ipAttempt) {
+            $pdo->prepare('UPDATE login_attempts SET attempts = attempts + 1, last_attempt = NOW() WHERE ip = ? AND email = ""')->execute([$ip]);
         } else {
-            $pdo->prepare('INSERT INTO login_attempts (ip, attempts, last_attempt) VALUES (?, 1, NOW())')->execute([$ip]);
+            $pdo->prepare('INSERT INTO login_attempts (ip, email, attempts, last_attempt) VALUES (?, "", 1, NOW())')->execute([$ip]);
+        }
+        if ($emailAttempt) {
+            $pdo->prepare('UPDATE login_attempts SET attempts = attempts + 1, last_attempt = NOW() WHERE ip = "" AND email = ?')->execute([$email]);
+        } else {
+            $pdo->prepare('INSERT INTO login_attempts (ip, email, attempts, last_attempt) VALUES ("", ?, 1, NOW())')->execute([$email]);
         }
         $error = 'اطلاعات ورود نادرست است';
     }

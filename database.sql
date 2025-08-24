@@ -141,9 +141,11 @@ CREATE TABLE notifications (
 ) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 CREATE TABLE login_attempts (
-    ip VARCHAR(45) PRIMARY KEY,
+    ip VARCHAR(45) NOT NULL DEFAULT '',
+    email VARCHAR(255) NOT NULL DEFAULT '',
     attempts INT NOT NULL DEFAULT 0,
-    last_attempt DATETIME NOT NULL
+    last_attempt DATETIME NOT NULL,
+    PRIMARY KEY (ip, email)
 ) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 CREATE TABLE password_resets (
