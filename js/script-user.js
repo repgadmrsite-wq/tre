@@ -63,6 +63,32 @@ document.addEventListener('DOMContentLoaded', function(){
         }
     }
 
+    if (typeof historyLabels !== 'undefined') {
+        var hs = document.getElementById('historyStatusChart');
+        if (hs) {
+            new Chart(hs, {
+                type: 'doughnut',
+                data: {
+                    labels: historyLabels,
+                    datasets: [{ data: historyData, backgroundColor: ['#4caf50','#f44336','#2196f3','#ff9800'] }]
+                }
+            });
+        }
+    }
+    if (typeof historyMonths !== 'undefined') {
+        var hm = document.getElementById('historyMonthChart');
+        if (hm) {
+            new Chart(hm, {
+                type: 'bar',
+                data: {
+                    labels: historyMonths,
+                    datasets: [{ label: 'رزروها', data: historyCounts, backgroundColor: 'rgba(54,162,235,0.5)', borderColor: 'rgb(54,162,235)', borderWidth: 1 }]
+                },
+                options: { scales: { y: { beginAtZero: true } } }
+            });
+        }
+    }
+
     if (typeof upcomingCount !== 'undefined' && upcomingCount > 0) {
         var modalEl = document.getElementById('reminderModal');
         if (modalEl) {
