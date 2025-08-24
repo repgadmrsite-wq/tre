@@ -1,0 +1,33 @@
+.dashboard-layout { display:flex; min-height:100vh; }
+.sidebar { width:280px; background-color:var(--dark-color,#212529); color:#fff; flex-shrink:0; transition:width .3s ease; }
+.sidebar .nav-link { color:rgba(255,255,255,0.7); padding:0.85rem 1.5rem; display:flex; align-items:center; border-right:3px solid transparent; }
+.sidebar .nav-link i { margin-left:0.75rem; font-size:1.2rem; width:24px; text-align:center; }
+.sidebar .nav-link.active, .sidebar .nav-link:hover { color:#fff; background-color:var(--primary-color); border-right-color:var(--bs-warning); }
+.sidebar .sidebar-header { padding:1.5rem; border-bottom:1px solid rgba(255,255,255,0.1); }
+.main-content { flex-grow:1; padding:2rem; overflow-y:auto; }
+@media (max-width:767.98px){ .sidebar{width:70px;} .sidebar .sidebar-header .navbar-brand, .sidebar .nav-link span{display:none;} .sidebar .nav-link{justify-content:center;} .sidebar .nav-link i{margin-left:0;} }
+
+.stat-card{border-radius:1rem;box-shadow:0 2px 6px rgba(0,0,0,0.1);transition:transform .2s,box-shadow .2s;}
+.stat-card:hover{transform:translateY(-4px);box-shadow:0 4px 12px rgba(0,0,0,0.15);}
+
+.payment-card{border-radius:1rem;box-shadow:0 2px 6px rgba(0,0,0,0.1);}
+.payment-paid{border-right:5px solid #28a745;}
+.payment-pending{border-right:5px solid #dc3545;}
+.method-online{background-color:rgba(13,110,253,.05);}
+.method-cash{background-color:rgba(25,135,84,.05);}
+.method-pos{background-color:rgba(255,193,7,.1);}
+.form-card{border-radius:1rem;box-shadow:0 2px 6px rgba(0,0,0,0.1);}
+
+.star-rating i{font-size:1.5rem;color:#ccc;cursor:pointer;}
+.star-rating i.bi-star-fill{color:#ffc107;}
+.review-card{border-radius:1rem;box-shadow:0 2px 6px rgba(0,0,0,0.1);}
+.rating-circle{width:50px;height:50px;border-radius:50%;background:conic-gradient(#ffc107 var(--percent),#eee 0);display:flex;align-items:center;justify-content:center;font-weight:700;}
+.filter-bar .form-control,
+.filter-bar .form-select{border-radius:50rem;}
+.motor-card{border-radius:1rem;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,0.1);cursor:pointer;transition:transform .2s,box-shadow .2s;}
+.motor-card:hover{transform:scale(1.02);box-shadow:0 4px 12px rgba(0,0,0,0.15);}
+.motor-card img{height:180px;object-fit:cover;}
+.modal .carousel-item img{transition:transform .3s;}
+.modal .carousel-item:hover img{transform:scale(1.05);}
+#motorMap{height:500px;border-radius:1rem;box-shadow:0 2px 6px rgba(0,0,0,0.1);}
+.mini-map{height:200px;border-radius:1rem;box-shadow:0 2px 6px rgba(0,0,0,0.1);}
