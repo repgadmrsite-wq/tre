@@ -149,11 +149,30 @@ if (isset($_GET['delete_motor'])) {
 }
 
 $editMotor = null;
+$motorBookings = [];
+$totalRevenue = 0;
+$highlightDates = [];
 if (isset($_GET['edit_motor'])) {
     $id = (int)$_GET['edit_motor'];
     $stmt = $pdo->prepare('SELECT * FROM motorcycles WHERE id=?');
     $stmt->execute([$id]);
     $editMotor = $stmt->fetch(PDO::FETCH_ASSOC);
+    if ($editMotor) {
+        $stmt = $pdo->prepare('SELECT b.*, u.name FROM bookings b JOIN users u ON b.user_id=u.id WHERE b.motorcycle_id=? ORDER BY b.start_date DESC');
+        $stmt->execute([$editMotor['id']]);
+        $motorBookings = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $totalRevenue = array_sum(array_column($motorBookings, 'amount'));
+        $highlightDates = [];
+        foreach ($motorBookings as $bk) {
+            $start = new DateTime($bk['start_date']);
+            $end = new DateTime($bk['end_date']);
+            $end->modify('+1 day');
+            $period = new DatePeriod($start, new DateInterval('P1D'), $end);
+            foreach ($period as $d) {
+                $highlightDates[] = $d->format('Y/m/d');
+            }
+        }
+    }
 }
 
 $filterModel = $_GET['model'] ?? '';
@@ -178,6 +197,7 @@ $motors = $stmt->fetchAll(PDO::FETCH_ASSOC);
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="../css/admin-panel.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.css">
 </head>
 <body>
 <div class="dashboard-layout">
@@ -228,6 +248,31 @@ $motors = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <div class="col-md-12"><input type="file" name="images[]" class="form-control" multiple></div>
         <div class="col-md-3"><button class="btn btn-primary w-100" type="submit"><?= $editMotor ? 'ویرایش' : 'افزودن'; ?></button></div>
       </form>
+      <?php if($editMotor): ?>
+      <div class="card p-3 mb-4">
+        <h2 class="h5">سوابق رزرو</h2>
+        <p class="mb-2">درآمد کل: <?= number_format($totalRevenue); ?> تومان</p>
+        <div class="table-responsive">
+          <table class="table table-sm">
+            <thead><tr><th>#</th><th>مشتری</th><th>شروع</th><th>پایان</th><th>مبلغ</th><th>وضعیت</th></tr></thead>
+            <tbody>
+              <?php foreach($motorBookings as $b): ?>
+              <tr>
+                <td><?= $b['id']; ?></td>
+                <td><?= htmlspecialchars($b['name']); ?></td>
+                <td><?= htmlspecialchars($b['start_date']); ?></td>
+                <td><?= htmlspecialchars($b['end_date']); ?></td>
+                <td><?= number_format($b['amount']); ?></td>
+                <td><?= htmlspecialchars($b['status']); ?></td>
+              </tr>
+              <?php endforeach; ?>
+            </tbody>
+          </table>
+        </div>
+        <label class="form-label mt-3">تقویم رزروها</label>
+        <input type="text" id="booking-calendar" data-jdp data-jdp-highlight="<?= implode(',', $highlightDates); ?>" readonly class="form-control w-auto">
+      </div>
+      <?php endif; ?>
       <form method="get" class="row g-2 mb-4 card p-3">
         <div class="col-md-3"><input type="text" name="model" value="<?= htmlspecialchars($filterModel); ?>" class="form-control" placeholder="فیلتر مدل"></div>
         <div class="col-md-3"><input type="number" name="capacity" value="<?= $filterCapacity ?: ''; ?>" class="form-control" placeholder="حداقل ظرفیت"></div>
@@ -256,6 +301,12 @@ $motors = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </div>
   </main>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<?php if($editMotor): ?>
+<script>
+  jalaliDatepicker.startWatch();
+</script>
+<?php endif; ?>
 </body>
 </html>
