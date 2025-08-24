@@ -18,10 +18,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($subject && $message) {
         $stmt = $pdo->prepare('INSERT INTO tickets (user_id, subject, message) VALUES (?,?,?)');
         $stmt->execute([$user_id, $subject, $message]);
-        $pdo->prepare('INSERT INTO notifications (message) VALUES (?)')
-            ->execute(["تیکت جدید توسط {$user['name']} ثبت شد"]);
-        foreach ($pdo->query('SELECT email FROM admins')->fetchAll(PDO::FETCH_COLUMN) as $adminEmail) {
-            sendEmail($adminEmail, 'تیکت جدید', "کاربر {$user['name']} تیکت جدیدی با موضوع {$subject} ثبت کرد");
+
+        $admins = $pdo->query('SELECT id,email FROM admins')->fetchAll(PDO::FETCH_ASSOC);
+        foreach ($admins as $a) {
+            $pdo->prepare('INSERT INTO notifications (admin_id, message) VALUES (?,?)')
+                ->execute([$a['id'], "تیکت جدید توسط {$user['name']} ثبت شد"]);
+            sendEmail($a['email'], 'تیکت جدید', "کاربر {$user['name']} تیکت جدیدی با موضوع {$subject} ثبت کرد");
         }
     }
     header('Location: support.php');

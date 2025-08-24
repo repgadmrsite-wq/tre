@@ -12,10 +12,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($id && $response) {
         $stmt = $pdo->prepare('UPDATE tickets SET response=?, status="answered" WHERE id=?');
         $stmt->execute([$response, $id]);
-        $info = $pdo->prepare('SELECT u.email, u.id FROM tickets t JOIN users u ON t.user_id=u.id WHERE t.id=?');
+        $info = $pdo->prepare('SELECT u.email, u.phone, u.id FROM tickets t JOIN users u ON t.user_id=u.id WHERE t.id=?');
         $info->execute([$id]);
         if ($row = $info->fetch(PDO::FETCH_ASSOC)) {
             sendEmail($row['email'], 'پاسخ پشتیبانی', $response);
+            if (!empty($row['phone'])) {
+                sendSMS($row['phone'], 'پاسخ جدید به تیکت شما در کیش‌ران ثبت شد');
+            }
             $pdo->prepare('INSERT INTO notifications (user_id, message) VALUES (?,?)')
                 ->execute([$row['id'], 'پاسخ جدید به تیکت شما ثبت شد']);
         }
