@@ -6,7 +6,7 @@ if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'user') {
 }
 require_once __DIR__ . '/../includes/db.php';
 require_once __DIR__ . '/../includes/csrf.php';
-require_once __DIR__ . '/../includes/notify.php';
+require_once __DIR__ . '/../api/tickets.php';
 
 $user = $_SESSION['user'];
 $user_id = $user['id'];
@@ -16,23 +16,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $subject = trim($_POST['subject'] ?? '');
     $message = trim($_POST['message'] ?? '');
     if ($subject && $message) {
-        $stmt = $pdo->prepare('INSERT INTO tickets (user_id, subject, message) VALUES (?,?,?)');
-        $stmt->execute([$user_id, $subject, $message]);
-
-        $admins = $pdo->query('SELECT id,email FROM admins')->fetchAll(PDO::FETCH_ASSOC);
-        foreach ($admins as $a) {
-            $pdo->prepare('INSERT INTO notifications (admin_id, message) VALUES (?,?)')
-                ->execute([$a['id'], "تیکت جدید توسط {$user['name']} ثبت شد"]);
-            sendEmail($a['email'], 'تیکت جدید', "کاربر {$user['name']} تیکت جدیدی با موضوع {$subject} ثبت کرد");
-        }
+        tickets_create($pdo, $user_id, $subject, $message);
     }
     header('Location: support.php');
     exit;
 }
 
-$stmt = $pdo->prepare('SELECT * FROM tickets WHERE user_id = ? ORDER BY created_at DESC');
-$stmt->execute([$user_id]);
-$tickets = $stmt->fetchAll();
+$tickets = tickets_get($pdo, ['user_id' => $user_id]);
 ?>
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">

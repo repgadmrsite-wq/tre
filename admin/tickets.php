@@ -2,26 +2,15 @@
 session_start();
 require_once __DIR__ . '/../includes/db.php';
 require_once __DIR__ . '/../includes/csrf.php';
-require_once __DIR__ . '/../includes/notify.php';
 require_once __DIR__ . '/../includes/admin_auth.php';
+require_once __DIR__ . '/../api/tickets.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     csrf_validate();
     $id = (int)($_POST['ticket_id'] ?? 0);
     $response = trim($_POST['response'] ?? '');
     if ($id && $response) {
-        $stmt = $pdo->prepare('UPDATE tickets SET response=?, status="answered" WHERE id=?');
-        $stmt->execute([$response, $id]);
-        $info = $pdo->prepare('SELECT u.email, u.phone, u.id FROM tickets t JOIN users u ON t.user_id=u.id WHERE t.id=?');
-        $info->execute([$id]);
-        if ($row = $info->fetch(PDO::FETCH_ASSOC)) {
-            sendEmail($row['email'], 'پاسخ پشتیبانی', $response);
-            if (!empty($row['phone'])) {
-                sendSMS($row['phone'], 'پاسخ جدید به تیکت شما در کیش‌ران ثبت شد');
-            }
-            $pdo->prepare('INSERT INTO notifications (user_id, message) VALUES (?,?)')
-                ->execute([$row['id'], 'پاسخ جدید به تیکت شما ثبت شد']);
-        }
+        tickets_reply($pdo, $id, $_SESSION['admin']['id'], $response);
     }
     header('Location: tickets.php');
     exit;
@@ -29,22 +18,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 if (isset($_GET['close'])) {
     $id = (int)$_GET['close'];
-    $pdo->prepare('UPDATE tickets SET status="closed" WHERE id=?')->execute([$id]);
+    tickets_close($pdo, $id);
     header('Location: tickets.php');
     exit;
 }
 
 $status = $_GET['status'] ?? 'all';
-$query = 'SELECT t.*, u.name AS user_name, u.email FROM tickets t JOIN users u ON t.user_id=u.id';
-$params = [];
-if (in_array($status, ['open','answered','closed'], true)) {
-    $query .= ' WHERE t.status=?';
-    $params[] = $status;
-}
-$query .= ' ORDER BY t.created_at DESC';
-$stmt = $pdo->prepare($query);
-$stmt->execute($params);
-$tickets = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$tickets = tickets_get($pdo, in_array($status, ['open','answered','closed'], true) ? ['status' => $status] : []);
 ?>
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
