@@ -30,7 +30,7 @@ $tickets = tickets_get($pdo, ['user_id' => $user_id]);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>پشتیبانی - کیش‌ران</title>
+    <title>پشتیبانی - KISH UP</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../css/style.css">
@@ -40,7 +40,7 @@ $tickets = tickets_get($pdo, ['user_id' => $user_id]);
 <div class="dashboard-layout">
     <aside class="sidebar d-flex flex-column p-0">
         <div class="sidebar-header text-center">
-            <a class="navbar-brand fs-4 text-white" href="../index.html">کیش‌ران</a>
+            <a class="navbar-brand fs-4 text-white" href="../index.html">KISH UP</a>
         </div>
         <ul class="nav flex-column my-4">
             <li class="nav-item"><a class="nav-link" href="dashboard.php"><i class="bi bi-speedometer2"></i><span>داشبورد</span></a></li>

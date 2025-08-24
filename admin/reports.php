@@ -27,7 +27,7 @@ $ticketCatCounts=json_encode(array_map('intval',array_column($ticketCats,'c')));
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>گزارش‌ها - کیش‌ران</title>
+  <title>گزارش‌ها - KISH UP</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="../css/admin-panel.css">

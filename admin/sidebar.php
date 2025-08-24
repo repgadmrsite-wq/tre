@@ -3,7 +3,7 @@ if (!isset($activePage)) { $activePage = ''; }
 ?>
 <aside class="sidebar d-flex flex-column p-0">
   <div class="sidebar-header text-center">
-    <a class="navbar-brand fs-4 text-white" href="../index.html">کیش‌ران - ادمین</a>
+    <a class="navbar-brand fs-4 text-white" href="../index.html">KISH UP - ادمین</a>
   </div>
   <ul class="nav flex-column my-4">
     <li class="nav-item"><a class="nav-link <?= $activePage==='dashboard' ? 'active' : '' ?>" href="admin.php"><i class="bi bi-speedometer2"></i><span>داشبورد</span></a></li>
