@@ -3,236 +3,325 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>کیش‌ران - اجاره موتور در کیش</title>
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-    <!-- Custom CSS -->
+    <title>KISHUP – رزرو آنلاین موتور برقی در کیش</title>
+    <!-- Leaflet styles for the maps -->
+    <!-- حذف کتابخانهٔ پیش‌فرض Leaflet و استفاده از SDK نشان برای نقشه‌ها -->
+    <!-- نقشهٔ نشان شامل Leaflet و استایل‌های خود است، لذا از لینک زیر استفاده می‌کنیم -->
+    <link rel="stylesheet" href="https://static.neshan.org/sdk/leaflet/v1.9.4/neshan-sdk/v1.0.8/index.css">
+    <!-- Jalali datepicker styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.css">
+    <!-- Main site styles -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-
-    <!-- Header -->
-    <header class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">کیش‌ران</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">خانه</a></li>
-                    <li class="nav-item"><a class="nav-link" href="dashboard.html">داشبورد</a></li>
-                    <li class="nav-item"><a class="nav-link" href="login.php">ورود</a></li>
+<body class="dark-mode">
+    <!-- ===================== Header ===================== -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="#island-map" class="logo">KISHUP</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#island-map">خانه</a></li>
+                    <li><a href="#booking">رزرو موتور</a></li>
+                    <li><a href="#specials">ویژه‌ها</a></li>
+                    <li><a href="#ready">موتورهای آماده</a></li>
+                    <li><a href="#reviews">نظرات</a></li>
+                    <li><a href="#nearest">نزدیک‌ترین</a></li>
+                    <li><a href="#faq">سوالات متداول</a></li>
+                    <li><a href="#contact">تماس</a></li>
                 </ul>
+            </nav>
+            <div class="header-actions">
+                <!-- Theme switcher button toggles dark/light mode -->
+                <button type="button" class="theme-switcher" aria-label="تغییر حالت نمایش">
+                    <i data-feather="moon" class="icon-moon"></i>
+                    <i data-feather="sun" class="icon-sun"></i>
+                </button>
+                <!-- Hamburger menu for mobile nav -->
+                <button type="button" class="hamburger-menu" aria-label="باز کردن منو">
+                    <i data-feather="menu"></i>
+                </button>
             </div>
         </div>
     </header>
 
+    <!-- ===================== Main Content ===================== -->
     <main>
-        <!-- Hero Section -->
-        <section id="hero" style="background-image: url('https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=2070'); background-size: cover; background-position: center; padding: 140px 0; color: #fff; text-align: center; position: relative;">
-            <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0,0,0,0.5);"></div>
-            <div class="container position-relative">
-                <h1 class="display-4 fw-bold">سفری به یادماندنی در کیش</h1>
-                <p class="lead my-3">با موتورهای ما، هر گوشه از جزیره را کشف کنید.</p>
+        <!-- Hero Section removed: the live map now serves as the top section -->
+
+        <!-- Island Map Section / Hero -->
+        <section id="island-map" class="section map-section hero-map">
+            <div class="container map-hero-container">
+                <div class="section-header">
+                    <h2>نقشهٔ زندهٔ موتورها</h2>
+                    <p>نمایش موتورهای رزرو شده و آزاد در سراسر جزیرهٔ کیش</p>
+                </div>
+                <div id="island-map-container" class="island-map-wrapper"></div>
+                <!-- Hero overlay with CTA and metrics -->
+                <div id="hero-overlay" class="hero-overlay">
+                    <h1 class="hero-title">تجربه متفاوت با KISHUP</h1>
+                    <p class="hero-subtitle">موتور دلخواهت را در لحظه رزرو کن</p>
+                    <p id="hero-metrics" class="hero-metrics">موتورهای موجود: <span class="available-count">0</span> | رزرو شده: <span class="reserved-count">0</span></p>
+                    <button type="button" id="hero-cta" class="cta-button">رزرو سریع</button>
+                </div>
             </div>
         </section>
 
-        <!-- Booking Form -->
-        <div class="container" style="margin-top: -50px; position: relative; z-index: 10;">
-            <div class="card p-4 shadow-md">
-                <form class="row g-3 align-items-center">
-                    <div class="col-lg-4 col-md-12">
-                        <label for="location" class="form-label visually-hidden">مکان</label>
-                        <input type="text" class="form-control form-control-lg" id="location" placeholder="مکان تحویل را انتخاب کنید">
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <label for="start-date" class="form-label visually-hidden">تاریخ شروع</label>
-                        <input type="date" class="form-control form-control-lg" id="start-date">
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                         <label for="end-date" class="form-label visually-hidden">تاریخ پایان</label>
-                        <input type="date" class="form-control form-control-lg" id="end-date">
-                    </div>
-                    <div class="col-lg-2 col-md-12">
-                        <button type="submit" class="btn btn-primary btn-lg w-100">جستجو</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <!-- Trust Features Section -->
-        <section id="features" class="section">
+        <!-- Booking Section -->
+        <section id="booking" class="section booking-section">
             <div class="container">
-                <h2 class="section-title">چرا کیش‌ران؟</h2>
-                <div class="row text-center">
-                    <div class="col-md-4 mb-4">
-                        <div class="p-4">
-                            <i class="bi bi-shield-check display-4 text-primary mb-3"></i>
-                            <h5 class="fw-bold">بیمه کامل</h5>
-                            <p class="text-muted">تمام موتورها دارای بیمه کامل بدنه و شخص ثالث هستند.</p>
-                        </div>
+                <div class="section-header">
+                    <h2>رزرو سریع و آسان</h2>
+                    <p>موتور دلخواه خود را در چند مرحله رزرو کنید.</p>
+                </div>
+                <div class="booking-wrapper">
+                    <!-- Form card -->
+                    <div class="form-card">
+                        <form id="booking-form" novalidate>
+                            <ul class="progress-bar" role="progressbar" aria-valuemin="1" aria-valuemax="4" aria-valuenow="1">
+                                <div class="progress-line"></div>
+                                <li class="step active">۱</li>
+                                <li class="step">۲</li>
+                                <li class="step">۳</li>
+                                <li class="step">۴</li>
+                            </ul>
+                            <!-- Step 1: Vehicle selection -->
+                            <fieldset class="form-step active-step" data-step="1">
+                                <h4>انتخاب موتور</h4>
+                                <div id="vehicle-selection-list" class="vehicle-list">
+                                    <p class="loading-text">در حال بارگذاری...</p>
+                                </div>
+                                <div class="form-navigation">
+                                    <button type="button" class="next-btn" disabled>مرحله بعد</button>
+                                </div>
+                            </fieldset>
+                            <!-- Step 2: Duration & time -->
+                            <fieldset class="form-step" data-step="2">
+                                <h4>مدت و زمان تحویل</h4>
+                                <label>مدت زمان اجاره:</label>
+                                <div class="duration-options">
+                                    <input type="radio" name="duration" id="hourly" value="hourly">
+                                    <label for="hourly">ساعتی</label>
+                                    <input type="radio" name="duration" id="half-day" value="half-day">
+                                    <label for="half-day">نیم‌روز</label>
+                                    <input type="radio" name="duration" id="daily" value="daily">
+                                    <label for="daily">روزانه</label>
+                                </div>
+                                <!-- نیم‌روز: انتخاب نیم‌روز اول یا دوم -->
+                                <div id="half-day-options" class="half-day-options hidden">
+                                    <input type="radio" name="halfDayOption" id="half-day-morning" value="morning">
+                                    <label for="half-day-morning">نیم‌روز اول (۰۰ تا ۱۲)</label>
+                                    <input type="radio" name="halfDayOption" id="half-day-evening" value="evening">
+                                    <label for="half-day-evening">نیم‌روز دوم (۱۲ تا ۲۴)</label>
+                                </div>
+                                <label>بازه زمانی اجاره:</label>
+                                <div class="date-range-picker-wrapper">
+                                    <!-- Quick date buttons for hourly bookings (shown/hidden via JS) -->
+                                    <div id="quick-date-buttons" class="quick-date-buttons hidden">
+                                        <button type="button" id="today-button">امروز</button>
+                                        <button type="button" id="tomorrow-button">فردا</button>
+                                    </div>
+                                    <div class="date-inputs-container">
+                                        <input type="text" id="start-date-input" placeholder="تاریخ شروع" data-jdp>
+                                        <input type="text" id="end-date-input" placeholder="تاریخ پایان" data-jdp>
+                                    </div>
+                                    <!-- Daily booking: select number of days (shown when daily duration selected) -->
+                                    <div id="daily-options" class="daily-options hidden">
+                                        <label>تعداد روز:</label>
+                                        <div class="day-options">
+                                            <input type="radio" name="dayCount" id="day1" value="1">
+                                            <label for="day1">1 روز</label>
+                                            <input type="radio" name="dayCount" id="day2" value="2">
+                                            <label for="day2">2 روز</label>
+                                            <input type="radio" name="dayCount" id="day3" value="3">
+                                            <label for="day3">3 روز</label>
+                                            <input type="radio" name="dayCount" id="day4" value="4">
+                                            <label for="day4">4 روز</label>
+                                            <input type="radio" name="dayCount" id="day5" value="5">
+                                            <label for="day5">5 روز</label>
+                                            <input type="radio" name="dayCount" id="day6" value="6">
+                                            <label for="day6">6 روز</label>
+                                            <input type="radio" name="dayCount" id="day7" value="7">
+                                            <label for="day7">7 روز</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                    <div class="time-pickers-wrapper">
+                                        <div class="time-input-wrapper">
+                                            <label for="start-time">ساعت تحویل:</label>
+                                            <input type="time" id="start-time" required>
+                                        </div>
+                                    </div>
+                                <!-- Hourly booking: choose duration from 1 to 8 hours (shown when hourly duration selected) -->
+                                <div id="hourly-options" class="hourly-options hidden">
+                                    <label>مدت اجاره (ساعت):</label>
+                                    <div class="hour-options">
+                                        <input type="radio" name="hourCount" id="hour1" value="1"><label for="hour1">1 ساعت</label>
+                                        <input type="radio" name="hourCount" id="hour2" value="2"><label for="hour2">2 ساعت</label>
+                                        <input type="radio" name="hourCount" id="hour3" value="3"><label for="hour3">3 ساعت</label>
+                                        <input type="radio" name="hourCount" id="hour4" value="4"><label for="hour4">4 ساعت</label>
+                                        <input type="radio" name="hourCount" id="hour5" value="5"><label for="hour5">5 ساعت</label>
+                                        <input type="radio" name="hourCount" id="hour6" value="6"><label for="hour6">6 ساعت</label>
+                                        <input type="radio" name="hourCount" id="hour7" value="7"><label for="hour7">7 ساعت</label>
+                                        <input type="radio" name="hourCount" id="hour8" value="8"><label for="hour8">8 ساعت</label>
+                                    </div>
+                                </div>
+                                <div class="form-navigation">
+                                    <button type="button" class="prev-btn">قبلی</button>
+                                    <button type="button" class="next-btn">مرحله بعد</button>
+                                </div>
+                            </fieldset>
+                            <!-- Step 3: Delivery location -->
+                            <fieldset class="form-step" data-step="3">
+                                <h4>محل تحویل را مشخص کنید</h4>
+                                <div class="location-search">
+                                    <label for="location-search-input">جستجوی مکان:</label>
+                                    <input type="text" id="location-search-input" placeholder="مثلاً اسکله تفریحی">
+                                    <ul id="suggestions-list" class="suggestions-list"></ul>
+                                </div>
+                                <div class="form-navigation">
+                                    <button type="button" class="prev-btn">قبلی</button>
+                                    <button type="button" class="next-btn">مرحله بعد</button>
+                                </div>
+                            </fieldset>
+                            <!-- Step 4: Confirmation & OTP -->
+                            <fieldset class="form-step" data-step="4">
+                                <h4>تأیید و پرداخت</h4>
+                                <label for="phone">شماره موبایل:</label>
+                                <input type="tel" id="phone" name="phone" placeholder="۰۹۱۲۳۴۵۶۷۸۹" required>
+                                <div id="otp-section" class="hidden">
+                                    <label for="otp-code">کد ارسال شده:</label>
+                                    <input type="text" id="otp-code" name="otp-code" placeholder="کد را وارد کنید" maxlength="6">
+                                </div>
+                                <div class="form-navigation">
+                                    <button type="button" class="prev-btn">قبلی</button>
+                                    <button type="submit" id="send-otp-btn" class="submit-btn">تایید و پرداخت</button>
+                                </div>
+                            </fieldset>
+                        </form>
                     </div>
-                    <div class="col-md-4 mb-4">
-                         <div class="p-4">
-                            <i class="bi bi-headset display-4 text-primary mb-3"></i>
-                            <h5 class="fw-bold">پشتیبانی ۲۴/۷</h5>
-                            <p class="text-muted">تیم ما همیشه برای کمک به شما آماده است.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="p-4">
-                            <i class="bi bi-geo-alt-fill display-4 text-primary mb-3"></i>
-                            <h5 class="fw-bold">تحویل در محل</h5>
-                            <p class="text-muted">موتور را در هر کجای جزیره که بخواهید تحویل بگیرید.</p>
+                    <!-- Summary card -->
+                    <div class="summary-card">
+                        <div id="summary-panel" class="summary-panel"></div>
+                        <div id="map-panel" class="map-wrapper hidden">
+                            <div id="delivery-map-container"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Popular Motorcycles Section -->
-        <section id="motorcycles" class="section bg-light">
+        <!-- Specials Section -->
+        <section id="specials" class="section specials-section">
             <div class="container">
-                <h2 class="section-title">موتورهای محبوب</h2>
-                <div class="row">
-                    <!-- Motorcycle Card 1 -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100">
-                            <img src="https://images.unsplash.com/photo-1626247023795-88408819d54d?q=80&w=1974" class="card-img-top" alt="اسکوتر وسپا" style="height: 240px; object-fit: cover;">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">اسکوتر وسپا</h5>
-                                <p class="card-text text-muted">یک انتخاب کلاسیک و شیک برای گشت و گذار شهری.</p>
-                                <div class="mt-auto">
-                                    <p class="h5 fw-bold text-primary">۱۸۰,۰۰۰ تومان / روز</p>
-                                    <a href="#" class="btn btn-primary w-100 mt-2">رزرو کنید</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Motorcycle Card 2 -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100">
-                            <img src="https://images.unsplash.com/photo-1593352222537-a515aed534a2?q=80&w=1964" class="card-img-top" alt="موتور کروزر" style="height: 240px; object-fit: cover;">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">موتور کروزر</h5>
-                                <p class="card-text text-muted">قدرتمند و راحت، مناسب برای مسافت‌های طولانی‌تر.</p>
-                                <div class="mt-auto">
-                                    <p class="h5 fw-bold text-primary">۲۵۰,۰۰۰ تومان / روز</p>
-                                    <a href="#" class="btn btn-primary w-100 mt-2">رزرو کنید</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Motorcycle Card 3 -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                         <div class="card h-100">
-                            <img src="https://images.unsplash.com/photo-1625043834839-a8a2c1a4b330?q=80&w=1964" class="card-img-top" alt="موتور برقی" style="height: 240px; object-fit: cover;">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">موتور برقی</h5>
-                                <p class="card-text text-muted">بی‌صدا، دوست‌دار محیط زیست و مناسب برای آرامش.</p>
-                                <div class="mt-auto">
-                                    <p class="h5 fw-bold text-primary">۱۵۰,۰۰۰ تومان / روز</p>
-                                    <a href="#" class="btn btn-primary w-100 mt-2">رزرو کنید</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="section-header">
+                    <h2>پیشنهادهای ویژه امروز</h2>
+                    <p>پیشنهادهای ویژه ما برای رزرو امروز با بهترین قیمت‌ها.</p>
                 </div>
+                <div id="specials-grid" class="cards-grid specials-grid"></div>
             </div>
         </section>
 
-        <!-- How It Works Section -->
-        <section id="how-it-works" class="section">
+        <!-- Ready Now Section -->
+        <section id="ready" class="section ready-section">
             <div class="container">
-                <h2 class="section-title">چطور کار می‌کند؟</h2>
-                <div class="row text-center">
-                    <div class="col-md-4">
-                        <i class="bi bi-search-heart display-4 text-primary mb-3"></i>
-                        <h5 class="fw-bold">۱. جستجو کنید</h5>
-                        <p class="text-muted">موتور مورد نظر خود را پیدا کنید.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <i class="bi bi-calendar-check display-4 text-primary mb-3"></i>
-                        <h5 class="fw-bold">۲. رزرو کنید</h5>
-                        <p class="text-muted">تاریخ را مشخص و آنلاین رزرو کنید.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <i class="bi bi-bicycle display-4 text-primary mb-3"></i>
-                        <h5 class="fw-bold">۳. لذت ببرید</h5>
-                        <p class="text-muted">موتور را تحویل گرفته و از سفرتان لذت ببرید.</p>
-                    </div>
+                <div class="section-header">
+                    <h2>موتورهای آماده رزرو</h2>
+                    <p>مدل و وضعیت دلخواه خود را انتخاب کنید تا موتورهای موجود را مشاهده کنید.</p>
                 </div>
+                <div class="filter-controls">
+                    <label for="model-filter">انتخاب مدل:</label>
+                    <select id="model-filter">
+                        <option value="all">همه مدل‌ها</option>
+                    </select>
+                    <label for="status-filter">وضعیت:</label>
+                    <select id="status-filter">
+                        <option value="available">موجود</option>
+                        <option value="reserved">رزرو شده</option>
+                    </select>
+                </div>
+                <div id="ready-grid" class="cards-grid ready-grid"></div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section id="reviews" class="section reviews-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>نظرات کاربران</h2>
+                    <p>دیدگاه کاربران ما درباره خدمات KISHUP.</p>
+                </div>
+                <div id="reviews-grid" class="cards-grid reviews-grid"></div>
+            </div>
+        </section>
+
+        <!-- Nearest Section -->
+        <section id="nearest" class="section nearest-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>نزدیک‌ترین موتور به من</h2>
+                    <p>با استفاده از موقعیت شما، نزدیک‌ترین موتور موجود را پیدا می‌کنیم.</p>
+                </div>
+                <button type="button" id="nearest-btn" class="cta-button">پیدا کردن</button>
+                <div id="nearest-result" class="nearest-card"></div>
             </div>
         </section>
 
         <!-- FAQ Section -->
-        <section id="faq" class="section bg-light">
+        <section id="faq" class="section faq-section">
             <div class="container">
-                <h2 class="section-title">سوالات متداول</h2>
-                <div class="accordion" id="faqAccordion">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="faqH1">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqC1">چه مدارکی برای اجاره لازم است؟</button>
-                        </h2>
-                        <div id="faqC1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                اصل کارت ملی و گواهینامه موتور سیکلت الزامی است.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="faqH2">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqC2">آیا کلاه ایمنی هم تحویل داده می‌شود؟</button>
-                        </h2>
-                        <div id="faqC2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                بله، به تعداد سرنشینان کلاه ایمنی استاندارد و تمیز به صورت رایگان ارائه می‌شود.
-                            </div>
-                        </div>
-                    </div>
+                <div class="section-header">
+                    <h2>سوالات متداول</h2>
+                    <p>پاسخ به سوالات رایج کاربران درباره رزرو و خدمات ما.</p>
+                </div>
+                <div class="faq-list">
+                    <details>
+                        <summary>چطور می‌توانم موتور رزرو کنم؟</summary>
+                        <p>برای رزرو موتور، ابتدا موتور مورد نظر خود را انتخاب کنید، سپس مدت و زمان را مشخص کرده و محل تحویل را انتخاب کنید. در نهایت با وارد کردن شماره تلفن و تأیید، رزرو شما ثبت می‌شود.</p>
+                    </details>
+                    <details>
+                        <summary>آیا امکان لغو رزرو وجود دارد؟</summary>
+                        <p>بله، تا ۲۴ ساعت قبل از زمان تحویل می‌توانید رزرو خود را لغو کنید. برای این کار به بخش رزروهای من در پروفایل خود مراجعه کنید.</p>
+                    </details>
+                    <details>
+                        <summary>هزینهٔ اجاره چگونه محاسبه می‌شود؟</summary>
+                        <p>هزینهٔ اجاره بر اساس مدل موتور و مدت زمان انتخابی محاسبه می‌شود. تعرفه‌های ساعتی، نیم‌روزی و روزانه متفاوت است و در هنگام رزرو نمایش داده می‌شود.</p>
+                    </details>
+                    <details>
+                        <summary>آیا می‌توانم محل تحویل را تغییر دهم؟</summary>
+                        <p>بله، شما می‌توانید هنگام رزرو محل تحویل را تعیین کنید یا بعداً از طریق پروفایل کاربری آن را تغییر دهید. تغییر محل تحویل ممکن است شامل هزینه اضافی باشد.</p>
+                    </details>
                 </div>
             </div>
         </section>
+
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white pt-5 pb-4">
-        <div class="container text-center text-md-start">
-            <div class="row">
-                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                    <h6 class="text-uppercase fw-bold">کیش‌ران</h6>
-                    <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: var(--primary-color); height: 2px"/>
-                    <p>بهترین و آسان‌ترین راه برای اجاره موتور در جزیره زیبای کیش. ما به شما کمک می‌کنیم تا سفری خاطره‌انگیز داشته باشید.</p>
+    <!-- ===================== Footer ===================== -->
+    <footer id="contact" class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p>&copy; 2025 - تمام حقوق برای KISHUP محفوظ است.</p>
+                    <p>تلفن: ۰۹۱۲۳۴۵۶۷۸۹ | ایمیل: info@kishup.com</p>
+                    <p>آدرس: جزیره کیش، بلوار ساحل، کنار اسکله تفریحی</p>
                 </div>
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                    <h6 class="text-uppercase fw-bold">لینک‌های مفید</h6>
-                    <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: var(--primary-color); height: 2px"/>
-                    <p><a href="#!" class="text-white-50">قوانین و مقررات</a></p>
-                    <p><a href="#!" class="text-white-50">درباره ما</a></p>
-                    <p><a href="#!" class="text-white-50">سوالات متداول</a></p>
-                </div>
-                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                    <h6 class="text-uppercase fw-bold">تماس با ما</h6>
-                    <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: var(--primary-color); height: 2px"/>
-                    <p><i class="bi bi-geo-alt-fill me-2"></i>کیش، ایران</p>
-                    <p><i class="bi bi-envelope-fill me-2"></i>info@kishran.com</p>
-                    <p><i class="bi bi-telephone-fill me-2"></i>+۹۸ ۱۲۳ ۴۵۶ ۷۸۹۰</p>
+                <div class="social-links">
+                    <a href="#" aria-label="اینستاگرام"><i data-feather="instagram"></i></a>
+                    <a href="#" aria-label="تلگرام"><i data-feather="send"></i></a>
+                    <a href="#" aria-label="توییتر"><i data-feather="twitter"></i></a>
                 </div>
             </div>
         </div>
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-            © 2024 تمام حقوق برای کیش‌ران محفوظ است.
-        </div>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
+    <!-- ===================== Scripts ===================== -->
+    <!-- Neshan Maps SDK for Leaflet (شامل کتابخانهٔ Leaflet) -->
+    <script src="https://static.neshan.org/sdk/leaflet/v1.9.4/neshan-sdk/v1.0.8/index.js"></script>
+    <!-- Feather icons library -->
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <!-- Jalali datepicker library -->
+    <script src="https://cdn.jsdelivr.net/npm/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.js"></script>
+    <!-- Main application script -->
     <script src="js/script.js"></script>
 </body>
 </html>
