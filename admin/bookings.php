@@ -6,63 +6,85 @@ require_once __DIR__ . '/../includes/admin_auth.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_booking'])) {
     csrf_validate();
-    $user_id = (int)$_POST['user_id'];
-    $motor_id = (int)$_POST['motorcycle_id'];
-    $start = $_POST['start_date'];
-    $end = $_POST['end_date'];
+    $errors = [];
+    $user_id = filter_input(INPUT_POST, 'user_id', FILTER_VALIDATE_INT, ['options' => ['min_range' => 1]]);
+    if ($user_id === false) { $errors[] = 'مشتری نامعتبر است'; }
+    $motor_id = filter_input(INPUT_POST, 'motorcycle_id', FILTER_VALIDATE_INT, ['options' => ['min_range' => 1]]);
+    if ($motor_id === false) { $errors[] = 'موتور نامعتبر است'; }
+    $startObj = DateTime::createFromFormat('Y-m-d', $_POST['start_date']);
+    $endObj = DateTime::createFromFormat('Y-m-d', $_POST['end_date']);
+    if (!$startObj || !$endObj || $startObj > $endObj) { $errors[] = 'تاریخ نامعتبر است'; }
+    $start = $startObj ? $startObj->format('Y-m-d') : null;
+    $end = $endObj ? $endObj->format('Y-m-d') : null;
     $status = $_POST['status'];
-    $amount = (int)$_POST['amount'];
+    $amount = filter_input(INPUT_POST, 'amount', FILTER_VALIDATE_INT, ['options' => ['min_range' => 0]]);
+    if ($amount === false) { $errors[] = 'مبلغ نامعتبر است'; }
     $discount_code = trim($_POST['discount_code']);
     $discount_id = null;
-    if ($user_id && $motor_id && $start && $end) {
-        $st = $pdo->prepare('SELECT status FROM users WHERE id=?');
-        $st->execute([$user_id]);
-        $userStatus = $st->fetchColumn();
-        if ($userStatus !== 'blocked') {
-            if ($discount_code) {
-                $dstmt = $pdo->prepare('SELECT * FROM discounts WHERE code=?');
-                $dstmt->execute([$discount_code]);
-                if ($disc = $dstmt->fetch(PDO::FETCH_ASSOC)) {
-                    $today = date('Y-m-d');
-                    if ((!$disc['start_date'] || $disc['start_date'] <= $today) && (!$disc['end_date'] || $disc['end_date'] >= $today) &&
-                        (!$disc['usage_limit'] || $disc['used'] < $disc['usage_limit']) &&
-                        (!$disc['vip_only'] || $userStatus=='vip') &&
-                        (!$disc['motor_id'] || $disc['motor_id']==$motor_id)) {
-                        $ustmt = $pdo->prepare('SELECT used_count FROM discount_usages WHERE discount_id=? AND user_id=?');
-                        $ustmt->execute([$disc['id'],$user_id]);
-                        $usedCount = $ustmt->fetchColumn() ?: 0;
-                        if (!$disc['per_user_limit'] || $usedCount < $disc['per_user_limit']) {
-                            $discount_id = $disc['id'];
-                            if ($disc['type']=='percent') {
-                                $amount = max(0, $amount - floor($amount * $disc['value']/100));
-                            } else {
-                                $amount = max(0, $amount - $disc['value']);
-                            }
-                            $pdo->prepare('UPDATE discounts SET used=used+1 WHERE id=?')->execute([$discount_id]);
-                            $pdo->prepare('INSERT INTO discount_usages (discount_id,user_id,used_count) VALUES (?,?,1) ON DUPLICATE KEY UPDATE used_count=used_count+1')->execute([$discount_id,$user_id]);
+    if ($errors) {
+        $_SESSION['error'] = implode('<br>', $errors);
+        header('Location: bookings.php');
+        exit;
+    }
+    $st = $pdo->prepare('SELECT status FROM users WHERE id=?');
+    $st->execute([$user_id]);
+    $userStatus = $st->fetchColumn();
+    if ($userStatus !== 'blocked') {
+        if ($discount_code) {
+            $dstmt = $pdo->prepare('SELECT * FROM discounts WHERE code=?');
+            $dstmt->execute([$discount_code]);
+            if ($disc = $dstmt->fetch(PDO::FETCH_ASSOC)) {
+                $today = date('Y-m-d');
+                if ((!$disc['start_date'] || $disc['start_date'] <= $today) && (!$disc['end_date'] || $disc['end_date'] >= $today) &&
+                    (!$disc['usage_limit'] || $disc['used'] < $disc['usage_limit']) &&
+                    (!$disc['vip_only'] || $userStatus=='vip') &&
+                    (!$disc['motor_id'] || $disc['motor_id']==$motor_id)) {
+                    $ustmt = $pdo->prepare('SELECT used_count FROM discount_usages WHERE discount_id=? AND user_id=?');
+                    $ustmt->execute([$disc['id'],$user_id]);
+                    $usedCount = $ustmt->fetchColumn() ?: 0;
+                    if (!$disc['per_user_limit'] || $usedCount < $disc['per_user_limit']) {
+                        $discount_id = $disc['id'];
+                        if ($disc['type']=='percent') {
+                            $amount = max(0, $amount - floor($amount * $disc['value']/100));
+                        } else {
+                            $amount = max(0, $amount - $disc['value']);
                         }
+                        $pdo->prepare('UPDATE discounts SET used=used+1 WHERE id=?')->execute([$discount_id]);
+                        $pdo->prepare('INSERT INTO discount_usages (discount_id,user_id,used_count) VALUES (?,?,1) ON DUPLICATE KEY UPDATE used_count=used_count+1')->execute([$discount_id,$user_id]);
                     }
                 }
             }
-            $pdo->prepare('INSERT INTO bookings (user_id, motorcycle_id, start_date, end_date, status, amount, discount_id) VALUES (?,?,?,?,?,?,?)')->execute([$user_id, $motor_id, $start, $end, $status, $amount, $discount_id]);
-            $pdo->prepare('INSERT INTO notifications (message) VALUES (?)')->execute(["رزرو جدید ثبت شد"]);
-        } else {
-            $_SESSION['error'] = 'کاربر بلاک شده است';
         }
+        $pdo->prepare('INSERT INTO bookings (user_id, motorcycle_id, start_date, end_date, status, amount, discount_id) VALUES (?,?,?,?,?,?,?)')->execute([$user_id, $motor_id, $start, $end, $status, $amount, $discount_id]);
+        $pdo->prepare('INSERT INTO notifications (message) VALUES (?)')->execute(["رزرو جدید ثبت شد"]);
+    } else {
+        $_SESSION['error'] = 'کاربر بلاک شده است';
     }
     header('Location: bookings.php');
     exit;
 }
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_booking'])) {
     csrf_validate();
+    $errors = [];
     $id = (int)$_POST['booking_id'];
-    $user_id = (int)$_POST['user_id'];
-    $motor_id = (int)$_POST['motorcycle_id'];
-    $start = $_POST['start_date'];
-    $end = $_POST['end_date'];
+    $user_id = filter_input(INPUT_POST, 'user_id', FILTER_VALIDATE_INT, ['options' => ['min_range' => 1]]);
+    if ($user_id === false) { $errors[] = 'مشتری نامعتبر است'; }
+    $motor_id = filter_input(INPUT_POST, 'motorcycle_id', FILTER_VALIDATE_INT, ['options' => ['min_range' => 1]]);
+    if ($motor_id === false) { $errors[] = 'موتور نامعتبر است'; }
+    $startObj = DateTime::createFromFormat('Y-m-d', $_POST['start_date']);
+    $endObj = DateTime::createFromFormat('Y-m-d', $_POST['end_date']);
+    if (!$startObj || !$endObj || $startObj > $endObj) { $errors[] = 'تاریخ نامعتبر است'; }
+    $start = $startObj ? $startObj->format('Y-m-d') : null;
+    $end = $endObj ? $endObj->format('Y-m-d') : null;
     $status = $_POST['status'];
-    $amount = (int)$_POST['amount'];
+    $amount = filter_input(INPUT_POST, 'amount', FILTER_VALIDATE_INT, ['options' => ['min_range' => 0]]);
+    if ($amount === false) { $errors[] = 'مبلغ نامعتبر است'; }
     $discount_id = (int)($_POST['discount_id'] ?? 0) ?: null;
+    if ($errors) {
+        $_SESSION['error'] = implode('<br>', $errors);
+        header('Location: bookings.php');
+        exit;
+    }
     $pdo->prepare('UPDATE bookings SET user_id=?, motorcycle_id=?, start_date=?, end_date=?, status=?, amount=?, discount_id=? WHERE id=?')->execute([$user_id, $motor_id, $start, $end, $status, $amount, $discount_id, $id]);
     header('Location: bookings.php');
     exit;

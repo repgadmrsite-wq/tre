@@ -6,10 +6,20 @@ require_once __DIR__ . '/../includes/admin_auth.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_payment'])) {
     csrf_validate();
-    $booking_id = (int)$_POST['booking_id'];
-    $amount = (int)$_POST['amount'];
-    $method = $_POST['method'];
-    $status = $_POST['status'];
+    $errors = [];
+    $booking_id = filter_input(INPUT_POST, 'booking_id', FILTER_VALIDATE_INT, ['options' => ['min_range' => 1]]);
+    if ($booking_id === false) { $errors[] = 'رزرو نامعتبر است'; }
+    $amount = filter_input(INPUT_POST, 'amount', FILTER_VALIDATE_INT, ['options' => ['min_range' => 0]]);
+    if ($amount === false) { $errors[] = 'مبلغ نامعتبر است'; }
+    $method = in_array($_POST['method'], ['online','pos','cash']) ? $_POST['method'] : null;
+    if (!$method) { $errors[] = 'روش پرداخت نامعتبر است'; }
+    $status = in_array($_POST['status'], ['paid','pending']) ? $_POST['status'] : null;
+    if (!$status) { $errors[] = 'وضعیت نامعتبر است'; }
+    if ($errors) {
+        $_SESSION['error'] = implode('<br>', $errors);
+        header('Location: finance.php');
+        exit;
+    }
     $user_id = $pdo->prepare('SELECT user_id FROM bookings WHERE id=?');
     $user_id->execute([$booking_id]);
     $uid = $user_id->fetchColumn();
@@ -85,6 +95,9 @@ for ($i=11;$i>=0;$i--) { $m=date('Y-m',strtotime("-$i month")); $monthlyLabels[]
   <main class="main-content">
     <div class="container-fluid">
       <h1 class="h3 mb-4">گزارش پرداخت‌ها</h1>
+      <?php if (!empty($_SESSION['error'])): ?>
+        <div class="alert alert-danger"><?= $_SESSION['error']; unset($_SESSION['error']); ?></div>
+      <?php endif; ?>
       <form method="post" class="row g-2 mb-4">
         <?= csrf_input(); ?>
         <input type="hidden" name="add_payment" value="1">

@@ -41,54 +41,93 @@ require_once __DIR__ . '/../includes/admin_auth.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_motor'])) {
     csrf_validate();
+    $errors = [];
     $model = trim($_POST['model']);
     $plate = trim($_POST['plate']);
     $color = trim($_POST['color']);
-    $capacity = (int)$_POST['capacity'];
+    $capacity = filter_input(INPUT_POST, 'capacity', FILTER_VALIDATE_INT, ['options' => ['min_range' => 0]]);
+    if ($capacity === false) { $errors[] = 'ظرفیت نامعتبر است'; }
     $description = trim($_POST['description']);
     $status = $_POST['status'];
-    $price_hour = (int)$_POST['price_hour'];
-    $price_half = (int)$_POST['price_half'];
-    $price_day = (int)$_POST['price_day'];
-    $price_week = (int)$_POST['price_week'];
-    $price_month = (int)$_POST['price_month'];
+    $price_hour = filter_input(INPUT_POST, 'price_hour', FILTER_VALIDATE_INT, ['options' => ['min_range' => 0]]);
+    if ($price_hour === false) { $errors[] = 'قیمت ساعتی نامعتبر است'; }
+    $price_half = filter_input(INPUT_POST, 'price_half', FILTER_VALIDATE_INT, ['options' => ['min_range' => 0]]);
+    if ($price_half === false) { $errors[] = 'قیمت نیم‌روزه نامعتبر است'; }
+    $price_day = filter_input(INPUT_POST, 'price_day', FILTER_VALIDATE_INT, ['options' => ['min_range' => 0]]);
+    if ($price_day === false) { $errors[] = 'قیمت روزانه نامعتبر است'; }
+    $price_week = filter_input(INPUT_POST, 'price_week', FILTER_VALIDATE_INT, ['options' => ['min_range' => 0]]);
+    if ($price_week === false) { $errors[] = 'قیمت هفتگی نامعتبر است'; }
+    $price_month = filter_input(INPUT_POST, 'price_month', FILTER_VALIDATE_INT, ['options' => ['min_range' => 0]]);
+    if ($price_month === false) { $errors[] = 'قیمت ماهانه نامعتبر است'; }
     $insurance = trim($_POST['insurance']);
-    $year = (int)$_POST['year'];
-    $mileage = (int)$_POST['mileage'];
-    $available = (int)($_POST['available'] ?? 1);
-    $lat = $_POST['lat'] ? (float)$_POST['lat'] : null;
-    $lng = $_POST['lng'] ? (float)$_POST['lng'] : null;
+    $year = filter_input(INPUT_POST, 'year', FILTER_VALIDATE_INT, ['options' => ['min_range' => 1900, 'max_range' => (int)date('Y')]]);
+    if ($year === false) { $errors[] = 'سال ساخت نامعتبر است'; }
+    $mileage = filter_input(INPUT_POST, 'mileage', FILTER_VALIDATE_INT, ['options' => ['min_range' => 0]]);
+    if ($mileage === false) { $errors[] = 'کیلومتر نامعتبر است'; }
+    $available = filter_input(INPUT_POST, 'available', FILTER_VALIDATE_INT, ['options' => ['min_range' => 0, 'max_range' => 1]]);
+    if ($available === false) { $errors[] = 'وضعیت موجودی نامعتبر است'; }
+    $lat = $_POST['lat'] !== '' ? filter_var($_POST['lat'], FILTER_VALIDATE_FLOAT) : null;
+    if ($_POST['lat'] !== '' && $lat === false) { $errors[] = 'عرض جغرافیایی نامعتبر است'; }
+    $lng = $_POST['lng'] !== '' ? filter_var($_POST['lng'], FILTER_VALIDATE_FLOAT) : null;
+    if ($_POST['lng'] !== '' && $lng === false) { $errors[] = 'طول جغرافیایی نامعتبر است'; }
 
-    if ($model && $price_day) {
-        $stmt = $pdo->prepare('INSERT INTO motorcycles (model, plate, color, capacity, description, status, price_per_hour, price_half_day, price_per_day, price_per_week, price_per_month, insurance, year, mileage, available, lat, lng) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
-        $stmt->execute([$model, $plate, $color, $capacity, $description, $status, $price_hour, $price_half, $price_day, $price_week, $price_month, $insurance, $year, $mileage, $available, $lat, $lng]);
-        $motorId = $pdo->lastInsertId();
-        saveMotorImages($pdo, $motorId);
+    if ($model === '') { $errors[] = 'مدل الزامی است'; }
+
+    if ($errors) {
+        $_SESSION['error'] = implode('<br>', $errors);
+        header('Location: motors.php');
+        exit;
     }
+
+    $stmt = $pdo->prepare('INSERT INTO motorcycles (model, plate, color, capacity, description, status, price_per_hour, price_half_day, price_per_day, price_per_week, price_per_month, insurance, year, mileage, available, lat, lng) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
+    $stmt->execute([$model, $plate, $color, $capacity, $description, $status, $price_hour, $price_half, $price_day, $price_week, $price_month, $insurance, $year, $mileage, $available, $lat, $lng]);
+    $motorId = $pdo->lastInsertId();
+    saveMotorImages($pdo, $motorId);
     header('Location: motors.php');
     exit;
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_motor'])) {
     csrf_validate();
+    $errors = [];
     $id = (int)$_POST['motor_id'];
     $model = trim($_POST['model']);
     $plate = trim($_POST['plate']);
     $color = trim($_POST['color']);
-    $capacity = (int)$_POST['capacity'];
+    $capacity = filter_input(INPUT_POST, 'capacity', FILTER_VALIDATE_INT, ['options' => ['min_range' => 0]]);
+    if ($capacity === false) { $errors[] = 'ظرفیت نامعتبر است'; }
     $description = trim($_POST['description']);
     $status = $_POST['status'];
-    $price_hour = (int)$_POST['price_hour'];
-    $price_half = (int)$_POST['price_half'];
-    $price_day = (int)$_POST['price_day'];
-    $price_week = (int)$_POST['price_week'];
-    $price_month = (int)$_POST['price_month'];
+    $price_hour = filter_input(INPUT_POST, 'price_hour', FILTER_VALIDATE_INT, ['options' => ['min_range' => 0]]);
+    if ($price_hour === false) { $errors[] = 'قیمت ساعتی نامعتبر است'; }
+    $price_half = filter_input(INPUT_POST, 'price_half', FILTER_VALIDATE_INT, ['options' => ['min_range' => 0]]);
+    if ($price_half === false) { $errors[] = 'قیمت نیم‌روزه نامعتبر است'; }
+    $price_day = filter_input(INPUT_POST, 'price_day', FILTER_VALIDATE_INT, ['options' => ['min_range' => 0]]);
+    if ($price_day === false) { $errors[] = 'قیمت روزانه نامعتبر است'; }
+    $price_week = filter_input(INPUT_POST, 'price_week', FILTER_VALIDATE_INT, ['options' => ['min_range' => 0]]);
+    if ($price_week === false) { $errors[] = 'قیمت هفتگی نامعتبر است'; }
+    $price_month = filter_input(INPUT_POST, 'price_month', FILTER_VALIDATE_INT, ['options' => ['min_range' => 0]]);
+    if ($price_month === false) { $errors[] = 'قیمت ماهانه نامعتبر است'; }
     $insurance = trim($_POST['insurance']);
-    $year = (int)$_POST['year'];
-    $mileage = (int)$_POST['mileage'];
-    $available = (int)($_POST['available'] ?? 1);
-    $lat = $_POST['lat'] ? (float)$_POST['lat'] : null;
-    $lng = $_POST['lng'] ? (float)$_POST['lng'] : null;
+    $year = filter_input(INPUT_POST, 'year', FILTER_VALIDATE_INT, ['options' => ['min_range' => 1900, 'max_range' => (int)date('Y')]]);
+    if ($year === false) { $errors[] = 'سال ساخت نامعتبر است'; }
+    $mileage = filter_input(INPUT_POST, 'mileage', FILTER_VALIDATE_INT, ['options' => ['min_range' => 0]]);
+    if ($mileage === false) { $errors[] = 'کیلومتر نامعتبر است'; }
+    $available = filter_input(INPUT_POST, 'available', FILTER_VALIDATE_INT, ['options' => ['min_range' => 0, 'max_range' => 1]]);
+    if ($available === false) { $errors[] = 'وضعیت موجودی نامعتبر است'; }
+    $lat = $_POST['lat'] !== '' ? filter_var($_POST['lat'], FILTER_VALIDATE_FLOAT) : null;
+    if ($_POST['lat'] !== '' && $lat === false) { $errors[] = 'عرض جغرافیایی نامعتبر است'; }
+    $lng = $_POST['lng'] !== '' ? filter_var($_POST['lng'], FILTER_VALIDATE_FLOAT) : null;
+    if ($_POST['lng'] !== '' && $lng === false) { $errors[] = 'طول جغرافیایی نامعتبر است'; }
+
+    if ($model === '') { $errors[] = 'مدل الزامی است'; }
+
+    if ($errors) {
+        $_SESSION['error'] = implode('<br>', $errors);
+        header('Location: motors.php');
+        exit;
+    }
+
     $stmt = $pdo->prepare('UPDATE motorcycles SET model=?, plate=?, color=?, capacity=?, description=?, status=?, price_per_hour=?, price_half_day=?, price_per_day=?, price_per_week=?, price_per_month=?, insurance=?, year=?, mileage=?, available=?, lat=?, lng=? WHERE id=?');
     $stmt->execute([$model, $plate, $color, $capacity, $description, $status, $price_hour, $price_half, $price_day, $price_week, $price_month, $insurance, $year, $mileage, $available, $lat, $lng, $id]);
     saveMotorImages($pdo, $id);
@@ -162,6 +201,9 @@ $motors = $stmt->fetchAll(PDO::FETCH_ASSOC);
   <main class="main-content">
     <div class="container-fluid">
       <h1 class="h3 mb-4">مدیریت موتورها</h1>
+      <?php if (!empty($_SESSION['error'])): ?>
+        <div class="alert alert-danger"><?= $_SESSION['error']; unset($_SESSION['error']); ?></div>
+      <?php endif; ?>
       <form method="post" enctype="multipart/form-data" class="row g-2 mb-4">
         <?= csrf_input(); ?>
         <?php if($editMotor): ?>
