@@ -264,6 +264,7 @@
         // Initialize island map slider section
         initIslandMap();
         initHeroSection();
+        initUserMenu();
     });
 
     /* ============ Theme Switcher ============ */
@@ -1309,3 +1310,11 @@
         });
     }
 })();
+
+function initUserMenu() {
+    const menu = document.querySelector(".user-menu");
+    if (!menu) return;
+    const toggle = menu.querySelector(".user-toggle");
+    toggle.addEventListener("click", () => menu.classList.toggle("open"));
+    document.addEventListener("click", (e) => { if (!menu.contains(e.target)) menu.classList.remove("open"); });
+}
