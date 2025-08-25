@@ -38,6 +38,7 @@ if (session_status() === PHP_SESSION_NONE) {
                         <li><a href="user/payments.php">فاکتورها</a></li>
                         <li><a href="user/profile.php">پروفایل</a></li>
                         <li><a href="user/support.php">تیکت پشتیبانی</a></li>
+                        <li><a href="wheel.php">گردونه شانس</a></li>
                         <li><a href="user/payments.php">شارژ حساب</a></li>
                         <li><a href="logout.php">خروج</a></li>
                     </ul>
