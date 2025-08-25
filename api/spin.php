@@ -28,11 +28,22 @@ $prizes = [
 ];
 $index = random_int(0, count($prizes) - 1);
 $prize = $prizes[$index];
-$pdo->beginTransaction();
-if (isset($prize['wallet'])) {
-    $pdo->prepare('UPDATE users SET wallet_balance = wallet_balance + ? WHERE id = ?')->execute([$prize['wallet'], $userId]);
-    $pdo->prepare('INSERT INTO wallet_transactions (user_id, amount, type, created_at) VALUES (?, ?, "credit", NOW())')->execute([$userId, $prize['wallet']]);
+try {
+    $pdo->beginTransaction();
+    if (isset($prize['wallet'])) {
+        $pdo->prepare('UPDATE users SET wallet_balance = wallet_balance + ? WHERE id = ?')
+            ->execute([$prize['wallet'], $userId]);
+        $pdo->prepare('INSERT INTO wallet_transactions (user_id, amount, type, created_at) VALUES (?, ?, "credit", NOW())')
+            ->execute([$userId, $prize['wallet']]);
+    }
+    $pdo->prepare('INSERT INTO wheel_spins (user_id, prize, spin_date) VALUES (?, ?, ?)')
+        ->execute([$userId, $prize['title'], $today]);
+    $pdo->commit();
+    echo json_encode(['success' => true, 'index' => $index, 'prize' => $prize['title']]);
+} catch (Throwable $e) {
+    if ($pdo->inTransaction()) {
+        $pdo->rollBack();
+    }
+    http_response_code(500);
+    echo json_encode(['success' => false, 'message' => 'خطای داخلی سرور']);
 }
-$pdo->prepare('INSERT INTO wheel_spins (user_id, prize, spin_date) VALUES (?, ?, ?)')->execute([$userId, $prize['title'], $today]);
-$pdo->commit();
-echo json_encode(['success' => true, 'index' => $index, 'prize' => $prize['title']]);

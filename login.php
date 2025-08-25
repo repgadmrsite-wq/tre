@@ -14,7 +14,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($admin = $stmt->fetch()) {
             if (password_verify($password, $admin['password'])) {
                 session_regenerate_id(true);
-                $_SESSION['user'] = ['id'=>$admin['id'], 'name'=>$admin['name'], 'email'=>$admin['email'], 'role'=>'admin'];
+                $_SESSION['user'] = [
+                    'id'    => $admin['id'],
+                    'name'  => $admin['name'],
+                    'email' => $admin['email'],
+                    'role'  => $admin['role'] // use role from DB so admin_auth works
+                ];
                 header('Location: admin/admin.php');
                 exit;
             }

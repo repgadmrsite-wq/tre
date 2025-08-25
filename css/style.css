@@ -1191,7 +1191,7 @@ body.dark-mode .theme-switcher .icon-moon {
 
 /* --------- Footer --------- */
 .main-footer {
-    background: url('../img/footer-bg.png') center/cover no-repeat fixed;
+    background: url('../img/footer-bg.png') center 20%/cover no-repeat fixed; /* show slightly higher portion */
     position: relative;
     border-top: 1px solid var(--border-color);
     padding: 20px 0;
