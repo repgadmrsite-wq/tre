@@ -258,6 +258,14 @@ body:not(.dark-mode) .theme-switcher .icon-moon {
 /* --------- Booking Section --------- */
 .booking-section {
     padding: var(--section-spacing) 0;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+    max-height: 2000px;
+}
+.booking-section.collapsed {
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    overflow: hidden;
 }
 
 /* عرض کامل برای بخش رزرو: حذف محدودیت عرض کانتینر */
@@ -355,6 +363,8 @@ body:not(.dark-mode) .theme-switcher .icon-moon {
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
     user-select: none;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
 }
 .half-day-options input[type="radio"]:checked + label {
     background-color: var(--primary-color);
@@ -464,6 +474,8 @@ input:focus, select:focus {
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
     user-select: none;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
 }
 .duration-options input[type="radio"]:checked + label {
     background-color: var(--primary-color);
@@ -708,6 +720,8 @@ button:disabled {
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
     user-select: none;
     margin: 4px;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
 }
 .hourly-options input[type="radio"]:checked + label {
     background-color: var(--primary-color);
@@ -738,6 +752,8 @@ button:disabled {
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
     user-select: none;
     margin: 3px;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
 }
 .daily-options .day-options input[type="radio"]:checked + label {
     background-color: var(--primary-color);

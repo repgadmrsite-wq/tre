@@ -310,12 +310,16 @@
 
     /* ============ Hero Section Buttons ============ */
     function initHeroSection() {
-        const viewBtn = document.getElementById('hero-view-btn');
+        const quickBtn = document.getElementById('hero-quick-btn');
         const contactBtn = document.getElementById('hero-contact-btn');
-        if (viewBtn) {
-            viewBtn.addEventListener('click', () => {
-                const readySection = document.getElementById('ready');
-                if (readySection) readySection.scrollIntoView({ behavior: 'smooth' });
+        if (quickBtn) {
+            quickBtn.addEventListener('click', () => {
+                const bookingSection = document.getElementById('booking');
+                if (!bookingSection) return;
+                bookingSection.classList.toggle('collapsed');
+                if (!bookingSection.classList.contains('collapsed')) {
+                    bookingSection.scrollIntoView({ behavior: 'smooth' });
+                }
             });
         }
         if (contactBtn) {
@@ -463,6 +467,7 @@
         const endDateInput = document.getElementById('end-date-input');
         const startTimeInput = document.getElementById('start-time');
         const endTimeInput = document.getElementById('end-time');
+        const dateRangeLabel = document.getElementById('date-range-label');
 
         // Quick date and duration-specific option containers
         const quickDateButtons = document.getElementById('quick-date-buttons');
@@ -482,7 +487,7 @@
             });
         }
 
-        // Quick date buttons for hourly bookings
+        // Quick date buttons for hourly/half-day bookings
         if (todayButton) {
             todayButton.addEventListener('click', () => {
                 reservationState.startDate = 'امروز';
@@ -493,12 +498,14 @@
                     btns.forEach(btn => btn.classList.remove('active'));
                     todayButton.classList.add('active');
                 }
-                // Reset end date/time since hourly only needs start date and start time
-                reservationState.endDate = null;
-                reservationState.endTime = null;
-                // Focus on start time input if visible
-                if (reservationState.duration === 'hourly' && startTimeInput && startTimeInput.parentElement && startTimeInput.parentElement.style.display !== 'none') {
-                    startTimeInput.focus();
+                if (reservationState.duration === 'half-day') {
+                    reservationState.endDate = reservationState.startDate;
+                } else {
+                    reservationState.endDate = null;
+                    reservationState.endTime = null;
+                    if (reservationState.duration === 'hourly' && startTimeInput && startTimeInput.parentElement && startTimeInput.parentElement.style.display !== 'none') {
+                        startTimeInput.focus();
+                    }
                 }
                 updateSummary();
             });
@@ -512,10 +519,14 @@
                     btns.forEach(btn => btn.classList.remove('active'));
                     tomorrowButton.classList.add('active');
                 }
-                reservationState.endDate = null;
-                reservationState.endTime = null;
-                if (reservationState.duration === 'hourly' && startTimeInput && startTimeInput.parentElement && startTimeInput.parentElement.style.display !== 'none') {
-                    startTimeInput.focus();
+                if (reservationState.duration === 'half-day') {
+                    reservationState.endDate = reservationState.startDate;
+                } else {
+                    reservationState.endDate = null;
+                    reservationState.endTime = null;
+                    if (reservationState.duration === 'hourly' && startTimeInput && startTimeInput.parentElement && startTimeInput.parentElement.style.display !== 'none') {
+                        startTimeInput.focus();
+                    }
                 }
                 updateSummary();
             });
@@ -581,15 +592,14 @@
             reservationState.dayCount = null;
             // Handle half-day duration
             if (value === 'half-day') {
-                // Show half-day options and start date input
+                if (dateRangeLabel) dateRangeLabel.textContent = 'انتخاب روز شروع';
                 if (halfDayOptions) halfDayOptions.classList.remove('hidden');
-                if (startDateInput) startDateInput.style.display = '';
-                // Hide end date input, daily and hourly options, quick date buttons
+                // use quick buttons for selecting day
+                if (quickDateButtons) quickDateButtons.classList.remove('hidden');
+                if (startDateInput) startDateInput.style.display = 'none';
                 if (endDateInput) endDateInput.style.display = 'none';
                 if (dailyOptions) dailyOptions.classList.add('hidden');
                 if (hourlyOptions) hourlyOptions.classList.add('hidden');
-                if (quickDateButtons) quickDateButtons.classList.add('hidden');
-                // Hide time inputs
                 if (startTimeInput && startTimeInput.parentElement) {
                     startTimeInput.parentElement.style.display = 'none';
                     startTimeInput.required = false;
@@ -598,17 +608,15 @@
                     endTimeInput.parentElement.style.display = 'none';
                     endTimeInput.required = false;
                 }
-                // Clear date/time values not relevant
-                reservationState.endDate = reservationState.startDate;
                 reservationState.startTime = null;
                 reservationState.endTime = null;
+                reservationState.endDate = reservationState.startDate;
             } else if (value === 'daily') {
+                if (dateRangeLabel) dateRangeLabel.textContent = 'انتخاب روز شروع';
                 // Hide half-day and hourly options
                 if (halfDayOptions) halfDayOptions.classList.add('hidden');
                 if (hourlyOptions) hourlyOptions.classList.add('hidden');
-                // Hide quick date buttons
                 if (quickDateButtons) quickDateButtons.classList.add('hidden');
-                // Show daily options and start date input
                 if (dailyOptions) dailyOptions.classList.remove('hidden');
                 if (startDateInput) startDateInput.style.display = '';
                 // Hide end date input (we no longer need a separate end date field)
@@ -628,6 +636,7 @@
                 // End date will be calculated based on dayCount in summary
                 reservationState.endDate = null;
             } else {
+                if (dateRangeLabel) dateRangeLabel.textContent = 'بازه زمانی اجاره:';
                 // Hourly duration
                 // Hide half-day and daily options
                 if (halfDayOptions) halfDayOptions.classList.add('hidden');
@@ -716,6 +725,10 @@
             reservationState.startTime = e.target.value;
             computeEndTime();
             updateSummary();
+            if (reservationState.duration === 'hourly') {
+                const opt = document.getElementById('hourly-options');
+                if (opt) opt.scrollIntoView({ behavior: 'smooth' });
+            }
         });
         if (endTimeInput) endTimeInput.addEventListener('change', (e) => {
             reservationState.endTime = e.target.value;
