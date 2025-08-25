@@ -32,4 +32,5 @@ if (!isset($activePage)) { $activePage = ''; }
   </div>
 </aside>
 <div id="admin-toast-container" class="position-fixed top-0 end-0 p-3" style="z-index:1080"></div>
+<script>(function(){if(localStorage.getItem('theme')==='dark') document.body.classList.add('dark-mode');})();</script>
 <script src="../js/admin-panel.js"></script>

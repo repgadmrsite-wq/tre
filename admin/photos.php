@@ -25,6 +25,7 @@ $photos = $pdo->query('SELECT gp.*, u.name FROM gallery_photos gp JOIN users u O
     <meta charset="UTF-8">
     <title>عکس‌های کاربران</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+<link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/admin-panel.css">
 </head>
 <body>

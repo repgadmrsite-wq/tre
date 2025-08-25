@@ -9,30 +9,33 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = trim($_POST['email'] ?? '');
     $password = trim($_POST['password'] ?? '');
     if ($email !== '' && $password !== '') {
-        $hash = md5($password);
-        $stmt = $pdo->prepare('SELECT id, name, email FROM admins WHERE email = ? AND password = ? LIMIT 1');
-        $stmt->execute([$email, $hash]);
+        $stmt = $pdo->prepare('SELECT id, name, email, password, role FROM admins WHERE email = ? LIMIT 1');
+        $stmt->execute([$email]);
         if ($admin = $stmt->fetch()) {
-            session_regenerate_id(true);
-            $_SESSION['user'] = ['id'=>$admin['id'], 'name'=>$admin['name'], 'email'=>$admin['email'], 'role'=>'admin'];
-            header('Location: admin/admin.php');
-            exit;
+            if (password_verify($password, $admin['password'])) {
+                session_regenerate_id(true);
+                $_SESSION['user'] = ['id'=>$admin['id'], 'name'=>$admin['name'], 'email'=>$admin['email'], 'role'=>'admin'];
+                header('Location: admin/admin.php');
+                exit;
+            }
         }
-        $stmt = $pdo->prepare('SELECT id, name, email, language, notify_email, wallet_balance FROM users WHERE email = ? AND password = ? LIMIT 1');
-        $stmt->execute([$email, $hash]);
+        $stmt = $pdo->prepare('SELECT id, name, email, password, language, notify_email, wallet_balance FROM users WHERE email = ? LIMIT 1');
+        $stmt->execute([$email]);
         if ($user = $stmt->fetch()) {
-            session_regenerate_id(true);
-            $_SESSION['user'] = [
-                'id'=>$user['id'],
-                'name'=>$user['name'],
-                'email'=>$user['email'],
-                'role'=>'user',
-                'language'=>$user['language'],
-                'notify_email'=>$user['notify_email'],
-                'wallet_balance'=>$user['wallet_balance']
-            ];
-            header('Location: user/dashboard.php');
-            exit;
+            if (password_verify($password, $user['password'])) {
+                session_regenerate_id(true);
+                $_SESSION['user'] = [
+                    'id'=>$user['id'],
+                    'name'=>$user['name'],
+                    'email'=>$user['email'],
+                    'role'=>'user',
+                    'language'=>$user['language'],
+                    'notify_email'=>$user['notify_email'],
+                    'wallet_balance'=>$user['wallet_balance']
+                ];
+                header('Location: user/dashboard.php');
+                exit;
+            }
         }
         $error = 'ایمیل یا رمز عبور اشتباه است';
     } else {
@@ -54,6 +57,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         .login-container{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:1rem;}
         .login-card{width:100%;max-width:450px;}
     </style>
+    <script>
+    (function(){
+        var t=localStorage.getItem('theme');
+        if(t==='dark') document.documentElement.classList.add('dark-mode');
+    })();
+    </script>
 </head>
 <body>
 <div class="login-container">

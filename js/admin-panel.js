@@ -1,3 +1,5 @@
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') document.body.classList.add('dark-mode');
 document.addEventListener('DOMContentLoaded', function () {
   if (typeof dailyLabels !== 'undefined') {
     const ctxDaily = document.getElementById('dailyRevenueChart');

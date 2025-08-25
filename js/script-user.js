@@ -1,5 +1,7 @@
 const NESHAN_MAP_API_KEY = window.NESHAN_MAP_API_KEY || '';
 const KISH_BOUNDS = [[26.4,53.8],[26.65,54.1]];
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') document.body.classList.add('dark-mode');
 
 document.addEventListener('DOMContentLoaded', function(){
     fetch('notifications.php?ajax=1')
@@ -144,12 +146,12 @@ document.addEventListener('DOMContentLoaded', function(){
             zoom: 12,
             maxBounds: KISH_BOUNDS
         });
-        var greenIcon = new L.Icon({iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png', shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png', iconSize:[25,41], iconAnchor:[12,41], popupAnchor:[1,-34], shadowSize:[41,41]});
-        var redIcon = new L.Icon({iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png', shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png', iconSize:[25,41], iconAnchor:[12,41], popupAnchor:[1,-34], shadowSize:[41,41]});
+        var activeIcon = L.divIcon({html:'<i class="bi bi-scooter text-success"></i>', className:'motor-marker', iconSize:[32,32], iconAnchor:[16,16]});
+        var reservedIcon = L.divIcon({html:'<i class="bi bi-scooter text-secondary"></i>', className:'motor-marker', iconSize:[32,32], iconAnchor:[16,16]});
         var markers = [];
         mapMotors.forEach(function(m){
             if(m.lat && m.lng){
-                var marker = L.marker([m.lat, m.lng], {icon: m.available==1 ? greenIcon : redIcon}).addTo(map).bindPopup('<strong>'+m.model+'</strong>');
+                var marker = L.marker([m.lat, m.lng], {icon: m.available==1 ? activeIcon : reservedIcon}).addTo(map).bindPopup('<strong>'+m.model+'</strong>');
                 markers.push({marker: marker, available: m.available==1});
             }
         });

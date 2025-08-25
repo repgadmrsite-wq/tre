@@ -33,9 +33,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (!$errors) {
         $hashed = password_hash($password, PASSWORD_DEFAULT);
-        $stmt = $pdo->prepare('INSERT INTO users (name, phone, email, password, status, language, notify_email) VALUES (?,?,?,?,"regular","fa",1)');
+        $stmt = $pdo->prepare('INSERT INTO users (name, phone, email, password, status, language, notify_email, wallet_balance) VALUES (?,?,?,?,"regular","fa",1,0)');
         $stmt->execute([$name, $phone, $email, $hashed]);
-        header('Location: login.php?registered=1');
+        $userId = $pdo->lastInsertId();
+        session_regenerate_id(true);
+        $_SESSION['user'] = ['id'=>$userId,'name'=>$name,'email'=>$email,'role'=>'user','language'=>'fa','notify_email'=>1,'wallet_balance'=>0];
+        header('Location: user/dashboard.php');
         exit;
     }
 }
@@ -52,6 +55,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <style>
         body {background-color: var(--light-color, #f8f9fa);} .register-container {min-height:100vh; display:flex; align-items:center; justify-content:center; padding:1rem;} .register-card{width:100%; max-width:500px;}
     </style>
+    <script>
+    (function(){var t=localStorage.getItem('theme');if(t==='dark') document.documentElement.classList.add('dark-mode');})();
+    </script>
 </head>
 <body>
 <div class="register-container">

@@ -41,6 +41,7 @@ $overdue = $pdo->query("SELECT u.name user_name,m.model motor_model,b.end_date F
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>داشبورد مدیریت - KISH UP</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+<link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="../css/admin-panel.css">
 </head>
