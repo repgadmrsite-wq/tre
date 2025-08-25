@@ -262,7 +262,7 @@
         setupNearestButton();
         // Initialize island map slider section
         initIslandMap();
-        initHeroOverlay();
+        initHeroSection();
     });
 
     /* ============ Theme Switcher ============ */
@@ -307,25 +307,20 @@
         });
     }
 
-    /* ============ Hero Overlay ============ */
-    function initHeroOverlay() {
-        const availableCountElem = document.querySelector('.hero-overlay .available-count');
-        const reservedCountElem = document.querySelector('.hero-overlay .reserved-count');
-        const ctaBtn = document.getElementById('hero-cta');
-        // Update counts
-        if (availableCountElem && reservedCountElem) {
-            const available = vehiclesData.filter(v => v.status === 'available').length;
-            const reserved = vehiclesData.filter(v => v.status === 'reserved').length;
-            availableCountElem.textContent = available.toString();
-            reservedCountElem.textContent = reserved.toString();
+    /* ============ Hero Section Buttons ============ */
+    function initHeroSection() {
+        const viewBtn = document.getElementById('hero-view-btn');
+        const contactBtn = document.getElementById('hero-contact-btn');
+        if (viewBtn) {
+            viewBtn.addEventListener('click', () => {
+                const readySection = document.getElementById('ready');
+                if (readySection) readySection.scrollIntoView({ behavior: 'smooth' });
+            });
         }
-        // Scroll to booking on CTA click
-        if (ctaBtn) {
-            ctaBtn.addEventListener('click', () => {
-                const bookingSection = document.getElementById('booking');
-                if (bookingSection) {
-                    bookingSection.scrollIntoView({ behavior: 'smooth' });
-                }
+        if (contactBtn) {
+            contactBtn.addEventListener('click', () => {
+                const contactSection = document.getElementById('contact');
+                if (contactSection) contactSection.scrollIntoView({ behavior: 'smooth' });
             });
         }
     }

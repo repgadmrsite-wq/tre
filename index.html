@@ -17,10 +17,10 @@
     <!-- ===================== Header ===================== -->
     <header class="main-header">
         <div class="container header-container">
-            <a href="#island-map" class="logo"><img src="img/kishup-logo.png" alt="KishUp" class="brand-logo"></a>
+            <a href="#hero" class="logo"><img src="img/kishup-logo.png" alt="KishUp" class="brand-logo"></a>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="#island-map">خانه</a></li>
+                    <li><a href="#hero">خانه</a></li>
                     <li><a href="#booking">رزرو موتور</a></li>
                     <li><a href="#specials">ویژه‌ها</a></li>
                     <li><a href="#ready">موتورهای آماده</a></li>
@@ -46,23 +46,26 @@
 
     <!-- ===================== Main Content ===================== -->
     <main>
-        <!-- Hero Section removed: the live map now serves as the top section -->
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <h1>اجاره موتور برقی در کیش</h1>
+                <p>آزادی و هیجان را تجربه کن</p>
+                <div class="hero-buttons">
+                    <button type="button" id="hero-view-btn" class="btn-glass primary">مشاهده موتورها</button>
+                    <button type="button" id="hero-contact-btn" class="btn-glass outline">تماس با ما</button>
+                </div>
+            </div>
+        </section>
 
-        <!-- Island Map Section / Hero -->
-        <section id="island-map" class="section map-section hero-map">
+        <!-- Island Map Section -->
+        <section id="island-map" class="section map-section">
             <div class="container map-hero-container">
                 <div class="section-header">
                     <h2>نقشهٔ زندهٔ موتورها</h2>
                     <p>نمایش موتورهای رزرو شده و آزاد در سراسر جزیرهٔ کیش</p>
                 </div>
                 <div id="island-map-container" class="island-map-wrapper"></div>
-                <!-- Hero overlay with CTA and metrics -->
-                <div id="hero-overlay" class="hero-overlay">
-                    <h1 class="hero-title">تجربه متفاوت با KISHUP</h1>
-                    <p class="hero-subtitle">موتور دلخواهت را در لحظه رزرو کن</p>
-                    <p id="hero-metrics" class="hero-metrics">موتورهای موجود: <span class="available-count">0</span> | رزرو شده: <span class="reserved-count">0</span></p>
-                    <button type="button" id="hero-cta" class="cta-button">رزرو سریع</button>
-                </div>
             </div>
         </section>
 

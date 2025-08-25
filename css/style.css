@@ -184,69 +184,62 @@ body:not(.dark-mode) .theme-switcher .icon-moon {
 }
 
 /* --------- Hero Section --------- */
-.hero-section {
+/* New hero section */
+.hero {
     position: relative;
-    min-height: 60vh;
+    min-height: 80vh;
+    background: url('../img/hero.png') center/cover no-repeat;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
-    background: var(--hero-overlay) url('https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=2070&auto=format&fit=crop') no-repeat center center / cover;
-    padding: 80px 20px;
+    align-items: flex-start;
 }
-
-/* Hero map section overlay */
-.hero-map {
-    position: relative;
-}
-/* Ensure container holds relative positioning for hero overlay */
-.map-hero-container {
-    position: relative;
-}
-.hero-overlay {
+.hero::after {
+    content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #fff;
-    padding: 20px;
+    inset: 0;
     pointer-events: none;
-    background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.6) 100%);
-    border-radius: var(--radius-large);
+    background: radial-gradient(circle at center, rgba(0,0,0,0) 60%, rgba(0,0,0,0.6) 100%);
 }
-.hero-overlay h1 {
-    font-size: clamp(1.8rem, 4vw, 3rem);
-    margin-bottom: 0.5rem;
-    pointer-events: auto;
-}
-.hero-overlay p {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    pointer-events: auto;
-}
-.hero-overlay .hero-metrics {
-    font-size: 0.9rem;
-    margin-bottom: 1.5rem;
-    pointer-events: auto;
-}
-.hero-overlay .cta-button {
-    pointer-events: auto;
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 40px;
+    color: #fff;
+    text-align: left;
 }
 .hero-content h1 {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    margin: 0;
+    margin: 0 0 10px;
+    font-size: 2.5rem;
 }
 .hero-content p {
+    margin: 0 0 20px;
     font-size: 1.2rem;
-    margin: 20px auto;
-    max-width: 600px;
+}
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+.btn-glass {
+    padding: 10px 25px;
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.4);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+.btn-glass.primary {
+    background-color: rgba(34,197,94,0.6);
+    border-color: rgba(34,197,94,0.8);
+}
+.btn-glass.outline {
+    background-color: rgba(255,255,255,0.1);
+}
+.btn-glass.primary:hover {
+    background-color: rgba(34,197,94,0.8);
+}
+.btn-glass.outline:hover {
+    background-color: rgba(255,255,255,0.25);
 }
 .cta-button {
     display: inline-block;
