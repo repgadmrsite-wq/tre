@@ -120,7 +120,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="login-container">
         <div class="card login-card p-4 p-md-5">
             <div class="text-center mb-4">
-                <a class="navbar-brand fs-2" href="index.html">KISH UP</a>
+                <a href="index.html"><img src="img/kishup-logo.png" alt="KishUp" class="auth-logo"></a>
                 <h1 class="h3 my-3 fw-normal">ورود به حساب کاربری</h1>
             </div>
               <?php if (isset($_GET['registered'])): ?>

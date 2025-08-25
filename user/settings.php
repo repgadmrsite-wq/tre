@@ -41,7 +41,9 @@ $prefs = $stmt->fetch();
 <div class="dashboard-layout">
     <aside class="sidebar d-flex flex-column p-0">
         <div class="sidebar-header text-center">
-            <a class="navbar-brand fs-4 text-white" href="../index.html">KISH UP</a>
+            <a class="navbar-brand d-block" href="../index.html">
+                <img src="../img/kishup-logo.png" alt="KishUp" class="sidebar-logo mx-auto">
+            </a>
         </div>
         <ul class="nav flex-column my-4">
             <li class="nav-item"><a class="nav-link" href="dashboard.php"><i class="bi bi-speedometer2"></i><span>داشبورد</span></a></li>

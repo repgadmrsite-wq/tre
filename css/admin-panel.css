@@ -35,6 +35,12 @@ body {
     padding: 1.5rem;
     border-bottom: 1px solid rgba(255,255,255,0.1);
 }
+.sidebar-logo {
+    height: 40px;
+    display: block;
+    margin: 0 auto;
+    filter: drop-shadow(0 0 6px var(--primary-color));
+}
 .main-content {
     flex-grow: 1;
     padding: 2rem;

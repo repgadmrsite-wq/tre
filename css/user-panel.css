@@ -4,6 +4,7 @@
 .sidebar .nav-link i { margin-left:0.75rem; font-size:1.2rem; width:24px; text-align:center; }
 .sidebar .nav-link.active, .sidebar .nav-link:hover { color:#fff; background-color:var(--primary-color); border-right-color:var(--bs-warning); }
 .sidebar .sidebar-header { padding:1.5rem; border-bottom:1px solid rgba(255,255,255,0.1); }
+.sidebar-logo{height:40px;display:block;margin:0 auto;filter:drop-shadow(0 0 6px var(--primary-color));}
 .main-content { flex-grow:1; padding:2rem; overflow-y:auto; }
 @media (max-width:767.98px){ .sidebar{width:70px;} .sidebar .sidebar-header .navbar-brand, .sidebar .nav-link span{display:none;} .sidebar .nav-link{justify-content:center;} .sidebar .nav-link i{margin-left:0;} }
 

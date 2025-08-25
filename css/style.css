@@ -114,6 +114,13 @@ body.dark-mode .main-header {
     display: block;
     filter: drop-shadow(0 0 6px var(--primary-color));
 }
+
+.auth-logo {
+    height: 60px;
+    display: block;
+    margin: 0 auto 1rem;
+    filter: drop-shadow(0 0 8px var(--primary-color));
+}
 .main-nav ul {
     display: flex;
     list-style: none;
