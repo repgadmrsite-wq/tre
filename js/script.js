@@ -217,6 +217,7 @@
     const NESHAN_MAP_API_KEY = window.NESHAN_MAP_API_KEY || '';
     // Search API key (service) used to fetch suggestions; fallback to local landmarks when empty
     const NESHAN_SEARCH_API_KEY = window.NESHAN_SEARCH_API_KEY || NESHAN_SERVICE_API_KEY;
+    const KISH_BOUNDS = [[26.4,53.8],[26.65,54.1]];
 
     // Reservation state (stores user selections)
     const reservationState = {
@@ -385,38 +386,18 @@
         function initDeliveryMap() {
             const mapContainer = document.getElementById('delivery-map-container');
             if (!mapContainer) return;
-            // اگر SDK نشان لود شده باشد، تلاش می‌کنیم از آن استفاده کنیم
-            let mapCreated = false;
             try {
-                if (typeof L !== 'undefined' && typeof L.Map === 'function') {
-                    // استفاده از نقشهٔ نشان با کلید API. این کلید باید توسط مالک سایت در صورت داشتن حساب نشان جایگزین شود.
-                    deliveryMap = new L.Map('delivery-map-container', {
-                        key: NESHAN_MAP_API_KEY,
-                        maptype: 'neshan',
-                        poi: true,
-                        traffic: false,
-                        center: [26.5332, 53.9986],
-                        zoom: 13
-                    });
-                    mapCreated = true;
-                }
+                deliveryMap = new L.Map('delivery-map-container', {
+                    key: NESHAN_MAP_API_KEY,
+                    maptype: 'neshan',
+                    poi: true,
+                    traffic: false,
+                    center: [26.5332, 53.9986],
+                    zoom: 13,
+                    maxBounds: KISH_BOUNDS
+                });
             } catch (err) {
                 console.error('خطا در بارگذاری نقشهٔ نشان:', err);
-            }
-            // اگر نقشهٔ نشان ایجاد نشد، از لایهٔ OSM به عنوان پشتیبان استفاده می‌کنیم
-            if (!mapCreated) {
-                // اطمینان از وجود Leaflet
-                if (typeof L !== 'undefined') {
-                    deliveryMap = L.map(mapContainer).setView([26.5332, 53.9986], 13);
-                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                        attribution: '&copy; OpenStreetMap contributors',
-                        maxZoom: 19
-                    }).addTo(deliveryMap);
-                    mapCreated = true;
-                }
-            }
-            if (!mapCreated) {
-                console.error('نقشه نمی‌تواند بارگذاری شود.');
                 return;
             }
             // ذخیره نقشه در عنصر برای دسترسی در سایر بخش‌ها
@@ -1217,36 +1198,18 @@
         const mapContainer = document.getElementById('island-map-container');
         if (!mapContainer) return;
         let islandMap = null;
-        let mapCreated = false;
-        // Try to use Neshan SDK with API key
         try {
-            if (typeof L !== 'undefined' && typeof L.Map === 'function') {
-                islandMap = new L.Map('island-map-container', {
-                    key: NESHAN_MAP_API_KEY,
-                    maptype: 'neshan',
-                    poi: true,
-                    traffic: false,
-                    center: [26.5332, 53.9986],
-                    zoom: 13
-                });
-                mapCreated = true;
-            }
+            islandMap = new L.Map('island-map-container', {
+                key: NESHAN_MAP_API_KEY,
+                maptype: 'neshan',
+                poi: true,
+                traffic: false,
+                center: [26.5332, 53.9986],
+                zoom: 13,
+                maxBounds: KISH_BOUNDS
+            });
         } catch (err) {
-            console.error('خطا در بارگذاری نقشهٔ نشان:', err);
-        }
-        // Fallback to OpenStreetMap if Neshan not available
-        if (!mapCreated) {
-            if (typeof L !== 'undefined') {
-                islandMap = L.map(mapContainer).setView([26.5332, 53.9986], 13);
-                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                    attribution: '&copy; OpenStreetMap contributors',
-                    maxZoom: 19
-                }).addTo(islandMap);
-                mapCreated = true;
-            }
-        }
-        if (!mapCreated) {
-            console.error('نقشهٔ جزیره نمی‌تواند بارگذاری شود.');
+            console.error('نقشهٔ جزیره نمی‌تواند بارگذاری شود.', err);
             return;
         }
         // Add markers for each vehicle

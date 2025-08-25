@@ -14,7 +14,7 @@ $motors=$pdo->query("SELECT m.id,m.model,m.lat,m.lng,m.status, b.start_date,b.en
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>نقشه موتورها - KISH UP</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://static.neshan.org/sdk/leaflet/v1.9.4/neshan-sdk/v1.0.8/index.css">
   <link rel="stylesheet" href="../css/admin-panel.css">
   <style>
     #map{height:600px;}
@@ -36,10 +36,11 @@ $motors=$pdo->query("SELECT m.id,m.model,m.lat,m.lng,m.status, b.start_date,b.en
     </div>
   </main>
 </div>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://static.neshan.org/sdk/leaflet/v1.9.4/neshan-sdk/v1.0.8/index.js"></script>
+<script src="../js/env.js.php"></script>
 <script>
-var map=L.map('map').setView([26.5310,53.9860],12);
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19}).addTo(map);
+var KISH_BOUNDS=[[26.4,53.8],[26.65,54.1]];
+var map=new L.Map('map',{key:NESHAN_MAP_API_KEY,maptype:'neshan',center:[26.5310,53.9860],zoom:12,maxBounds:KISH_BOUNDS});
 var motors=<?php echo json_encode($motors); ?>;
 
 function remainingPercent(start,end){

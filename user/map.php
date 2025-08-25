@@ -25,7 +25,7 @@ $locations = [
     <title>نقشه موتورها - KISH UP</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-sA+4psJ3QWZ8bI6FHRpZWZcFTt1sAwH6pGf1jW4xyJM=" crossorigin=""/>
+    <link rel="stylesheet" href="https://static.neshan.org/sdk/leaflet/v1.9.4/neshan-sdk/v1.0.8/index.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/user-panel.css">
 </head>
@@ -85,7 +85,8 @@ $locations = [
     </main>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-o9N1j7kGStIXgNdvtz4mP1N0bRkRr34E9YPc1y6p3Kk=" crossorigin=""></script>
+<script src="https://static.neshan.org/sdk/leaflet/v1.9.4/neshan-sdk/v1.0.8/index.js"></script>
+<script src="../js/env.js.php"></script>
 <script>var mapMotors = <?= json_encode($motors, JSON_UNESCAPED_UNICODE) ?>;</script>
 <script src="../js/script-user.js"></script>
 </body>

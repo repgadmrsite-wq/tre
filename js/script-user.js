@@ -1,3 +1,6 @@
+const NESHAN_MAP_API_KEY = window.NESHAN_MAP_API_KEY || '';
+const KISH_BOUNDS = [[26.4,53.8],[26.65,54.1]];
+
 document.addEventListener('DOMContentLoaded', function(){
     fetch('notifications.php?ajax=1')
         .then(res => res.json())
@@ -134,8 +137,13 @@ document.addEventListener('DOMContentLoaded', function(){
     });
 
     if (typeof mapMotors !== 'undefined') {
-        var map = L.map('motorMap').setView([26.5307, 53.9800], 12);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors' }).addTo(map);
+        var map = new L.Map('motorMap', {
+            key: NESHAN_MAP_API_KEY,
+            maptype: 'neshan',
+            center: [26.5307, 53.9800],
+            zoom: 12,
+            maxBounds: KISH_BOUNDS
+        });
         var greenIcon = new L.Icon({iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png', shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png', iconSize:[25,41], iconAnchor:[12,41], popupAnchor:[1,-34], shadowSize:[41,41]});
         var redIcon = new L.Icon({iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png', shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png', iconSize:[25,41], iconAnchor:[12,41], popupAnchor:[1,-34], shadowSize:[41,41]});
         var markers = [];
@@ -164,8 +172,14 @@ document.addEventListener('DOMContentLoaded', function(){
             if(opt){
                 var lat = parseFloat(opt.dataset.lat), lng = parseFloat(opt.dataset.lng);
                 if(!miniMap){
-                    miniMap = L.map('pickupMap', {zoomControl:false}).setView([lat,lng], 14);
-                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors' }).addTo(miniMap);
+                    miniMap = new L.Map('pickupMap', {
+                        key: NESHAN_MAP_API_KEY,
+                        maptype: 'neshan',
+                        zoomControl:false,
+                        center:[lat,lng],
+                        zoom:14,
+                        maxBounds: KISH_BOUNDS
+                    });
                 } else {
                     miniMap.setView([lat,lng],14);
                 }
