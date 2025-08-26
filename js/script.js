@@ -52,6 +52,22 @@
         }
     ];
 
+    // Populate demo data so the map shows about twenty scooters
+    const baseLat = 26.5332;
+    const baseLng = 53.9986;
+    for (let i = 5; i <= 20; i++) {
+        vehiclesData.push({
+            id: i,
+            model: `موتور نمونه ${i}`,
+            description: "نمونه داده برای نمایش روی نقشه.",
+            price: 100000,
+            img: `https://placehold.co/400x250/22c55e/fff?text=Bike${i}`,
+            status: i % 2 === 0 ? "reserved" : "available",
+            lat: baseLat + ((i % 4) - 1.5) * 0.01,
+            lng: baseLng + (Math.floor((i - 1) / 4) - 2) * 0.01
+        });
+    }
+
     const specialsData = [
         {
             id: 5,
@@ -1226,15 +1242,15 @@
             console.error('نقشهٔ جزیره نمی‌تواند بارگذاری شود.', err);
             return;
         }
-        // Add markers for each vehicle
+        // Add markers for each vehicle using scooter icons instead of circles
         vehiclesData.forEach(v => {
-            const color = v.status === 'available' ? '#22c55e' : '#ef4444';
-            // Use circle marker for halo effect
-            const marker = L.circleMarker([v.lat, v.lng], {
-                radius: 8,
-                color: color,
-                fillColor: color,
-                fillOpacity: 0.6
+            const marker = L.marker([v.lat, v.lng], {
+                icon: L.divIcon({
+                    html: '<i class="bi bi-scooter"></i>',
+                    className: `map-marker ${v.status}`,
+                    iconSize: [24, 24],
+                    iconAnchor: [12, 12]
+                })
             }).addTo(islandMap);
             const statusLabel = v.status === 'available' ? 'موجود' : 'رزرو شده';
             const popupContent = `<div class="map-popup"><strong>${v.model}</strong><br>وضعیت: ${statusLabel}<br>قیمت ساعتی: ${v.price.toLocaleString()} تومان</div>`;

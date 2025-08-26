@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://static.neshan.org/sdk/leaflet/v1.9.4/neshan-sdk/v1.0.8/index.css">
     <!-- Jalali datepicker styles -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.css">
+    <!-- Bootstrap Icons for map markers -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- Main site styles -->
     <link rel="stylesheet" href="css/style.css">
 </head>

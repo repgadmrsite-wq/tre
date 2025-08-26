@@ -1178,6 +1178,16 @@ special-card .special-content {
     font-weight: 600;
 }
 
+/* Map scooter markers */
+.map-marker {
+    color: #22c55e;
+    font-size: 24px;
+    text-shadow: 0 0 2px #000;
+}
+.map-marker.reserved {
+    color: #ef4444;
+}
+
 /* Theme switcher icons: only show one icon depending on theme */
 .theme-switcher .icon-sun {
     display: none;
