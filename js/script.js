@@ -422,6 +422,8 @@
 
         const formSteps = bookingForm.querySelectorAll('.form-step');
         const progressBar = bookingForm.querySelector('.progress-bar');
+        const mobileBar = document.getElementById('mobile-summary');
+        const mobileConfirmBtn = document.getElementById('mobile-confirm-btn');
         let currentStep = 0;
         let deliveryMap = null;
         let deliveryMarker = null;
@@ -475,7 +477,13 @@
             if (index === 4) {
                 updateSummary();
             }
+            if (mobileBar) {
+                mobileBar.classList.toggle('hidden', index === formSteps.length - 1 || !reservationState.vehicleId);
+            }
         };
+        if (mobileConfirmBtn) {
+            mobileConfirmBtn.addEventListener('click', () => showStep(formSteps.length - 1));
+        }
         window.goToStep = showStep;
 
         // Initialize map for delivery location
@@ -931,11 +939,13 @@
      */
     function updateSummary() {
         const summaryPanel = document.getElementById('summary-panel');
+        const mobileBar = document.getElementById('mobile-summary');
+        const mobileText = mobileBar ? mobileBar.querySelector('.mobile-summary-text') : null;
         if (!summaryPanel) return;
         summaryPanel.innerHTML = '';
-        // If no vehicle selected yet, show simple message
         if (!reservationState.vehicleId) {
             summaryPanel.innerHTML = '<p>موتوری انتخاب نشده است.</p>';
+            if (mobileBar) mobileBar.classList.add('hidden');
             return;
         }
         const vehicle = vehiclesData.find(v => v.id === reservationState.vehicleId);
@@ -1008,6 +1018,17 @@
             summaryHTML += `<p><strong>مبلغ کل:</strong> ${Math.round(totalPrice).toLocaleString()} تومان</p>`;
         }
         summaryPanel.innerHTML = summaryHTML;
+        if (mobileBar && mobileText) {
+            let text = `${vehicle.model}`;
+            if (reservationState.startDate) {
+                text += ` • ${formatJalali(reservationState.startDate)}`;
+            }
+            if (totalPrice > 0) {
+                text += ` • ${Math.round(totalPrice).toLocaleString()} تومان`;
+            }
+            mobileText.textContent = text;
+            mobileBar.classList.remove('hidden');
+        }
     }
     function convertDuration(duration) {
         switch (duration) {

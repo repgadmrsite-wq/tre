@@ -184,7 +184,7 @@
                         </form>
                     </div>
                     <!-- Summary card -->
-                    <div class="summary-card">
+                    <aside id="summary-desktop" class="summary-card sticky-summary">
                         <div id="summary-panel" class="summary-panel"></div>
                         <div id="map-panel" class="map-wrapper hidden">
                             <div class="map-chooser">
@@ -197,7 +197,11 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </aside>
+                </div>
+                <div id="mobile-summary" class="mobile-summary-bar hidden">
+                    <div class="mobile-summary-text"></div>
+                    <button type="button" id="mobile-confirm-btn" class="mobile-summary-btn">تأیید رزرو</button>
                 </div>
             </div>
         </section>
