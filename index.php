@@ -58,12 +58,13 @@
                     <!-- Form card -->
                     <div class="form-card">
                         <form id="booking-form" novalidate>
-                            <ul class="progress-bar" role="progressbar" aria-valuemin="1" aria-valuemax="4" aria-valuenow="1">
+                            <ul class="progress-bar" role="progressbar" aria-valuemin="1" aria-valuemax="5" aria-valuenow="1">
                                 <div class="progress-line"></div>
-                                <li class="step active">۱</li>
-                                <li class="step">۲</li>
-                                <li class="step">۳</li>
-                                <li class="step">۴</li>
+                                <li class="step active"><span class="step-number">۱</span><span class="step-label">مدل</span></li>
+                                <li class="step"><span class="step-number">۲</span><span class="step-label">مدت</span></li>
+                                <li class="step"><span class="step-number">۳</span><span class="step-label">زمان</span></li>
+                                <li class="step"><span class="step-number">۴</span><span class="step-label">محل</span></li>
+                                <li class="step"><span class="step-number">۵</span><span class="step-label">تأیید</span></li>
                             </ul>
                             <!-- Step 1: Vehicle selection -->
                             <fieldset class="form-step active-step" data-step="1">
@@ -75,10 +76,9 @@
                                     <button type="button" class="next-btn" disabled>مرحله بعد</button>
                                 </div>
                             </fieldset>
-                            <!-- Step 2: Duration & time -->
+                            <!-- Step 2: Duration & quick reserve -->
                             <fieldset class="form-step" data-step="2">
-                                <h4>مدت و زمان تحویل</h4>
-                                <label>مدت زمان اجاره:</label>
+                                <h4>مدت اجاره</h4>
                                 <div class="duration-options">
                                     <input type="radio" name="duration" id="hourly" value="hourly">
                                     <label for="hourly">ساعتی</label>
@@ -87,25 +87,29 @@
                                     <input type="radio" name="duration" id="daily" value="daily">
                                     <label for="daily">روزانه</label>
                                 </div>
-                                <!-- نیم‌روز: انتخاب نیم‌روز اول یا دوم -->
+                                <div id="quick-date-buttons" class="quick-date-buttons hidden">
+                                    <button type="button" id="today-button">امروز</button>
+                                    <button type="button" id="tomorrow-button">فردا</button>
+                                </div>
+                                <div class="form-navigation">
+                                    <button type="button" class="prev-btn">قبلی</button>
+                                    <button type="button" class="next-btn">مرحله بعد</button>
+                                </div>
+                            </fieldset>
+                            <!-- Step 3: Date & time -->
+                            <fieldset class="form-step" data-step="3">
+                                <h4>تاریخ و زمان تحویل</h4>
                                 <div id="half-day-options" class="half-day-options hidden">
                                     <input type="radio" name="halfDayOption" id="half-day-morning" value="morning">
                                     <label for="half-day-morning">نیم‌روز اول (۰۰ تا ۱۲)</label>
                                     <input type="radio" name="halfDayOption" id="half-day-evening" value="evening">
                                     <label for="half-day-evening">نیم‌روز دوم (۱۲ تا ۲۴)</label>
                                 </div>
-                                <label id="date-range-label">بازه زمانی اجاره:</label>
                                 <div class="date-range-picker-wrapper">
-                                    <!-- Quick date buttons for hourly bookings (shown/hidden via JS) -->
-                                    <div id="quick-date-buttons" class="quick-date-buttons hidden">
-                                        <button type="button" id="today-button">امروز</button>
-                                        <button type="button" id="tomorrow-button">فردا</button>
-                                    </div>
                                     <div class="date-inputs-container">
                                         <input type="text" id="start-date-input" placeholder="تاریخ شروع" data-jdp>
                                         <input type="text" id="end-date-input" placeholder="تاریخ پایان" data-jdp>
                                     </div>
-                                    <!-- Daily booking: select number of days (shown when daily duration selected) -->
                                     <div id="daily-options" class="daily-options hidden">
                                         <label>تعداد روز:</label>
                                         <div class="day-options">
@@ -126,13 +130,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                    <div class="time-pickers-wrapper">
-                                        <div class="time-input-wrapper">
-                                            <label for="start-time">ساعت تحویل:</label>
-                                            <input type="time" id="start-time" required>
-                                        </div>
+                                <div class="time-pickers-wrapper">
+                                    <div class="time-input-wrapper">
+                                        <label for="start-time">ساعت تحویل:</label>
+                                        <input type="time" id="start-time" required>
                                     </div>
-                                <!-- Hourly booking: choose duration from 1 to 8 hours (shown when hourly duration selected) -->
+                                </div>
                                 <div id="hourly-options" class="hourly-options hidden">
                                     <label>مدت اجاره (ساعت):</label>
                                     <div class="hour-options">
@@ -151,8 +154,8 @@
                                     <button type="button" class="next-btn">مرحله بعد</button>
                                 </div>
                             </fieldset>
-                            <!-- Step 3: Delivery location -->
-                            <fieldset class="form-step" data-step="3">
+                            <!-- Step 4: Delivery location -->
+                            <fieldset class="form-step" data-step="4">
                                 <h4>محل تحویل را مشخص کنید</h4>
                                 <div class="location-search">
                                     <label for="location-search-input">جستجوی مکان:</label>
@@ -164,8 +167,8 @@
                                     <button type="button" class="next-btn">مرحله بعد</button>
                                 </div>
                             </fieldset>
-                            <!-- Step 4: Confirmation & OTP -->
-                            <fieldset class="form-step" data-step="4">
+                            <!-- Step 5: Confirmation & OTP -->
+                            <fieldset class="form-step" data-step="5">
                                 <h4>تأیید و پرداخت</h4>
                                 <label for="phone">شماره موبایل:</label>
                                 <input type="tel" id="phone" name="phone" placeholder="۰۹۱۲۳۴۵۶۷۸۹" required>

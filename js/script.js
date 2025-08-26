@@ -368,16 +368,24 @@
         const showStep = (index) => {
             currentStep = index;
             formSteps.forEach((step, i) => step.classList.toggle('active-step', i === index));
-            // Update progress line and aria-valuenow
+            const activeStep = formSteps[index];
+            activeStep.classList.add('step-enter');
+            requestAnimationFrame(() => activeStep.classList.add('step-enter-active'));
+            activeStep.addEventListener('transitionend', () => {
+                activeStep.classList.remove('step-enter', 'step-enter-active');
+            }, { once: true });
+
             const progressLine = progressBar.querySelector('.progress-line');
             if (progressLine) {
                 progressLine.style.width = `${(index / (formSteps.length - 1)) * 100}%`;
             }
             progressBar.setAttribute('aria-valuenow', (index + 1).toString());
-            // Show/hide map panel (only visible in step 3)
+            const steps = progressBar.querySelectorAll('.step');
+            steps.forEach((s, i) => s.classList.toggle('active', i <= index));
+
             const mapPanel = document.getElementById('map-panel');
             if (mapPanel) {
-                if (index === 2) {
+                if (index === 3) {
                     mapPanel.classList.remove('hidden');
                     if (!mapInitialized) {
                         initDeliveryMap();
@@ -388,8 +396,7 @@
                     mapPanel.classList.add('hidden');
                 }
             }
-            // Initialize datepicker only once when entering step 2
-            if (index === 1 && !datepickerInitialized) {
+            if (index === 2 && !datepickerInitialized) {
                 try {
                     jalaliDatepicker.startWatch({ minDate: 'today' });
                     datepickerInitialized = true;
@@ -397,8 +404,7 @@
                     console.error('خطا در بارگذاری انتخابگر تاریخ:', e);
                 }
             }
-            // When entering confirmation step update summary
-            if (index === 3) {
+            if (index === 4) {
                 updateSummary();
             }
         };

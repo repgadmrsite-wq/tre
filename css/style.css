@@ -430,6 +430,13 @@ body:not(.dark-mode) .theme-switcher .icon-moon {
     z-index: 1;
 }
 .progress-bar .step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60px;
+    z-index: 2;
+}
+.progress-bar .step-number {
     width: 35px;
     height: 35px;
     background-color: var(--border-color);
@@ -439,24 +446,34 @@ body:not(.dark-mode) .theme-switcher .icon-moon {
     justify-content: center;
     color: var(--text-muted);
     font-weight: 700;
-    position: relative;
-    z-index: 2;
     transition: background-color 0.3s, color 0.3s;
 }
-.progress-bar .step.active {
+.progress-bar .step-label {
+    margin-top: 4px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+.progress-bar .step.active .step-number {
     background-color: var(--primary-color);
     color: var(--card-bg);
 }
+.progress-bar .step.active .step-label {
+    color: var(--primary-color);
+}
 .form-step {
     display: none;
-    animation: fadeIn 0.5s ease;
 }
 .form-step.active-step {
     display: block;
 }
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+.form-step.step-enter {
+    opacity: 0;
+    transform: translateY(12px);
+}
+.form-step.step-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 260ms ease-out;
 }
 label {
     display: block;
