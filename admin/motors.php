@@ -60,6 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_motor'])) {
     $price_month = filter_input(INPUT_POST, 'price_month', FILTER_VALIDATE_INT, ['options' => ['min_range' => 0]]);
     if ($price_month === false) { $errors[] = 'قیمت ماهانه نامعتبر است'; }
     $insurance = trim($_POST['insurance']);
+    $is_special = filter_input(INPUT_POST, 'special', FILTER_VALIDATE_INT, ['options' => ['min_range' => 0, 'max_range' => 1]]) ?? 0;
     $year = filter_input(INPUT_POST, 'year', FILTER_VALIDATE_INT, ['options' => ['min_range' => 1900, 'max_range' => (int)date('Y')]]);
     if ($year === false) { $errors[] = 'سال ساخت نامعتبر است'; }
     $mileage = filter_input(INPUT_POST, 'mileage', FILTER_VALIDATE_INT, ['options' => ['min_range' => 0]]);
@@ -79,8 +80,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_motor'])) {
         exit;
     }
 
-    $stmt = $pdo->prepare('INSERT INTO motorcycles (model, plate, color, capacity, description, status, price_per_hour, price_half_day, price_per_day, price_per_week, price_per_month, insurance, year, mileage, available, lat, lng) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
-    $stmt->execute([$model, $plate, $color, $capacity, $description, $status, $price_hour, $price_half, $price_day, $price_week, $price_month, $insurance, $year, $mileage, $available, $lat, $lng]);
+    $stmt = $pdo->prepare('INSERT INTO motorcycles (model, plate, color, capacity, description, status, price_per_hour, price_half_day, price_per_day, price_per_week, price_per_month, insurance, year, mileage, available, is_special, lat, lng) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
+    $stmt->execute([$model, $plate, $color, $capacity, $description, $status, $price_hour, $price_half, $price_day, $price_week, $price_month, $insurance, $year, $mileage, $available, $is_special, $lat, $lng]);
     $motorId = $pdo->lastInsertId();
     saveMotorImages($pdo, $motorId);
     header('Location: motors.php');
@@ -128,8 +129,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_motor'])) {
         exit;
     }
 
-    $stmt = $pdo->prepare('UPDATE motorcycles SET model=?, plate=?, color=?, capacity=?, description=?, status=?, price_per_hour=?, price_half_day=?, price_per_day=?, price_per_week=?, price_per_month=?, insurance=?, year=?, mileage=?, available=?, lat=?, lng=? WHERE id=?');
-    $stmt->execute([$model, $plate, $color, $capacity, $description, $status, $price_hour, $price_half, $price_day, $price_week, $price_month, $insurance, $year, $mileage, $available, $lat, $lng, $id]);
+    $stmt = $pdo->prepare('UPDATE motorcycles SET model=?, plate=?, color=?, capacity=?, description=?, status=?, price_per_hour=?, price_half_day=?, price_per_day=?, price_per_week=?, price_per_month=?, insurance=?, year=?, mileage=?, available=?, is_special=?, lat=?, lng=? WHERE id=?');
+    $stmt->execute([$model, $plate, $color, $capacity, $description, $status, $price_hour, $price_half, $price_day, $price_week, $price_month, $insurance, $year, $mileage, $available, $is_special, $lat, $lng, $id]);
     saveMotorImages($pdo, $id);
     header('Location: motors.php');
     exit;
@@ -144,6 +145,13 @@ if (isset($_GET['delete_motor'])) {
     }
     $pdo->prepare('DELETE FROM motorcycle_images WHERE motorcycle_id=?')->execute([$id]);
     $pdo->prepare('DELETE FROM motorcycles WHERE id=?')->execute([$id]);
+    header('Location: motors.php');
+    exit;
+}
+
+if (isset($_GET['toggle_special'])) {
+    $id = (int)$_GET['toggle_special'];
+    $pdo->prepare('UPDATE motorcycles SET is_special = 1 - is_special WHERE id=?')->execute([$id]);
     header('Location: motors.php');
     exit;
 }
@@ -240,6 +248,12 @@ $motors = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <option value="0" <?= isset($editMotor['available']) && !$editMotor['available'] ? 'selected' : ''; ?>>ناموجود</option>
           </select>
         </div>
+        <div class="col-md-2">
+          <select name="special" class="form-select">
+            <option value="0" <?= isset($editMotor['is_special']) && $editMotor['is_special'] ? '' : 'selected'; ?>>معمولی</option>
+            <option value="1" <?= isset($editMotor['is_special']) && $editMotor['is_special'] ? 'selected' : ''; ?>>پیشنهاد ویژه</option>
+          </select>
+        </div>
         <div class="col-md-2"><input type="number" name="price_hour" class="form-control" placeholder="ساعتی" value="<?= htmlspecialchars($editMotor['price_per_hour'] ?? ''); ?>" required></div>
         <div class="col-md-2"><input type="number" name="price_half" class="form-control" placeholder="نیم‌روز" value="<?= htmlspecialchars($editMotor['price_half_day'] ?? ''); ?>" required></div>
         <div class="col-md-2"><input type="number" name="price_day" class="form-control" placeholder="روزانه" value="<?= htmlspecialchars($editMotor['price_per_day'] ?? ''); ?>" required></div>
@@ -282,7 +296,7 @@ $motors = $stmt->fetchAll(PDO::FETCH_ASSOC);
       </form>
       <div class="table-responsive card p-3">
         <table class="table table-striped table-hover mb-0">
-          <thead><tr><th>#</th><th>تصویر</th><th>مدل</th><th>روزانه</th><th>وضعیت</th><th>موجودی</th><th>ویرایش</th><th>حذف</th></tr></thead>
+          <thead><tr><th>#</th><th>تصویر</th><th>مدل</th><th>روزانه</th><th>وضعیت</th><th>موجودی</th><th>ویژه</th><th>ویرایش</th><th>حذف</th></tr></thead>
           <tbody>
             <?php foreach ($motors as $m): ?>
             <tr>
@@ -292,6 +306,7 @@ $motors = $stmt->fetchAll(PDO::FETCH_ASSOC);
               <td><?= number_format($m['price_per_day']); ?></td>
               <td><?= $m['status']; ?></td>
               <td><?= $m['available'] ? 'بله' : 'خیر'; ?></td>
+              <td><a href="?toggle_special=<?= $m['id']; ?>" class="btn btn-sm <?= $m['is_special'] ? 'btn-warning' : 'btn-outline-warning'; ?>" title="تغییر وضعیت ویژه"><i class="bi bi-star<?= $m['is_special'] ? '-fill' : ''; ?>"></i></a></td>
               <td><a href="?edit_motor=<?= $m['id']; ?>" class="btn btn-sm btn-warning"><i class="bi bi-pencil"></i></a></td>
               <td><a href="?delete_motor=<?= $m['id']; ?>" class="btn btn-sm btn-danger" onclick="return confirm('حذف موتور؟');"><i class="bi bi-trash"></i></a></td>
             </tr>

@@ -46,6 +46,7 @@ CREATE TABLE motorcycles (
     year INT,
     mileage INT,
     available TINYINT(1) DEFAULT 1,
+    is_special TINYINT(1) DEFAULT 0,
     lat DECIMAL(10,8) DEFAULT NULL,
     lng DECIMAL(11,8) DEFAULT NULL
 ) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
@@ -193,10 +194,10 @@ INSERT INTO admins (name, email, password, role) VALUES
 INSERT INTO users (name, phone, email, password, status, note, language, notify_email, wallet_balance) VALUES
 ('کاربر نمونه', '09120000000', 'user@example.com', '$2y$12$1tKh0T5SbKtQP3wy4nPfCO2lv9MNXbgnTUZeIMhLIcQhYH7MnUq86', 'regular', '', 'fa', 1, 0);
 
-INSERT INTO motorcycles (model, plate, color, capacity, description, status, price_per_hour, price_half_day, price_per_day, price_per_week, price_per_month, insurance, year, mileage, available) VALUES
-('اسکوتر وسپا', '11ک123-45', 'قرمز', 150, 'اسکوتر شهری', 'active', 30000, 70000, 120000, 750000, 2800000, 'بیمه شخص ثالث', 2022, 5000, 1),
-('موتور کروزر', '22د456-78', 'مشکی', 250, 'کروز با قدرت بالا', 'maintenance', 50000, 110000, 180000, 1100000, 4000000, 'بیمه کامل', 2021, 12000, 0),
-('موتور برقی', '33ه789-01', 'سفید', 100, 'برقی کم صدا', 'active', 20000, 50000, 90000, 550000, 2000000, 'بیمه پایه', 2023, 2000, 1);
+INSERT INTO motorcycles (model, plate, color, capacity, description, status, price_per_hour, price_half_day, price_per_day, price_per_week, price_per_month, insurance, year, mileage, available, is_special, lat, lng) VALUES
+('اسکوتر وسپا', '11ک123-45', 'قرمز', 150, 'اسکوتر شهری', 'active', 30000, 70000, 120000, 750000, 2800000, 'بیمه شخص ثالث', 2022, 5000, 1, 0, 26.5332, 53.9986),
+('موتور کروزر', '22د456-78', 'مشکی', 250, 'کروز با قدرت بالا', 'maintenance', 50000, 110000, 180000, 1100000, 4000000, 'بیمه کامل', 2021, 12000, 0, 0, 26.5358, 53.9891),
+('موتور برقی', '33ه789-01', 'سفید', 100, 'برقی کم صدا', 'active', 20000, 50000, 90000, 550000, 2000000, 'بیمه پایه', 2023, 2000, 1, 1, 26.5387, 54.0035);
 
 INSERT INTO discounts (code, type, value, start_date, end_date, usage_limit, per_user_limit, vip_only, motor_id) VALUES
 ('OFF10','percent',10,NULL,NULL,NULL,NULL,0,NULL);

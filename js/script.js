@@ -277,8 +277,8 @@
         setupFilters();
         setupLocationSearch();
         setupNearestButton();
-        // Initialize island map slider section
-        initIslandMap();
+        // load live motors for map and hero metrics
+        loadLiveMotors();
         initHeroSection();
         initUserMenu();
     });
@@ -1224,7 +1224,7 @@
      * موتورها با رنگ سبز (موجود) و قرمز (رزرو شده) نمایش داده می‌شوند.
      * با کلیک روی هر مارکر اطلاعات موتور در یک پنجره ظاهر می‌شود.
      */
-    function initIslandMap() {
+    function initIslandMap(motors) {
         const mapContainer = document.getElementById('island-map-container');
         if (!mapContainer) return;
         let islandMap = null;
@@ -1242,20 +1242,49 @@
             console.error('نقشهٔ جزیره نمی‌تواند بارگذاری شود.', err);
             return;
         }
-        // Add markers for each vehicle using scooter icons instead of circles
-        vehiclesData.forEach(v => {
+        motors.forEach(v => {
+            const cls = `map-marker ${parseInt(v.available) === 1 ? 'available' : 'reserved'}${parseInt(v.is_special) === 1 ? ' special' : ''}`;
             const marker = L.marker([v.lat, v.lng], {
                 icon: L.divIcon({
                     html: '<i class="bi bi-scooter"></i>',
-                    className: `map-marker ${v.status}`,
+                    className: cls,
                     iconSize: [24, 24],
                     iconAnchor: [12, 12]
                 })
             }).addTo(islandMap);
-            const statusLabel = v.status === 'available' ? 'موجود' : 'رزرو شده';
-            const popupContent = `<div class="map-popup"><strong>${v.model}</strong><br>وضعیت: ${statusLabel}<br>قیمت ساعتی: ${v.price.toLocaleString()} تومان</div>`;
-            marker.bindPopup(popupContent);
+            const statusLabel = parseInt(v.available) === 1 ? 'موجود' : 'رزرو شده';
+            marker.bindPopup(`<div class="map-popup"><strong>${v.model}</strong><br>وضعیت: ${statusLabel}</div>`);
         });
+    }
+
+    function initHeroOverlay(motors) {
+        const availableCountElem = document.querySelector('.hero-overlay .available-count');
+        const reservedCountElem = document.querySelector('.hero-overlay .reserved-count');
+        const ctaBtn = document.getElementById('hero-cta');
+        if (availableCountElem && reservedCountElem) {
+            const available = motors.filter(v => parseInt(v.available) === 1).length;
+            const reserved = motors.length - available;
+            availableCountElem.textContent = available.toString();
+            reservedCountElem.textContent = reserved.toString();
+        }
+        if (ctaBtn) {
+            ctaBtn.addEventListener('click', () => {
+                const bookingSection = document.getElementById('booking');
+                if (bookingSection) {
+                    bookingSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        }
+    }
+
+    function loadLiveMotors() {
+        fetch('api/motors.php')
+            .then(res => res.json())
+            .then(data => {
+                initHeroOverlay(data);
+                initIslandMap(data);
+            })
+            .catch(err => console.error('خطا در دریافت لیست موتورها', err));
     }
 
     /* ============ User & Admin Panels ============ */
