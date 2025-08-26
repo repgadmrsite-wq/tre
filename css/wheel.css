@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  font-family: 'Vazirmatn', sans-serif;
+  background: #f0fdf4;
+}
+.wheel-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+}
+#wheel {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 8px solid #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  transition: transform 5s cubic-bezier(0.33, 1, 0.68, 1);
+  background: conic-gradient(
+    #f87171 0deg 36deg,
+    #fbbf24 36deg 72deg,
+    #34d399 72deg 108deg,
+    #60a5fa 108deg 144deg,
+    #a78bfa 144deg 180deg,
+    #f472b6 180deg 216deg,
+    #f87171 216deg 252deg,
+    #fbbf24 252deg 288deg,
+    #34d399 288deg 324deg,
+    #60a5fa 324deg 360deg
+  );
+}
+.glass-btn {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(34,197,94,0.8);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  backdrop-filter: blur(5px);
+  transition: background 0.3s;
+}
+.glass-btn:hover {
+  background: rgba(22,163,74,0.9);
+}
+.result {
+  font-size: 1.2rem;
+  color: #111827;
+}
