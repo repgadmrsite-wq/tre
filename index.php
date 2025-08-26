@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KISHUP – رزرو آنلاین موتور برقی در کیش</title>
+    <!-- Preload hero image for faster LCP -->
+    <link rel="preload" as="image" href="img/hero.webp" imagesrcset="img/hero.webp 1x, img/hero.png 1x" fetchpriority="high">
     <!-- Leaflet styles for the maps -->
     <!-- حذف کتابخانهٔ پیش‌فرض Leaflet و استفاده از SDK نشان برای نقشه‌ها -->
     <!-- نقشهٔ نشان شامل Leaflet و استایل‌های خود است، لذا از لینک زیر استفاده می‌کنیم -->
@@ -20,9 +22,13 @@
     <main>
         <!-- Hero Section -->
         <section id="hero" class="hero">
+            <picture class="hero-media">
+                <source srcset="img/hero.webp" type="image/webp">
+                <img src="img/hero.png" alt="موتور برقی در کیش" fetchpriority="high" />
+            </picture>
             <div class="hero-content">
                 <h1>اجاره موتور برقی در کیش</h1>
-                <p>آزادی و هیجان را تجربه کن</p>
+                <p class="hero-subhead">تحویل در محل + قیمت شفاف</p>
                 <div class="hero-buttons">
                     <button type="button" id="hero-quick-btn" class="btn-glass primary">رزرو سریع</button>
                     <button type="button" id="hero-contact-btn" class="btn-glass outline">تماس با ما</button>
