@@ -4,8 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KISHUP – رزرو آنلاین موتور برقی در کیش</title>
+    <meta name="description" content="رزرو آنلاین موتور برقی در کیش با تحویل در محل و قیمت شفاف.">
+    <link rel="canonical" href="https://kishup.hornspeed.com/">
+    <meta property="og:title" content="KISHUP – رزرو آنلاین موتور برقی در کیش">
+    <meta property="og:description" content="موتور دلخواهت را در لحظه رزرو کن؛ تحویل در محل با قیمت شفاف.">
+    <meta property="og:image" content="https://kishup.hornspeed.com/img/hero.webp">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kishup.hornspeed.com/">
+    <!-- Preconnects for external assets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <!-- Preload hero image for faster LCP -->
-    <link rel="preload" as="image" href="img/hero.webp" imagesrcset="img/hero.webp 1x, img/hero.png 1x" fetchpriority="high">
+    <link rel="preload" as="image" href="img/hero.webp" imagesrcset="img/hero.webp 1280w, img/hero.png 1280w" fetchpriority="high">
+    <!-- Critical above-the-fold styles -->
+    <style>
+        body{margin:0;font-family:'Vazirmatn',sans-serif;background:#111827;color:#f3f4f6}
+        .main-header{position:sticky;top:0;background:rgba(17,24,39,.8);backdrop-filter:blur(10px);height:70px;display:flex;align-items:center;z-index:1000}
+        .hero{position:relative;min-height:60vh;display:flex;align-items:center;justify-content:center;text-align:center}
+        .hero-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+        .hero-content{position:relative;z-index:1}
+    </style>
     <!-- Leaflet styles for the maps -->
     <!-- حذف کتابخانهٔ پیش‌فرض Leaflet و استفاده از SDK نشان برای نقشه‌ها -->
     <!-- نقشهٔ نشان شامل Leaflet و استایل‌های خود است، لذا از لینک زیر استفاده می‌کنیم -->
@@ -14,8 +33,38 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.css">
     <!-- Bootstrap Icons for map markers -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!-- Main site styles -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Main site styles loaded asynchronously -->
+    <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/style.css"></noscript>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "KishUp",
+      "image": "https://kishup.hornspeed.com/img/hero.webp",
+      "telephone": "+98-912-0000000",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "کیش",
+        "streetAddress": "بلوار ساحل",
+        "addressCountry": "IR"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "موتور برقی SuperX",
+      "image": "https://kishup.hornspeed.com/img/hero.webp",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "IRR",
+        "price": "120000",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+    </script>
 </head>
 <body class="dark-mode">
     <?php include "includes/header.php"; ?>
@@ -23,8 +72,8 @@
         <!-- Hero Section -->
         <section id="hero" class="hero">
             <picture class="hero-media">
-                <source srcset="img/hero.webp" type="image/webp">
-                <img src="img/hero.png" alt="موتور برقی در کیش" fetchpriority="high" />
+                <source srcset="img/hero.webp 1280w" type="image/webp" sizes="100vw">
+                <img src="img/hero.png" alt="موتور برقی در کیش" width="1280" height="720" fetchpriority="high" decoding="async" />
             </picture>
             <div class="hero-content">
                 <h1>اجاره موتور برقی در کیش</h1>

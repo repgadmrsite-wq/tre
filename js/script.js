@@ -631,7 +631,10 @@ const reservationState = {
                     item.className = 'vehicle-item';
                     item.dataset.id = vehicle.id;
             item.innerHTML = `
-                    <img src="${vehicle.img}" alt="${vehicle.model}">
+                    <picture>
+                        <source srcset="${vehicle.img}&format=webp" type="image/webp">
+                        <img src="${vehicle.img}" alt="${vehicle.model}" loading="lazy" decoding="async" width="70" height="70" sizes="70px">
+                    </picture>
                     <div class="vehicle-item-info">
                         <h5>${vehicle.model}</h5>
                         <p>ساعتی ${toFarsiNumber(vehicle.price.toLocaleString())} تومان</p>
@@ -1108,7 +1111,10 @@ const reservationState = {
                 const card = document.createElement('div');
                 card.className = 'special-card';
                 card.innerHTML = `
-                    <img src="${item.img}" alt="${item.model}">
+                    <picture>
+                        <source srcset="${item.img}&format=webp" type="image/webp">
+                        <img src="${item.img}" alt="${item.model}" loading="lazy" decoding="async" width="400" height="250" sizes="(max-width:600px) 100vw, 400px">
+                    </picture>
                     <div class="special-content">
                         <h3>${item.model}</h3>
                         <p>${item.description}</p>
@@ -1163,7 +1169,10 @@ const reservationState = {
                 const card = document.createElement('div');
                 card.className = 'ready-card';
                 card.innerHTML = `
-                    <img src="${item.img}" alt="${item.model}">
+                    <picture>
+                        <source srcset="${item.img}&format=webp" type="image/webp">
+                        <img src="${item.img}" alt="${item.model}" loading="lazy" decoding="async" width="400" height="250" sizes="(max-width:600px) 100vw, 400px">
+                    </picture>
                     <div class="card-content">
                         <span class="status ${item.status}">${item.status === 'available' ? 'موجود' : 'رزرو شده'}</span>
                         <h3>${item.model}</h3>
@@ -1213,7 +1222,7 @@ const reservationState = {
             card.className = 'review-card';
             card.innerHTML = `
                 <div class="reviewer">
-                    <img src="https://i.pravatar.cc/100?u=${review.user_id}" alt="${review.name}">
+                    <img src="https://i.pravatar.cc/100?u=${review.user_id}" alt="${review.name}" loading="lazy" decoding="async" width="50" height="50">
                     <div class="reviewer-info">
                         <p class="reviewer-name">${review.name}</p>
                         <p class="review-date">${review.created_at.split(' ')[0]}</p>
