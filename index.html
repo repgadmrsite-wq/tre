@@ -5,170 +5,159 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HAKIM VPN | اینترنت بدون مرز</title>
   <meta name="description" content="خرید VPN امن و پرسرعت از Hakim VPN - اینترنت بدون مرز" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brandBlue: '#00bcd4',
-            brandGold: '#ffd700'
-          },
-          fontFamily: {
-            sans: ['Vazirmatn', 'sans-serif']
-          }
-        }
-      }
-    }
-  </script>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-<body class="font-sans bg-gray-50 text-gray-900">
+<body>
   <!-- Header -->
-  <header class="bg-white shadow fixed w-full z-50">
-    <div class="container mx-auto flex items-center justify-between p-4">
-      <div class="flex items-center space-x-2 space-x-reverse">
-        <img src="https://via.placeholder.com/40" alt="Hakim VPN" class="h-10 w-10 rounded-full" />
-        <span class="text-xl font-bold text-brandBlue">HAKIM VPN</span>
+  <header class="site-header">
+    <div class="container header-content">
+      <div class="branding">
+        <img src="https://via.placeholder.com/40" alt="Hakim VPN" />
+        <span class="brand-title">HAKIM VPN</span>
       </div>
-      <nav class="hidden md:flex space-x-6 space-x-reverse items-center">
-        <a href="#" class="text-gray-700 hover:text-brandBlue transition-colors">خانه</a>
-        <a href="#" class="text-gray-700 hover:text-brandBlue transition-colors">خرید VPN</a>
-        <a href="#" class="text-gray-700 hover:text-brandBlue transition-colors">تعرفه‌ها</a>
-        <a href="#" class="text-gray-700 hover:text-brandBlue transition-colors">آموزش اتصال</a>
-        <a href="#" class="text-gray-700 hover:text-brandBlue transition-colors">دانلود اپ‌ها</a>
-        <a href="#" class="text-gray-700 hover:text-brandBlue transition-colors">پشتیبانی</a>
-        <a href="#" class="text-gray-700 hover:text-brandBlue transition-colors">وبلاگ</a>
+      <nav class="nav">
+        <a href="#" class="nav-link">خانه</a>
+        <a href="#" class="nav-link">خرید VPN</a>
+        <a href="#" class="nav-link">تعرفه‌ها</a>
+        <a href="#" class="nav-link">آموزش اتصال</a>
+        <a href="#" class="nav-link">دانلود اپ‌ها</a>
+        <a href="#" class="nav-link">پشتیبانی</a>
+        <a href="#" class="nav-link">وبلاگ</a>
       </nav>
-      <a href="#" class="hidden md:inline-block bg-brandGold text-black px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition-colors">خرید سریع VPN</a>
+      <a href="#" class="cta-btn">خرید سریع VPN</a>
     </div>
   </header>
 
   <main>
     <!-- Hero -->
-    <section class="pt-24 bg-gradient-to-tr from-brandBlue via-blue-600 to-purple-700 text-white">
-      <div class="container mx-auto flex flex-col md:flex-row items-center py-16">
-        <div class="flex-1 text-center md:text-right">
-          <h1 class="text-4xl md:text-5xl font-extrabold mb-4">اینترنت بدون مرز با Hakim VPN</h1>
-          <p class="text-lg mb-8">امن، سریع، پایدار – دسترسی بدون محدودیت</p>
-          <div class="space-x-4 space-x-reverse">
-            <a href="#" class="bg-brandGold text-black px-6 py-3 rounded-lg font-bold hover:bg-yellow-500 transition-colors">شروع کنید</a>
-            <a href="#" class="border border-white px-6 py-3 rounded-lg font-bold hover:bg-white hover:text-brandBlue transition-colors">دانلود اپلیکیشن</a>
+    <section class="hero">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <h1>اینترنت بدون مرز با Hakim VPN</h1>
+          <p>امن، سریع، پایدار – دسترسی بدون محدودیت</p>
+          <div class="hero-actions">
+            <a href="#" class="btn btn-primary">شروع کنید</a>
+            <a href="#" class="btn btn-outline">دانلود اپلیکیشن</a>
           </div>
         </div>
-        <img src="https://via.placeholder.com/300x400" alt="Hakim Bot" class="w-64 md:w-80 mt-10 md:mt-0 mx-auto" />
+        <div class="hero-image">
+          <img src="https://via.placeholder.com/300x400" alt="Hakim Bot" />
+        </div>
       </div>
     </section>
 
     <!-- Features -->
-    <section class="py-16 bg-white">
-      <div class="container mx-auto grid md:grid-cols-4 gap-8">
-        <div class="text-center p-6 hover:scale-105 transition-transform">
-          <div class="text-brandBlue mb-4"><i class="bi bi-globe2 text-4xl"></i></div>
-          <h3 class="font-bold mb-2">سرورهای جهانی پرسرعت</h3>
-          <p class="text-gray-600">دسترسی به سرورهای متعدد در سراسر جهان</p>
-        </div>
-        <div class="text-center p-6 hover:scale-105 transition-transform">
-          <div class="text-brandBlue mb-4"><i class="bi bi-shield-lock text-4xl"></i></div>
-          <h3 class="font-bold mb-2">امنیت و رمزگذاری سطح نظامی</h3>
-          <p class="text-gray-600">حفظ کامل حریم‌خصوصی و داده‌های شما</p>
-        </div>
-        <div class="text-center p-6 hover:scale-105 transition-transform">
-          <div class="text-brandBlue mb-4"><i class="bi bi-phone text-4xl"></i></div>
-          <h3 class="font-bold mb-2">اپلیکیشن برای همه دستگاه‌ها</h3>
-          <p class="text-gray-600">پشتیبانی از اندروید، ویندوز، مک و iOS</p>
-        </div>
-        <div class="text-center p-6 hover:scale-105 transition-transform">
-          <div class="text-brandBlue mb-4"><i class="bi bi-headset text-4xl"></i></div>
-          <h3 class="font-bold mb-2">پشتیبانی ۲۴/۷</h3>
-          <p class="text-gray-600">تیم پشتیبانی ما همیشه در کنار شماست</p>
+    <section class="features section">
+      <div class="container">
+        <div class="feature-grid">
+          <div class="feature-item">
+            <div class="feature-icon"><i class="bi bi-globe2"></i></div>
+            <h3 class="feature-title">سرورهای جهانی پرسرعت</h3>
+            <p class="feature-desc">دسترسی به سرورهای متعدد در سراسر جهان</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><i class="bi bi-shield-lock"></i></div>
+            <h3 class="feature-title">امنیت و رمزگذاری سطح نظامی</h3>
+            <p class="feature-desc">حفظ کامل حریم‌خصوصی و داده‌های شما</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><i class="bi bi-phone"></i></div>
+            <h3 class="feature-title">اپلیکیشن برای همه دستگاه‌ها</h3>
+            <p class="feature-desc">پشتیبانی از اندروید، ویندوز، مک و iOS</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><i class="bi bi-headset"></i></div>
+            <h3 class="feature-title">پشتیبانی ۲۴/۷</h3>
+            <p class="feature-desc">تیم پشتیبانی ما همیشه در کنار شماست</p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Pricing -->
-    <section class="py-16 bg-gray-50">
-      <div class="container mx-auto">
-        <h2 class="text-3xl font-extrabold text-center mb-12">پلن‌ها و تعرفه‌ها</h2>
-        <div class="grid md:grid-cols-4 gap-6">
-          <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col hover:scale-105 transition-transform">
-            <h4 class="text-xl font-bold mb-4">ماهانه</h4>
-            <p class="text-3xl font-extrabold text-brandBlue mb-6">۱۰۰ هزار تومان</p>
-            <ul class="space-y-2 mb-6 flex-1">
-              <li class="flex items-center"><span class="w-2 h-2 bg-brandBlue rounded-full ml-2"></span>ترافیک نامحدود</li>
-              <li class="flex items-center"><span class="w-2 h-2 bg-brandBlue rounded-full ml-2"></span>پشتیبانی فوری</li>
+    <section class="pricing section">
+      <div class="container">
+        <h2 class="section-title">پلن‌ها و تعرفه‌ها</h2>
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <h4>ماهانه</h4>
+            <p class="pricing-price">۱۰۰ هزار تومان</p>
+            <ul class="pricing-features">
+              <li><span class="bullet"></span>ترافیک نامحدود</li>
+              <li><span class="bullet"></span>پشتیبانی فوری</li>
             </ul>
-            <a href="#" class="bg-brandBlue text-white py-2 rounded-lg hover:bg-cyan-600 transition-colors">خرید</a>
+            <a href="#" class="btn-buy">خرید</a>
           </div>
-          <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col hover:scale-105 transition-transform">
-            <h4 class="text-xl font-bold mb-4">سه‌ماهه</h4>
-            <p class="text-3xl font-extrabold text-brandBlue mb-6">۲۷۰ هزار تومان</p>
-            <ul class="space-y-2 mb-6 flex-1">
-              <li class="flex items-center"><span class="w-2 h-2 bg-brandBlue rounded-full ml-2"></span>صرفه‌جویی ۱۰٪</li>
-              <li class="flex items-center"><span class="w-2 h-2 bg-brandBlue rounded-full ml-2"></span>دسترسی همه سرورها</li>
+          <div class="pricing-card">
+            <h4>سه‌ماهه</h4>
+            <p class="pricing-price">۲۷۰ هزار تومان</p>
+            <ul class="pricing-features">
+              <li><span class="bullet"></span>صرفه‌جویی ۱۰٪</li>
+              <li><span class="bullet"></span>دسترسی همه سرورها</li>
             </ul>
-            <a href="#" class="bg-brandBlue text-white py-2 rounded-lg hover:bg-cyan-600 transition-colors">خرید</a>
+            <a href="#" class="btn-buy">خرید</a>
           </div>
-          <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col hover:scale-105 transition-transform">
-            <h4 class="text-xl font-bold mb-4">شش‌ماهه</h4>
-            <p class="text-3xl font-extrabold text-brandBlue mb-6">۵۰۰ هزار تومان</p>
-            <ul class="space-y-2 mb-6 flex-1">
-              <li class="flex items-center"><span class="w-2 h-2 bg-brandBlue rounded-full ml-2"></span>صرفه‌جویی ۱۵٪</li>
-              <li class="flex items-center"><span class="w-2 h-2 bg-brandBlue rounded-full ml-2"></span>پشتیبانی ویژه</li>
+          <div class="pricing-card">
+            <h4>شش‌ماهه</h4>
+            <p class="pricing-price">۵۰۰ هزار تومان</p>
+            <ul class="pricing-features">
+              <li><span class="bullet"></span>صرفه‌جویی ۱۵٪</li>
+              <li><span class="bullet"></span>پشتیبانی ویژه</li>
             </ul>
-            <a href="#" class="bg-brandBlue text-white py-2 rounded-lg hover:bg-cyan-600 transition-colors">خرید</a>
+            <a href="#" class="btn-buy">خرید</a>
           </div>
-          <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col hover:scale-105 transition-transform">
-            <h4 class="text-xl font-bold mb-4">یک‌ساله</h4>
-            <p class="text-3xl font-extrabold text-brandBlue mb-6">۹۰۰ هزار تومان</p>
-            <ul class="space-y-2 mb-6 flex-1">
-              <li class="flex items-center"><span class="w-2 h-2 bg-brandBlue rounded-full ml-2"></span>صرفه‌جویی ۲۵٪</li>
-              <li class="flex items-center"><span class="w-2 h-2 bg-brandBlue rounded-full ml-2"></span>اولویت پشتیبانی</li>
+          <div class="pricing-card">
+            <h4>یک‌ساله</h4>
+            <p class="pricing-price">۹۰۰ هزار تومان</p>
+            <ul class="pricing-features">
+              <li><span class="bullet"></span>صرفه‌جویی ۲۵٪</li>
+              <li><span class="bullet"></span>اولویت پشتیبانی</li>
             </ul>
-            <a href="#" class="bg-brandBlue text-white py-2 rounded-lg hover:bg-cyan-600 transition-colors">خرید</a>
+            <a href="#" class="btn-buy">خرید</a>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Tutorial -->
-    <section class="py-16 bg-white">
-      <div class="container mx-auto">
-        <h2 class="text-3xl font-extrabold text-center mb-8">آموزش اتصال</h2>
-        <div class="flex justify-center mb-8 flex-wrap">
-          <button data-tab="android" class="m-2 px-4 py-2 rounded-lg bg-brandBlue text-white">اندروید</button>
-          <button data-tab="windows" class="m-2 px-4 py-2 rounded-lg bg-gray-200 text-gray-700">ویندوز</button>
-          <button data-tab="ios" class="m-2 px-4 py-2 rounded-lg bg-gray-200 text-gray-700">iOS</button>
-          <button data-tab="mac" class="m-2 px-4 py-2 rounded-lg bg-gray-200 text-gray-700">مک</button>
-          <button data-tab="telegram" class="m-2 px-4 py-2 rounded-lg bg-gray-200 text-gray-700">ربات تلگرام</button>
+    <section class="tutorial section">
+      <div class="container">
+        <h2 class="section-title">آموزش اتصال</h2>
+        <div class="tab-buttons">
+          <button data-tab="android" class="active">اندروید</button>
+          <button data-tab="windows">ویندوز</button>
+          <button data-tab="ios">iOS</button>
+          <button data-tab="mac">مک</button>
+          <button data-tab="telegram">ربات تلگرام</button>
         </div>
-        <ul data-content="android" class="max-w-md mx-auto list-disc list-inside text-gray-700 space-y-2">
+        <ul data-content="android" class="tab-content active">
           <li>دانلود اپ از پلی‌استور</li>
           <li>ورود با نام کاربری</li>
           <li>اتصال به سرور</li>
         </ul>
-        <ul data-content="windows" class="max-w-md mx-auto list-disc list-inside text-gray-700 space-y-2 hidden">
+        <ul data-content="windows" class="tab-content">
           <li>دانلود کلاینت ویندوز</li>
           <li>نصب برنامه</li>
           <li>وارد کردن حساب</li>
           <li>اتصال</li>
         </ul>
-        <ul data-content="ios" class="max-w-md mx-auto list-disc list-inside text-gray-700 space-y-2 hidden">
+        <ul data-content="ios" class="tab-content">
           <li>دانلود از اپ‌استور</li>
           <li>اعتماد به پروفایل</li>
           <li>ورود</li>
           <li>اتصال</li>
         </ul>
-        <ul data-content="mac" class="max-w-md mx-auto list-disc list-inside text-gray-700 space-y-2 hidden">
+        <ul data-content="mac" class="tab-content">
           <li>دانلود فایل dmg</li>
           <li>نصب برنامه</li>
           <li>ورود</li>
           <li>اتصال</li>
         </ul>
-        <ul data-content="telegram" class="max-w-md mx-auto list-disc list-inside text-gray-700 space-y-2 hidden">
+        <ul data-content="telegram" class="tab-content">
           <li>شروع در ربات</li>
           <li>انتخاب پلن</li>
           <li>پرداخت</li>
@@ -178,68 +167,68 @@
     </section>
 
     <!-- Download -->
-    <section class="py-16 bg-gray-50">
-      <div class="container mx-auto text-center">
-        <h2 class="text-3xl font-extrabold mb-8">دانلود اپلیکیشن</h2>
-        <div class="flex flex-wrap justify-center gap-4">
-          <a href="#" class="bg-brandBlue text-white px-6 py-3 rounded-lg flex items-center hover:bg-cyan-600 transition-colors"><i class="bi bi-android2 ml-2"></i> اندروید</a>
-          <a href="#" class="bg-brandBlue text-white px-6 py-3 rounded-lg flex items-center hover:bg-cyan-600 transition-colors"><i class="bi bi-windows ml-2"></i> ویندوز</a>
-          <a href="#" class="bg-brandBlue text-white px-6 py-3 rounded-lg flex items-center hover:bg-cyan-600 transition-colors"><i class="bi bi-apple ml-2"></i> iOS</a>
-          <a href="#" class="bg-brandBlue text-white px-6 py-3 rounded-lg flex items-center hover:bg-cyan-600 transition-colors"><i class="bi bi-apple ml-2"></i> مک</a>
-          <a href="#" class="bg-brandGold text-black px-6 py-3 rounded-lg flex items-center hover:bg-yellow-500 transition-colors"><i class="bi bi-telegram ml-2"></i> ربات تلگرام</a>
+    <section class="download section">
+      <div class="container">
+        <h2 class="section-title">دانلود اپلیکیشن</h2>
+        <div class="download-buttons">
+          <a href="#" class="download-btn"><i class="bi bi-android2"></i>اندروید</a>
+          <a href="#" class="download-btn"><i class="bi bi-windows"></i>ویندوز</a>
+          <a href="#" class="download-btn"><i class="bi bi-apple"></i>iOS</a>
+          <a href="#" class="download-btn"><i class="bi bi-apple"></i>مک</a>
+          <a href="#" class="download-btn telegram"><i class="bi bi-telegram"></i>ربات تلگرام</a>
         </div>
       </div>
     </section>
 
     <!-- Trust -->
-    <section class="py-16 bg-white">
-      <div class="container mx-auto text-center">
-        <h2 class="text-3xl font-extrabold mb-8">چرا به ما اعتماد می‌کنند؟</h2>
-        <div class="flex flex-wrap justify-center gap-8 mb-12">
-          <div class="max-w-xs bg-gray-100 p-6 rounded-lg hover:scale-105 transition-transform">
-            <p class="mb-4">«سرعت عالی و پشتیبانی سریع. بهترین VPNی که استفاده کرده‌ام.»</p>
-            <div class="font-bold">کاربر رضایت‌مند</div>
+    <section class="trust section">
+      <div class="container">
+        <h2 class="section-title">چرا به ما اعتماد می‌کنند؟</h2>
+        <div class="testimonials">
+          <div class="testimonial">
+            <p>«سرعت عالی و پشتیبانی سریع. بهترین VPNی که استفاده کرده‌ام.»</p>
+            <div class="author">کاربر رضایت‌مند</div>
           </div>
-          <div class="max-w-xs bg-gray-100 p-6 rounded-lg hover:scale-105 transition-transform">
-            <p class="mb-4">«به لطف Hakim VPN بدون محدودیت به اینترنت دسترسی دارم.»</p>
-            <div class="font-bold">کاربر خوشحال</div>
+          <div class="testimonial">
+            <p>«به لطف Hakim VPN بدون محدودیت به اینترنت دسترسی دارم.»</p>
+            <div class="author">کاربر خوشحال</div>
           </div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="text-3xl font-bold text-brandBlue">+۵۰ هزار <span class="block text-sm text-gray-600 mt-2">کاربر فعال</span></div>
-          <div class="text-3xl font-bold text-brandBlue">۲۰+ <span class="block text-sm text-gray-600 mt-2">کشور دارای سرور</span></div>
-          <div class="text-3xl font-bold text-brandBlue">۹۹٪ <span class="block text-sm text-gray-600 mt-2">رضایت مشتریان</span></div>
+        <div class="stats">
+          <div class="stat">+۵۰ هزار<span>کاربر فعال</span></div>
+          <div class="stat">۲۰+<span>کشور دارای سرور</span></div>
+          <div class="stat">۹۹٪<span>رضایت مشتریان</span></div>
         </div>
       </div>
     </section>
 
     <!-- Blog -->
-    <section class="py-16 bg-gray-50">
-      <div class="container mx-auto">
-        <h2 class="text-3xl font-extrabold text-center mb-12">وبلاگ</h2>
-        <div class="grid md:grid-cols-3 gap-6">
-          <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-102 transition-transform">
-            <img src="https://via.placeholder.com/400x200?text=Blog+1" alt="" class="w-full h-40 object-cover" />
-            <div class="p-4">
-              <h3 class="font-bold mb-2">عنوان مقاله ۱</h3>
-              <p class="text-gray-600 text-sm mb-4">متن کوتاه درباره مقاله و ادامه...</p>
-              <a href="#" class="text-brandBlue font-semibold">مطالعه بیشتر</a>
+    <section class="blog section">
+      <div class="container">
+        <h2 class="section-title">وبلاگ</h2>
+        <div class="blog-grid">
+          <div class="blog-card">
+            <img src="https://via.placeholder.com/400x200?text=Blog+1" alt="" />
+            <div class="blog-content">
+              <h3>عنوان مقاله ۱</h3>
+              <p>متن کوتاه درباره مقاله و ادامه...</p>
+              <a href="#">مطالعه بیشتر</a>
             </div>
           </div>
-          <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-102 transition-transform">
-            <img src="https://via.placeholder.com/400x200?text=Blog+2" alt="" class="w-full h-40 object-cover" />
-            <div class="p-4">
-              <h3 class="font-bold mb-2">عنوان مقاله ۲</h3>
-              <p class="text-gray-600 text-sm mb-4">متن کوتاه درباره مقاله و ادامه...</p>
-              <a href="#" class="text-brandBlue font-semibold">مطالعه بیشتر</a>
+          <div class="blog-card">
+            <img src="https://via.placeholder.com/400x200?text=Blog+2" alt="" />
+            <div class="blog-content">
+              <h3>عنوان مقاله ۲</h3>
+              <p>متن کوتاه درباره مقاله و ادامه...</p>
+              <a href="#">مطالعه بیشتر</a>
             </div>
           </div>
-          <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-102 transition-transform">
-            <img src="https://via.placeholder.com/400x200?text=Blog+3" alt="" class="w-full h-40 object-cover" />
-            <div class="p-4">
-              <h3 class="font-bold mb-2">عنوان مقاله ۳</h3>
-              <p class="text-gray-600 text-sm mb-4">متن کوتاه درباره مقاله و ادامه...</p>
-              <a href="#" class="text-brandBlue font-semibold">مطالعه بیشتر</a>
+          <div class="blog-card">
+            <img src="https://via.placeholder.com/400x200?text=Blog+3" alt="" />
+            <div class="blog-content">
+              <h3>عنوان مقاله ۳</h3>
+              <p>متن کوتاه درباره مقاله و ادامه...</p>
+              <a href="#">مطالعه بیشتر</a>
             </div>
           </div>
         </div>
@@ -248,56 +237,50 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-gray-900 text-gray-300 pt-10">
-    <div class="container mx-auto grid md:grid-cols-3 gap-8 px-4">
-      <div>
-        <h4 class="text-xl font-bold text-brandGold mb-4">HAKIM VPN</h4>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-about">
+        <h4 class="footer-title">HAKIM VPN</h4>
         <p>بهترین خدمات VPN با امنیت بالا و سرعت فوق‌العاده.</p>
       </div>
-      <div>
-        <h5 class="font-bold mb-4">لینک‌های سریع</h5>
-        <ul class="space-y-2">
-          <li><a href="#" class="hover:text-white">قوانین و مقررات</a></li>
-          <li><a href="#" class="hover:text-white">درباره ما</a></li>
-          <li><a href="#" class="hover:text-white">سوالات متداول</a></li>
+      <div class="footer-links-wrap">
+        <h5 class="footer-title">لینک‌های سریع</h5>
+        <ul class="footer-links">
+          <li><a href="#">قوانین و مقررات</a></li>
+          <li><a href="#">درباره ما</a></li>
+          <li><a href="#">سوالات متداول</a></li>
         </ul>
       </div>
-      <div>
-        <h5 class="font-bold mb-4">تماس با ما</h5>
-        <ul class="space-y-2">
+      <div class="footer-contact">
+        <h5 class="footer-title">تماس با ما</h5>
+        <ul class="footer-links">
           <li>ایمیل: support@hakimvpn.com</li>
           <li>تلگرام: @hakimvpn</li>
           <li>تلفن: ۰۲۱-۱۲۳۴۵۶۷۸</li>
         </ul>
-        <div class="flex space-x-4 space-x-reverse mt-4">
-          <a href="#" class="text-brandGold hover:text-white"><i class="bi bi-telegram"></i></a>
-          <a href="#" class="text-brandGold hover:text-white"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="text-brandGold hover:text-white"><i class="bi bi-twitter"></i></a>
+        <div class="socials">
+          <a href="#"><i class="bi bi-telegram"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-twitter"></i></a>
         </div>
       </div>
     </div>
-    <div class="text-center text-gray-500 mt-8 py-4 bg-gray-800">
-      © ۲۰۲۴ Hakim VPN. تمامی حقوق محفوظ است.
-    </div>
+    <div class="footer-bottom">© ۲۰۲۴ Hakim VPN. تمامی حقوق محفوظ است.</div>
   </footer>
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const tabs = document.querySelectorAll('[data-tab]');
-      const lists = document.querySelectorAll('[data-content]');
+      const contents = document.querySelectorAll('[data-content]');
       tabs.forEach(btn => {
         btn.addEventListener('click', () => {
           const target = btn.getAttribute('data-tab');
-          tabs.forEach(b => {
-            b.classList.replace('bg-brandBlue', 'bg-gray-200');
-            b.classList.replace('text-white', 'text-gray-700');
-          });
-          btn.classList.replace('bg-gray-200', 'bg-brandBlue');
-          btn.classList.replace('text-gray-700', 'text-white');
-          lists.forEach(list => {
-            list.classList.add('hidden');
-            if (list.getAttribute('data-content') === target) {
-              list.classList.remove('hidden');
+          tabs.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          contents.forEach(c => {
+            c.classList.remove('active');
+            if (c.getAttribute('data-content') === target) {
+              c.classList.add('active');
             }
           });
         });
@@ -306,3 +289,4 @@
   </script>
 </body>
 </html>
+
