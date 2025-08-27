@@ -25,248 +25,284 @@
     }
   </script>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/framer-motion@10/dist/framer-motion.umd.js"></script>
 </head>
 <body class="font-sans bg-gray-50 text-gray-900">
-  <div id="root"></div>
-  <script type="text/babel">
-    const { motion } = window['framer-motion'];
+  <!-- Header -->
+  <header class="bg-white shadow fixed w-full z-50">
+    <div class="container mx-auto flex items-center justify-between p-4">
+      <div class="flex items-center space-x-2 space-x-reverse">
+        <img src="https://via.placeholder.com/40" alt="Hakim VPN" class="h-10 w-10 rounded-full" />
+        <span class="text-xl font-bold text-brandBlue">HAKIM VPN</span>
+      </div>
+      <nav class="hidden md:flex space-x-6 space-x-reverse items-center">
+        <a href="#" class="text-gray-700 hover:text-brandBlue transition-colors">خانه</a>
+        <a href="#" class="text-gray-700 hover:text-brandBlue transition-colors">خرید VPN</a>
+        <a href="#" class="text-gray-700 hover:text-brandBlue transition-colors">تعرفه‌ها</a>
+        <a href="#" class="text-gray-700 hover:text-brandBlue transition-colors">آموزش اتصال</a>
+        <a href="#" class="text-gray-700 hover:text-brandBlue transition-colors">دانلود اپ‌ها</a>
+        <a href="#" class="text-gray-700 hover:text-brandBlue transition-colors">پشتیبانی</a>
+        <a href="#" class="text-gray-700 hover:text-brandBlue transition-colors">وبلاگ</a>
+      </nav>
+      <a href="#" class="hidden md:inline-block bg-brandGold text-black px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition-colors">خرید سریع VPN</a>
+    </div>
+  </header>
 
-    const MenuItem = ({ children }) => (
-      <a href="#" className="text-gray-700 hover:text-brandBlue transition-colors">{children}</a>
-    );
-
-    const Header = () => (
-      <header className="bg-white shadow fixed w-full z-50">
-        <div className="container mx-auto flex items-center justify-between p-4">
-          <div className="flex items-center space-x-2 space-x-reverse">
-            <img src="https://via.placeholder.com/40" alt="Hakim VPN" className="h-10 w-10 rounded-full" />
-            <span className="text-xl font-bold text-brandBlue">HAKIM VPN</span>
+  <main>
+    <!-- Hero -->
+    <section class="pt-24 bg-gradient-to-tr from-brandBlue via-blue-600 to-purple-700 text-white">
+      <div class="container mx-auto flex flex-col md:flex-row items-center py-16">
+        <div class="flex-1 text-center md:text-right">
+          <h1 class="text-4xl md:text-5xl font-extrabold mb-4">اینترنت بدون مرز با Hakim VPN</h1>
+          <p class="text-lg mb-8">امن، سریع، پایدار – دسترسی بدون محدودیت</p>
+          <div class="space-x-4 space-x-reverse">
+            <a href="#" class="bg-brandGold text-black px-6 py-3 rounded-lg font-bold hover:bg-yellow-500 transition-colors">شروع کنید</a>
+            <a href="#" class="border border-white px-6 py-3 rounded-lg font-bold hover:bg-white hover:text-brandBlue transition-colors">دانلود اپلیکیشن</a>
           </div>
-          <nav className="hidden md:flex space-x-6 space-x-reverse items-center">
-            <MenuItem>خانه</MenuItem>
-            <MenuItem>خرید VPN</MenuItem>
-            <MenuItem>تعرفه‌ها</MenuItem>
-            <MenuItem>آموزش اتصال</MenuItem>
-            <MenuItem>دانلود اپ‌ها</MenuItem>
-            <MenuItem>پشتیبانی</MenuItem>
-            <MenuItem>وبلاگ</MenuItem>
-          </nav>
-          <a href="#" className="hidden md:inline-block bg-brandGold text-black px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition-colors">خرید سریع VPN</a>
         </div>
-      </header>
-    );
+        <img src="https://via.placeholder.com/300x400" alt="Hakim Bot" class="w-64 md:w-80 mt-10 md:mt-0 mx-auto" />
+      </div>
+    </section>
 
-    const Hero = () => (
-      <section className="pt-24 bg-gradient-to-tr from-brandBlue via-blue-600 to-purple-700 text-white">
-        <div className="container mx-auto flex flex-col md:flex-row items-center py-16">
-          <motion.div className="flex-1 text-center md:text-right" initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} transition={{duration:0.6}}>
-            <h1 className="text-4xl md:text-5xl font-extrabold mb-4">اینترنت بدون مرز با Hakim VPN</h1>
-            <p className="text-lg mb-8">امن، سریع، پایدار – دسترسی بدون محدودیت</p>
-            <div className="space-x-4 space-x-reverse">
-              <a href="#" className="bg-brandGold text-black px-6 py-3 rounded-lg font-bold hover:bg-yellow-500 transition-colors">شروع کنید</a>
-              <a href="#" className="border border-white px-6 py-3 rounded-lg font-bold hover:bg-white hover:text-brandBlue transition-colors">دانلود اپلیکیشن</a>
-            </div>
-          </motion.div>
-          <motion.img src="https://via.placeholder.com/300x400" alt="Hakim Bot" className="w-64 md:w-80 mt-10 md:mt-0 mx-auto" initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} transition={{duration:0.8, delay:0.2}} />
+    <!-- Features -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto grid md:grid-cols-4 gap-8">
+        <div class="text-center p-6 hover:scale-105 transition-transform">
+          <div class="text-brandBlue mb-4"><i class="bi bi-globe2 text-4xl"></i></div>
+          <h3 class="font-bold mb-2">سرورهای جهانی پرسرعت</h3>
+          <p class="text-gray-600">دسترسی به سرورهای متعدد در سراسر جهان</p>
         </div>
-      </section>
-    );
-
-    const Feature = ({ icon, title, desc }) => (
-      <motion.div className="text-center p-6" whileHover={{scale:1.05}}>
-        <div className="text-brandBlue mb-4">{icon}</div>
-        <h3 className="font-bold mb-2">{title}</h3>
-        <p className="text-gray-600">{desc}</p>
-      </motion.div>
-    );
-
-    const Features = () => (
-      <section className="py-16 bg-white">
-        <div className="container mx-auto grid md:grid-cols-4 gap-8">
-          <Feature icon={<i className="bi bi-globe2 text-4xl"></i>} title="سرورهای جهانی پرسرعت" desc="دسترسی به سرورهای متعدد در سراسر جهان" />
-          <Feature icon={<i className="bi bi-shield-lock text-4xl"></i>} title="امنیت و رمزگذاری سطح نظامی" desc="حفظ کامل حریم خصوصی و داده‌های شما" />
-          <Feature icon={<i className="bi bi-phone text-4xl"></i>} title="اپلیکیشن برای همه دستگاه‌ها" desc="پشتیبانی از اندروید، ویندوز، مک و iOS" />
-          <Feature icon={<i className="bi bi-headset text-4xl"></i>} title="پشتیبانی ۲۴/۷" desc="تیم پشتیبانی ما همیشه در کنار شماست" />
+        <div class="text-center p-6 hover:scale-105 transition-transform">
+          <div class="text-brandBlue mb-4"><i class="bi bi-shield-lock text-4xl"></i></div>
+          <h3 class="font-bold mb-2">امنیت و رمزگذاری سطح نظامی</h3>
+          <p class="text-gray-600">حفظ کامل حریم‌خصوصی و داده‌های شما</p>
         </div>
-      </section>
-    );
+        <div class="text-center p-6 hover:scale-105 transition-transform">
+          <div class="text-brandBlue mb-4"><i class="bi bi-phone text-4xl"></i></div>
+          <h3 class="font-bold mb-2">اپلیکیشن برای همه دستگاه‌ها</h3>
+          <p class="text-gray-600">پشتیبانی از اندروید، ویندوز، مک و iOS</p>
+        </div>
+        <div class="text-center p-6 hover:scale-105 transition-transform">
+          <div class="text-brandBlue mb-4"><i class="bi bi-headset text-4xl"></i></div>
+          <h3 class="font-bold mb-2">پشتیبانی ۲۴/۷</h3>
+          <p class="text-gray-600">تیم پشتیبانی ما همیشه در کنار شماست</p>
+        </div>
+      </div>
+    </section>
 
-    const PlanCard = ({ title, price, features }) => (
-      <motion.div className="bg-white rounded-xl shadow-lg p-6 flex flex-col" whileHover={{scale:1.05}}>
-        <h4 className="text-xl font-bold mb-4">{title}</h4>
-        <p className="text-3xl font-extrabold text-brandBlue mb-6">{price}</p>
-        <ul className="space-y-2 mb-6 flex-1">
-          {features.map((f,i) => (
-            <li key={i} className="flex items-center"><span className="w-2 h-2 bg-brandBlue rounded-full ml-2"></span>{f}</li>
-          ))}
+    <!-- Pricing -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto">
+        <h2 class="text-3xl font-extrabold text-center mb-12">پلن‌ها و تعرفه‌ها</h2>
+        <div class="grid md:grid-cols-4 gap-6">
+          <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col hover:scale-105 transition-transform">
+            <h4 class="text-xl font-bold mb-4">ماهانه</h4>
+            <p class="text-3xl font-extrabold text-brandBlue mb-6">۱۰۰ هزار تومان</p>
+            <ul class="space-y-2 mb-6 flex-1">
+              <li class="flex items-center"><span class="w-2 h-2 bg-brandBlue rounded-full ml-2"></span>ترافیک نامحدود</li>
+              <li class="flex items-center"><span class="w-2 h-2 bg-brandBlue rounded-full ml-2"></span>پشتیبانی فوری</li>
+            </ul>
+            <a href="#" class="bg-brandBlue text-white py-2 rounded-lg hover:bg-cyan-600 transition-colors">خرید</a>
+          </div>
+          <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col hover:scale-105 transition-transform">
+            <h4 class="text-xl font-bold mb-4">سه‌ماهه</h4>
+            <p class="text-3xl font-extrabold text-brandBlue mb-6">۲۷۰ هزار تومان</p>
+            <ul class="space-y-2 mb-6 flex-1">
+              <li class="flex items-center"><span class="w-2 h-2 bg-brandBlue rounded-full ml-2"></span>صرفه‌جویی ۱۰٪</li>
+              <li class="flex items-center"><span class="w-2 h-2 bg-brandBlue rounded-full ml-2"></span>دسترسی همه سرورها</li>
+            </ul>
+            <a href="#" class="bg-brandBlue text-white py-2 rounded-lg hover:bg-cyan-600 transition-colors">خرید</a>
+          </div>
+          <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col hover:scale-105 transition-transform">
+            <h4 class="text-xl font-bold mb-4">شش‌ماهه</h4>
+            <p class="text-3xl font-extrabold text-brandBlue mb-6">۵۰۰ هزار تومان</p>
+            <ul class="space-y-2 mb-6 flex-1">
+              <li class="flex items-center"><span class="w-2 h-2 bg-brandBlue rounded-full ml-2"></span>صرفه‌جویی ۱۵٪</li>
+              <li class="flex items-center"><span class="w-2 h-2 bg-brandBlue rounded-full ml-2"></span>پشتیبانی ویژه</li>
+            </ul>
+            <a href="#" class="bg-brandBlue text-white py-2 rounded-lg hover:bg-cyan-600 transition-colors">خرید</a>
+          </div>
+          <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col hover:scale-105 transition-transform">
+            <h4 class="text-xl font-bold mb-4">یک‌ساله</h4>
+            <p class="text-3xl font-extrabold text-brandBlue mb-6">۹۰۰ هزار تومان</p>
+            <ul class="space-y-2 mb-6 flex-1">
+              <li class="flex items-center"><span class="w-2 h-2 bg-brandBlue rounded-full ml-2"></span>صرفه‌جویی ۲۵٪</li>
+              <li class="flex items-center"><span class="w-2 h-2 bg-brandBlue rounded-full ml-2"></span>اولویت پشتیبانی</li>
+            </ul>
+            <a href="#" class="bg-brandBlue text-white py-2 rounded-lg hover:bg-cyan-600 transition-colors">خرید</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tutorial -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto">
+        <h2 class="text-3xl font-extrabold text-center mb-8">آموزش اتصال</h2>
+        <div class="flex justify-center mb-8 flex-wrap">
+          <button data-tab="android" class="m-2 px-4 py-2 rounded-lg bg-brandBlue text-white">اندروید</button>
+          <button data-tab="windows" class="m-2 px-4 py-2 rounded-lg bg-gray-200 text-gray-700">ویندوز</button>
+          <button data-tab="ios" class="m-2 px-4 py-2 rounded-lg bg-gray-200 text-gray-700">iOS</button>
+          <button data-tab="mac" class="m-2 px-4 py-2 rounded-lg bg-gray-200 text-gray-700">مک</button>
+          <button data-tab="telegram" class="m-2 px-4 py-2 rounded-lg bg-gray-200 text-gray-700">ربات تلگرام</button>
+        </div>
+        <ul data-content="android" class="max-w-md mx-auto list-disc list-inside text-gray-700 space-y-2">
+          <li>دانلود اپ از پلی‌استور</li>
+          <li>ورود با نام کاربری</li>
+          <li>اتصال به سرور</li>
         </ul>
-        <a href="#" className="bg-brandBlue text-white py-2 rounded-lg hover:bg-cyan-600 transition-colors">خرید</a>
-      </motion.div>
-    );
+        <ul data-content="windows" class="max-w-md mx-auto list-disc list-inside text-gray-700 space-y-2 hidden">
+          <li>دانلود کلاینت ویندوز</li>
+          <li>نصب برنامه</li>
+          <li>وارد کردن حساب</li>
+          <li>اتصال</li>
+        </ul>
+        <ul data-content="ios" class="max-w-md mx-auto list-disc list-inside text-gray-700 space-y-2 hidden">
+          <li>دانلود از اپ‌استور</li>
+          <li>اعتماد به پروفایل</li>
+          <li>ورود</li>
+          <li>اتصال</li>
+        </ul>
+        <ul data-content="mac" class="max-w-md mx-auto list-disc list-inside text-gray-700 space-y-2 hidden">
+          <li>دانلود فایل dmg</li>
+          <li>نصب برنامه</li>
+          <li>ورود</li>
+          <li>اتصال</li>
+        </ul>
+        <ul data-content="telegram" class="max-w-md mx-auto list-disc list-inside text-gray-700 space-y-2 hidden">
+          <li>شروع در ربات</li>
+          <li>انتخاب پلن</li>
+          <li>پرداخت</li>
+          <li>دریافت کانفیگ</li>
+        </ul>
+      </div>
+    </section>
 
-    const Pricing = () => (
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto">
-          <h2 className="text-3xl font-extrabold text-center mb-12">پلن‌ها و تعرفه‌ها</h2>
-          <div className="grid md:grid-cols-4 gap-6">
-            <PlanCard title="ماهانه" price="۱۰۰ هزار تومان" features={["ترافیک نامحدود","پشتیبانی فوری"]} />
-            <PlanCard title="سه‌ماهه" price="۲۷۰ هزار تومان" features={["صرفه‌جویی ۱۰٪","دسترسی همه سرورها"]} />
-            <PlanCard title="شش‌ماهه" price="۵۰۰ هزار تومان" features={["صرفه‌جویی ۱۵٪","پشتیبانی ویژه"]} />
-            <PlanCard title="یک‌ساله" price="۹۰۰ هزار تومان" features={["صرفه‌جویی ۲۵٪","اولویت پشتیبانی"]} />
+    <!-- Download -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-extrabold mb-8">دانلود اپلیکیشن</h2>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="#" class="bg-brandBlue text-white px-6 py-3 rounded-lg flex items-center hover:bg-cyan-600 transition-colors"><i class="bi bi-android2 ml-2"></i> اندروید</a>
+          <a href="#" class="bg-brandBlue text-white px-6 py-3 rounded-lg flex items-center hover:bg-cyan-600 transition-colors"><i class="bi bi-windows ml-2"></i> ویندوز</a>
+          <a href="#" class="bg-brandBlue text-white px-6 py-3 rounded-lg flex items-center hover:bg-cyan-600 transition-colors"><i class="bi bi-apple ml-2"></i> iOS</a>
+          <a href="#" class="bg-brandBlue text-white px-6 py-3 rounded-lg flex items-center hover:bg-cyan-600 transition-colors"><i class="bi bi-apple ml-2"></i> مک</a>
+          <a href="#" class="bg-brandGold text-black px-6 py-3 rounded-lg flex items-center hover:bg-yellow-500 transition-colors"><i class="bi bi-telegram ml-2"></i> ربات تلگرام</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-extrabold mb-8">چرا به ما اعتماد می‌کنند؟</h2>
+        <div class="flex flex-wrap justify-center gap-8 mb-12">
+          <div class="max-w-xs bg-gray-100 p-6 rounded-lg hover:scale-105 transition-transform">
+            <p class="mb-4">«سرعت عالی و پشتیبانی سریع. بهترین VPNی که استفاده کرده‌ام.»</p>
+            <div class="font-bold">کاربر رضایت‌مند</div>
+          </div>
+          <div class="max-w-xs bg-gray-100 p-6 rounded-lg hover:scale-105 transition-transform">
+            <p class="mb-4">«به لطف Hakim VPN بدون محدودیت به اینترنت دسترسی دارم.»</p>
+            <div class="font-bold">کاربر خوشحال</div>
           </div>
         </div>
-      </section>
-    );
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="text-3xl font-bold text-brandBlue">+۵۰ هزار <span class="block text-sm text-gray-600 mt-2">کاربر فعال</span></div>
+          <div class="text-3xl font-bold text-brandBlue">۲۰+ <span class="block text-sm text-gray-600 mt-2">کشور دارای سرور</span></div>
+          <div class="text-3xl font-bold text-brandBlue">۹۹٪ <span class="block text-sm text-gray-600 mt-2">رضایت مشتریان</span></div>
+        </div>
+      </div>
+    </section>
 
-    const tutorials = {
-      android: ['دانلود اپ از پلی‌استور', 'ورود با نام کاربری', 'اتصال به سرور'],
-      windows: ['دانلود کلاینت ویندوز', 'نصب برنامه', 'وارد کردن حساب', 'اتصال'],
-      ios: ['دانلود از اپ‌استور', 'اعتماد به پروفایل', 'ورود', 'اتصال'],
-      mac: ['دانلود فایل dmg', 'نصب برنامه', 'ورود', 'اتصال'],
-      telegram: ['شروع در ربات', 'انتخاب پلن', 'پرداخت', 'دریافت کانفیگ']
-    };
-
-    const Tutorial = () => {
-      const [active, setActive] = React.useState('android');
-      const tabs = [
-        {key:'android', label:'اندروید'},
-        {key:'windows', label:'ویندوز'},
-        {key:'ios', label:'iOS'},
-        {key:'mac', label:'مک'},
-        {key:'telegram', label:'ربات تلگرام'},
-      ];
-      return (
-        <section className="py-16 bg-white">
-          <div className="container mx-auto">
-            <h2 className="text-3xl font-extrabold text-center mb-8">آموزش اتصال</h2>
-            <div className="flex justify-center mb-8 flex-wrap">
-              {tabs.map(t => (
-                <button key={t.key} onClick={() => setActive(t.key)} className={`m-2 px-4 py-2 rounded-lg ${active === t.key ? 'bg-brandBlue text-white' : 'bg-gray-200 text-gray-700'} transition-colors`}>{t.label}</button>
-              ))}
+    <!-- Blog -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto">
+        <h2 class="text-3xl font-extrabold text-center mb-12">وبلاگ</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-102 transition-transform">
+            <img src="https://via.placeholder.com/400x200?text=Blog+1" alt="" class="w-full h-40 object-cover" />
+            <div class="p-4">
+              <h3 class="font-bold mb-2">عنوان مقاله ۱</h3>
+              <p class="text-gray-600 text-sm mb-4">متن کوتاه درباره مقاله و ادامه...</p>
+              <a href="#" class="text-brandBlue font-semibold">مطالعه بیشتر</a>
             </div>
-            <ul className="max-w-md mx-auto list-disc list-inside text-gray-700 space-y-2">
-              {tutorials[active].map((step,i) => <li key={i}>{step}</li>)}
-            </ul>
           </div>
-        </section>
-      );
-    };
-
-    const Download = () => (
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-extrabold mb-8">دانلود اپلیکیشن</h2>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a href="#" className="bg-brandBlue text-white px-6 py-3 rounded-lg flex items-center hover:bg-cyan-600 transition-colors"><i className="bi bi-android2 ml-2"></i> اندروید</a>
-            <a href="#" className="bg-brandBlue text-white px-6 py-3 rounded-lg flex items-center hover:bg-cyan-600 transition-colors"><i className="bi bi-windows ml-2"></i> ویندوز</a>
-            <a href="#" className="bg-brandBlue text-white px-6 py-3 rounded-lg flex items-center hover:bg-cyan-600 transition-colors"><i className="bi bi-apple ml-2"></i> iOS</a>
-            <a href="#" className="bg-brandBlue text-white px-6 py-3 rounded-lg flex items-center hover:bg-cyan-600 transition-colors"><i className="bi bi-apple ml-2"></i> مک</a>
-            <a href="#" className="bg-brandGold text-black px-6 py-3 rounded-lg flex items-center hover:bg-yellow-500 transition-colors"><i className="bi bi-telegram ml-2"></i> ربات تلگرام</a>
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-102 transition-transform">
+            <img src="https://via.placeholder.com/400x200?text=Blog+2" alt="" class="w-full h-40 object-cover" />
+            <div class="p-4">
+              <h3 class="font-bold mb-2">عنوان مقاله ۲</h3>
+              <p class="text-gray-600 text-sm mb-4">متن کوتاه درباره مقاله و ادامه...</p>
+              <a href="#" class="text-brandBlue font-semibold">مطالعه بیشتر</a>
+            </div>
           </div>
-        </div>
-      </section>
-    );
-
-    const Trust = () => (
-      <section className="py-16 bg-white">
-        <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-extrabold mb-8">چرا به ما اعتماد می‌کنند؟</h2>
-          <div className="flex flex-wrap justify-center gap-8 mb-12">
-            <motion.div className="max-w-xs bg-gray-100 p-6 rounded-lg" whileHover={{scale:1.05}}>
-              <p className="mb-4">«سرعت عالی و پشتیبانی سریع. بهترین VPNی که استفاده کرده‌ام.»</p>
-              <div className="font-bold">کاربر رضایت‌مند</div>
-            </motion.div>
-            <motion.div className="max-w-xs bg-gray-100 p-6 rounded-lg" whileHover={{scale:1.05}}>
-              <p className="mb-4">«به لطف Hakim VPN بدون محدودیت به اینترنت دسترسی دارم.»</p>
-              <div className="font-bold">کاربر خوشحال</div>
-            </motion.div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="text-3xl font-bold text-brandBlue">+۵۰ هزار <span className="block text-sm text-gray-600 mt-2">کاربر فعال</span></div>
-            <div className="text-3xl font-bold text-brandBlue">۲۰+ <span className="block text-sm text-gray-600 mt-2">کشور دارای سرور</span></div>
-            <div className="text-3xl font-bold text-brandBlue">۹۹٪ <span className="block text-sm text-gray-600 mt-2">رضایت مشتریان</span></div>
-          </div>
-        </div>
-      </section>
-    );
-
-    const Blog = () => (
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto">
-          <h2 className="text-3xl font-extrabold text-center mb-12">وبلاگ</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[1,2,3].map(i => (
-              <motion.div key={i} className="bg-white rounded-lg shadow-lg overflow-hidden" whileHover={{scale:1.02}}>
-                <img src={`https://via.placeholder.com/400x200?text=Blog+${i}`} alt="" className="w-full h-40 object-cover" />
-                <div className="p-4">
-                  <h3 className="font-bold mb-2">عنوان مقاله {i}</h3>
-                  <p className="text-gray-600 text-sm mb-4">متن کوتاه درباره مقاله و ادامه...</p>
-                  <a href="#" className="text-brandBlue font-semibold">مطالعه بیشتر</a>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-    );
-
-    const Footer = () => (
-      <footer className="bg-gray-900 text-gray-300 pt-10">
-        <div className="container mx-auto grid md:grid-cols-3 gap-8 px-4">
-          <div>
-            <h4 className="text-xl font-bold text-brandGold mb-4">HAKIM VPN</h4>
-            <p>بهترین خدمات VPN با امنیت بالا و سرعت فوق‌العاده.</p>
-          </div>
-          <div>
-            <h5 className="font-bold mb-4">لینک‌های سریع</h5>
-            <ul className="space-y-2">
-              <li><a href="#" className="hover:text-white">قوانین و مقررات</a></li>
-              <li><a href="#" className="hover:text-white">درباره ما</a></li>
-              <li><a href="#" className="hover:text-white">سوالات متداول</a></li>
-            </ul>
-          </div>
-          <div>
-            <h5 className="font-bold mb-4">تماس با ما</h5>
-            <ul className="space-y-2">
-              <li>ایمیل: support@hakimvpn.com</li>
-              <li>تلگرام: @hakimvpn</li>
-              <li>تلفن: ۰۲۱-۱۲۳۴۵۶۷۸</li>
-            </ul>
-            <div className="flex space-x-4 space-x-reverse mt-4">
-              <a href="#" className="text-brandGold hover:text-white"><i className="bi bi-telegram"></i></a>
-              <a href="#" className="text-brandGold hover:text-white"><i className="bi bi-instagram"></i></a>
-              <a href="#" className="text-brandGold hover:text-white"><i className="bi bi-twitter"></i></a>
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-102 transition-transform">
+            <img src="https://via.placeholder.com/400x200?text=Blog+3" alt="" class="w-full h-40 object-cover" />
+            <div class="p-4">
+              <h3 class="font-bold mb-2">عنوان مقاله ۳</h3>
+              <p class="text-gray-600 text-sm mb-4">متن کوتاه درباره مقاله و ادامه...</p>
+              <a href="#" class="text-brandBlue font-semibold">مطالعه بیشتر</a>
             </div>
           </div>
         </div>
-        <div className="text-center text-gray-500 mt-8 py-4 bg-gray-800">
-          © ۲۰۲۴ Hakim VPN. تمامی حقوق محفوظ است.
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 pt-10">
+    <div class="container mx-auto grid md:grid-cols-3 gap-8 px-4">
+      <div>
+        <h4 class="text-xl font-bold text-brandGold mb-4">HAKIM VPN</h4>
+        <p>بهترین خدمات VPN با امنیت بالا و سرعت فوق‌العاده.</p>
+      </div>
+      <div>
+        <h5 class="font-bold mb-4">لینک‌های سریع</h5>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-white">قوانین و مقررات</a></li>
+          <li><a href="#" class="hover:text-white">درباره ما</a></li>
+          <li><a href="#" class="hover:text-white">سوالات متداول</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-bold mb-4">تماس با ما</h5>
+        <ul class="space-y-2">
+          <li>ایمیل: support@hakimvpn.com</li>
+          <li>تلگرام: @hakimvpn</li>
+          <li>تلفن: ۰۲۱-۱۲۳۴۵۶۷۸</li>
+        </ul>
+        <div class="flex space-x-4 space-x-reverse mt-4">
+          <a href="#" class="text-brandGold hover:text-white"><i class="bi bi-telegram"></i></a>
+          <a href="#" class="text-brandGold hover:text-white"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-brandGold hover:text-white"><i class="bi bi-twitter"></i></a>
         </div>
-      </footer>
-    );
+      </div>
+    </div>
+    <div class="text-center text-gray-500 mt-8 py-4 bg-gray-800">
+      © ۲۰۲۴ Hakim VPN. تمامی حقوق محفوظ است.
+    </div>
+  </footer>
 
-    const App = () => (
-      <>
-        <Header />
-        <main>
-          <Hero />
-          <Features />
-          <Pricing />
-          <Tutorial />
-          <Download />
-          <Trust />
-          <Blog />
-        </main>
-        <Footer />
-      </>
-    );
-
-    const root = ReactDOM.createRoot(document.getElementById('root'));
-    root.render(<App />);
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const tabs = document.querySelectorAll('[data-tab]');
+      const lists = document.querySelectorAll('[data-content]');
+      tabs.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const target = btn.getAttribute('data-tab');
+          tabs.forEach(b => {
+            b.classList.replace('bg-brandBlue', 'bg-gray-200');
+            b.classList.replace('text-white', 'text-gray-700');
+          });
+          btn.classList.replace('bg-gray-200', 'bg-brandBlue');
+          btn.classList.replace('text-gray-700', 'text-white');
+          lists.forEach(list => {
+            list.classList.add('hidden');
+            if (list.getAttribute('data-content') === target) {
+              list.classList.remove('hidden');
+            }
+          });
+        });
+      });
+    });
   </script>
 </body>
 </html>
