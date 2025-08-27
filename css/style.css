@@ -107,11 +107,37 @@ a:hover { color: #0891b2; }
   border-radius: .5rem;
   font-weight:700;
   transition: background .3s, color .3s;
+  position: relative;
+  overflow: hidden;
 }
 .btn-primary { background: var(--brand-gold); color:#000; }
 .btn-primary:hover { background:#facc15; }
 .btn-outline { border:2px solid #fff; color:#fff; }
 .btn-outline:hover { background:#fff; color:var(--brand-blue); }
+
+.btn-buy,
+.download-btn,
+.cta-btn,
+.tab-buttons button {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 0.6s linear;
+  background: rgba(255,255,255,0.7);
+  pointer-events: none;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
 
 /* Sections */
 .section { padding: 5rem 0; }
@@ -145,6 +171,17 @@ a:hover { color: #0891b2; }
 .feature-item { text-align:center; padding:1.5rem; transition:transform .3s; }
 .feature-item:hover { transform:scale(1.05); }
 .feature-icon { font-size:2.5rem; color:var(--brand-blue); margin-bottom:1rem; }
+.feature-icon i,
+.download-btn i,
+.socials a i {
+  transition: transform .3s;
+}
+
+.feature-item:hover .feature-icon i,
+.download-btn:hover i,
+.socials a:hover i {
+  transform: scale(1.1);
+}
 .feature-title { font-weight:700; margin-bottom:.5rem; }
 .feature-desc { color:#6b7280; }
 
