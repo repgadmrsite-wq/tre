@@ -1,238 +1,271 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>کیش‌ران - اجاره موتور در کیش</title>
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HAKIM VPN | اینترنت بدون مرز</title>
+  <meta name="description" content="خرید VPN امن و پرسرعت از Hakim VPN - اینترنت بدون مرز" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandBlue: '#00bcd4',
+            brandGold: '#ffd700'
+          },
+          fontFamily: {
+            sans: ['Vazirmatn', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/framer-motion@10/dist/framer-motion.umd.js"></script>
 </head>
-<body>
+<body class="font-sans bg-gray-50 text-gray-900">
+  <div id="root"></div>
+  <script type="text/babel">
+    const { motion } = window['framer-motion'];
 
-    <!-- Header -->
-    <header class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">کیش‌ران</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">خانه</a></li>
-                    <li class="nav-item"><a class="nav-link" href="dashboard.html">داشبورد</a></li>
-                    <li class="nav-item"><a class="nav-link" href="login.html">ورود</a></li>
-                </ul>
-            </div>
+    const MenuItem = ({ children }) => (
+      <a href="#" className="text-gray-700 hover:text-brandBlue transition-colors">{children}</a>
+    );
+
+    const Header = () => (
+      <header className="bg-white shadow fixed w-full z-50">
+        <div className="container mx-auto flex items-center justify-between p-4">
+          <div className="flex items-center space-x-2 space-x-reverse">
+            <img src="https://via.placeholder.com/40" alt="Hakim VPN" className="h-10 w-10 rounded-full" />
+            <span className="text-xl font-bold text-brandBlue">HAKIM VPN</span>
+          </div>
+          <nav className="hidden md:flex space-x-6 space-x-reverse items-center">
+            <MenuItem>خانه</MenuItem>
+            <MenuItem>خرید VPN</MenuItem>
+            <MenuItem>تعرفه‌ها</MenuItem>
+            <MenuItem>آموزش اتصال</MenuItem>
+            <MenuItem>دانلود اپ‌ها</MenuItem>
+            <MenuItem>پشتیبانی</MenuItem>
+            <MenuItem>وبلاگ</MenuItem>
+          </nav>
+          <a href="#" className="hidden md:inline-block bg-brandGold text-black px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition-colors">خرید سریع VPN</a>
         </div>
-    </header>
+      </header>
+    );
 
-    <main>
-        <!-- Hero Section -->
-        <section id="hero" style="background-image: url('https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=2070'); background-size: cover; background-position: center; padding: 140px 0; color: #fff; text-align: center; position: relative;">
-            <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0,0,0,0.5);"></div>
-            <div class="container position-relative">
-                <h1 class="display-4 fw-bold">سفری به یادماندنی در کیش</h1>
-                <p class="lead my-3">با موتورهای ما، هر گوشه از جزیره را کشف کنید.</p>
+    const Hero = () => (
+      <section className="pt-24 bg-gradient-to-tr from-brandBlue via-blue-600 to-purple-700 text-white">
+        <div className="container mx-auto flex flex-col md:flex-row items-center py-16">
+          <motion.div className="flex-1 text-center md:text-right" initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} transition={{duration:0.6}}>
+            <h1 className="text-4xl md:text-5xl font-extrabold mb-4">اینترنت بدون مرز با Hakim VPN</h1>
+            <p className="text-lg mb-8">امن، سریع، پایدار – دسترسی بدون محدودیت</p>
+            <div className="space-x-4 space-x-reverse">
+              <a href="#" className="bg-brandGold text-black px-6 py-3 rounded-lg font-bold hover:bg-yellow-500 transition-colors">شروع کنید</a>
+              <a href="#" className="border border-white px-6 py-3 rounded-lg font-bold hover:bg-white hover:text-brandBlue transition-colors">دانلود اپلیکیشن</a>
             </div>
-        </section>
-
-        <!-- Booking Form -->
-        <div class="container" style="margin-top: -50px; position: relative; z-index: 10;">
-            <div class="card p-4 shadow-md">
-                <form class="row g-3 align-items-center">
-                    <div class="col-lg-4 col-md-12">
-                        <label for="location" class="form-label visually-hidden">مکان</label>
-                        <input type="text" class="form-control form-control-lg" id="location" placeholder="مکان تحویل را انتخاب کنید">
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <label for="start-date" class="form-label visually-hidden">تاریخ شروع</label>
-                        <input type="date" class="form-control form-control-lg" id="start-date">
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                         <label for="end-date" class="form-label visually-hidden">تاریخ پایان</label>
-                        <input type="date" class="form-control form-control-lg" id="end-date">
-                    </div>
-                    <div class="col-lg-2 col-md-12">
-                        <button type="submit" class="btn btn-primary btn-lg w-100">جستجو</button>
-                    </div>
-                </form>
-            </div>
+          </motion.div>
+          <motion.img src="https://via.placeholder.com/300x400" alt="Hakim Bot" className="w-64 md:w-80 mt-10 md:mt-0 mx-auto" initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} transition={{duration:0.8, delay:0.2}} />
         </div>
+      </section>
+    );
 
-        <!-- Trust Features Section -->
-        <section id="features" class="section">
-            <div class="container">
-                <h2 class="section-title">چرا کیش‌ران؟</h2>
-                <div class="row text-center">
-                    <div class="col-md-4 mb-4">
-                        <div class="p-4">
-                            <i class="bi bi-shield-check display-4 text-primary mb-3"></i>
-                            <h5 class="fw-bold">بیمه کامل</h5>
-                            <p class="text-muted">تمام موتورها دارای بیمه کامل بدنه و شخص ثالث هستند.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                         <div class="p-4">
-                            <i class="bi bi-headset display-4 text-primary mb-3"></i>
-                            <h5 class="fw-bold">پشتیبانی ۲۴/۷</h5>
-                            <p class="text-muted">تیم ما همیشه برای کمک به شما آماده است.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="p-4">
-                            <i class="bi bi-geo-alt-fill display-4 text-primary mb-3"></i>
-                            <h5 class="fw-bold">تحویل در محل</h5>
-                            <p class="text-muted">موتور را در هر کجای جزیره که بخواهید تحویل بگیرید.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    const Feature = ({ icon, title, desc }) => (
+      <motion.div className="text-center p-6" whileHover={{scale:1.05}}>
+        <div className="text-brandBlue mb-4">{icon}</div>
+        <h3 className="font-bold mb-2">{title}</h3>
+        <p className="text-gray-600">{desc}</p>
+      </motion.div>
+    );
 
-        <!-- Popular Motorcycles Section -->
-        <section id="motorcycles" class="section bg-light">
-            <div class="container">
-                <h2 class="section-title">موتورهای محبوب</h2>
-                <div class="row">
-                    <!-- Motorcycle Card 1 -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100">
-                            <img src="https://images.unsplash.com/photo-1626247023795-88408819d54d?q=80&w=1974" class="card-img-top" alt="اسکوتر وسپا" style="height: 240px; object-fit: cover;">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">اسکوتر وسپا</h5>
-                                <p class="card-text text-muted">یک انتخاب کلاسیک و شیک برای گشت و گذار شهری.</p>
-                                <div class="mt-auto">
-                                    <p class="h5 fw-bold text-primary">۱۸۰,۰۰۰ تومان / روز</p>
-                                    <a href="#" class="btn btn-primary w-100 mt-2">رزرو کنید</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Motorcycle Card 2 -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100">
-                            <img src="https://images.unsplash.com/photo-1593352222537-a515aed534a2?q=80&w=1964" class="card-img-top" alt="موتور کروزر" style="height: 240px; object-fit: cover;">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">موتور کروزر</h5>
-                                <p class="card-text text-muted">قدرتمند و راحت، مناسب برای مسافت‌های طولانی‌تر.</p>
-                                <div class="mt-auto">
-                                    <p class="h5 fw-bold text-primary">۲۵۰,۰۰۰ تومان / روز</p>
-                                    <a href="#" class="btn btn-primary w-100 mt-2">رزرو کنید</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Motorcycle Card 3 -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                         <div class="card h-100">
-                            <img src="https://images.unsplash.com/photo-1625043834839-a8a2c1a4b330?q=80&w=1964" class="card-img-top" alt="موتور برقی" style="height: 240px; object-fit: cover;">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">موتور برقی</h5>
-                                <p class="card-text text-muted">بی‌صدا، دوست‌دار محیط زیست و مناسب برای آرامش.</p>
-                                <div class="mt-auto">
-                                    <p class="h5 fw-bold text-primary">۱۵۰,۰۰۰ تومان / روز</p>
-                                    <a href="#" class="btn btn-primary w-100 mt-2">رزرو کنید</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- How It Works Section -->
-        <section id="how-it-works" class="section">
-            <div class="container">
-                <h2 class="section-title">چطور کار می‌کند؟</h2>
-                <div class="row text-center">
-                    <div class="col-md-4">
-                        <i class="bi bi-search-heart display-4 text-primary mb-3"></i>
-                        <h5 class="fw-bold">۱. جستجو کنید</h5>
-                        <p class="text-muted">موتور مورد نظر خود را پیدا کنید.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <i class="bi bi-calendar-check display-4 text-primary mb-3"></i>
-                        <h5 class="fw-bold">۲. رزرو کنید</h5>
-                        <p class="text-muted">تاریخ را مشخص و آنلاین رزرو کنید.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <i class="bi bi-bicycle display-4 text-primary mb-3"></i>
-                        <h5 class="fw-bold">۳. لذت ببرید</h5>
-                        <p class="text-muted">موتور را تحویل گرفته و از سفرتان لذت ببرید.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section id="faq" class="section bg-light">
-            <div class="container">
-                <h2 class="section-title">سوالات متداول</h2>
-                <div class="accordion" id="faqAccordion">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="faqH1">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqC1">چه مدارکی برای اجاره لازم است؟</button>
-                        </h2>
-                        <div id="faqC1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                اصل کارت ملی و گواهینامه موتور سیکلت الزامی است.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="faqH2">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqC2">آیا کلاه ایمنی هم تحویل داده می‌شود؟</button>
-                        </h2>
-                        <div id="faqC2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                بله، به تعداد سرنشینان کلاه ایمنی استاندارد و تمیز به صورت رایگان ارائه می‌شود.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white pt-5 pb-4">
-        <div class="container text-center text-md-start">
-            <div class="row">
-                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                    <h6 class="text-uppercase fw-bold">کیش‌ران</h6>
-                    <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: var(--primary-color); height: 2px"/>
-                    <p>بهترین و آسان‌ترین راه برای اجاره موتور در جزیره زیبای کیش. ما به شما کمک می‌کنیم تا سفری خاطره‌انگیز داشته باشید.</p>
-                </div>
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                    <h6 class="text-uppercase fw-bold">لینک‌های مفید</h6>
-                    <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: var(--primary-color); height: 2px"/>
-                    <p><a href="#!" class="text-white-50">قوانین و مقررات</a></p>
-                    <p><a href="#!" class="text-white-50">درباره ما</a></p>
-                    <p><a href="#!" class="text-white-50">سوالات متداول</a></p>
-                </div>
-                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                    <h6 class="text-uppercase fw-bold">تماس با ما</h6>
-                    <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: var(--primary-color); height: 2px"/>
-                    <p><i class="bi bi-geo-alt-fill me-2"></i>کیش، ایران</p>
-                    <p><i class="bi bi-envelope-fill me-2"></i>info@kishran.com</p>
-                    <p><i class="bi bi-telephone-fill me-2"></i>+۹۸ ۱۲۳ ۴۵۶ ۷۸۹۰</p>
-                </div>
-            </div>
+    const Features = () => (
+      <section className="py-16 bg-white">
+        <div className="container mx-auto grid md:grid-cols-4 gap-8">
+          <Feature icon={<i className="bi bi-globe2 text-4xl"></i>} title="سرورهای جهانی پرسرعت" desc="دسترسی به سرورهای متعدد در سراسر جهان" />
+          <Feature icon={<i className="bi bi-shield-lock text-4xl"></i>} title="امنیت و رمزگذاری سطح نظامی" desc="حفظ کامل حریم خصوصی و داده‌های شما" />
+          <Feature icon={<i className="bi bi-phone text-4xl"></i>} title="اپلیکیشن برای همه دستگاه‌ها" desc="پشتیبانی از اندروید، ویندوز، مک و iOS" />
+          <Feature icon={<i className="bi bi-headset text-4xl"></i>} title="پشتیبانی ۲۴/۷" desc="تیم پشتیبانی ما همیشه در کنار شماست" />
         </div>
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-            © 2024 تمام حقوق برای کیش‌ران محفوظ است.
-        </div>
-    </footer>
+      </section>
+    );
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
-    <script src="js/script.js"></script>
+    const PlanCard = ({ title, price, features }) => (
+      <motion.div className="bg-white rounded-xl shadow-lg p-6 flex flex-col" whileHover={{scale:1.05}}>
+        <h4 className="text-xl font-bold mb-4">{title}</h4>
+        <p className="text-3xl font-extrabold text-brandBlue mb-6">{price}</p>
+        <ul className="space-y-2 mb-6 flex-1">
+          {features.map((f,i) => (
+            <li key={i} className="flex items-center"><span className="w-2 h-2 bg-brandBlue rounded-full ml-2"></span>{f}</li>
+          ))}
+        </ul>
+        <a href="#" className="bg-brandBlue text-white py-2 rounded-lg hover:bg-cyan-600 transition-colors">خرید</a>
+      </motion.div>
+    );
+
+    const Pricing = () => (
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-extrabold text-center mb-12">پلن‌ها و تعرفه‌ها</h2>
+          <div className="grid md:grid-cols-4 gap-6">
+            <PlanCard title="ماهانه" price="۱۰۰ هزار تومان" features={["ترافیک نامحدود","پشتیبانی فوری"]} />
+            <PlanCard title="سه‌ماهه" price="۲۷۰ هزار تومان" features={["صرفه‌جویی ۱۰٪","دسترسی همه سرورها"]} />
+            <PlanCard title="شش‌ماهه" price="۵۰۰ هزار تومان" features={["صرفه‌جویی ۱۵٪","پشتیبانی ویژه"]} />
+            <PlanCard title="یک‌ساله" price="۹۰۰ هزار تومان" features={["صرفه‌جویی ۲۵٪","اولویت پشتیبانی"]} />
+          </div>
+        </div>
+      </section>
+    );
+
+    const tutorials = {
+      android: ['دانلود اپ از پلی‌استور', 'ورود با نام کاربری', 'اتصال به سرور'],
+      windows: ['دانلود کلاینت ویندوز', 'نصب برنامه', 'وارد کردن حساب', 'اتصال'],
+      ios: ['دانلود از اپ‌استور', 'اعتماد به پروفایل', 'ورود', 'اتصال'],
+      mac: ['دانلود فایل dmg', 'نصب برنامه', 'ورود', 'اتصال'],
+      telegram: ['شروع در ربات', 'انتخاب پلن', 'پرداخت', 'دریافت کانفیگ']
+    };
+
+    const Tutorial = () => {
+      const [active, setActive] = React.useState('android');
+      const tabs = [
+        {key:'android', label:'اندروید'},
+        {key:'windows', label:'ویندوز'},
+        {key:'ios', label:'iOS'},
+        {key:'mac', label:'مک'},
+        {key:'telegram', label:'ربات تلگرام'},
+      ];
+      return (
+        <section className="py-16 bg-white">
+          <div className="container mx-auto">
+            <h2 className="text-3xl font-extrabold text-center mb-8">آموزش اتصال</h2>
+            <div className="flex justify-center mb-8 flex-wrap">
+              {tabs.map(t => (
+                <button key={t.key} onClick={() => setActive(t.key)} className={`m-2 px-4 py-2 rounded-lg ${active === t.key ? 'bg-brandBlue text-white' : 'bg-gray-200 text-gray-700'} transition-colors`}>{t.label}</button>
+              ))}
+            </div>
+            <ul className="max-w-md mx-auto list-disc list-inside text-gray-700 space-y-2">
+              {tutorials[active].map((step,i) => <li key={i}>{step}</li>)}
+            </ul>
+          </div>
+        </section>
+      );
+    };
+
+    const Download = () => (
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto text-center">
+          <h2 className="text-3xl font-extrabold mb-8">دانلود اپلیکیشن</h2>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a href="#" className="bg-brandBlue text-white px-6 py-3 rounded-lg flex items-center hover:bg-cyan-600 transition-colors"><i className="bi bi-android2 ml-2"></i> اندروید</a>
+            <a href="#" className="bg-brandBlue text-white px-6 py-3 rounded-lg flex items-center hover:bg-cyan-600 transition-colors"><i className="bi bi-windows ml-2"></i> ویندوز</a>
+            <a href="#" className="bg-brandBlue text-white px-6 py-3 rounded-lg flex items-center hover:bg-cyan-600 transition-colors"><i className="bi bi-apple ml-2"></i> iOS</a>
+            <a href="#" className="bg-brandBlue text-white px-6 py-3 rounded-lg flex items-center hover:bg-cyan-600 transition-colors"><i className="bi bi-apple ml-2"></i> مک</a>
+            <a href="#" className="bg-brandGold text-black px-6 py-3 rounded-lg flex items-center hover:bg-yellow-500 transition-colors"><i className="bi bi-telegram ml-2"></i> ربات تلگرام</a>
+          </div>
+        </div>
+      </section>
+    );
+
+    const Trust = () => (
+      <section className="py-16 bg-white">
+        <div className="container mx-auto text-center">
+          <h2 className="text-3xl font-extrabold mb-8">چرا به ما اعتماد می‌کنند؟</h2>
+          <div className="flex flex-wrap justify-center gap-8 mb-12">
+            <motion.div className="max-w-xs bg-gray-100 p-6 rounded-lg" whileHover={{scale:1.05}}>
+              <p className="mb-4">«سرعت عالی و پشتیبانی سریع. بهترین VPNی که استفاده کرده‌ام.»</p>
+              <div className="font-bold">کاربر رضایت‌مند</div>
+            </motion.div>
+            <motion.div className="max-w-xs bg-gray-100 p-6 rounded-lg" whileHover={{scale:1.05}}>
+              <p className="mb-4">«به لطف Hakim VPN بدون محدودیت به اینترنت دسترسی دارم.»</p>
+              <div className="font-bold">کاربر خوشحال</div>
+            </motion.div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="text-3xl font-bold text-brandBlue">+۵۰ هزار <span className="block text-sm text-gray-600 mt-2">کاربر فعال</span></div>
+            <div className="text-3xl font-bold text-brandBlue">۲۰+ <span className="block text-sm text-gray-600 mt-2">کشور دارای سرور</span></div>
+            <div className="text-3xl font-bold text-brandBlue">۹۹٪ <span className="block text-sm text-gray-600 mt-2">رضایت مشتریان</span></div>
+          </div>
+        </div>
+      </section>
+    );
+
+    const Blog = () => (
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-extrabold text-center mb-12">وبلاگ</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[1,2,3].map(i => (
+              <motion.div key={i} className="bg-white rounded-lg shadow-lg overflow-hidden" whileHover={{scale:1.02}}>
+                <img src={`https://via.placeholder.com/400x200?text=Blog+${i}`} alt="" className="w-full h-40 object-cover" />
+                <div className="p-4">
+                  <h3 className="font-bold mb-2">عنوان مقاله {i}</h3>
+                  <p className="text-gray-600 text-sm mb-4">متن کوتاه درباره مقاله و ادامه...</p>
+                  <a href="#" className="text-brandBlue font-semibold">مطالعه بیشتر</a>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+
+    const Footer = () => (
+      <footer className="bg-gray-900 text-gray-300 pt-10">
+        <div className="container mx-auto grid md:grid-cols-3 gap-8 px-4">
+          <div>
+            <h4 className="text-xl font-bold text-brandGold mb-4">HAKIM VPN</h4>
+            <p>بهترین خدمات VPN با امنیت بالا و سرعت فوق‌العاده.</p>
+          </div>
+          <div>
+            <h5 className="font-bold mb-4">لینک‌های سریع</h5>
+            <ul className="space-y-2">
+              <li><a href="#" className="hover:text-white">قوانین و مقررات</a></li>
+              <li><a href="#" className="hover:text-white">درباره ما</a></li>
+              <li><a href="#" className="hover:text-white">سوالات متداول</a></li>
+            </ul>
+          </div>
+          <div>
+            <h5 className="font-bold mb-4">تماس با ما</h5>
+            <ul className="space-y-2">
+              <li>ایمیل: support@hakimvpn.com</li>
+              <li>تلگرام: @hakimvpn</li>
+              <li>تلفن: ۰۲۱-۱۲۳۴۵۶۷۸</li>
+            </ul>
+            <div className="flex space-x-4 space-x-reverse mt-4">
+              <a href="#" className="text-brandGold hover:text-white"><i className="bi bi-telegram"></i></a>
+              <a href="#" className="text-brandGold hover:text-white"><i className="bi bi-instagram"></i></a>
+              <a href="#" className="text-brandGold hover:text-white"><i className="bi bi-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+        <div className="text-center text-gray-500 mt-8 py-4 bg-gray-800">
+          © ۲۰۲۴ Hakim VPN. تمامی حقوق محفوظ است.
+        </div>
+      </footer>
+    );
+
+    const App = () => (
+      <>
+        <Header />
+        <main>
+          <Hero />
+          <Features />
+          <Pricing />
+          <Tutorial />
+          <Download />
+          <Trust />
+          <Blog />
+        </main>
+        <Footer />
+      </>
+    );
+
+    ReactDOM.render(<App />, document.getElementById('root'));
+  </script>
 </body>
 </html>
