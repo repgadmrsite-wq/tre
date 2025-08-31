@@ -2,16 +2,39 @@ let navbar = document.querySelector("#top-nav");
 if(navbar != null) {
     let navButton = document.querySelector("#top-nav .mob-menu");
     let navCover = document.querySelector("#top-nav .cover");
-    navButton.onclick = function () {
-        navbar.classList.toggle("active");
-    }
-    navCover.onclick = function () {
+
+    function closeMobileMenu(){
         navbar.classList.remove("active");
+        if(navButton) navButton.setAttribute("aria-expanded","false");
     }
 
-    document.querySelectorAll("#nav a").forEach(function (el){
+    function toggleMobileMenu(){
+        navbar.classList.toggle("active");
+        if(navButton) navButton.setAttribute("aria-expanded", navbar.classList.contains("active"));
+    }
+
+    navButton.addEventListener('click', toggleMobileMenu);
+    navButton.addEventListener('keydown', function(e){
+        if(e.key === 'Enter' || e.key === ' '){
+            e.preventDefault();
+            toggleMobileMenu();
+        } else if(e.key === 'Escape') {
+            e.preventDefault();
+            closeMobileMenu();
+        }
+    });
+
+    navCover.addEventListener('click', closeMobileMenu);
+
+    document.addEventListener('keydown', function(e){
+        if(e.key === 'Escape'){
+            closeMobileMenu();
+        }
+    });
+
+    document.querySelectorAll("#nav-mid a").forEach(function (el){
         el.onclick = function (){
-            navbar.classList.remove("active");
+            closeMobileMenu();
         }
     });
 }
@@ -81,12 +104,15 @@ function megaMenuItems(isInit = false){
                 let isMouseInMenu = false, lockOpen = false, timeOut;
                 el.onmouseover = function (e){
                     mItem.classList.add("active");
+                    el.setAttribute("aria-expanded","true");
                 }
                 el.onmouseleave = function (e){
                     lockOpen = false;
                     setTimeout(function (){
-                        if(!isMouseInMenu)
+                        if(!isMouseInMenu){
                             mItem.classList.remove("active");
+                            el.setAttribute("aria-expanded","false");
+                        }
                     },200);
                 }
                 mItem.onmouseover = function (e) {
@@ -96,10 +122,12 @@ function megaMenuItems(isInit = false){
                     lockOpen = true;
                     isMouseInMenu = true;
                     mItem.classList.add("active");
+                    el.setAttribute("aria-expanded","true");
                 }
                 mItem.onmouseleave = function (e){
                     isMouseInMenu = false;
                     mItem.classList.remove("active");
+                    el.setAttribute("aria-expanded","false");
 
                     if(timeOut !== undefined)
                         clearTimeout(timeOut);
@@ -107,6 +135,39 @@ function megaMenuItems(isInit = false){
                         lockOpen = false;
                     },500);
                 }
+
+                el.addEventListener('keydown', function(ev){
+                    if(ev.key === 'Enter' || ev.key === ' '){
+                        ev.preventDefault();
+                        let isOpen = mItem.classList.toggle('active');
+                        el.setAttribute('aria-expanded', isOpen);
+                        if(isOpen){
+                            let firstLink = mItem.querySelector('a');
+                            if(firstLink) firstLink.focus();
+                        }
+                    } else if(ev.key === 'Escape'){
+                        mItem.classList.remove('active');
+                        el.setAttribute('aria-expanded','false');
+                    }
+                });
+
+                mItem.addEventListener('keydown', function(ev){
+                    if(ev.key === 'Escape'){
+                        mItem.classList.remove('active');
+                        el.setAttribute('aria-expanded','false');
+                        el.focus();
+                    }
+                });
+            } else {
+                el.addEventListener('keydown', function(ev){
+                    if(ev.key === 'Enter' || ev.key === ' '){
+                        let link = el.querySelector('a');
+                        if(link){
+                            ev.preventDefault();
+                            link.click();
+                        }
+                    }
+                });
             }
         }
     })

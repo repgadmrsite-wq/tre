@@ -30,9 +30,9 @@
 <header id="top-nav">
     <div class="container" >
         <div class="d-flex" >
-            <div class="mob-menu" ></div>
+            <button class="mob-menu" aria-label="باز کردن منو" aria-controls="nav-mid" aria-expanded="false"></button>
             <div class="logo" onclick="location.href='https://www.persianmizban.com/';" ></div>
-            <div class="nav-mid">
+            <nav id="nav-mid" class="nav-mid">
                 <ul>
                     <li>
                         <a href="https://www.persianmizban.com/">پرشین میزبان</a>
@@ -64,7 +64,7 @@
                     </div>
                     </a>
                 </div>
-            </div>
+            </nav>
            <div class="phone" >
                 <div class="number">
                      <a href="tel:02191011796"><bdi>۰۲۱ - <span>۹ ۱۰ ۱۱ </span>۷۹۶</bdi></a>
@@ -77,36 +77,36 @@
     <div class="cover" ></div>
 </header>
 
-<nav id="bottom-nav" class="active">
+<nav id="bottom-nav" class="active" role="menubar">
     <div class="container" >
         <div class="d-flex">
 
-            <div class="item" menu-item="1" >
+            <div class="item" menu-item="1" role="menuitem" tabindex="0" aria-haspopup="true" aria-expanded="false">
                 <div class="icon icon-host" ></div>
                 <a href="https://www.persianmizban.com/web-hosting/"><span>هاست</span></a>
                 <div class="icon-more" ></div>
             </div>
 
-            <div class="item" menu-item="2" >
+            <div class="item" menu-item="2" role="menuitem" tabindex="0" aria-haspopup="true" aria-expanded="false">
                 <div class="icon icon-domain" ></div>
                 <a href="https://www.persianmizban.com/domain/"><span>ثبت دامنه</span></a>
                 <div class="icon-more" ></div>
             </div>
 
-            <div class="item" menu-item="3" >
+            <div class="item" menu-item="3" role="menuitem" tabindex="0" aria-haspopup="true" aria-expanded="false">
                 <div class="icon icon-vps" ></div>
                 <div class="blink">NEW</div>
                 <a href="https://www.persianmizban.com/vps/"><span>سرور مجازی</span></a>
                 <div class="icon-more" ></div>
             </div>
 
-            <div class="item" menu-item="4">
+            <div class="item" menu-item="4" role="menuitem" tabindex="0" aria-haspopup="true" aria-expanded="false">
                 <div class="icon icon-server" ></div>
                 <a href="https://www.persianmizban.com/vds/"><span>سرور اختصاصی</span></a>
                 <div class="icon-more" ></div>
             </div>
 
-            <div class="item !ml-0" lg="mr-auto" i-lg="pl-6" >
+            <div class="item !ml-0" lg="mr-auto" i-lg="pl-6" role="menuitem" tabindex="0">
                 <div class="icon icon-edu" ></div>
                 <div class="blink blink2">BLOG</div>
                 <a href="https://www.persianmizban.com/blog/"><span>مرکز آموزش</span></a>
@@ -114,7 +114,7 @@
         </div>
     </div>
 </nav>
-<nav id="mega-menu" class="active">
+<nav id="mega-menu" class="active" role="menu">
     <ul class="menu-item-1">
         <li>
             <a href="https://www.persianmizban.com/web-hosting/iran">هاست ایران</a>
