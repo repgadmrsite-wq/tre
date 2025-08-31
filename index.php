@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
     <meta name="theme-color" content="#32228f">
     <meta name="description" content="هاستینگ پرشین میزبان ارائه‌دهنده هاست لینوکس، هاست وردپرس و هاست دانلود، سرور مجازی و اختصاصی، ثبت دامنه و SSL رایگان با پشتیبانی ۲۴ ساعته و ضمانت بازگشت وجه.">
-    
+    <meta name="keywords" content="خرید هاست, هاست وردپرس, سرور مجازی, ثبت دامنه, پرشین میزبان">
+
     <title>پرشین میزبان | هاست لینوکس، وردپرس، سرور مجازی و ثبت دامنه</title>
-    
+
+    <link rel="canonical" href="https://www.persianmizban.com/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/ico">
     <link rel="stylesheet" href="style.css">
 
@@ -23,6 +25,35 @@
     <meta name="twitter:title" content="خرید هاست، خرید سرور مجازی و ثبت دامنه | پرشین میزبان">
     <meta name="twitter:description" content="خرید هاست و خدمات هاستینگ از پرشین میزبان که پرسرعت ترین هاستینگ کشور است، و با زیرساختی امن و مستحکم، فروش اینترنتی را قدرتمند پیگیری">
     <meta name="twitter:image" content="https://www.persianmizban.com/img/logo.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "url": "https://www.persianmizban.com/",
+          "name": "پرشین میزبان",
+          "logo": "https://www.persianmizban.com/img/logo.png",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+982191011796",
+            "contactType": "customer service",
+            "areaServed": "IR"
+          }
+        },
+        {
+          "@type": "Product",
+          "name": "سرویس های هاستینگ و سرور مجازی",
+          "image": "https://www.persianmizban.com/img/logo.png",
+          "description": "ارائه دهنده هاست لینوکس، وردپرس، سرور مجازی و ثبت دامنه",
+          "brand": {
+            "@type": "Brand",
+            "name": "پرشین میزبان"
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
 <div id="app" >
