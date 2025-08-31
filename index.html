@@ -1,238 +1,244 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>کیش‌ران - اجاره موتور در کیش</title>
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HAKIM VPN</title>
+  <meta name="description" content="فروش VPN امن، سریع و پایدار با حکیم وی‌پی‌ان">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <header class="site-header" id="home">
+    <div class="container">
+      <img src="img/logo.svg" alt="Hakim VPN" class="logo">
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#home">خانه</a></li>
+          <li><a href="#pricing">خرید VPN</a></li>
+          <li><a href="#pricing">تعرفه‌ها</a></li>
+          <li><a href="#tutorial">آموزش اتصال</a></li>
+          <li><a href="#download">دانلود اپ‌ها</a></li>
+          <li><a href="#support">پشتیبانی</a></li>
+          <li><a href="#blog">وبلاگ</a></li>
+        </ul>
+      </nav>
+      <a href="#pricing" class="btn btn-primary cta">خرید سریع VPN</a>
+    </div>
+  </header>
 
-    <!-- Header -->
-    <header class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">کیش‌ران</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">خانه</a></li>
-                    <li class="nav-item"><a class="nav-link" href="dashboard.html">داشبورد</a></li>
-                    <li class="nav-item"><a class="nav-link" href="login.html">ورود</a></li>
-                </ul>
-            </div>
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>اینترنت بدون مرز با Hakim VPN</h1>
+        <p>امن، سریع، پایدار – دسترسی بدون محدودیت</p>
+        <div class="buttons">
+          <a href="#pricing" class="btn btn-primary">شروع کنید</a>
+          <a href="#download" class="btn btn-outline">دانلود اپلیکیشن</a>
         </div>
-    </header>
+      </div>
+      <img src="img/hakim-bot-hero.svg" alt="Hakim Bot" class="hero-illustration">
+    </div>
+  </section>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="hero" style="background-image: url('https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=2070'); background-size: cover; background-position: center; padding: 140px 0; color: #fff; text-align: center; position: relative;">
-            <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0,0,0,0.5);"></div>
-            <div class="container position-relative">
-                <h1 class="display-4 fw-bold">سفری به یادماندنی در کیش</h1>
-                <p class="lead my-3">با موتورهای ما، هر گوشه از جزیره را کشف کنید.</p>
-            </div>
-        </section>
+  <section id="features" class="features">
+    <div class="container">
+      <h2>چرا Hakim VPN؟</h2>
+      <div class="features-grid">
+        <div class="feature"><span class="icon">🌍</span><h3>سرورهای جهانی پرسرعت</h3><p>اتصال به ده‌ها کشور با بهترین سرعت.</p></div>
+        <div class="feature"><span class="icon">🔒</span><h3>رمزگذاری سطح نظامی</h3><p>محافظت کامل از اطلاعات و فعالیت‌های شما.</p></div>
+        <div class="feature"><span class="icon">📱</span><h3>اپلیکیشن برای همه دستگاه‌ها</h3><p>سازگار با ویندوز، مک، اندروید و iOS.</p></div>
+        <div class="feature"><span class="icon">🎯</span><h3>پشتیبانی ۲۴/۷</h3><p>همیشه در کنار شما برای رفع مشکلات.</p></div>
+      </div>
+    </div>
+  </section>
 
-        <!-- Booking Form -->
-        <div class="container" style="margin-top: -50px; position: relative; z-index: 10;">
-            <div class="card p-4 shadow-md">
-                <form class="row g-3 align-items-center">
-                    <div class="col-lg-4 col-md-12">
-                        <label for="location" class="form-label visually-hidden">مکان</label>
-                        <input type="text" class="form-control form-control-lg" id="location" placeholder="مکان تحویل را انتخاب کنید">
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <label for="start-date" class="form-label visually-hidden">تاریخ شروع</label>
-                        <input type="date" class="form-control form-control-lg" id="start-date">
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                         <label for="end-date" class="form-label visually-hidden">تاریخ پایان</label>
-                        <input type="date" class="form-control form-control-lg" id="end-date">
-                    </div>
-                    <div class="col-lg-2 col-md-12">
-                        <button type="submit" class="btn btn-primary btn-lg w-100">جستجو</button>
-                    </div>
-                </form>
-            </div>
+  <section id="pricing" class="pricing">
+    <div class="container">
+      <h2>پلن‌ها و تعرفه‌ها</h2>
+      <div class="pricing-cards">
+        <div class="card">
+          <h3>ماهانه</h3>
+          <p class="price">۹۹٬۰۰۰ تومان</p>
+          <ul>
+            <li>۱ دستگاه</li>
+            <li>پهنای باند نامحدود</li>
+            <li>دسترسی به همه سرورها</li>
+          </ul>
+          <a href="#" class="btn btn-primary">خرید</a>
         </div>
-
-        <!-- Trust Features Section -->
-        <section id="features" class="section">
-            <div class="container">
-                <h2 class="section-title">چرا کیش‌ران؟</h2>
-                <div class="row text-center">
-                    <div class="col-md-4 mb-4">
-                        <div class="p-4">
-                            <i class="bi bi-shield-check display-4 text-primary mb-3"></i>
-                            <h5 class="fw-bold">بیمه کامل</h5>
-                            <p class="text-muted">تمام موتورها دارای بیمه کامل بدنه و شخص ثالث هستند.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                         <div class="p-4">
-                            <i class="bi bi-headset display-4 text-primary mb-3"></i>
-                            <h5 class="fw-bold">پشتیبانی ۲۴/۷</h5>
-                            <p class="text-muted">تیم ما همیشه برای کمک به شما آماده است.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="p-4">
-                            <i class="bi bi-geo-alt-fill display-4 text-primary mb-3"></i>
-                            <h5 class="fw-bold">تحویل در محل</h5>
-                            <p class="text-muted">موتور را در هر کجای جزیره که بخواهید تحویل بگیرید.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Popular Motorcycles Section -->
-        <section id="motorcycles" class="section bg-light">
-            <div class="container">
-                <h2 class="section-title">موتورهای محبوب</h2>
-                <div class="row">
-                    <!-- Motorcycle Card 1 -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100">
-                            <img src="https://images.unsplash.com/photo-1626247023795-88408819d54d?q=80&w=1974" class="card-img-top" alt="اسکوتر وسپا" style="height: 240px; object-fit: cover;">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">اسکوتر وسپا</h5>
-                                <p class="card-text text-muted">یک انتخاب کلاسیک و شیک برای گشت و گذار شهری.</p>
-                                <div class="mt-auto">
-                                    <p class="h5 fw-bold text-primary">۱۸۰,۰۰۰ تومان / روز</p>
-                                    <a href="#" class="btn btn-primary w-100 mt-2">رزرو کنید</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Motorcycle Card 2 -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100">
-                            <img src="https://images.unsplash.com/photo-1593352222537-a515aed534a2?q=80&w=1964" class="card-img-top" alt="موتور کروزر" style="height: 240px; object-fit: cover;">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">موتور کروزر</h5>
-                                <p class="card-text text-muted">قدرتمند و راحت، مناسب برای مسافت‌های طولانی‌تر.</p>
-                                <div class="mt-auto">
-                                    <p class="h5 fw-bold text-primary">۲۵۰,۰۰۰ تومان / روز</p>
-                                    <a href="#" class="btn btn-primary w-100 mt-2">رزرو کنید</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Motorcycle Card 3 -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                         <div class="card h-100">
-                            <img src="https://images.unsplash.com/photo-1625043834839-a8a2c1a4b330?q=80&w=1964" class="card-img-top" alt="موتور برقی" style="height: 240px; object-fit: cover;">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">موتور برقی</h5>
-                                <p class="card-text text-muted">بی‌صدا، دوست‌دار محیط زیست و مناسب برای آرامش.</p>
-                                <div class="mt-auto">
-                                    <p class="h5 fw-bold text-primary">۱۵۰,۰۰۰ تومان / روز</p>
-                                    <a href="#" class="btn btn-primary w-100 mt-2">رزرو کنید</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- How It Works Section -->
-        <section id="how-it-works" class="section">
-            <div class="container">
-                <h2 class="section-title">چطور کار می‌کند؟</h2>
-                <div class="row text-center">
-                    <div class="col-md-4">
-                        <i class="bi bi-search-heart display-4 text-primary mb-3"></i>
-                        <h5 class="fw-bold">۱. جستجو کنید</h5>
-                        <p class="text-muted">موتور مورد نظر خود را پیدا کنید.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <i class="bi bi-calendar-check display-4 text-primary mb-3"></i>
-                        <h5 class="fw-bold">۲. رزرو کنید</h5>
-                        <p class="text-muted">تاریخ را مشخص و آنلاین رزرو کنید.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <i class="bi bi-bicycle display-4 text-primary mb-3"></i>
-                        <h5 class="fw-bold">۳. لذت ببرید</h5>
-                        <p class="text-muted">موتور را تحویل گرفته و از سفرتان لذت ببرید.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section id="faq" class="section bg-light">
-            <div class="container">
-                <h2 class="section-title">سوالات متداول</h2>
-                <div class="accordion" id="faqAccordion">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="faqH1">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqC1">چه مدارکی برای اجاره لازم است؟</button>
-                        </h2>
-                        <div id="faqC1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                اصل کارت ملی و گواهینامه موتور سیکلت الزامی است.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="faqH2">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqC2">آیا کلاه ایمنی هم تحویل داده می‌شود؟</button>
-                        </h2>
-                        <div id="faqC2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                بله، به تعداد سرنشینان کلاه ایمنی استاندارد و تمیز به صورت رایگان ارائه می‌شود.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white pt-5 pb-4">
-        <div class="container text-center text-md-start">
-            <div class="row">
-                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                    <h6 class="text-uppercase fw-bold">کیش‌ران</h6>
-                    <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: var(--primary-color); height: 2px"/>
-                    <p>بهترین و آسان‌ترین راه برای اجاره موتور در جزیره زیبای کیش. ما به شما کمک می‌کنیم تا سفری خاطره‌انگیز داشته باشید.</p>
-                </div>
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                    <h6 class="text-uppercase fw-bold">لینک‌های مفید</h6>
-                    <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: var(--primary-color); height: 2px"/>
-                    <p><a href="#!" class="text-white-50">قوانین و مقررات</a></p>
-                    <p><a href="#!" class="text-white-50">درباره ما</a></p>
-                    <p><a href="#!" class="text-white-50">سوالات متداول</a></p>
-                </div>
-                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                    <h6 class="text-uppercase fw-bold">تماس با ما</h6>
-                    <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: var(--primary-color); height: 2px"/>
-                    <p><i class="bi bi-geo-alt-fill me-2"></i>کیش، ایران</p>
-                    <p><i class="bi bi-envelope-fill me-2"></i>info@kishran.com</p>
-                    <p><i class="bi bi-telephone-fill me-2"></i>+۹۸ ۱۲۳ ۴۵۶ ۷۸۹۰</p>
-                </div>
-            </div>
+        <div class="card">
+          <h3>سه‌ماهه</h3>
+          <p class="price">۲۴۹٬۰۰۰ تومان</p>
+          <ul>
+            <li>۳ دستگاه</li>
+            <li>پهنای باند نامحدود</li>
+            <li>پشتیبانی ویژه</li>
+          </ul>
+          <a href="#" class="btn btn-primary">خرید</a>
         </div>
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-            © 2024 تمام حقوق برای کیش‌ران محفوظ است.
+        <div class="card">
+          <h3>شش‌ماهه</h3>
+          <p class="price">۳۴۹٬۰۰۰ تومان</p>
+          <ul>
+            <li>۳ دستگاه</li>
+            <li>پهنای باند نامحدود</li>
+            <li>سرورهای بیشتر</li>
+          </ul>
+          <a href="#" class="btn btn-primary">خرید</a>
         </div>
-    </footer>
+        <div class="card">
+          <h3>یک‌ساله</h3>
+          <p class="price">۴۹۹٬۰۰۰ تومان</p>
+          <ul>
+            <li>۵ دستگاه</li>
+            <li>پهنای باند نامحدود</li>
+            <li>سرورهای اختصاصی</li>
+          </ul>
+          <a href="#" class="btn btn-primary">خرید</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
-    <script src="js/script.js"></script>
+  <section id="tutorial" class="tutorial">
+    <div class="container">
+      <h2>آموزش اتصال</h2>
+      <div class="tabs">
+        <button class="active" data-tab="android">اندروید</button>
+        <button data-tab="windows">ویندوز</button>
+        <button data-tab="ios">iOS</button>
+        <button data-tab="mac">مک</button>
+        <button data-tab="telegram">ربات تلگرام</button>
+      </div>
+      <div class="tab-content active" id="android">
+        <ol>
+          <li>اپ را از بخش دانلود دریافت کنید.</li>
+          <li>وارد شوید و سرور مورد نظر را انتخاب کنید.</li>
+          <li>اتصال را برقرار کنید و لذت ببرید.</li>
+        </ol>
+      </div>
+      <div class="tab-content" id="windows">
+        <ol>
+          <li>نرم‌افزار ویندوز را نصب کنید.</li>
+          <li>اطلاعات حساب خود را وارد نمایید.</li>
+          <li>به نزدیک‌ترین سرور متصل شوید.</li>
+        </ol>
+      </div>
+      <div class="tab-content" id="ios">
+        <ol>
+          <li>اپ را از اپ‌استور دریافت کنید.</li>
+          <li>VPN را به دستگاه اضافه کنید.</li>
+          <li>اتصال را با یک لمس فعال کنید.</li>
+        </ol>
+      </div>
+      <div class="tab-content" id="mac">
+        <ol>
+          <li>نسخه مک را دانلود و اجرا کنید.</li>
+          <li>اطلاعات کاربری را وارد کنید.</li>
+          <li>سرور مناسب را انتخاب کنید.</li>
+        </ol>
+      </div>
+      <div class="tab-content" id="telegram">
+        <ol>
+          <li>به ربات تلگرام ما وارد شوید.</li>
+          <li>پلن دلخواه را انتخاب و خرید کنید.</li>
+          <li>کانفیگ آماده را دریافت و استفاده کنید.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section id="download" class="download">
+    <div class="container">
+      <h2>دانلود اپلیکیشن</h2>
+      <div class="download-buttons">
+        <a href="#" class="btn btn-primary">Android</a>
+        <a href="#" class="btn btn-primary">Windows</a>
+        <a href="#" class="btn btn-primary">macOS</a>
+        <a href="#" class="btn btn-primary">iOS</a>
+        <a href="#" class="btn btn-primary">Telegram</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="trust" class="trust">
+    <div class="container">
+      <div class="stats">
+        <div><strong>+۱۰k</strong><span>کاربر فعال</span></div>
+        <div><strong>۴۰+</strong><span>کشور</span></div>
+        <div><strong>۹۹٪</strong><span>رضایت مشتری</span></div>
+      </div>
+      <div class="testimonials-slider">
+        <div class="slide active">"حکیم وی‌پی‌ان زندگی منو عوض کرد." – علی ر.</div>
+        <div class="slide">"بهترین وی‌پی‌ان بازار." – سارا م.</div>
+        <div class="slide">"پشتیبانی عالی و سرعت بالا." – مهدی ک.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="blog" class="blog">
+    <div class="container">
+      <h2>وبلاگ حکیم</h2>
+      <div class="blog-grid">
+        <article class="blog-card">
+          <h3>چرا باید از VPN استفاده کنیم؟</h3>
+          <p>مهم‌ترین دلایل استفاده از VPN در ایران و جهان.</p>
+          <a href="#" class="read-more">ادامه مطلب</a>
+        </article>
+        <article class="blog-card">
+          <h3>افزایش امنیت در شبکه‌های عمومی</h3>
+          <p>چگونه در وای‌فای عمومی هک نشویم؟</p>
+          <a href="#" class="read-more">ادامه مطلب</a>
+        </article>
+        <article class="blog-card">
+          <h3>معرفی Hakim Bot</h3>
+          <p>ربات هوشمند ما برای مدیریت بهتر حساب شما.</p>
+          <a href="#" class="read-more">ادامه مطلب</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <img src="img/logo.svg" alt="Hakim VPN" class="logo">
+      <div class="footer-links">
+        <a href="#">درباره ما</a>
+        <a href="#">تماس با ما</a>
+        <a href="#">حریم خصوصی</a>
+        <a href="#">قوانین استفاده</a>
+      </div>
+      <div class="socials">
+        <a href="#">تلگرام</a>
+        <a href="#">اینستاگرام</a>
+        <a href="#">توییتر</a>
+      </div>
+      <p>© 2023 Hakim VPN. تمامی حقوق محفوظ است.</p>
+    </div>
+  </footer>
+
+  <script>
+    // tutorial tabs
+    document.querySelectorAll('.tabs button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.tabs button').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById(btn.dataset.tab).classList.add('active');
+      });
+    });
+
+    // simple testimonial slider
+    const slides = document.querySelectorAll('.testimonials-slider .slide');
+    let current = 0;
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 4000);
+  </script>
 </body>
 </html>
