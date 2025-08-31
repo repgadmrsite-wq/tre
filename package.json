@@ -1,10 +1,7 @@
 {
   "name": "persianmizban",
   "version": "1.0.0",
-  "devDependencies": {
-    "sass": "^1.77.0"
-  },
   "scripts": {
-    "build-css": "sass scss/style.scss style.css --no-source-map"
+    "build": "node build.js"
   }
 }
