@@ -1,0 +1,10 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 325 325" width="325" height="325">
+	<title>Polygon 1 copy 3</title>
+	<defs>
+		<filter x="-50%" y="-50%" width="200%" height="200%" id="f1" ><feDropShadow dx="0" dy="0" stdDeviation="27.083333333333336" flood-color="#000000" flood-opacity=".1"/></filter>
+	</defs>
+	<style>
+		.s0 { filter: url(#f1);fill: #ffffff } 
+	</style>
+	<path id="Polygon 1 copy 3" class="s0" d="m258 162l-47.8 83h-95.4l-47.8-83 47.8-83h95.4z"/>
+</svg>

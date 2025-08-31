@@ -1,0 +1,13 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 441 520" width="441" height="520">
+	<title>New Project</title>
+
+    <linearGradient id="a" gradientUnits="userSpaceOnUse" x1="248" x2="248" y1="0" y2="496" gradientTransform="rotate(-45)">
+        <stop offset="0.25" stop-color="#fafaff"/>
+        <stop offset="1" stop-color="#ffffff" />
+    </linearGradient>
+
+	<style>
+		.s0 { fill: url(#a) }
+	</style>
+	<path id="Rounded Rectangle 508 copy 2" class="s0" d="m-41 26.4c0 0 133.8 19.3 108 163.2-25.8 143.9 28.6 332 362 329.4h-692v-504z"/>
+</svg>
