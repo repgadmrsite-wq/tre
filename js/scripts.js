@@ -437,3 +437,22 @@ function setSlidesNavPos3(i){
         active.classList.add("active")
 }
 setSlidesNavPos3(0);
+
+const themeToggle = document.getElementById('theme-toggle');
+const rootEl = document.documentElement;
+if (themeToggle) {
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme === 'dark') {
+        rootEl.setAttribute('data-theme', 'dark');
+        themeToggle.textContent = '☀️';
+        themeToggle.setAttribute('aria-pressed', 'true');
+    }
+    themeToggle.addEventListener('click', function () {
+        const isDark = rootEl.getAttribute('data-theme') === 'dark';
+        rootEl.setAttribute('data-theme', isDark ? 'light' : 'dark');
+        localStorage.setItem('theme', isDark ? 'light' : 'dark');
+        themeToggle.textContent = isDark ? '🌙' : '☀️';
+        themeToggle.setAttribute('aria-pressed', (!isDark).toString());
+    });
+}
+

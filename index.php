@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
     <meta name="theme-color" content="#32228f">
+    <meta name="color-scheme" content="light dark">
     <meta name="description" content="هاستینگ پرشین میزبان ارائه‌دهنده هاست لینوکس، هاست وردپرس و هاست دانلود، سرور مجازی و اختصاصی، ثبت دامنه و SSL رایگان با پشتیبانی ۲۴ ساعته و ضمانت بازگشت وجه.">
     <meta name="keywords" content="خرید هاست, هاست وردپرس, سرور مجازی, ثبت دامنه, پرشین میزبان">
 
@@ -106,6 +107,7 @@
                 </div>
                 <div class="icon" ></div>
             </div>
+            <button id="theme-toggle" class="theme-toggle" aria-label="تغییر تم" title="تغییر تم" aria-pressed="false">🌙</button>
         </div>
     </div>
     <div class="cover" ></div>
