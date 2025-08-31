@@ -27,7 +27,7 @@
 <body>
 <div id="app" >
 
-<section id="top-nav" >
+<header id="top-nav">
     <div class="container" >
         <div class="d-flex" >
             <div class="mob-menu" ></div>
@@ -75,9 +75,9 @@
         </div>
     </div>
     <div class="cover" ></div>
-</section>
+</header>
 
-<section id="bottom-nav" class="active" >
+<nav id="bottom-nav" class="active">
     <div class="container" >
         <div class="d-flex">
 
@@ -113,8 +113,8 @@
             </div>
         </div>
     </div>
-</section>
-<section id="mega-menu" class="active">
+</nav>
+<nav id="mega-menu" class="active">
     <ul class="menu-item-1">
         <li>
             <a href="https://www.persianmizban.com/web-hosting/iran">هاست ایران</a>
@@ -692,8 +692,9 @@
             </div>
         </li>
     </ul>
-</section>
+</nav>
 
+<main>
 <section id="header" class="home-header">
     <div class="container" >
         <div lg="grid cols-5 gap-none a-items-center gap-10" >
@@ -1359,7 +1360,9 @@
     </div>
 </section>
 
-<section id="footer">
+</main>
+
+<footer id="footer">
     <div class="container" >
         <div class="support" >
             <div class="grid cols-1 a-items-center" md="cols-2" i-md="text-center mb-2" >
@@ -1441,7 +1444,7 @@
             </div>
         </div>
     </div>
-</section>
+</footer>
 
 
 
