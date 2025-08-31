@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20">
+	<title>Layer 10</title>
+	<defs>
+		<image  width="20" height="20" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAAAXNSR0IB2cksfwAAALFQTFRFbEH/bEH/eFL7iGn1j3LykHPyjW/zgl/3b0X+bEH/bEH/bEH/bEH/bkT+ckn8dEz7c0v7cEf9bEL/bEH/bEH/bEH/d1D7bEH/ckn9e1b6fFj5eFH7bUP/bEH/hWT2ckn8bEH/bEL/c0v8imv0e1b6hmT2f1z4jG30fVj5jXDzgmD3iGn1d1H7e1f5f1z4cEf9bEH/bUL+b0X+bUL/h2f1jnDzbEH/c0z8gF34fFf5bEH/Prt5AQAAADt0Uk5TBw0PEhMUExANDxo9QkNFR0ZEQilIKxDB5vX48N93E0b/gi4U9pw0FfmmNRSMMRJFgSwPQp6nWi80MiAO3Q3BAAAAm0lEQVR4nJXQ2Q6CMBRF0TpPxaKcKgqIOIuo4Kz//2HeFo2JBhPOw266npoyVtArlsqVaq2eXlij+buc2OLcaAthdrqcW2/k+ExmYo9iAH17MHRc74Ujig/YY7UAmCicUgQw0zgHFgqXKa40roFQ4YZiAo7GCNgq3FH2gKsxBhKFB8oR8ILTOYov/96ZiZaU8noL7wmdj/xf970noRcZ/NX99ykAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+	</style>
+	<use id="Layer 10" href="#img1" x="0" y="0"/>
+</svg>

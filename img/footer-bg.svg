@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 400" width="1920" height="400">
+	<style>
+		.s0 { fill: #26177b } 
+		.s1 { fill: #31218f } 
+	</style>
+    <rect width="1920" height="400" fill="#fff" />
+    <path id="Rounded Rectangle 22 copy" class="s0" d="m-22 211.5c329.8-19.7 661.3-19.3 991.4-39c330.1-20.5 658.7-61 981.2-182.1c12.2 409.2 17.8 712.9 23.4 1017.4q-987 25.7-1973.9 51.4q-11-423.8-22.1-847.7z" />
+	<path id="Rounded Rectangle 22 copy 2" class="s1" d="m-13.5 222.1c324.5-11.2 650.2-2.1 975-13.2c324.7-11.9 648.5-43.8 968.5-156.4c1.5 409.3-0.9 713-3.1 1017.6q-970.2 0-1940.4 0q0-424 0-848z" />
+</svg>

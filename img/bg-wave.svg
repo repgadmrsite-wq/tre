@@ -1,0 +1,10 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 90" width="900" height="90">
+    <linearGradient id="a" gradientUnits="userSpaceOnUse" x1="248" x2="248" y1="0" y2="496" gradientTransform="rotate(-45)">
+        <stop offset="0.25" stop-color="#60d1bf"/>
+        <stop offset="1" stop-color="#1d1886"/>
+    </linearGradient>
+	<style>
+		.s0 { fill: none;stroke: url(#a);stroke-linecap: round;stroke-width: 2 }
+	</style>
+	<path id="Layer" class="s0" d="m0 35l18.8 6.5c18.9 6.5 56.5 19.5 94 21.3 37.5 1.9 74.9-7.5 112.4-21.1 37.5-13.7 75.1-31.7 112.6-29 37.5 2.6 74.9 26 112.4 37.1 37.5 11.2 75.1 10.2 112.6 6.2 37.5-4 74.9-11 112.4-17.8 37.5-6.9 75.1-13.5 112.6-8.7 37.5 4.8 74.9 21.2 93.5 29.3l18.7 8.2"/>
+</svg>
