@@ -154,7 +154,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/hostiran.png" alt="هاست ایران" />
+                                <img src="profile/hostiran.png" alt="هاست ایران" loading="lazy" />
                             </div>
                             <div>
                                 <div class="fa" >هاست سی پنل ایران</div>
@@ -190,7 +190,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/brandenburg-gate.png" alt="هاست آلمان" />
+                                <img src="profile/brandenburg-gate.png" alt="هاست آلمان" loading="lazy" />
                             </div>
                             <div>
                                 <div class="fa" >هاست سی پنل آلمان</div>
@@ -225,7 +225,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/hostingwordpress.png" alt="هاست وردپرس" />
+                                <img src="profile/hostingwordpress.png" alt="هاست وردپرس" loading="lazy" />
                             </div>
                             <div>
                                 <div class="fa" >هاست مخصوص وردپرس</div>
@@ -260,7 +260,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/hostdliran.png" alt="هاست دانلود ایران" />
+                                <img src="profile/hostdliran.png" alt="هاست دانلود ایران" loading="lazy" />
                             </div>
                             <div>
                                 <div class="fa" >هاست دانلود ایران</div>
@@ -295,7 +295,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/hostdlgermany.png" alt="هاست دانلود آلمان" />
+                                <img src="profile/hostdlgermany.png" alt="هاست دانلود آلمان" loading="lazy" />
                             </div>
                             <div>
                                 <div class="fa" >هاست دانلود آلمان</div>
@@ -333,7 +333,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/domainmelli.png" alt="ثبت دامنه" />
+                                <img src="profile/domainmelli.png" alt="ثبت دامنه" loading="lazy" />
                             </div>
                             <div>
                                 <div class="fa" >ثبت دامنه با مالکیت کامل</div>
@@ -369,7 +369,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/tld.png" alt="انتقال دامنه" />
+                                <img src="profile/tld.png" alt="انتقال دامنه" loading="lazy" />
                             </div>
                             <div>
                                 <div class="fa" >انتقال دامنه مطمئن</div>
@@ -404,7 +404,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/domaintransfer.png" alt="تمدید دامنه" />
+                                <img src="profile/domaintransfer.png" alt="تمدید دامنه" loading="lazy" />
                             </div>
                             <div>
                                 <div class="fa" >تمدید دامنه ارزان</div>
@@ -442,7 +442,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/iran.png" alt="سرور مجازی ایران" />
+                                <img src="profile/iran.png" alt="سرور مجازی ایران" loading="lazy" />
                             </div>
                             <div>
                                 <div class="fa" >سرور مجازی ایران</div>
@@ -478,7 +478,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/germany.png" alt="سرور مجازی آلمان" />
+                                <img src="profile/germany.png" alt="سرور مجازی آلمان" loading="lazy" />
                             </div>
                             <div>
                                 <div class="fa" >سرور مجازی آلمان</div>
@@ -514,7 +514,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/usa.png" alt="سرور مجازی آمریکا" />
+                                <img src="profile/usa.png" alt="سرور مجازی آمریکا" loading="lazy" />
                             </div>
                             <div>
                                 <div class="fa" >سرور مجازی آمریکا</div>
@@ -549,7 +549,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/finland.png" alt="سرور مجازی فنلاند" />
+                                <img src="profile/finland.png" alt="سرور مجازی فنلاند" loading="lazy" />
                             </div>
                             <div>
                                 <div class="fa" >سرور مجازی آلمان</div>
@@ -587,7 +587,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/iran-vds.png" alt="سرور اختصاصی ایران" />
+                                <img src="profile/iran-vds.png" alt="سرور اختصاصی ایران" loading="lazy" />
                             </div>
                             <div>
                                 <div class="fa" >سرور اختصاصی ایران</div>
@@ -623,7 +623,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/france-vds.png" alt="سرور اختصاصی فرانسه" />
+                                <img src="profile/france-vds.png" alt="سرور اختصاصی فرانسه" loading="lazy" />
                             </div>
                             <div>
                                 <div class="fa" >سرور اختصاصی فرانسه</div>
@@ -659,7 +659,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/netherlands-vds.png" alt="سرور اختصاصی هلند" />
+                                <img src="profile/netherlands-vds.png" alt="سرور اختصاصی هلند" loading="lazy" />
                             </div>
                             <div>
                                 <div class="fa" >سرور اختصاصی هلند</div>
@@ -694,7 +694,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/germany-vds.png" alt="سرور اختصاصی آلمان" />
+                                <img src="profile/germany-vds.png" alt="سرور اختصاصی آلمان" loading="lazy" />
                             </div>
                             <div>
                                 <div class="fa" >سرور اختصاصی آلمان</div>
@@ -887,7 +887,7 @@
     <div class="container" >
         <div class="grid cols-2 a-items-center" sm="cols-4" lg="cols-6">
             <div class="col-2" sm="col-4" lg="col-2" >
-                <img class="w-full mx-auto d-block" i-lg="max-w-(414px)" src="img/img-inside.png" alt="PersianMizban" >
+                <img class="w-full mx-auto d-block" i-lg="max-w-(414px)" src="img/img-inside.png" alt="PersianMizban" loading="lazy">
             </div>
             <div>
                 <div class="box box2" >
@@ -1130,7 +1130,7 @@
     <div class="container" >
         <div class="delivery-wrapper" >
             <div>
-                <img src="img/img-pishi.svg" alt="هاست" class="d-none" md="d-block mr-auto">
+                <img src="img/img-pishi.svg" alt="هاست" class="d-none" md="d-block mr-auto" loading="lazy">
             </div>
             <div>
                 <div class="text-150 text-primary text-w-medium mb-2" lg="text-190" > سفارش و تحویل در یک دقیقه</div>
@@ -1166,7 +1166,7 @@
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img src="profile/digimoviz.png" alt="دیجی مویز" >
+                                      <img src="profile/digimoviz.png" alt="دیجی مویز" loading="lazy">
                                     <div class="text-primary text-w-semibold" >سامان رمضانی</div>
                                     <div class="text-80 mr-auto" >دیجی مویز</div>
                                 </div>
@@ -1177,7 +1177,7 @@
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img src="profile/myfilm.png" alt="مای فیلم" >
+                                      <img src="profile/myfilm.png" alt="مای فیلم" loading="lazy">
                                     <div class="text-primary text-w-semibold" >علیرضا کریمی</div>
                                     <div class="text-80 mr-auto" >مای فیلم</div>
                                 </div>
@@ -1194,7 +1194,7 @@
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img src="profile/opencart.png" alt="اپن کارت" >
+                                      <img src="profile/opencart.png" alt="اپن کارت" loading="lazy">
                                     <div class="text-primary text-w-semibold" >صمد دانش خواه</div>
                                     <div class="text-80 mr-auto" >اپن کارت فارسی</div>
                                 </div>
@@ -1205,7 +1205,7 @@
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img src="profile/asanapps.png" alt="آسان اپس" >
+                                      <img src="profile/asanapps.png" alt="آسان اپس" loading="lazy">
                                     <div class="text-primary text-w-semibold" >سید حجت حسینی</div>
                                     <div class="text-80 mr-auto" >آسان اپس</div>
                                 </div>
@@ -1222,7 +1222,7 @@
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img src="profile/bahabin.png" alt="بهابین" >
+                                      <img src="profile/bahabin.png" alt="بهابین" loading="lazy">
                                     <div class="text-primary text-w-semibold" >مهدی وادونی</div>
                                     <div class="text-80 mr-auto" >بهابین</div>
                                 </div>
@@ -1233,7 +1233,7 @@
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img src="profile/torob.png" alt="ترب" >
+                                      <img src="profile/torob.png" alt="ترب" loading="lazy">
                                     <div class="text-primary text-w-semibold" >علی بابایی چشمه احمد رضایی</div>
                                     <div class="text-80 mr-auto" >ترب</div>
                                 </div>
@@ -1250,7 +1250,7 @@
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img src="profile/damdaran.png" alt="دامداران" >
+                                      <img src="profile/damdaran.png" alt="دامداران" loading="lazy">
                                     <div class="text-primary text-w-semibold" >نور الدین نور بخش جعفری دهکردی</div>
                                     <div class="text-80 mr-auto" >دامداران</div>
                                 </div>
@@ -1261,7 +1261,7 @@
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img src="profile/vahabonline.png" alt="وهاب آنلاین" >
+                                      <img src="profile/vahabonline.png" alt="وهاب آنلاین" loading="lazy">
                                     <div class="text-primary text-w-semibold" >وهاب سید چورته</div>
                                     <div class="text-80 mr-auto" >وهاب آنلاین</div>
                                 </div>
@@ -1304,7 +1304,7 @@
                 <div class="swiper-slide">
                     <div class="post parent">
                         <div class="img" >
-                            <a href="https://www.persianmizban.com/blog/domain-country/"><img src="https://www.persianmizban.com/blog/wp-content/uploads/2022/04/country-domains-1.jpg" alt="دامنه های کشوری"></a>
+                            <a href="https://www.persianmizban.com/blog/domain-country/"><img src="https://www.persianmizban.com/blog/wp-content/uploads/2022/04/country-domains-1.jpg" alt="دامنه های کشوری" loading="lazy"></a>
                         </div>
                         <a href="https://www.persianmizban.com/blog/domain-country/"><div class="text-90 text-w-medium" parent-hover="text-primary" >معرفی انواع دامنه های کشوری که باید بدانید</div></a>
                         <div class="text">
@@ -1321,7 +1321,7 @@
                 <div class="swiper-slide">
                     <div class="post parent">
                         <div class="img" >
-                            <a href="https://www.persianmizban.com/blog/international-domain/"><img src="https://www.persianmizban.com/blog/wp-content/uploads/2022/04/%D9%87%D8%A7%DB%8C-%D8%A8%DB%8C%D9%86-%D8%A7%D9%84%D9%85%D9%84%D9%84%DB%8C.png" alt="دامنه های کشوری"></a>
+                              <a href="https://www.persianmizban.com/blog/international-domain/"><img src="https://www.persianmizban.com/blog/wp-content/uploads/2022/04/%D9%87%D8%A7%DB%8C-%D8%A8%DB%8C%D9%86-%D8%A7%D9%84%D9%85%D9%84%D9%84%DB%8C.png" alt="دامنه های کشوری" loading="lazy"></a>
                         </div>
                         <a href="https://www.persianmizban.com/blog/international-domain/"><div class="text-90 text-w-medium" parent-hover="text-primary" >معرفی انواع دامنه های بین المللی و کاربرد آن ها</div></a>
                         <div class="text">
@@ -1339,7 +1339,7 @@
                 <div class="swiper-slide">
                     <div class="post parent">
                         <div class="img" >
-                            <a href="https://www.persianmizban.com/blog/iranian-domain/"><img src="https://www.persianmizban.com/blog/wp-content/uploads/2022/04/%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%DB%8C.jpg" alt="هاست چیست"></a>
+                              <a href="https://www.persianmizban.com/blog/iranian-domain/"><img src="https://www.persianmizban.com/blog/wp-content/uploads/2022/04/%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%DB%8C.jpg" alt="هاست چیست" loading="lazy"></a>
                         </div>
                         <a href="https://www.persianmizban.com/blog/iranian-domain/"><div class="text-90 text-w-medium" parent-hover="text-primary" >دامنه ir چیست؟ و معرفی انواع دامنه های ایرانی</div></a>
                         <div class="text">
@@ -1356,7 +1356,7 @@
                 <div class="swiper-slide">
                     <div class="post parent">
                         <div class="img" >
-                            <a href="https://www.persianmizban.com/blog/store-host/"><img src="https://www.persianmizban.com/blog/wp-content/uploads/2022/04/%D9%87%D8%A7%D8%B3%D8%AA-%D9%81%D8%B1%D9%88%D8%B4%DA%AF%D8%A7%D9%87-%D8%A7%DB%8C%D9%86%D8%AA%D8%B1%D9%86%D8%AA%DB%8C.jpg" alt="هاست فروشگاهی"></a>
+                              <a href="https://www.persianmizban.com/blog/store-host/"><img src="https://www.persianmizban.com/blog/wp-content/uploads/2022/04/%D9%87%D8%A7%D8%B3%D8%AA-%D9%81%D8%B1%D9%88%D8%B4%DA%AF%D8%A7%D9%87-%D8%A7%DB%8C%D9%86%D8%AA%D8%B1%D9%86%D8%AA%DB%8C.jpg" alt="هاست فروشگاهی" loading="lazy"></a>
                         </div>
                         <a href="https://www.persianmizban.com/blog/store-host/"><div class="text-90 text-w-medium" parent-hover="text-primary" >راهنمای خرید هاست فروشگاه اینترنتی</div></a>
                         <div class="text">
@@ -1372,7 +1372,7 @@
                 <div class="swiper-slide">
                     <div class="post parent">
                         <div class="img" >
-                            <a href="https://www.persianmizban.com/blog/wordpress-install/"><img src="https://www.persianmizban.com/blog/wp-content/uploads/2022/02/PersianMizban-Blog-Wordpress-Install-Zero-1.png" alt="نصب وردپرس"></a>
+                              <a href="https://www.persianmizban.com/blog/wordpress-install/"><img src="https://www.persianmizban.com/blog/wp-content/uploads/2022/02/PersianMizban-Blog-Wordpress-Install-Zero-1.png" alt="نصب وردپرس" loading="lazy"></a>
                         </div>
                         <a href="https://www.persianmizban.com/blog/wordpress-install/"><div class="text-90 text-w-medium" parent-hover="text-primary" >آموزش نصب وردپرس روی هاست سی پنل – تصویری</div></a>
                         <div class="text">
@@ -1458,7 +1458,7 @@
             </div>
             <div class="col-2">
                 <div class="-bg-primary-3 rounded-6 pa-4 text-center">
-                    <a href="#" onclick="window.open('https://www.persianmizban.com/namad.php','','resizable=1,scrollbars=1,width=750,height=500,top=400,left=400');return false;" title="نماد های اعتماد پرشین میزبان"><img src="https://www.persianmizban.com/img/namad.png" alt="نماد اعتماد"><br><img src="https://www.persianmizban.com/img/samandehi.png" alt="نماد ساماندهی"></a>
+                    <a href="#" onclick="window.open('https://www.persianmizban.com/namad.php','','resizable=1,scrollbars=1,width=750,height=500,top=400,left=400');return false;" title="نماد های اعتماد پرشین میزبان"><img src="https://www.persianmizban.com/img/namad.png" alt="نماد اعتماد" loading="lazy"><br><img src="https://www.persianmizban.com/img/samandehi.png" alt="نماد ساماندهی" loading="lazy"></a>
                 </div>
             </div>
         </div>
