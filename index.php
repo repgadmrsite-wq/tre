@@ -13,6 +13,8 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/ico">
     <link rel="preload" href="dist/style.min.css" as="style" onload="this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="dist/style.min.css"></noscript>
+    <link rel="preload" href="fnt/woff2/IRANSansWeb(FaNum).woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fnt/woff2/IRANSansWeb(FaNum)_Bold.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Open Graph meta tags -->
     <meta property="og:title" content="خرید هاست، خرید سرور مجازی و ثبت دامنه | پرشین میزبان">
