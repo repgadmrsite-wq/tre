@@ -12,6 +12,7 @@
 
     <link rel="canonical" href="https://www.persianmizban.com/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/ico">
+    <link rel="manifest" href="/manifest.json">
     <link rel="preload" href="dist/style.min.css" as="style" onload="this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="dist/style.min.css"></noscript>
     <link rel="preload" href="fnt/woff2/IRANSansWeb(FaNum).woff2" as="font" type="font/woff2" crossorigin>
@@ -1486,6 +1487,13 @@
 
 </div>
 <script src="dist/scripts.min.js" defer></script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js');
+  });
+}
+</script>
 <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="fad6f86d-8985-4c3d-808f-e97f7658ec10";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 </body>
 </html>
