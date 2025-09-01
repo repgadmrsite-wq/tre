@@ -1,0 +1,29 @@
+{
+  "name": "tre",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "predev": "sass src/style.scss dist/style.css --no-source-map && postcss dist/style.css --no-map -o dist/style.min.css",
+    "dev": "npm-run-all predev --parallel watch:sass watch:postcss",
+    "watch:sass": "sass --watch src/style.scss:dist/style.css --no-source-map",
+    "watch:postcss": "postcss --watch dist/style.css --no-map -o dist/style.min.css",
+    "build": "sass src/style.scss dist/style.css --no-source-map && postcss dist/style.css --no-map -o dist/style.min.css && rm dist/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "cssnano": "^7.1.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
+    "sass": "^1.91.0"
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
