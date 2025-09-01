@@ -1,0 +1,17 @@
+[data-theme='dark'] {
+    --m-color-body: 17,17,17;
+    --m-color-body-l-1: 25,25,25;
+    --m-color-body-d-1: 13,13,13;
+    --m-color-invert: 255,255,255;
+    --m-color-invert-l-1: 255,255,255;
+    --m-color-invert-d-1: 251,251,251;
+    --m-color-primary: 127,111,220;
+}
+
+.theme-toggle {
+    background: none;
+    border: 0;
+    font-size: 1.25rem;
+    cursor: pointer;
+    color: rgba(var(--m-color-invert), var(--m-text-alpha));
+}
