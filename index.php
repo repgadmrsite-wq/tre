@@ -1,4 +1,21 @@
-<?php include __DIR__ . '/partials/header.php'; ?>
+<?php
+$pageTitle = 'پرشین میزبان | هاست لینوکس، وردپرس، سرور مجازی و ثبت دامنه';
+$pageDescription = 'هاستینگ پرشین میزبان ارائه‌دهنده هاست لینوکس، هاست وردپرس و هاست دانلود، سرور مجازی و اختصاصی، ثبت دامنه و SSL رایگان با پشتیبانی ۲۴ ساعته و ضمانت بازگشت وجه.';
+$extraHead = <<<HTML
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="خرید هاست، خرید سرور مجازی و ثبت دامنه | پرشین میزبان">
+    <meta property="og:description" content="خرید هاست و خدمات هاستینگ از پرشین میزبان که پرسرعت ترین هاستینگ کشور است، و با زیرساختی امن و مستحکم، فروش اینترنتی را قدرتمند پیگیری">
+    <meta property="og:image" content="https://www.persianmizban.com/img/logo.png">
+    <meta property="og:url" content="https://www.persianmizban.com/">
+    <meta property="og:type" content="website">
+    <!-- Twitter Card meta tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="خرید هاست، خرید سرور مجازی و ثبت دامنه | پرشین میزبان">
+    <meta name="twitter:description" content="خرید هاست و خدمات هاستینگ از پرشین میزبان که پرسرعت ترین هاستینگ کشور است، و با زیرساختی امن و مستحکم، فروش اینترنتی را قدرتمند پیگیری">
+    <meta name="twitter:image" content="https://www.persianmizban.com/img/logo.png">
+HTML;
+include $_SERVER['DOCUMENT_ROOT'].'/partials/header.php';
+?>
 <section id="header" class="home-header">
     <div class="container" >
         <div lg="grid cols-5 gap-none a-items-center gap-10" >
@@ -664,4 +681,4 @@
     </div>
 </section>
 
-<?php include __DIR__ . '/partials/footer.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'].'/partials/footer.php'; ?>

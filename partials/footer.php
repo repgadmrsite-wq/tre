@@ -1,3 +1,4 @@
+<?php $baseUrl = $baseUrl ?? '/'; ?>
 <section id="footer">
     <div class="container" >
         <div class="support" >
@@ -35,35 +36,35 @@
 
             <div lg="col-2" i-lg="mb-6">
                 <div lg="pr-10" i-lg="-mr-2">
-                    <a href="https://www.persianmizban.com/web-hosting/"><div class="text-90 text-w-semibold pr-2 mb-6">خرید هاست</div></a>
+                    <a href="<?php echo $baseUrl; ?>web-hosting/"><div class="text-90 text-w-semibold pr-2 mb-6">خرید هاست</div></a>
                     <ul>
-                        <a href="https://www.persianmizban.com/web-hosting/iran"><li>هاست ایران</li></a>
-                        <a href="https://www.persianmizban.com/web-hosting/germany"><li>هاست آلمان</li></a>
-                        <a href="https://www.persianmizban.com/web-hosting/wordpress"><li>هاست وردپرس</li></a>
-                        <a href="https://www.persianmizban.com/web-hosting/iran-download-host"><li>هاست دانلود ایران</li></a>
-                        <a href="https://www.persianmizban.com/web-hosting/germany-download-host"><li>هاست دانلود آلمان</li></a>
-                        <a href="https://www.persianmizban.com/domain/"><li>ثبت دامنه</li></a>
-                        <a href="https://www.persianmizban.com/my/cart.php?a=add&domain=transfer"><li>انتقال دامنه</li></a>
+                        <a href="<?php echo $baseUrl; ?>web-hosting/iran"><li>هاست ایران</li></a>
+                        <a href="<?php echo $baseUrl; ?>web-hosting/germany"><li>هاست آلمان</li></a>
+                        <a href="<?php echo $baseUrl; ?>web-hosting/wordpress"><li>هاست وردپرس</li></a>
+                        <a href="<?php echo $baseUrl; ?>web-hosting/iran-download-host"><li>هاست دانلود ایران</li></a>
+                        <a href="<?php echo $baseUrl; ?>web-hosting/germany-download-host"><li>هاست دانلود آلمان</li></a>
+                        <a href="<?php echo $baseUrl; ?>domain/"><li>ثبت دامنه</li></a>
+                        <a href="<?php echo $baseUrl; ?>my/cart.php?a=add&domain=transfer"><li>انتقال دامنه</li></a>
                     </ul>
                 </div>
             </div>
             <div lg="col-2" class="orange" i-lg="mb-6" >
                 <div i-lg="-mr-2">
-                    <a href="https://www.persianmizban.com/vps/"><div class="text-90 text-w-semibold pr-2 mb-6">سرور مجازی</div></a>
+                    <a href="<?php echo $baseUrl; ?>vps/"><div class="text-90 text-w-semibold pr-2 mb-6">سرور مجازی</div></a>
                     <ul>
-                        <a href="https://www.persianmizban.com/vps/iran"><li>سرور مجازی ایران</li></a>
-                        <a href="https://www.persianmizban.com/vps/germany"><li>سرور مجازی آلمان</li></a>
-                        <a href="https://www.persianmizban.com/vps/usa"><li>سرور مجازی آمریکا</li></a>
-                        <a href="https://www.persianmizban.com/vps/finland"><li>سرور مجازی فنلاند</li></a>
-                        <a href="https://www.persianmizban.com/vds/iran"><li>سرور اختصاصی ایران</li></a>
-                        <a href="https://www.persianmizban.com/vds/france"><li>سرور اختصاصی فرانسه</li></a>
-                        <a href="https://www.persianmizban.com/vds/germany"><li>سرور اختصاصی آلمان</li></a>
+                        <a href="<?php echo $baseUrl; ?>vps/iran"><li>سرور مجازی ایران</li></a>
+                        <a href="<?php echo $baseUrl; ?>vps/germany"><li>سرور مجازی آلمان</li></a>
+                        <a href="<?php echo $baseUrl; ?>vps/usa"><li>سرور مجازی آمریکا</li></a>
+                        <a href="<?php echo $baseUrl; ?>vps/finland"><li>سرور مجازی فنلاند</li></a>
+                        <a href="<?php echo $baseUrl; ?>vds/iran"><li>سرور اختصاصی ایران</li></a>
+                        <a href="<?php echo $baseUrl; ?>vds/france"><li>سرور اختصاصی فرانسه</li></a>
+                        <a href="<?php echo $baseUrl; ?>vds/germany"><li>سرور اختصاصی آلمان</li></a>
                     </ul>
                 </div>
             </div>
             <div class="col-2">
                 <div class="-bg-primary-3 rounded-6 pa-4 text-center">
-                    <a href="#" onclick="window.open('https://www.persianmizban.com/namad.php','','resizable=1,scrollbars=1,width=750,height=500,top=400,left=400');return false;" title="نماد های اعتماد پرشین میزبان"><img src="https://www.persianmizban.com/img/namad.png" alt="نماد اعتماد"><br><img src="https://www.persianmizban.com/img/samandehi.png" alt="نماد ساماندهی"></a>
+                    <a href="#" onclick="window.open('<?php echo $baseUrl; ?>namad.php','','resizable=1,scrollbars=1,width=750,height=500,top=400,left=400');return false;" title="نماد های اعتماد پرشین میزبان"><img src="<?php echo $baseUrl; ?>img/namad.png" alt="نماد اعتماد"><br><img src="<?php echo $baseUrl; ?>img/samandehi.png" alt="نماد ساماندهی"></a>
                 </div>
             </div>
         </div>
@@ -85,8 +86,8 @@
 
 
 </div>
-<script src="js/swiper.js" ></script>
-<script src="js/scripts.js" ></script>
+<script src="/js/swiper.js" ></script>
+<script src="/js/scripts.js" ></script>
 <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="fad6f86d-8985-4c3d-808f-e97f7658ec10";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 </body>
 </html>

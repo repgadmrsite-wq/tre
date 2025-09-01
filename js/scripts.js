@@ -9,7 +9,7 @@ if(navbar != null) {
         navbar.classList.remove("active");
     }
 
-    document.querySelectorAll("#nav a").forEach(function (el){
+    document.querySelectorAll("#top-nav a").forEach(function (el){
         el.onclick = function (){
             navbar.classList.remove("active");
         }
