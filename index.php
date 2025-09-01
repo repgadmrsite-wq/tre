@@ -9,7 +9,7 @@
     <title>پرشین میزبان | هاست لینوکس، وردپرس، سرور مجازی و ثبت دامنه</title>
     
     <link rel="shortcut icon" href="/favicon.ico" type="image/ico">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dist/style.min.css">
 
     <!-- Open Graph meta tags -->
     <meta property="og:title" content="خرید هاست، خرید سرور مجازی و ثبت دامنه | پرشین میزبان">
