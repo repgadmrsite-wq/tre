@@ -115,13 +115,13 @@ function megaMenuItems(isInit = false){
 megaMenuItems(true);
 let timeout;
 window.addEventListener("resize",function (){
-    if(!timeout)
+    if(timeout)
         clearTimeout(timeout);
 
-    setTimeout(function (){
-        megaMenuItems()
-    },300)
-})
+    timeout = setTimeout(function (){
+        megaMenuItems();
+    },300);
+});
 
 document.querySelectorAll(".pricing-list li").forEach(function (el){
     el.onclick = function (){
