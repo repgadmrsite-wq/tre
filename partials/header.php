@@ -1,3 +1,4 @@
+<?php $baseUrl = $baseUrl ?? '/'; ?>
 <!DOCTYPE html>
 <html lang="fa-IR" dir="rtl">
 <head>
@@ -18,33 +19,33 @@
     <div class="container" >
         <div class="d-flex" >
             <div class="mob-menu" ></div>
-            <a class="logo" href="https://www.persianmizban.com/"></a>
+            <a class="logo" href="<?php echo $baseUrl; ?>"></a>
             <div class="nav-mid">
                 <ul>
                     <li>
-                        <a href="https://www.persianmizban.com/">پرشین میزبان</a>
+                        <a href="<?php echo $baseUrl; ?>">پرشین میزبان</a>
                     </li>
                     <li>
-                        <a href="https://www.persianmizban.com/about-us">درباره ما</a>
+                        <a href="<?php echo $baseUrl; ?>about-us">درباره ما</a>
                     </li>
                     <li>
-                        <a href="https://www.persianmizban.com/card-number">شماره حساب ها</a>
+                        <a href="<?php echo $baseUrl; ?>card-number">شماره حساب ها</a>
                     </li>
                     <li>
-                        <a href="https://www.persianmizban.com/sales-cooperation">همکاری در فروش</a>
+                        <a href="<?php echo $baseUrl; ?>sales-cooperation">همکاری در فروش</a>
                     </li>
                     <li>
-                        <a href="https://www.persianmizban.com/contact-us/">تماس با ما</a>
+                        <a href="<?php echo $baseUrl; ?>contact-us/">تماس با ما</a>
                     </li>
                 </ul>
                 <div class="d-flex my-auto mr-auto" i-lg="border-top-1 border-primary-2 pt-6">
-                    <a href="https://www.persianmizban.com/my/register.php" i-lg="ml-auto">
+                    <a href="<?php echo $baseUrl; ?>my/register.php" i-lg="ml-auto">
                     <div class="button" >
                         <div class="icon icon-reg" ></div>
                         ثبت نام
                     </div>
                     </a>
-                    <a href="https://www.persianmizban.com/my/login" >
+                    <a href="<?php echo $baseUrl; ?>my/login" >
                     <div class="button" >
                         <div class="icon icon-log" ></div>
                         ورود
@@ -70,33 +71,33 @@
 
             <div class="item" menu-item="1" >
                 <div class="icon icon-host" ></div>
-                <a href="https://www.persianmizban.com/web-hosting/"><span>هاست</span></a>
+                <a href="<?php echo $baseUrl; ?>web-hosting/"><span>هاست</span></a>
                 <div class="icon-more" ></div>
             </div>
 
             <div class="item" menu-item="2" >
                 <div class="icon icon-domain" ></div>
-                <a href="https://www.persianmizban.com/domain/"><span>ثبت دامنه</span></a>
+                <a href="<?php echo $baseUrl; ?>domain/"><span>ثبت دامنه</span></a>
                 <div class="icon-more" ></div>
             </div>
 
             <div class="item" menu-item="3" >
                 <div class="icon icon-vps" ></div>
                 <div class="blink">NEW</div>
-                <a href="https://www.persianmizban.com/vps/"><span>سرور مجازی</span></a>
+                <a href="<?php echo $baseUrl; ?>vps/"><span>سرور مجازی</span></a>
                 <div class="icon-more" ></div>
             </div>
 
             <div class="item" menu-item="4">
                 <div class="icon icon-server" ></div>
-                <a href="https://www.persianmizban.com/vds/"><span>سرور اختصاصی</span></a>
+                <a href="<?php echo $baseUrl; ?>vds/"><span>سرور اختصاصی</span></a>
                 <div class="icon-more" ></div>
             </div>
 
             <div class="item !ml-0" lg="mr-auto" i-lg="pl-6" >
                 <div class="icon icon-edu" ></div>
                 <div class="blink blink2">BLOG</div>
-                <a href="https://www.persianmizban.com/blog/"><span>مرکز آموزش</span></a>
+                <a href="<?php echo $baseUrl; ?>blog/"><span>مرکز آموزش</span></a>
             </div>
         </div>
     </div>
@@ -104,7 +105,7 @@
 <section id="mega-menu" class="active">
     <ul class="menu-item-1">
         <li>
-            <a href="https://www.persianmizban.com/web-hosting/iran">هاست ایران</a>
+            <a href="<?php echo $baseUrl; ?>web-hosting/iran">هاست ایران</a>
             <div class="more-info" >
                 <div class="grid cols-5" >
                     <div class="col-3">
@@ -121,12 +122,12 @@
                             <li>بکاپ گیری روزانه منظم و دقیق</li>
                             <li>انتقال رايگان از ساير شركت ها</li>
                             <li>۱۴ روز گارانتی بازگشت وجه</li>
-                            <li>گواهی نامه امنیتی <a href="https://www.persianmizban.com/ssl/">SSL</a> اتوماتیک و رایگان</li>
+                            <li>گواهی نامه امنیتی <a href="<?php echo $baseUrl; ?>ssl/">SSL</a> اتوماتیک و رایگان</li>
                             <li>سازگاری کامل با گوگل و موتورهای جستجو</li>
                         </ul>
                     </div>
                     <div class="col-2 d-flex flex-col">
-                        <a href="https://www.persianmizban.com/web-hosting/iran"><div class="button" >مشاهده پلن ها</div></a>
+                        <a href="<?php echo $baseUrl; ?>web-hosting/iran"><div class="button" >مشاهده پلن ها</div></a>
                         <div class="price" >
                             <small>شروع از</small>
                             <div>
@@ -139,7 +140,7 @@
             </div>
         </li>
         <li>
-            <a href="https://www.persianmizban.com/web-hosting/germany">هاست آلمان</a>
+            <a href="<?php echo $baseUrl; ?>web-hosting/germany">هاست آلمان</a>
 
             <div class="more-info" >
                 <div class="grid cols-5" >
@@ -157,12 +158,12 @@
                             <li>بکاپ گیری روزانه منظم و دقیق</li>
                             <li>انتقال رايگان از ساير شركت ها</li>
                             <li>۱۴ روز گارانتی بازگشت وجه</li>
-                            <li>گواهی نامه امنیتی <a href="https://www.persianmizban.com/ssl/">SSL</a> اتوماتیک و رایگان</li>
+                            <li>گواهی نامه امنیتی <a href="<?php echo $baseUrl; ?>ssl/">SSL</a> اتوماتیک و رایگان</li>
                             <li>سازگاری کامل با گوگل و موتورهای جستجو</li>
                         </ul>
                     </div>
                     <div class="col-2 d-flex flex-col">
-                        <a href="https://www.persianmizban.com/web-hosting/germany"><div class="button">مشاهده پلن ها</div></a>
+                        <a href="<?php echo $baseUrl; ?>web-hosting/germany"><div class="button">مشاهده پلن ها</div></a>
                         <div class="price" >
                             <small>شروع از</small>
                             <div>
@@ -175,7 +176,7 @@
             </div>
         </li>
         <li>
-            <a href="https://www.persianmizban.com/web-hosting/wordpress">هاست وردپرس</a>
+            <a href="<?php echo $baseUrl; ?>web-hosting/wordpress">هاست وردپرس</a>
             <div class="more-info" >
                 <div class="grid cols-5" >
                     <div class="col-3">
@@ -197,7 +198,7 @@
                         </ul>
                     </div>
                     <div class="col-2 d-flex flex-col">
-                        <a href="https://www.persianmizban.com/web-hosting/wordpress"><div class="button">مشاهده پلن ها</div></a>
+                        <a href="<?php echo $baseUrl; ?>web-hosting/wordpress"><div class="button">مشاهده پلن ها</div></a>
                         <div class="price" >
                             <small>شروع از</small>
                             <div>
@@ -210,7 +211,7 @@
             </div>
         </li>
         <li>
-            <a href="https://www.persianmizban.com/web-hosting/iran-download-host">هاست دانلود ایران</a>
+            <a href="<?php echo $baseUrl; ?>web-hosting/iran-download-host">هاست دانلود ایران</a>
             <div class="more-info" >
                 <div class="grid cols-5" >
                     <div class="col-3">
@@ -227,12 +228,12 @@
                             <li>هاست دانلود ایران با ترافیک نیم بها</li>
                             <li>انتقال رايگان از ساير شركت ها</li>
                             <li>۱۴ روز گارانتی بازگشت وجه</li>
-                            <li>گواهی نامه امنیتی <a href="https://www.persianmizban.com/ssl/">SSL</a> اتوماتیک و رایگان</li>
+                            <li>گواهی نامه امنیتی <a href="<?php echo $baseUrl; ?>ssl/">SSL</a> اتوماتیک و رایگان</li>
                             <li>بکاپ گیری روزانه منظم و دقیق</li>
                         </ul>
                     </div>
                     <div class="col-2 d-flex flex-col">
-                        <a href="https://www.persianmizban.com/web-hosting/iran-download-host"><div class="button">مشاهده پلن ها</div></a>
+                        <a href="<?php echo $baseUrl; ?>web-hosting/iran-download-host"><div class="button">مشاهده پلن ها</div></a>
                         <div class="price" >
                             <small>شروع از</small>
                             <div>
@@ -245,7 +246,7 @@
             </div>
         </li>
         <li>
-            <a href="https://www.persianmizban.com/web-hosting/germany-download-host">هاست دانلود آلمان</a>
+            <a href="<?php echo $baseUrl; ?>web-hosting/germany-download-host">هاست دانلود آلمان</a>
             <div class="more-info" >
                 <div class="grid cols-5" >
                     <div class="col-3">
@@ -262,12 +263,12 @@
                             <li>هاست دانلود آلمان بدون تحریم و آزاد</li>
                             <li>انتقال رايگان از ساير شركت ها</li>
                             <li>۱۴ روز گارانتی بازگشت وجه</li>
-                            <li>گواهی نامه امنیتی <a href="https://www.persianmizban.com/ssl/">SSL</a> اتوماتیک و رایگان</li>
+                            <li>گواهی نامه امنیتی <a href="<?php echo $baseUrl; ?>ssl/">SSL</a> اتوماتیک و رایگان</li>
                             <li>بکاپ گیری روزانه منظم و دقیق</li>
                         </ul>
                     </div>
                     <div class="col-2 d-flex flex-col">
-                        <a href="https://www.persianmizban.com/web-hosting/germany-download-host"><div class="button">مشاهده پلن ها</div></a>
+                        <a href="<?php echo $baseUrl; ?>web-hosting/germany-download-host"><div class="button">مشاهده پلن ها</div></a>
                         <div class="price" >
                             <small>شروع از</small>
                             <div>
@@ -283,7 +284,7 @@
 
     <ul class="menu-item-2">
         <li>
-            <a href="https://www.persianmizban.com/domain/">ثبت دامنه</a>
+            <a href="<?php echo $baseUrl; ?>domain/">ثبت دامنه</a>
             <div class="more-info" >
                 <div class="grid cols-5" >
                     <div class="col-3">
@@ -305,7 +306,7 @@
                         </ul>
                     </div>
                     <div class="col-2 d-flex flex-col">
-                        <a href="https://www.persianmizban.com/domain/"><div class="button">ثبت دامنه</div></a>
+                        <a href="<?php echo $baseUrl; ?>domain/"><div class="button">ثبت دامنه</div></a>
                         <div class="price" >
                             <small>شروع از</small>
                             <div>
@@ -318,7 +319,7 @@
             </div>
         </li>
         <li>
-            <a href="https://www.persianmizban.com/my/cart.php?a=add&domain=transfer">انتقال دامنه</a>
+            <a href="<?php echo $baseUrl; ?>my/cart.php?a=add&domain=transfer">انتقال دامنه</a>
 
             <div class="more-info" >
                 <div class="grid cols-5" >
@@ -341,7 +342,7 @@
                         </ul>
                     </div>
                     <div class="col-2 d-flex flex-col">
-                        <a href="https://www.persianmizban.com/my/cart.php?a=add&domain=transfer"><div class="button">انتقال دامنه</div></a>
+                        <a href="<?php echo $baseUrl; ?>my/cart.php?a=add&domain=transfer"><div class="button">انتقال دامنه</div></a>
                         <div class="price" >
                             <small>شروع از</small>
                             <div>
@@ -354,7 +355,7 @@
             </div>
         </li>
         <li>
-            <a href="https://www.persianmizban.com/my/login">تمدید دامنه</a>
+            <a href="<?php echo $baseUrl; ?>my/login">تمدید دامنه</a>
             <div class="more-info" >
                 <div class="grid cols-5" >
                     <div class="col-3">
@@ -376,7 +377,7 @@
                         </ul>
                     </div>
                     <div class="col-2 d-flex flex-col">
-                        <a href="https://www.persianmizban.com/my/login"><div class="button">تمدید دامنه</div></a>
+                        <a href="<?php echo $baseUrl; ?>my/login"><div class="button">تمدید دامنه</div></a>
                         <div class="price" >
                             <small>شروع از</small>
                             <div>
@@ -392,7 +393,7 @@
 
     <ul class="menu-item-3">
         <li>
-            <a href="https://www.persianmizban.com/vps/iran">سرور مجازی ایران</a>
+            <a href="<?php echo $baseUrl; ?>vps/iran">سرور مجازی ایران</a>
             <div class="more-info" >
                 <div class="grid cols-5" >
                     <div class="col-3">
@@ -414,7 +415,7 @@
                         </ul>
                     </div>
                     <div class="col-2 d-flex flex-col">
-                        <a href="https://www.persianmizban.com/vps/iran"><div class="button">مشاهده پلن ها</div></a>
+                        <a href="<?php echo $baseUrl; ?>vps/iran"><div class="button">مشاهده پلن ها</div></a>
                         <div class="price" >
                             <small>شروع از</small>
                             <div>
@@ -427,7 +428,7 @@
             </div>
         </li>
         <li>
-            <a href="https://www.persianmizban.com/vps/germany">سرور مجازی آلمان</a>
+            <a href="<?php echo $baseUrl; ?>vps/germany">سرور مجازی آلمان</a>
 
             <div class="more-info" >
                 <div class="grid cols-5" >
@@ -450,7 +451,7 @@
                         </ul>
                     </div>
                     <div class="col-2 d-flex flex-col">
-                        <a href="https://www.persianmizban.com/vps/germany"><div class="button">مشاهده پلن ها</div></a>
+                        <a href="<?php echo $baseUrl; ?>vps/germany"><div class="button">مشاهده پلن ها</div></a>
                         <div class="price" >
                             <small>شروع از</small>
                             <div>
@@ -463,7 +464,7 @@
             </div>
         </li>
                 <li>
-            <a href="https://www.persianmizban.com/vps/usa">سرور مجازی آمریکا</a>
+            <a href="<?php echo $baseUrl; ?>vps/usa">سرور مجازی آمریکا</a>
 
             <div class="more-info" >
                 <div class="grid cols-5" >
@@ -486,7 +487,7 @@
                         </ul>
                     </div>
                     <div class="col-2 d-flex flex-col">
-                        <a href="https://www.persianmizban.com/vps/usa"><div class="button">مشاهده پلن ها</div></a>
+                        <a href="<?php echo $baseUrl; ?>vps/usa"><div class="button">مشاهده پلن ها</div></a>
                         <div class="price" >
                             <small>شروع از</small>
                             <div>
@@ -499,7 +500,7 @@
             </div>
         </li>
         <li>
-            <a href="https://www.persianmizban.com/vps/finland">سرور مجازی فنلاند</a>
+            <a href="<?php echo $baseUrl; ?>vps/finland">سرور مجازی فنلاند</a>
             <div class="more-info" >
                 <div class="grid cols-5" >
                     <div class="col-3">
@@ -521,7 +522,7 @@
                         </ul>
                     </div>
                     <div class="col-2 d-flex flex-col">
-                        <a href="https://www.persianmizban.com/vps/finland"><div class="button">مشاهده پلن ها</div></a>
+                        <a href="<?php echo $baseUrl; ?>vps/finland"><div class="button">مشاهده پلن ها</div></a>
                         <div class="price" >
                             <small>شروع از</small>
                             <div>
@@ -537,7 +538,7 @@
 
     <ul class="menu-item-4">
         <li>
-            <a href="https://www.persianmizban.com/vds/iran">سرور اختصاصی ایران</a>
+            <a href="<?php echo $baseUrl; ?>vds/iran">سرور اختصاصی ایران</a>
             <div class="more-info" >
                 <div class="grid cols-5" >
                     <div class="col-3">
@@ -559,7 +560,7 @@
                         </ul>
                     </div>
                     <div class="col-2 d-flex flex-col">
-                        <a href="https://www.persianmizban.com/vds/iran"><div class="button">مشاهده پلن ها</div></a>
+                        <a href="<?php echo $baseUrl; ?>vds/iran"><div class="button">مشاهده پلن ها</div></a>
                         <div class="price" >
                             <small>شروع از</small>
                             <div>
@@ -572,7 +573,7 @@
             </div>
         </li>
         <li>
-            <a href="https://www.persianmizban.com/vds/france">سرور اختصاصی فرانسه</a>
+            <a href="<?php echo $baseUrl; ?>vds/france">سرور اختصاصی فرانسه</a>
 
             <div class="more-info" >
                 <div class="grid cols-5" >
@@ -595,7 +596,7 @@
                         </ul>
                     </div>
                     <div class="col-2 d-flex flex-col">
-                        <a href="https://www.persianmizban.com/vds/france"><div class="button">مشاهده پلن ها</div></a>
+                        <a href="<?php echo $baseUrl; ?>vds/france"><div class="button">مشاهده پلن ها</div></a>
                         <div class="price" >
                             <small>شروع از</small>
                             <div>
@@ -608,7 +609,7 @@
             </div>
         </li>
         <li>
-            <a href="https://www.persianmizban.com/vds/netherlands">سرور اختصاصی هلند</a>
+            <a href="<?php echo $baseUrl; ?>vds/netherlands">سرور اختصاصی هلند</a>
 
             <div class="more-info" >
                 <div class="grid cols-5" >
@@ -631,7 +632,7 @@
                         </ul>
                     </div>
                     <div class="col-2 d-flex flex-col">
-                        <a href="https://www.persianmizban.com/vds/netherlands"><div class="button">مشاهده پلن ها</div></a>
+                        <a href="<?php echo $baseUrl; ?>vds/netherlands"><div class="button">مشاهده پلن ها</div></a>
                         <div class="price" >
                             <small>شروع از</small>
                             <div>
@@ -644,7 +645,7 @@
             </div>
         </li>
         <li>
-            <a href="https://www.persianmizban.com/vds/germany">سرور اختصاصی آلمان</a>
+            <a href="<?php echo $baseUrl; ?>vds/germany">سرور اختصاصی آلمان</a>
             <div class="more-info" >
                 <div class="grid cols-5" >
                     <div class="col-3">
@@ -666,7 +667,7 @@
                         </ul>
                     </div>
                     <div class="col-2 d-flex flex-col">
-                        <a href="https://www.persianmizban.com/vds/germany"><div class="button">مشاهده پلن ها</div></a>
+                        <a href="<?php echo $baseUrl; ?>vds/germany"><div class="button">مشاهده پلن ها</div></a>
                         <div class="price" >
                             <small>شروع از</small>
                             <div>
