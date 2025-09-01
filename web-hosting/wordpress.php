@@ -842,7 +842,7 @@ include '../partials/header.php';
     <div class="container" >
         <div class="grid cols-2 a-items-center" sm="cols-4" lg="cols-6">
             <div class="col-2" sm="col-4" lg="col-2" >
-                <img class="w-full mx-auto d-block" i-lg="max-w-(414px)" src="/img/img-inside.png" >
+                <img class="w-full mx-auto d-block" i-lg="max-w-(414px)" src="/img/img-inside.png" alt="پرشین میزبان">
             </div>
             <div>
                 <div class="box box2" >

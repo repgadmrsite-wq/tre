@@ -255,7 +255,7 @@ include '../partials/header.php';
     <div class="container" >
         <div class="grid cols-2 a-items-center" sm="cols-4" lg="cols-6">
             <div class="col-2" sm="col-4" lg="col-2" >
-                <img class="w-full mx-auto d-block" i-lg="max-w-(414px)" src="/img/img-inside.png" >
+                <img class="w-full mx-auto d-block" i-lg="max-w-(414px)" src="/img/img-inside.png" alt="پرشین میزبان">
             </div>
             <div>
                 <div class="box box2" >
@@ -442,7 +442,7 @@ include '../partials/header.php';
             <div md="col-3" >
                 <div class="contact-1">
                     <div class="image">
-                        <img src="/img/img-employee-number.png" >
+                        <img src="/img/img-employee-number.png" alt="کارشناس پشتیبانی">
                     </div>
                     <div class="pt-2 text-190 text-w-black" >
                         <span class="text-White">واحد پشتیبانی</span>
@@ -476,7 +476,7 @@ include '../partials/header.php';
             <div md="col-3" i-md="mt-12">
                 <div class="contact-1 contact-2">
                     <div class="image">
-                        <img src="/img/img-employee2.png" >
+                        <img src="/img/img-employee2.png" alt="کارشناس فروش">
                     </div>
                     <div class="pt-2 text-190 text-w-black" >
                         <span class="text-black">واحد فروش</span>

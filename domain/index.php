@@ -14,7 +14,7 @@ include '../partials/header.php';
                 </ul>
             </div>
             <div lg="col-5" i-lg="d-none">
-                <img class="w-full" src="/img/img-domain.jpg" />
+                <img class="w-full" src="/img/img-domain.jpg" alt="ثبت دامنه">
             </div>
         </div>
     </div>
@@ -62,7 +62,7 @@ include '../partials/header.php';
     <div class="container" >
         <div lg="grid cols-5" sm="grid cols-3" class="a-items-center mb-16" >
             <div i-sm="d-none">
-                <img src="/img/what-domain.svg" class="w-full">
+                <img src="/img/what-domain.svg" class="w-full" alt="دامنه چیست">
             </div>
             <div lg="col-4" sm="col-2" >
                 <div class="text-w-semibold text-110 mb-4" >دامنه و یا دامین چیست؟</div>
@@ -717,7 +717,7 @@ include '../partials/header.php';
     <div class="container" >
         <div class="grid cols-2 a-items-center" sm="cols-4" lg="cols-6">
             <div class="col-2" sm="col-4" lg="col-2" >
-                <img class="w-full mx-auto d-block" i-lg="max-w-(414px)" src="/img/img-inside.png" >
+                <img class="w-full mx-auto d-block" i-lg="max-w-(414px)" src="/img/img-inside.png" alt="پرشین میزبان">
             </div>
             <div>
                 <div class="box box2" >
