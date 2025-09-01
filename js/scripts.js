@@ -8,16 +8,13 @@ if(navbar != null) {
         if(navButton) navButton.setAttribute("aria-expanded","false");
     }
 
-    function toggleMobileMenu(){
-        navbar.classList.toggle("active");
-        if(navButton) navButton.setAttribute("aria-expanded", navbar.classList.contains("active"));
-    }
-
-    navButton.addEventListener('click', toggleMobileMenu);
+    navButton.addEventListener('click', function(){
+        toggleMenu(navbar, navButton);
+    });
     navButton.addEventListener('keydown', function(e){
         if(e.key === 'Enter' || e.key === ' '){
             e.preventDefault();
-            toggleMobileMenu();
+            toggleMenu(navbar, navButton);
         } else if(e.key === 'Escape') {
             e.preventDefault();
             closeMobileMenu();
@@ -92,9 +89,7 @@ function megaMenuItems(isInit = false){
         let mItem = document.querySelector(".menu-item-" + item);
         let mItemIn = document.querySelector(atob("I2Zvb3RlciAuaGFzaHQ="));
         if(mItem !== null && mItemIn !== null){
-            let l = el.getBoundingClientRect().left + el.getBoundingClientRect().width + mItem.getBoundingClientRect().width * 2;
-            if(l < 1040)
-                l = 1040;
+            let l = computeMegaMenuLeft(el.getBoundingClientRect(), mItem.getBoundingClientRect().width);
             mItem.style.setProperty("left",  l +  "px")
         } else if(mItem !== null) {
             mItem.style.setProperty("left",  "0px")
