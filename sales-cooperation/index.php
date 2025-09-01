@@ -1,74 +1,24 @@
 <!DOCTYPE html>
 <html lang="fa-IR">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+    <title>شرکای پرشین میزبان - بازاریابی و همکاری در فروش هاستینگ</title>
+    <meta name="description" content="پرشین میزبان به عنوان یکی از بزرگترین ارائه دهنده خدمات میزبانی وب و ثبت دامنه در ایران، با بیش از 16 سال سابقه فعالیت در زمینه هاستینگ" />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no, shrink-to-fit=no">
     <meta name="theme-color" content="#32228f">
-    <meta name="color-scheme" content="light dark">
-    <meta name="description" content="هاستینگ پرشین میزبان ارائه‌دهنده هاست لینوکس، هاست وردپرس و هاست دانلود، سرور مجازی و اختصاصی، ثبت دامنه و SSL رایگان با پشتیبانی ۲۴ ساعته و ضمانت بازگشت وجه.">
-    <meta name="keywords" content="خرید هاست, هاست وردپرس, سرور مجازی, ثبت دامنه, پرشین میزبان">
+    <meta charset="utf-8">
 
-    <title>پرشین میزبان | هاست لینوکس، وردپرس، سرور مجازی و ثبت دامنه</title>
-
-    <link rel="canonical" href="https://www.persianmizban.com/">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/ico">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="preload" href="dist/style.min.css" as="style" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="dist/style.min.css"></noscript>
-    <link rel="preload" href="fnt/woff2/IRANSansWeb(FaNum).woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fnt/woff2/IRANSansWeb(FaNum)_Bold.woff2" as="font" type="font/woff2" crossorigin>
-
-    <!-- Open Graph meta tags -->
-    <meta property="og:title" content="خرید هاست، خرید سرور مجازی و ثبت دامنه | پرشین میزبان">
-    <meta property="og:description" content="خرید هاست و خدمات هاستینگ از پرشین میزبان که پرسرعت ترین هاستینگ کشور است، و با زیرساختی امن و مستحکم، فروش اینترنتی را قدرتمند پیگیری">
-    <meta property="og:image" content="https://www.persianmizban.com/img/logo.png">
-    <meta property="og:url" content="https://www.persianmizban.com/">
-    <meta property="og:type" content="website">
-    
-    <!-- Twitter Card meta tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="خرید هاست، خرید سرور مجازی و ثبت دامنه | پرشین میزبان">
-    <meta name="twitter:description" content="خرید هاست و خدمات هاستینگ از پرشین میزبان که پرسرعت ترین هاستینگ کشور است، و با زیرساختی امن و مستحکم، فروش اینترنتی را قدرتمند پیگیری">
-    <meta name="twitter:image" content="https://www.persianmizban.com/img/logo.png">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Organization",
-          "url": "https://www.persianmizban.com/",
-          "name": "پرشین میزبان",
-          "logo": "https://www.persianmizban.com/img/logo.png",
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+982191011796",
-            "contactType": "customer service",
-            "areaServed": "IR"
-          }
-        },
-        {
-          "@type": "Product",
-          "name": "سرویس های هاستینگ و سرور مجازی",
-          "image": "https://www.persianmizban.com/img/logo.png",
-          "description": "ارائه دهنده هاست لینوکس، وردپرس، سرور مجازی و ثبت دامنه",
-          "brand": {
-            "@type": "Brand",
-            "name": "پرشین میزبان"
-          }
-        }
-      ]
-    }
-    </script>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 <div id="app" >
 
-<header id="top-nav">
+<section id="top-nav" >
     <div class="container" >
         <div class="d-flex" >
-            <button class="mob-menu" aria-label="باز کردن منو" aria-controls="nav-mid" aria-expanded="false"></button>
+            <div class="mob-menu" ></div>
             <div class="logo" onclick="location.href='https://www.persianmizban.com/';" ></div>
-            <nav id="nav-mid" class="nav-mid">
+            <div class="nav-mid">
                 <ul>
                     <li>
                         <a href="https://www.persianmizban.com/">پرشین میزبان</a>
@@ -100,7 +50,7 @@
                     </div>
                     </a>
                 </div>
-            </nav>
+            </div>
            <div class="phone" >
                 <div class="number">
                      <a href="tel:02191011796"><bdi>۰۲۱ - <span>۹ ۱۰ ۱۱ </span>۷۹۶</bdi></a>
@@ -108,50 +58,49 @@
                 </div>
                 <div class="icon" ></div>
             </div>
-            <button id="theme-toggle" class="theme-toggle" aria-label="تغییر تم" title="تغییر تم" aria-pressed="false">🌙</button>
         </div>
     </div>
     <div class="cover" ></div>
-</header>
+</section>
 
-<nav id="bottom-nav" class="active" role="menubar">
+<section id="bottom-nav" class="active" >
     <div class="container" >
         <div class="d-flex">
 
-            <div class="item" menu-item="1" role="menuitem" tabindex="0" aria-haspopup="true" aria-expanded="false">
+            <div class="item" menu-item="1" >
                 <div class="icon icon-host" ></div>
                 <a href="https://www.persianmizban.com/web-hosting/"><span>هاست</span></a>
                 <div class="icon-more" ></div>
             </div>
 
-            <div class="item" menu-item="2" role="menuitem" tabindex="0" aria-haspopup="true" aria-expanded="false">
+            <div class="item" menu-item="2" >
                 <div class="icon icon-domain" ></div>
                 <a href="https://www.persianmizban.com/domain/"><span>ثبت دامنه</span></a>
                 <div class="icon-more" ></div>
             </div>
 
-            <div class="item" menu-item="3" role="menuitem" tabindex="0" aria-haspopup="true" aria-expanded="false">
+            <div class="item" menu-item="3" >
                 <div class="icon icon-vps" ></div>
                 <div class="blink">NEW</div>
                 <a href="https://www.persianmizban.com/vps/"><span>سرور مجازی</span></a>
                 <div class="icon-more" ></div>
             </div>
 
-            <div class="item" menu-item="4" role="menuitem" tabindex="0" aria-haspopup="true" aria-expanded="false">
+            <div class="item" menu-item="4">
                 <div class="icon icon-server" ></div>
                 <a href="https://www.persianmizban.com/vds/"><span>سرور اختصاصی</span></a>
                 <div class="icon-more" ></div>
             </div>
 
-            <div class="item !ml-0" lg="mr-auto" i-lg="pl-6" role="menuitem" tabindex="0">
+            <div class="item !ml-0" lg="mr-auto" i-lg="pl-6" >
                 <div class="icon icon-edu" ></div>
                 <div class="blink blink2">BLOG</div>
                 <a href="https://www.persianmizban.com/blog/"><span>مرکز آموزش</span></a>
             </div>
         </div>
     </div>
-</nav>
-<nav id="mega-menu" class="active" role="menu">
+</section>
+<section id="mega-menu" class="active">
     <ul class="menu-item-1">
         <li>
             <a href="https://www.persianmizban.com/web-hosting/iran">هاست ایران</a>
@@ -160,7 +109,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/hostiran.png" alt="هاست ایران" loading="lazy" />
+                                <img src="profile/hostiran.png" alt="هاست ایران" />
                             </div>
                             <div>
                                 <div class="fa" >هاست سی پنل ایران</div>
@@ -196,7 +145,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/brandenburg-gate.png" alt="هاست آلمان" loading="lazy" />
+                                <img src="profile/brandenburg-gate.png" alt="هاست آلمان" />
                             </div>
                             <div>
                                 <div class="fa" >هاست سی پنل آلمان</div>
@@ -231,7 +180,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/hostingwordpress.png" alt="هاست وردپرس" loading="lazy" />
+                                <img src="profile/hostingwordpress.png" alt="هاست وردپرس" />
                             </div>
                             <div>
                                 <div class="fa" >هاست مخصوص وردپرس</div>
@@ -266,7 +215,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/hostdliran.png" alt="هاست دانلود ایران" loading="lazy" />
+                                <img src="profile/hostdliran.png" alt="هاست دانلود ایران" />
                             </div>
                             <div>
                                 <div class="fa" >هاست دانلود ایران</div>
@@ -301,7 +250,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/hostdlgermany.png" alt="هاست دانلود آلمان" loading="lazy" />
+                                <img src="profile/hostdlgermany.png" alt="هاست دانلود آلمان" />
                             </div>
                             <div>
                                 <div class="fa" >هاست دانلود آلمان</div>
@@ -339,7 +288,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/domainmelli.png" alt="ثبت دامنه" loading="lazy" />
+                                <img src="profile/domainmelli.png" alt="ثبت دامنه" />
                             </div>
                             <div>
                                 <div class="fa" >ثبت دامنه با مالکیت کامل</div>
@@ -375,7 +324,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/tld.png" alt="انتقال دامنه" loading="lazy" />
+                                <img src="profile/tld.png" alt="انتقال دامنه" />
                             </div>
                             <div>
                                 <div class="fa" >انتقال دامنه مطمئن</div>
@@ -410,7 +359,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/domaintransfer.png" alt="تمدید دامنه" loading="lazy" />
+                                <img src="profile/domaintransfer.png" alt="تمدید دامنه" />
                             </div>
                             <div>
                                 <div class="fa" >تمدید دامنه ارزان</div>
@@ -448,7 +397,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/iran.png" alt="سرور مجازی ایران" loading="lazy" />
+                                <img src="profile/iran.png" alt="سرور مجازی ایران" />
                             </div>
                             <div>
                                 <div class="fa" >سرور مجازی ایران</div>
@@ -484,7 +433,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/germany.png" alt="سرور مجازی آلمان" loading="lazy" />
+                                <img src="profile/germany.png" alt="سرور مجازی آلمان" />
                             </div>
                             <div>
                                 <div class="fa" >سرور مجازی آلمان</div>
@@ -520,7 +469,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/usa.png" alt="سرور مجازی آمریکا" loading="lazy" />
+                                <img src="profile/usa.png" alt="سرور مجازی آمریکا" />
                             </div>
                             <div>
                                 <div class="fa" >سرور مجازی آمریکا</div>
@@ -555,10 +504,10 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/finland.png" alt="سرور مجازی فنلاند" loading="lazy" />
+                                <img src="profile/finland.png" alt="سرور مجازی فنلاند" />
                             </div>
                             <div>
-                                <div class="fa" >سرور مجازی آلمان</div>
+                                <div class="fa" >سرور مجازی فنلاند</div>
                                 <div class="en" >FINLAND VPS</div>
                             </div>
                         </div>
@@ -593,7 +542,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/iran-vds.png" alt="سرور اختصاصی ایران" loading="lazy" />
+                                <img src="profile/iran-vds.png" alt="سرور اختصاصی ایران" />
                             </div>
                             <div>
                                 <div class="fa" >سرور اختصاصی ایران</div>
@@ -629,7 +578,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/france-vds.png" alt="سرور اختصاصی فرانسه" loading="lazy" />
+                                <img src="profile/france-vds.png" alt="سرور اختصاصی فرانسه" />
                             </div>
                             <div>
                                 <div class="fa" >سرور اختصاصی فرانسه</div>
@@ -665,7 +614,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/netherlands-vds.png" alt="سرور اختصاصی هلند" loading="lazy" />
+                                <img src="profile/netherlands-vds.png" alt="سرور اختصاصی هلند" />
                             </div>
                             <div>
                                 <div class="fa" >سرور اختصاصی هلند</div>
@@ -700,7 +649,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/germany-vds.png" alt="سرور اختصاصی آلمان" loading="lazy" />
+                                <img src="profile/germany-vds.png" alt="سرور اختصاصی آلمان" />
                             </div>
                             <div>
                                 <div class="fa" >سرور اختصاصی آلمان</div>
@@ -729,163 +678,266 @@
             </div>
         </li>
     </ul>
-</nav>
+</section>
 
-<main>
-<section id="header" class="home-header">
+<section id="breadcrumb">
     <div class="container" >
-        <div lg="grid cols-5 gap-none a-items-center gap-10" >
-            <div lg="col-2" class="py-6">
-                <div class="quote">
-                    میزبانی امن
+    <ul>
+        <li><a href="https://www.persianmizban.com/">پرشین میزبان</a></li>
+        <li><a href="https://www.persianmizban.com/sales-cooperation/">همکاری در فروش</a>
+    </ul>
+    </div>
+</section>
+
+<section id="affiliate-header">
+    <div class="container">
+        <div class="grid cols-1 gap-8 a-items-center" lg="cols-2">
+            <div i-lg="d-none" lg="pl-4">
+                <img class="w-full" src="img/img-affiliate.png" alt="بازاریابی در پرشین میزبان">
+            </div>
+            <div class="p-relative" i-lg="pt-6">
+                <div class="absolute">
+                    <div class="percent">25%</div>
+                    <div class="text">
+                        ماهانه
+                        <div class="text-orange -ml-4">۵/۰۰۰/۰۰۰ تومان</div>
+                    </div>
                 </div>
-                <div class="title" >در سرور های قدرتمند پرشین میزبان</div>
-                <div xxl="text-105">۱۶ سال تـجربه ارائه خدمات میـزبانی وب با کیفیـت تـراز اول جهـانـی</div>
+                <div class="text-180 text-primary text-w-medium">همکاری در فــروش</div>
+                <div class="text-180 mb-8">در پـــرشین میزبان</div>
+                <div class="text-lh-5 text-80  mb-8" >
+                    به ازای خرید هر سرویس، <span class="text-primary text-w-medium">۲۵٪</span> پورسانت بگیرید؛ فقط با اشتراک لینک ! از طریق این سیستم به راحتی با یک عضویت ساده و دعوت دوستانتان کسب درآمد کنید.
+                    <div class="mb-2"></div>
+                    جهت همکاری در فروش سرویس های هاستینگ از کاربران گرامی، دعوت به همکاری می‌نماید. سیستم همکاری در فروش پرشین میزبان پس از عضویت فعال سازی لینک بازاریابی قابل ارائه می‌باشد.
+                </div>
 
-                <div class="slider" >
-                    <div class="s-title" >پـیشنهاد شگفت انگیز</div>
-                    <div class="swiper offer-swiper-slider" >
-                        <div class="swiper-wrapper">
+                <a href="https://www.persianmizban.com/my/affiliates.php"><div class="button">
+                    شروع کنید
+                    <div class="icon-rocket"></div>
+                </div></a>
+            </div>
+        </div>
+    </div>
+</section>
 
-                            <div class="swiper-slide">
-                                <div class="box">
-                                    <div class="t1" >هاست وردپرس - جگوار سوم</div>
-                                    <div class="t2" >WP / JAGUAR THIRD</div>
-                                    <div class="more">
-                                        <div class="price" >۱۵۰,۰۰۰ <small>تومان / مـاهانه</small></div>
-                                        <a href="/web-hosting/wordpress"><div class="button" ></div></a>
-                                    </div>
-                                </div>
+<section id="affiliate-details">
+    <div class="bg-1"></div>
+    <div class="bg-2"></div>
+    <div class="container p-relative">
+        <div class="bg-3"></div>
+        <div class="social-affiliate" >
+            <div class="circle">
+                <div class="percent">
+                    <span>25%</span>
+                </div>
+                <div class="target">
+                    <div class="arrow"></div>
+                </div>
+            </div>
+            <div class="text-150 mb-2">
+                سیستم <span class="text-orange text-w-bold">همکاری در فروش</span> پرشین میزبان
+            </div>
+            <div class="text-80">با اشتـــراک گذاری پرشین میزبان در شبـــکه های اجتماعی و سایت خود در 25 درصد سود ما شریک شوید.</div>
+        </div>
+
+        <div class="grid cols-1 a-items-center gap-8" md="cols-2" dir="ltr">
+            <div>
+                <img src="img/img-affiliate-steps.png" class="w-full mb-12" alt="بازاریابی">
+            </div>
+            <div dir="rtl">
+                <div class="step">
+                    <div class="text-110 text-w-medium mb-2">ثبت نام کنید</div>
+                    <div class="text-80">
+                        با تکمیل یک فرم ساده، شامل نام و نام خانوادگی، ایمیل و موبایل، عضویت شما در کمتر از چند ثانیه ایجاد و شما وارد پنل اختصاصی خود می‌شوید.
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="text-110 text-w-medium mb-2">به اشتراک بگذارید</div>
+                    <div class="text-80">
+                        به محض عضویت، شما میتوانید سیستم افیلییت خود را فعال و لینک اختصاصی خود را دریافت کنید. با به اشتراک گذاشتن آن لینک‌ از طریق شبکه‌های اجتماعی، وبسایت و سایر کانال‌های ارتباطی، همکاری شما با پرشین میزبان آغاز می‌شود.
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="text-110 text-w-medium mb-2">پورسانت بگیرید</div>
+                    <div class="text-80">
+                        شما از طریق پنل کاربری‌تان در پرشین میزبان ، میتوانید در لحظه نتیجه فعالیت‌های خود را مشاهده کنید. با هر خریدی که از طریق لینک اختصاصی شما انجام می‌شود، مبلغ دقیق پورسانت‌های شما محاسبه و با یک کلیک نقداً به کارت شما واریز می‌شود.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="affiliate-info">
+    <div class="container">
+        <div class="grid cols-1 a-items-center" lg="cols-2">
+            <div i-lg="mb-4">
+                <div class="text-110 mb-2">
+                    سیستم هوشمند
+                    <span class="text-primary text-w-bold">محاسبه و پـرداخت</span>
+                </div>
+                <div class="text-75">
+                    نیازی به پرداخت پس از ارجاع بازدید کنندگان نیست. تا 60 روز پس از ارجاع سهم شما خودکار محاسبه می شود.
+                </div>
+            </div>
+            <div>
+                <div class="grid cols-3" i-sm="gap-2">
+                    <div class="box">
+                        <div>
+                            <div class="title" >
+                                10+
                             </div>
-
-                            <div class="swiper-slide">
-                                <div class="box">
-                                    <div class="t1" >هاست ایران - کوروش چهارم</div>
-                                    <div class="t2" >LINUX / CYRUS FOUR</div>
-                                    <div class="more">
-                                        <div class="price" >۹۹,۰۰۰ <small>تومان / سـه ماهه</small></div>
-                                        <a href="/web-hosting/iran"><div class="button" ></div></a>
-                                    </div>
-                                </div>
+                            <div class="text" >
+                                میلیون اشتراک بنر
                             </div>
-
-                            <div class="swiper-slide">
-                                <div class="box">
-                                    <div class="t1" >هاست آلمان - آدولف شـشم</div>
-                                    <div class="t2" >LINUX / ADOLF SIXTH</div>
-                                    <div class="more">
-                                        <div class="price" >۴۶۹,۰۰۰ <small>تومان / سـالانه</small></div>
-                                        <a href="/web-hosting/germany"><div class="button" ></div></a>
-                                    </div>
-                                </div>
-                            </div>
-
-
                         </div>
                     </div>
-                    <div class="navigation"></div>
+                    <div class="box">
+                        <div>
+                            <div class="title !text-orange" >
+                                890+
+                            </div>
+                            <div class="text" >
+                                میلیون درآمد تاکنون
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div>
+                            <div class="title" >
+                                4.2K+
+                            </div>
+                            <div class="text" >
+                                کسب و کارهای عضو
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-<div lg="col-3" i-lg="d-none" class="hero-image-container">
-    <picture>
-        <source srcset="img/datacenter-persianmizban.avif" type="image/avif">
-        <source srcset="img/datacenter-persianmizban.webp" type="image/webp">
-        <img class="w-full"
-             src="img/datacenter-persianmizban.png"
-             alt="هاستینگ پرشین میزبان"
-             fetchpriority="high"
-             decoding="async">
-    </picture>
-</div>        </div>
+        </div>
     </div>
 </section>
 
-<section id="domain-reg" class="home-domain-reg">
-    <div class="bg-domain" ></div>
-    <div class="bg-thinking-man" ></div>
+<section id="affiliate-calculator">
+    <div class="bg-1"></div>
+    <div class="bg-2"></div>
+    <div class="container" xl="px-16">
+        <div class="grid cols-1 a-items-center" lg="cols-13">
+            <div lg="col-10">
+                <div class="text-130 text-primary text-w-bold mb-1">ماشین محاسبه درآمد مـاهانه</div>
+                <div class="text-112 mb-8">با همکاری در فروش پرشین میزبان</div>
+
+                <div class="text-90">
+                    اگر در ماه فقط
+
+                    <div class="d-inline-block">
+                        <div class="selector">
+                            <div class="button inc">+</div>
+                            <div class="number clients" data-num="10" >۱۰</div>
+                            <div class="button dec">-</div>
+                        </div>
+                    </div>
+
+                    نفر از طریق شما سرویس
+
+                    <div class="d-inline-block">
+                        <div class="selector">
+                            <div class="button inc">+</div>
+                            <div class="number services" data-num="2" >۲</div>
+                            <div class="button dec">-</div>
+                        </div>
+                    </div>
+
+                    میلیون تومانی پرشین میزبان  را خریداری کنند
+                    <br/>
+                    <br/>
+                    درآمد ماهیانه شما
+                    <span class="salary" >
+                        ۵ میلیون تومان
+                    </span>
+                    خواهد شد.
+                </div>
+            </div>
+            <div lg="col-3" i-lg="mt-4">
+                <div class="calculator">
+                    <div class="monitor" dir="ltr">
+                        ۵,۰۰۰,۰۰۰
+                    </div>
+                    <div class="grid cols-3 rows-2 gap-2">
+                        <div class="c-but mosavi r-span-2">=</div>
+                        <div class="c-but menha">-</div>
+                        <div class="c-but bealave">+</div>
+                        <div class="c-but taghsim">÷</div>
+                        <div class="c-but zarb">×</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="faq">
     <div class="container" >
-        <div sm="grid cols-4" class="max-w-150 mx-auto p-relative z-1 a-items-center" >
-            <div i-sm="mb-4" class="text-lh-5">
-                کسب و کار آنلاینتان
-                را با
-                <span class="text-orange text-110 text-w-semibold">ثبت یک دامنه</span>
-                شــــروع کنـــید
-            </div>
-            <div sm="col-3 pr-7"  >
-                <form class="mb-4" action="https://www.persianmizban.com/my/cart.php?a=add&domain=register" method="post">
-                    <input type="text" name="query" size="20" placeholder="نام دامنه خود را همراه با پسوند جستجو کنید">
-                    <button type="submit"></button>
-               </form>
-                <div class="offers">
-                    <div class="icon-sale" ></div>
-                    <small class="!mr-0"> تخفیف ها</small>
-                    IR <b>9.000</b>
-                    <small>/</small>
-                    .COM <b>274.000</b>
-                    <small>/</small>
-                    .SITE <b>49.000</b>
-                </div>
+        <div class="title" >
+            <div class="icon-faq"></div>
+            <div class="my-auto">
+                <div class="text-110 text-w-semibold" >سوالات متداول</div>
+                <div class="text-80" >با پشتیبانی 24 ساعته و همه روزه سرویس های میزبانی پرشین میزبان سوالی باقی نمی ماند، با خیال راحت به توسعه کسب و کارتان بپردازید.</div>
             </div>
         </div>
-    </div>
-</section>
 
-<section id="why-us">
-    <div class="container">
-        <div class="why-us-wrapper">
-            <!-- Image Column -->
-            <div class="why-us-image-col">
-                <picture>
-                    <source srcset="img/pm-why3.avif" type="image/avif">
-                    <source srcset="img/pm-why3.webp" type="image/webp">
-                    <img src="img/pm-why3.png" alt="هاستینگ" loading="lazy">
-                </picture>
+        <div class="qa" >
+            <div class="d-flex a-items-center" >
+                <div class="icon" ></div>
+                <div class="q" >در سیستم همکاری در فروش پرشین میزبان چند درصد برای تبلیغ کننده در نظر گرفته شده است؟</div>
             </div>
-            <!-- Content Column -->
-            <div class="why-us-content-col">
-                <h2 class="section-title">چرا پرشین میزبان؟</h2>
-                <p class="section-description">
-                    تمامی خدمات ارائه شده توسط پرشین میزبان به صورت حرفه ای و با حساسیت بسیار بالا پیکربندی میشوند. و همینطور حضور پرشین میزبان بیش از یک دهه در جمع برترین سرویس دهندگان میزبانی وب در ایران از افتخارات ما است. پرشین میزبان پارتنر رسمی دیتاسنتر و رجیسترار های معتبر دامین در ایران می باشد.<br>
-                    <b>ما با سیاست های امنیتی استاندارد و فایروال های سخت افزاری و به همراه کادری مجرب، سنگربان کسب کار آنلاین شما هستیم.</b>
-                </p>
-                <div class="why-us-features-grid">
-                    <div class="feature-card">
-                        <div class="icon icon-security"></div>
-                        <div class="feature-title">نهایت امنیت</div>
-                        <div class="feature-subtitle">SECURITY</div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="icon icon-uptime"></div>
-                        <div class="feature-title">آپتایم بالا</div>
-                        <div class="feature-subtitle">UPTIME 99.9%</div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="icon icon-speed"></div>
-                        <div class="feature-title">سرعت شگفت انگیز</div>
-                        <div class="feature-subtitle">AMAZING SPEED</div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="icon icon-support"></div>
-                        <div class="feature-title">پشتیبانی 24 ساعته</div>
-                        <div class="feature-subtitle">24/7 SUPPORT</div>
-                    </div>
-                </div>
-            </div>
+            <div class="a" >در سیستم بازاریابی 25 درصد از پرداخت مشتریان به صورت لحظه ای به بازاریاب تعلق خواهد گرفت.</div>
         </div>
-    </div>
-</section>
-<section id="host-links" class="!pb-8">
-    <div class="container-fluid" >
-        <div class="title" >سرویـس های پرشین میزبان</div>
-        <a href="https://www.persianmizban.com/web-hosting/"><div class="button" >خرید هاست</div></a>
-        <a href="https://www.persianmizban.com/web-hosting/iran"><div class="button" >هاست ایران</div></a>
-        <a href="https://www.persianmizban.com/web-hosting/germany"><div class="button" >هاست آلمان</div></a>
-        <a href="https://www.persianmizban.com/web-hosting/wordpress"><div class="button active" >هاست وردپرس</div></a>
-        <a href="https://www.persianmizban.com/vps/iran"><div class="button" >سرور مجازی ایران</div></a>
-        <a href="https://www.persianmizban.com/vps/germany"><div class="button" >سرور مجازی آلمان</div></a>
-        <a href="https://www.persianmizban.com/domain/"><div class="button" >ثبت دامنه</div></a>
-        <a href="https://www.persianmizban.com/web-hosting/iran-download-host"><div class="button" >هاست دانلود ایران</div></a>
-        <a href="https://www.persianmizban.com/web-hosting/germany-download-host"><div class="button" >هاست دانلود آلمان</div></a>
+
+        <div class="qa" >
+            <div class="d-flex a-items-center" >
+                <div class="icon" ></div>
+                <div class="q" >آیا 25 درصد از سود فروش سهم تبلیغ کننده خواهد شد یا 25 درصد از کل جمع پرداختی سهم تبلیغ کننده خواهد بود؟</div>
+            </div>
+            <div class="a" >سهم بازاریاب 25 درصد از کل مبلغ پرداختی کاربر خواهد بود.</div>
+        </div>
+
+        <div class="qa" >
+            <div class="d-flex a-items-center" >
+                <div class="icon" ></div>
+                <div class="q" >آمار تعداد کاربر و درآمد از چه طریق قابل دسترس خواهد بود؟</div>
+            </div>
+            <div class="a" >از طریق بخش کسب درآمد پنل کاربری در پرتال پرشین میزبان به صورت لایو قابل نمایش خواهد بود.</div>
+        </div>
+                <div class="qa" >
+            <div class="d-flex a-items-center" >
+                <div class="icon" ></div>
+                <div class="q" >تسویه حساب در چه بازه زمانی انجام میشود؟</div>
+            </div>
+            <div class="a" >تسویه حساب مبلغ پورسانت طی 3 الی 7 روز برای بازاریاب واریز خواهد شد.</div>
+        </div>
+                <div class="qa" >
+            <div class="d-flex a-items-center" >
+                <div class="icon" ></div>
+                <div class="q" >آیا امکان تنظیم بنر پرشین میزبان با لینک بازاریابی وجود دارد؟</div>
+            </div>
+            <div class="a" >بله، برای دریافت بنر های پرشین میزبان لطفا تیکت ارسال بفرمایید.</div>
+        </div>
+        <div class="qa" >
+            <div class="d-flex a-items-center" >
+                <div class="icon" ></div>
+                <div class="q" >پرشین میزبان چه کمپین و آفر های حمایتی برای کسب و کار های تازه تاسیس در نظر گرفته است؟</div>
+            </div>
+            <div class="a" >پرشین میزبان به کسب و کار های نوپا 20 درصد تخفیف برای اولین خرید ارائه میکند، همین طور نیازی به پرداخت هزینه برای دریافت قالب یا افزونه ندارند و موارد فنی مرتبط با سایت یا اپلیکیشن هاشونو به صورت رایگان میتوانند به پشتیبان فنی پرشین میزبان بسپارند. امید داریم با حمایت فنی و مالی از کار آفرین ها قدمی در مسیر حمایت از اشتغال آفرینی برداشته باشیم.</div>
+        </div>
+                <div class="qa" >
+            <div class="d-flex a-items-center" >
+                <div class="icon" ></div>
+                <div class="q" >چرا پرشین میزبان؟</div>
+            </div>
+            <div class="a" >گارانتی عودت وجه 14 روزه<br>ارائه پهنای باند نامحدود در تمام سرویس ها<br>انتقال رایگان اطلاعات سایت مشتری از شرکت های دیگر به پرشین میزبان<br>بهره گیری از فایروال های سخت افزاری قدرتمند به جهت افزایش امنیت در کل شبکه سرویس ها<br>بکاپ گیری منظم روزانه و نگهناری آرشیو بکاپ ها به مدت 7 روز<br>مانیتورینگ 24 ساعته حتی در روز های تعطیل سرور ها به جهت جلوگیری از بروز مشکلات احتمالی<br>استفاده از سرور های بروز و قدرتمند سخت افزاری با مالکیت 100 درصد انحصاری پرشین میزبان</div>
+        </div>
     </div>
 </section>
 
@@ -893,7 +945,7 @@
     <div class="container" >
         <div class="grid cols-2 a-items-center" sm="cols-4" lg="cols-6">
             <div class="col-2" sm="col-4" lg="col-2" >
-                <img class="w-full mx-auto d-block" i-lg="max-w-(414px)" src="img/img-inside.png" alt="PersianMizban" loading="lazy">
+                <img class="w-full mx-auto d-block" i-lg="max-w-(414px)" src="img/img-inside.png" >
             </div>
             <div>
                 <div class="box box2" >
@@ -931,224 +983,6 @@
     </div>
 </section>
 
-<section id="plans">
-    <div class="container">
-        <div class="text-150 mb-2 text-primary text-w-medium" >به دنبال میزبانی حرفه ای و مطمئن هستید؟</div>
-        <div class="text-90 mb-8">با سرویس های میزبانی پرشین میزبان با خیال راحت به توسعه کسب و کار آنلاینتان بپردازید. </div>
-
-        <ul class="plans-pricing-list" >
-            <li for="1" class="active">
-                <div class="icon" ></div>
-                ماهـانه
-            </li>
-            <li for="2">
-                <div class="icon" ></div>
-                سـه ماهه
-            </li>
-            <li for="3">
-                <div class="icon" ></div>
-                شـش ماهه
-            </li>
-            <li for="4">
-                <div class="icon" ></div>
-                سـالانه
-            </li>
-        </ul>
-
-        <script>
-            window.homePlans = [
-                [
-                    "ماهـانه",
-                    "۱۸,۰۰۰",
-                    "۲۹,۰۰۰",
-                    "۴۹,۰۰۰",
-                    "۱۰۰,۰۰۰"
-                ],
-                [
-                    "سـه ماهه",
-                    "۹,۰۰۰",
-                    "۹,۰۰۰",
-                    "۹,۰۰۰",
-                    "۹,۰۰۰"
-                ],
-                [
-                    "شـش ماهه",
-                    "۷۵,۰۰۰",
-                    "۲۲۵,۰۰۰",
-                    "۳۶۰,۰۰۰",
-                    "۶۷۵,۰۰۰"
-                ],
-                [
-                    "سـالانه",
-                    "۸۹۰,۰۰۰",
-                    "۲,۴۹۰,۰۰۰",
-                    "۴,۹۵۰,۰۰۰",
-                    "۸,۹۰۰,۰۰۰"
-                ],
-            ]
-        </script>
-
-        <div class="ov">
-            <div class="grid cols-4 home-plans" >
-                <div class="plan">
-                    <div class="plan-in" >
-                        <div class="icon icon-1" ></div>
-                        <div class="text-112 text-w-medium mb-1">خرید هاست</div>
-                        <div class="text-80 opacity-50 text-primary text-w-light">BUY HOST</div>
-
-                        <ul>
-                            <li>کنترل پنل قدرتمند CPANEL</li>
-                            <li>سرعت، پایداری و 100 درصدی</li>
-                            <li>نصب رایگان سیستم مدیریت محتوا</li>
-                            <li>ریستور و دانلود بکاپ توسط کاربر</li>
-                            <li>ارائه رایگان قالب و افزونه های محبوب</li>
-                        </ul>
-
-                        <div class="start">شـروع از </div>
-                        <div class="text-primary text-w-medium price" >
-                            <bdi></bdi><!-- required-->
-                            تومان
-                            <small class="text-80 text-w-normal text-black">/</small>
-                            <small class="text-80 text-w-normal text-black p"></small><!-- required-->
-                        </div>
-
-                        <div class="button">
-                            <div class="d-flex">
-                                <div class="icon-dots">
-                                    <div></div>
-                                </div>
-                                <a href="https://www.persianmizban.com/web-hosting/"><div>
-                                    لیست محصولات
-                                </div></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="plan">
-                    <div class="plan-in" >
-                        <div class="icon icon-2" ></div>
-                        <div class="text-112 text-w-medium mb-1">ثبت دامنه</div>
-                        <div class="text-80 opacity-50 text-primary text-w-light">Domain Registration</div>
-
-                        <ul>
-                            <li>ثبت دامین به نام متقاضی</li>
-                            <li>دسترسی قفل کردن دامین</li>
-                            <li>ثبت 24 ساعته در تمامی روزهای سال</li>
-                            <li>ارائه کامل ترین کنترل پنل تحت وب</li>
-                            <li>ارزان ترین تعرفه ثبت دامنه در کشور</li>
-                        </ul>
-
-                        <div class="start">شـروع از </div>
-                        <div class="text-primary text-w-medium price" >
-                            <bdi></bdi><!-- required-->
-                            تومان
-                            <small class="text-80 text-w-normal text-black">/</small>
-                            <small class="text-80 text-w-normal text-black p"></small><!-- required-->
-                        </div>
-
-                        <div class="button">
-                            <div class="d-flex">
-                                <div class="icon-dots">
-                                    <div></div>
-                                </div>
-                                <a href="https://www.persianmizban.com/domain/"><div>
-                                    لیست محصولات
-                                </div></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="plan">
-                    <div class="plan-in" >
-                        <div class="icon icon-3" ></div>
-                        <div class="text-112 text-w-medium mb-1">سرور مجازی</div>
-                        <div class="text-80 opacity-50 text-primary text-w-light">VIRTUAL SERVER</div>
-
-                        <ul>
-                            <li>محافظت چند لایه از شبکه</li>
-                            <li>منابع سخت افزاری اختصاصی</li>
-                            <li>تحویل و ارتقاع به صورت کاملا آنی</li>
-                            <li>امکان نصب نرم افزارهای خاص</li>
-                            <li>پشتیبانی نرم افزاری و سخت افزاری</li>
-                        </ul>
-
-                        <div class="start">شـروع از </div>
-                        <div class="text-primary text-w-medium price" >
-                            <bdi></bdi><!-- required-->
-                            تومان
-                            <small class="text-80 text-w-normal text-black">/</small>
-                            <small class="text-80 text-w-normal text-black p"></small><!-- required-->
-                        </div>
-
-                        <div class="button">
-                            <div class="d-flex">
-                                <div class="icon-dots">
-                                    <div></div>
-                                </div>
-                                <a href="https://www.persianmizban.com/vps/"><div>
-                                    لیست محصولات
-                                </div></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="plan">
-                    <div class="plan-in" >
-                        <div class="icon icon-4" ></div>
-                        <div class="text-112 text-w-medium mb-1">سرور اختصاصی</div>
-                        <div class="text-80 opacity-50 text-primary text-w-light">DEDICATED SERVER</div>
-
-                        <ul>
-                            <li>شبکه اختصاصی به همراه فایروال</li>
-                            <li>منابع سخت افزاری قدرتمند و بروز </li>
-                            <li>ارائه پورت‌ با سرعت 10G، 1G</li>
-                            <li>ارائه IPv4 و IPv6</li>
-                            <li>پشتیبانی نرم افزاری و سخت افزاری</li>
-                        </ul>
-
-                        <div class="start">شـروع از </div>
-                        <div class="text-primary text-w-medium price" >
-                            <bdi></bdi><!-- required-->
-                            تومان
-                            <small class="text-80 text-w-normal text-black">/</small>
-                            <small class="text-80 text-w-normal text-black p"></small><!-- required-->
-                        </div>
-
-                        <div class="button">
-                            <div class="d-flex">
-                                <div class="icon-dots">
-                                    <div></div>
-                                </div>
-                                <a href="https://www.persianmizban.com/vds/"><div>
-                                    لیست محصولات
-                                </div></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<section id="delivery">
-    <div class="container" >
-        <div class="delivery-wrapper" >
-            <div>
-                <img src="img/img-pishi.svg" alt="هاست" class="d-none" md="d-block mr-auto" loading="lazy">
-            </div>
-            <div>
-                <div class="text-150 text-primary text-w-medium mb-2" lg="text-190" > سفارش و تحویل در یک دقیقه</div>
-                <div class="text-90 mb-8">با توجه به نیاز هایتان سرویس مورد نیاز پیشنهادی خود را مشاهده کنید</div>
-                <div class="button">
-                    <a href="https://www.persianmizban.com/my/store/cart.php"><div class="in">شروع کنید</div></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
 <section id="client-comments">
     <div class="container" >
         <div class="p-relative" >
@@ -1161,7 +995,7 @@
                     </div>
                 </div>
                 <div class="button">
-                    <a href="contact-us/#contact-comments"><div>ارسال نظر</div></a>
+                    <a href="../contact-us/#contact-comments"><div>ارسال نظر</div></a>
                 </div>
             </div>
 
@@ -1172,7 +1006,7 @@
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                      <img src="profile/digimoviz.png" alt="دیجی مویز" loading="lazy">
+                                    <img src="profile/digimoviz.png" alt="دیجی مویز" >
                                     <div class="text-primary text-w-semibold" >سامان رمضانی</div>
                                     <div class="text-80 mr-auto" >دیجی مویز</div>
                                 </div>
@@ -1183,7 +1017,7 @@
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                      <img src="profile/myfilm.png" alt="مای فیلم" loading="lazy">
+                                    <img src="profile/myfilm.png" alt="مای فیلم" >
                                     <div class="text-primary text-w-semibold" >علیرضا کریمی</div>
                                     <div class="text-80 mr-auto" >مای فیلم</div>
                                 </div>
@@ -1200,7 +1034,7 @@
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                      <img src="profile/opencart.png" alt="اپن کارت" loading="lazy">
+                                    <img src="profile/opencart.png" alt="اپن کارت" >
                                     <div class="text-primary text-w-semibold" >صمد دانش خواه</div>
                                     <div class="text-80 mr-auto" >اپن کارت فارسی</div>
                                 </div>
@@ -1211,7 +1045,7 @@
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                      <img src="profile/asanapps.png" alt="آسان اپس" loading="lazy">
+                                    <img src="profile/asanapps.png" alt="آسان اپس" >
                                     <div class="text-primary text-w-semibold" >سید حجت حسینی</div>
                                     <div class="text-80 mr-auto" >آسان اپس</div>
                                 </div>
@@ -1228,7 +1062,7 @@
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                      <img src="profile/bahabin.png" alt="بهابین" loading="lazy">
+                                    <img src="profile/bahabin.png" alt="بهابین" >
                                     <div class="text-primary text-w-semibold" >مهدی وادونی</div>
                                     <div class="text-80 mr-auto" >بهابین</div>
                                 </div>
@@ -1239,7 +1073,7 @@
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                      <img src="profile/torob.png" alt="ترب" loading="lazy">
+                                    <img src="profile/torob.png" alt="ترب" >
                                     <div class="text-primary text-w-semibold" >علی بابایی چشمه احمد رضایی</div>
                                     <div class="text-80 mr-auto" >ترب</div>
                                 </div>
@@ -1256,7 +1090,7 @@
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                      <img src="profile/damdaran.png" alt="دامداران" loading="lazy">
+                                    <img src="profile/damdaran.png" alt="دامداران" >
                                     <div class="text-primary text-w-semibold" >نور الدین نور بخش جعفری دهکردی</div>
                                     <div class="text-80 mr-auto" >دامداران</div>
                                 </div>
@@ -1267,7 +1101,7 @@
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                      <img src="profile/vahabonline.png" alt="وهاب آنلاین" loading="lazy">
+                                    <img src="profile/vahabonline.png" alt="وهاب آنلاین" >
                                     <div class="text-primary text-w-semibold" >وهاب سید چورته</div>
                                     <div class="text-80 mr-auto" >وهاب آنلاین</div>
                                 </div>
@@ -1292,114 +1126,81 @@
     </div>
 </section>
 
-<section id="blog">
+<section id="contact-us" class="!mt-8">
     <div class="container">
-        <div class="d-flex a-items-center mb-8">
-            <div class="button ml-auto">
-                <a href="https://www.persianmizban.com/blog/"><div class="in">مشاهده همه</div></a>
+        <div class="grid cols-1" md="cols-6" lg="cols-10">
+            <div md="col-3" >
+                <div class="contact-1">
+                    <div class="image">
+                        <img src="img/img-employee-number.png" >
+                    </div>
+                    <div class="pt-2 text-190 text-w-black" >
+                        <span class="text-White">واحد پشتیبانی</span>
+                    </div>
+                    <div class="pt-2 text-120 text-w-black" >
+                        <span class="text-White">(داخلی ۲)</span>
+                    </div>
+
+                    <div class="pt-2 text-190 text-w-black" >
+
+                        <a href="tel:02191011796"><bdi>۰۲۱-۹ ۱۰ ۱۱ ۷۹۶</bdi></a>
+                    </div>
+                    <div class="text-center text-80">
+                        تهران، مرزداران، خیابان ابوالفضل، پلاک ۲۱۳
+                    </div>
+                    <div class="grid cols-2 text-center mt-4 max-w-50 mx-auto text-80">
+                        <a href="https://tlgrm.in/Persian_Mizban" target="_blank">
+                            Telegram
+                            <div class="icon-telegram"></div>
+                        </a>
+                        <a href="https://www.instagram.com/persianmizban_com/" target="_blank">
+                            Instagram
+                            <div class="icon-instagram"></div>
+                        </a>
+                    </div>
+                    <div class="text-w-black text-88 pt-4">
+                        SUPPORT@PERSIANMIZBAN.COM
+                    </div>
+                </div>
             </div>
-            <div class="title">آخرین مقاله ها</div>
-            <div class="min-w-28 mr-auto" >
-                <div class="navigation"></div>
+            <div md="col-3" i-md="mt-12">
+                <div class="contact-1 contact-2">
+                    <div class="image">
+                        <img src="../img/img-employee2.png" >
+                    </div>
+                    <div class="pt-2 text-190 text-w-black" >
+                        <span class="text-black">واحد فروش</span>
+                    <div class="pt-2 text-120 text-w-black" >
+                        <span class="text-White">(داخلی ۱)</span>
+                    </div>
+                        <a href="tel:02191011796"><bdi>۰۲۱-۹ ۱۰ ۱۱ ۷۹۶</bdi></a>
+                    </div>
+                    <div class="text-center text-80 mb-4">
+                        ۲۴ ساعت هفته خدمت شما
+                    </div>
+                        <a href="https://www.persianmizban.com/my/submitticket.php" target="_blank">
+                            <span class="bg-white text-red py-2 px-6 rounded-full mb-2 text-w-bold">ارسال تیکت</span>
+                        </a>
+                    <div class="text-w-black text-88 pt-4">
+                        SALES@PERSIANMIZBAN.COM
+                    </div>
+                </div>
             </div>
-        </div>
-
-        <div class="swiper blog-swiper-slider">
-            <div class="swiper-wrapper">
-                
-                <div class="swiper-slide">
-                    <div class="post parent">
-                        <div class="img" >
-                            <a href="https://www.persianmizban.com/blog/domain-country/"><img src="https://www.persianmizban.com/blog/wp-content/uploads/2022/04/country-domains-1.jpg" alt="دامنه های کشوری" loading="lazy"></a>
-                        </div>
-                        <a href="https://www.persianmizban.com/blog/domain-country/"><div class="text-90 text-w-medium" parent-hover="text-primary" >معرفی انواع دامنه های کشوری که باید بدانید</div></a>
-                        <div class="text">
-                            هر کشوری دامنه های کشوری مختص خود را دارد که مخفف اسم آن کشور می باشد. پسوند کشور یک دامنه سطح بالای اینترنتی است که عموماً برای سایت های مستقر در یک کشور، دولت مستقل یا قلمرو وابسته که با کد کشور شناسایی می شود استفاده یا رزرو شده است.
-                        </div>
-                        <div class="d-flex text-80" >
-                            4 ساعت پیش
-                            <a href="https://www.persianmizban.com/blog/category/%d8%af%d8%a7%d9%85%d9%86%d9%87/"><div class="tag">دامنه</div></a>
-                            <a href="https://www.persianmizban.com/blog/category/%d8%a2%d9%85%d9%88%d8%b2%d8%b4/"><div class="tag">آموزش</div></a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="swiper-slide">
-                    <div class="post parent">
-                        <div class="img" >
-                              <a href="https://www.persianmizban.com/blog/international-domain/"><img src="https://www.persianmizban.com/blog/wp-content/uploads/2022/04/%D9%87%D8%A7%DB%8C-%D8%A8%DB%8C%D9%86-%D8%A7%D9%84%D9%85%D9%84%D9%84%DB%8C.png" alt="دامنه های کشوری" loading="lazy"></a>
-                        </div>
-                        <a href="https://www.persianmizban.com/blog/international-domain/"><div class="text-90 text-w-medium" parent-hover="text-primary" >معرفی انواع دامنه های بین المللی و کاربرد آن ها</div></a>
-                        <div class="text">
-                            نام دامنه رشته ای از متن است که به یک آدرس IP عددی گفته می شود و برای دسترسی به وب سایت از نرم افزار مشتری استفاده می شود. در زبان انگلیسی ساده، نام دامنه متنی است که کاربر در پنجره مرورگر تایپ می کند تا به یک وب سایت خاص برسد.
-                        </div>
-                        <div class="d-flex text-80" >
-                            12 ساعت پیش
-                            <a href="https://www.persianmizban.com/blog/category/%d8%af%d8%a7%d9%85%d9%86%d9%87/"><div class="tag">دامنه</div></a>
-                            <a href="https://www.persianmizban.com/blog/category/%d8%a2%d9%85%d9%88%d8%b2%d8%b4/"><div class="tag">آموزش</div></a>
-
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="swiper-slide">
-                    <div class="post parent">
-                        <div class="img" >
-                              <a href="https://www.persianmizban.com/blog/iranian-domain/"><img src="https://www.persianmizban.com/blog/wp-content/uploads/2022/04/%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%DB%8C.jpg" alt="هاست چیست" loading="lazy"></a>
-                        </div>
-                        <a href="https://www.persianmizban.com/blog/iranian-domain/"><div class="text-90 text-w-medium" parent-hover="text-primary" >دامنه ir چیست؟ و معرفی انواع دامنه های ایرانی</div></a>
-                        <div class="text">
-                            دامنه ها انواع مختلفی دارند و بر حسب شرایط و مناسب کار کاربران انتخاب می شوند. یکی از رایج ترین دامنه ها در ایران .ir است که مخفف iran است که از انواع مختلف دامنه ها برخودار می باشد که با رعایت قوانین جمهوری اسلامی ایران توسط شرکت ایرنیک ثبت می گردد.
-                        </div>
-                        <div class="d-flex text-80" >
-                            یک روز پیش
-                            <a href="https://www.persianmizban.com/blog/category/%d8%af%d8%a7%d9%85%d9%86%d9%87/"><div class="tag">دامنه</div></a>
-                            <a href="https://www.persianmizban.com/blog/category/%d8%a2%d9%85%d9%88%d8%b2%d8%b4/"><div class="tag">آموزش</div></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="post parent">
-                        <div class="img" >
-                              <a href="https://www.persianmizban.com/blog/store-host/"><img src="https://www.persianmizban.com/blog/wp-content/uploads/2022/04/%D9%87%D8%A7%D8%B3%D8%AA-%D9%81%D8%B1%D9%88%D8%B4%DA%AF%D8%A7%D9%87-%D8%A7%DB%8C%D9%86%D8%AA%D8%B1%D9%86%D8%AA%DB%8C.jpg" alt="هاست فروشگاهی" loading="lazy"></a>
-                        </div>
-                        <a href="https://www.persianmizban.com/blog/store-host/"><div class="text-90 text-w-medium" parent-hover="text-primary" >راهنمای خرید هاست فروشگاه اینترنتی</div></a>
-                        <div class="text">
-                            اینترنت امروزه تبدیل شده به اولین و بزرگ‌ترین مرجع برای خرید، بررسی و نقد محصولات و چک کردن قیمت‌ها. اگر شما هم به این بازار علاقه‌مندید و قصد خرید هاست فروشگاه اینترنتی و راه‌اندازی یک آنلاین شاپ را دارید. در ادامه با ما همراه باشید تا نکات کلیدی و مهمی را در مورد شروع آن بررسی کنیم.
-                        </div>
-                        <div class="d-flex text-80" >
-                            یک هفته پیش
-                            <a href="https://www.persianmizban.com/blog/category/%d8%a2%d9%85%d9%88%d8%b2%d8%b4/"><div class="tag">آموزش</div></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="post parent">
-                        <div class="img" >
-                              <a href="https://www.persianmizban.com/blog/wordpress-install/"><img src="https://www.persianmizban.com/blog/wp-content/uploads/2022/02/PersianMizban-Blog-Wordpress-Install-Zero-1.png" alt="نصب وردپرس" loading="lazy"></a>
-                        </div>
-                        <a href="https://www.persianmizban.com/blog/wordpress-install/"><div class="text-90 text-w-medium" parent-hover="text-primary" >آموزش نصب وردپرس روی هاست سی پنل – تصویری</div></a>
-                        <div class="text">
-                            وردپرس یک سیستم مدیریت محتوا قدرتمند است که بسیاری از سایت های مهم و پربازدید از جمله مایکروسافت نیوز، تد بلاگ و جی کوئری به کمک آن طراحی و ساخته شده اند. با WordPress می توانید سایت های مختلفی، از یک وب سایت شخصی گرفته تا یک فروشگاه آنلاین، راه اندازی کنید.
-                        </div>
-                        <div class="d-flex text-80" >
-                            یک هفته پیش
-                            <a href="https://www.persianmizban.com/blog/category/cpanel/"><div class="tag">سی پنل</div></a>
-                            <a href="https://www.persianmizban.com/blog/category/%d9%88%d8%b1%d8%af%d9%be%d8%b1%d8%b3/"><div class="tag">وردپرس</div></a>
-                        </div>
-                    </div>
-                </div>
+            <div md="col-3" lg="col-4">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.5160086577152!2d51.3339091152604!3d35.73811988018101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8dfdeb1d0f0a47%3A0x9547a543dbbba254!2z2b7Ysdi024zZhiDZhduM2LLYqNin2YY!5e0!3m2!1sen!2snl!4v1652726104627!5m2!1sen!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
 
+        <div class="text-center text-primary py-16 text-120">
+            <b>آدرس شرکت: </b>
+            تهران، مرزداران، خیابان ابوالفضل، پلاک ۲۱۳، طبقه ۲
+        </div>
     </div>
 </section>
 
-</main>
 
-<footer id="footer">
+
+<section id="footer">
     <div class="container" >
         <div class="support" >
             <div class="grid cols-1 a-items-center" md="cols-2" i-md="text-center mb-2" >
@@ -1464,7 +1265,7 @@
             </div>
             <div class="col-2">
                 <div class="-bg-primary-3 rounded-6 pa-4 text-center">
-                    <a href="#" onclick="window.open('https://www.persianmizban.com/namad.php','','resizable=1,scrollbars=1,width=750,height=500,top=400,left=400');return false;" title="نماد های اعتماد پرشین میزبان"><img src="https://www.persianmizban.com/img/namad.png" alt="نماد اعتماد" loading="lazy"><br><img src="https://www.persianmizban.com/img/samandehi.png" alt="نماد ساماندهی" loading="lazy"></a>
+                    <a href="#" onclick="window.open('https://www.persianmizban.com/namad.php','','resizable=1,scrollbars=1,width=750,height=500,top=400,left=400');return false;" title="نماد های اعتماد پرشین میزبان"><img src="https://www.persianmizban.com/img/namad.png" alt="نماد اعتماد"><br><img src="https://www.persianmizban.com/img/samandehi.png" alt="نماد ساماندهی"></a>
                 </div>
             </div>
         </div>
@@ -1481,19 +1282,13 @@
             </div>
         </div>
     </div>
-</footer>
+</section>
 
 
 
 </div>
-<script src="dist/scripts.min.js" defer></script>
-<script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/service-worker.js');
-  });
-}
-</script>
+<script src="js/swiper.js" ></script>
+<script src="js/scripts.js" ></script>
 <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="fad6f86d-8985-4c3d-808f-e97f7658ec10";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 </body>
 </html>

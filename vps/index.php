@@ -1,74 +1,24 @@
 <!DOCTYPE html>
 <html lang="fa-IR">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+    <title>خرید سرور، سرور مجازی، سرور مجازی ایران، آلمان، آمریکا و فنلاند| پرشین میزبان</title>
+    <meta name="description" content="خرید سرور - پرشین میزبان ارائه دهنده سرور مجازی، سرور مجازی ایران، سرور آلمان، آمریکا و فنلاند با ترافیک نامحدود و منابع اختصاصی و ارزان" />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no, shrink-to-fit=no">
     <meta name="theme-color" content="#32228f">
-    <meta name="color-scheme" content="light dark">
-    <meta name="description" content="هاستینگ پرشین میزبان ارائه‌دهنده هاست لینوکس، هاست وردپرس و هاست دانلود، سرور مجازی و اختصاصی، ثبت دامنه و SSL رایگان با پشتیبانی ۲۴ ساعته و ضمانت بازگشت وجه.">
-    <meta name="keywords" content="خرید هاست, هاست وردپرس, سرور مجازی, ثبت دامنه, پرشین میزبان">
-
-    <title>پرشین میزبان | هاست لینوکس، وردپرس، سرور مجازی و ثبت دامنه</title>
-
-    <link rel="canonical" href="https://www.persianmizban.com/">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/ico">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="preload" href="dist/style.min.css" as="style" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="dist/style.min.css"></noscript>
-    <link rel="preload" href="fnt/woff2/IRANSansWeb(FaNum).woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fnt/woff2/IRANSansWeb(FaNum)_Bold.woff2" as="font" type="font/woff2" crossorigin>
-
-    <!-- Open Graph meta tags -->
-    <meta property="og:title" content="خرید هاست، خرید سرور مجازی و ثبت دامنه | پرشین میزبان">
-    <meta property="og:description" content="خرید هاست و خدمات هاستینگ از پرشین میزبان که پرسرعت ترین هاستینگ کشور است، و با زیرساختی امن و مستحکم، فروش اینترنتی را قدرتمند پیگیری">
-    <meta property="og:image" content="https://www.persianmizban.com/img/logo.png">
-    <meta property="og:url" content="https://www.persianmizban.com/">
-    <meta property="og:type" content="website">
-    
-    <!-- Twitter Card meta tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="خرید هاست، خرید سرور مجازی و ثبت دامنه | پرشین میزبان">
-    <meta name="twitter:description" content="خرید هاست و خدمات هاستینگ از پرشین میزبان که پرسرعت ترین هاستینگ کشور است، و با زیرساختی امن و مستحکم، فروش اینترنتی را قدرتمند پیگیری">
-    <meta name="twitter:image" content="https://www.persianmizban.com/img/logo.png">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Organization",
-          "url": "https://www.persianmizban.com/",
-          "name": "پرشین میزبان",
-          "logo": "https://www.persianmizban.com/img/logo.png",
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+982191011796",
-            "contactType": "customer service",
-            "areaServed": "IR"
-          }
-        },
-        {
-          "@type": "Product",
-          "name": "سرویس های هاستینگ و سرور مجازی",
-          "image": "https://www.persianmizban.com/img/logo.png",
-          "description": "ارائه دهنده هاست لینوکس، وردپرس، سرور مجازی و ثبت دامنه",
-          "brand": {
-            "@type": "Brand",
-            "name": "پرشین میزبان"
-          }
-        }
-      ]
-    }
-    </script>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 <div id="app" >
 
-<header id="top-nav">
+<section id="top-nav" >
     <div class="container" >
         <div class="d-flex" >
-            <button class="mob-menu" aria-label="باز کردن منو" aria-controls="nav-mid" aria-expanded="false"></button>
+            <div class="mob-menu" ></div>
             <div class="logo" onclick="location.href='https://www.persianmizban.com/';" ></div>
-            <nav id="nav-mid" class="nav-mid">
+            <div class="nav-mid">
                 <ul>
                     <li>
                         <a href="https://www.persianmizban.com/">پرشین میزبان</a>
@@ -100,7 +50,7 @@
                     </div>
                     </a>
                 </div>
-            </nav>
+            </div>
            <div class="phone" >
                 <div class="number">
                      <a href="tel:02191011796"><bdi>۰۲۱ - <span>۹ ۱۰ ۱۱ </span>۷۹۶</bdi></a>
@@ -108,50 +58,49 @@
                 </div>
                 <div class="icon" ></div>
             </div>
-            <button id="theme-toggle" class="theme-toggle" aria-label="تغییر تم" title="تغییر تم" aria-pressed="false">🌙</button>
         </div>
     </div>
     <div class="cover" ></div>
-</header>
+</section>
 
-<nav id="bottom-nav" class="active" role="menubar">
+<section id="bottom-nav" class="active" >
     <div class="container" >
         <div class="d-flex">
 
-            <div class="item" menu-item="1" role="menuitem" tabindex="0" aria-haspopup="true" aria-expanded="false">
+            <div class="item" menu-item="1" >
                 <div class="icon icon-host" ></div>
                 <a href="https://www.persianmizban.com/web-hosting/"><span>هاست</span></a>
                 <div class="icon-more" ></div>
             </div>
 
-            <div class="item" menu-item="2" role="menuitem" tabindex="0" aria-haspopup="true" aria-expanded="false">
+            <div class="item" menu-item="2" >
                 <div class="icon icon-domain" ></div>
                 <a href="https://www.persianmizban.com/domain/"><span>ثبت دامنه</span></a>
                 <div class="icon-more" ></div>
             </div>
 
-            <div class="item" menu-item="3" role="menuitem" tabindex="0" aria-haspopup="true" aria-expanded="false">
+            <div class="item" menu-item="3" >
                 <div class="icon icon-vps" ></div>
                 <div class="blink">NEW</div>
                 <a href="https://www.persianmizban.com/vps/"><span>سرور مجازی</span></a>
                 <div class="icon-more" ></div>
             </div>
 
-            <div class="item" menu-item="4" role="menuitem" tabindex="0" aria-haspopup="true" aria-expanded="false">
+            <div class="item" menu-item="4">
                 <div class="icon icon-server" ></div>
                 <a href="https://www.persianmizban.com/vds/"><span>سرور اختصاصی</span></a>
                 <div class="icon-more" ></div>
             </div>
 
-            <div class="item !ml-0" lg="mr-auto" i-lg="pl-6" role="menuitem" tabindex="0">
+            <div class="item !ml-0" lg="mr-auto" i-lg="pl-6" >
                 <div class="icon icon-edu" ></div>
                 <div class="blink blink2">BLOG</div>
                 <a href="https://www.persianmizban.com/blog/"><span>مرکز آموزش</span></a>
             </div>
         </div>
     </div>
-</nav>
-<nav id="mega-menu" class="active" role="menu">
+</section>
+<section id="mega-menu" class="active">
     <ul class="menu-item-1">
         <li>
             <a href="https://www.persianmizban.com/web-hosting/iran">هاست ایران</a>
@@ -160,7 +109,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/hostiran.png" alt="هاست ایران" loading="lazy" />
+                                <img src="profile/hostiran.png" alt="هاست ایران" />
                             </div>
                             <div>
                                 <div class="fa" >هاست سی پنل ایران</div>
@@ -196,7 +145,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/brandenburg-gate.png" alt="هاست آلمان" loading="lazy" />
+                                <img src="profile/brandenburg-gate.png" alt="هاست آلمان" />
                             </div>
                             <div>
                                 <div class="fa" >هاست سی پنل آلمان</div>
@@ -231,7 +180,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/hostingwordpress.png" alt="هاست وردپرس" loading="lazy" />
+                                <img src="profile/hostingwordpress.png" alt="هاست وردپرس" />
                             </div>
                             <div>
                                 <div class="fa" >هاست مخصوص وردپرس</div>
@@ -266,7 +215,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/hostdliran.png" alt="هاست دانلود ایران" loading="lazy" />
+                                <img src="profile/hostdliran.png" alt="هاست دانلود ایران" />
                             </div>
                             <div>
                                 <div class="fa" >هاست دانلود ایران</div>
@@ -301,7 +250,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/hostdlgermany.png" alt="هاست دانلود آلمان" loading="lazy" />
+                                <img src="profile/hostdlgermany.png" alt="هاست دانلود آلمان" />
                             </div>
                             <div>
                                 <div class="fa" >هاست دانلود آلمان</div>
@@ -339,7 +288,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/domainmelli.png" alt="ثبت دامنه" loading="lazy" />
+                                <img src="profile/domainmelli.png" alt="ثبت دامنه" />
                             </div>
                             <div>
                                 <div class="fa" >ثبت دامنه با مالکیت کامل</div>
@@ -375,7 +324,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/tld.png" alt="انتقال دامنه" loading="lazy" />
+                                <img src="profile/tld.png" alt="انتقال دامنه" />
                             </div>
                             <div>
                                 <div class="fa" >انتقال دامنه مطمئن</div>
@@ -410,7 +359,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/domaintransfer.png" alt="تمدید دامنه" loading="lazy" />
+                                <img src="profile/domaintransfer.png" alt="تمدید دامنه" />
                             </div>
                             <div>
                                 <div class="fa" >تمدید دامنه ارزان</div>
@@ -448,7 +397,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/iran.png" alt="سرور مجازی ایران" loading="lazy" />
+                                <img src="profile/iran.png" alt="سرور مجازی ایران" />
                             </div>
                             <div>
                                 <div class="fa" >سرور مجازی ایران</div>
@@ -484,7 +433,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/germany.png" alt="سرور مجازی آلمان" loading="lazy" />
+                                <img src="profile/germany.png" alt="سرور مجازی آلمان" />
                             </div>
                             <div>
                                 <div class="fa" >سرور مجازی آلمان</div>
@@ -520,7 +469,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/usa.png" alt="سرور مجازی آمریکا" loading="lazy" />
+                                <img src="profile/usa.png" alt="سرور مجازی آمریکا" />
                             </div>
                             <div>
                                 <div class="fa" >سرور مجازی آمریکا</div>
@@ -555,7 +504,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/finland.png" alt="سرور مجازی فنلاند" loading="lazy" />
+                                <img src="profile/finland.png" alt="سرور مجازی فنلاند" />
                             </div>
                             <div>
                                 <div class="fa" >سرور مجازی آلمان</div>
@@ -593,7 +542,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/iran-vds.png" alt="سرور اختصاصی ایران" loading="lazy" />
+                                <img src="profile/iran-vds.png" alt="سرور اختصاصی ایران" />
                             </div>
                             <div>
                                 <div class="fa" >سرور اختصاصی ایران</div>
@@ -629,7 +578,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/france-vds.png" alt="سرور اختصاصی فرانسه" loading="lazy" />
+                                <img src="profile/france-vds.png" alt="سرور اختصاصی فرانسه" />
                             </div>
                             <div>
                                 <div class="fa" >سرور اختصاصی فرانسه</div>
@@ -665,7 +614,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/netherlands-vds.png" alt="سرور اختصاصی هلند" loading="lazy" />
+                                <img src="profile/netherlands-vds.png" alt="سرور اختصاصی هلند" />
                             </div>
                             <div>
                                 <div class="fa" >سرور اختصاصی هلند</div>
@@ -700,7 +649,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/germany-vds.png" alt="سرور اختصاصی آلمان" loading="lazy" />
+                                <img src="profile/germany-vds.png" alt="سرور اختصاصی آلمان" />
                             </div>
                             <div>
                                 <div class="fa" >سرور اختصاصی آلمان</div>
@@ -729,163 +678,440 @@
             </div>
         </li>
     </ul>
-</nav>
+</section>
 
-<main>
-<section id="header" class="home-header">
+<section id="breadcrumb">
     <div class="container" >
-        <div lg="grid cols-5 gap-none a-items-center gap-10" >
-            <div lg="col-2" class="py-6">
-                <div class="quote">
-                    میزبانی امن
-                </div>
-                <div class="title" >در سرور های قدرتمند پرشین میزبان</div>
-                <div xxl="text-105">۱۶ سال تـجربه ارائه خدمات میـزبانی وب با کیفیـت تـراز اول جهـانـی</div>
+    <ul>
+        <li><a href="https://www.persianmizban.com/">پرشین میزبان</a></li>
+        <li><a href="https://www.persianmizban.com/vps/">سرور مجازی</a></li>
+    </ul>
+    </div>
+</section>
 
-                <div class="slider" >
-                    <div class="s-title" >پـیشنهاد شگفت انگیز</div>
-                    <div class="swiper offer-swiper-slider" >
-                        <div class="swiper-wrapper">
-
-                            <div class="swiper-slide">
-                                <div class="box">
-                                    <div class="t1" >هاست وردپرس - جگوار سوم</div>
-                                    <div class="t2" >WP / JAGUAR THIRD</div>
-                                    <div class="more">
-                                        <div class="price" >۱۵۰,۰۰۰ <small>تومان / مـاهانه</small></div>
-                                        <a href="/web-hosting/wordpress"><div class="button" ></div></a>
-                                    </div>
+<section id="host-slider" >
+    <div class="container">
+        <div class="p-relative">
+            <div class="swiper host-swiper-slider ml-14" sm="mr-14" >
+                <div class="swiper-wrapper">
+    
+                    <div class="swiper-slide">
+                        <div lg="grid cols-5 a-items-center" class="pt-10 pb-12"  >
+                            <div lg="col-3 pt-15 pb-20">
+                                <div class="text-orange text-170 text-w-bold mb-2" i-sm="text-130 mb-3" >
+                                   سرور مجازی پرشین میزبان؛ بستری قدرتمند
+                                </div>
+                                <div class="text-90 mb-5" >
+                                   خرید سرور مجازی با منابع اختصاصی و تحویل خودکار
+                                </div>
+                                <div class="text-80 text-lh-4">
+                                    خرید سرور مجازی مطمئن و با منابع بالا و پایداری کافی، اولین قدم شما برای ورود به دنیای تجارت حرفه ای و رهایی از شر محدودیت های میزبانی وب معمولی است. با این وجود که بنا به نوع استفاده و نیازتان میتوانید از <b>لوکیشن های مختلف</b> هوشمندانه و خودکار سرور مجازی سفارش و تحویل بگیرید.
                                 </div>
                             </div>
-
-                            <div class="swiper-slide">
-                                <div class="box">
-                                    <div class="t1" >هاست ایران - کوروش چهارم</div>
-                                    <div class="t2" >LINUX / CYRUS FOUR</div>
-                                    <div class="more">
-                                        <div class="price" >۹۹,۰۰۰ <small>تومان / سـه ماهه</small></div>
-                                        <a href="/web-hosting/iran"><div class="button" ></div></a>
-                                    </div>
-                                </div>
+                            <div class="d-none" lg="col-2 d-block" >
+                                <img src="img/vps-all.png" alt="خرید سرور" >
                             </div>
-
-                            <div class="swiper-slide">
-                                <div class="box">
-                                    <div class="t1" >هاست آلمان - آدولف شـشم</div>
-                                    <div class="t2" >LINUX / ADOLF SIXTH</div>
-                                    <div class="more">
-                                        <div class="price" >۴۶۹,۰۰۰ <small>تومان / سـالانه</small></div>
-                                        <a href="/web-hosting/germany"><div class="button" ></div></a>
-                                    </div>
-                                </div>
-                            </div>
-
-
                         </div>
                     </div>
-                    <div class="navigation"></div>
-                </div>
-            </div>
-<div lg="col-3" i-lg="d-none" class="hero-image-container">
-    <picture>
-        <source srcset="img/datacenter-persianmizban.avif" type="image/avif">
-        <source srcset="img/datacenter-persianmizban.webp" type="image/webp">
-        <img class="w-full"
-             src="img/datacenter-persianmizban.png"
-             alt="هاستینگ پرشین میزبان"
-             fetchpriority="high"
-             decoding="async">
-    </picture>
-</div>        </div>
-    </div>
-</section>
+                        <div class="swiper-slide">
+                        <div lg="grid cols-5 a-items-center" class="pt-10 pb-12"  >
+                            <div lg="col-3 pt-15 pb-20">
+                                <div class="text-orange text-170 text-w-bold mb-2" i-sm="text-130 mb-3" >
+                                    گارانتی منابع اختصاصی و با کیفیت
+                                </div>
+                                <div class="text-90 mb-5" >
+                                    با هزینه کمتر از قابلیت و کیفیت منابع اختصاصی بهره‌مند شوید.
+                                </div>
+                                <div class="text-80 text-lh-4">
+                                    <b>قانون شماره یک</b> در پرشین میزبان ارایه ی منابع اختصاصی و درجه یک در تمام سرویس ها به خصوص در سرور های مجازی می باشد. با ارایه ی منابع اختصاصی کیفیت چند برابری و ثابت را تجربه میکنید.
+                                </div>
+                            </div>
+                            <div class="d-none" lg="col-2 d-block" >
+                                <img src="img/vps-all2.png" alt="سرور مجازی" >
+                            </div>
+                        </div>
+                    </div>
 
-<section id="domain-reg" class="home-domain-reg">
-    <div class="bg-domain" ></div>
-    <div class="bg-thinking-man" ></div>
-    <div class="container" >
-        <div sm="grid cols-4" class="max-w-150 mx-auto p-relative z-1 a-items-center" >
-            <div i-sm="mb-4" class="text-lh-5">
-                کسب و کار آنلاینتان
-                را با
-                <span class="text-orange text-110 text-w-semibold">ثبت یک دامنه</span>
-                شــــروع کنـــید
-            </div>
-            <div sm="col-3 pr-7"  >
-                <form class="mb-4" action="https://www.persianmizban.com/my/cart.php?a=add&domain=register" method="post">
-                    <input type="text" name="query" size="20" placeholder="نام دامنه خود را همراه با پسوند جستجو کنید">
-                    <button type="submit"></button>
-               </form>
-                <div class="offers">
-                    <div class="icon-sale" ></div>
-                    <small class="!mr-0"> تخفیف ها</small>
-                    IR <b>9.000</b>
-                    <small>/</small>
-                    .COM <b>274.000</b>
-                    <small>/</small>
-                    .SITE <b>49.000</b>
+    
                 </div>
             </div>
+
+            <div class="slide-next"></div>
+            <div class="slide-prev d-none" sm="d-block" ></div>
         </div>
     </div>
 </section>
 
-<section id="why-us">
-    <div class="container">
-        <div class="why-us-wrapper">
-            <!-- Image Column -->
-            <div class="why-us-image-col">
-                <picture>
-                    <source srcset="img/pm-why3.avif" type="image/avif">
-                    <source srcset="img/pm-why3.webp" type="image/webp">
-                    <img src="img/pm-why3.png" alt="هاستینگ" loading="lazy">
-                </picture>
-            </div>
-            <!-- Content Column -->
-            <div class="why-us-content-col">
-                <h2 class="section-title">چرا پرشین میزبان؟</h2>
-                <p class="section-description">
-                    تمامی خدمات ارائه شده توسط پرشین میزبان به صورت حرفه ای و با حساسیت بسیار بالا پیکربندی میشوند. و همینطور حضور پرشین میزبان بیش از یک دهه در جمع برترین سرویس دهندگان میزبانی وب در ایران از افتخارات ما است. پرشین میزبان پارتنر رسمی دیتاسنتر و رجیسترار های معتبر دامین در ایران می باشد.<br>
-                    <b>ما با سیاست های امنیتی استاندارد و فایروال های سخت افزاری و به همراه کادری مجرب، سنگربان کسب کار آنلاین شما هستیم.</b>
-                </p>
-                <div class="why-us-features-grid">
-                    <div class="feature-card">
-                        <div class="icon icon-security"></div>
-                        <div class="feature-title">نهایت امنیت</div>
-                        <div class="feature-subtitle">SECURITY</div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="icon icon-uptime"></div>
-                        <div class="feature-title">آپتایم بالا</div>
-                        <div class="feature-subtitle">UPTIME 99.9%</div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="icon icon-speed"></div>
-                        <div class="feature-title">سرعت شگفت انگیز</div>
-                        <div class="feature-subtitle">AMAZING SPEED</div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="icon icon-support"></div>
-                        <div class="feature-title">پشتیبانی 24 ساعته</div>
-                        <div class="feature-subtitle">24/7 SUPPORT</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="host-links" class="!pb-8">
+<section id="host-links">
     <div class="container-fluid" >
-        <div class="title" >سرویـس های پرشین میزبان</div>
-        <a href="https://www.persianmizban.com/web-hosting/"><div class="button" >خرید هاست</div></a>
-        <a href="https://www.persianmizban.com/web-hosting/iran"><div class="button" >هاست ایران</div></a>
-        <a href="https://www.persianmizban.com/web-hosting/germany"><div class="button" >هاست آلمان</div></a>
-        <a href="https://www.persianmizban.com/web-hosting/wordpress"><div class="button active" >هاست وردپرس</div></a>
-        <a href="https://www.persianmizban.com/vps/iran"><div class="button" >سرور مجازی ایران</div></a>
-        <a href="https://www.persianmizban.com/vps/germany"><div class="button" >سرور مجازی آلمان</div></a>
-        <a href="https://www.persianmizban.com/domain/"><div class="button" >ثبت دامنه</div></a>
-        <a href="https://www.persianmizban.com/web-hosting/iran-download-host"><div class="button" >هاست دانلود ایران</div></a>
-        <a href="https://www.persianmizban.com/web-hosting/germany-download-host"><div class="button" >هاست دانلود آلمان</div></a>
+        <a href="https://www.persianmizban.com/vps/iran"><div class="button" >سرور ایران</div></a>
+        <a href="https://www.persianmizban.com/vps/germany"><div class="button" >سرور آلمان</div></a>
+        <a href="https://www.persianmizban.com/vps/usa"><div class="button" >سرور آمریکا</div></a>
+        <a href="https://www.persianmizban.com/vps/finland"><div class="button" >سرور فنلاند</div></a>
+    </div>
+</section>
+
+<section id="host-list">
+    <div class="container">
+        <a href="https://www.persianmizban.com/vps/iran">
+        <div class="box parent" >
+            <div class="box-in" >
+            <div class="grid cols-5 a-items-center" >
+                <div class="p-relative">
+                    <div class="icon-area">
+                        <div class="icon-circle">
+                            <div class="icon-circle-in">
+                                <div class="icon" >
+                                    <img src="img/iranv2.png" alt="سرور ایران">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="en-title" >
+                        <div class="text-primary text-w-semibold ts-300" parent-hover="text-(#f43741)" >IRAN</div>
+                        <div class="text-w-light text-70 opacity-50" >VIRTUAL SERVER</div>
+                    </div>
+                </div>
+                <div class="col-5" lg="col-3 pa-5" >
+                    <div class="text-150 text-primary text-w-semibold ts-300 mb-4" parent-hover="text-(#f43741)">سرور مجازی ایران</div>
+                    <div class="text-90 text-lh-5 text-w-light">
+                        سرور مجازی ایران بهترین لوکیشن برای وب سایت و اپلیکیشن های داخلی و پربازدید می باشد، چراکه به دلیل فاصله کم دیتاسنتر با کاربران ایرانی سرعت نسبتا بهتری را کاربرانتان تجربه خواهند کرد. همین طور به دلیل عدم وابستگی به نرخ ارز سرور مجازی ایران مقرون به صرفه تر می باشد.
+                    </div>
+                </div>
+                <div class="h-full col-5" sm="d-flex" lg="col-1 flex-col pa-4">
+                    <div class="pa-2 mb-auto text-center text-80" i-lg="ml-auto" lg="mr-auto" i-sm="mb-2" >
+                        شروع قیمت از
+                        <br>
+                        <span class="text-110 text-w-semibold text-primary">۷۵,۰۰۰</span>
+                        تومان / مـاهانه
+                    </div>
+                    <div class="button" i-lg="my-auto" i-sm="!text-center" >
+                        مشاهده سرویس ها
+                        <div class="icon-more" ></div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </a>
+        <a href="https://www.persianmizban.com/vps/germany">
+        <div class="box parent" >
+            <div class="box-in" >
+                <div class="grid cols-5 a-items-center" >
+                    <div class="p-relative">
+                        <div class="icon-area">
+                            <div class="icon-circle">
+                                <div class="icon-circle-in">
+                                    <div class="icon" >
+                                        <img src="img/germanyv2.png"alt="سرور آلمان">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="en-title" >
+                                <div class="text-primary text-w-semibold ts-300" parent-hover="text-(#f43741)" >GERMANY</div>
+                            <div class="text-w-light text-70 opacity-50" >VIRTUAL SERVER</div>
+                        </div>
+                    </div>
+                    <div class="col-5" lg="col-3 pa-5" >
+                        <div class="text-150 text-primary text-w-semibold ts-300 mb-4" parent-hover="text-(#f43741)">سرور مجازی آلمان</div>
+                        <div class="text-90 text-lh-5 text-w-light">
+                            سرور مجازی آلمان لوکیشن بسیار پرسرعت و با پایداری بالا می باشد. همین طور این لوکیشن پایین ترین پینگ ممکن نسبت به تمام لوکیشن های اروپایی دیگر به کاربران ایرانی می باشد. سرور مجازی آلمان مناسب ترین لوکیشن برای سایت و اپلیکیشن هایی است که تمایل دارند در لوکیشن خارج از ایران میزبانی شوند.
+                        </div>
+                    </div>
+                    <div class="h-full col-5" sm="d-flex" lg="col-1 flex-col pa-4">
+                        <div class="pa-2 mb-auto text-center text-80 ml-auto" i-sm="mb-2" >
+                            شروع قیمت از
+                            <br>
+                            <span class="text-110 text-w-semibold text-primary">۱۶۰,۰۰۰</span>
+                            تومان / مـاهانه
+                        </div>
+                        <div class="button" i-lg="my-auto" i-sm="!text-center" >
+                            مشاهده سرویس ها
+                            <div class="icon-more" ></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+        <a href="https://www.persianmizban.com/vps/usa">
+        <div class="box parent" >
+            <div class="box-in" >
+                <div class="grid cols-5 a-items-center" >
+                    <div class="p-relative">
+                        <div class="icon-area">
+                            <div class="icon-circle">
+                                <div class="icon-circle-in">
+                                    <div class="icon" >
+                                        <img src="img/united-statesv2.png"alt="سرور آمریکا">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="en-title" >
+                            <div class="text-primary text-w-semibold ts-300" parent-hover="text-(#f43741)" >UNITED STATES</div>
+                            <div class="text-w-light text-70 opacity-50" >VIRTUAL SERVER</div>
+                        </div>
+                    </div>
+                    <div class="col-5" lg="col-3 pa-5" >
+                        <div class="text-150 text-primary text-w-semibold ts-300 mb-4" parent-hover="text-(#f43741)">سرور مجازی آمریکا</div>
+                        <div class="text-90 text-lh-5 text-w-light">
+                            سرور مجازی آمریکا لوکیشن بسیار استاندارد و با پایداری بالا می باشد. این لوکیشن از استاندارد های جهانی برخوردار است. اما به دلیل دور بودن لوکیشن آمریکا نسبت به کاربران ایرانی برای میزبانی سایت و اپلیکیشن، با اولیت کم تری نسبت به لوکیشن سرور ایران و آلمان و فنلاند پیشنهاد میشود.
+                        </div>
+                    </div>
+                    <div class="h-full col-5" sm="d-flex" lg="col-1 flex-col pa-4">
+                        <div class="pa-2 mb-auto text-center text-80" i-lg="ml-auto" lg="mr-auto" i-sm="mb-2" >
+                            شروع قیمت از
+                            <br>
+                            <span class="text-110 text-w-semibold text-primary">۶۹,۰۰۰</span>
+                            تومان / مـاهانه
+                        </div>
+                        <div class="button" i-lg="my-auto" i-sm="!text-center" >
+                            مشاهده سرویس ها
+                            <div class="icon-more" ></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+        <a href="https://www.persianmizban.com/vps/finland">
+        <div class="box parent" >
+            <div class="box-in" >
+                <div class="grid cols-5 a-items-center" >
+                    <div class="p-relative">
+                        <div class="icon-area">
+                            <div class="icon-circle">
+                                <div class="icon-circle-in">
+                                    <div class="icon" >
+                                        <img src="img/finlandv2.png" alt="سرور فنلاند">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="en-title" >
+                            <div class="text-primary text-w-semibold ts-300" parent-hover="text-(#f43741)" >FINLAND</div>
+                            <div class="text-w-light text-70 opacity-50" >VIRTUAL SERVER</div>
+                        </div>
+                    </div>
+                    <div class="col-5" lg="col-3 pa-5" >
+                        <div class="text-150 text-primary text-w-semibold ts-300 mb-4" parent-hover="text-(#f43741)">سرور مجازی فنلاند</div>
+                        <div class="text-90 text-lh-5 text-w-light">
+                            سرور مجازی فنلاند لوکیشن بسیار پرسرعت و با پایداری بالا می باشد. همین طور این لوکیشن پینگ مناسبی نسبت به کاربران ایرانی دارد. سرور مجازی فنلاند مناسب برای میزبانی سایت و اپلیکیشن هایی است که تمایل دارند در لوکیشن خارج از ایران میزبانی شوند.
+                        </div>
+                    </div>
+                    <div class="h-full col-5" sm="d-flex" lg="col-1 flex-col pa-4">
+                        <div class="pa-2 mb-auto text-center text-80 ml-auto" i-sm="mb-2" >
+                            شروع قیمت از
+                            <br>
+                            <span class="text-110 text-w-semibold text-primary">۱۵,۰۰۰</span>
+                            تومان / مـاهانه
+                        </div>
+                        <div class="button" i-lg="my-auto" i-sm="!text-center" >
+                            مشاهده سرویس ها
+                            <div class="icon-more" ></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </div>
+</section>
+
+
+
+
+<section id="features-slider" >
+    <div class="container p-relative" >
+        <div class="swiper host-swiper-fslider" >
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <img src="img/img-host-features.jpg" alt="خرید هاست" class="human">
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="img/icon-server2.svg" alt="منابع ایزوله"/>
+                        <div class="text-w-semibold">منابع ایزوله</div>
+                        <div class="text-76">در تمام پلن ها منابع سرور ها به صورت اختصاصی و ایزوله به هر کاربر ارائه میشود. تا سایت و اپلیکیشن شما همواره با نهایت سرعت در دسترس باشد.</div>
+                    </div>
+                    <div class="box">
+                        <img src="img/icon-hig-2.svg" alt="مانیتورینگ"/>
+                        <div class="text-w-semibold">مانیتورینگ 24 ساعته</div>
+                        <div class="text-76">در پرشین میزبان متخصصین مجرب به صورت 24 ساعته همه روزه سرور سایت و اپلیکیشن های شمارا رصد میکنند، تا در صورت رخداد هرگونه اختلال آن را سریعا به حالت STABLE برگردانند.</div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="img/icon-hig-3.svg" alt="پشتیبانی"/>
+                        <div class="text-w-semibold">پشتیبانی پرآوازه</div>
+                        <div class="text-76">در تمام طول شبانه روز هر زمان شما نیاز به پشتیبانی داشته باشید در لحظه در کنار شما هستیم. ما پاسخ گویی تیکتینگ کم تر از 5 دقیقه را گارانتی میکنیم.</div>
+                    </div>
+                    <div class="box">
+                        <img src="img/icon-hig-1.svg" alt="امنیت"/>
+                        <div class="text-w-semibold">امنیت استوار</div>
+                        <div class="text-76">با تنظیم و بروز نگهداری فایروال های سخت افزاری و نرم افزاری در لایه های مختلف که در تمام شبکه سرور ها اعمال کردیم، سایت شما توان مقابله و خنثی سازی با انواع حملات را خواهد داشت.</div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="img/icon-hig-4.svg" alt="گارانتی"/>
+                        <div class="text-w-semibold">گارانتی بازگشت وجه</div>
+                        <div class="text-76">با خیال آسوده تمام موارد فنی را طی 14 روز تست کنید. پرشین میزبان 14 روز گارانتی کامل عودت وجه روی تمام سرویس ها ارائه میکند. این نوع گارانتی بدون قید شرط است.</div>
+                    </div>
+                    <div class="box">
+                        <img src="img/icon-hig-5.svg" alt="بکاپ"/>
+                        <div class="text-w-semibold">منابع گارانتی شده</div>
+                        <div class="text-76">منابع به صورت کاملا اختصاصی می باشد و این مورد توسط پرشین میزبان گارانتی شده است تا با خیال راحت به توسعه کسب و کارتان فکر کنید.</div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="img/icon-hig-2.svg" alt="آنتی تحریم"/>
+                        <div class="text-w-semibold">آنتی تحریم</div>
+                        <div class="text-70">روی کل شبکه سرور های پرشین میزبان سیاست آنتی تحریم اجرا شده است. تمام سرور و میزبانی ها بدون مشکل، ارتباطی پرسرعت با سایت ها و API های معروف خارج کشور بر قرار میکنند.</div>
+                    </div>
+                    <div class="box">
+                        <img src="img/icon-hig-6.svg" alt="SSL"/>
+                        <div class="text-w-semibold">گواهی نامه SSL</div>
+                        <div class="text-76">به صورت اتوماتیک توسط سرور های پرشین میزبان گواهی نامه امنیتی SSL شرکتی کاملا رایگان روی تمام سایت و ساب دامنه های شما نصب و فعال میشود. همین طور فرایند تمدید SSL ها به صورت خودکار توسط سرور ها انجام میشود.</div>
+                    </div>
+                </div>
+
+
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="img/icon-hig-3.svg" alt="آنتی اسپم"/>
+                        <div class="text-w-semibold">آنتی اسپم</div>
+                        <div class="text-76">بر روی تمام سرور های پرشین میزبان ویژگی آنتی اسپم ایمیل فعال است. تا از دریافت یا ارسال ایمیل های اسپم که توسط افزونه یا قالب های مخرب تولید میشوند به صورت کاملا خودکار جلوگیری شود.</div>
+                    </div>
+                    <div class="box">
+                        <img src="img/icon-hig-1.svg" alt="لایسنس"/>
+                        <div class="text-w-semibold">لایسنس های اصلی</div>
+                        <div class="text-76">با وجود اینکه بسیاری از شرکت ها به دلیل بالا بودن هزینه ی لایسنس اورجینال از لایسنس های نا امن کرک شده استفاده میکنند, پرشین میزبان از نسخه های اصلی و قانونی برای اطمینان از امنیت سایت شما بهره میگیرد.</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="slide-next" >
+            <div class="button" ></div>
+        </div>
+        <div class="slide-prev" >
+            <div class="button" ></div>
+        </div>
+    </div>
+</section>
+
+<section id="faq">
+    <div class="container" >
+        <div class="title" >
+            <div class="icon-faq"></div>
+            <div class="my-auto">
+                <div class="text-110 text-w-semibold" >سوالات متداول</div>
+                <div class="text-80" >با پشتیبانی 24 ساعته و همه روزه سرویس های میزبانی پرشین میزبان سوالی باقی نمی ماند، با خیال راحت به توسعه کسب و کارتان بپردازید.</div>
+            </div>
+        </div>
+
+        <div class="qa" >
+            <div class="d-flex a-items-center" >
+                <div class="icon" ></div>
+                <div class="q" >VPS یا سرور مجازی چیست؟</div>
+            </div>
+            <div class="a" >VPS یا همان سرور مجازی بخش اختصاصی از یک سرور کامل دیتاسنتری می باشد، به طور مثال در صورتی که مقدار منابع سرور فیزیکی 256 گیگ رم و 58 هسته CPU و 10 ترابایت هارد باشد شما میتوانید به اندازه ی نیازتان از این مقدار منابع در قالب سرور مجازی اجاره کنید.</br>در سرور مجازی شما قادر خواهید بود سیستم عامل مورد نیازتون را نصب و به شیوه دلخواه کانفیگ کنید. البته در سرور مجازی امکان نصب سیستم عامل ویندوز هم وجود دارد که میتواند به منظور سیستم شخصی شماهم مورد استفاده قرار بگیرد. در سرور مجازی سرعت دانلود/آپلود از <span style="color: #333399;"><b>1 گیگ در ثانیه تا 10 گیگ</b></span> می باشد، همین طور مصرف پهنای باند در سرور های مجازی نامحدود و رایگان است.</div>
+        </div>
+
+        <div class="qa" >
+            <div class="d-flex a-items-center" >
+                <div class="icon" ></div>
+                <div class="q" >تفاوت هاست با سرور چیست؟</div>
+            </div>
+            <div class="a" >در هاست شما امکان میزبانی وب سایت و اپلیکیشن را خواهید داشت که معمولا توسط شرکت های هاستینگ کانفیگ شده است.</br>اما چه زمانی شما نیاز به سرور پیدا خواهید کرد؟ زمانی که منابع اختصاصی بیشتری نیاز داشته باشید یا نیاز به کانفیگ دلخواه داشته باشید، مثلا نیاز به دسترسی SSH ...، آن زمان شما می بایست از سرور مجازی استفاده کنید. برای دریافت مشاوره تخصیص با ما تماس بگیرید.</div>
+        </div>
+
+        <div class="qa" >
+            <div class="d-flex a-items-center" >
+                <div class="icon" ></div>
+                <div class="q" >آیا نصب ویندوز برو روی سرور مجازی امکان پذیر است؟</div>
+            </div>
+            <div class="a" >بله، شما میتوانید هنگام سفارش یا حتی بعد از سفارش از طریق پنل کاربری از لیست نسخه های سیستم عامل موجود نسخه ویندوز کلاینت یا ویندوز سرور مد نظرتان را انتخاب کرده و <span style="color: #333399;"><b>به صورت خودکار</b></span> توسط سیستم نصب خواهد شد.</br>همین طور در صورتی که نیاز به نسخه سیستم عامل خاصی داشته باشید میتوایند لینک iso سیستم عامل مورد نظرتون رو ارسال کنید تا روی سرورتان نصب شود.</div>
+        </div>
+                <div class="qa" >
+            <div class="d-flex a-items-center" >
+                <div class="icon" ></div>
+                <div class="q" >تفاوت سرور مجازی با سرور اختصاصی در چیست؟</div>
+            </div>
+            <div class="a" >در سرور اختصاصی، یک سرور دیتاسنتری کامل در اختیار شما قرار میگیرد. اما در سرور مجازی شما نسبت به نیاز کسب و کارتان بخشی از یک سرور فیزیکی دیتاسنتری را تهیه میکنید.</br>به طور مثال یک سرور دیتاسنتری 256 گیگ رم و 58 هسته CPU و 10 ترابایت هارد دارد که در صورت تهیه سرور اختصاصی کل این منابع در اختیار شما قرار میگیرد و در صورت سفارش سرور مجازی بخشی از این منابع که نیاز دارید <span style="color: #333399;"><b>به صورت اختصاصی</b></span> به شما اختصاص داده میشود.</div>
+        </div>
+                <div class="qa" >
+            <div class="d-flex a-items-center" >
+                <div class="icon" ></div>
+                <div class="q" >کسب و کار ما چه زمانی نیاز به سرور مجازی پیدا خواهد کرد؟</div>
+            </div>
+            <div class="a" >کسب و کار شما زمانی نیاز به سرور مجازی دارد که منابع بیشتری نسبت به هاست نیاز داشته باشید یا نیاز به کانفیگ یا دسترسی بیشتری نسبت به هاست داشته باشید. همین طور از سرور مجازی به منظور های مختلف بر اساس نیازتان میشود کانفیگ و استفاده کرد.</div>
+        </div>
+        <div class="qa" >
+            <div class="d-flex a-items-center" >
+                <div class="icon" ></div>
+                <div class="q" >حداقل منابع مورد نیاز سی پنل برای نصب روی سرور مجازی چقدر است؟</div>
+            </div>
+            <div class="a" >حداقل منابع مورد نیاز برای نصب کنترل پنل سی پنل 6 گیگ رم و 4 هسته Cpu و 60 گیگ هارد SSD NVme می باشد. که پیشنهاد میکنیم برای نصب سی پنل <span style="color: #333399;"><b>پلن سوم یا پلن های بالاتر</b></span> را انتخاب کنید.</br>توجه کنید نصب و کانفیگ سی پنل به در صورت تمایل میتوانید به پرشین میزبان بسپارید. ما به صورت کاملا <span style="color: #333399;"><b>رایگان</b></span> فرایند نصب سی پنل را برای شما انجام میدهیم.</div>
+        </div>
+        <div class="qa" >
+            <div class="d-flex a-items-center" >
+                <div class="icon" ></div>
+                <div class="q" >انتقال اطلاعات پس از خرید سرور مجازی چگونه است؟</div>
+            </div>
+            <div class="a" >اطلاعات سرور قبلی به صورت کاملا رایگان و کم تر از 1 ساعت توسط کارشناس های پرشین میزبان به سرور جدید شما منتقل خواهد شد. تنها کافیست دسترسی سرور قبلی را از طریق تیکت برای واحد فنی ارسال کنید.</div>
+        </div>
+        <div class="qa" >
+            <div class="d-flex a-items-center" >
+                <div class="icon" ></div>
+                <div class="q" >در سرور مجازی پرشین میزبان امکان ارتقا لحظه ای منابع وجود دارد؟</div>
+            </div>
+            <div class="a" >بله، هر زمان که مایل باشید میتوانید از طریق پنل مدیریت موجود در پنل پرشین میزبان، سرورتان را به پلن های بالاتر ارتقاع انجام دهید و یا به صورت مازاد ip, Ram, Cpu و هارد دریافت کنید.</div>
+        </div>
+        <div class="qa" >
+            <div class="d-flex a-items-center" >
+                <div class="icon" ></div>
+                <div class="q" >در سرور مجازی چه سیستم عامل هایی قالب نصب می باشد؟</div>
+            </div>
+            <div class="a" >تمام نسخه های لینوکس و ویندوز کلاینت و سرور و میکروتیک ... قابل ارائه می باشد. در صورتی که نیاز به سیستم عامل خاصی دارید میتوانید لینک iso مورد نظرتون رو ارسال کنید تا روی سرورتان نصب و تنظیم شود.</div>
+        </div>
+        <div class="qa" >
+            <div class="d-flex a-items-center" >
+                <div class="icon" ></div>
+                <div class="q" >آیا برای کار با سرور مجازی پرشین میزبان نیاز به تخصص و دانش فنی دارم؟</div>
+            </div>
+            <div class="a" >خیر، نیاز به تخصص خاصی ندارید. چراکه سرور مجازی با سیستم عامل ویندوز، لینوکس... به انتخاب شما نصب و تحویل میشود و تنها برای کارکردن با سرور مجازی کافیست که مسلط به سیستم عامل ویندوز یا لینوکس یا... باشید.</div>
+        </div>
+                <div class="qa" >
+            <div class="d-flex a-items-center" >
+                <div class="icon" ></div>
+                <div class="q" >چگونه می توانیم از طریق پرشین میزبان کسب درآمد کنیم؟</div>
+            </div>
+            <div class="a" >از قسمت همکاری در فروش می توانید کسب درآمد کنید. با هر فروش موفق بین 20 تا 40 درصد پورسانت دریافت میکنید. در این خصوص کاربران باید در پرشین میزبان عضو شده و لینک همکاری در فروش مخصوص خودشان را از ناحیه کاربری دریافت کنند.</div>
+        </div>
+        <div class="qa" >
+            <div class="d-flex a-items-center" >
+                <div class="icon" ></div>
+                <div class="q" >پرشین میزبان چه کمپین و آفر های حمایتی برای کسب و کار های تازه تاسیس در نظر گرفته است؟</div>
+            </div>
+            <div class="a" >پرشین میزبان به کسب و کار های نوپا 20 درصد تخفیف برای اولین خرید ارائه میکند، همین طور نیازی به پرداخت هزینه برای دریافت قالب یا افزونه ندارند و موارد فنی مرتبط با سایت یا اپلیکیشن هاشونو به صورت رایگان میتوانند به پشتیبان فنی پرشین میزبان بسپارند. امید داریم با حمایت فنی و مالی از کار آفرین ها قدمی در مسیر حمایت از اشتغال آفرینی برداشته باشیم.</div>
+        </div>
+                <div class="qa" >
+            <div class="d-flex a-items-center" >
+                <div class="icon" ></div>
+                <div class="q" >چرا پرشین میزبان؟</div>
+            </div>
+            <div class="a" >گارانتی عودت وجه 14 روزه<br>ارائه پهنای باند نامحدود در تمام سرویس ها<br>انتقال رایگان اطلاعات سایت مشتری از شرکت های دیگر به پرشین میزبان<br>بهره گیری از فایروال های سخت افزاری قدرتمند به جهت افزایش امنیت در کل شبکه سرویس ها<br>بکاپ گیری منظم روزانه و نگهناری آرشیو بکاپ ها به مدت 7 روز<br>مانیتورینگ 24 ساعته حتی در روز های تعطیل سرور ها به جهت جلوگیری از بروز مشکلات احتمالی<br>استفاده از سرور های بروز و قدرتمند سخت افزاری با مالکیت 100 درصد انحصاری پرشین میزبان</div>
+        </div>
     </div>
 </section>
 
@@ -893,7 +1119,7 @@
     <div class="container" >
         <div class="grid cols-2 a-items-center" sm="cols-4" lg="cols-6">
             <div class="col-2" sm="col-4" lg="col-2" >
-                <img class="w-full mx-auto d-block" i-lg="max-w-(414px)" src="img/img-inside.png" alt="PersianMizban" loading="lazy">
+                <img class="w-full mx-auto d-block" i-lg="max-w-(414px)" src="img/img-inside.png" >
             </div>
             <div>
                 <div class="box box2" >
@@ -931,224 +1157,6 @@
     </div>
 </section>
 
-<section id="plans">
-    <div class="container">
-        <div class="text-150 mb-2 text-primary text-w-medium" >به دنبال میزبانی حرفه ای و مطمئن هستید؟</div>
-        <div class="text-90 mb-8">با سرویس های میزبانی پرشین میزبان با خیال راحت به توسعه کسب و کار آنلاینتان بپردازید. </div>
-
-        <ul class="plans-pricing-list" >
-            <li for="1" class="active">
-                <div class="icon" ></div>
-                ماهـانه
-            </li>
-            <li for="2">
-                <div class="icon" ></div>
-                سـه ماهه
-            </li>
-            <li for="3">
-                <div class="icon" ></div>
-                شـش ماهه
-            </li>
-            <li for="4">
-                <div class="icon" ></div>
-                سـالانه
-            </li>
-        </ul>
-
-        <script>
-            window.homePlans = [
-                [
-                    "ماهـانه",
-                    "۱۸,۰۰۰",
-                    "۲۹,۰۰۰",
-                    "۴۹,۰۰۰",
-                    "۱۰۰,۰۰۰"
-                ],
-                [
-                    "سـه ماهه",
-                    "۹,۰۰۰",
-                    "۹,۰۰۰",
-                    "۹,۰۰۰",
-                    "۹,۰۰۰"
-                ],
-                [
-                    "شـش ماهه",
-                    "۷۵,۰۰۰",
-                    "۲۲۵,۰۰۰",
-                    "۳۶۰,۰۰۰",
-                    "۶۷۵,۰۰۰"
-                ],
-                [
-                    "سـالانه",
-                    "۸۹۰,۰۰۰",
-                    "۲,۴۹۰,۰۰۰",
-                    "۴,۹۵۰,۰۰۰",
-                    "۸,۹۰۰,۰۰۰"
-                ],
-            ]
-        </script>
-
-        <div class="ov">
-            <div class="grid cols-4 home-plans" >
-                <div class="plan">
-                    <div class="plan-in" >
-                        <div class="icon icon-1" ></div>
-                        <div class="text-112 text-w-medium mb-1">خرید هاست</div>
-                        <div class="text-80 opacity-50 text-primary text-w-light">BUY HOST</div>
-
-                        <ul>
-                            <li>کنترل پنل قدرتمند CPANEL</li>
-                            <li>سرعت، پایداری و 100 درصدی</li>
-                            <li>نصب رایگان سیستم مدیریت محتوا</li>
-                            <li>ریستور و دانلود بکاپ توسط کاربر</li>
-                            <li>ارائه رایگان قالب و افزونه های محبوب</li>
-                        </ul>
-
-                        <div class="start">شـروع از </div>
-                        <div class="text-primary text-w-medium price" >
-                            <bdi></bdi><!-- required-->
-                            تومان
-                            <small class="text-80 text-w-normal text-black">/</small>
-                            <small class="text-80 text-w-normal text-black p"></small><!-- required-->
-                        </div>
-
-                        <div class="button">
-                            <div class="d-flex">
-                                <div class="icon-dots">
-                                    <div></div>
-                                </div>
-                                <a href="https://www.persianmizban.com/web-hosting/"><div>
-                                    لیست محصولات
-                                </div></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="plan">
-                    <div class="plan-in" >
-                        <div class="icon icon-2" ></div>
-                        <div class="text-112 text-w-medium mb-1">ثبت دامنه</div>
-                        <div class="text-80 opacity-50 text-primary text-w-light">Domain Registration</div>
-
-                        <ul>
-                            <li>ثبت دامین به نام متقاضی</li>
-                            <li>دسترسی قفل کردن دامین</li>
-                            <li>ثبت 24 ساعته در تمامی روزهای سال</li>
-                            <li>ارائه کامل ترین کنترل پنل تحت وب</li>
-                            <li>ارزان ترین تعرفه ثبت دامنه در کشور</li>
-                        </ul>
-
-                        <div class="start">شـروع از </div>
-                        <div class="text-primary text-w-medium price" >
-                            <bdi></bdi><!-- required-->
-                            تومان
-                            <small class="text-80 text-w-normal text-black">/</small>
-                            <small class="text-80 text-w-normal text-black p"></small><!-- required-->
-                        </div>
-
-                        <div class="button">
-                            <div class="d-flex">
-                                <div class="icon-dots">
-                                    <div></div>
-                                </div>
-                                <a href="https://www.persianmizban.com/domain/"><div>
-                                    لیست محصولات
-                                </div></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="plan">
-                    <div class="plan-in" >
-                        <div class="icon icon-3" ></div>
-                        <div class="text-112 text-w-medium mb-1">سرور مجازی</div>
-                        <div class="text-80 opacity-50 text-primary text-w-light">VIRTUAL SERVER</div>
-
-                        <ul>
-                            <li>محافظت چند لایه از شبکه</li>
-                            <li>منابع سخت افزاری اختصاصی</li>
-                            <li>تحویل و ارتقاع به صورت کاملا آنی</li>
-                            <li>امکان نصب نرم افزارهای خاص</li>
-                            <li>پشتیبانی نرم افزاری و سخت افزاری</li>
-                        </ul>
-
-                        <div class="start">شـروع از </div>
-                        <div class="text-primary text-w-medium price" >
-                            <bdi></bdi><!-- required-->
-                            تومان
-                            <small class="text-80 text-w-normal text-black">/</small>
-                            <small class="text-80 text-w-normal text-black p"></small><!-- required-->
-                        </div>
-
-                        <div class="button">
-                            <div class="d-flex">
-                                <div class="icon-dots">
-                                    <div></div>
-                                </div>
-                                <a href="https://www.persianmizban.com/vps/"><div>
-                                    لیست محصولات
-                                </div></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="plan">
-                    <div class="plan-in" >
-                        <div class="icon icon-4" ></div>
-                        <div class="text-112 text-w-medium mb-1">سرور اختصاصی</div>
-                        <div class="text-80 opacity-50 text-primary text-w-light">DEDICATED SERVER</div>
-
-                        <ul>
-                            <li>شبکه اختصاصی به همراه فایروال</li>
-                            <li>منابع سخت افزاری قدرتمند و بروز </li>
-                            <li>ارائه پورت‌ با سرعت 10G، 1G</li>
-                            <li>ارائه IPv4 و IPv6</li>
-                            <li>پشتیبانی نرم افزاری و سخت افزاری</li>
-                        </ul>
-
-                        <div class="start">شـروع از </div>
-                        <div class="text-primary text-w-medium price" >
-                            <bdi></bdi><!-- required-->
-                            تومان
-                            <small class="text-80 text-w-normal text-black">/</small>
-                            <small class="text-80 text-w-normal text-black p"></small><!-- required-->
-                        </div>
-
-                        <div class="button">
-                            <div class="d-flex">
-                                <div class="icon-dots">
-                                    <div></div>
-                                </div>
-                                <a href="https://www.persianmizban.com/vds/"><div>
-                                    لیست محصولات
-                                </div></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<section id="delivery">
-    <div class="container" >
-        <div class="delivery-wrapper" >
-            <div>
-                <img src="img/img-pishi.svg" alt="هاست" class="d-none" md="d-block mr-auto" loading="lazy">
-            </div>
-            <div>
-                <div class="text-150 text-primary text-w-medium mb-2" lg="text-190" > سفارش و تحویل در یک دقیقه</div>
-                <div class="text-90 mb-8">با توجه به نیاز هایتان سرویس مورد نیاز پیشنهادی خود را مشاهده کنید</div>
-                <div class="button">
-                    <a href="https://www.persianmizban.com/my/store/cart.php"><div class="in">شروع کنید</div></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
 <section id="client-comments">
     <div class="container" >
         <div class="p-relative" >
@@ -1161,7 +1169,7 @@
                     </div>
                 </div>
                 <div class="button">
-                    <a href="contact-us/#contact-comments"><div>ارسال نظر</div></a>
+                    <a href="../contact-us/#contact-comments"><div>ارسال نظر</div></a>
                 </div>
             </div>
 
@@ -1172,7 +1180,7 @@
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                      <img src="profile/digimoviz.png" alt="دیجی مویز" loading="lazy">
+                                    <img src="profile/digimoviz.png" alt="دیجی مویز" >
                                     <div class="text-primary text-w-semibold" >سامان رمضانی</div>
                                     <div class="text-80 mr-auto" >دیجی مویز</div>
                                 </div>
@@ -1183,7 +1191,7 @@
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                      <img src="profile/myfilm.png" alt="مای فیلم" loading="lazy">
+                                    <img src="profile/myfilm.png" alt="مای فیلم" >
                                     <div class="text-primary text-w-semibold" >علیرضا کریمی</div>
                                     <div class="text-80 mr-auto" >مای فیلم</div>
                                 </div>
@@ -1200,7 +1208,7 @@
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                      <img src="profile/opencart.png" alt="اپن کارت" loading="lazy">
+                                    <img src="profile/opencart.png" alt="اپن کارت" >
                                     <div class="text-primary text-w-semibold" >صمد دانش خواه</div>
                                     <div class="text-80 mr-auto" >اپن کارت فارسی</div>
                                 </div>
@@ -1211,7 +1219,7 @@
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                      <img src="profile/asanapps.png" alt="آسان اپس" loading="lazy">
+                                    <img src="profile/asanapps.png" alt="آسان اپس" >
                                     <div class="text-primary text-w-semibold" >سید حجت حسینی</div>
                                     <div class="text-80 mr-auto" >آسان اپس</div>
                                 </div>
@@ -1228,7 +1236,7 @@
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                      <img src="profile/bahabin.png" alt="بهابین" loading="lazy">
+                                    <img src="profile/bahabin.png" alt="بهابین" >
                                     <div class="text-primary text-w-semibold" >مهدی وادونی</div>
                                     <div class="text-80 mr-auto" >بهابین</div>
                                 </div>
@@ -1239,7 +1247,7 @@
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                      <img src="profile/torob.png" alt="ترب" loading="lazy">
+                                    <img src="profile/torob.png" alt="ترب" >
                                     <div class="text-primary text-w-semibold" >علی بابایی چشمه احمد رضایی</div>
                                     <div class="text-80 mr-auto" >ترب</div>
                                 </div>
@@ -1256,7 +1264,7 @@
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                      <img src="profile/damdaran.png" alt="دامداران" loading="lazy">
+                                    <img src="profile/damdaran.png" alt="دامداران" >
                                     <div class="text-primary text-w-semibold" >نور الدین نور بخش جعفری دهکردی</div>
                                     <div class="text-80 mr-auto" >دامداران</div>
                                 </div>
@@ -1267,7 +1275,7 @@
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                      <img src="profile/vahabonline.png" alt="وهاب آنلاین" loading="lazy">
+                                    <img src="profile/vahabonline.png" alt="وهاب آنلاین" >
                                     <div class="text-primary text-w-semibold" >وهاب سید چورته</div>
                                     <div class="text-80 mr-auto" >وهاب آنلاین</div>
                                 </div>
@@ -1292,114 +1300,7 @@
     </div>
 </section>
 
-<section id="blog">
-    <div class="container">
-        <div class="d-flex a-items-center mb-8">
-            <div class="button ml-auto">
-                <a href="https://www.persianmizban.com/blog/"><div class="in">مشاهده همه</div></a>
-            </div>
-            <div class="title">آخرین مقاله ها</div>
-            <div class="min-w-28 mr-auto" >
-                <div class="navigation"></div>
-            </div>
-        </div>
-
-        <div class="swiper blog-swiper-slider">
-            <div class="swiper-wrapper">
-                
-                <div class="swiper-slide">
-                    <div class="post parent">
-                        <div class="img" >
-                            <a href="https://www.persianmizban.com/blog/domain-country/"><img src="https://www.persianmizban.com/blog/wp-content/uploads/2022/04/country-domains-1.jpg" alt="دامنه های کشوری" loading="lazy"></a>
-                        </div>
-                        <a href="https://www.persianmizban.com/blog/domain-country/"><div class="text-90 text-w-medium" parent-hover="text-primary" >معرفی انواع دامنه های کشوری که باید بدانید</div></a>
-                        <div class="text">
-                            هر کشوری دامنه های کشوری مختص خود را دارد که مخفف اسم آن کشور می باشد. پسوند کشور یک دامنه سطح بالای اینترنتی است که عموماً برای سایت های مستقر در یک کشور، دولت مستقل یا قلمرو وابسته که با کد کشور شناسایی می شود استفاده یا رزرو شده است.
-                        </div>
-                        <div class="d-flex text-80" >
-                            4 ساعت پیش
-                            <a href="https://www.persianmizban.com/blog/category/%d8%af%d8%a7%d9%85%d9%86%d9%87/"><div class="tag">دامنه</div></a>
-                            <a href="https://www.persianmizban.com/blog/category/%d8%a2%d9%85%d9%88%d8%b2%d8%b4/"><div class="tag">آموزش</div></a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="swiper-slide">
-                    <div class="post parent">
-                        <div class="img" >
-                              <a href="https://www.persianmizban.com/blog/international-domain/"><img src="https://www.persianmizban.com/blog/wp-content/uploads/2022/04/%D9%87%D8%A7%DB%8C-%D8%A8%DB%8C%D9%86-%D8%A7%D9%84%D9%85%D9%84%D9%84%DB%8C.png" alt="دامنه های کشوری" loading="lazy"></a>
-                        </div>
-                        <a href="https://www.persianmizban.com/blog/international-domain/"><div class="text-90 text-w-medium" parent-hover="text-primary" >معرفی انواع دامنه های بین المللی و کاربرد آن ها</div></a>
-                        <div class="text">
-                            نام دامنه رشته ای از متن است که به یک آدرس IP عددی گفته می شود و برای دسترسی به وب سایت از نرم افزار مشتری استفاده می شود. در زبان انگلیسی ساده، نام دامنه متنی است که کاربر در پنجره مرورگر تایپ می کند تا به یک وب سایت خاص برسد.
-                        </div>
-                        <div class="d-flex text-80" >
-                            12 ساعت پیش
-                            <a href="https://www.persianmizban.com/blog/category/%d8%af%d8%a7%d9%85%d9%86%d9%87/"><div class="tag">دامنه</div></a>
-                            <a href="https://www.persianmizban.com/blog/category/%d8%a2%d9%85%d9%88%d8%b2%d8%b4/"><div class="tag">آموزش</div></a>
-
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="swiper-slide">
-                    <div class="post parent">
-                        <div class="img" >
-                              <a href="https://www.persianmizban.com/blog/iranian-domain/"><img src="https://www.persianmizban.com/blog/wp-content/uploads/2022/04/%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%DB%8C.jpg" alt="هاست چیست" loading="lazy"></a>
-                        </div>
-                        <a href="https://www.persianmizban.com/blog/iranian-domain/"><div class="text-90 text-w-medium" parent-hover="text-primary" >دامنه ir چیست؟ و معرفی انواع دامنه های ایرانی</div></a>
-                        <div class="text">
-                            دامنه ها انواع مختلفی دارند و بر حسب شرایط و مناسب کار کاربران انتخاب می شوند. یکی از رایج ترین دامنه ها در ایران .ir است که مخفف iran است که از انواع مختلف دامنه ها برخودار می باشد که با رعایت قوانین جمهوری اسلامی ایران توسط شرکت ایرنیک ثبت می گردد.
-                        </div>
-                        <div class="d-flex text-80" >
-                            یک روز پیش
-                            <a href="https://www.persianmizban.com/blog/category/%d8%af%d8%a7%d9%85%d9%86%d9%87/"><div class="tag">دامنه</div></a>
-                            <a href="https://www.persianmizban.com/blog/category/%d8%a2%d9%85%d9%88%d8%b2%d8%b4/"><div class="tag">آموزش</div></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="post parent">
-                        <div class="img" >
-                              <a href="https://www.persianmizban.com/blog/store-host/"><img src="https://www.persianmizban.com/blog/wp-content/uploads/2022/04/%D9%87%D8%A7%D8%B3%D8%AA-%D9%81%D8%B1%D9%88%D8%B4%DA%AF%D8%A7%D9%87-%D8%A7%DB%8C%D9%86%D8%AA%D8%B1%D9%86%D8%AA%DB%8C.jpg" alt="هاست فروشگاهی" loading="lazy"></a>
-                        </div>
-                        <a href="https://www.persianmizban.com/blog/store-host/"><div class="text-90 text-w-medium" parent-hover="text-primary" >راهنمای خرید هاست فروشگاه اینترنتی</div></a>
-                        <div class="text">
-                            اینترنت امروزه تبدیل شده به اولین و بزرگ‌ترین مرجع برای خرید، بررسی و نقد محصولات و چک کردن قیمت‌ها. اگر شما هم به این بازار علاقه‌مندید و قصد خرید هاست فروشگاه اینترنتی و راه‌اندازی یک آنلاین شاپ را دارید. در ادامه با ما همراه باشید تا نکات کلیدی و مهمی را در مورد شروع آن بررسی کنیم.
-                        </div>
-                        <div class="d-flex text-80" >
-                            یک هفته پیش
-                            <a href="https://www.persianmizban.com/blog/category/%d8%a2%d9%85%d9%88%d8%b2%d8%b4/"><div class="tag">آموزش</div></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="post parent">
-                        <div class="img" >
-                              <a href="https://www.persianmizban.com/blog/wordpress-install/"><img src="https://www.persianmizban.com/blog/wp-content/uploads/2022/02/PersianMizban-Blog-Wordpress-Install-Zero-1.png" alt="نصب وردپرس" loading="lazy"></a>
-                        </div>
-                        <a href="https://www.persianmizban.com/blog/wordpress-install/"><div class="text-90 text-w-medium" parent-hover="text-primary" >آموزش نصب وردپرس روی هاست سی پنل – تصویری</div></a>
-                        <div class="text">
-                            وردپرس یک سیستم مدیریت محتوا قدرتمند است که بسیاری از سایت های مهم و پربازدید از جمله مایکروسافت نیوز، تد بلاگ و جی کوئری به کمک آن طراحی و ساخته شده اند. با WordPress می توانید سایت های مختلفی، از یک وب سایت شخصی گرفته تا یک فروشگاه آنلاین، راه اندازی کنید.
-                        </div>
-                        <div class="d-flex text-80" >
-                            یک هفته پیش
-                            <a href="https://www.persianmizban.com/blog/category/cpanel/"><div class="tag">سی پنل</div></a>
-                            <a href="https://www.persianmizban.com/blog/category/%d9%88%d8%b1%d8%af%d9%be%d8%b1%d8%b3/"><div class="tag">وردپرس</div></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-</main>
-
-<footer id="footer">
+<section id="footer">
     <div class="container" >
         <div class="support" >
             <div class="grid cols-1 a-items-center" md="cols-2" i-md="text-center mb-2" >
@@ -1464,7 +1365,7 @@
             </div>
             <div class="col-2">
                 <div class="-bg-primary-3 rounded-6 pa-4 text-center">
-                    <a href="#" onclick="window.open('https://www.persianmizban.com/namad.php','','resizable=1,scrollbars=1,width=750,height=500,top=400,left=400');return false;" title="نماد های اعتماد پرشین میزبان"><img src="https://www.persianmizban.com/img/namad.png" alt="نماد اعتماد" loading="lazy"><br><img src="https://www.persianmizban.com/img/samandehi.png" alt="نماد ساماندهی" loading="lazy"></a>
+                    <a href="#" onclick="window.open('https://www.persianmizban.com/namad.php','','resizable=1,scrollbars=1,width=750,height=500,top=400,left=400');return false;" title="نماد های اعتماد پرشین میزبان"><img src="https://www.persianmizban.com/img/namad.png" alt="نماد اعتماد"><br><img src="https://www.persianmizban.com/img/samandehi.png" alt="نماد ساماندهی"></a>
                 </div>
             </div>
         </div>
@@ -1481,19 +1382,122 @@
             </div>
         </div>
     </div>
-</footer>
+</section>
 
 
 
 </div>
-<script src="dist/scripts.min.js" defer></script>
-<script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/service-worker.js');
-  });
+<script src="js/swiper.js" ></script>
+<script src="js/scripts.js" ></script>
+<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="fad6f86d-8985-4c3d-808f-e97f7658ec10";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "VPS یا سرور مجازی چیست؟",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "VPS یا همان سرور مجازی بخش اختصاصی از یک سرور کامل دیتاسنتری می باشد، به طور مثال در صورتی که مقدار منابع سرور فیزیکی 256 گیگ رم و 58 هسته CPU و 10 ترابایت هارد باشد شما میتوانید به اندازه ی نیازتان از این مقدار منابع در قالب سرور مجازی اجاره کنید.
+در سرور مجازی شما قادر خواهید بود سیستم عامل مورد نیازتون را نصب و به شیوه دلخواه کانفیگ کنید. البته در سرور مجازی امکان نصب سیستم عامل ویندوز هم وجود دارد که میتواند به منظور سیستم شخصی شماهم مورد استفاده قرار بگیرد. در سرور مجازی سرعت دانلود/آپلود از 1 گیگ در ثانیه تا 10 گیگ می باشد، همین طور مصرف پهنای باند در سرور های مجازی نامحدود و رایگان است."
+    }
+  },{
+    "@type": "Question",
+    "name": "تفاوت هاست با سرور چیست؟",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "در هاست شما امکان میزبانی وب سایت و اپلیکیشن را خواهید داشت که معمولا توسط شرکت های هاستینگ کانفیگ شده است.
+اما چه زمانی شما نیاز به سرور پیدا خواهید کرد؟ زمانی که منابع اختصاصی بیشتری نیاز داشته باشید یا نیاز به کانفیگ دلخواه داشته باشید، مثلا نیاز به دسترسی SSH ...، آن زمان شما می بایست از سرور مجازی استفاده کنید. برای دریافت مشاوره تخصیص با ما تماس بگیرید."
+    }
+  },{
+    "@type": "Question",
+    "name": "آیا نصب ویندوز برو روی سرور مجازی امکان پذیر است؟",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "بله، شما میتوانید هنگام سفارش یا حتی بعد از سفارش از طریق پنل کاربری از لیست نسخه های سیستم عامل موجود نسخه ویندوز کلاینت یا ویندوز سرور مد نظرتان را انتخاب کرده و به صورت خودکار توسط سیستم نصب خواهد شد.
+همین طور در صورتی که نیاز به نسخه سیستم عامل خاصی داشته باشید میتوایند لینک iso سیستم عامل مورد نظرتون رو ارسال کنید تا روی سرورتان نصب شود."
+    }
+  },{
+    "@type": "Question",
+    "name": "تفاوت سرور مجازی با سرور اختصاصی در چیست؟",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "در سرور اختصاصی، یک سرور دیتاسنتری کامل در اختیار شما قرار میگیرد. اما در سرور مجازی شما نسبت به نیاز کسب و کارتان بخشی از یک سرور فیزیکی دیتاسنتری را تهیه میکنید.
+به طور مثال یک سرور دیتاسنتری 256 گیگ رم و 58 هسته CPU و 10 ترابایت هارد دارد که در صورت تهیه سرور اختصاصی کل این منابع در اختیار شما قرار میگیرد و در صورت سفارش سرور مجازی بخشی از این منابع که نیاز دارید به صورت اختصاصی به شما اختصاص داده میشود."
+    }
+  },{
+    "@type": "Question",
+    "name": "کسب و کار ما چه زمانی نیاز به سرور مجازی پیدا خواهد کرد؟",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "کسب و کار شما زمانی نیاز به سرور مجازی دارد که منابع بیشتری نسبت به هاست نیاز داشته باشید یا نیاز به کانفیگ یا دسترسی بیشتری نسبت به هاست داشته باشید. همین طور از سرور مجازی به منظور های مختلف بر اساس نیازتان میشود کانفیگ و استفاده کرد."
+    }
+  },{
+    "@type": "Question",
+    "name": "حداقل منابع مورد نیاز سی پنل برای نصب روی سرور مجازی چقدر است؟",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "حداقل منابع مورد نیاز برای نصب کنترل پنل سی پنل 6 گیگ رم و 4 هسته Cpu و 60 گیگ هارد SSD NVme می باشد. که پیشنهاد میکنیم برای نصب سی پنل پلن سوم یا پلن های بالاتر را انتخاب کنید.
+توجه کنید نصب و کانفیگ سی پنل به در صورت تمایل میتوانید به پرشین میزبان بسپارید. ما به صورت کاملا رایگان فرایند نصب سی پنل را برای شما انجام میدهیم."
+    }
+  },{
+    "@type": "Question",
+    "name": "انتقال اطلاعات پس از خرید سرور مجازی چگونه است؟",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "اطلاعات سرور قبلی به صورت کاملا رایگان و کم تر از 1 ساعت توسط کارشناس های پرشین میزبان به سرور جدید شما منتقل خواهد شد. تنها کافیست دسترسی سرور قبلی را از طریق تیکت برای واحد فنی ارسال کنید."
+    }
+  },{
+    "@type": "Question",
+    "name": "در سرور مجازی پرشین میزبان امکان ارتقا لحظه ای منابع وجود دارد؟",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "بله، هر زمان که مایل باشید میتوانید از طریق پنل مدیریت موجود در پنل پرشین میزبان، سرورتان را به پلن های بالاتر ارتقاع انجام دهید و یا به صورت مازاد ip, Ram, Cpu و هارد دریافت کنید."
+    }
+  },{
+    "@type": "Question",
+    "name": "در سرور مجازی چه سیستم عامل هایی قالب نصب می باشد؟",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "تمام نسخه های لینوکس و ویندوز کلاینت و سرور و میکروتیک ... قابل ارائه می باشد. در صورتی که نیاز به سیستم عامل خاصی دارید میتوانید لینک iso مورد نظرتون رو ارسال کنید تا روی سرورتان نصب و تنظیم شود."
+    }
+  },{
+    "@type": "Question",
+    "name": "آیا برای کار با سرور مجازی پرشین میزبان نیاز به تخصص و دانش فنی دارم؟",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "خیر، نیاز به تخصص خاصی ندارید. چراکه سرور مجازی با سیستم عامل ویندوز، لینوکس... به انتخاب شما نصب و تحویل میشود و تنها برای کارکردن با سرور مجازی کافیست که مسلط به سیستم عامل ویندوز یا لینوکس یا... باشید."
+    }
+  },{
+    "@type": "Question",
+    "name": "چگونه می توانیم از طریق پرشین میزبان کسب درآمد کنیم؟",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "از قسمت همکاری در فروش می توانید کسب درآمد کنید. با هر فروش موفق بین 20 تا 40 درصد پورسانت دریافت میکنید. در این خصوص کاربران باید در پرشین میزبان عضو شده و لینک همکاری در فروش مخصوص خودشان را از ناحیه کاربری دریافت کنند."
+    }
+  },{
+    "@type": "Question",
+    "name": "پرشین میزبان چه کمپین و آفر های حمایتی برای کسب و کار های تازه تاسیس در نظر گرفته است؟",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "پرشین میزبان به کسب و کار های نوپا 20 درصد تخفیف برای اولین خرید ارائه میکند، همین طور نیازی به پرداخت هزینه برای دریافت قالب یا افزونه ندارند و موارد فنی مرتبط با سایت یا اپلیکیشن هاشونو به صورت رایگان میتوانند به پشتیبان فنی پرشین میزبان بسپارند. امید داریم با حمایت فنی و مالی از کار آفرین ها قدمی در مسیر حمایت از اشتغال آفرینی برداشته باشیم."
+    }
+  },{
+    "@type": "Question",
+    "name": "چرا پرشین میزبان؟",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "گارانتی عودت وجه 14 روزه
+ارائه پهنای باند نامحدود در تمام سرویس ها
+انتقال رایگان اطلاعات سایت مشتری از شرکت های دیگر به پرشین میزبان
+بهره گیری از فایروال های سخت افزاری قدرتمند به جهت افزایش امنیت در کل شبکه سرویس ها
+بکاپ گیری منظم روزانه و نگهناری آرشیو بکاپ ها به مدت 7 روز
+مانیتورینگ 24 ساعته حتی در روز های تعطیل سرور ها به جهت جلوگیری از بروز مشکلات احتمالی
+استفاده از سرور های بروز و قدرتمند سخت افزاری با مالکیت 100 درصد انحصاری پرشین میزبان"
+    }
+  }]
 }
 </script>
-<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="fad6f86d-8985-4c3d-808f-e97f7658ec10";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 </body>
 </html>
