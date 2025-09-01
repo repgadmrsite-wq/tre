@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npm-run-all --parallel watch:sass watch:postcss",
+    "dev": "npm-run-all build --parallel watch:sass watch:postcss",
     "watch:sass": "sass --watch src/style.scss:dist/style.css --no-source-map",
     "watch:postcss": "postcss --watch dist/style.css --no-map -o dist/style.min.css",
-    "build": "sass src/style.scss dist/style.css --no-source-map && postcss dist/style.css --no-map -o dist/style.min.css"
+    "build": "sass src/style.scss dist/style.css --no-source-map && postcss dist/style.css --no-map -o dist/style.min.css && rm dist/style.css"
   },
   "keywords": [],
   "author": "",
