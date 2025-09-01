@@ -18,7 +18,7 @@
     <div class="container" >
         <div class="d-flex" >
             <div class="mob-menu" ></div>
-            <div class="logo" onclick="location.href='https://www.persianmizban.com/';" ></div>
+            <a class="logo" href="https://www.persianmizban.com/"></a>
             <div class="nav-mid">
                 <ul>
                     <li>

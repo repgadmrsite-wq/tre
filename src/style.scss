@@ -1085,6 +1085,7 @@ button.swiper-pagination-bullet {
     }
 }
 #top-nav .logo {
+    display: block;
     width: 13.5rem;
     min-width: 13.5rem;
     height: 5.75rem;
@@ -3091,6 +3092,7 @@ input:focus {
     }
 }
 #footer .logo {
+    display: block;
     width: 13.5rem;
     height: 5.75rem;
     background: url("img/logo.png") right center no-repeat;
