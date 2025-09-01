@@ -107,7 +107,7 @@ include '../partials/header.php';
             <div class="d-flex flex-col" sm="col-2 flex-row" lg="col-4">
                 <textarea id="form-message" name="message" placeholder="شروع به نوشتن کنید ..." required></textarea>
                 <div class="mt-auto" sm="mr-6" >
-                    <button type="submit" onclick="alert('نظر شما با موفقیت ارسال شد. از همکاری شما متشکریم.')">
+                    <button type="submit" id="contact-submit">
                         <span class="icon-tick"></span>
                         ارسال پیام
                     </button>

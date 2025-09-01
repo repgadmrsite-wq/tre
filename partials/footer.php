@@ -64,7 +64,7 @@
             </div>
             <div class="col-2">
                 <div class="-bg-primary-3 rounded-6 pa-4 text-center">
-                    <a href="#" onclick="window.open('<?php echo $baseUrl; ?>namad.php','','resizable=1,scrollbars=1,width=750,height=500,top=400,left=400');return false;" title="نماد های اعتماد پرشین میزبان"><img src="<?php echo $baseUrl; ?>img/namad.png" alt="نماد اعتماد"><br><img src="<?php echo $baseUrl; ?>img/samandehi.png" alt="نماد ساماندهی"></a>
+                    <a href="<?php echo $baseUrl; ?>namad.php" id="namad-link" target="_blank" rel="noopener noreferrer" title="نماد های اعتماد پرشین میزبان"><img src="<?php echo $baseUrl; ?>img/namad.png" alt="نماد اعتماد"><br><img src="<?php echo $baseUrl; ?>img/samandehi.png" alt="نماد ساماندهی"></a>
                 </div>
             </div>
         </div>

@@ -376,3 +376,12 @@ function setSlidesNavPos3(i){
         active.classList.add("active")
 }
 setSlidesNavPos3(0);
+
+document.getElementById('contact-submit')?.addEventListener('click', function () {
+    alert('نظر شما با موفقیت ارسال شد. از همکاری شما متشکریم.');
+});
+
+document.getElementById('namad-link')?.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.open(this.href, '', 'resizable=1,scrollbars=1,width=750,height=500,top=400,left=400');
+});
