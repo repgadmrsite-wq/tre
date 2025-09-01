@@ -376,14 +376,3 @@ function setSlidesNavPos3(i){
         active.classList.add("active")
 }
 setSlidesNavPos3(0);
-// Dark mode toggle
-(function(){
-    const toggle = document.getElementById('theme-toggle');
-    if (toggle) {
-        toggle.addEventListener('click', function () {
-            const isDark = document.body.classList.toggle('dark');
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
-        });
-    }
-})();
-

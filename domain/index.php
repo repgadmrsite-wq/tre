@@ -1,7 +1,7 @@
 <?php
 $pageTitle = 'ثبت دامنه و خرید دامین com ir net و تمام پسوند ها | پرشین میزبان';
 $pageDescription = 'ثبت دامنه و خرید دامنه (دامین) با پسوند های com, ir, net و تمام پسوند های دیگر با ارزان ترین قیمت در ایران';
-include $_SERVER['DOCUMENT_ROOT'].'/partials/header.php';
+include '../partials/header.php';
 ?>
                 <div class="mb-10 text-lh-5 text-85">اولین قدم برای راه اندازی وب سایت، انتخاب نام دامین متناسب با نام موسسه، محصول یا هر نام دلخواه شماست که ازین پس با این نام در دنیای مجازی شناخته خواهید شد.
                     از مهم ترین ویژگی های خدمات دامین پرشین میزبان میتوان به موارد زیر اشاره نمود </div>
@@ -897,4 +897,4 @@ include $_SERVER['DOCUMENT_ROOT'].'/partials/header.php';
         </div>
     </div>
 </section>
-<?php include $_SERVER['DOCUMENT_ROOT'].'/partials/footer.php'; ?>
+<?php include '../partials/footer.php'; ?>

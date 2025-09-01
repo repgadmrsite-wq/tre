@@ -1,7 +1,7 @@
 <?php
 $pageTitle = 'درباره ی شرکت هاستینگ میزبان داده فیدار | پرشین میزبان';
 $pageDescription = 'پرشین میزبان به عنوان یکی از بزرگترین ارائه دهنده خدمات میزبانی وب و ثبت دامنه در ایران، با بیش از 16 سال سابقه فعالیت در زمینه هاستینگ';
-include $_SERVER['DOCUMENT_ROOT'].'/partials/header.php';
+include '../partials/header.php';
 ?>
                 <div class="content">
                     <div lg="col-3 pr-8">
@@ -705,4 +705,4 @@ include $_SERVER['DOCUMENT_ROOT'].'/partials/header.php';
     </div>
 </section>
 
-<?php include $_SERVER['DOCUMENT_ROOT'].'/partials/footer.php'; ?>
+<?php include '../partials/footer.php'; ?>

@@ -6,7 +6,7 @@ $breadcrumbs = [
     '/vps/' => 'سرور مجازی',
     '/vps/finland' => 'سرور مجازی فنلاند',
 ];
-include $_SERVER['DOCUMENT_ROOT'].'/partials/header.php';
+include '../partials/header.php';
 include $_SERVER['DOCUMENT_ROOT'].'/partials/breadcrumb.php';
 ?>
 <section id="host-slider" >
@@ -1487,4 +1487,4 @@ include $_SERVER['DOCUMENT_ROOT'].'/partials/breadcrumb.php';
     </div>
 </section>
 
-<?php include $_SERVER['DOCUMENT_ROOT'].'/partials/footer.php'; ?>
+<?php include '../partials/footer.php'; ?>

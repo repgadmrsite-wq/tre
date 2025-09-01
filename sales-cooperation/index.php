@@ -1,7 +1,7 @@
 <?php
 $pageTitle = 'شرکای پرشین میزبان - بازاریابی و همکاری در فروش هاستینگ';
 $pageDescription = 'پرشین میزبان به عنوان یکی از بزرگترین ارائه دهنده خدمات میزبانی وب و ثبت دامنه در ایران، با بیش از 16 سال سابقه فعالیت در زمینه هاستینگ';
-include $_SERVER['DOCUMENT_ROOT'].'/partials/header.php';
+include '../partials/header.php';
 ?>
                 <img class="w-full" src="/img/img-affiliate.png" alt="بازاریابی در پرشین میزبان">
             </div>
@@ -510,4 +510,4 @@ include $_SERVER['DOCUMENT_ROOT'].'/partials/header.php';
 
 
 
-<?php include $_SERVER['DOCUMENT_ROOT'].'/partials/footer.php'; ?>
+<?php include '../partials/footer.php'; ?>

@@ -6,7 +6,7 @@ $breadcrumbs = [
     '/web-hosting/' => 'خرید هاست',
     '/web-hosting/germany-download-host' => 'هاست دانلود آلمان',
 ];
-include $_SERVER['DOCUMENT_ROOT'].'/partials/header.php';
+include '../partials/header.php';
 include $_SERVER['DOCUMENT_ROOT'].'/partials/breadcrumb.php';
 ?>
 
@@ -1019,4 +1019,4 @@ include $_SERVER['DOCUMENT_ROOT'].'/partials/breadcrumb.php';
     </div>
 </section>
 
-<?php include $_SERVER['DOCUMENT_ROOT'].'/partials/footer.php'; ?>
+<?php include '../partials/footer.php'; ?>

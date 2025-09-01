@@ -20,6 +20,15 @@
     if (saved === 'dark') {
         document.body.classList.add('dark');
     }
+    document.addEventListener('DOMContentLoaded', function() {
+        var toggle = document.getElementById('theme-toggle');
+        if (toggle) {
+            toggle.addEventListener('click', function () {
+                var isDark = document.body.classList.toggle('dark');
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            });
+        }
+    });
 })();
 </script>
 <div id="app" >

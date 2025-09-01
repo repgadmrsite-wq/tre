@@ -14,7 +14,7 @@ $extraHead = <<<HTML
     <meta name="twitter:description" content="خرید هاست و خدمات هاستینگ از پرشین میزبان که پرسرعت ترین هاستینگ کشور است، و با زیرساختی امن و مستحکم، فروش اینترنتی را قدرتمند پیگیری">
     <meta name="twitter:image" content="https://www.persianmizban.com/img/logo.png">
 HTML;
-include $_SERVER['DOCUMENT_ROOT'].'/partials/header.php';
+include 'partials/header.php';
 ?>
 <section id="header" class="home-header">
     <div class="container" >
@@ -681,4 +681,4 @@ include $_SERVER['DOCUMENT_ROOT'].'/partials/header.php';
     </div>
 </section>
 
-<?php include $_SERVER['DOCUMENT_ROOT'].'/partials/footer.php'; ?>
+<?php include 'partials/footer.php'; ?>

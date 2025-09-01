@@ -1,7 +1,7 @@
 <?php
 $pageTitle = 'شماره حساب ها و اطلاعات پرداخت | پرشین میزبان';
 $pageDescription = 'شماره حساب های شرکت پرشین میزبان (میزبان داده فیدار) برای افرادی که امکان پرداخت آنلاین ندارند یا برای انجام حواله های بانکی';
-include $_SERVER['DOCUMENT_ROOT'].'/partials/header.php';
+include '../partials/header.php';
 ?>
         <div class="grid col-2 a-items-center" lg="cols-11">
             <div lg="col-4">
@@ -205,4 +205,4 @@ include $_SERVER['DOCUMENT_ROOT'].'/partials/header.php';
 </section>
 
 
-<?php include $_SERVER['DOCUMENT_ROOT'].'/partials/footer.php'; ?>
+<?php include '../partials/footer.php'; ?>
