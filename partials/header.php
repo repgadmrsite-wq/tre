@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no, shrink-to-fit=no">
     <meta name="theme-color" content="#32228f">
     <?php if (!empty($pageDescription)): ?>
-    <meta name="description" content="<?php echo $pageDescription; ?>">
+    <meta name="description" content="<?php echo htmlspecialchars($pageDescription, ENT_QUOTES, 'UTF-8'); ?>">
     <?php endif; ?>
-    <?php if (!empty($extraHead)) echo $extraHead; ?>
-    <title><?php echo $pageTitle ?? ''; ?></title>
+    <?php if (!empty($extraHead)) echo strip_tags($extraHead, '<meta><link>'); ?>
+    <title><?php echo htmlspecialchars($pageTitle ?? '', ENT_QUOTES, 'UTF-8'); ?></title>
     <link rel="shortcut icon" href="/favicon.ico" type="image/ico">
     <link rel="stylesheet" href="/dist/style.min.css">
 </head>
