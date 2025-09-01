@@ -3,12 +3,12 @@
 <head>
     <title>درباره ی شرکت هاستینگ میزبان داده فیدار | پرشین میزبان</title>
     <meta name="description" content="پرشین میزبان به عنوان یکی از بزرگترین ارائه دهنده خدمات میزبانی وب و ثبت دامنه در ایران، با بیش از 16 سال سابقه فعالیت در زمینه هاستینگ" />
-    <link rel="shortcut icon" href="../favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no, shrink-to-fit=no">
     <meta name="theme-color" content="#32228f">
     <meta charset="utf-8">
 
-    <link rel="stylesheet" href="../dist/style.min.css">
+    <link rel="stylesheet" href="/dist/style.min.css">
 </head>
 <body>
 <div id="app" >
@@ -109,7 +109,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/hostiran.png" alt="هاست ایران" />
+                                <img src="/profile/hostiran.png" alt="هاست ایران" />
                             </div>
                             <div>
                                 <div class="fa" >هاست سی پنل ایران</div>
@@ -145,7 +145,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/brandenburg-gate.png" alt="هاست آلمان" />
+                                <img src="/profile/brandenburg-gate.png" alt="هاست آلمان" />
                             </div>
                             <div>
                                 <div class="fa" >هاست سی پنل آلمان</div>
@@ -180,7 +180,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/hostingwordpress.png" alt="هاست وردپرس" />
+                                <img src="/profile/hostingwordpress.png" alt="هاست وردپرس" />
                             </div>
                             <div>
                                 <div class="fa" >هاست مخصوص وردپرس</div>
@@ -215,7 +215,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/hostdliran.png" alt="هاست دانلود ایران" />
+                                <img src="/profile/hostdliran.png" alt="هاست دانلود ایران" />
                             </div>
                             <div>
                                 <div class="fa" >هاست دانلود ایران</div>
@@ -250,7 +250,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/hostdlgermany.png" alt="هاست دانلود آلمان" />
+                                <img src="/profile/hostdlgermany.png" alt="هاست دانلود آلمان" />
                             </div>
                             <div>
                                 <div class="fa" >هاست دانلود آلمان</div>
@@ -288,7 +288,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/domainmelli.png" alt="ثبت دامنه" />
+                                <img src="/profile/domainmelli.png" alt="ثبت دامنه" />
                             </div>
                             <div>
                                 <div class="fa" >ثبت دامنه با مالکیت کامل</div>
@@ -324,7 +324,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/tld.png" alt="انتقال دامنه" />
+                                <img src="/profile/tld.png" alt="انتقال دامنه" />
                             </div>
                             <div>
                                 <div class="fa" >انتقال دامنه مطمئن</div>
@@ -359,7 +359,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/domaintransfer.png" alt="تمدید دامنه" />
+                                <img src="/profile/domaintransfer.png" alt="تمدید دامنه" />
                             </div>
                             <div>
                                 <div class="fa" >تمدید دامنه ارزان</div>
@@ -397,7 +397,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/iran.png" alt="سرور مجازی ایران" />
+                                <img src="/profile/iran.png" alt="سرور مجازی ایران" />
                             </div>
                             <div>
                                 <div class="fa" >سرور مجازی ایران</div>
@@ -433,7 +433,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/germany.png" alt="سرور مجازی آلمان" />
+                                <img src="/profile/germany.png" alt="سرور مجازی آلمان" />
                             </div>
                             <div>
                                 <div class="fa" >سرور مجازی آلمان</div>
@@ -469,7 +469,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/usa.png" alt="سرور مجازی آمریکا" />
+                                <img src="/profile/usa.png" alt="سرور مجازی آمریکا" />
                             </div>
                             <div>
                                 <div class="fa" >سرور مجازی آمریکا</div>
@@ -504,7 +504,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/finland.png" alt="سرور مجازی فنلاند" />
+                                <img src="/profile/finland.png" alt="سرور مجازی فنلاند" />
                             </div>
                             <div>
                                 <div class="fa" >سرور مجازی فنلاند</div>
@@ -542,7 +542,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/iran-vds.png" alt="سرور اختصاصی ایران" />
+                                <img src="/profile/iran-vds.png" alt="سرور اختصاصی ایران" />
                             </div>
                             <div>
                                 <div class="fa" >سرور اختصاصی ایران</div>
@@ -578,7 +578,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/france-vds.png" alt="سرور اختصاصی فرانسه" />
+                                <img src="/profile/france-vds.png" alt="سرور اختصاصی فرانسه" />
                             </div>
                             <div>
                                 <div class="fa" >سرور اختصاصی فرانسه</div>
@@ -614,7 +614,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/netherlands-vds.png" alt="سرور اختصاصی هلند" />
+                                <img src="/profile/netherlands-vds.png" alt="سرور اختصاصی هلند" />
                             </div>
                             <div>
                                 <div class="fa" >سرور اختصاصی هلند</div>
@@ -649,7 +649,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/germany-vds.png" alt="سرور اختصاصی آلمان" />
+                                <img src="/profile/germany-vds.png" alt="سرور اختصاصی آلمان" />
                             </div>
                             <div>
                                 <div class="fa" >سرور اختصاصی آلمان</div>
@@ -741,7 +741,7 @@
     <div class="container">
         <div class="grid cols-1 a-items-center" md="cols-4">
             <div md="col-3" class="py-4" >
-                <img src="img/img-history-title.svg" alt="تاریخچه و فعالیت پرشین میزبان" class="max-w-full mb-4">
+                <img src="/img/img-history-title.svg" alt="تاریخچه و فعالیت پرشین میزبان" class="max-w-full mb-4">
                 <div class="text-primary text-80 lh">
                     <b>پرشین میزبان</b>
                     به عنوان یکی از بزرگترین ارائه دهندگان خدمات زیرساخت میزبانی وب و ثبت دامنه در ایران، فعالیت خود را از سال 82 با هدف گسترش استفاده از فناوری اطلاعات و ارائه خدمات پرسرعت، پایدار و با کیفیت آغاز؛ و با ثبت شرکت با نام <b>میزبان داده فیدار</b> در تاریخ 1399/02/27 با <b>شماره ثبت 4654</b> به صورت رسمی تاسیس شده است.</br>ما در پرشین میزبان، زیرساخت آنلاین شدن اشخاص و کسب‌وکارها را با بالاترین کیفیت فراهم می‌آوریم.
@@ -751,7 +751,7 @@
             </div>
             <div i-md="d-none" >
                 <div class="image">
-                    <img src="img/img-history-2.png" alt="پرشین میزبان" class="w-full">
+                    <img src="/img/img-history-2.png" alt="پرشین میزبان" class="w-full">
                     <div class="c1"></div>
                     <div class="c2"></div>
                     <div class="c3"></div>
@@ -770,7 +770,7 @@
     <div class="container mt-40">
         <div class="grid cols-1 a-items-center mb-4" lg="cols-5">
             <div lg="col-3 text-center">
-                <img src="img/img-our-team.svg" alt="تیم پرشین میزبان" class="w-3fourth">
+                <img src="/img/img-our-team.svg" alt="تیم پرشین میزبان" class="w-3fourth">
             </div>
             <div lg="col-2">
                 <div class="employees">
@@ -782,7 +782,7 @@
                         <br i-sm="d-none" >
                         <b>ارائـه خدمات بـهتر به شما عـزیزان</b>
                     </div>
-                    <img src="img/img-employee-number.png" alt="پرسنل پرشین میزبان" >
+                    <img src="/img/img-employee-number.png" alt="پرسنل پرشین میزبان" >
                 </div>
             </div>
         </div>
@@ -795,7 +795,7 @@
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="profile/SALES101.jpg" alt="فرنام تهرانی">
+                        <img src="/profile/SALES101.jpg" alt="فرنام تهرانی">
                         <div class="text-primary text-w-medium mb-1">فرنام تهرانی</div>
                         <div class="text-80">کارشناس واحد فروش</div>
                     </div>
@@ -804,7 +804,7 @@
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="profile/SALES102.jpg" alt="پریزاد ملایری">
+                        <img src="/profile/SALES102.jpg" alt="پریزاد ملایری">
                         <div class="text-primary text-w-medium mb-1">پریزاد ملایری</div>
                         <div class="text-80">کارشناس واحد مالی</div>
                     </div>
@@ -813,7 +813,7 @@
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="profile/SALES103.jpg" alt="آوازه یادگار">
+                        <img src="/profile/SALES103.jpg" alt="آوازه یادگار">
                         <div class="text-primary text-w-medium mb-1">آوازه یادگار</div>
                         <div class="text-80">کارشناس واحد فروش</div>
                     </div>
@@ -822,7 +822,7 @@
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="profile/SALES104.jpg" alt="نسترن علی زمانی">
+                        <img src="/profile/SALES104.jpg" alt="نسترن علی زمانی">
                         <div class="text-primary text-w-medium mb-1">نسترن علی زمانی</div>
                         <div class="text-80">کارشناس واحد فروش</div>
                     </div>
@@ -831,7 +831,7 @@
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="profile/SALES105.jpg" alt="رویا باطنی">
+                        <img src="/profile/SALES105.jpg" alt="رویا باطنی">
                         <div class="text-primary text-w-medium mb-1">رویا باطنی</div>
                         <div class="text-80">کارشناس واحد فروش</div>
                     </div>
@@ -840,7 +840,7 @@
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="profile/SALES106.jpg" alt="زهرا ثابتی">
+                        <img src="/profile/SALES106.jpg" alt="زهرا ثابتی">
                         <div class="text-primary text-w-medium mb-1">زهرا ثابتی</div>
                         <div class="text-80">کارشناس واحد مالی</div>
                     </div>
@@ -849,7 +849,7 @@
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="profile/SALES107.jpg" alt="پرستو آشتیبانی">
+                        <img src="/profile/SALES107.jpg" alt="پرستو آشتیبانی">
                         <div class="text-primary text-w-medium mb-1">پرستو آشتیانی</div>
                         <div class="text-80">کارشناس واحد مالی</div>
                     </div>
@@ -857,7 +857,7 @@
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="profile/SALES108.jpg" alt="فاطمه اصلانی">
+                        <img src="/profile/SALES108.jpg" alt="فاطمه اصلانی">
                         <div class="text-primary text-w-medium mb-1">فاطمه اصلانی</div>
                         <div class="text-80">کارشناس واحد پشتیبانی</div>
                     </div>
@@ -865,7 +865,7 @@
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="profile/SALES109.jpg" alt="لیلا اصفهانی">
+                        <img src="/profile/SALES109.jpg" alt="لیلا اصفهانی">
                         <div class="text-primary text-w-medium mb-1">لیلا اصفهانی</div>
                         <div class="text-80">کارشناس واحد پشتیبانی</div>
                     </div>
@@ -873,7 +873,7 @@
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="profile/SALES110.jpg" alt="زینب شیرازی">
+                        <img src="/profile/SALES110.jpg" alt="زینب شیرازی">
                         <div class="text-primary text-w-medium mb-1">زینب شیرازی</div>
                         <div class="text-80">کارشناس واحد پشتیبانی</div>
                     </div>
@@ -890,7 +890,7 @@
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="profile/SUPPORT101.jpg" alt="خدایار فولادوند">
+                        <img src="/profile/SUPPORT101.jpg" alt="خدایار فولادوند">
                         <div class="text-primary text-w-medium mb-1">خدایار فولادوند</div>
                         <div class="text-80">کارشناس واحد پشتیبانی</div>
                     </div>
@@ -899,7 +899,7 @@
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="profile/SUPPORT102.jpg" alt="حسین واثقی">
+                        <img src="/profile/SUPPORT102.jpg" alt="حسین واثقی">
                         <div class="text-primary text-w-medium mb-1">حسین واثقی</div>
                         <div class="text-80">کارشناس واحد پشتیبانی</div>
                     </div>
@@ -908,7 +908,7 @@
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="profile/SUPPORT103.jpg" alt="مهرداد انوشه">
+                        <img src="/profile/SUPPORT103.jpg" alt="مهرداد انوشه">
                         <div class="text-primary text-w-medium mb-1">مهرداد انوشه</div>
                         <div class="text-80">کارشناس سرشیفت</div>
                     </div>
@@ -917,7 +917,7 @@
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="profile/SUPPORT104.jpg" alt="جواد شرف">
+                        <img src="/profile/SUPPORT104.jpg" alt="جواد شرف">
                         <div class="text-primary text-w-medium mb-1">جواد شرف</div>
                         <div class="text-80">کارشناس واحد پشتیبانی</div>
                     </div>
@@ -926,7 +926,7 @@
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="profile/SUPPORT105.jpg" alt="جواد سبزواری">
+                        <img src="/profile/SUPPORT105.jpg" alt="جواد سبزواری">
                         <div class="text-primary text-w-medium mb-1">جواد سبزواری</div>
                         <div class="text-80">کارشناس واحد پشتیبانی</div>
                     </div>
@@ -935,7 +935,7 @@
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="profile/SUPPORT106.jpg" alt="علی وکیلی">
+                        <img src="/profile/SUPPORT106.jpg" alt="علی وکیلی">
                         <div class="text-primary text-w-medium mb-1">علی وکیلی</div>
                         <div class="text-80">کارشناس واحد پشتیبانی</div>
                     </div>
@@ -944,7 +944,7 @@
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="profile/SUPPORT107.jpg" alt="مهدی ملایری">
+                        <img src="/profile/SUPPORT107.jpg" alt="مهدی ملایری">
                         <div class="text-primary text-w-medium mb-1">مهدی ملایری</div>
                         <div class="text-80">کارشناس سرشیفت</div>
                     </div>
@@ -953,7 +953,7 @@
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="profile/SUPPORT108.jpg" alt="اکبر محمدرضایی">
+                        <img src="/profile/SUPPORT108.jpg" alt="اکبر محمدرضایی">
                         <div class="text-primary text-w-medium mb-1">اکبر محمدرضایی</div>
                         <div class="text-80">کارشناس واحد پشتیبانی</div>
                     </div>
@@ -961,7 +961,7 @@
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="profile/SUPPORT109.jpg" alt="رضا قهرمانی">
+                        <img src="/profile/SUPPORT109.jpg" alt="رضا قهرمانی">
                         <div class="text-primary text-w-medium mb-1">رضا قهرمانی</div>
                         <div class="text-80">کارشناس واحد پشتیبانی</div>
                     </div>
@@ -969,7 +969,7 @@
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="profile/SUPPORT110.jpg" alt="داوود مجاهد">
+                        <img src="/profile/SUPPORT110.jpg" alt="داوود مجاهد">
                         <div class="text-primary text-w-medium mb-1">داوود مجاهد</div>
                         <div class="text-80">کارشناس واحد پشتیبانی</div>
                     </div>
@@ -977,7 +977,7 @@
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="profile/SUPPORT111.jpg" alt="محمد نامور">
+                        <img src="/profile/SUPPORT111.jpg" alt="محمد نامور">
                         <div class="text-primary text-w-medium mb-1">محمد نامور</div>
                         <div class="text-80">کارشناس واحد پشتیبانی</div>
                     </div>
@@ -985,7 +985,7 @@
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="profile/SUPPORT112.jpg" alt="یزدان نقیب زاده">
+                        <img src="/profile/SUPPORT112.jpg" alt="یزدان نقیب زاده">
                         <div class="text-primary text-w-medium mb-1">یزدان نقیب زاده</div>
                         <div class="text-80">کارشناس سرشیفت</div>
                     </div>
@@ -993,7 +993,7 @@
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="profile/SUPPORT113.jpg" alt="بردیا آهنگر">
+                        <img src="/profile/SUPPORT113.jpg" alt="بردیا آهنگر">
                         <div class="text-primary text-w-medium mb-1">بردیا آهنگر</div>
                         <div class="text-80">کارشناس واحد پشتیبانی</div>
                     </div>
@@ -1001,7 +1001,7 @@
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="profile/SUPPORT114.jpg" alt="آیدین واعظی">
+                        <img src="/profile/SUPPORT114.jpg" alt="آیدین واعظی">
                         <div class="text-primary text-w-medium mb-1">آیدین واعظی</div>
                         <div class="text-80">کارشناس واحد پشتیبانی</div>
                     </div>
@@ -1009,7 +1009,7 @@
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="profile/SUPPORT115.jpg" alt="روح الله شیرازی">
+                        <img src="/profile/SUPPORT115.jpg" alt="روح الله شیرازی">
                         <div class="text-primary text-w-medium mb-1">روح الله شیرازی</div>
                         <div class="text-80">کارشناس سرشیفت</div>
                     </div>
@@ -1017,7 +1017,7 @@
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="profile/SUPPORT116.jpg" alt="یاسین فهمیده">
+                        <img src="/profile/SUPPORT116.jpg" alt="یاسین فهمیده">
                         <div class="text-primary text-w-medium mb-1">یاسین فهمیده</div>
                         <div class="text-80">کارشناس واحد پشتیبانی</div>
                     </div>
@@ -1025,7 +1025,7 @@
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="profile/SUPPORT117.jpg" alt="پویا امانی">
+                        <img src="/profile/SUPPORT117.jpg" alt="پویا امانی">
                         <div class="text-primary text-w-medium mb-1">پویا امانی</div>
                         <div class="text-80">کارشناس واحد پشتیبانی</div>
                     </div>
@@ -1033,7 +1033,7 @@
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="profile/SUPPORT118.jpg" alt="اقا رضا کاکاوند">
+                        <img src="/profile/SUPPORT118.jpg" alt="اقا رضا کاکاوند">
                         <div class="text-primary text-w-medium mb-1">آقا رضا کاکاوند</div>
                         <div class="text-80">کارشناس واحد توسعه</div>
                     </div>
@@ -1041,7 +1041,7 @@
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="profile/SUPPORT119.jpg" alt="یحیی باغبانی">
+                        <img src="/profile/SUPPORT119.jpg" alt="یحیی باغبانی">
                         <div class="text-primary text-w-medium mb-1">یحیی باغبانی</div>
                         <div class="text-80">کارشناس واحد توسعه</div>
                     </div>
@@ -1049,7 +1049,7 @@
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="profile/SUPPORT120.jpg" alt="شایان خدادادی">
+                        <img src="/profile/SUPPORT120.jpg" alt="شایان خدادادی">
                         <div class="text-primary text-w-medium mb-1">شایان خدادادی</div>
                         <div class="text-80">کارشناس واحد توسعه</div>
                     </div>
@@ -1066,7 +1066,7 @@
     <div class="container">
         <div class="grid cols-1 a-items-center" lg="cols-5">
             <div lg="col-2" >
-                <img src="img/img-mission-title.svg" alt="ماموریت پرشین میزبان" class="max-w-full mb-4">
+                <img src="/img/img-mission-title.svg" alt="ماموریت پرشین میزبان" class="max-w-full mb-4">
                 <p class="text-80">ما همواره سخت می‌کوشیم تا ورود همه افراد و کسب و کارهارا به بستر اینترنت و آنلاین شدن به آسان‌ترین، امن‌ترین و به صرفه ترین روش ممکن امکان پذیر کنیم و با تسهیل ارائه خدمات زیرساختی و حمایتی به کسب و کار ها و شرکت های دانش بنیان، به رشد اقتصادی و افزایش رفاه در ایران کمک می کنیم.</p>
                 <ul class="text-90">
                     <li>ارزش‌آفرینی پایدار در صنعت وب و آی تی کشور</li>
@@ -1076,7 +1076,7 @@
             </div>
             <div lg="col-3" i-lg="d-none" >
                 <div class="image">
-                    <img src="img/img-map2.svg" alt="دیتاسنتر های منتخب پرشین میزبان" class="w-full">
+                    <img src="/img/img-map2.svg" alt="دیتاسنتر های منتخب پرشین میزبان" class="w-full">
                     <div class="marker marker-1"></div>
                     <div class="marker marker-2"></div>
                     <div class="marker marker-3"></div>
@@ -1101,7 +1101,7 @@
     <div class="container" >
         <div class="grid cols-2 a-items-center" sm="cols-4" lg="cols-6">
             <div class="col-2" sm="col-4" lg="col-2" >
-                <img class="w-full mx-auto d-block" i-lg="max-w-(414px)" src="img/img-inside.png" >
+                <img class="w-full mx-auto d-block" i-lg="max-w-(414px)" src="/img/img-inside.png" >
             </div>
             <div>
                 <div class="box box2" >
@@ -1142,7 +1142,7 @@
     <div class="container">
         <div class="grid cols-1" lg="cols-2">
             <div>
-                <img src="img/img-story.svg" alt="داستان پرشین میزبان" class="max-w-full">
+                <img src="/img/img-story.svg" alt="داستان پرشین میزبان" class="max-w-full">
                 <div class="en">PERSIAN MIZBAN STORY</div>
                 <div class="text-80 lh">
                     پرشین میزبان، از رویاهای دوران نوجوانی شروع شد. در ابتدا تعدادی از دوست‌های بلندپرواز قدیمی بودیم که دور هم جمع شدیم.
@@ -1159,49 +1159,49 @@
         <div class="grid cols-2 gap-0" lg="cols-4">
             <div>
                 <div class="box">
-                    <img src="img/enasmad.png" alt="نماد اعتماد الکترونیک">
+                    <img src="/img/enasmad.png" alt="نماد اعتماد الکترونیک">
                     نماد اعتماد الکترونیک
                 </div>
             </div>
             <div>
                 <div class="box">
-                    <img src="img/nezamsenfi.jpg" alt="سازمان نظام صنفی">
+                    <img src="/img/nezamsenfi.jpg" alt="سازمان نظام صنفی">
                     سازمان نظام صنفی
                 </div>
             </div>
             <div>
                 <div class="box">
-                    <img src="img/shorainformatic.jpeg" alt="شورای عالی انفورماتیک ایران">
+                    <img src="/img/shorainformatic.jpeg" alt="شورای عالی انفورماتیک ایران">
                     شورای عالی انفورماتیک ایران
                 </div>
             </div>
             <div>
                 <div class="box">
-                    <img src="img/kasbokar.jpg" alt="انجمن صنفی کسب و کار اینترنت">
+                    <img src="/img/kasbokar.jpg" alt="انجمن صنفی کسب و کار اینترنت">
                     انجمن صنفی کسب و کار اینترنتی
                 </div>
             </div>
             <div>
                 <div class="box bbn2">
-                    <img src="img/tosetejarat.jpeg" alt="مرکز توسعه تجارت الکترونیکی">
+                    <img src="/img/tosetejarat.jpeg" alt="مرکز توسعه تجارت الکترونیکی">
                     مركز توسعه تجارت الكترونیکی
                 </div>
             </div>
             <div>
                 <div class="box bbn2">
-                    <img src="img/web-mobile-color.jpg" alt="مجمع  شرکت های ارائه دهنده خدمات وب">
+                    <img src="/img/web-mobile-color.jpg" alt="مجمع  شرکت های ارائه دهنده خدمات وب">
                     مجمع  شرکت های ارائه دهنده خدمات وب
                 </div>
             </div>
             <div>
                 <div class="box bbn">
-                    <img src="img/resane.jpg">
+                    <img src="/img/resane.jpg">
                     مرکز رسانه های دیجیتال وزارت فرهنگ و ارشاد اسلامی
                 </div>
             </div>
             <div>
                 <div class="box bbn">
-                    <img src="img/etehadi.jpg">
+                    <img src="/img/etehadi.jpg">
                     اتحادیه کشوری کسب و کارهای مجازی
                 </div>
             </div>
@@ -1216,86 +1216,86 @@
     <div class="container-fluid mt-48">
         <div class="text-center text-180 text-w-medium text-primary">بـرخی از مشتریــان ما</div>
         <div class="text-center">
-            <img src="img/img-our-customer.svg" class="w-64 mt-4" alt="">
+            <img src="/img/img-our-customer.svg" class="w-64 mt-4" alt="">
         </div>
 
         <div class="grid gap-0 cols-5" md="cols-9">
             <div></div>
             <div>
                 <div class="hexagon opacity-11">
-                    <img src="img/2992048963.png" alt="">
+                    <img src="/img/2992048963.png" alt="">
                 </div>
             </div>
             <div></div>
             <div>
                 <div class="hexagon">
-                    <img src="img/shahab.png" alt="">
+                    <img src="/img/shahab.png" alt="">
                 </div>
             </div>
             <div></div>
             <div>
                 <div class="hexagon opacity-22">
-                    <img src="img/asanapps.png" alt="">
+                    <img src="/img/asanapps.png" alt="">
                 </div>
             </div>
             <div></div>
             <div>
                 <div class="hexagon">
-                    <img src="img/kale.png" alt="">
+                    <img src="/img/kale.png" alt="">
                 </div>
             </div>
             <div></div>
             <div>
                 <div class="hexagon">
-                    <img src="img/lastnewws.png" alt="">
+                    <img src="/img/lastnewws.png" alt="">
                 </div>
             </div>
             <div></div>
             <div>
                 <div class="hexagon">
-                    <img src="img/bazarmobile-iran.png" alt="">
+                    <img src="/img/bazarmobile-iran.png" alt="">
                 </div>
             </div>
             <div></div>
             <div>
                 <div class="hexagon">
-                    <img src="img/shadli.png" alt="">
+                    <img src="/img/shadli.png" alt="">
                 </div>
             </div>
             <div></div>
             <div>
                 <div class="hexagon">
-                    <img src="img/torob1.png" alt="">
+                    <img src="/img/torob1.png" alt="">
                 </div>
             </div>
             <div></div>
             <div>
                 <div class="hexagon opacity-36">
-                    <img src="img/janat2.png" alt="">
+                    <img src="/img/janat2.png" alt="">
                 </div>
             </div>
             <div></div>
             <div>
                 <div class="hexagon">
-                    <img src="img/filtersarkan.png" alt="">
+                    <img src="/img/filtersarkan.png" alt="">
                 </div>
             </div>
             <div></div>
             <div>
                 <div class="hexagon">
-                    <img src="img/novincharm.png" alt="">
+                    <img src="/img/novincharm.png" alt="">
                 </div>
             </div>
             <div></div>
             <div>
                 <div class="hexagon">
-                    <img src="img/koajro2.png" alt="">
+                    <img src="/img/koajro2.png" alt="">
                 </div>
             </div>
             <div></div>
             <div>
                 <div class="hexagon">
-                    <img src="img/mamut-car.svg" alt="">
+                    <img src="/img/mamut-car.svg" alt="">
                 </div>
             </div>
             <div></div>
@@ -1303,19 +1303,19 @@
             <div></div>
             <div>
                 <div class="hexagon opacity-22">
-                    <img src="img/shahrdarichabahar.png" alt="">
+                    <img src="/img/shahrdarichabahar.png" alt="">
                 </div>
             </div>
             <div></div>
             <div>
                 <div class="hexagon">
-                    <img src="img/medal.png" alt="">
+                    <img src="/img/medal.png" alt="">
                 </div>
             </div>
             <div></div>
             <div>
                 <div class="hexagon opacity-36">
-                    <img src="img/mobliran.png" alt="">
+                    <img src="/img/mobliran.png" alt="">
                 </div>
             </div>
             <div></div>
@@ -1329,7 +1329,7 @@
             <div md="col-3" >
                 <div class="contact-1">
                     <div class="image">
-                        <img src="img/img-employee-number.png" >
+                        <img src="/img/img-employee-number.png" >
                     </div>
                     <div class="pt-2 text-190 text-w-black" >
                         <span class="text-White">واحد پشتیبانی</span>
@@ -1363,7 +1363,7 @@
             <div md="col-3" i-md="mt-12">
                 <div class="contact-1 contact-2">
                     <div class="image">
-                        <img src="../img/img-employee2.png" >
+                        <img src="/img/img-employee2.png" >
                     </div>
                     <div class="pt-2 text-190 text-w-black" >
                         <span class="text-black">واحد فروش</span>
@@ -1482,8 +1482,8 @@
 
 
 </div>
-<script src="js/swiper.js" ></script>
-<script src="js/scripts.js" ></script>
+<script src="/js/swiper.js" ></script>
+<script src="/js/scripts.js" ></script>
 <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="fad6f86d-8985-4c3d-808f-e97f7658ec10";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 </body>
 </html>

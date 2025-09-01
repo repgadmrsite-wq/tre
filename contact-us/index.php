@@ -3,11 +3,11 @@
 <head>
     <title>تماس با پرشین میزبان | پرشین میزبان</title>
     <meta name="description" content="تماس با پرشین میزبان از طریق پنل کاربری، چت آنلاین، تماس تلفنی و فرم ارسال نظر امکان پذیر است. بهترین روش برای پشتیبانی فنی ارسال تیکت است." />
-    <link rel="shortcut icon" href="../favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no, shrink-to-fit=no">
     <meta name="theme-color" content="#32228f">
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../dist/style.min.css">
+    <link rel="stylesheet" href="/dist/style.min.css">
 </head>
 <body>
 <div id="app" >
@@ -108,7 +108,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/hostiran.png" alt="هاست ایران" />
+                                <img src="/profile/hostiran.png" alt="هاست ایران" />
                             </div>
                             <div>
                                 <div class="fa" >هاست سی پنل ایران</div>
@@ -144,7 +144,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/brandenburg-gate.png" alt="هاست آلمان" />
+                                <img src="/profile/brandenburg-gate.png" alt="هاست آلمان" />
                             </div>
                             <div>
                                 <div class="fa" >هاست سی پنل آلمان</div>
@@ -179,7 +179,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/hostingwordpress.png" alt="هاست وردپرس" />
+                                <img src="/profile/hostingwordpress.png" alt="هاست وردپرس" />
                             </div>
                             <div>
                                 <div class="fa" >هاست مخصوص وردپرس</div>
@@ -214,7 +214,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/hostdliran.png" alt="هاست دانلود ایران" />
+                                <img src="/profile/hostdliran.png" alt="هاست دانلود ایران" />
                             </div>
                             <div>
                                 <div class="fa" >هاست دانلود ایران</div>
@@ -249,7 +249,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/hostdlgermany.png" alt="هاست دانلود آلمان" />
+                                <img src="/profile/hostdlgermany.png" alt="هاست دانلود آلمان" />
                             </div>
                             <div>
                                 <div class="fa" >هاست دانلود آلمان</div>
@@ -287,7 +287,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/domainmelli.png" alt="ثبت دامنه" />
+                                <img src="/profile/domainmelli.png" alt="ثبت دامنه" />
                             </div>
                             <div>
                                 <div class="fa" >ثبت دامنه با مالکیت کامل</div>
@@ -323,7 +323,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/tld.png" alt="انتقال دامنه" />
+                                <img src="/profile/tld.png" alt="انتقال دامنه" />
                             </div>
                             <div>
                                 <div class="fa" >انتقال دامنه مطمئن</div>
@@ -358,7 +358,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/domaintransfer.png" alt="تمدید دامنه" />
+                                <img src="/profile/domaintransfer.png" alt="تمدید دامنه" />
                             </div>
                             <div>
                                 <div class="fa" >تمدید دامنه ارزان</div>
@@ -396,7 +396,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/iran.png" alt="سرور مجازی ایران" />
+                                <img src="/profile/iran.png" alt="سرور مجازی ایران" />
                             </div>
                             <div>
                                 <div class="fa" >سرور مجازی ایران</div>
@@ -432,7 +432,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/germany.png" alt="سرور مجازی آلمان" />
+                                <img src="/profile/germany.png" alt="سرور مجازی آلمان" />
                             </div>
                             <div>
                                 <div class="fa" >سرور مجازی آلمان</div>
@@ -468,7 +468,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/usa.png" alt="سرور مجازی آمریکا" />
+                                <img src="/profile/usa.png" alt="سرور مجازی آمریکا" />
                             </div>
                             <div>
                                 <div class="fa" >سرور مجازی آمریکا</div>
@@ -503,7 +503,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/finland.png" alt="سرور مجازی فنلاند" />
+                                <img src="/profile/finland.png" alt="سرور مجازی فنلاند" />
                             </div>
                             <div>
                                 <div class="fa" >سرور مجازی فنلاند</div>
@@ -541,7 +541,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/iran-vds.png" alt="سرور اختصاصی ایران" />
+                                <img src="/profile/iran-vds.png" alt="سرور اختصاصی ایران" />
                             </div>
                             <div>
                                 <div class="fa" >سرور اختصاصی ایران</div>
@@ -577,7 +577,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/france-vds.png" alt="سرور اختصاصی فرانسه" />
+                                <img src="/profile/france-vds.png" alt="سرور اختصاصی فرانسه" />
                             </div>
                             <div>
                                 <div class="fa" >سرور اختصاصی فرانسه</div>
@@ -613,7 +613,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/netherlands-vds.png" alt="سرور اختصاصی هلند" />
+                                <img src="/profile/netherlands-vds.png" alt="سرور اختصاصی هلند" />
                             </div>
                             <div>
                                 <div class="fa" >سرور اختصاصی هلند</div>
@@ -648,7 +648,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/germany-vds.png" alt="سرور اختصاصی آلمان" />
+                                <img src="/profile/germany-vds.png" alt="سرور اختصاصی آلمان" />
                             </div>
                             <div>
                                 <div class="fa" >سرور اختصاصی آلمان</div>
@@ -694,7 +694,7 @@
             <div md="col-3" lg="col-5" i-md="mt-12">
                 <div class="contact-1 contact-2 shadow border-white border-4">
                     <div class="image image2">
-                        <img src="../img/img-employee2.png" alt="تماس با ما" >
+                        <img src="/img/img-employee2.png" alt="تماس با ما" >
                     </div>
                     <div class="pt-2 text-135 text-w-black pb-1" >
                         <div class="text-black mb-1">تماس با پرشین میزبان</div>
@@ -808,7 +808,7 @@
         <div class="list">
             <div class="comment">
                 <div class="image">
-                    <img src="../profile/cb.png" alt="کاربر" />
+                    <img src="/profile/cb.png" alt="کاربر" />
                 </div>
                 <div class="grid cols-1 text-90 text-primary mb-2" sm="cols-2">
                     <div class="text-w-medium">
@@ -825,7 +825,7 @@
 
             <div class="comment">
                 <div class="image">
-                    <img src="../profile/co.png" alt="کاربر" />
+                    <img src="/profile/co.png" alt="کاربر" />
                 </div>
                 <div class="grid cols-1 text-90 text-primary mb-2" sm="cols-2">
                     <div class="text-w-medium">
@@ -842,7 +842,7 @@
 
             <div class="comment">
                 <div class="image">
-                    <img src="../profile/cw.png" alt="کاربر" />
+                    <img src="/profile/cw.png" alt="کاربر" />
                 </div>
                 <div class="grid cols-1 text-90 text-primary mb-2" sm="cols-2">
                     <div class="text-w-medium">
@@ -859,7 +859,7 @@
 
             <div class="comment">
                 <div class="image">
-                    <img src="../profile/cr.png" alt="کاربر" />
+                    <img src="/profile/cr.png" alt="کاربر" />
                 </div>
                 <div class="grid cols-1 text-90 text-primary mb-2" sm="cols-2">
                     <div class="text-w-medium">
@@ -876,7 +876,7 @@
 
             <div class="comment">
                 <div class="image">
-                    <img src="../profile/cb.png" alt="کاربر" />
+                    <img src="/profile/cb.png" alt="کاربر" />
                 </div>
                 <div class="grid cols-1 text-90 text-primary mb-2" sm="cols-2">
                     <div class="text-w-medium">
@@ -893,7 +893,7 @@
 
             <div class="comment">
                 <div class="image">
-                    <img src="../profile/co.png" alt="کاربر" />
+                    <img src="/profile/co.png" alt="کاربر" />
                 </div>
                 <div class="grid cols-1 text-90 text-primary mb-2" sm="cols-2">
                     <div class="text-w-medium">
@@ -910,7 +910,7 @@
 
             <div class="comment">
                 <div class="image">
-                    <img src="../profile/cw.png" alt="کاربر" />
+                    <img src="/profile/cw.png" alt="کاربر" />
                 </div>
                 <div class="grid cols-1 text-90 text-primary mb-2" sm="cols-2">
                     <div class="text-w-medium">
@@ -927,7 +927,7 @@
 
             <div class="comment">
                 <div class="image">
-                    <img src="../profile/cr.png" alt="کاربر" />
+                    <img src="/profile/cr.png" alt="کاربر" />
                 </div>
                 <div class="grid cols-1 text-90 text-primary mb-2" sm="cols-2">
                     <div class="text-w-medium">
@@ -944,7 +944,7 @@
 
             <div class="comment">
                 <div class="image">
-                    <img src="../profile/cb.png" alt="کاربر" />
+                    <img src="/profile/cb.png" alt="کاربر" />
                 </div>
                 <div class="grid cols-1 text-90 text-primary mb-2" sm="cols-2">
                     <div class="text-w-medium">
@@ -961,7 +961,7 @@
 
             <div class="comment">
                 <div class="image">
-                    <img src="../profile/co.png" alt="کاربر" />
+                    <img src="/profile/co.png" alt="کاربر" />
                 </div>
                 <div class="grid cols-1 text-90 text-primary mb-2" sm="cols-2">
                     <div class="text-w-medium">
@@ -1160,8 +1160,8 @@
 
 
 </div>
-<script src="js/swiper.js" ></script>
-<script src="js/scripts.js" ></script>
+<script src="/js/swiper.js" ></script>
+<script src="/js/scripts.js" ></script>
 <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="fad6f86d-8985-4c3d-808f-e97f7658ec10";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 </body>
 </html>

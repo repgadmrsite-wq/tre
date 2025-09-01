@@ -3,12 +3,12 @@
 <head>
     <title>خرید سرور اختصاصی، سرور اختصاصی، سرور اختصاصی ایران، آلمان، هلند و فرانسه | پرشین میزبان</title>
     <meta name="description" content="خرید سرور - پرشین میزبان ارائه دهنده سرور مجازی، سرور مجازی ایران، سرور آلمان، آمریکا و فنلاند با ترافیک نامحدود و منابع اختصاصی و ارزان" />
-    <link rel="shortcut icon" href="../favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no, shrink-to-fit=no">
     <meta name="theme-color" content="#32228f">
     <meta charset="utf-8">
-    <link rel="stylesheet" href="fonts.css">
-    <link rel="stylesheet" href="../dist/style.min.css">
+    <link rel="stylesheet" href="/fonts.css">
+    <link rel="stylesheet" href="/dist/style.min.css">
 </head>
 <body>
 <div id="app" >
@@ -109,7 +109,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/hostiran.png" alt="هاست ایران" />
+                                <img src="/profile/hostiran.png" alt="هاست ایران" />
                             </div>
                             <div>
                                 <div class="fa" >هاست سی پنل ایران</div>
@@ -145,7 +145,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/brandenburg-gate.png" alt="هاست آلمان" />
+                                <img src="/profile/brandenburg-gate.png" alt="هاست آلمان" />
                             </div>
                             <div>
                                 <div class="fa" >هاست سی پنل آلمان</div>
@@ -180,7 +180,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/hostingwordpress.png" alt="هاست وردپرس" />
+                                <img src="/profile/hostingwordpress.png" alt="هاست وردپرس" />
                             </div>
                             <div>
                                 <div class="fa" >هاست مخصوص وردپرس</div>
@@ -215,7 +215,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/hostdliran.png" alt="هاست دانلود ایران" />
+                                <img src="/profile/hostdliran.png" alt="هاست دانلود ایران" />
                             </div>
                             <div>
                                 <div class="fa" >هاست دانلود ایران</div>
@@ -250,7 +250,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/hostdlgermany.png" alt="هاست دانلود آلمان" />
+                                <img src="/profile/hostdlgermany.png" alt="هاست دانلود آلمان" />
                             </div>
                             <div>
                                 <div class="fa" >هاست دانلود آلمان</div>
@@ -288,7 +288,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/domainmelli.png" alt="ثبت دامنه" />
+                                <img src="/profile/domainmelli.png" alt="ثبت دامنه" />
                             </div>
                             <div>
                                 <div class="fa" >ثبت دامنه با مالکیت کامل</div>
@@ -324,7 +324,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/tld.png" alt="انتقال دامنه" />
+                                <img src="/profile/tld.png" alt="انتقال دامنه" />
                             </div>
                             <div>
                                 <div class="fa" >انتقال دامنه مطمئن</div>
@@ -359,7 +359,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/domaintransfer.png" alt="تمدید دامنه" />
+                                <img src="/profile/domaintransfer.png" alt="تمدید دامنه" />
                             </div>
                             <div>
                                 <div class="fa" >تمدید دامنه ارزان</div>
@@ -397,7 +397,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/iran.png" alt="سرور مجازی ایران" />
+                                <img src="/profile/iran.png" alt="سرور مجازی ایران" />
                             </div>
                             <div>
                                 <div class="fa" >سرور مجازی ایران</div>
@@ -433,7 +433,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/germany.png" alt="سرور مجازی آلمان" />
+                                <img src="/profile/germany.png" alt="سرور مجازی آلمان" />
                             </div>
                             <div>
                                 <div class="fa" >سرور مجازی آلمان</div>
@@ -469,7 +469,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/usa.png" alt="سرور مجازی آمریکا" />
+                                <img src="/profile/usa.png" alt="سرور مجازی آمریکا" />
                             </div>
                             <div>
                                 <div class="fa" >سرور مجازی آمریکا</div>
@@ -504,7 +504,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/finland.png" alt="سرور مجازی فنلاند" />
+                                <img src="/profile/finland.png" alt="سرور مجازی فنلاند" />
                             </div>
                             <div>
                                 <div class="fa" >سرور مجازی آلمان</div>
@@ -542,7 +542,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/iran-vds.png" alt="سرور اختصاصی ایران" />
+                                <img src="/profile/iran-vds.png" alt="سرور اختصاصی ایران" />
                             </div>
                             <div>
                                 <div class="fa" >سرور اختصاصی ایران</div>
@@ -578,7 +578,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/france-vds.png" alt="سرور اختصاصی فرانسه" />
+                                <img src="/profile/france-vds.png" alt="سرور اختصاصی فرانسه" />
                             </div>
                             <div>
                                 <div class="fa" >سرور اختصاصی فرانسه</div>
@@ -614,7 +614,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/netherlands-vds.png" alt="سرور اختصاصی هلند" />
+                                <img src="/profile/netherlands-vds.png" alt="سرور اختصاصی هلند" />
                             </div>
                             <div>
                                 <div class="fa" >سرور اختصاصی هلند</div>
@@ -649,7 +649,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/germany-vds.png" alt="سرور اختصاصی آلمان" />
+                                <img src="/profile/germany-vds.png" alt="سرور اختصاصی آلمان" />
                             </div>
                             <div>
                                 <div class="fa" >سرور اختصاصی آلمان</div>
@@ -709,7 +709,7 @@
                                 </div>
                             </div>
                             <div class="d-none" lg="col-2 d-block" >
-                                <img src="img/vps-all.png" alt="خرید سرور" >
+                                <img src="/img/vps-all.png" alt="خرید سرور" >
                             </div>
                         </div>
                     </div>
@@ -727,7 +727,7 @@
                                 </div>
                             </div>
                             <div class="d-none" lg="col-2 d-block" >
-                                <img src="img/vps-all2.png" alt="سرور مجازی" >
+                                <img src="/img/vps-all2.png" alt="سرور مجازی" >
                             </div>
                         </div>
                     </div>
@@ -762,7 +762,7 @@
                         <div class="icon-circle">
                             <div class="icon-circle-in">
                                 <div class="icon" >
-                                    <img src="../img/vdsiran.png" alt="سرور ایران">
+                                    <img src="/img/vdsiran.png" alt="سرور ایران">
                                 </div>
                             </div>
                         </div>
@@ -803,7 +803,7 @@
                             <div class="icon-circle">
                                 <div class="icon-circle-in">
                                     <div class="icon" >
-                                        <img src="../img/vdsgermany.png"alt="سرور آلمان">
+                                        <img src="/img/vdsgermany.png"alt="سرور آلمان">
                                     </div>
                                 </div>
                             </div>
@@ -844,7 +844,7 @@
                             <div class="icon-circle">
                                 <div class="icon-circle-in">
                                     <div class="icon" >
-                                        <img src="../img/vdsusa.png"alt="سرور آمریکا">
+                                        <img src="/img/vdsusa.png"alt="سرور آمریکا">
                                     </div>
                                 </div>
                             </div>
@@ -885,7 +885,7 @@
                             <div class="icon-circle">
                                 <div class="icon-circle-in">
                                     <div class="icon" >
-                                        <img src="../img/vdsnetherlands.png" alt="سرور فنلاند">
+                                        <img src="/img/vdsnetherlands.png" alt="سرور فنلاند">
                                     </div>
                                 </div>
                             </div>
@@ -926,7 +926,7 @@
                             <div class="icon-circle">
                                 <div class="icon-circle-in">
                                     <div class="icon" >
-                                        <img src="../img/vdsbritain.png" alt="سرور فنلاند">
+                                        <img src="/img/vdsbritain.png" alt="سرور فنلاند">
                                     </div>
                                 </div>
                             </div>
@@ -967,7 +967,7 @@
                             <div class="icon-circle">
                                 <div class="icon-circle-in">
                                     <div class="icon" >
-                                        <img src="../img/vdsfrance.png" alt="سرور فنلاند">
+                                        <img src="/img/vdsfrance.png" alt="سرور فنلاند">
                                     </div>
                                 </div>
                             </div>
@@ -1008,7 +1008,7 @@
                             <div class="icon-circle">
                                 <div class="icon-circle-in">
                                     <div class="icon" >
-                                        <img src="../img/finlandv2.png" alt="سرور فنلاند">
+                                        <img src="/img/finlandv2.png" alt="سرور فنلاند">
                                     </div>
                                 </div>
                             </div>
@@ -1052,17 +1052,17 @@
             <div class="swiper-wrapper">
 
                 <div class="swiper-slide">
-                    <img src="img/img-host-features.jpg" alt="خرید هاست" class="human">
+                    <img src="/img/img-host-features.jpg" alt="خرید هاست" class="human">
                 </div>
 
                 <div class="swiper-slide">
                     <div class="box">
-                        <img src="img/icon-server2.svg" alt="منابع ایزوله"/>
+                        <img src="/img/icon-server2.svg" alt="منابع ایزوله"/>
                         <div class="text-w-semibold">منابع ایزوله</div>
                         <div class="text-76">در تمام پلن ها منابع سرور ها به صورت اختصاصی و ایزوله به هر کاربر ارائه میشود. تا سایت و اپلیکیشن شما همواره با نهایت سرعت در دسترس باشد.</div>
                     </div>
                     <div class="box">
-                        <img src="img/icon-hig-2.svg" alt="مانیتورینگ"/>
+                        <img src="/img/icon-hig-2.svg" alt="مانیتورینگ"/>
                         <div class="text-w-semibold">مانیتورینگ 24 ساعته</div>
                         <div class="text-76">در پرشین میزبان متخصصین مجرب به صورت 24 ساعته همه روزه سرور سایت و اپلیکیشن های شمارا رصد میکنند، تا در صورت رخداد هرگونه اختلال آن را سریعا به حالت STABLE برگردانند.</div>
                     </div>
@@ -1070,12 +1070,12 @@
 
                 <div class="swiper-slide">
                     <div class="box">
-                        <img src="img/icon-hig-3.svg" alt="پشتیبانی"/>
+                        <img src="/img/icon-hig-3.svg" alt="پشتیبانی"/>
                         <div class="text-w-semibold">پشتیبانی پرآوازه</div>
                         <div class="text-76">در تمام طول شبانه روز هر زمان شما نیاز به پشتیبانی داشته باشید در لحظه در کنار شما هستیم. ما پاسخ گویی تیکتینگ کم تر از 5 دقیقه را گارانتی میکنیم.</div>
                     </div>
                     <div class="box">
-                        <img src="img/icon-hig-1.svg" alt="امنیت"/>
+                        <img src="/img/icon-hig-1.svg" alt="امنیت"/>
                         <div class="text-w-semibold">امنیت استوار</div>
                         <div class="text-76">با تنظیم و بروز نگهداری فایروال های سخت افزاری و نرم افزاری در لایه های مختلف که در تمام شبکه سرور ها اعمال کردیم، سایت شما توان مقابله و خنثی سازی با انواع حملات را خواهد داشت.</div>
                     </div>
@@ -1083,12 +1083,12 @@
 
                 <div class="swiper-slide">
                     <div class="box">
-                        <img src="img/icon-hig-4.svg" alt="گارانتی"/>
+                        <img src="/img/icon-hig-4.svg" alt="گارانتی"/>
                         <div class="text-w-semibold">گارانتی بازگشت وجه</div>
                         <div class="text-76">با خیال آسوده تمام موارد فنی را طی 14 روز تست کنید. پرشین میزبان 14 روز گارانتی کامل عودت وجه روی تمام سرویس ها ارائه میکند. این نوع گارانتی بدون قید شرط است.</div>
                     </div>
                     <div class="box">
-                        <img src="img/icon-hig-5.svg" alt="بکاپ"/>
+                        <img src="/img/icon-hig-5.svg" alt="بکاپ"/>
                         <div class="text-w-semibold">منابع گارانتی شده</div>
                         <div class="text-76">منابع به صورت کاملا اختصاصی می باشد و این مورد توسط پرشین میزبان گارانتی شده است تا با خیال راحت به توسعه کسب و کارتان فکر کنید.</div>
                     </div>
@@ -1096,12 +1096,12 @@
 
                 <div class="swiper-slide">
                     <div class="box">
-                        <img src="img/icon-hig-2.svg" alt="آنتی تحریم"/>
+                        <img src="/img/icon-hig-2.svg" alt="آنتی تحریم"/>
                         <div class="text-w-semibold">آنتی تحریم</div>
                         <div class="text-70">روی کل شبکه سرور های پرشین میزبان سیاست آنتی تحریم اجرا شده است. تمام سرور و میزبانی ها بدون مشکل، ارتباطی پرسرعت با سایت ها و API های معروف خارج کشور بر قرار میکنند.</div>
                     </div>
                     <div class="box">
-                        <img src="img/icon-hig-6.svg" alt="SSL"/>
+                        <img src="/img/icon-hig-6.svg" alt="SSL"/>
                         <div class="text-w-semibold">گواهی نامه SSL</div>
                         <div class="text-76">به صورت اتوماتیک توسط سرور های پرشین میزبان گواهی نامه امنیتی SSL شرکتی کاملا رایگان روی تمام سایت و ساب دامنه های شما نصب و فعال میشود. همین طور فرایند تمدید SSL ها به صورت خودکار توسط سرور ها انجام میشود.</div>
                     </div>
@@ -1110,12 +1110,12 @@
 
                 <div class="swiper-slide">
                     <div class="box">
-                        <img src="img/icon-hig-3.svg" alt="آنتی اسپم"/>
+                        <img src="/img/icon-hig-3.svg" alt="آنتی اسپم"/>
                         <div class="text-w-semibold">آنتی اسپم</div>
                         <div class="text-76">بر روی تمام سرور های پرشین میزبان ویژگی آنتی اسپم ایمیل فعال است. تا از دریافت یا ارسال ایمیل های اسپم که توسط افزونه یا قالب های مخرب تولید میشوند به صورت کاملا خودکار جلوگیری شود.</div>
                     </div>
                     <div class="box">
-                        <img src="img/icon-hig-1.svg" alt="لایسنس"/>
+                        <img src="/img/icon-hig-1.svg" alt="لایسنس"/>
                         <div class="text-w-semibold">لایسنس های اصلی</div>
                         <div class="text-76">با وجود اینکه بسیاری از شرکت ها به دلیل بالا بودن هزینه ی لایسنس اورجینال از لایسنس های نا امن کرک شده استفاده میکنند, پرشین میزبان از نسخه های اصلی و قانونی برای اطمینان از امنیت سایت شما بهره میگیرد.</div>
                     </div>
@@ -1242,7 +1242,7 @@
     <div class="container" >
         <div class="grid cols-2 a-items-center" sm="cols-4" lg="cols-6">
             <div class="col-2" sm="col-4" lg="col-2" >
-                <img class="w-full mx-auto d-block" i-lg="max-w-(414px)" src="img/img-inside.png" >
+                <img class="w-full mx-auto d-block" i-lg="max-w-(414px)" src="/img/img-inside.png" >
             </div>
             <div>
                 <div class="box box2" >
@@ -1303,7 +1303,7 @@
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img src="profile/digimoviz.png" alt="دیجی مویز" >
+                                    <img src="/profile/digimoviz.png" alt="دیجی مویز" >
                                     <div class="text-primary text-w-semibold" >سامان رمضانی</div>
                                     <div class="text-80 mr-auto" >دیجی مویز</div>
                                 </div>
@@ -1314,7 +1314,7 @@
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img src="profile/myfilm.png" alt="مای فیلم" >
+                                    <img src="/profile/myfilm.png" alt="مای فیلم" >
                                     <div class="text-primary text-w-semibold" >علیرضا کریمی</div>
                                     <div class="text-80 mr-auto" >مای فیلم</div>
                                 </div>
@@ -1331,7 +1331,7 @@
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img src="profile/opencart.png" alt="اپن کارت" >
+                                    <img src="/profile/opencart.png" alt="اپن کارت" >
                                     <div class="text-primary text-w-semibold" >صمد دانش خواه</div>
                                     <div class="text-80 mr-auto" >اپن کارت فارسی</div>
                                 </div>
@@ -1342,7 +1342,7 @@
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img src="profile/asanapps.png" alt="آسان اپس" >
+                                    <img src="/profile/asanapps.png" alt="آسان اپس" >
                                     <div class="text-primary text-w-semibold" >سید حجت حسینی</div>
                                     <div class="text-80 mr-auto" >آسان اپس</div>
                                 </div>
@@ -1359,7 +1359,7 @@
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img src="profile/bahabin.png" alt="بهابین" >
+                                    <img src="/profile/bahabin.png" alt="بهابین" >
                                     <div class="text-primary text-w-semibold" >مهدی وادونی</div>
                                     <div class="text-80 mr-auto" >بهابین</div>
                                 </div>
@@ -1370,7 +1370,7 @@
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img src="profile/torob.png" alt="ترب" >
+                                    <img src="/profile/torob.png" alt="ترب" >
                                     <div class="text-primary text-w-semibold" >علی بابایی چشمه احمد رضایی</div>
                                     <div class="text-80 mr-auto" >ترب</div>
                                 </div>
@@ -1387,7 +1387,7 @@
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img src="profile/damdaran.png" alt="دامداران" >
+                                    <img src="/profile/damdaran.png" alt="دامداران" >
                                     <div class="text-primary text-w-semibold" >نور الدین نور بخش جعفری دهکردی</div>
                                     <div class="text-80 mr-auto" >دامداران</div>
                                 </div>
@@ -1398,7 +1398,7 @@
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img src="profile/vahabonline.png" alt="وهاب آنلاین" >
+                                    <img src="/profile/vahabonline.png" alt="وهاب آنلاین" >
                                     <div class="text-primary text-w-semibold" >وهاب سید چورته</div>
                                     <div class="text-80 mr-auto" >وهاب آنلاین</div>
                                 </div>
@@ -1510,8 +1510,8 @@
 
 
 </div>
-<script src="js/swiper.js" ></script>
-<script src="js/scripts.js" ></script>
+<script src="/js/swiper.js" ></script>
+<script src="/js/scripts.js" ></script>
 <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="62af99ce-3dde-4bb9-9ed1-f7f2a5ec5148";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 <script type="application/ld+json">
 {

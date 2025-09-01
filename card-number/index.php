@@ -3,12 +3,12 @@
 <head>
     <title>شماره حساب ها و اطلاعات پرداخت | پرشین میزبان</title>
     <meta name="description" content="شماره حساب های شرکت پرشین میزبان (میزبان داده فیدار) برای افرادی که امکان پرداخت آنلاین ندارند یا برای انجام حواله های بانکی" />
-    <link rel="shortcut icon" href="../favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no, shrink-to-fit=no">
     <meta name="theme-color" content="#32228f">
     <meta charset="utf-8">
 
-    <link rel="stylesheet" href="../dist/style.min.css">
+    <link rel="stylesheet" href="/dist/style.min.css">
 </head>
 <body>
 <div id="app" >
@@ -109,7 +109,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/hostiran.png" alt="هاست ایران" />
+                                <img src="/profile/hostiran.png" alt="هاست ایران" />
                             </div>
                             <div>
                                 <div class="fa" >هاست سی پنل ایران</div>
@@ -145,7 +145,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/brandenburg-gate.png" alt="هاست آلمان" />
+                                <img src="/profile/brandenburg-gate.png" alt="هاست آلمان" />
                             </div>
                             <div>
                                 <div class="fa" >هاست سی پنل آلمان</div>
@@ -180,7 +180,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/hostingwordpress.png" alt="هاست وردپرس" />
+                                <img src="/profile/hostingwordpress.png" alt="هاست وردپرس" />
                             </div>
                             <div>
                                 <div class="fa" >هاست مخصوص وردپرس</div>
@@ -215,7 +215,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/hostdliran.png" alt="هاست دانلود ایران" />
+                                <img src="/profile/hostdliran.png" alt="هاست دانلود ایران" />
                             </div>
                             <div>
                                 <div class="fa" >هاست دانلود ایران</div>
@@ -250,7 +250,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/hostdlgermany.png" alt="هاست دانلود آلمان" />
+                                <img src="/profile/hostdlgermany.png" alt="هاست دانلود آلمان" />
                             </div>
                             <div>
                                 <div class="fa" >هاست دانلود آلمان</div>
@@ -288,7 +288,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/domainmelli.png" alt="ثبت دامنه" />
+                                <img src="/profile/domainmelli.png" alt="ثبت دامنه" />
                             </div>
                             <div>
                                 <div class="fa" >ثبت دامنه با مالکیت کامل</div>
@@ -324,7 +324,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/tld.png" alt="انتقال دامنه" />
+                                <img src="/profile/tld.png" alt="انتقال دامنه" />
                             </div>
                             <div>
                                 <div class="fa" >انتقال دامنه مطمئن</div>
@@ -359,7 +359,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/domaintransfer.png" alt="تمدید دامنه" />
+                                <img src="/profile/domaintransfer.png" alt="تمدید دامنه" />
                             </div>
                             <div>
                                 <div class="fa" >تمدید دامنه ارزان</div>
@@ -397,7 +397,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/iran.png" alt="سرور مجازی ایران" />
+                                <img src="/profile/iran.png" alt="سرور مجازی ایران" />
                             </div>
                             <div>
                                 <div class="fa" >سرور مجازی ایران</div>
@@ -433,7 +433,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/germany.png" alt="سرور مجازی آلمان" />
+                                <img src="/profile/germany.png" alt="سرور مجازی آلمان" />
                             </div>
                             <div>
                                 <div class="fa" >سرور مجازی آلمان</div>
@@ -469,7 +469,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/usa.png" alt="سرور مجازی آمریکا" />
+                                <img src="/profile/usa.png" alt="سرور مجازی آمریکا" />
                             </div>
                             <div>
                                 <div class="fa" >سرور مجازی آمریکا</div>
@@ -504,7 +504,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/finland.png" alt="سرور مجازی فنلاند" />
+                                <img src="/profile/finland.png" alt="سرور مجازی فنلاند" />
                             </div>
                             <div>
                                 <div class="fa" >سرور مجازی آلمان</div>
@@ -542,7 +542,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/iran-vds.png" alt="سرور اختصاصی ایران" />
+                                <img src="/profile/iran-vds.png" alt="سرور اختصاصی ایران" />
                             </div>
                             <div>
                                 <div class="fa" >سرور اختصاصی ایران</div>
@@ -578,7 +578,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/france-vds.png" alt="سرور اختصاصی فرانسه" />
+                                <img src="/profile/france-vds.png" alt="سرور اختصاصی فرانسه" />
                             </div>
                             <div>
                                 <div class="fa" >سرور اختصاصی فرانسه</div>
@@ -614,7 +614,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/netherlands-vds.png" alt="سرور اختصاصی هلند" />
+                                <img src="/profile/netherlands-vds.png" alt="سرور اختصاصی هلند" />
                             </div>
                             <div>
                                 <div class="fa" >سرور اختصاصی هلند</div>
@@ -649,7 +649,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img src="profile/germany-vds.png" alt="سرور اختصاصی آلمان" />
+                                <img src="/profile/germany-vds.png" alt="سرور اختصاصی آلمان" />
                             </div>
                             <div>
                                 <div class="fa" >سرور اختصاصی آلمان</div>
@@ -695,10 +695,10 @@
     <div class="container">
         <div class="grid col-2 a-items-center" lg="cols-11">
             <div lg="col-4">
-                <img src="img/img-bank-accounts.png" alt="شماره حساب" class="w-full">
+                <img src="/img/img-bank-accounts.png" alt="شماره حساب" class="w-full">
             </div>
             <div lg="col-7">
-                <img src="img/img-bank-accounts-title.svg" alt="شماره حساب ها" class="mb-2">
+                <img src="/img/img-bank-accounts-title.svg" alt="شماره حساب ها" class="mb-2">
                 <p class="text-primary text-lh-5 text-90">
                     در صورتی که میخواهید مبلغ قرار داد سرویستون رو به صورت <b>حواله بانکی</b> انجام دهید یا امکان پرداخت هزینه سرویس تون رو به صورت آنلاین و از طریق درگاه های بانکی پرداخت ما ندارید، میتونید از طریق روش کارت به کارت یا واریز وجه به شماره حساب های پرشین میزبان اقدام کنید.</br>تو این روش از پرداخت بعد از اینکه انتقال وجه رو انجام دادید، لازمه که تنها <b>فیش واریزی</b> رو برای ما از طریق ثبت فیش بانکی یا ارسال تیکت به واحد مالی ارسال کنید تا پرداخت بررسی و در پنلتون ثبت شود.
                 </p>
@@ -724,7 +724,7 @@
             <div class="name">علی شریفی گرم دره</div>
             <div class="grid a-items-center" md="cols-3">
                 <div class="image">
-                    <img src="img/parsian-bank.png" alt="بانک پارسیان" class="w-full">
+                    <img src="/img/parsian-bank.png" alt="بانک پارسیان" class="w-full">
                 </div>
                 <div class="text-right" md="col-2">
                     <div class="d-flex w-full" md="pl-16">
@@ -767,7 +767,7 @@
             <div class="name">علی شریفی گرم دره</div>
             <div class="grid a-items-center" md="cols-3">
                 <div class="image">
-                    <img src="img/melli-bank.png" alt="بانک ملی" class="w-full">
+                    <img src="/img/melli-bank.png" alt="بانک ملی" class="w-full">
                 </div>
                 <div class="text-right" md="col-2">
                     <div class="d-flex w-full" md="pl-16">
@@ -809,7 +809,7 @@
             <div class="name">علی شریفی گرم دره</div>
             <div class="grid a-items-center" md="cols-3">
                 <div class="image">
-                    <img src="../img/mellat-bank.png" alt="بانک ملی" class="w-full">
+                    <img src="/img/mellat-bank.png" alt="بانک ملی" class="w-full">
                 </div>
                 <div class="text-right" md="col-2">
                     <div class="d-flex w-full" md="pl-16">
@@ -851,7 +851,7 @@
             <div class="name">علی شریفی گرم دره</div>
             <div class="grid a-items-center" md="cols-3">
                 <div class="image">
-                    <img src="img/tejarat-bank.png" alt="بانک تجارت" class="w-full">
+                    <img src="/img/tejarat-bank.png" alt="بانک تجارت" class="w-full">
                 </div>
                 <div class="text-right" md="col-2">
                     <div class="d-flex w-full" md="pl-16">
@@ -982,8 +982,8 @@
 
 
 </div>
-<script src="js/swiper.js" ></script>
-<script src="js/scripts.js" ></script>
+<script src="/js/swiper.js" ></script>
+<script src="/js/scripts.js" ></script>
 <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="fad6f86d-8985-4c3d-808f-e97f7658ec10";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 </body>
 </html>
