@@ -1,18 +1,15 @@
 <?php
 $pageTitle = 'هاست دانلود، خرید هاست دانلود آلمان | پرشین میزبان';
 $pageDescription = 'هاست دانلود پرشین میزبان، هاست دانلود آلمان با پهنای باند نامحدود و بدون ابیوز به همراه پورت شبکه 10G و بدون کندی و محدودیت در سرعت';
+$breadcrumbs = [
+    '/' => 'پرشین میزبان',
+    '/web-hosting/' => 'خرید هاست',
+    '/web-hosting/germany-download-host' => 'هاست دانلود آلمان',
+];
 include '../partials/header.php';
+include '../partials/breadcrumb.php';
 ?>
 
-<section id="breadcrumb">
-    <div class="container" >
-    <ul>
-        <li><a href="https://www.persianmizban.com/">پرشین میزبان</a></li>
-        <li><a href="https://www.persianmizban.com/web-hosting/">خرید هاست</a>
-                <li><a href="https://www.persianmizban.com/web-hosting/germany-download-host">هاست دانلود آلمان</a></li>
-    </ul>
-    </div>
-</section>
 
 <section id="host-slider" >
     <div class="container">

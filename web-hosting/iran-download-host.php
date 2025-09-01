@@ -1,18 +1,15 @@
 <?php
 $pageTitle = 'هاست دانلود، خرید هاست دانلود ایران | پرشین میزبان';
 $pageDescription = 'هاست دانلود پرشین میزبان، هاست دانلود ایران با پهنای باند نامحدود و ترافیک نیم بها به همراه پورت شبکه 10G و بدون کندی و محدودیت در سرعت';
+$breadcrumbs = [
+    '/' => 'پرشین میزبان',
+    '/web-hosting/' => 'خرید هاست',
+    '/web-hosting/iran-download-host' => 'هاست دانلود ایران',
+];
 include '../partials/header.php';
+include '../partials/breadcrumb.php';
 ?>
 
-<section id="breadcrumb">
-    <div class="container" >
-    <ul>
-        <li><a href="https://www.persianmizban.com/">پرشین میزبان</a></li>
-        <li><a href="https://www.persianmizban.com/web-hosting/">خرید هاست</a>
-                <li><a href="https://www.persianmizban.com/web-hosting/iran-download-host">هاست دانلود ایران</a></li>
-    </ul>
-    </div>
-</section>
 
 <section id="host-slider" >
     <div class="container">

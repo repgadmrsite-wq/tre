@@ -1,18 +1,14 @@
 <?php
 $pageTitle = 'خرید هاست آلمان 🇩🇪 سرعت نور | پرشین میزبان';
 $pageDescription = 'هاست آلمان پرشین میزبان، پرسرعت ترین هاست لینوکس در خارج کشور. خرید هاست آلمان با کنترل پنل حرفه ای سی پنل با دامنه رایگان';
+$breadcrumbs = [
+    '/' => 'پرشین میزبان',
+    '/web-hosting/' => 'خرید هاست',
+    '/web-hosting/germany' => 'هاست آلمان',
+];
 include '../partials/header.php';
+include '../partials/breadcrumb.php';
 ?>
-
-<section id="breadcrumb">
-    <div class="container" >
-    <ul>
-        <li><a href="https://www.persianmizban.com/">پرشین میزبان</a></li>
-        <li><a href="https://www.persianmizban.com/web-hosting/">خرید هاست</a>
-                <li><a href="https://www.persianmizban.com/web-hosting/germany">هاست آلمان</a></li>
-    </ul>
-    </div>
-</section>
 
 <section id="host-slider" >
     <div class="container">

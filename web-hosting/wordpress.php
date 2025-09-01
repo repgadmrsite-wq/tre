@@ -1,18 +1,15 @@
 <?php
 $pageTitle = 'خرید هاست وردپرس 🏆 مخصوص وردپرس (Wordpress) | پرشین میزبان';
 $pageDescription = 'هاست وردپرس پرشین میزبان مخصوص وردپرس است. خرید هاست وردپرس پرشین میزبان بهترین هاست ویژه وردپرسی در ایران';
+$breadcrumbs = [
+    '/' => 'پرشین میزبان',
+    '/web-hosting/' => 'خرید هاست',
+    '/web-hosting/wordpress' => 'هاست وردپرس',
+];
 include '../partials/header.php';
+include '../partials/breadcrumb.php';
 ?>
 
-<section id="breadcrumb">
-    <div class="container" >
-    <ul>
-        <li><a href="https://www.persianmizban.com/">پرشین میزبان</a></li>
-        <li><a href="https://www.persianmizban.com/web-hosting/">خرید هاست</a>
-                <li><a href="https://www.persianmizban.com/web-hosting/wordpress">هاست وردپرس</a></li>
-    </ul>
-    </div>
-</section>
 
 <section id="host-slider" >
     <div class="container">

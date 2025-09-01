@@ -1,17 +1,13 @@
 <?php
 $pageTitle = 'خرید هاست، هاست وردپرس، هاست دانلود و هاست لینوکس | پرشین میزبان';
 $pageDescription = 'خرید هاست - پرشین میزبان ارائه دهنده هاست، هاست وردپرس، هاست دانلود و هاست لینوکس از لوکیشن ایران، آلمان و هلند با SSL اتوماتیک و امن';
+$breadcrumbs = [
+    '/' => 'پرشین میزبان',
+    '/web-hosting/' => 'خرید هاست',
+];
 include '../partials/header.php';
+include '../partials/breadcrumb.php';
 ?>
-
-<section id="breadcrumb">
-    <div class="container" >
-    <ul>
-        <li><a href="https://www.persianmizban.com/">پرشین میزبان</a></li>
-        <li><a href="https://www.persianmizban.com/web-hosting/">خرید هاست</a></li>
-    </ul>
-    </div>
-</section>
 
 <section id="host-slider" >
     <div class="container">

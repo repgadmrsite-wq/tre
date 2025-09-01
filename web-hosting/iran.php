@@ -1,19 +1,14 @@
 <?php
 $pageTitle = 'خرید هاست ایران 🇮🇷 پشتیبانی 24/7 | پرشین میزبان';
 $pageDescription = 'هاست ایران پرشین میزبان پرسرعت ترین هاست لینوکس در ایران. خرید هاست ایران با کنترل پنل حرفه ای سی پنل با دامنه رایگان';
+$breadcrumbs = [
+    '/' => 'پرشین میزبان',
+    '/web-hosting/' => 'خرید هاست',
+    '/web-hosting/iran' => 'هاست ایران',
+];
 include '../partials/header.php';
+include '../partials/breadcrumb.php';
 ?>
-</section>
-
-<section id="breadcrumb">
-    <div class="container" >
-    <ul>
-        <li><a href="https://www.persianmizban.com/">پرشین میزبان</a></li>
-        <li><a href="https://www.persianmizban.com/web-hosting/">خرید هاست</a>
-                <li><a href="https://www.persianmizban.com/web-hosting/iran">هاست ایران</a></li>
-    </ul>
-    </div>
-</section>
 
 <section id="host-slider" >
     <div class="container">
