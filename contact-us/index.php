@@ -83,31 +83,31 @@ include '../partials/header.php';
             </div>
         </div>
 
-        <form class="grid cols-1" sm="cols-2" lg="cols-4">
+        <form action="/api/contact.php" method="post" class="grid cols-1" sm="cols-2" lg="cols-4">
             <div>
                 <div class="icon icon-male"></div>
-                <label for="form-name" >نام و نام خانوادگی</label>
-                <input id="form-name" type="text" required />
+                <label for="form-name">نام و نام خانوادگی</label>
+                <input id="form-name" name="name" type="text" required />
             </div>
             <div>
                 <div class="icon icon-mail"></div>
-                <label for="form-email" >ایمیل</label>
-                <input type="form-email" required />
+                <label for="form-email">ایمیل</label>
+                <input id="form-email" name="email" type="email" required />
             </div>
             <div>
                 <div class="icon icon-iphone"></div>
-                <label for="form-phone" >شماره تماس</label>
-                <input type="form-phone" required />
+                <label for="form-phone">شماره تماس</label>
+                <input id="form-phone" name="phone" type="tel" required />
             </div>
             <div>
                 <div class="icon icon-edit"></div>
-                <label for="form-subject" >موضوع</label>
-                <input type="form-subject" required />
+                <label for="form-subject">موضوع</label>
+                <input id="form-subject" name="subject" type="text" required />
             </div>
             <div class="d-flex flex-col" sm="col-2 flex-row" lg="col-4">
-                <textarea name="" id="" placeholder="شروع به نوشتن کنید ..." required></textarea>
+                <textarea id="form-message" name="message" placeholder="شروع به نوشتن کنید ..." required></textarea>
                 <div class="mt-auto" sm="mr-6" >
-                    <button type="submit" onclick="alert('نظر شما با موفقیت ارسال شد. از همکاری شما متشکریم.')" >
+                    <button type="submit" onclick="alert('نظر شما با موفقیت ارسال شد. از همکاری شما متشکریم.')">
                         <span class="icon-tick"></span>
                         ارسال پیام
                     </button>
