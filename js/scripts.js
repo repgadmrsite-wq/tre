@@ -59,7 +59,7 @@ if(navbarBottom != null) {
             });
             ticking = true;
         }
-    });
+    }, { passive: true });
 }
 
 function megaMenuItems(isInit = false){
