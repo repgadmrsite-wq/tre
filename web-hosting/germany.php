@@ -6,8 +6,8 @@ $breadcrumbs = [
     '/web-hosting/' => 'خرید هاست',
     '/web-hosting/germany' => 'هاست آلمان',
 ];
-include '../partials/header.php';
-include '../partials/breadcrumb.php';
+include $_SERVER['DOCUMENT_ROOT'].'/partials/header.php';
+include $_SERVER['DOCUMENT_ROOT'].'/partials/breadcrumb.php';
 ?>
 
 <section id="host-slider" >
@@ -1154,4 +1154,4 @@ include '../partials/breadcrumb.php';
     </div>
 </section>
 
-<?php include '../partials/footer.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'].'/partials/footer.php'; ?>

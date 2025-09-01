@@ -1,7 +1,7 @@
 <?php
 $pageTitle = 'تماس با پرشین میزبان | پرشین میزبان';
 $pageDescription = 'تماس با پرشین میزبان از طریق پنل کاربری، چت آنلاین، تماس تلفنی و فرم ارسال نظر امکان پذیر است. بهترین روش برای پشتیبانی فنی ارسال تیکت است.';
-include '../partials/header.php';
+include $_SERVER['DOCUMENT_ROOT'].'/partials/header.php';
 ?>
                     <div class="image image2">
                         <img src="/img/img-employee2.png" alt="تماس با ما" >
@@ -383,4 +383,4 @@ include '../partials/header.php';
     </div>
 </section>
 
-<?php include '../partials/footer.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'].'/partials/footer.php'; ?>

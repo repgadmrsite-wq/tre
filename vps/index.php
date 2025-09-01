@@ -1,7 +1,7 @@
 <?php
 $pageTitle = 'خرید سرور، سرور مجازی، سرور مجازی ایران، آلمان، آمریکا و فنلاند| پرشین میزبان';
 $pageDescription = 'خرید سرور - پرشین میزبان ارائه دهنده سرور مجازی، سرور مجازی ایران، سرور آلمان، آمریکا و فنلاند با ترافیک نامحدود و منابع اختصاصی و ارزان';
-include '../partials/header.php';
+include $_SERVER['DOCUMENT_ROOT'].'/partials/header.php';
 ?>
                 <div class="swiper-wrapper">
     
@@ -610,4 +610,4 @@ include '../partials/header.php';
     </div>
 </section>
 
-<?php include '../partials/footer.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'].'/partials/footer.php'; ?>
