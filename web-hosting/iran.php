@@ -1,698 +1,8 @@
-<!DOCTYPE html>
-<html lang="fa-IR">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
-    <meta name="theme-color" content="#32228f">
-    <meta name="description" content="هاست ایران پرشین میزبان پرسرعت ترین هاست لینوکس در ایران. خرید هاست ایران با کنترل پنل حرفه ای سی پنل با دامنه رایگان">
-    
-    <title>خرید هاست ایران &#x1F1EE;&#x1F1F7; پشتیبانی 24/7 | پرشین میزبان</title>
-    
-    <link rel="shortcut icon" href="/favicon.ico" type="image/ico">
-    <link rel="stylesheet" href="/dist/style.min.css">
-
-    <!-- Open Graph meta tags -->
-    <meta property="og:title" content="خرید هاست ایران &#x1F1EE;&#x1F1F7; پشتیبانی 24/7 | پرشین میزبان">
-    <meta property="og:description" content="هاست ایران پرشین میزبان پرسرعت ترین هاست لینوکس در ایران. خرید هاست ایران با کنترل پنل حرفه ای سی پنل با دامنه رایگان">
-    <meta property="og:image" content="https://www.persianmizban.com/img/logo.png">
-    <meta property="og:url" content="https://www.persianmizban.com/web-hosting/iran">
-    <meta property="og:type" content="website">
-    
-    <!-- Twitter Card meta tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="خرید هاست ایران &#x1F1EE;&#x1F1F7; پشتیبانی 24/7 | پرشین میزبان">
-    <meta name="twitter:description" content="هاست ایران پرشین میزبان پرسرعت ترین هاست لینوکس در ایران. خرید هاست ایران با کنترل پنل حرفه ای سی پنل با دامنه رایگان">
-    <meta name="twitter:image" content="https://www.persianmizban.com/img/logo.png">
-</head>
-
-<body>
-<div id="app" >
-
-<section id="top-nav" >
-    <div class="container" >
-        <div class="d-flex" >
-            <div class="mob-menu" ></div>
-            <div class="logo" onclick="location.href='https://www.persianmizban.com/';" ></div>
-            <div class="nav-mid">
-                <ul>
-                    <li>
-                        <a href="https://www.persianmizban.com/">پرشین میزبان</a>
-                    </li>
-                    <li>
-                        <a href="https://www.persianmizban.com/about-us">درباره ما</a>
-                    </li>
-                    <li>
-                        <a href="https://www.persianmizban.com/card-number">شماره حساب ها</a>
-                    </li>
-                    <li>
-                        <a href="https://www.persianmizban.com/sales-cooperation">همکاری در فروش</a>
-                    </li>
-                    <li>
-                        <a href="https://www.persianmizban.com/contact-us/">تماس با ما</a>
-                    </li>
-                </ul>
-                <div class="d-flex my-auto mr-auto" i-lg="border-top-1 border-primary-2 pt-6">
-                    <a href="https://www.persianmizban.com/my/register.php" i-lg="ml-auto">
-                    <div class="button" >
-                        <div class="icon icon-reg" ></div>
-                        ثبت نام
-                    </div>
-                    </a>
-                    <a href="https://www.persianmizban.com/my/login" >
-                    <div class="button" >
-                        <div class="icon icon-log" ></div>
-                        ورود
-                    </div>
-                    </a>
-                </div>
-            </div>
-           <div class="phone" >
-                <div class="number">
-                     <a href="tel:02191011796"><bdi>۰۲۱ - <span>۹ ۱۰ ۱۱ </span>۷۹۶</bdi></a>
-                    <div>بـا ما در ارتـــباط باشیـد</div>
-                </div>
-                <div class="icon" ></div>
-            </div>
-        </div>
-    </div>
-    <div class="cover" ></div>
-</section>
-
-<section id="bottom-nav" class="active" >
-    <div class="container" >
-        <div class="d-flex">
-
-            <div class="item" menu-item="1" >
-                <div class="icon icon-host" ></div>
-                <a href="https://www.persianmizban.com/web-hosting/"><span>هاست</span></a>
-                <div class="icon-more" ></div>
-            </div>
-
-            <div class="item" menu-item="2" >
-                <div class="icon icon-domain" ></div>
-                <a href="https://www.persianmizban.com/domain/"><span>ثبت دامنه</span></a>
-                <div class="icon-more" ></div>
-            </div>
-
-            <div class="item" menu-item="3" >
-                <div class="icon icon-vps" ></div>
-                <div class="blink">NEW</div>
-                <a href="https://www.persianmizban.com/vps/"><span>سرور مجازی</span></a>
-                <div class="icon-more" ></div>
-            </div>
-
-            <div class="item" menu-item="4">
-                <div class="icon icon-server" ></div>
-                <a href="https://www.persianmizban.com/vds/"><span>سرور اختصاصی</span></a>
-                <div class="icon-more" ></div>
-            </div>
-
-            <div class="item !ml-0" lg="mr-auto" i-lg="pl-6" >
-                <div class="icon icon-edu" ></div>
-                <div class="blink blink2">BLOG</div>
-                <a href="https://www.persianmizban.com/blog/"><span>مرکز آموزش</span></a>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="mega-menu" class="active">
-    <ul class="menu-item-1">
-        <li>
-            <a href="https://www.persianmizban.com/web-hosting/iran">هاست ایران</a>
-            <div class="more-info" >
-                <div class="grid cols-5" >
-                    <div class="col-3">
-                        <div class="title" >
-                            <div class="icon" >
-                                <img src="/profile/hostiran.png" alt="هاست ایران" />
-                            </div>
-                            <div>
-                                <div class="fa" >هاست سی پنل ایران</div>
-                                <div class="en" >IRAN CAPANEL HOSTING</div>
-                            </div>
-                        </div>
-                        <ul>
-                            <li>بکاپ گیری روزانه منظم و دقیق</li>
-                            <li>انتقال رايگان از ساير شركت ها</li>
-                            <li>۱۴ روز گارانتی بازگشت وجه</li>
-                            <li>گواهی نامه امنیتی <a href="https://www.persianmizban.com/ssl/">SSL</a> اتوماتیک و رایگان</li>
-                            <li>سازگاری کامل با گوگل و موتورهای جستجو</li>
-                        </ul>
-                    </div>
-                    <div class="col-2 d-flex flex-col">
-                        <a href="https://www.persianmizban.com/web-hosting/iran"><div class="button" >مشاهده پلن ها</div></a>
-                        <div class="price" >
-                            <small>شروع از</small>
-                            <div>
-                                <span>۲۹,۰۰۰</span>  تومان
-                                <small>/ سـه ماهه</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li>
-            <a href="https://www.persianmizban.com/web-hosting/germany">هاست آلمان</a>
-
-            <div class="more-info" >
-                <div class="grid cols-5" >
-                    <div class="col-3">
-                        <div class="title" >
-                            <div class="icon" >
-                                <img src="/profile/brandenburg-gate.png" alt="هاست آلمان" />
-                            </div>
-                            <div>
-                                <div class="fa" >هاست سی پنل آلمان</div>
-                                <div class="en" >GERMANY CAPANEL HOSTING</div>
-                            </div>
-                        </div>
-                        <ul>
-                            <li>بکاپ گیری روزانه منظم و دقیق</li>
-                            <li>انتقال رايگان از ساير شركت ها</li>
-                            <li>۱۴ روز گارانتی بازگشت وجه</li>
-                            <li>گواهی نامه امنیتی <a href="https://www.persianmizban.com/ssl/">SSL</a> اتوماتیک و رایگان</li>
-                            <li>سازگاری کامل با گوگل و موتورهای جستجو</li>
-                        </ul>
-                    </div>
-                    <div class="col-2 d-flex flex-col">
-                        <a href="https://www.persianmizban.com/web-hosting/germany"><div class="button">مشاهده پلن ها</div></a>
-                        <div class="price" >
-                            <small>شروع از</small>
-                            <div>
-                                <span>۱۴۹,۰۰۰</span>  تومان
-                                <small>/ سـالانه</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li>
-            <a href="https://www.persianmizban.com/web-hosting/wordpress">هاست وردپرس</a>
-            <div class="more-info" >
-                <div class="grid cols-5" >
-                    <div class="col-3">
-                        <div class="title" >
-                            <div class="icon" >
-                                <img src="/profile/hostingwordpress.png" alt="هاست وردپرس" />
-                            </div>
-                            <div>
-                                <div class="fa" >هاست مخصوص وردپرس</div>
-                                <div class="en" >WORDPRESS SPECIAL HOSTING</div>
-                            </div>
-                        </div>
-                        <ul>
-                            <li>تیم پشتیبانی مخصوص وردپرس</li>
-                            <li>نصب و کانفیگ رایگان، قالب و افزونه وردپرسی</li>
-                            <li>نصب اتوماتیک ماژول کش روی وردپرس‌</li>
-                            <li>لوکیشن : ایران، آلمان، هلند، فرانسه، فنلاند</li>
-                            <li>سازگاری کامل با گوگل و موتورهای جستجو</li>
-                        </ul>
-                    </div>
-                    <div class="col-2 d-flex flex-col">
-                        <a href="https://www.persianmizban.com/web-hosting/wordpress"><div class="button">مشاهده پلن ها</div></a>
-                        <div class="price" >
-                            <small>شروع از</small>
-                            <div>
-                                <span>۶۹،۰۰۰</span>  تومان
-                                <small>/ مـاهانه</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li>
-            <a href="https://www.persianmizban.com/web-hosting/iran-download-host">هاست دانلود ایران</a>
-            <div class="more-info" >
-                <div class="grid cols-5" >
-                    <div class="col-3">
-                        <div class="title" >
-                            <div class="icon" >
-                                <img src="/profile/hostdliran.png" alt="هاست دانلود ایران" />
-                            </div>
-                            <div>
-                                <div class="fa" >هاست دانلود ایران</div>
-                                <div class="en" >DOWNLOAD SPECIAL HOSTING (IRAN)</div>
-                            </div>
-                        </div>
-                        <ul>
-                            <li>هاست دانلود ایران با ترافیک نیم بها</li>
-                            <li>انتقال رايگان از ساير شركت ها</li>
-                            <li>۱۴ روز گارانتی بازگشت وجه</li>
-                            <li>گواهی نامه امنیتی <a href="https://www.persianmizban.com/ssl/">SSL</a> اتوماتیک و رایگان</li>
-                            <li>بکاپ گیری روزانه منظم و دقیق</li>
-                        </ul>
-                    </div>
-                    <div class="col-2 d-flex flex-col">
-                        <a href="https://www.persianmizban.com/web-hosting/iran-download-host"><div class="button">مشاهده پلن ها</div></a>
-                        <div class="price" >
-                            <small>شروع از</small>
-                            <div>
-                                <span>۱۵،۰۰۰</span>  تومان
-                                <small>/ مـاهانه</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li>
-            <a href="https://www.persianmizban.com/web-hosting/germany-download-host">هاست دانلود آلمان</a>
-            <div class="more-info" >
-                <div class="grid cols-5" >
-                    <div class="col-3">
-                        <div class="title" >
-                            <div class="icon" >
-                                <img src="/profile/hostdlgermany.png" alt="هاست دانلود آلمان" />
-                            </div>
-                            <div>
-                                <div class="fa" >هاست دانلود آلمان</div>
-                                <div class="en" >DOWNLOAD HOSTING (GERMANY)</div>
-                            </div>
-                        </div>
-                        <ul>
-                            <li>هاست دانلود آلمان بدون تحریم و آزاد</li>
-                            <li>انتقال رايگان از ساير شركت ها</li>
-                            <li>۱۴ روز گارانتی بازگشت وجه</li>
-                            <li>گواهی نامه امنیتی <a href="https://www.persianmizban.com/ssl/">SSL</a> اتوماتیک و رایگان</li>
-                            <li>بکاپ گیری روزانه منظم و دقیق</li>
-                        </ul>
-                    </div>
-                    <div class="col-2 d-flex flex-col">
-                        <a href="https://www.persianmizban.com/web-hosting/germany-download-host"><div class="button">مشاهده پلن ها</div></a>
-                        <div class="price" >
-                            <small>شروع از</small>
-                            <div>
-                                <span>۲۰،۰۰۰</span>  تومان
-                                <small>/ مـاهانه</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </li>
-    </ul>
-
-    <ul class="menu-item-2">
-        <li>
-            <a href="https://www.persianmizban.com/domain/">ثبت دامنه</a>
-            <div class="more-info" >
-                <div class="grid cols-5" >
-                    <div class="col-3">
-                        <div class="title" >
-                            <div class="icon" >
-                                <img src="/profile/domainmelli.png" alt="ثبت دامنه" />
-                            </div>
-                            <div>
-                                <div class="fa" >ثبت دامنه با مالکیت کامل</div>
-                                <div class="en" >DOMAIN REGISTRATION</div>
-                            </div>
-                        </div>
-                        <ul>
-                            <li>ارزان ترین ثبت کننده دامین در کشور</li>
-                            <li>تنظیم DNS ها از پنل کاربری</li>
-                            <li>ثبت آنی دامنه</li>
-                            <li>قابلیت قفل دامنه</li>
-                            <li>حفظ حریم خصوصی در Whois</li>
-                        </ul>
-                    </div>
-                    <div class="col-2 d-flex flex-col">
-                        <a href="https://www.persianmizban.com/domain/"><div class="button">ثبت دامنه</div></a>
-                        <div class="price" >
-                            <small>شروع از</small>
-                            <div>
-                                <span>۹,۰۰۰</span>  تومان
-                                <small>/ سـالیانه</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li>
-            <a href="https://www.persianmizban.com/my/cart.php?a=add&domain=transfer">انتقال دامنه</a>
-
-            <div class="more-info" >
-                <div class="grid cols-5" >
-                    <div class="col-3">
-                        <div class="title" >
-                            <div class="icon" >
-                                <img src="/profile/tld.png" alt="انتقال دامنه" />
-                            </div>
-                            <div>
-                                <div class="fa" >انتقال دامنه مطمئن</div>
-                                <div class="en" >DOMAIN TRANSFER</div>
-                            </div>
-                        </div>
-                        <ul>
-                            <li>انتقال به همراه یک سال اعتبار</li>
-                            <li>مدیریت آسان دامنه با پنل اختصاصی</li>
-                            <li>قابلیت قفل دامنه برای جلوگیری از سرقت دامنه</li>
-                            <li>پیرو و حامی قوانین GDPR</li>
-                            <li>انتقال دامنه با ارزان ترین تعرفه</li>
-                        </ul>
-                    </div>
-                    <div class="col-2 d-flex flex-col">
-                        <a href="https://www.persianmizban.com/my/cart.php?a=add&domain=transfer"><div class="button">انتقال دامنه</div></a>
-                        <div class="price" >
-                            <small>شروع از</small>
-                            <div>
-                                <span>۹,۰۰۰</span>  تومان
-                                <small>/ سـالیانه</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li>
-            <a href="https://www.persianmizban.com/my/login">تمدید دامنه</a>
-            <div class="more-info" >
-                <div class="grid cols-5" >
-                    <div class="col-3">
-                        <div class="title" >
-                            <div class="icon" >
-                                <img src="/profile/domaintransfer.png" alt="تمدید دامنه" />
-                            </div>
-                            <div>
-                                <div class="fa" >تمدید دامنه ارزان</div>
-                                <div class="en" >DOMAIN RENEWAL</div>
-                            </div>
-                        </div>
-                        <ul>
-                            <li>ارزان ترین تعرفه در کل کشور</li>
-                            <li>مدیریت آسان دامنه با پنل اختصاصی</li>
-                            <li>ثبت آنی پس از پرداخت</li>
-                            <li>قابلیت قفل دامنه برای جلوگیری از سرقت دامنه</li>
-                            <li>پیرو و حامی قوانین GDPR</li>
-                        </ul>
-                    </div>
-                    <div class="col-2 d-flex flex-col">
-                        <a href="https://www.persianmizban.com/my/login"><div class="button">تمدید دامنه</div></a>
-                        <div class="price" >
-                            <small>شروع از</small>
-                            <div>
-                                <span>۹,۰۰۰</span>  تومان
-                                <small>/ سـالیانه</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </li>
-    </ul>
-
-    <ul class="menu-item-3">
-        <li>
-            <a href="https://www.persianmizban.com/vps/iran">سرور مجازی ایران</a>
-            <div class="more-info" >
-                <div class="grid cols-5" >
-                    <div class="col-3">
-                        <div class="title" >
-                            <div class="icon" >
-                                <img src="/profile/iran.png" alt="سرور مجازی ایران" />
-                            </div>
-                            <div>
-                                <div class="fa" >سرور مجازی ایران</div>
-                                <div class="en" >IRAN VPS</div>
-                            </div>
-                        </div>
-                        <ul>
-                            <li>پینگ تایم بسیار پایین</li>
-                            <li>دسترسی به سرور در صورت اختلال اینترنت</li>
-                            <li>Firewall نرم‌افزاری و سخت‌افزاری</li>
-                            <li>14 روز گارانتی بازگشت وجه</li>
-                            <li>پورت 10G و پهنای باند نامحدود (منصفانه) </li>
-                        </ul>
-                    </div>
-                    <div class="col-2 d-flex flex-col">
-                        <a href="https://www.persianmizban.com/vps/iran"><div class="button">مشاهده پلن ها</div></a>
-                        <div class="price" >
-                            <small>شروع از</small>
-                            <div>
-                                <span>۷۵,۰۰۰</span>  تومان
-                                <small>/ ماهانه</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li>
-            <a href="https://www.persianmizban.com/vps/germany">سرور مجازی آلمان</a>
-
-            <div class="more-info" >
-                <div class="grid cols-5" >
-                    <div class="col-3">
-                        <div class="title" >
-                            <div class="icon" >
-                                <img src="/profile/germany.png" alt="سرور مجازی آلمان" />
-                            </div>
-                            <div>
-                                <div class="fa" >سرور مجازی آلمان</div>
-                                <div class="en" >GERMANY VPS</div>
-                            </div>
-                        </div>
-                        <ul>
-                            <li>پینگ پایین برای شبکه ایران</li>
-                            <li>قدرتمند برای میزبانی سایت و اپلیکیشن</li>
-                            <li>Firewall نرم‌افزاری و سخت‌افزاری</li>
-                            <li>14 روز گارانتی بازگشت وجه</li>
-                            <li>پورت 10G و پهنای باند نامحدود</li>
-                        </ul>
-                    </div>
-                    <div class="col-2 d-flex flex-col">
-                        <a href="https://www.persianmizban.com/vps/germany"><div class="button">مشاهده پلن ها</div></a>
-                        <div class="price" >
-                            <small>شروع از</small>
-                            <div>
-                                <span>۱۶۰,۰۰۰</span>  تومان
-                                <small>/ ماهانه</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </li>
-                <li>
-            <a href="https://www.persianmizban.com/vps/usa">سرور مجازی آمریکا</a>
-
-            <div class="more-info" >
-                <div class="grid cols-5" >
-                    <div class="col-3">
-                        <div class="title" >
-                            <div class="icon" >
-                                <img src="/profile/usa.png" alt="سرور مجازی آمریکا" />
-                            </div>
-                            <div>
-                                <div class="fa" >سرور مجازی آمریکا</div>
-                                <div class="en" >USA VPS</div>
-                            </div>
-                        </div>
-                        <ul>
-                            <li>دیتاسنتر فوق پیشرفته</li>
-                            <li>نصب تمامی سیستم عامل ها</li>
-                            <li>Firewall نرم‌افزاری و سخت‌افزاری</li>
-                            <li>14 روز گارانتی بازگشت وجه</li>
-                            <li>پورت 10G و پهنای باند نامحدود</li>
-                        </ul>
-                    </div>
-                    <div class="col-2 d-flex flex-col">
-                        <a href="https://www.persianmizban.com/vps/usa"><div class="button">مشاهده پلن ها</div></a>
-                        <div class="price" >
-                            <small>شروع از</small>
-                            <div>
-                                <span>۱۸۵,۰۰۰</span>  تومان
-                                <small>/ ماهانه</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li>
-            <a href="https://www.persianmizban.com/vps/finland">سرور مجازی فنلاند</a>
-            <div class="more-info" >
-                <div class="grid cols-5" >
-                    <div class="col-3">
-                        <div class="title" >
-                            <div class="icon" >
-                                <img src="/profile/finland.png" alt="سرور مجازی فنلاند" />
-                            </div>
-                            <div>
-                                <div class="fa" >سرور مجازی آلمان</div>
-                                <div class="en" >FINLAND VPS</div>
-                            </div>
-                        </div>
-                        <ul>
-                            <li>پینگ پایین برای شبکه ایران</li>
-                            <li>قدرتمند برای میزبانی سایت و اپلیکیشن</li>
-                            <li>Firewall نرم‌افزاری و سخت‌افزاری</li>
-                            <li>14 روز گارانتی بازگشت وجه</li>
-                            <li>پورت 10G و پهنای باند نامحدود</li>
-                        </ul>
-                    </div>
-                    <div class="col-2 d-flex flex-col">
-                        <a href="https://www.persianmizban.com/vps/finland"><div class="button">مشاهده پلن ها</div></a>
-                        <div class="price" >
-                            <small>شروع از</small>
-                            <div>
-                                <span>۱۶۰,۰۰۰</span>  تومان
-                                <small>/ ماهانه</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </li>
-    </ul>
-
-    <ul class="menu-item-4">
-        <li>
-            <a href="https://www.persianmizban.com/vds/iran">سرور اختصاصی ایران</a>
-            <div class="more-info" >
-                <div class="grid cols-5" >
-                    <div class="col-3">
-                        <div class="title" >
-                            <div class="icon" >
-                                <img src="/profile/iran-vds.png" alt="سرور اختصاصی ایران" />
-                            </div>
-                            <div>
-                                <div class="fa" >سرور اختصاصی ایران</div>
-                                <div class="en" >IRAN DEDICATED SERVER</div>
-                            </div>
-                        </div>
-                        <ul>
-                            <li>نصب و راه اندازی رایگان</li>
-                            <li> در بستر شبکه اختصاصی پرشین میزبان</li>
-                            <li>Firewall نرم‌افزاری و سخت‌افزاری</li>
-                            <li>14 روز گارانتی بازگشت وجه</li>
-                            <li>ارائه پورت اختصاصی 1G, 10G و 40G</li>
-                        </ul>
-                    </div>
-                    <div class="col-2 d-flex flex-col">
-                        <a href="https://www.persianmizban.com/vds/iran"><div class="button">مشاهده پلن ها</div></a>
-                        <div class="price" >
-                            <small>شروع از</small>
-                            <div>
-                                <span>۸۹۰,۰۰۰</span>  تومان
-                                <small>/ ماهانه</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li>
-            <a href="https://www.persianmizban.com/vds/france">سرور اختصاصی فرانسه</a>
-
-            <div class="more-info" >
-                <div class="grid cols-5" >
-                    <div class="col-3">
-                        <div class="title" >
-                            <div class="icon" >
-                                <img src="/profile/france-vds.png" alt="سرور اختصاصی فرانسه" />
-                            </div>
-                            <div>
-                                <div class="fa" >سرور اختصاصی فرانسه</div>
-                                <div class="en" >FRANCE DEDICATED SERVER</div>
-                            </div>
-                        </div>
-                        <ul>
-                            <li>نصب و راه اندازی رایگان</li>
-                            <li>سرعت و پایداری و منابع فوق العاده</li>
-                            <li>Firewall نرم‌افزاری و سخت‌افزاری</li>
-                            <li>14 روز گارانتی بازگشت وجه</li>
-                            <li>ارائه پورت اختصاصی 1G, 10G و 40G</li>
-                        </ul>
-                    </div>
-                    <div class="col-2 d-flex flex-col">
-                        <a href="https://www.persianmizban.com/vds/france"><div class="button">مشاهده پلن ها</div></a>
-                        <div class="price" >
-                            <small>شروع از</small>
-                            <div>
-                                <span>۱,۱۹۰,۰۰۰</span>  تومان
-                                <small>/ ماهانه</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li>
-            <a href="https://www.persianmizban.com/vds/netherlands">سرور اختصاصی هلند</a>
-
-            <div class="more-info" >
-                <div class="grid cols-5" >
-                    <div class="col-3">
-                        <div class="title" >
-                            <div class="icon" >
-                                <img src="/profile/netherlands-vds.png" alt="سرور اختصاصی هلند" />
-                            </div>
-                            <div>
-                                <div class="fa" >سرور اختصاصی هلند</div>
-                                <div class="en" >NETHERLANDS  DEDICATED SERVER</div>
-                            </div>
-                        </div>
-                        <ul>
-                            <li>نصب و راه اندازی رایگان</li>
-                            <li>سرعت و پایداری و منابع فوق العاده</li>
-                            <li>Firewall نرم‌افزاری و سخت‌افزاری</li>
-                            <li>14 روز گارانتی بازگشت وجه</li>
-                            <li>ارائه پورت اختصاصی 1G, 10G و 40G</li>
-                        </ul>
-                    </div>
-                    <div class="col-2 d-flex flex-col">
-                        <a href="https://www.persianmizban.com/vds/netherlands"><div class="button">مشاهده پلن ها</div></a>
-                        <div class="price" >
-                            <small>شروع از</small>
-                            <div>
-                                <span>۱,۲۹۰,۰۰۰</span>  تومان
-                                <small>/ ماهانه</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li>
-            <a href="https://www.persianmizban.com/vds/germany">سرور اختصاصی آلمان</a>
-            <div class="more-info" >
-                <div class="grid cols-5" >
-                    <div class="col-3">
-                        <div class="title" >
-                            <div class="icon" >
-                                <img src="/profile/germany-vds.png" alt="سرور اختصاصی آلمان" />
-                            </div>
-                            <div>
-                                <div class="fa" >سرور اختصاصی آلمان</div>
-                                <div class="en" >GERMANY DEDICATED SERVER</div>
-                            </div>
-                        </div>
-                        <ul>
-                            <li>نصب و راه اندازی رایگان</li>
-                            <li>سرعت و پایداری و منابع فوق العاده</li>
-                            <li>Firewall نرم‌افزاری و سخت‌افزاری</li>
-                            <li>14 روز گارانتی بازگشت وجه</li>
-                            <li>ارائه پورت اختصاصی 1G, 10G و 40G</li>
-                        </ul>
-                    </div>
-                    <div class="col-2 d-flex flex-col">
-                        <a href="https://www.persianmizban.com/vds/germany"><div class="button">مشاهده پلن ها</div></a>
-                        <div class="price" >
-                            <small>شروع از</small>
-                            <div>
-                                <span>۹۴۰,۰۰۰</span>  تومان
-                                <small>/ ماهانه</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </li>
-    </ul>
+<?php
+$pageTitle = 'خرید هاست ایران 🇮🇷 پشتیبانی 24/7 | پرشین میزبان';
+$pageDescription = 'هاست ایران پرشین میزبان پرسرعت ترین هاست لینوکس در ایران. خرید هاست ایران با کنترل پنل حرفه ای سی پنل با دامنه رایگان';
+include '../partials/header.php';
+?>
 </section>
 
 <section id="breadcrumb">
@@ -1912,229 +1222,4 @@
     </div>
 </section>
 
-<section id="footer">
-    <div class="container" >
-        <div class="support" >
-            <div class="grid cols-1 a-items-center" md="cols-2" i-md="text-center mb-2" >
-                <div>
-                    <div class="text-90 mb-2" >مجموعه پــرشین میـزبان</div>
-                    <div class="text-primary" >24 ساعته در 7 روز هفته آماده ارائه پشتیبانی میباشد</div>
-                </div>
-                <div class="text-left" i-md="text-center">
-                    <div class="d-inline-block" >
-                        <a href="tel:02191011796"><bdi class="text-w-bold text-140" md="text-190">۰۲۱ - <span class="text-primary">۹ ۱۰ ۱۱</span> ۷۹۶</bdi></a>
-                        <div class="text-70" >تهران ، مرزداران ، خیابان ابوالفضل ، پلاک 213 ،طبقه 2</div>
-                    </div>
-                    <a href="tel:02191011796"><div class="icon-phone" ></div></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="grid cols-2" lg="cols-9 gap-8" >
-            <div class="col-2" lg="col-3" i-lg="mb-6" >
-                <div class="logo mb-2" ></div>
-                <div class="text-80 mb-4" >
-                    پرشین میزبان تیمی جوان و با انگیزه است که از همان ابتدا با هدفی بسیار بزرگ و ارزشمند پای در عرصه رقابت گذاشته، هدف پرشین میزبان چیزی نیست جز تحقق رویاهای شما که مارا باور و به ما اعتماد کرده اید. با پیوستن به جمع مشترکین شرکت میزبان داده فیدار میزبانی واقعی را تجربه میکنید. رسالت ما جذب حداکثری و دستور کار ما جلب رضایت 100% شماست. ما اعتقاد داریم با هنر کار تیمی و پشتیبانی مستر 24 ساعته، می توانییم به رویاهایتان رنگ واقعیت بدهیم. ما در این مسیر کنار شما ایتساده ایم...
-                </div>
-
-                <div class="social" >
-                    <a href="https://www.instagram.com/persianmizban_com/"><div class="ins">
-                        صفحه اینستاگرام
-                    </div></a>
-                    <a href="https://tlgrm.in/Persian_Mizban"><div class="tg">
-                        کانال تلگرام
-                    </div></a>
-                </div>
-            </div>
-
-            <div lg="col-2" i-lg="mb-6">
-                <div lg="pr-10" i-lg="-mr-2">
-                    <a href="https://www.persianmizban.com/web-hosting/"><div class="text-90 text-w-semibold pr-2 mb-6">خرید هاست</div></a>
-                    <ul>
-                        <a href="https://www.persianmizban.com/web-hosting/iran"><li>هاست ایران</li></a>
-                        <a href="https://www.persianmizban.com/web-hosting/germany"><li>هاست آلمان</li></a>
-                        <a href="https://www.persianmizban.com/web-hosting/wordpress"><li>هاست وردپرس</li></a>
-                        <a href="https://www.persianmizban.com/web-hosting/iran-download-host"><li>هاست دانلود ایران</li></a>
-                        <a href="https://www.persianmizban.com/web-hosting/germany-download-host"><li>هاست دانلود آلمان</li></a>
-                        <a href="https://www.persianmizban.com/domain/"><li>ثبت دامنه</li></a>
-                        <a href="https://www.persianmizban.com/my/cart.php?a=add&domain=transfer"><li>انتقال دامنه</li></a>
-                    </ul>
-                </div>
-            </div>
-            <div lg="col-2" class="orange" i-lg="mb-6" >
-                <div i-lg="-mr-2">
-                    <a href="https://www.persianmizban.com/vps/"><div class="text-90 text-w-semibold pr-2 mb-6">سرور مجازی</div></a>
-                    <ul>
-                        <a href="https://www.persianmizban.com/vps/iran"><li>سرور مجازی ایران</li></a>
-                        <a href="https://www.persianmizban.com/vps/germany"><li>سرور مجازی آلمان</li></a>
-                        <a href="https://www.persianmizban.com/vps/usa"><li>سرور مجازی آمریکا</li></a>
-                        <a href="https://www.persianmizban.com/vps/finland"><li>سرور مجازی فنلاند</li></a>
-                        <a href="https://www.persianmizban.com/vds/iran"><li>سرور اختصاصی ایران</li></a>
-                        <a href="https://www.persianmizban.com/vds/france"><li>سرور اختصاصی فرانسه</li></a>
-                        <a href="https://www.persianmizban.com/vds/germany"><li>سرور اختصاصی آلمان</li></a>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-2">
-                <div class="-bg-primary-3 rounded-6 pa-4 text-center">
-                    <a href="#" onclick="window.open('https://www.persianmizban.com/namad.php','','resizable=1,scrollbars=1,width=750,height=500,top=400,left=400');return false;" title="نماد های اعتماد پرشین میزبان"><img src="https://www.persianmizban.com/img/namad.png" alt="نماد اعتماد"><br><img src="https://www.persianmizban.com/img/samandehi.png" alt="نماد ساماندهی"></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="copyright" >
-        <div class="container">
-            <div class="grid cols-1 a-items-center" md="cols-3">
-                <div md="col-2" i-md="text-center" >
-                    پرشین میزبان (میزبان داده فیدار) / شناسه ملی: 14009145337
-                </div>
-                <div class="d-flex flex-row-reverse " i-md="j-content-center">
-                    <div class="hasht"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-</div>
-<script src="/js/swiper.js" ></script>
-<script src="/js/scripts.js" ></script>
-<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="fad6f86d-8985-4c3d-808f-e97f7658ec10";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [{
-    "@type": "Question",
-    "name": "در پلن های کوروش هاست ایران امکان اتصال چند دامنه را دارم؟",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "در سرویس هاست ایران امکان اتصال بی نهایت دامنه جهت مدیریت DNS و انجام انواع ریدایرکت های موقت و 301 ... را دارید."
-    }
-  },{
-    "@type": "Question",
-    "name": "روی پلن های هاست ایران امکان ساخت چه تعداد ساب دامنه و ساب فولدر را دارم؟",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "در پلن های کوروش هاست ایران امکان ساخت و مدیریت نامحدود ساب دامنه و ساب فولدر را دارید. هیچ محدودیتی اعمال نشده است."
-    }
-  },{
-    "@type": "Question",
-    "name": "ادان دامین برای سایت مجزا در هاست یعنی چی؟",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "ادان دامین یا Addon Domain به معنی اضافه کردن یک دامنه به منظور استفاده و راه اندازی یک سایت مجزا به جز سایت اصلی است. که این مورد در تمام سرویس های پرشین میزبان به یک عدد محدود شده است. یعنی شما به جز سایت اصلی میتوانید یک سایت کاملا مجزا دیگر هم روی سرویس های پرشین میزبان داشته باشد.
-توجه کنید شما امکان اضافه و مدیریت کردن DNS و ریدایرکت کردن نامحدود پارک دامنه را دارید."
-    }
-  },{
-    "@type": "Question",
-    "name": "تفاوت هاست ایران نسبت با هاست خارج در چیست؟",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "تفاوت هاست ایران با هاست خارج پرشین میزبان فقط در فاصله جغرافیایی سرور اصلی تا بازدید کنندگان وب سایت و اپلیکیشن شماست. چرا که هر چقدر سرور اصلی به بازدیدکنندگان نزدیک تر باشد PING پایین تری خواهد داشت و سرعت اتصال هم نیز سریع تر خواهد بود.
-دیگر موارد مثل کیفیت شبکه، برق اضطراری و استاندارد های دیتاسنتری در تمام دیتاسنتر های منتخب پرشین میزبان یکسان و پایداری و کیفیت برابری دارند."
-    }
-  },{
-    "@type": "Question",
-    "name": "آیا تمام پلن ها در هاست ایران ترافیک نیم بها دارند؟",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "بله, تمام پلن ها و سرور های میزبانی داخل ایران شرکت پرشین میزبان تعرفه ی محاسبه ترافیک نیم بها دارند."
-    }
-  },{
-    "@type": "Question",
-    "name": "آنتی تحریم در هاست ایران دقیقا چیست؟",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "ما در پرشین میزبان با راه اندازی شبکه و DNS سرور اختصاصی و استفاده از آن بر روی کل شبکه سریس های ایران, آنها را به امکان دور زدن تحریم مجهز کردیم. از این رو شما علاوه بر استفاده از ویژگی های سرویس های ایران, امکان اتصال به سایت و API های خارجی را بدون تحریم را دارید."
-    }
-  },{
-    "@type": "Question",
-    "name": "SNI در هاست ایران دقیقا چیست؟",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "افزونه SNI در تمام سرور های میزبانی پرشین میزبان فعال و تنظیم می باشد. SNI وظیفه ی اتصال ایمن در بستر Https و هدایت کاربر به مقصد درست را دارد."
-    }
-  },{
-    "@type": "Question",
-    "name": "من به وردپرس، جوملا، دروپال، پرستاشاپ و ... نیاز دارم, آیا آن را برای من نصب میکنید؟",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "حتما، شما میتوانید در قسمت توضیحات اضافه هنگام خرید هاست برای کارشناس های فنی پرشین میزبان به CMS مورد نظرتون اشاره کنید تا به صورت رایگان نصب و کانفیگ شده تقدیم حضورتان کنیم. همین طور در هر لحظه بعد از خرید هاست هم میتوانید از طریق تیکت پشتیبانی این درخواست را مطرح کنید."
-    }
-  },{
-    "@type": "Question",
-    "name": "من به یک هاست سازگار با PHP ,HTML و... نیاز دارم, آیا این محصول هاست ایران برای من مناسب است؟",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "حتما، این سرویس میتواند کاملا از PHP, MySql و HTML ... پشتیبانی کند. در صورتی که از زبان خاصی استفاده میکنید، میتوانید قبل از خرید هاست از طریق چت آنلاین با کارشناس های ما ارتباط بگیرید."
-    }
-  },{
-    "@type": "Question",
-    "name": "برخی از پلن ها دامنه هدیه رایگان دارند، آیا میتواتم دامنه هدیه را بعدا ثبت کنم؟",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "خیر، زمان فعال سازی هاست و دامنه در پنل کاربری می بایست یکسان باشد. بر همین اساس لطفا در زمان خرید هاست دقت داشته باشید که دامنه رایگان خود را ثبت کنید."
-    }
-  },{
-    "@type": "Question",
-    "name": "آیا میتوانم بعد از خرید هاست ایران لوکیشن دیتاسنتر میزبانی ام را تغییر بدم؟",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "بله، میتوانید در هر لحظه از طریق پنل کاربری درخواست تغییر لوکیشن میزبانی براساس نیازتان بین دیتاسنتر های موجود دیگر تغییر بدید."
-    }
-  },{
-    "@type": "Question",
-    "name": "بکاپ گیری از هاست من به چه صورت است؟ آیا برای بکاپ گیری از فضای هاست کاربر استفاده میشود یا به صورت رایگان نسخه پشتیبان در سرور دیگر نگهداری میشود؟",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "در هاست ایران و کل سرویس های میزبانی شرکت پرشین میزبان، بکاپ گیری از کل سایت ها هر 24 ساعت و منظم انجام میشود. بکاپ ها در سرور جداگونه مخصوص بکاپ در دیتاسنتر امین که مجزا از سرور های میزبانی می باشد، به صورت رایگان نگهداری میشود. که حتی در صورت اتش سوزی و ... آسیبی به دیتای بکاپ شما وارد نمیشود."
-    }
-  },{
-    "@type": "Question",
-    "name": "کدام پلن برای سایت های تازه تأسیس مناسب است؟",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "پلن های کوروش اول و کوروش دوم مناسب سایت های تازه تأسیس، کم بازدید، پروژه های دانشجویی و برای تست و آزمایش اسکریپت ها مناسب می باشد."
-    }
-  },{
-    "@type": "Question",
-    "name": "آیا برای استفاده از هاست ایران با سیستم عامل ویندوز لپتاپ یا تلفن همراه امکان پذیر است؟",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "بله حتما، شما میتوانید با کامپیوتر، لپ تاپ و موبایل با هر سیستم عاملی به راحتی از طریق اینترنت و مرورگر به هاست دسترسی کامل داشته باشید."
-    }
-  },{
-    "@type": "Question",
-    "name": "چگونه می توانیم از طریق پرشین میزبان کسب درآمد کنیم؟",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "از قسمت همکاری در فروش می توانید کسب درآمد کنید. با هر فروش موفق بین 20 تا 40 درصد پورسانت دریافت میکنید. در این خصوص کاربران باید در پرشین میزبان عضو شده و لینک همکاری در فروش مخصوص خودشان را از ناحیه کاربری دریافت کنند."
-    }
-  },{
-    "@type": "Question",
-    "name": "پرشین میزبان چه کمپین و آفر های حمایتی برای کسب و کار های تازه تاسیس در نظر گرفته است؟",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "پرشین میزبان به کسب و کار های نوپا 20 درصد تخفیف برای اولین خرید ارائه میکند، همین طور نیازی به پرداخت هزینه برای دریافت قالب یا افزونه ندارند و موارد فنی مرتبط با سایت یا اپلیکیشن هاشونو به صورت رایگان میتوانند به پشتیبان فنی پرشین میزبان بسپارند. امید داریم با حمایت فنی و مالی از کار آفرین ها قدمی در مسیر حمایت از اشتغال آفرینی برداشته باشیم."
-    }
-  },{
-    "@type": "Question",
-    "name": "چرا پرشین میزبان؟",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "گارانتی عودت وجه 14 روزه
-ارائه پهنای باند نامحدود در تمام سرویس ها
-انتقال رایگان اطلاعات سایت مشتری از شرکت های دیگر به پرشین میزبان
-بهره گیری از فایروال های سخت افزاری قدرتمند به جهت افزایش امنیت در کل شبکه سرویس ها
-بکاپ گیری منظم روزانه و نگهناری آرشیو بکاپ ها به مدت 7 روز
-مانیتورینگ 24 ساعته حتی در روز های تعطیل سرور ها به جهت جلوگیری از بروز مشکلات احتمالی
-استفاده از سرور های بروز و قدرتمند سخت افزاری با مالکیت 100 درصد انحصاری پرشین میزبان"
-    }
-  }]
-}
-</script>
-</body>
-</html>
+<?php include '../partials/footer.php'; ?>
