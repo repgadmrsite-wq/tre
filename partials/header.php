@@ -14,6 +14,14 @@
     <link rel="stylesheet" href="/dist/style.min.css">
 </head>
 <body>
+<script>
+(function() {
+    var saved = localStorage.getItem('theme');
+    if (saved === 'dark') {
+        document.body.classList.add('dark');
+    }
+})();
+</script>
 <div id="app" >
 <section id="top-nav" >
     <div class="container" >
