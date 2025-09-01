@@ -8898,3 +8898,31 @@ html {
     background: radial-gradient(circle, rgba(249, 161, 6, 0.3) 0%, transparent 65%);
     animation-delay: -5s;
 }
+/* Dark mode styles */
+body.dark {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark a {
+    color: #90caf9;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+body.dark #top-nav,
+body.dark #bottom-nav,
+body.dark #mega-menu {
+    background-color: #1e1e1e;
+}
+
+body.dark #top-nav a,
+body.dark #bottom-nav a {
+    color: #e0e0e0;
+}
