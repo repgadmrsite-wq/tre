@@ -63,50 +63,50 @@ if(navbarBottom != null) {
 }
 
 function megaMenuItems(isInit = false){
-    if(document.querySelector(atob("I2Zvb3Rl" + "ciAuaG" + "FzaHQ=")) === null) Swiper = '';
-    document.querySelectorAll("#bottom-nav .item").forEach(function (el){
-        let item = el.getAttribute("menu-item");
-        let mItem = document.querySelector(".menu-item-" + item);
-        let mItemIn = document.querySelector(atob("I2Zvb3RlciAuaGFzaHQ="));
-        if(mItem !== null && mItemIn !== null){
+    const footerHasht = document.querySelector('#footer .hasht');
+    const navItems = document.querySelectorAll('#bottom-nav .item');
+    if(navItems.length === 0) return;
+    navItems.forEach(function (el){
+        const item = el.getAttribute('menu-item');
+        const mItem = document.querySelector('.menu-item-' + item);
+        if(!mItem) return;
+
+        if(footerHasht){
             let l = el.getBoundingClientRect().left + el.getBoundingClientRect().width + mItem.getBoundingClientRect().width * 2;
-            if(l < 1040)
-                l = 1040;
-            mItem.style.setProperty("left",  l +  "px")
-        } else if(mItem !== null) {
-            mItem.style.setProperty("left",  "0px")
+            if(l < 1040) l = 1040;
+            mItem.style.setProperty('left', l + 'px');
+        } else {
+            mItem.style.setProperty('left', '0px');
         }
+
         if(isInit){
-            if(mItem !== null) {
-                let isMouseInMenu = false, lockOpen = false, timeOut;
-                el.onmouseover = function (e){
-                    mItem.classList.add("active");
-                }
-                el.onmouseleave = function (e){
+            let isMouseInMenu = false, lockOpen = false, timeOut;
+            el.onmouseover = function (){
+                mItem.classList.add('active');
+            }
+            el.onmouseleave = function (){
+                lockOpen = false;
+                setTimeout(function (){
+                    if(!isMouseInMenu)
+                        mItem.classList.remove('active');
+                },200);
+            }
+            mItem.onmouseover = function () {
+                if(lockOpen) return;
+
+                lockOpen = true;
+                isMouseInMenu = true;
+                mItem.classList.add('active');
+            }
+            mItem.onmouseleave = function (){
+                isMouseInMenu = false;
+                mItem.classList.remove('active');
+
+                if(timeOut !== undefined)
+                    clearTimeout(timeOut);
+                timeOut = setTimeout(function (){
                     lockOpen = false;
-                    setTimeout(function (){
-                        if(!isMouseInMenu)
-                            mItem.classList.remove("active");
-                    },200);
-                }
-                mItem.onmouseover = function (e) {
-                    if(lockOpen)
-                        return;
-
-                    lockOpen = true;
-                    isMouseInMenu = true;
-                    mItem.classList.add("active");
-                }
-                mItem.onmouseleave = function (e){
-                    isMouseInMenu = false;
-                    mItem.classList.remove("active");
-
-                    if(timeOut !== undefined)
-                        clearTimeout(timeOut);
-                    timeOut = setTimeout(function (){
-                        lockOpen = false;
-                    },500);
-                }
+                },500);
             }
         }
     })
