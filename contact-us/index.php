@@ -13,7 +13,7 @@ include '../partials/header.php';
                     <div class="text-center text-80 mb-12">
                         ۲۴ ساعت هفته خدمت شما
                     </div>
-                    <a href="../my/submitticket.php" target="_blank">
+                    <a href="../my/submitticket.php" target="_blank" rel="noopener noreferrer">
                         <span class="bg-white text-red py-2 px-6 rounded-full mb-2 text-w-bold">ارسال تیکت</span>
                     </a>
                 </div>

@@ -459,11 +459,11 @@ include '../partials/header.php';
                         تهران، مرزداران، خیابان ابوالفضل، پلاک ۲۱۳
                     </div>
                     <div class="grid cols-2 text-center mt-4 max-w-50 mx-auto text-80">
-                        <a href="https://tlgrm.in/Persian_Mizban" target="_blank">
+                        <a href="https://tlgrm.in/Persian_Mizban" target="_blank" rel="noopener noreferrer">
                             Telegram
                             <div class="icon-telegram"></div>
                         </a>
-                        <a href="https://www.instagram.com/persianmizban_com/" target="_blank">
+                        <a href="https://www.instagram.com/persianmizban_com/" target="_blank" rel="noopener noreferrer">
                             Instagram
                             <div class="icon-instagram"></div>
                         </a>
@@ -488,7 +488,7 @@ include '../partials/header.php';
                     <div class="text-center text-80 mb-4">
                         ۲۴ ساعت هفته خدمت شما
                     </div>
-                        <a href="https://www.persianmizban.com/my/submitticket.php" target="_blank">
+                        <a href="https://www.persianmizban.com/my/submitticket.php" target="_blank" rel="noopener noreferrer">
                             <span class="bg-white text-red py-2 px-6 rounded-full mb-2 text-w-bold">ارسال تیکت</span>
                         </a>
                     <div class="text-w-black text-88 pt-4">
