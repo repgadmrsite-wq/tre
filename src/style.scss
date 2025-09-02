@@ -1,74 +1,108 @@
 @font-face {
     font-family: "flaticon";
-    src: url("./fnt/flaticon.ttf?e873199346351cae3e1f833d83f086ea") format("truetype"),
-    url("./fnt/flaticon.woff?e873199346351cae3e1f833d83f086ea") format("woff"),
-    url("./fnt/flaticon.woff2?e873199346351cae3e1f833d83f086ea") format("woff2"),
-    url("./fnt/flaticon.eot?e873199346351cae3e1f833d83f086ea#iefix") format("embedded-opentype"),
-    url("./fnt/flaticon.svg?e873199346351cae3e1f833d83f086ea#flaticon") format("svg");
+    src: url("/fnt/flaticon.ttf?e873199346351cae3e1f833d83f086ea") format("truetype"),
+    url("/fnt/flaticon.woff?e873199346351cae3e1f833d83f086ea") format("woff"),
+    url("/fnt/flaticon.woff2?e873199346351cae3e1f833d83f086ea") format("woff2"),
+    url("/fnt/flaticon.eot?e873199346351cae3e1f833d83f086ea#iefix") format("embedded-opentype"),
+    url("/fnt/flaticon.svg?e873199346351cae3e1f833d83f086ea#flaticon") format("svg");
+    font-display: swap;
 }
 
 @font-face {
     font-family: IRANSans;
     font-style: normal;
     font-weight: 900;
-    src: url('./fnt/eot/IRANSansWeb_Black.eot');
-    src: url('./fnt/eot/IRANSansWeb_Black.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
-    url('./fnt/woff2/IRANSansWeb_Black.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
-    url('./fnt/woff/IRANSansWeb_Black.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-    url('./fnt/ttf/IRANSansWeb_Black.ttf') format('truetype');
+    src: url('/fnt/eot/IRANSansWeb_Black.eot');
+    src: url('/fnt/eot/IRANSansWeb_Black.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+    url('/fnt/woff2/IRANSansWeb_Black.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+    url('/fnt/woff/IRANSansWeb_Black.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('/fnt/ttf/IRANSansWeb_Black.ttf') format('truetype');
+    font-display: swap;
 }
 @font-face {
     font-family: IRANSans;
     font-style: normal;
     font-weight: bold;
-    src: url('./fnt/eot/IRANSansWeb_Bold.eot');
-    src: url('./fnt/eot/IRANSansWeb_Bold.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
-    url('./fnt/woff2/IRANSansWeb_Bold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
-    url('./fnt/woff/IRANSansWeb_Bold.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-    url('./fnt/ttf/IRANSansWeb_Bold.ttf') format('truetype');
+    src: url('/fnt/eot/IRANSansWeb_Bold.eot');
+    src: url('/fnt/eot/IRANSansWeb_Bold.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+    url('/fnt/woff2/IRANSansWeb_Bold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+    url('/fnt/woff/IRANSansWeb_Bold.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('/fnt/ttf/IRANSansWeb_Bold.ttf') format('truetype');
+    font-display: swap;
 }
 @font-face {
     font-family: IRANSans;
     font-style: normal;
     font-weight: 500;
-    src: url('./fnt/eot/IRANSansWeb_Medium.eot');
-    src: url('./fnt/eot/IRANSansWeb_Medium.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
-    url('./fnt/woff2/IRANSansWeb_Medium.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
-    url('./fnt/woff/IRANSansWeb_Medium.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-    url('./fnt/ttf/IRANSansWeb_Medium.ttf') format('truetype');
+    src: url('/fnt/eot/IRANSansWeb_Medium.eot');
+    src: url('/fnt/eot/IRANSansWeb_Medium.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+    url('/fnt/woff2/IRANSansWeb_Medium.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+    url('/fnt/woff/IRANSansWeb_Medium.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('/fnt/ttf/IRANSansWeb_Medium.ttf') format('truetype');
+    font-display: swap;
 }
 @font-face {
     font-family: IRANSans;
     font-style: normal;
     font-weight: 300;
-    src: url('./fnt/eot/IRANSansWeb_Light.eot');
-    src: url('./fnt/eot/IRANSansWeb_Light.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
-    url('./fnt/woff2/IRANSansWeb_Light.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
-    url('./fnt/woff/IRANSansWeb_Light.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-    url('./fnt/ttf/IRANSansWeb_Light.ttf') format('truetype');
+    src: url('/fnt/eot/IRANSansWeb_Light.eot');
+    src: url('/fnt/eot/IRANSansWeb_Light.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+    url('/fnt/woff2/IRANSansWeb_Light.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+    url('/fnt/woff/IRANSansWeb_Light.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('/fnt/ttf/IRANSansWeb_Light.ttf') format('truetype');
+    font-display: swap;
 }
 @font-face {
     font-family: IRANSans;
     font-style: normal;
     font-weight: 200;
-    src: url('./fnt/eot/IRANSansWeb_UltraLight.eot');
-    src: url('./fnt/eot/IRANSansWeb_UltraLight.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
-    url('./fnt/woff2/IRANSansWeb_UltraLight.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
-    url('./fnt/woff/IRANSansWeb_UltraLight.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-    url('./fnt/ttf/IRANSansWeb_UltraLight.ttf') format('truetype');
+    src: url('/fnt/eot/IRANSansWeb_UltraLight.eot');
+    src: url('/fnt/eot/IRANSansWeb_UltraLight.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+    url('/fnt/woff2/IRANSansWeb_UltraLight.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+    url('/fnt/woff/IRANSansWeb_UltraLight.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('/fnt/ttf/IRANSansWeb_UltraLight.ttf') format('truetype');
+    font-display: swap;
 }
 @font-face {
     font-family: IRANSans;
     font-style: normal;
     font-weight: normal;
-    src: url('./fnt/eot/IRANSansWeb.eot');
-    src: url('./fnt/eot/IRANSansWeb.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
-    url('./fnt/woff2/IRANSansWeb.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
-    url('./fnt/woff/IRANSansWeb.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-    url('./fnt/ttf/IRANSansWeb.ttf') format('truetype');
+    src: url('/fnt/eot/IRANSansWeb.eot');
+    src: url('/fnt/eot/IRANSansWeb.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+    url('/fnt/woff2/IRANSansWeb.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+    url('/fnt/woff/IRANSansWeb.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('/fnt/ttf/IRANSansWeb.ttf') format('truetype');
+    font-display: swap;
 }
 
+/* --------------------------------------------
+   Design System Tokens
+   -------------------------------------------- */
 :root {
+    /* Typography */
+    --font-family-base: 'IRANSans', sans-serif;
+    --font-size-base: 1rem;
+    --line-height-base: 1.5;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+
+    /* Spacing Scale */
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+
+    /* Heading Sizes */
+    --font-size-h1: 2rem;
+    --font-size-h2: 1.5rem;
+    --font-size-h3: 1.25rem;
+    --font-size-h4: 1rem;
+    --font-size-h5: 0.83rem;
+    --font-size-h6: 0.67rem;
+
+    /* Color Palette */
     --m-color-body: 255, 255, 255;
     --m-color-body-l-1: 255, 255, 255;
     --m-color-body-d-1: 251, 251, 251;
@@ -91,17 +125,17 @@
     --m-color-invert-d-4: 0, 0, 0;
     --m-color-invert-l-5: 132, 132, 132;
     --m-color-invert-d-5: 0, 0, 0;
-    --m-color-primary: 50, 34, 143;
-    --m-color-primary-l-1: 58, 42, 151;
-    --m-color-primary-d-1: 48, 32, 138;
-    --m-color-primary-l-2: 73, 57, 166;
-    --m-color-primary-d-2: 44, 30, 128;
-    --m-color-primary-l-3: 96, 80, 189;
-    --m-color-primary-d-3: 39, 26, 113;
-    --m-color-primary-l-4: 127, 111, 220;
-    --m-color-primary-d-4: 32, 22, 93;
-    --m-color-primary-l-5: 165, 149, 255;
-    --m-color-primary-d-5: 24, 16, 68;
+    --m-color-primary: 59, 130, 246;
+    --m-color-primary-l-1: 96, 165, 250;
+    --m-color-primary-d-1: 37, 99, 235;
+    --m-color-primary-l-2: 147, 197, 253;
+    --m-color-primary-d-2: 29, 78, 216;
+    --m-color-primary-l-3: 191, 219, 254;
+    --m-color-primary-d-3: 23, 63, 193;
+    --m-color-primary-l-4: 219, 234, 254;
+    --m-color-primary-d-4: 19, 53, 164;
+    --m-color-primary-l-5: 239, 246, 255;
+    --m-color-primary-d-5: 15, 45, 135;
     --m-color-white: 255, 255, 255;
     --m-color-white-l-1: 255, 255, 255;
     --m-color-white-d-1: 251, 251, 251;
@@ -146,6 +180,12 @@
     --m-color-red-d-4: 216, 12, 37;
     --m-color-red-l-5: 255, 162, 186;
     --m-color-red-d-5: 187, 10, 32;
+    --color-bg: #ffffff;
+    --color-bg-alt: #f5f5f5;
+    --color-text: #111111;
+    --color-text-invert: #ffffff;
+    --color-border: #e5e7eb;
+    --color-primary: #3b82f6;
 }
 * {
     margin: 0;
@@ -166,15 +206,16 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section  
 body {
     --m-bg-alpha: 1;
     --m-text-alpha: 1;
-    background-color: rgba(var(--m-color-body), var(--m-bg-alpha));
-    color: rgba(var(--m-color-invert), var(--m-text-alpha));
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-base);
     direction: rtl;
 }
 body, button, input, select, textarea {
-    font-family: IRANSans;
+    font-family: var(--font-family-base);
 }
 button, input, optgroup, select, textarea {
     font-family: inherit;
@@ -186,31 +227,31 @@ a {
     text-decoration: none;
 }
 p {
-    margin: 0.4rem 0;
+    margin: var(--space-sm) 0;
 }
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--space-sm);
     display: block;
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
 }
 h1 {
-    font-size: 2rem;
+    font-size: var(--font-size-h1);
 }
 h2 {
-    font-size: 1.5rem;
+    font-size: var(--font-size-h2);
 }
 h3 {
-    font-size: 1.25rem;
+    font-size: var(--font-size-h3);
 }
 h4 {
-    font-size: 1rem;
+    font-size: var(--font-size-h4);
 }
 h5 {
-    font-size: .83rem;
+    font-size: var(--font-size-h5);
 }
 h6 {
-    font-size: .67rem;
+    font-size: var(--font-size-h6);
 }
 i {
     vertical-align: middle !important;
@@ -236,12 +277,12 @@ td:not([align]), th:not([align]) {
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 0 var(--space-lg);
 }
 .container-fluid {
     width: 100%;
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 0 var(--space-lg);
 }
 @media only screen and (min-width: 576px) {
     .container {
@@ -329,11 +370,10 @@ a {
     background: #f2f2f8
 }
 ::-webkit-scrollbar-thumb {
-    background: #888;
-    background: linear-gradient(-135deg, #1b318a,#46b7b1)
+    background: rgb(var(--m-color-primary))
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: #1b318a
+    background: rgb(var(--m-color-primary-d-1))
 }
 :root {
     --swiper-theme-color: #007aff
@@ -730,10 +770,10 @@ button.swiper-pagination-bullet {
     animation: swiper-preloader-spin 1s infinite linear
 }
 .swiper-lazy-preloader-white {
-    --swiper-preloader-color: #fff
+    --swiper-preloader-color: var(--color-text-invert)
 }
 .swiper-lazy-preloader-black {
-    --swiper-preloader-color: #000
+    --swiper-preloader-color: var(--color-text)
 }
 @keyframes swiper-preloader-spin {
     100% {
@@ -932,7 +972,7 @@ button.swiper-pagination-bullet {
     width: 100%;
     border-radius: 10px;
     position: absolute;
-    background: linear-gradient(to bottom,#110c7f,#4ccbb7);
+    background: rgb(var(--m-color-primary));
     transition-duration: 200ms;
     -webkit-transition-duration: 200ms;
     -o-transition-duration: 200ms
@@ -967,7 +1007,7 @@ button.swiper-pagination-bullet {
     letter-spacing: .19rem
 }
 #client-comments .button {
-    background: linear-gradient(45deg,#110c7f,#4ccbb7);
+    background: linear-gradient(45deg,rgb(var(--m-color-primary)),rgb(var(--m-color-primary-l-1)));
     margin-top: auto;
     margin-bottom: auto;
     margin-right: auto;
@@ -984,7 +1024,7 @@ button.swiper-pagination-bullet {
     transition-duration: 200ms;
     -webkit-transition-duration: 200ms;
     -o-transition-duration: 200ms;
-    background: url("img/icon-send.png") right 1.2rem top .8rem no-repeat #fff;
+    background: url("img/icon-send.png") right 1.2rem top .8rem no-repeat var(--color-bg);
     background-size: auto 30%
 }
 #client-comments .button div:hover {
@@ -1030,61 +1070,39 @@ button.swiper-pagination-bullet {
     box-shadow: 0 .35rem 1.25rem .25rem rgba(0,0,0,0.025);
     opacity: 1;
     filter: none;
-    background: #fff
+    background: var(--color-bg)
 }
 #top-nav {
     --m-bg-alpha: 1;
-    background-color: rgb(18 10 63);
+    background-color: var(--color-bg);
     position: relative;
-    --m-text-alpha: 1;
-    color: rgba(var(--m-color-white),var(--m-text-alpha));
-    font-size: 11px
+    color: var(--color-text);
+    font-size: .875rem;
+    line-height: 1.5;
+    padding: var(--space-sm) 0;
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: 0 1px 2px rgba(var(--m-color-black),0.05);
 }
 @media only screen and (max-width: 991.98px)  {
     #top-nav {
         position: fixed;
         z-index: 99;
         width: 100%;
-        border-bottom-width: 2px;
+        border-bottom-width: 1px;
         --m-border-alpha: 1;
-        border-color: rgba(var(--m-color-orange),var(--m-border-alpha));
+        border-color: var(--color-border);
         top: 0
     }
 }
 @media only screen and (min-width: 992px)  {
-    #top-nav:before {
-        content: "";
-        width: 35%;
-        min-width: 250px;
-        height: .5rem;
-        --m-bg-alpha: 1;
-        background-color: rgba(var(--m-color-orange),var(--m-bg-alpha));
-        right: 0rem;
-        position: absolute;
-        top: 100%;
-        transform: rotate(.9deg);
-        z-index: -1;
-        margin-top: -.38rem
-    }
+    #top-nav:before,
     #top-nav:after {
-        content: "";
-        width: 35%;
-        min-width: 250px;
-        height: .15rem;
-        --m-bg-alpha: 1;
-        background-color: rgba(var(--m-color-red),var(--m-bg-alpha));
-        right: .25rem;
-        position: absolute;
-        background: black;
-        background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
-        top: 100%;
-        transform: rotate(1.8deg);
-        z-index: -1;
-        margin-top: -.25rem;
-        opacity: .8
+        display: none;
     }
 }
+
 #top-nav .logo {
+    display: block;
     width: 13.5rem;
     min-width: 13.5rem;
     height: 5.75rem;
@@ -1417,7 +1435,7 @@ button.swiper-pagination-bullet {
     }
 }
 #bottom-nav {
-    background: #fff;
+    background: var(--color-bg);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.03);
     font-size: .9rem;
     position: relative;
@@ -1530,9 +1548,9 @@ button.swiper-pagination-bullet {
     right: 0;
     transform: translateX(50%);
     font-size: .5rem;
-    background: linear-gradient(45deg, #110c7f, #4ccbb7);
+    background: linear-gradient(45deg, rgb(var(--m-color-primary)), rgb(var(--m-color-primary-l-1)));
     --m-text-alpha: 1;
-    color: rgba(var(--m-color-white),var(--m-text-alpha));
+    color: var(--color-text-invert);
     padding-right: 0.25rem;
     padding-left: 0.25rem;
     padding-top: 0.125rem;
@@ -1615,9 +1633,9 @@ button.swiper-pagination-bullet {
     width: 12.5rem;
     min-height: 17.5rem;
     --m-text-alpha: 1;
-    color: rgba(var(--m-color-white),var(--m-text-alpha));
+    color: var(--color-text-invert);
     font-size: 0.8rem;
-    background: #32228f;
+    background: var(--color-primary);
     border-bottom-right-radius: 1.25rem;
     transform: translateX(-300%) translateY(-3rem);
     opacity: 0;
@@ -1675,7 +1693,7 @@ button.swiper-pagination-bullet {
     position: absolute;
     right: 100%;
     top: 0;
-    color: #fff;
+    color: var(--color-text-invert);
     visibility: hidden;
     opacity: 0
 }
@@ -1713,7 +1731,7 @@ button.swiper-pagination-bullet {
     padding-right: .75rem
 }
 #mega-menu > ul > li .button {
-    background: #fff;
+    background: var(--color-bg);
     --m-text-alpha: 1;
     color: rgba(var(--m-color-primary),var(--m-text-alpha));
     border-radius: 9999px;
@@ -1826,7 +1844,7 @@ input:focus {
     font-size: .9rem;
     font-weight: 300;
     position: relative;
-    background: url("img/img-index-h.jpg") right center no-repeat #fff;
+    background: url("img/img-index-h.jpg") right center no-repeat var(--color-bg);
     color: #343638;
     z-index: 2
 }
@@ -1856,7 +1874,7 @@ input:focus {
 }
 #header li:before {
     content: "";
-    background: linear-gradient(-270deg,#110c7f,#4ccbb7);
+    background: linear-gradient(-270deg,rgb(var(--m-color-primary)),rgb(var(--m-color-primary-l-1)));
     width: 1rem;
     height: 1rem;
     position: absolute;
@@ -1886,7 +1904,7 @@ input:focus {
     display: inline-block;
     -ms-display: inline-block;
     --m-text-alpha: 1;
-    color: rgba(var(--m-color-white),var(--m-text-alpha));
+    color: var(--color-text-invert);
     font-size: 1.1rem;
     padding-right: 1rem;
     padding-left: 1rem;
@@ -2064,7 +2082,7 @@ input:focus {
     }
 }
 #host-links,  #blog-links,  #domain-links {
-    background: #fff;
+    background: var(--color-bg);
     text-align: center;
     padding: 2rem 0rem 8rem;
     border-radius: 0 0 400px 0/ 0 0 250px 0
@@ -2096,7 +2114,7 @@ input:focus {
 }
 #host-links .button, #blog-links .button, #domain-links .button {
     display: inline-block;
-    background: #fff;
+    background: var(--color-bg);
     padding: .625rem 1.5rem;
     border-radius: 999rem;
     font-size: .8rem;
@@ -2110,13 +2128,13 @@ input:focus {
     --m-bg-alpha: 1;
     background-color: rgba(var(--m-color-primary),var(--m-bg-alpha));
     --m-text-alpha: 1;
-    color: rgba(var(--m-color-white),var(--m-text-alpha))
+    color: var(--color-text-invert)
 }
 #host-links .button:hover, #blog-links .button:hover, #domain-links .button:hover {
     --m-bg-alpha: 1;
     background-color: rgba(var(--m-color-primary),var(--m-bg-alpha));
     --m-text-alpha: 1;
-    color: rgba(var(--m-color-white),var(--m-text-alpha))
+    color: var(--color-text-invert)
 }
 @media only screen and (max-width: 575.98px)  {
     #host-links .button, #blog-links .button, #domain-links .button {
@@ -2131,7 +2149,7 @@ input:focus {
     display: flex;
     align-items: center;
     justify-items: center;
-    color: #fff;
+    color: var(--color-text-invert);
     text-align: center;
     font-weight: 300
 }
@@ -2165,14 +2183,14 @@ input:focus {
     background: none;
     font-size: .8rem;
     padding-right: 4rem;
-    color: #fff;
+    color: var(--color-text-invert);
     outline: none !important;
     transition-duration: 200ms;
     -webkit-transition-duration: 200ms;
     -o-transition-duration: 200ms
 }
 #domain-reg input:focus {
-    box-shadow: 0 0 0 .15rem #fff
+    box-shadow: 0 0 0 .15rem var(--color-bg)
 }
 #domain-reg input::placeholder {
     color: rgba(255,255,255,.5)
@@ -2331,7 +2349,7 @@ input:focus {
     padding-top: 4rem;
     border-radius: 400px 0 0 0/ 250px 0 0 0;
     font-weight: 300;
-    background: url("img/wd-bg.jpg") right bottom no-repeat #fff;
+    background: url("img/wd-bg.jpg") right bottom no-repeat var(--color-bg);
     padding-bottom: 6rem
 }
 #domain-whats .df {
@@ -2343,7 +2361,7 @@ input:focus {
     content: "";
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom , #fff 25%, #f8f8f8);
+    background: linear-gradient(to bottom , var(--color-bg) 25%, var(--color-bg-alt));
     position: absolute;
     right: 0;
     top: 0;
@@ -2453,7 +2471,7 @@ input:focus {
     opacity: 1
 }
 #domain-whats .domain-info {
-    background: #fff;
+    background: var(--color-bg);
     border-radius: .8rem;
     padding: 2rem;
     position: relative;
@@ -2500,7 +2518,7 @@ input:focus {
     font-weight: 500
 }
 #domain-whats .domain-info .more-button span {
-    background: linear-gradient(to right,#0f0a7e,#4ccbb7);
+    background: linear-gradient(to right,rgb(var(--m-color-primary)),rgb(var(--m-color-primary-l-1)));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition-duration: 300ms;
@@ -2606,7 +2624,7 @@ input:focus {
     border-radius: 1.5rem;
     list-style: none;
     margin-bottom: 4rem;
-    background: #fff
+    background: var(--color-bg)
 }
 #domain-pricing .domain-pricing-list li {
     padding-top: 0.5rem;
@@ -2623,19 +2641,19 @@ input:focus {
     background: url("img/icon-check3.svg") center center no-repeat;
     background-size: 55% auto;
     vertical-align: middle;
-    border: 1px solid #000;
+    border: 1px solid var(--color-border);
     opacity: .25;
     border-radius: 50%;
     margin-left: .1rem
 }
 #domain-pricing .domain-pricing-list li.active {
-    background: linear-gradient(to right,#0f0a7e,#4ccbb7);
-    color: #fff
+    background: linear-gradient(to right,rgb(var(--m-color-primary)),rgb(var(--m-color-primary-l-1)));
+    color: var(--color-text-invert)
 }
 #domain-pricing .domain-pricing-list li.active .icon {
     background: url("img/icon-check2.svg") center center no-repeat;
     background-size: 55% auto;
-    border: 1px solid #fff;
+    border: 1px solid var(--color-bg);
     opacity: 1
 }
 #domain-pricing .domain-pricing-list li.offer {
@@ -2754,7 +2772,7 @@ input:focus {
 }
 #domain-pricing .domain-price .price small {
     font-weight: 400;
-    color: #000;
+    color: var(--color-text);
     font-size: .7rem
 }
 #domain-pricing .domain-price .suf {
@@ -2774,7 +2792,7 @@ input:focus {
 }
 #domain-pricing .domain-price:hover .suf {
     background: linear-gradient(to right,#f32f47,#ff8a01);
-    color: #fff
+    color: var(--color-text-invert)
 }
 #domain-pricing .domain-price:hover .button {
     display: block
@@ -2788,7 +2806,7 @@ input:focus {
     --m-bg-alpha: 1;
     background-color: rgba(var(--m-color-primary),var(--m-bg-alpha));
     --m-text-alpha: 1;
-    color: rgba(var(--m-color-white),var(--m-text-alpha));
+    color: var(--color-text-invert);
     text-align: center;
     padding: 1rem
 }
@@ -2872,7 +2890,7 @@ input:focus {
     cursor: pointer;
     margin-bottom: 1rem;
     position: relative;
-    background: #fff
+    background: var(--color-bg)
 }
 #faq .qa::after {
     content: "";
@@ -2914,7 +2932,7 @@ input:focus {
 }
 #faq .qa.active .a {
     display: block;
-    border-top: 2px solid #f8f8f8;
+    border-top: 2px solid var(--color-border);
     padding-top: 1.25rem;
     margin-top: 1.5rem;
     margin-right: -1.5rem;
@@ -2943,7 +2961,7 @@ input:focus {
     padding-top: 100%;
     border-radius: 2.5rem;
     position: relative;
-    background: #fff
+    background: var(--color-bg)
 }
 #client-info .box .c {
     position: absolute;
@@ -2969,7 +2987,7 @@ input:focus {
     }
 }
 #client-info .box .gr {
-    background: linear-gradient(to right,#0f0a7e,#4ccbb7);
+    background: linear-gradient(to right,rgb(var(--m-color-primary)),rgb(var(--m-color-primary-l-1)));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     direction: ltr;
@@ -3011,12 +3029,12 @@ input:focus {
     z-index: 2;
     line-height: 2;
     --m-text-alpha: 1;
-    color: rgba(var(--m-color-white),var(--m-text-alpha))
+    color: var(--color-text-invert)
 }
 #footer .support {
     --m-text-alpha: 1;
-    color: rgba(var(--m-color-invert),var(--m-text-alpha));
-    background: #fff;
+    color: var(--color-text);
+    background: var(--color-bg);
     box-shadow: 0 0 24px rgba(49,33,144,.26);
     padding: 1.5rem;
     border-radius: 1rem 3rem 1rem 3rem;
@@ -3037,7 +3055,7 @@ input:focus {
 #footer .support .icon-phone {
     width: 2rem;
     height: 2rem;
-    background: url("img/icon-phone.png") center center no-repeat #fff;
+    background: url("img/icon-phone.png") center center no-repeat var(--color-bg);
     background-size: auto 100%;
     position: relative;
     display: inline-block;
@@ -3091,6 +3109,7 @@ input:focus {
     }
 }
 #footer .logo {
+    display: block;
     width: 13.5rem;
     height: 5.75rem;
     background: url("img/logo.png") right center no-repeat;
@@ -3180,7 +3199,7 @@ input:focus {
 #footer ul li:hover:before {
     width: 1rem;
     margin-right: 0rem;
-    background: #4ccbb7
+    background: rgb(var(--m-color-primary-l-1))
 }
 #footer .orange ul li:hover:before {
     background: #ffac1f
@@ -3264,7 +3283,7 @@ input:focus {
 #host-slider {
     position: relative;
     --m-text-alpha: 1;
-    color: rgba(var(--m-color-white),var(--m-text-alpha));
+    color: var(--color-text-invert);
     background: url("img/host-slider-bg.png") center center no-repeat;
     background-size: 100% 100%;
     display: flex;
@@ -3272,7 +3291,7 @@ input:focus {
 }
 @media only screen and (max-width: 991.98px)  {
     #host-slider {
-        background: linear-gradient(to right, #4ccbb7, #141a83);
+        background: linear-gradient(to right, rgb(var(--m-color-primary-l-1)), #141a83);
         padding: 3rem 0;
         overflow: hidden
     }
@@ -3289,7 +3308,7 @@ input:focus {
 }
 @media only screen and (max-width: 991.98px)  {
     #host-slider::before {
-        background: #fff;
+        background: var(--color-bg);
         width: 200%;
         height: 6rem;
         border-radius: 50%;
@@ -3311,7 +3330,7 @@ input:focus {
 }
 @media only screen and (max-width: 991.98px)  {
     #host-slider::after {
-        background: #fff;
+        background: var(--color-bg);
         width: 200%;
         height: 6rem;
         border-radius: 50%;
@@ -3390,7 +3409,7 @@ input:focus {
     --m-bg-alpha: 1;
     background-color: rgba(var(--m-color-primary),var(--m-bg-alpha));
     --m-text-alpha: 1;
-    color: rgba(var(--m-color-white),var(--m-text-alpha))
+    color: var(--color-text-invert)
 }
 @media only screen and (min-width: 992px)  {
     #host-links {
@@ -3446,8 +3465,8 @@ input:focus {
     border: 3px solid #e1e9f7;
     border-radius: 50%;
     margin: 0 auto 8px;
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.03), 0 0 0 4px #fff;
-    background: #fff
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.03), 0 0 0 4px var(--color-bg);
+    background: var(--color-bg)
 }
 #host-plans .choose > div.active {
     color: #e55d23
@@ -3485,7 +3504,7 @@ input:focus {
     text-align: center;
     z-index: 4;
     --m-text-alpha: 1;
-    color: rgba(var(--m-color-white),var(--m-text-alpha));
+    color: var(--color-text-invert);
     left: 54%;
     border-radius: 50%;
     bottom: 100%;
@@ -3589,7 +3608,7 @@ input:focus {
     background-size: 100% auto
 }
 #host-plans .plan-in {
-    background: #fff;
+    background: var(--color-bg);
     z-index: 2;
     position: relative;
     border-radius: .42rem .42rem 1.5rem 1.5rem;
@@ -3787,7 +3806,7 @@ input:focus {
     -o-transition-duration: 200ms;
     border-radius: 14rem 20rem 20rem 0;
     margin-left: .75rem;
-    background: linear-gradient(to right, #0f0a7e, #4ccbb7)
+    background: linear-gradient(to right, rgb(var(--m-color-primary)), rgb(var(--m-color-primary-l-1)))
 }
 #host-plans .plan-in .button .icon::before {
     content: "";
@@ -3850,11 +3869,11 @@ input:focus {
     position: absolute;
     left: -3px;
     top: 0rem;
-    background: linear-gradient(to bottom, #fff, transparent)
+    background: linear-gradient(to bottom, var(--color-bg), transparent)
 }
 #host-plans .more-info .button {
     display: inline-block;
-    background: #fff;
+    background: var(--color-bg);
     margin: .5rem 0 -.5rem;
     position: relative;
     z-index: 2;
@@ -3907,7 +3926,7 @@ input:focus {
     position: relative;
     display: none;
     -ms-display: none;
-    background: #fff
+    background: var(--color-bg)
 }
 #host-plans-details.active {
     display: block;
@@ -3918,7 +3937,7 @@ input:focus {
         content: "";
         width: 1rem;
         height: 100%;
-        background: linear-gradient(to right, transparent, #fff);
+        background: linear-gradient(to right, transparent, var(--color-bg));
         right: 0;
         top: 0;
         z-index: 2;
@@ -3928,7 +3947,7 @@ input:focus {
         content: "";
         width: 1rem;
         height: 100%;
-        background: linear-gradient(to left, transparent, #fff);
+        background: linear-gradient(to left, transparent, var(--color-bg));
         left: 0;
         top: 0;
         z-index: 2;
@@ -3945,8 +3964,8 @@ input:focus {
     min-width: 990px
 }
 #host-plans-details table .title {
-    background: linear-gradient(to right, #0f0a7e, #4ccbb7);
-    color: #32228f;
+    background: linear-gradient(to right, rgb(var(--m-color-primary)), rgb(var(--m-color-primary-l-1)));
+    color: var(--color-primary);
     padding: 2px;
     display: inline-block;
     border-radius: 999rem;
@@ -3957,7 +3976,7 @@ input:focus {
     color: #f32f47
 }
 #host-plans-details table .title .in {
-    background: #fff;
+    background: var(--color-bg);
     border-radius: 999rem;
     padding-top: 0.55rem;
     padding-bottom: 0.55rem;
@@ -4006,7 +4025,7 @@ input:focus {
 #host-features .icon-check {
     width: 1.5rem;
     height: 1.5rem;
-    background: url("img/icon-check2.svg") center center no-repeat #32228f;
+    background: url("img/icon-check2.svg") center center no-repeat var(--color-primary);
     border-radius: 50%;
     background-size: 50% auto;
     display: inline-block;
@@ -4042,7 +4061,7 @@ input:focus {
 #server-info-grid,  #host-info-grid {
     padding-top: 0.5rem;
     padding-bottom: 4rem;
-    background: linear-gradient(to bottom, #fff 5%, transparent 6%)
+    background: linear-gradient(to bottom, var(--color-bg) 5%, transparent 6%)
 }
 #server-info-grid .title, #host-info-grid .title {
     text-align: center;
@@ -4068,7 +4087,7 @@ input:focus {
     padding: 1.5rem;
     text-align: center;
     font-weight: 300;
-    background: #fff;
+    background: var(--color-bg);
     position: relative
 }
 #server-info-grid .box::after, #host-info-grid .box::after {
@@ -4112,7 +4131,7 @@ input:focus {
     line-height: 2
 }
 #host-pt {
-    background: #fff;
+    background: var(--color-bg);
     padding: 2rem 0rem 2rem;
     border-radius: 0 0 400px 0/ 0 0 250px 0;
     overflow: hidden
@@ -4131,7 +4150,7 @@ input:focus {
 }
 #host-pt .button {
     display: inline-block;
-    background: #fff;
+    background: var(--color-bg);
     padding: .625rem 1.5rem;
     border-radius: 999rem;
     font-size: .8rem;
@@ -4145,7 +4164,7 @@ input:focus {
     --m-bg-alpha: 1;
     background-color: rgba(var(--m-color-primary),var(--m-bg-alpha));
     --m-text-alpha: 1;
-    color: rgba(var(--m-color-white),var(--m-text-alpha))
+    color: var(--color-text-invert)
 }
 @media only screen and (max-width: 575.98px)  {
     #host-pt .button {
@@ -4155,7 +4174,7 @@ input:focus {
     }
 }
 #server-pt {
-    background: #fff;
+    background: var(--color-bg);
     padding: 2rem 0rem 4rem;
     overflow: hidden;
     min-height: 350px;
@@ -4274,7 +4293,7 @@ input:focus {
         position: absolute;
         right: 0rem;
         top: 0.5rem;
-        border: 3px solid #fff;
+        border: 3px solid var(--color-bg);
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1)
     }
 }
@@ -4283,7 +4302,7 @@ input:focus {
     display: flex;
     align-items: center;
     justify-items: center;
-    color: #fff;
+    color: var(--color-text-invert);
     font-weight: 300;
     padding: 2rem 0
 }
@@ -4395,7 +4414,7 @@ input:focus {
     padding-top: 4rem;
     border-radius: 400px 0 0 0/ 250px 0 0 0;
     font-weight: 300;
-    background: #fff;
+    background: var(--color-bg);
     padding-bottom: 6rem;
     overflow: hidden
 }
@@ -4427,7 +4446,7 @@ input:focus {
 }
 #server-why-pm li:before, #host-why-pm li:before {
     content: "";
-    background: linear-gradient(-270deg, #110c7f, #4ccbb7);
+    background: linear-gradient(-270deg, rgb(var(--m-color-primary)), rgb(var(--m-color-primary-l-1)));
     width: 1rem;
     height: 1rem;
     position: absolute;
@@ -4480,7 +4499,7 @@ input:focus {
     border-radius: 1.5rem;
     font-size: 1.1rem;
     line-height: 2;
-    color: #fff
+    color: var(--color-text-invert)
 }
 #gl-tabs .tab.active {
     display: block
@@ -4524,7 +4543,7 @@ input:focus {
     -o-transition-duration: 300ms
 }
 #gl-tabs .tab-button.active {
-    color: #fff;
+    color: var(--color-text-invert);
     font-weight: 900;
     position: relative
 }
@@ -4643,7 +4662,7 @@ input:focus {
         border-radius: 2.7rem 2.7rem 2.7rem 20rem
     }
     #host-list .box.invert .icon-area {
-        background: radial-gradient(#fff 90%, transparent);
+        background: radial-gradient(var(--color-bg) 90%, transparent);
         border-radius: 2.7rem 2.7rem 2.7rem 16rem
     }
     #host-list .box.invert .icon-circle {
@@ -4680,7 +4699,7 @@ input:focus {
     }
 }
 #host-list .box-in {
-    background: #fff;
+    background: var(--color-bg);
     border-radius: 2.7rem 2.7rem 20rem 2.7rem;
     position: relative;
     z-index: 2
@@ -4689,12 +4708,12 @@ input:focus {
     width: 100%;
     padding-top: 88%;
     position: relative;
-    background: radial-gradient(#fff 90%, transparent);
+    background: radial-gradient(var(--color-bg) 90%, transparent);
     border-radius: 2.7rem 2.7rem 16rem 2.7rem
 }
 #host-list .icon-circle {
     border: 3px solid #f3f7fc;
-    box-shadow: 0 0 0 3px #fff;
+    box-shadow: 0 0 0 3px var(--color-bg);
     position: absolute;
     width: 70%;
     height: 80%;
@@ -4710,7 +4729,7 @@ input:focus {
     border-color: #f43642
 }
 #host-list .icon-circle-in {
-    border: 3px solid #fff;
+    border: 3px solid var(--color-bg);
     position: absolute;
     right: 3px;
     top: 3px;
@@ -4723,12 +4742,12 @@ input:focus {
     -o-transition-duration: 600ms
 }
 #host-list .box:hover .icon-circle-in {
-    box-shadow: 0 0 0 3px #fff, 0px 3px 0 3px rgba(255,255,0,.35), 3px 0px 0 3px rgba(255,255,0,.35)
+    box-shadow: 0 0 0 3px var(--color-bg), 0px 3px 0 3px rgba(255,255,0,.35), 3px 0px 0 3px rgba(255,255,0,.35)
 }
 #host-list .icon {
     width: 100%;
     height: 100%;
-    background: #fff;
+    background: var(--color-bg);
     box-shadow: 0 8px 40px rgba(0,0,0,0.03);
     border-radius: 50%;
     display: flex;
@@ -4757,8 +4776,8 @@ input:focus {
     border: none
 }
 #host-list .box:hover .button .icon-more:before {
-    border-right-color: #fff;
-    border-left-color: #fff
+    border-right-color: var(--color-bg);
+    border-left-color: var(--color-bg)
 }
 #host-list .button {
     text-align: left;
@@ -4875,7 +4894,7 @@ input:focus {
     padding: 1.5rem .75rem;
     text-align: center;
     font-weight: 300;
-    background: #fff;
+    background: var(--color-bg);
     position: relative;
     margin: .5rem
 }
@@ -4922,7 +4941,7 @@ input:focus {
 #features-slider .slide-prev, #features-slider .slide-next {
     width: 5rem;
     height: 100%;
-    background: linear-gradient(to left, transparent, #fff 75%);
+    background: linear-gradient(to left, transparent, var(--color-bg) 75%);
     position: absolute;
     top: 0;
     z-index: 2;
@@ -4966,7 +4985,7 @@ input:focus {
     content: "";
     width: 80%;
     height: 80%;
-    background: #fff;
+    background: var(--color-bg);
     box-shadow: 0 8px 40px rgba(0,0,0,0.03);
     border-radius: 50%;
     top: 10%;
@@ -4993,8 +5012,8 @@ input:focus {
     background: linear-gradient(to right bottom, #f32f47, #ff8a01)
 }
 #features-slider .slide-prev .button:hover::after, #features-slider .slide-next .button:hover::after {
-    border-right-color: #fff;
-    border-left-color: #fff
+    border-right-color: var(--color-bg);
+    border-left-color: var(--color-bg)
 }
 #features-slider .slide-prev.swiper-button-disabled, #features-slider .slide-next.swiper-button-disabled {
     opacity: 0
@@ -5002,7 +5021,7 @@ input:focus {
 #features-slider .slide-prev {
     right: .5rem;
     left: auto;
-    background: linear-gradient(to right, transparent, #fff 75%)
+    background: linear-gradient(to right, transparent, var(--color-bg) 75%)
 }
 @media only screen and (max-width: 575.98px)  {
     #features-slider .slide-prev {
@@ -5025,7 +5044,7 @@ input:focus {
 }
 #why-us {
     border-radius: 400px 0 0 0/ 250px 0 0 0;
-    background: #fff;
+    background: var(--color-bg);
     padding-top: 4.75rem;
     padding-bottom: 4rem
 }
@@ -5057,7 +5076,7 @@ input:focus {
 #why-us .pm-bg:after {
     width: 100%;
     height: 50%;
-    background: linear-gradient(to top, #fff,transparent);
+    background: linear-gradient(to top, var(--color-bg),transparent);
     position: absolute;
     content: "";
     bottom: 0
@@ -5118,7 +5137,7 @@ input:focus {
     box-shadow: 0 .3rem .8rem rgba(0,0,0,0.03);
     border-radius: 1rem;
     position: relative;
-    background: #fff;
+    background: var(--color-bg);
     overflow: hidden
 }
 @media only screen and (max-width: 1619.98px)  {
@@ -5130,7 +5149,7 @@ input:focus {
     content: "";
     width: 3rem;
     height: 3rem;
-    background: linear-gradient(to bottom right,#0f0a7e 36%, #4ccbb7 63%);
+    background: linear-gradient(to bottom right,rgb(var(--m-color-primary)) 36%, rgb(var(--m-color-primary-l-1)) 63%);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -5171,7 +5190,7 @@ input:focus {
 }
 #why-us .card:hover {
     --m-text-alpha: 1;
-    color: rgba(var(--m-color-white),var(--m-text-alpha))
+    color: var(--color-text-invert)
 }
 @keyframes rotate {
     0% {
@@ -5191,7 +5210,7 @@ input:focus {
     border-radius: 1.5rem;
     list-style: none;
     margin-bottom: 4rem;
-    background: #fff
+    background: var(--color-bg)
 }
 #plans .plans-pricing-list li {
     padding-top: 0.5rem;
@@ -5208,13 +5227,13 @@ input:focus {
     background: url("img/icon-check3.svg") center center no-repeat;
     background-size: 55% auto;
     vertical-align: middle;
-    border: 1px solid #000;
+    border: 1px solid var(--color-border);
     opacity: .25;
     border-radius: 50%;
     margin-left: .1rem
 }
 #plans .plans-pricing-list li.active {
-    background: #fff;
+    background: var(--color-bg);
     box-shadow: 0 8px 32px rgba(0,0,0,0.03)
 }
 #plans .plans-pricing-list li.active .icon {
@@ -5273,7 +5292,7 @@ input:focus {
     position: relative;
     padding: 2px;
     border-radius: .8rem;
-    background: linear-gradient(to bottom,transparent,#fff 11rem),linear-gradient(to right,#0f0a7e,#4ccbb7);
+    background: linear-gradient(to bottom,transparent,var(--color-bg) 11rem),linear-gradient(to right,rgb(var(--m-color-primary)),rgb(var(--m-color-primary-l-1)));
     box-shadow: 0 .5rem .8rem rgba(0,0,0,0.03);
     transition-duration: 200ms;
     -webkit-transition-duration: 200ms;
@@ -5284,7 +5303,7 @@ input:focus {
     position: absolute;
     width: 0%;
     height: 5%;
-    background: linear-gradient(to bottom,transparent,#fff 12rem),linear-gradient(to right bottom, #f32f47, #ff8a01);
+    background: linear-gradient(to bottom,transparent,var(--color-bg) 12rem),linear-gradient(to right bottom, #f32f47, #ff8a01);
     top: 0;
     left: 50%;
     border-radius: .78rem;
@@ -5308,7 +5327,7 @@ input:focus {
     }
 }
 #plans .plan .plan-in {
-    background: #fff;
+    background: var(--color-bg);
     border-radius: .7rem;
     padding: 2rem 1rem;
     position: relative;
@@ -5373,8 +5392,8 @@ input:focus {
 }
 #plans .plan .icon-2:after {
     content: "WORDPRESS";
-    background: linear-gradient(to right,#0f0a7e,#4ccbb7);
-    border: 3px solid #fff;
+    background: linear-gradient(to right,rgb(var(--m-color-primary)),rgb(var(--m-color-primary-l-1)));
+    border: 3px solid var(--color-bg);
     font-weight: 500;
     font-size: .6rem;
     position: absolute;
@@ -5382,7 +5401,7 @@ input:focus {
     left: 50%;
     padding: .2rem .4rem .1rem;
     border-radius: 50px;
-    color: #fff;
+    color: var(--color-text-invert);
     box-shadow: 0 0 10px rgba(0,0,0,0.1)
 }
 #plans .plan .icon-3 {
@@ -5510,7 +5529,7 @@ input:focus {
 }
 #plans .button:hover {
     --m-text-alpha: 1;
-    color: rgba(var(--m-color-white),var(--m-text-alpha))
+    color: var(--color-text-invert)
 }
 #plans .button:hover .icon-dots >div {
     background: #f7512d;
@@ -5556,7 +5575,7 @@ input:focus {
     width: 3px;
     height: 3px;
     border-radius: 50%;
-    background: #4ccbb7;
+    background: rgb(var(--m-color-primary-l-1));
     position: absolute;
     right: 30%
 }
@@ -5565,7 +5584,7 @@ input:focus {
     width: 3px;
     height: 3px;
     border-radius: 50%;
-    background: #0f0a7e;
+    background: rgb(var(--m-color-primary));
     position: absolute;
     left: 30%
 }
@@ -5587,7 +5606,7 @@ input:focus {
     border-radius: 9999px;
     display: inline-block;
     -ms-display: inline-block;
-    background: linear-gradient(to right,#0f0a7e,#4ccbb7)
+    background: linear-gradient(to right,rgb(var(--m-color-primary)),rgb(var(--m-color-primary-l-1)))
 }
 #delivery .button .in {
     padding-right: 1.75rem;
@@ -5647,7 +5666,7 @@ input:focus {
     -ms-display: inline-block;
     padding-top: auto;
     padding-bottom: auto;
-    background: linear-gradient(to right,#0f0a7e,#4ccbb7)
+    background: linear-gradient(to right,rgb(var(--m-color-primary)),rgb(var(--m-color-primary-l-1)))
 }
 @media only screen and (max-width: 575.98px)  {
     #blog .button {
@@ -5733,7 +5752,7 @@ input:focus {
     bottom: 0;
     right: 0;
     position: absolute;
-    background: linear-gradient(to bottom, transparent, #fff)
+    background: linear-gradient(to bottom, transparent, var(--color-bg))
 }
 #blog .post .tag {
     background: #f3f1f9;
@@ -5745,7 +5764,7 @@ input:focus {
     --m-bg-alpha: 1;
     background-color: rgba(var(--m-color-primary),var(--m-bg-alpha));
     --m-text-alpha: 1;
-    color: rgba(var(--m-color-white),var(--m-text-alpha))
+    color: var(--color-text-invert)
 }
 @keyframes dbutton {
     0% {
@@ -5832,7 +5851,7 @@ html {
     align-items: center;
     height: 100%;
     --m-text-alpha: 1;
-    color: rgba(var(--m-color-white),var(--m-text-alpha))
+    color: var(--color-text-invert)
 }
 @media only screen and (min-width: 992px)  {
     #contact-head .box >div .content {
@@ -5905,9 +5924,9 @@ html {
 }
 #contact-links .box {
     padding: 1rem;
-    background: linear-gradient(to right,#0f0a7e,#4ccbb7);
+    background: linear-gradient(to right,rgb(var(--m-color-primary)),rgb(var(--m-color-primary-l-1)));
     --m-text-alpha: 1;
-    color: rgba(var(--m-color-white),var(--m-text-alpha));
+    color: var(--color-text-invert);
     font-size: 0.8rem;
     box-shadow: 0 .65rem .5rem rgba(30,55,140,.1)
 }
@@ -5963,7 +5982,7 @@ html {
     position: absolute;
     width: .6rem;
     height: .6rem;
-    background: #fff;
+    background: var(--color-bg);
     border-radius: 50%;
     top: 50%;
     left: 50%;
@@ -6109,18 +6128,18 @@ html {
     content: "";
     width: 20%;
     height: 100%;
-    background: linear-gradient(to right, #fff 25%, transparent);
+    background: linear-gradient(to right, var(--color-bg) 25%, transparent);
     position: absolute;
     left: 0;
     z-index: 2
 }
 #our-team .employees {
-    background: linear-gradient(to left,#0f0a7e,#4ccbb7);
+    background: linear-gradient(to left,rgb(var(--m-color-primary)),rgb(var(--m-color-primary-l-1)));
     width: 100%;
     padding: 1.75rem;
     border-radius: 2rem;
     display: flex;
-    color: #fff;
+    color: var(--color-text-invert);
     padding-left: 8rem;
     font-size: .9rem;
     line-height: 1.7rem;
@@ -6157,7 +6176,7 @@ html {
     width: 2.8rem;
     min-width: 2.8rem;
     height: 2.8rem;
-    background: #fff;
+    background: var(--color-bg);
     border-radius: .75rem;
     position: relative;
     transform: rotate(45deg);
@@ -6170,7 +6189,7 @@ html {
     line-height: 3rem;
     text-align: center;
     font-weight: 600;
-    background: linear-gradient(to left,#0f0a7e,#4ccbb7);
+    background: linear-gradient(to left,rgb(var(--m-color-primary)),rgb(var(--m-color-primary-l-1)));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 1.25rem
@@ -6195,7 +6214,7 @@ html {
 }
 #our-team .employee {
     padding: 0 1.75rem 1.75rem;
-    background: #fff;
+    background: var(--color-bg);
     border-radius: 1rem;
     box-shadow: 0 .75rem 1.25rem rgba(30,55,140,.13);
     margin-top: 30%;
@@ -6250,7 +6269,7 @@ html {
 }
 #our-team .prev::before, #our-team .next::before {
     content: "";
-    border-right: .5rem solid #fff;
+    border-right: .5rem solid var(--color-bg);
     border-top: .35rem solid transparent;
     border-bottom: .35rem solid transparent;
     margin-right: .15rem
@@ -6276,7 +6295,7 @@ html {
 }
 #our-team .emp-swiper-slider2.swiper::before {
     content: "";
-    background: linear-gradient(to left, #fff 25%, transparent);
+    background: linear-gradient(to left, var(--color-bg) 25%, transparent);
     position: absolute;
     left: auto;
     right: 0;
@@ -6356,7 +6375,7 @@ html {
     top: 50%;
     transform: translateY(-50%);
     box-shadow: 0 30px 30px -30px rgba(0,0,0,0.05),0 -30px 30px -30px rgba(0,0,0,0.05);
-    background: #ffffff
+    background: var(--color-bg)fff
 }
 #contact-mission .box >div {
     position: absolute;
@@ -6382,7 +6401,7 @@ html {
     content: "";
     border-right: .5rem solid transparent;
     border-left: .5rem solid transparent;
-    border-top: .8rem solid #fff;
+    border-top: .8rem solid var(--color-bg);
     position: absolute;
     right: 50%;
     top: 0;
@@ -6391,7 +6410,7 @@ html {
 #contact-mission .box .idk2 {
     width: 40%;
     height: .25rem;
-    background: linear-gradient(to right,#0f0a7e,#4ccbb7);
+    background: linear-gradient(to right,rgb(var(--m-color-primary)),rgb(var(--m-color-primary-l-1)));
     border-radius: 10rem;
     margin-top: .5rem
 }
@@ -6401,7 +6420,7 @@ html {
     background-size: 100% 100%;
     padding-top: 5.5rem;
     padding-bottom: 5.5rem;
-    color: #fff
+    color: var(--color-text-invert)
 }
 @media only screen and (min-width: 1260px)  {
     #contact-story {
@@ -6545,7 +6564,7 @@ html {
     background: #0c134e;
     position: relative;
     text-align: center;
-    color: #fff;
+    color: var(--color-text-invert);
     height: 100%
 }
 #contact-us .contact-2 {
@@ -6603,7 +6622,7 @@ html {
     border-radius: 3rem;
     min-height: 20rem;
     filter: contrast(110%) grayscale(30%) hue-rotate(-10deg) saturate(150%);
-    border: 3px solid #fff;
+    border: 3px solid var(--color-bg);
     box-shadow: 0 0 2rem rgba(0,0,0,0.07)
 }
 #contact-us .shadow {
@@ -6614,7 +6633,7 @@ html {
     min-width: 2.625rem;
     height: 2.625rem;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: var(--color-bg);
     box-shadow: 0 0 .75rem rgba(0,0,0,0.07);
     margin-left: 1rem
 }
@@ -6767,9 +6786,9 @@ html {
 #contact-comments button {
     padding: .75rem 1.5rem;
     border-radius: 50px;
-    background: linear-gradient(120deg,#0f0a7e,#4ccbb7);
+    background: linear-gradient(120deg,rgb(var(--m-color-primary)),rgb(var(--m-color-primary-l-1)));
     font-size: .9rem;
-    color: #fff;
+    color: var(--color-text-invert);
     position: relative;
     z-index: 1;
     cursor: pointer;
@@ -6834,7 +6853,7 @@ html {
     margin-top: 1.5rem;
     border-top: 2px solid #eae4ff;
     border-left: 2px solid #eae4ff;
-    background: #fff
+    background: var(--color-bg)
 }
 #contact-comments .comment .image {
     width: 3rem;
@@ -6857,7 +6876,7 @@ html {
 #contact-comments .more {
     height: 16rem;
     position: absolute;
-    background: linear-gradient(to bottom, transparent , #fff 80%);
+    background: linear-gradient(to bottom, transparent , var(--color-bg) 80%);
     bottom: 0;
     z-index: 2;
     right: -3rem;
@@ -6872,7 +6891,7 @@ html {
     margin-bottom: 1rem;
     font-size: .8rem;
     border-radius: 999rem;
-    background: #fff;
+    background: var(--color-bg);
     cursor: pointer;
     transition-duration: 200ms;
     -webkit-transition-duration: 200ms;
@@ -6903,7 +6922,7 @@ html {
     border-radius: 9999px;
     font-size: 0.9rem;
     --m-text-alpha: 1;
-    color: rgba(var(--m-color-white),var(--m-text-alpha));
+    color: var(--color-text-invert);
     position: relative;
     margin-top: 1rem;
     transition-duration: 200ms;
@@ -6931,7 +6950,7 @@ html {
     overflow: hidden;
     padding-top: 13rem;
     padding-bottom: 4rem;
-    background: linear-gradient(to bottom, transparent 50%,#fff),url("img/bg-hexagon-3.jpg") left -12rem top 12rem no-repeat,url("img/bg-hexagon-3.jpg") right -12rem top 18rem no-repeat;
+    background: linear-gradient(to bottom, transparent 50%, var(--color-bg)),url("img/bg-hexagon-3.jpg") left -12rem top 12rem no-repeat,url("img/bg-hexagon-3.jpg") right -12rem top 18rem no-repeat;
     background-size: 25rem auto
 }
 @media only screen and (max-width: 1259.98px)  {
@@ -6970,7 +6989,7 @@ html {
     border-radius: 1rem;
     text-align: center;
     position: relative;
-    background: #fff;
+    background: var(--color-bg);
     color: #333
 }
 #bank-accounts .account-number .name {
@@ -6982,7 +7001,7 @@ html {
     padding-right: 2.5rem;
     position: absolute;
     --m-text-alpha: 1;
-    color: rgba(var(--m-color-white),var(--m-text-alpha));
+    color: var(--color-text-invert);
     border-radius: 0.75rem;
     font-size: 0.9rem;
     left: -1.5rem;
@@ -7045,7 +7064,7 @@ html {
         border-radius: 9999px;
         overflow: hidden;
         --m-bg-alpha: 1;
-        background-color: rgba(var(--m-color-white),var(--m-bg-alpha));
+        background-color: var(--color-bg);
         top: 0rem;
         --m-shadow-color: 0, 0, 0;
         --m-shadow-alpha: 0.05;
@@ -7147,7 +7166,7 @@ html {
     font-size: .7rem;
     width: 2.8rem;
     background: rgba(0,0,0,0.8);
-    color: #fff;
+    color: var(--color-text-invert);
     padding: .1rem;
     border-radius: .25rem;
     left: 50%;
@@ -7291,7 +7310,7 @@ html {
     top: 50%;
     border-radius: 9999px;
     padding: 1.25rem;
-    background: linear-gradient(to right bottom,#0f0a7e,#4ccbb7);
+    background: linear-gradient(to right bottom,rgb(var(--m-color-primary)),rgb(var(--m-color-primary-l-1)));
     transform: translateY(-50%)
 }
 #affiliate-details .circle::before {
@@ -7328,7 +7347,7 @@ html {
     }
 }
 #affiliate-details .circle .percent {
-    background: #fff;
+    background: var(--color-bg);
     border-radius: 50%;
     width: 100%;
     height: 100%;
@@ -7340,7 +7359,7 @@ html {
     font-style: italic
 }
 #affiliate-details .circle .percent span {
-    background: linear-gradient(to right bottom,#0f0a7e,#4ccbb7);
+    background: linear-gradient(to right bottom,rgb(var(--m-color-primary)),rgb(var(--m-color-primary-l-1)));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-top: .5rem
@@ -7350,7 +7369,7 @@ html {
     height: 5.5rem;
     --m-bg-alpha: 1;
     background-color: rgba(var(--m-color-orange),var(--m-bg-alpha));
-    border: .5rem solid #fff;
+    border: .5rem solid var(--color-bg);
     border-radius: 50%;
     left: -1rem;
     position: absolute;
@@ -7360,7 +7379,7 @@ html {
     content: "";
     width: 2.25rem;
     height: 2.25rem;
-    border: .5rem solid #fff;
+    border: .5rem solid var(--color-bg);
     --m-bg-alpha: 1;
     background-color: rgba(var(--m-color-orange),var(--m-bg-alpha));
     bottom: .625rem;
@@ -7424,7 +7443,7 @@ html {
     padding-top: 2rem;
     padding-bottom: 2rem;
     --m-text-alpha: 1;
-    color: rgba(var(--m-color-white),var(--m-text-alpha));
+    color: var(--color-text-invert);
     line-height: 2;
     margin-bottom: 1rem;
     transition-duration: 300ms;
@@ -7447,7 +7466,7 @@ html {
 }
 #affiliate-info .box {
     width: 100%;
-    background: #fff;
+    background: var(--color-bg);
     position: relative;
     padding-top: 100%;
     border-radius: 1.5rem;
@@ -7615,7 +7634,7 @@ html {
 #affiliate-calculator .calculator .c-but.active {
     background: #ffc709;
     box-shadow: 0 .5rem 0 #ff9a16;
-    color: #fff
+    color: var(--color-text-invert)
 }
 @keyframes arrow {
     0% {
@@ -7729,7 +7748,7 @@ html {
 }
 .bg-white {
     --m-bg-alpha: 1;
-    background-color: rgba(var(--m-color-white),var(--m-bg-alpha))
+    background-color: var(--color-bg)
 }
 .text-red {
     --m-text-alpha: 1;
@@ -7940,7 +7959,7 @@ html {
 }
 .border-white {
     --m-border-alpha: 1;
-    border-color: rgba(var(--m-color-white),var(--m-border-alpha))
+    border-color: var(--color-border)
 }
 .border-4 {
     border-width: 4px
@@ -8147,7 +8166,7 @@ html {
 }
 .text-white {
     --m-text-alpha: 1;
-    color: rgba(var(--m-color-white),var(--m-text-alpha))
+    color: var(--color-text-invert)
 }
 .parent:hover [parent-hover~="text-\(\#f43741\)"] {
     --m-text-alpha: 1;
@@ -8590,7 +8609,7 @@ html {
 }
 #why-us {
     padding: 4rem 0;
-    background: #fff;
+    background: var(--color-bg);
     border-radius: 400px 0 0 0 / 250px 0 0 0;
 }
 
@@ -8620,7 +8639,7 @@ html {
 .why-us-content-col .section-title {
     font-size: 1.8rem;
     font-weight: 700;
-    color: #32228f;
+    color: var(--color-primary);
     margin-bottom: 1.5rem;
 }
 
@@ -8641,7 +8660,7 @@ html {
     text-align: center;
     box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.03);
     border-radius: 1rem;
-    background: #fff;
+    background: var(--color-bg);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -8897,4 +8916,23 @@ html {
     left: 40%;
     background: radial-gradient(circle, rgba(249, 161, 6, 0.3) 0%, transparent 65%);
     animation-delay: -5s;
+}
+/* Dark mode styles */
+[data-theme="dark"] {
+    --color-bg: #121212;
+    --color-bg-alt: #1e1e1e;
+    --color-text: #e0e0e0;
+    --color-border: #333333;
+}
+
+[data-theme="dark"] a {
+    color: var(--color-primary);
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-right: 10px;
 }
