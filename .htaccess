@@ -1,4 +1,5 @@
 RewriteEngine On
+RewriteBase /
 
 # Force HTTPS and www
 RewriteCond %{HTTPS} !=on [OR]
@@ -6,13 +7,13 @@ RewriteCond %{HTTP_HOST} !^www\. [NC]
 RewriteRule ^(.*)$ https://www.persianmizban.com/$1 [L,R=301]
 
 # Redirect PHP files to extensionless URLs
-RewriteCond %{THE_REQUEST} \s/(.+?)\.php[\s?]
-RewriteRule ^ %1 [L,R=302,NE]
+RewriteCond %{THE_REQUEST} \s/([^\s]+)\.php[?\s]
+RewriteRule ^ /%1 [L,R=301,NE]
 
 # Serve PHP files when extension is omitted
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME}.php -f
-RewriteRule ^(.+?)/?$ $1.php [L,QSA]
+RewriteRule ^(.+)$ /$1.php [L,QSA]
 
 DirectoryIndex index.php
