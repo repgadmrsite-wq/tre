@@ -98,17 +98,17 @@
     --m-color-invert-d-4: 0, 0, 0;
     --m-color-invert-l-5: 132, 132, 132;
     --m-color-invert-d-5: 0, 0, 0;
-    --m-color-primary: 50, 34, 143;
-    --m-color-primary-l-1: 58, 42, 151;
-    --m-color-primary-d-1: 48, 32, 138;
-    --m-color-primary-l-2: 73, 57, 166;
-    --m-color-primary-d-2: 44, 30, 128;
-    --m-color-primary-l-3: 96, 80, 189;
-    --m-color-primary-d-3: 39, 26, 113;
-    --m-color-primary-l-4: 127, 111, 220;
-    --m-color-primary-d-4: 32, 22, 93;
-    --m-color-primary-l-5: 165, 149, 255;
-    --m-color-primary-d-5: 24, 16, 68;
+    --m-color-primary: 59, 130, 246;
+    --m-color-primary-l-1: 96, 165, 250;
+    --m-color-primary-d-1: 37, 99, 235;
+    --m-color-primary-l-2: 147, 197, 253;
+    --m-color-primary-d-2: 29, 78, 216;
+    --m-color-primary-l-3: 191, 219, 254;
+    --m-color-primary-d-3: 23, 63, 193;
+    --m-color-primary-l-4: 219, 234, 254;
+    --m-color-primary-d-4: 19, 53, 164;
+    --m-color-primary-l-5: 239, 246, 255;
+    --m-color-primary-d-5: 15, 45, 135;
     --m-color-white: 255, 255, 255;
     --m-color-white-l-1: 255, 255, 255;
     --m-color-white-d-1: 251, 251, 251;
@@ -336,11 +336,10 @@ a {
     background: #f2f2f8
 }
 ::-webkit-scrollbar-thumb {
-    background: #888;
-    background: linear-gradient(-135deg, #1b318a,#46b7b1)
+    background: rgb(var(--m-color-primary))
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: #1b318a
+    background: rgb(var(--m-color-primary-d-1))
 }
 :root {
     --swiper-theme-color: #007aff
@@ -939,7 +938,7 @@ button.swiper-pagination-bullet {
     width: 100%;
     border-radius: 10px;
     position: absolute;
-    background: linear-gradient(to bottom,#110c7f,#4ccbb7);
+    background: rgb(var(--m-color-primary));
     transition-duration: 200ms;
     -webkit-transition-duration: 200ms;
     -o-transition-duration: 200ms
@@ -974,7 +973,7 @@ button.swiper-pagination-bullet {
     letter-spacing: .19rem
 }
 #client-comments .button {
-    background: linear-gradient(45deg,#110c7f,#4ccbb7);
+    background: linear-gradient(45deg,rgb(var(--m-color-primary)),rgb(var(--m-color-primary-l-1)));
     margin-top: auto;
     margin-bottom: auto;
     margin-right: auto;
@@ -1538,7 +1537,7 @@ button.swiper-pagination-bullet {
     right: 0;
     transform: translateX(50%);
     font-size: .5rem;
-    background: linear-gradient(45deg, #110c7f, #4ccbb7);
+    background: linear-gradient(45deg, rgb(var(--m-color-primary)), rgb(var(--m-color-primary-l-1)));
     --m-text-alpha: 1;
     color: rgba(var(--m-color-white),var(--m-text-alpha));
     padding-right: 0.25rem;
@@ -1864,7 +1863,7 @@ input:focus {
 }
 #header li:before {
     content: "";
-    background: linear-gradient(-270deg,#110c7f,#4ccbb7);
+    background: linear-gradient(-270deg,rgb(var(--m-color-primary)),rgb(var(--m-color-primary-l-1)));
     width: 1rem;
     height: 1rem;
     position: absolute;
@@ -2508,7 +2507,7 @@ input:focus {
     font-weight: 500
 }
 #domain-whats .domain-info .more-button span {
-    background: linear-gradient(to right,#0f0a7e,#4ccbb7);
+    background: linear-gradient(to right,rgb(var(--m-color-primary)),rgb(var(--m-color-primary-l-1)));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition-duration: 300ms;
@@ -2637,7 +2636,7 @@ input:focus {
     margin-left: .1rem
 }
 #domain-pricing .domain-pricing-list li.active {
-    background: linear-gradient(to right,#0f0a7e,#4ccbb7);
+    background: linear-gradient(to right,rgb(var(--m-color-primary)),rgb(var(--m-color-primary-l-1)));
     color: #fff
 }
 #domain-pricing .domain-pricing-list li.active .icon {
@@ -2977,7 +2976,7 @@ input:focus {
     }
 }
 #client-info .box .gr {
-    background: linear-gradient(to right,#0f0a7e,#4ccbb7);
+    background: linear-gradient(to right,rgb(var(--m-color-primary)),rgb(var(--m-color-primary-l-1)));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     direction: ltr;
@@ -3189,7 +3188,7 @@ input:focus {
 #footer ul li:hover:before {
     width: 1rem;
     margin-right: 0rem;
-    background: #4ccbb7
+    background: rgb(var(--m-color-primary-l-1))
 }
 #footer .orange ul li:hover:before {
     background: #ffac1f
@@ -3281,7 +3280,7 @@ input:focus {
 }
 @media only screen and (max-width: 991.98px)  {
     #host-slider {
-        background: linear-gradient(to right, #4ccbb7, #141a83);
+        background: linear-gradient(to right, rgb(var(--m-color-primary-l-1)), #141a83);
         padding: 3rem 0;
         overflow: hidden
     }
@@ -3796,7 +3795,7 @@ input:focus {
     -o-transition-duration: 200ms;
     border-radius: 14rem 20rem 20rem 0;
     margin-left: .75rem;
-    background: linear-gradient(to right, #0f0a7e, #4ccbb7)
+    background: linear-gradient(to right, rgb(var(--m-color-primary)), rgb(var(--m-color-primary-l-1)))
 }
 #host-plans .plan-in .button .icon::before {
     content: "";
@@ -3954,7 +3953,7 @@ input:focus {
     min-width: 990px
 }
 #host-plans-details table .title {
-    background: linear-gradient(to right, #0f0a7e, #4ccbb7);
+    background: linear-gradient(to right, rgb(var(--m-color-primary)), rgb(var(--m-color-primary-l-1)));
     color: #32228f;
     padding: 2px;
     display: inline-block;
@@ -4436,7 +4435,7 @@ input:focus {
 }
 #server-why-pm li:before, #host-why-pm li:before {
     content: "";
-    background: linear-gradient(-270deg, #110c7f, #4ccbb7);
+    background: linear-gradient(-270deg, rgb(var(--m-color-primary)), rgb(var(--m-color-primary-l-1)));
     width: 1rem;
     height: 1rem;
     position: absolute;
@@ -5139,7 +5138,7 @@ input:focus {
     content: "";
     width: 3rem;
     height: 3rem;
-    background: linear-gradient(to bottom right,#0f0a7e 36%, #4ccbb7 63%);
+    background: linear-gradient(to bottom right,rgb(var(--m-color-primary)) 36%, rgb(var(--m-color-primary-l-1)) 63%);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -5282,7 +5281,7 @@ input:focus {
     position: relative;
     padding: 2px;
     border-radius: .8rem;
-    background: linear-gradient(to bottom,transparent,#fff 11rem),linear-gradient(to right,#0f0a7e,#4ccbb7);
+    background: linear-gradient(to bottom,transparent,#fff 11rem),linear-gradient(to right,rgb(var(--m-color-primary)),rgb(var(--m-color-primary-l-1)));
     box-shadow: 0 .5rem .8rem rgba(0,0,0,0.03);
     transition-duration: 200ms;
     -webkit-transition-duration: 200ms;
@@ -5382,7 +5381,7 @@ input:focus {
 }
 #plans .plan .icon-2:after {
     content: "WORDPRESS";
-    background: linear-gradient(to right,#0f0a7e,#4ccbb7);
+    background: linear-gradient(to right,rgb(var(--m-color-primary)),rgb(var(--m-color-primary-l-1)));
     border: 3px solid #fff;
     font-weight: 500;
     font-size: .6rem;
@@ -5565,7 +5564,7 @@ input:focus {
     width: 3px;
     height: 3px;
     border-radius: 50%;
-    background: #4ccbb7;
+    background: rgb(var(--m-color-primary-l-1));
     position: absolute;
     right: 30%
 }
@@ -5574,7 +5573,7 @@ input:focus {
     width: 3px;
     height: 3px;
     border-radius: 50%;
-    background: #0f0a7e;
+    background: rgb(var(--m-color-primary));
     position: absolute;
     left: 30%
 }
@@ -5596,7 +5595,7 @@ input:focus {
     border-radius: 9999px;
     display: inline-block;
     -ms-display: inline-block;
-    background: linear-gradient(to right,#0f0a7e,#4ccbb7)
+    background: linear-gradient(to right,rgb(var(--m-color-primary)),rgb(var(--m-color-primary-l-1)))
 }
 #delivery .button .in {
     padding-right: 1.75rem;
@@ -5656,7 +5655,7 @@ input:focus {
     -ms-display: inline-block;
     padding-top: auto;
     padding-bottom: auto;
-    background: linear-gradient(to right,#0f0a7e,#4ccbb7)
+    background: linear-gradient(to right,rgb(var(--m-color-primary)),rgb(var(--m-color-primary-l-1)))
 }
 @media only screen and (max-width: 575.98px)  {
     #blog .button {
@@ -5914,7 +5913,7 @@ html {
 }
 #contact-links .box {
     padding: 1rem;
-    background: linear-gradient(to right,#0f0a7e,#4ccbb7);
+    background: linear-gradient(to right,rgb(var(--m-color-primary)),rgb(var(--m-color-primary-l-1)));
     --m-text-alpha: 1;
     color: rgba(var(--m-color-white),var(--m-text-alpha));
     font-size: 0.8rem;
@@ -6124,7 +6123,7 @@ html {
     z-index: 2
 }
 #our-team .employees {
-    background: linear-gradient(to left,#0f0a7e,#4ccbb7);
+    background: linear-gradient(to left,rgb(var(--m-color-primary)),rgb(var(--m-color-primary-l-1)));
     width: 100%;
     padding: 1.75rem;
     border-radius: 2rem;
@@ -6179,7 +6178,7 @@ html {
     line-height: 3rem;
     text-align: center;
     font-weight: 600;
-    background: linear-gradient(to left,#0f0a7e,#4ccbb7);
+    background: linear-gradient(to left,rgb(var(--m-color-primary)),rgb(var(--m-color-primary-l-1)));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 1.25rem
@@ -6400,7 +6399,7 @@ html {
 #contact-mission .box .idk2 {
     width: 40%;
     height: .25rem;
-    background: linear-gradient(to right,#0f0a7e,#4ccbb7);
+    background: linear-gradient(to right,rgb(var(--m-color-primary)),rgb(var(--m-color-primary-l-1)));
     border-radius: 10rem;
     margin-top: .5rem
 }
@@ -6776,7 +6775,7 @@ html {
 #contact-comments button {
     padding: .75rem 1.5rem;
     border-radius: 50px;
-    background: linear-gradient(120deg,#0f0a7e,#4ccbb7);
+    background: linear-gradient(120deg,rgb(var(--m-color-primary)),rgb(var(--m-color-primary-l-1)));
     font-size: .9rem;
     color: #fff;
     position: relative;
@@ -7300,7 +7299,7 @@ html {
     top: 50%;
     border-radius: 9999px;
     padding: 1.25rem;
-    background: linear-gradient(to right bottom,#0f0a7e,#4ccbb7);
+    background: linear-gradient(to right bottom,rgb(var(--m-color-primary)),rgb(var(--m-color-primary-l-1)));
     transform: translateY(-50%)
 }
 #affiliate-details .circle::before {
@@ -7349,7 +7348,7 @@ html {
     font-style: italic
 }
 #affiliate-details .circle .percent span {
-    background: linear-gradient(to right bottom,#0f0a7e,#4ccbb7);
+    background: linear-gradient(to right bottom,rgb(var(--m-color-primary)),rgb(var(--m-color-primary-l-1)));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-top: .5rem
