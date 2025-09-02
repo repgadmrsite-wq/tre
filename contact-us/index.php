@@ -3,6 +3,7 @@ $pageTitle = 'تماس با پرشین میزبان | پرشین میزبان';
 $pageDescription = 'تماس با پرشین میزبان از طریق پنل کاربری، چت آنلاین، تماس تلفنی و فرم ارسال نظر امکان پذیر است. بهترین روش برای پشتیبانی فنی ارسال تیکت است.';
 include '../partials/header.php';
 ?>
+<h1 class="d-none">تماس با پرشین میزبان</h1>
                     <div class="image image2">
                         <img src="/img/img-employee2.png" alt="تماس با ما" >
                     </div>

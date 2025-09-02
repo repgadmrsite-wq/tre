@@ -9,6 +9,7 @@ $breadcrumbs = [
 include '../partials/header.php';
 include $_SERVER['DOCUMENT_ROOT'].'/partials/breadcrumb.php';
 ?>
+<h1 class="d-none">هاست وردپرس پرشین میزبان</h1>
 
 
 <section id="host-slider" >

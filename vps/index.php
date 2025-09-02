@@ -3,6 +3,7 @@ $pageTitle = 'خرید سرور، سرور مجازی، سرور مجازی ای
 $pageDescription = 'خرید سرور - پرشین میزبان ارائه دهنده سرور مجازی، سرور مجازی ایران، سرور آلمان، آمریکا و فنلاند با ترافیک نامحدود و منابع اختصاصی و ارزان';
 include '../partials/header.php';
 ?>
+<h1 class="d-none">سرور مجازی پرشین میزبان</h1>
                 <div class="swiper-wrapper">
     
                     <div class="swiper-slide">

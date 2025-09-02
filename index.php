@@ -16,6 +16,7 @@ $extraHead = <<<HTML
 HTML;
 include 'partials/header.php';
 ?>
+<h1 class="d-none">پرشین میزبان</h1>
 <section id="header" class="home-header">
     <div class="container" >
         <div lg="grid cols-5 gap-none a-items-center gap-10" >

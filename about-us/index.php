@@ -3,6 +3,7 @@ $pageTitle = 'درباره ی شرکت هاستینگ میزبان داده فی
 $pageDescription = 'پرشین میزبان به عنوان یکی از بزرگترین ارائه دهنده خدمات میزبانی وب و ثبت دامنه در ایران، با بیش از 16 سال سابقه فعالیت در زمینه هاستینگ';
 include '../partials/header.php';
 ?>
+<h1 class="d-none">درباره پرشین میزبان</h1>
                 <div class="content">
                     <div lg="col-3 pr-8">
                         <div class="text-120 text-w-medium mb-1">پـــاسخگوی شما هستیم</div>

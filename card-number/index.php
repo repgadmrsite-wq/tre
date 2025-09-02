@@ -3,6 +3,7 @@ $pageTitle = 'شماره حساب ها و اطلاعات پرداخت | پرشی
 $pageDescription = 'شماره حساب های شرکت پرشین میزبان (میزبان داده فیدار) برای افرادی که امکان پرداخت آنلاین ندارند یا برای انجام حواله های بانکی';
 include '../partials/header.php';
 ?>
+<h1 class="d-none">شماره حساب های پرشین میزبان</h1>
         <div class="grid col-2 a-items-center" lg="cols-11">
             <div lg="col-4">
                 <img src="/img/img-bank-accounts.png" alt="شماره حساب" class="w-full">
