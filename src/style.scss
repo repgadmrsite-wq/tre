@@ -1046,55 +1046,33 @@ button.swiper-pagination-bullet {
 }
 #top-nav {
     --m-bg-alpha: 1;
-    background-color: var(--color-bg-alt);
+    background-color: var(--color-bg);
     position: relative;
     color: var(--color-text);
-    font-size: 11px
+    font-size: .875rem;
+    line-height: 1.5;
+    padding: .5rem 0;
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: 0 1px 2px rgba(var(--m-color-black),0.05);
 }
 @media only screen and (max-width: 991.98px)  {
     #top-nav {
         position: fixed;
         z-index: 99;
         width: 100%;
-        border-bottom-width: 2px;
+        border-bottom-width: 1px;
         --m-border-alpha: 1;
-        border-color: rgba(var(--m-color-orange),var(--m-border-alpha));
+        border-color: var(--color-border);
         top: 0
     }
 }
 @media only screen and (min-width: 992px)  {
-    #top-nav:before {
-        content: "";
-        width: 35%;
-        min-width: 250px;
-        height: .5rem;
-        --m-bg-alpha: 1;
-        background-color: rgba(var(--m-color-orange),var(--m-bg-alpha));
-        right: 0rem;
-        position: absolute;
-        top: 100%;
-        transform: rotate(.9deg);
-        z-index: -1;
-        margin-top: -.38rem
-    }
+    #top-nav:before,
     #top-nav:after {
-        content: "";
-        width: 35%;
-        min-width: 250px;
-        height: .15rem;
-        --m-bg-alpha: 1;
-        background-color: rgba(var(--m-color-red),var(--m-bg-alpha));
-        right: .25rem;
-        position: absolute;
-        background: black;
-        background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
-        top: 100%;
-        transform: rotate(1.8deg);
-        z-index: -1;
-        margin-top: -.25rem;
-        opacity: .8
+        display: none;
     }
 }
+
 #top-nav .logo {
     display: block;
     width: 13.5rem;
