@@ -15,7 +15,7 @@ include '../partials/header.php';
                 </ul>
             </div>
             <div lg="col-5" i-lg="d-none">
-                <img class="w-full" src="/img/img-domain.jpg" alt="ثبت دامنه">
+            <img class="w-full" src="/img/img-domain.jpg" alt="ثبت دامنه" width="800" height="597">
             </div>
         </div>
     </div>
@@ -63,7 +63,7 @@ include '../partials/header.php';
     <div class="container" >
         <div lg="grid cols-5" sm="grid cols-3" class="a-items-center mb-16" >
             <div i-sm="d-none">
-                <img src="/img/what-domain.svg" class="w-full" alt="دامنه چیست">
+                <img src="/img/what-domain.svg" class="w-full" alt="دامنه چیست" width="512" height="512">
             </div>
             <div lg="col-4" sm="col-2" >
                 <div class="text-w-semibold text-110 mb-4" >دامنه و یا دامین چیست؟</div>
@@ -718,7 +718,7 @@ include '../partials/header.php';
     <div class="container" >
         <div class="grid cols-2 a-items-center" sm="cols-4" lg="cols-6">
             <div class="col-2" sm="col-4" lg="col-2" >
-                <img class="w-full mx-auto d-block" i-lg="max-w-(414px)" src="/img/img-inside.png" alt="پرشین میزبان">
+                <img class="w-full mx-auto d-block" i-lg="max-w-(414px)" src="/img/img-inside.png" alt="پرشین میزبان" width="414" height="239">
             </div>
             <div>
                 <div class="box box2" >
@@ -779,7 +779,7 @@ include '../partials/header.php';
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img loading="lazy" src="/profile/digimoviz.png" alt="دیجی مویز" >
+                                    <img loading="lazy" src="/profile/digimoviz.png" alt="دیجی مویز" width="64" height="64">
                                     <div class="text-primary text-w-semibold" >سامان رمضانی</div>
                                     <div class="text-80 mr-auto" >دیجی مویز</div>
                                 </div>
@@ -790,7 +790,7 @@ include '../partials/header.php';
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img loading="lazy" src="/profile/myfilm.png" alt="مای فیلم" >
+                                    <img loading="lazy" src="/profile/myfilm.png" alt="مای فیلم" width="64" height="64">
                                     <div class="text-primary text-w-semibold" >علیرضا کریمی</div>
                                     <div class="text-80 mr-auto" >مای فیلم</div>
                                 </div>
@@ -807,7 +807,7 @@ include '../partials/header.php';
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img loading="lazy" src="/profile/opencart.png" alt="اپن کارت" >
+                                    <img loading="lazy" src="/profile/opencart.png" alt="اپن کارت" width="64" height="64">
                                     <div class="text-primary text-w-semibold" >صمد دانش خواه</div>
                                     <div class="text-80 mr-auto" >اپن کارت فارسی</div>
                                 </div>
@@ -818,7 +818,7 @@ include '../partials/header.php';
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img loading="lazy" src="/profile/asanapps.png" alt="آسان اپس" >
+                                    <img loading="lazy" src="/profile/asanapps.png" alt="آسان اپس" width="64" height="64">
                                     <div class="text-primary text-w-semibold" >سید حجت حسینی</div>
                                     <div class="text-80 mr-auto" >آسان اپس</div>
                                 </div>
@@ -835,7 +835,7 @@ include '../partials/header.php';
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img loading="lazy" src="/profile/bahabin.png" alt="بهابین" >
+                                    <img loading="lazy" src="/profile/bahabin.png" alt="بهابین" width="64" height="64">
                                     <div class="text-primary text-w-semibold" >مهدی وادونی</div>
                                     <div class="text-80 mr-auto" >بهابین</div>
                                 </div>
@@ -846,7 +846,7 @@ include '../partials/header.php';
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img loading="lazy" src="/profile/torob.png" alt="ترب" >
+                                    <img loading="lazy" src="/profile/torob.png" alt="ترب" width="64" height="64">
                                     <div class="text-primary text-w-semibold" >علی بابایی چشمه احمد رضایی</div>
                                     <div class="text-80 mr-auto" >ترب</div>
                                 </div>
@@ -863,7 +863,7 @@ include '../partials/header.php';
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img loading="lazy" src="/profile/damdaran.png" alt="دامداران" >
+                                    <img loading="lazy" src="/profile/damdaran.png" alt="دامداران" width="64" height="64">
                                     <div class="text-primary text-w-semibold" >نور الدین نور بخش جعفری دهکردی</div>
                                     <div class="text-80 mr-auto" >دامداران</div>
                                 </div>
@@ -874,7 +874,7 @@ include '../partials/header.php';
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img loading="lazy" src="/profile/vahabonline.png" alt="وهاب آنلاین" >
+                                    <img loading="lazy" src="/profile/vahabonline.png" alt="وهاب آنلاین" width="50" height="50">
                                     <div class="text-primary text-w-semibold" >وهاب سید چورته</div>
                                     <div class="text-80 mr-auto" >وهاب آنلاین</div>
                                 </div>

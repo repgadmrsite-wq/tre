@@ -6,10 +6,10 @@ include '../partials/header.php';
 <h1 class="d-none">شماره حساب های پرشین میزبان</h1>
         <div class="grid col-2 a-items-center" lg="cols-11">
             <div lg="col-4">
-                <img src="/img/img-bank-accounts.png" alt="شماره حساب" class="w-full">
+                <img src="/img/img-bank-accounts.png" alt="شماره حساب" class="w-full" width="397" height="354">
             </div>
             <div lg="col-7">
-                <img src="/img/img-bank-accounts-title.svg" alt="شماره حساب ها" class="mb-2">
+                <img src="/img/img-bank-accounts-title.svg" alt="شماره حساب ها" class="mb-2" width="158" height="29">
                 <p class="text-primary text-lh-5 text-90">
                     در صورتی که میخواهید مبلغ قرار داد سرویستون رو به صورت <b>حواله بانکی</b> انجام دهید یا امکان پرداخت هزینه سرویس تون رو به صورت آنلاین و از طریق درگاه های بانکی پرداخت ما ندارید، میتونید از طریق روش کارت به کارت یا واریز وجه به شماره حساب های پرشین میزبان اقدام کنید.</br>تو این روش از پرداخت بعد از اینکه انتقال وجه رو انجام دادید، لازمه که تنها <b>فیش واریزی</b> رو برای ما از طریق ثبت فیش بانکی یا ارسال تیکت به واحد مالی ارسال کنید تا پرداخت بررسی و در پنلتون ثبت شود.
                 </p>
@@ -35,7 +35,7 @@ include '../partials/header.php';
             <div class="name">علی شریفی گرم دره</div>
             <div class="grid a-items-center" md="cols-3">
                 <div class="image">
-                    <img src="/img/parsian-bank.png" alt="بانک پارسیان" class="w-full">
+                    <img src="/img/parsian-bank.png" alt="بانک پارسیان" class="w-full" width="750" height="750">
                 </div>
                 <div class="text-right" md="col-2">
                     <div class="d-flex w-full" md="pl-16">
@@ -78,7 +78,7 @@ include '../partials/header.php';
             <div class="name">علی شریفی گرم دره</div>
             <div class="grid a-items-center" md="cols-3">
                 <div class="image">
-                    <img src="/img/melli-bank.png" alt="بانک ملی" class="w-full">
+                    <img src="/img/melli-bank.png" alt="بانک ملی" class="w-full" width="750" height="750">
                 </div>
                 <div class="text-right" md="col-2">
                     <div class="d-flex w-full" md="pl-16">
@@ -120,7 +120,7 @@ include '../partials/header.php';
             <div class="name">علی شریفی گرم دره</div>
             <div class="grid a-items-center" md="cols-3">
                 <div class="image">
-                    <img src="/img/mellat-bank.png" alt="بانک ملی" class="w-full">
+                    <img src="/img/mellat-bank.png" alt="بانک ملی" class="w-full" width="750" height="750">
                 </div>
                 <div class="text-right" md="col-2">
                     <div class="d-flex w-full" md="pl-16">
@@ -162,7 +162,7 @@ include '../partials/header.php';
             <div class="name">علی شریفی گرم دره</div>
             <div class="grid a-items-center" md="cols-3">
                 <div class="image">
-                    <img src="/img/tejarat-bank.png" alt="بانک تجارت" class="w-full">
+                    <img src="/img/tejarat-bank.png" alt="بانک تجارت" class="w-full" width="750" height="750">
                 </div>
                 <div class="text-right" md="col-2">
                     <div class="d-flex w-full" md="pl-16">

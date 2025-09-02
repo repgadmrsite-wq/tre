@@ -79,7 +79,8 @@ include 'partials/header.php';
              src="img/datacenter-persianmizban.png"
              alt="هاستینگ پرشین میزبان"
              fetchpriority="high"
-             decoding="async">
+             decoding="async"
+             width="1536" height="1024">
     </picture>
 </div>        </div>
     </div>
@@ -123,7 +124,7 @@ include 'partials/header.php';
                 <picture>
                     <source srcset="img/pm-why3.avif" type="image/avif">
                     <source srcset="img/pm-why3.webp" type="image/webp">
-                    <img src="img/pm-why3.png" alt="هاستینگ" loading="lazy">
+                    <img src="img/pm-why3.png" alt="هاستینگ" loading="lazy" width="1024" height="1024">
                 </picture>
             </div>
             <!-- Content Column -->
@@ -178,7 +179,7 @@ include 'partials/header.php';
     <div class="container" >
         <div class="grid cols-2 a-items-center" sm="cols-4" lg="cols-6">
             <div class="col-2" sm="col-4" lg="col-2" >
-                <img loading="lazy" class="w-full mx-auto d-block" i-lg="max-w-(414px)" src="img/img-inside.png" alt="PersianMizban" >
+                <img loading="lazy" class="w-full mx-auto d-block" i-lg="max-w-(414px)" src="img/img-inside.png" alt="PersianMizban" width="414" height="239">
             </div>
             <div>
                 <div class="box box2" >
@@ -421,7 +422,7 @@ include 'partials/header.php';
     <div class="container" >
         <div class="delivery-wrapper" >
             <div>
-                <img loading="lazy" src="img/img-pishi.svg" alt="هاست" class="d-none" md="d-block mr-auto">
+                <img loading="lazy" src="img/img-pishi.svg" alt="هاست" class="d-none" md="d-block mr-auto" width="196" height="226">
             </div>
             <div>
                 <div class="text-150 text-primary text-w-medium mb-2" lg="text-190" > سفارش و تحویل در یک دقیقه</div>
@@ -457,7 +458,7 @@ include 'partials/header.php';
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img loading="lazy" src="profile/digimoviz.png" alt="دیجی مویز" >
+                                    <img loading="lazy" src="profile/digimoviz.png" alt="دیجی مویز" width="64" height="64">
                                     <div class="text-primary text-w-semibold" >سامان رمضانی</div>
                                     <div class="text-80 mr-auto" >دیجی مویز</div>
                                 </div>
@@ -468,7 +469,7 @@ include 'partials/header.php';
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img loading="lazy" src="profile/myfilm.png" alt="مای فیلم" >
+                                    <img loading="lazy" src="profile/myfilm.png" alt="مای فیلم" width="64" height="64">
                                     <div class="text-primary text-w-semibold" >علیرضا کریمی</div>
                                     <div class="text-80 mr-auto" >مای فیلم</div>
                                 </div>
@@ -485,7 +486,7 @@ include 'partials/header.php';
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img loading="lazy" src="profile/opencart.png" alt="اپن کارت" >
+                                    <img loading="lazy" src="profile/opencart.png" alt="اپن کارت" width="64" height="64">
                                     <div class="text-primary text-w-semibold" >صمد دانش خواه</div>
                                     <div class="text-80 mr-auto" >اپن کارت فارسی</div>
                                 </div>
@@ -496,7 +497,7 @@ include 'partials/header.php';
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img loading="lazy" src="profile/asanapps.png" alt="آسان اپس" >
+                                    <img loading="lazy" src="profile/asanapps.png" alt="آسان اپس" width="64" height="64">
                                     <div class="text-primary text-w-semibold" >سید حجت حسینی</div>
                                     <div class="text-80 mr-auto" >آسان اپس</div>
                                 </div>
@@ -513,7 +514,7 @@ include 'partials/header.php';
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img loading="lazy" src="profile/bahabin.png" alt="بهابین" >
+                                    <img loading="lazy" src="profile/bahabin.png" alt="بهابین" width="64" height="64">
                                     <div class="text-primary text-w-semibold" >مهدی وادونی</div>
                                     <div class="text-80 mr-auto" >بهابین</div>
                                 </div>
@@ -524,7 +525,7 @@ include 'partials/header.php';
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img loading="lazy" src="profile/torob.png" alt="ترب" >
+                                    <img loading="lazy" src="profile/torob.png" alt="ترب" width="64" height="64">
                                     <div class="text-primary text-w-semibold" >علی بابایی چشمه احمد رضایی</div>
                                     <div class="text-80 mr-auto" >ترب</div>
                                 </div>
@@ -541,7 +542,7 @@ include 'partials/header.php';
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img loading="lazy" src="profile/damdaran.png" alt="دامداران" >
+                                    <img loading="lazy" src="profile/damdaran.png" alt="دامداران" width="64" height="64">
                                     <div class="text-primary text-w-semibold" >نور الدین نور بخش جعفری دهکردی</div>
                                     <div class="text-80 mr-auto" >دامداران</div>
                                 </div>
@@ -552,7 +553,7 @@ include 'partials/header.php';
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img loading="lazy" src="profile/vahabonline.png" alt="وهاب آنلاین" >
+                                    <img loading="lazy" src="profile/vahabonline.png" alt="وهاب آنلاین" width="50" height="50">
                                     <div class="text-primary text-w-semibold" >وهاب سید چورته</div>
                                     <div class="text-80 mr-auto" >وهاب آنلاین</div>
                                 </div>

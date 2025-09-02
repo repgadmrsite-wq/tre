@@ -141,7 +141,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img loading="lazy" src="/profile/hostiran.png" alt="هاست ایران" />
+                                <img loading="lazy" src="/profile/hostiran.png" alt="هاست ایران" width="128" height="128" />
                             </div>
                             <div>
                                 <div class="fa" >هاست سی پنل ایران</div>
@@ -177,7 +177,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img loading="lazy" src="/profile/brandenburg-gate.png" alt="هاست آلمان" />
+                                <img loading="lazy" src="/profile/brandenburg-gate.png" alt="هاست آلمان" width="128" height="128" />
                             </div>
                             <div>
                                 <div class="fa" >هاست سی پنل آلمان</div>
@@ -212,7 +212,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img loading="lazy" src="/profile/hostingwordpress.png" alt="هاست وردپرس" />
+                                <img loading="lazy" src="/profile/hostingwordpress.png" alt="هاست وردپرس" width="128" height="128" />
                             </div>
                             <div>
                                 <div class="fa" >هاست مخصوص وردپرس</div>
@@ -247,7 +247,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img loading="lazy" src="/profile/hostdliran.png" alt="هاست دانلود ایران" />
+                                <img loading="lazy" src="/profile/hostdliran.png" alt="هاست دانلود ایران" width="128" height="104" />
                             </div>
                             <div>
                                 <div class="fa" >هاست دانلود ایران</div>
@@ -282,7 +282,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img loading="lazy" src="/profile/hostdlgermany.png" alt="هاست دانلود آلمان" />
+                                <img loading="lazy" src="/profile/hostdlgermany.png" alt="هاست دانلود آلمان" width="128" height="104" />
                             </div>
                             <div>
                                 <div class="fa" >هاست دانلود آلمان</div>
@@ -320,7 +320,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img loading="lazy" src="/profile/domainmelli.png" alt="ثبت دامنه" />
+                                <img loading="lazy" src="/profile/domainmelli.png" alt="ثبت دامنه" width="128" height="128" />
                             </div>
                             <div>
                                 <div class="fa" >ثبت دامنه با مالکیت کامل</div>
@@ -356,7 +356,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img loading="lazy" src="/profile/tld.png" alt="انتقال دامنه" />
+                                <img loading="lazy" src="/profile/tld.png" alt="انتقال دامنه" width="128" height="128" />
                             </div>
                             <div>
                                 <div class="fa" >انتقال دامنه مطمئن</div>
@@ -391,7 +391,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img loading="lazy" src="/profile/domaintransfer.png" alt="تمدید دامنه" />
+                                <img loading="lazy" src="/profile/domaintransfer.png" alt="تمدید دامنه" width="128" height="128" />
                             </div>
                             <div>
                                 <div class="fa" >تمدید دامنه ارزان</div>
@@ -429,7 +429,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img loading="lazy" src="/profile/iran.png" alt="سرور مجازی ایران" />
+                                <img loading="lazy" src="/profile/iran.png" alt="سرور مجازی ایران" width="64" height="64" />
                             </div>
                             <div>
                                 <div class="fa" >سرور مجازی ایران</div>
@@ -465,7 +465,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img loading="lazy" src="/profile/germany.png" alt="سرور مجازی آلمان" />
+                                <img loading="lazy" src="/profile/germany.png" alt="سرور مجازی آلمان" width="64" height="64" />
                             </div>
                             <div>
                                 <div class="fa" >سرور مجازی آلمان</div>
@@ -501,7 +501,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img loading="lazy" src="/profile/usa.png" alt="سرور مجازی آمریکا" />
+                                <img loading="lazy" src="/profile/usa.png" alt="سرور مجازی آمریکا" width="64" height="64" />
                             </div>
                             <div>
                                 <div class="fa" >سرور مجازی آمریکا</div>
@@ -536,7 +536,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img loading="lazy" src="/profile/finland.png" alt="سرور مجازی فنلاند" />
+                                <img loading="lazy" src="/profile/finland.png" alt="سرور مجازی فنلاند" width="64" height="64" />
                             </div>
                             <div>
                                 <div class="fa" >سرور مجازی آلمان</div>
@@ -574,7 +574,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img loading="lazy" src="/profile/iran-vds.png" alt="سرور اختصاصی ایران" />
+                                <img loading="lazy" src="/profile/iran-vds.png" alt="سرور اختصاصی ایران" width="64" height="64" />
                             </div>
                             <div>
                                 <div class="fa" >سرور اختصاصی ایران</div>
@@ -610,7 +610,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img loading="lazy" src="/profile/france-vds.png" alt="سرور اختصاصی فرانسه" />
+                                <img loading="lazy" src="/profile/france-vds.png" alt="سرور اختصاصی فرانسه" width="64" height="64" />
                             </div>
                             <div>
                                 <div class="fa" >سرور اختصاصی فرانسه</div>
@@ -646,7 +646,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img loading="lazy" src="/profile/netherlands-vds.png" alt="سرور اختصاصی هلند" />
+                                <img loading="lazy" src="/profile/netherlands-vds.png" alt="سرور اختصاصی هلند" width="64" height="64" />
                             </div>
                             <div>
                                 <div class="fa" >سرور اختصاصی هلند</div>
@@ -681,7 +681,7 @@
                     <div class="col-3">
                         <div class="title" >
                             <div class="icon" >
-                                <img loading="lazy" src="/profile/germany-vds.png" alt="سرور اختصاصی آلمان" />
+                                <img loading="lazy" src="/profile/germany-vds.png" alt="سرور اختصاصی آلمان" width="64" height="64" />
                             </div>
                             <div>
                                 <div class="fa" >سرور اختصاصی آلمان</div>
