@@ -178,7 +178,7 @@ include 'partials/header.php';
     <div class="container" >
         <div class="grid cols-2 a-items-center" sm="cols-4" lg="cols-6">
             <div class="col-2" sm="col-4" lg="col-2" >
-                <img class="w-full mx-auto d-block" i-lg="max-w-(414px)" src="img/img-inside.png" alt="PersianMizban" >
+                <img loading="lazy" class="w-full mx-auto d-block" i-lg="max-w-(414px)" src="img/img-inside.png" alt="PersianMizban" >
             </div>
             <div>
                 <div class="box box2" >
@@ -421,7 +421,7 @@ include 'partials/header.php';
     <div class="container" >
         <div class="delivery-wrapper" >
             <div>
-                <img src="img/img-pishi.svg" alt="هاست" class="d-none" md="d-block mr-auto">
+                <img loading="lazy" src="img/img-pishi.svg" alt="هاست" class="d-none" md="d-block mr-auto">
             </div>
             <div>
                 <div class="text-150 text-primary text-w-medium mb-2" lg="text-190" > سفارش و تحویل در یک دقیقه</div>
@@ -457,7 +457,7 @@ include 'partials/header.php';
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img src="profile/digimoviz.png" alt="دیجی مویز" >
+                                    <img loading="lazy" src="profile/digimoviz.png" alt="دیجی مویز" >
                                     <div class="text-primary text-w-semibold" >سامان رمضانی</div>
                                     <div class="text-80 mr-auto" >دیجی مویز</div>
                                 </div>
@@ -468,7 +468,7 @@ include 'partials/header.php';
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img src="profile/myfilm.png" alt="مای فیلم" >
+                                    <img loading="lazy" src="profile/myfilm.png" alt="مای فیلم" >
                                     <div class="text-primary text-w-semibold" >علیرضا کریمی</div>
                                     <div class="text-80 mr-auto" >مای فیلم</div>
                                 </div>
@@ -485,7 +485,7 @@ include 'partials/header.php';
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img src="profile/opencart.png" alt="اپن کارت" >
+                                    <img loading="lazy" src="profile/opencart.png" alt="اپن کارت" >
                                     <div class="text-primary text-w-semibold" >صمد دانش خواه</div>
                                     <div class="text-80 mr-auto" >اپن کارت فارسی</div>
                                 </div>
@@ -496,7 +496,7 @@ include 'partials/header.php';
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img src="profile/asanapps.png" alt="آسان اپس" >
+                                    <img loading="lazy" src="profile/asanapps.png" alt="آسان اپس" >
                                     <div class="text-primary text-w-semibold" >سید حجت حسینی</div>
                                     <div class="text-80 mr-auto" >آسان اپس</div>
                                 </div>
@@ -513,7 +513,7 @@ include 'partials/header.php';
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img src="profile/bahabin.png" alt="بهابین" >
+                                    <img loading="lazy" src="profile/bahabin.png" alt="بهابین" >
                                     <div class="text-primary text-w-semibold" >مهدی وادونی</div>
                                     <div class="text-80 mr-auto" >بهابین</div>
                                 </div>
@@ -524,7 +524,7 @@ include 'partials/header.php';
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img src="profile/torob.png" alt="ترب" >
+                                    <img loading="lazy" src="profile/torob.png" alt="ترب" >
                                     <div class="text-primary text-w-semibold" >علی بابایی چشمه احمد رضایی</div>
                                     <div class="text-80 mr-auto" >ترب</div>
                                 </div>
@@ -541,7 +541,7 @@ include 'partials/header.php';
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img src="profile/damdaran.png" alt="دامداران" >
+                                    <img loading="lazy" src="profile/damdaran.png" alt="دامداران" >
                                     <div class="text-primary text-w-semibold" >نور الدین نور بخش جعفری دهکردی</div>
                                     <div class="text-80 mr-auto" >دامداران</div>
                                 </div>
@@ -552,7 +552,7 @@ include 'partials/header.php';
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img src="profile/vahabonline.png" alt="وهاب آنلاین" >
+                                    <img loading="lazy" src="profile/vahabonline.png" alt="وهاب آنلاین" >
                                     <div class="text-primary text-w-semibold" >وهاب سید چورته</div>
                                     <div class="text-80 mr-auto" >وهاب آنلاین</div>
                                 </div>
@@ -595,7 +595,7 @@ include 'partials/header.php';
                 <div class="swiper-slide">
                     <div class="post parent">
                         <div class="img" >
-                            <a href="https://www.persianmizban.com/blog/domain-country/"><img src="https://www.persianmizban.com/blog/wp-content/uploads/2022/04/country-domains-1.jpg" alt="دامنه های کشوری"></a>
+                            <a href="https://www.persianmizban.com/blog/domain-country/"><img loading="lazy" src="https://www.persianmizban.com/blog/wp-content/uploads/2022/04/country-domains-1.jpg" alt="دامنه های کشوری"></a>
                         </div>
                         <a href="https://www.persianmizban.com/blog/domain-country/"><div class="text-90 text-w-medium" parent-hover="text-primary" >معرفی انواع دامنه های کشوری که باید بدانید</div></a>
                         <div class="text">
@@ -612,7 +612,7 @@ include 'partials/header.php';
                 <div class="swiper-slide">
                     <div class="post parent">
                         <div class="img" >
-                            <a href="https://www.persianmizban.com/blog/international-domain/"><img src="https://www.persianmizban.com/blog/wp-content/uploads/2022/04/%D9%87%D8%A7%DB%8C-%D8%A8%DB%8C%D9%86-%D8%A7%D9%84%D9%85%D9%84%D9%84%DB%8C.png" alt="دامنه های کشوری"></a>
+                            <a href="https://www.persianmizban.com/blog/international-domain/"><img loading="lazy" src="https://www.persianmizban.com/blog/wp-content/uploads/2022/04/%D9%87%D8%A7%DB%8C-%D8%A8%DB%8C%D9%86-%D8%A7%D9%84%D9%85%D9%84%D9%84%DB%8C.png" alt="دامنه های کشوری"></a>
                         </div>
                         <a href="https://www.persianmizban.com/blog/international-domain/"><div class="text-90 text-w-medium" parent-hover="text-primary" >معرفی انواع دامنه های بین المللی و کاربرد آن ها</div></a>
                         <div class="text">
@@ -630,7 +630,7 @@ include 'partials/header.php';
                 <div class="swiper-slide">
                     <div class="post parent">
                         <div class="img" >
-                            <a href="https://www.persianmizban.com/blog/iranian-domain/"><img src="https://www.persianmizban.com/blog/wp-content/uploads/2022/04/%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%DB%8C.jpg" alt="هاست چیست"></a>
+                            <a href="https://www.persianmizban.com/blog/iranian-domain/"><img loading="lazy" src="https://www.persianmizban.com/blog/wp-content/uploads/2022/04/%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%DB%8C.jpg" alt="هاست چیست"></a>
                         </div>
                         <a href="https://www.persianmizban.com/blog/iranian-domain/"><div class="text-90 text-w-medium" parent-hover="text-primary" >دامنه ir چیست؟ و معرفی انواع دامنه های ایرانی</div></a>
                         <div class="text">
@@ -647,7 +647,7 @@ include 'partials/header.php';
                 <div class="swiper-slide">
                     <div class="post parent">
                         <div class="img" >
-                            <a href="https://www.persianmizban.com/blog/store-host/"><img src="https://www.persianmizban.com/blog/wp-content/uploads/2022/04/%D9%87%D8%A7%D8%B3%D8%AA-%D9%81%D8%B1%D9%88%D8%B4%DA%AF%D8%A7%D9%87-%D8%A7%DB%8C%D9%86%D8%AA%D8%B1%D9%86%D8%AA%DB%8C.jpg" alt="هاست فروشگاهی"></a>
+                            <a href="https://www.persianmizban.com/blog/store-host/"><img loading="lazy" src="https://www.persianmizban.com/blog/wp-content/uploads/2022/04/%D9%87%D8%A7%D8%B3%D8%AA-%D9%81%D8%B1%D9%88%D8%B4%DA%AF%D8%A7%D9%87-%D8%A7%DB%8C%D9%86%D8%AA%D8%B1%D9%86%D8%AA%DB%8C.jpg" alt="هاست فروشگاهی"></a>
                         </div>
                         <a href="https://www.persianmizban.com/blog/store-host/"><div class="text-90 text-w-medium" parent-hover="text-primary" >راهنمای خرید هاست فروشگاه اینترنتی</div></a>
                         <div class="text">
@@ -663,7 +663,7 @@ include 'partials/header.php';
                 <div class="swiper-slide">
                     <div class="post parent">
                         <div class="img" >
-                            <a href="https://www.persianmizban.com/blog/wordpress-install/"><img src="https://www.persianmizban.com/blog/wp-content/uploads/2022/02/PersianMizban-Blog-Wordpress-Install-Zero-1.png" alt="نصب وردپرس"></a>
+                            <a href="https://www.persianmizban.com/blog/wordpress-install/"><img loading="lazy" src="https://www.persianmizban.com/blog/wp-content/uploads/2022/02/PersianMizban-Blog-Wordpress-Install-Zero-1.png" alt="نصب وردپرس"></a>
                         </div>
                         <a href="https://www.persianmizban.com/blog/wordpress-install/"><div class="text-90 text-w-medium" parent-hover="text-primary" >آموزش نصب وردپرس روی هاست سی پنل – تصویری</div></a>
                         <div class="text">

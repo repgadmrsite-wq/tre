@@ -5,7 +5,7 @@ include '../partials/header.php';
 ?>
 <h1 class="d-none">تماس با پرشین میزبان</h1>
                     <div class="image image2">
-                        <img src="/img/img-employee2.png" alt="تماس با ما" >
+                        <img loading="lazy" src="/img/img-employee2.png" alt="تماس با ما" >
                     </div>
                     <div class="pt-2 text-135 text-w-black pb-1" >
                         <div class="text-black mb-1">تماس با پرشین میزبان</div>
@@ -119,7 +119,7 @@ include '../partials/header.php';
         <div class="list">
             <div class="comment">
                 <div class="image">
-                    <img src="/profile/cb.png" alt="کاربر" />
+                    <img loading="lazy" src="/profile/cb.png" alt="کاربر" />
                 </div>
                 <div class="grid cols-1 text-90 text-primary mb-2" sm="cols-2">
                     <div class="text-w-medium">
@@ -136,7 +136,7 @@ include '../partials/header.php';
 
             <div class="comment">
                 <div class="image">
-                    <img src="/profile/co.png" alt="کاربر" />
+                    <img loading="lazy" src="/profile/co.png" alt="کاربر" />
                 </div>
                 <div class="grid cols-1 text-90 text-primary mb-2" sm="cols-2">
                     <div class="text-w-medium">
@@ -153,7 +153,7 @@ include '../partials/header.php';
 
             <div class="comment">
                 <div class="image">
-                    <img src="/profile/cw.png" alt="کاربر" />
+                    <img loading="lazy" src="/profile/cw.png" alt="کاربر" />
                 </div>
                 <div class="grid cols-1 text-90 text-primary mb-2" sm="cols-2">
                     <div class="text-w-medium">
@@ -170,7 +170,7 @@ include '../partials/header.php';
 
             <div class="comment">
                 <div class="image">
-                    <img src="/profile/cr.png" alt="کاربر" />
+                    <img loading="lazy" src="/profile/cr.png" alt="کاربر" />
                 </div>
                 <div class="grid cols-1 text-90 text-primary mb-2" sm="cols-2">
                     <div class="text-w-medium">
@@ -187,7 +187,7 @@ include '../partials/header.php';
 
             <div class="comment">
                 <div class="image">
-                    <img src="/profile/cb.png" alt="کاربر" />
+                    <img loading="lazy" src="/profile/cb.png" alt="کاربر" />
                 </div>
                 <div class="grid cols-1 text-90 text-primary mb-2" sm="cols-2">
                     <div class="text-w-medium">
@@ -204,7 +204,7 @@ include '../partials/header.php';
 
             <div class="comment">
                 <div class="image">
-                    <img src="/profile/co.png" alt="کاربر" />
+                    <img loading="lazy" src="/profile/co.png" alt="کاربر" />
                 </div>
                 <div class="grid cols-1 text-90 text-primary mb-2" sm="cols-2">
                     <div class="text-w-medium">
@@ -221,7 +221,7 @@ include '../partials/header.php';
 
             <div class="comment">
                 <div class="image">
-                    <img src="/profile/cw.png" alt="کاربر" />
+                    <img loading="lazy" src="/profile/cw.png" alt="کاربر" />
                 </div>
                 <div class="grid cols-1 text-90 text-primary mb-2" sm="cols-2">
                     <div class="text-w-medium">
@@ -238,7 +238,7 @@ include '../partials/header.php';
 
             <div class="comment">
                 <div class="image">
-                    <img src="/profile/cr.png" alt="کاربر" />
+                    <img loading="lazy" src="/profile/cr.png" alt="کاربر" />
                 </div>
                 <div class="grid cols-1 text-90 text-primary mb-2" sm="cols-2">
                     <div class="text-w-medium">
@@ -255,7 +255,7 @@ include '../partials/header.php';
 
             <div class="comment">
                 <div class="image">
-                    <img src="/profile/cb.png" alt="کاربر" />
+                    <img loading="lazy" src="/profile/cb.png" alt="کاربر" />
                 </div>
                 <div class="grid cols-1 text-90 text-primary mb-2" sm="cols-2">
                     <div class="text-w-medium">
@@ -272,7 +272,7 @@ include '../partials/header.php';
 
             <div class="comment">
                 <div class="image">
-                    <img src="/profile/co.png" alt="کاربر" />
+                    <img loading="lazy" src="/profile/co.png" alt="کاربر" />
                 </div>
                 <div class="grid cols-1 text-90 text-primary mb-2" sm="cols-2">
                     <div class="text-w-medium">

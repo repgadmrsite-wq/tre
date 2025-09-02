@@ -106,7 +106,7 @@ include '../partials/header.php';
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="/profile/SALES101.jpg" alt="فرنام تهرانی">
+                        <img loading="lazy" src="/profile/SALES101.jpg" alt="فرنام تهرانی">
                         <div class="text-primary text-w-medium mb-1">فرنام تهرانی</div>
                         <div class="text-80">کارشناس واحد فروش</div>
                     </div>
@@ -115,7 +115,7 @@ include '../partials/header.php';
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="/profile/SALES102.jpg" alt="پریزاد ملایری">
+                        <img loading="lazy" src="/profile/SALES102.jpg" alt="پریزاد ملایری">
                         <div class="text-primary text-w-medium mb-1">پریزاد ملایری</div>
                         <div class="text-80">کارشناس واحد مالی</div>
                     </div>
@@ -124,7 +124,7 @@ include '../partials/header.php';
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="/profile/SALES103.jpg" alt="آوازه یادگار">
+                        <img loading="lazy" src="/profile/SALES103.jpg" alt="آوازه یادگار">
                         <div class="text-primary text-w-medium mb-1">آوازه یادگار</div>
                         <div class="text-80">کارشناس واحد فروش</div>
                     </div>
@@ -133,7 +133,7 @@ include '../partials/header.php';
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="/profile/SALES104.jpg" alt="نسترن علی زمانی">
+                        <img loading="lazy" src="/profile/SALES104.jpg" alt="نسترن علی زمانی">
                         <div class="text-primary text-w-medium mb-1">نسترن علی زمانی</div>
                         <div class="text-80">کارشناس واحد فروش</div>
                     </div>
@@ -142,7 +142,7 @@ include '../partials/header.php';
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="/profile/SALES105.jpg" alt="رویا باطنی">
+                        <img loading="lazy" src="/profile/SALES105.jpg" alt="رویا باطنی">
                         <div class="text-primary text-w-medium mb-1">رویا باطنی</div>
                         <div class="text-80">کارشناس واحد فروش</div>
                     </div>
@@ -151,7 +151,7 @@ include '../partials/header.php';
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="/profile/SALES106.jpg" alt="زهرا ثابتی">
+                        <img loading="lazy" src="/profile/SALES106.jpg" alt="زهرا ثابتی">
                         <div class="text-primary text-w-medium mb-1">زهرا ثابتی</div>
                         <div class="text-80">کارشناس واحد مالی</div>
                     </div>
@@ -160,7 +160,7 @@ include '../partials/header.php';
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="/profile/SALES107.jpg" alt="پرستو آشتیبانی">
+                        <img loading="lazy" src="/profile/SALES107.jpg" alt="پرستو آشتیبانی">
                         <div class="text-primary text-w-medium mb-1">پرستو آشتیانی</div>
                         <div class="text-80">کارشناس واحد مالی</div>
                     </div>
@@ -168,7 +168,7 @@ include '../partials/header.php';
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="/profile/SALES108.jpg" alt="فاطمه اصلانی">
+                        <img loading="lazy" src="/profile/SALES108.jpg" alt="فاطمه اصلانی">
                         <div class="text-primary text-w-medium mb-1">فاطمه اصلانی</div>
                         <div class="text-80">کارشناس واحد پشتیبانی</div>
                     </div>
@@ -176,7 +176,7 @@ include '../partials/header.php';
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="/profile/SALES109.jpg" alt="لیلا اصفهانی">
+                        <img loading="lazy" src="/profile/SALES109.jpg" alt="لیلا اصفهانی">
                         <div class="text-primary text-w-medium mb-1">لیلا اصفهانی</div>
                         <div class="text-80">کارشناس واحد پشتیبانی</div>
                     </div>
@@ -184,7 +184,7 @@ include '../partials/header.php';
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="/profile/SALES110.jpg" alt="زینب شیرازی">
+                        <img loading="lazy" src="/profile/SALES110.jpg" alt="زینب شیرازی">
                         <div class="text-primary text-w-medium mb-1">زینب شیرازی</div>
                         <div class="text-80">کارشناس واحد پشتیبانی</div>
                     </div>
@@ -201,7 +201,7 @@ include '../partials/header.php';
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="/profile/SUPPORT101.jpg" alt="خدایار فولادوند">
+                        <img loading="lazy" src="/profile/SUPPORT101.jpg" alt="خدایار فولادوند">
                         <div class="text-primary text-w-medium mb-1">خدایار فولادوند</div>
                         <div class="text-80">کارشناس واحد پشتیبانی</div>
                     </div>
@@ -210,7 +210,7 @@ include '../partials/header.php';
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="/profile/SUPPORT102.jpg" alt="حسین واثقی">
+                        <img loading="lazy" src="/profile/SUPPORT102.jpg" alt="حسین واثقی">
                         <div class="text-primary text-w-medium mb-1">حسین واثقی</div>
                         <div class="text-80">کارشناس واحد پشتیبانی</div>
                     </div>
@@ -219,7 +219,7 @@ include '../partials/header.php';
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="/profile/SUPPORT103.jpg" alt="مهرداد انوشه">
+                        <img loading="lazy" src="/profile/SUPPORT103.jpg" alt="مهرداد انوشه">
                         <div class="text-primary text-w-medium mb-1">مهرداد انوشه</div>
                         <div class="text-80">کارشناس سرشیفت</div>
                     </div>
@@ -228,7 +228,7 @@ include '../partials/header.php';
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="/profile/SUPPORT104.jpg" alt="جواد شرف">
+                        <img loading="lazy" src="/profile/SUPPORT104.jpg" alt="جواد شرف">
                         <div class="text-primary text-w-medium mb-1">جواد شرف</div>
                         <div class="text-80">کارشناس واحد پشتیبانی</div>
                     </div>
@@ -237,7 +237,7 @@ include '../partials/header.php';
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="/profile/SUPPORT105.jpg" alt="جواد سبزواری">
+                        <img loading="lazy" src="/profile/SUPPORT105.jpg" alt="جواد سبزواری">
                         <div class="text-primary text-w-medium mb-1">جواد سبزواری</div>
                         <div class="text-80">کارشناس واحد پشتیبانی</div>
                     </div>
@@ -246,7 +246,7 @@ include '../partials/header.php';
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="/profile/SUPPORT106.jpg" alt="علی وکیلی">
+                        <img loading="lazy" src="/profile/SUPPORT106.jpg" alt="علی وکیلی">
                         <div class="text-primary text-w-medium mb-1">علی وکیلی</div>
                         <div class="text-80">کارشناس واحد پشتیبانی</div>
                     </div>
@@ -255,7 +255,7 @@ include '../partials/header.php';
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="/profile/SUPPORT107.jpg" alt="مهدی ملایری">
+                        <img loading="lazy" src="/profile/SUPPORT107.jpg" alt="مهدی ملایری">
                         <div class="text-primary text-w-medium mb-1">مهدی ملایری</div>
                         <div class="text-80">کارشناس سرشیفت</div>
                     </div>
@@ -264,7 +264,7 @@ include '../partials/header.php';
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="/profile/SUPPORT108.jpg" alt="اکبر محمدرضایی">
+                        <img loading="lazy" src="/profile/SUPPORT108.jpg" alt="اکبر محمدرضایی">
                         <div class="text-primary text-w-medium mb-1">اکبر محمدرضایی</div>
                         <div class="text-80">کارشناس واحد پشتیبانی</div>
                     </div>
@@ -272,7 +272,7 @@ include '../partials/header.php';
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="/profile/SUPPORT109.jpg" alt="رضا قهرمانی">
+                        <img loading="lazy" src="/profile/SUPPORT109.jpg" alt="رضا قهرمانی">
                         <div class="text-primary text-w-medium mb-1">رضا قهرمانی</div>
                         <div class="text-80">کارشناس واحد پشتیبانی</div>
                     </div>
@@ -280,7 +280,7 @@ include '../partials/header.php';
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="/profile/SUPPORT110.jpg" alt="داوود مجاهد">
+                        <img loading="lazy" src="/profile/SUPPORT110.jpg" alt="داوود مجاهد">
                         <div class="text-primary text-w-medium mb-1">داوود مجاهد</div>
                         <div class="text-80">کارشناس واحد پشتیبانی</div>
                     </div>
@@ -288,7 +288,7 @@ include '../partials/header.php';
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="/profile/SUPPORT111.jpg" alt="محمد نامور">
+                        <img loading="lazy" src="/profile/SUPPORT111.jpg" alt="محمد نامور">
                         <div class="text-primary text-w-medium mb-1">محمد نامور</div>
                         <div class="text-80">کارشناس واحد پشتیبانی</div>
                     </div>
@@ -296,7 +296,7 @@ include '../partials/header.php';
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="/profile/SUPPORT112.jpg" alt="یزدان نقیب زاده">
+                        <img loading="lazy" src="/profile/SUPPORT112.jpg" alt="یزدان نقیب زاده">
                         <div class="text-primary text-w-medium mb-1">یزدان نقیب زاده</div>
                         <div class="text-80">کارشناس سرشیفت</div>
                     </div>
@@ -304,7 +304,7 @@ include '../partials/header.php';
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="/profile/SUPPORT113.jpg" alt="بردیا آهنگر">
+                        <img loading="lazy" src="/profile/SUPPORT113.jpg" alt="بردیا آهنگر">
                         <div class="text-primary text-w-medium mb-1">بردیا آهنگر</div>
                         <div class="text-80">کارشناس واحد پشتیبانی</div>
                     </div>
@@ -312,7 +312,7 @@ include '../partials/header.php';
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="/profile/SUPPORT114.jpg" alt="آیدین واعظی">
+                        <img loading="lazy" src="/profile/SUPPORT114.jpg" alt="آیدین واعظی">
                         <div class="text-primary text-w-medium mb-1">آیدین واعظی</div>
                         <div class="text-80">کارشناس واحد پشتیبانی</div>
                     </div>
@@ -320,7 +320,7 @@ include '../partials/header.php';
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="/profile/SUPPORT115.jpg" alt="روح الله شیرازی">
+                        <img loading="lazy" src="/profile/SUPPORT115.jpg" alt="روح الله شیرازی">
                         <div class="text-primary text-w-medium mb-1">روح الله شیرازی</div>
                         <div class="text-80">کارشناس سرشیفت</div>
                     </div>
@@ -328,7 +328,7 @@ include '../partials/header.php';
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="/profile/SUPPORT116.jpg" alt="یاسین فهمیده">
+                        <img loading="lazy" src="/profile/SUPPORT116.jpg" alt="یاسین فهمیده">
                         <div class="text-primary text-w-medium mb-1">یاسین فهمیده</div>
                         <div class="text-80">کارشناس واحد پشتیبانی</div>
                     </div>
@@ -336,7 +336,7 @@ include '../partials/header.php';
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="/profile/SUPPORT117.jpg" alt="پویا امانی">
+                        <img loading="lazy" src="/profile/SUPPORT117.jpg" alt="پویا امانی">
                         <div class="text-primary text-w-medium mb-1">پویا امانی</div>
                         <div class="text-80">کارشناس واحد پشتیبانی</div>
                     </div>
@@ -344,7 +344,7 @@ include '../partials/header.php';
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="/profile/SUPPORT118.jpg" alt="اقا رضا کاکاوند">
+                        <img loading="lazy" src="/profile/SUPPORT118.jpg" alt="اقا رضا کاکاوند">
                         <div class="text-primary text-w-medium mb-1">آقا رضا کاکاوند</div>
                         <div class="text-80">کارشناس واحد توسعه</div>
                     </div>
@@ -352,7 +352,7 @@ include '../partials/header.php';
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="/profile/SUPPORT119.jpg" alt="یحیی باغبانی">
+                        <img loading="lazy" src="/profile/SUPPORT119.jpg" alt="یحیی باغبانی">
                         <div class="text-primary text-w-medium mb-1">یحیی باغبانی</div>
                         <div class="text-80">کارشناس واحد توسعه</div>
                     </div>
@@ -360,7 +360,7 @@ include '../partials/header.php';
 
                 <div class="swiper-slide">
                     <div class="employee">
-                        <img src="/profile/SUPPORT120.jpg" alt="شایان خدادادی">
+                        <img loading="lazy" src="/profile/SUPPORT120.jpg" alt="شایان خدادادی">
                         <div class="text-primary text-w-medium mb-1">شایان خدادادی</div>
                         <div class="text-80">کارشناس واحد توسعه</div>
                     </div>
