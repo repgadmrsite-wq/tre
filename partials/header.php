@@ -40,7 +40,7 @@
         });
     })();
     </script>
-    <link rel="stylesheet" href="/dist/style.dd60c1d785.min.css">
+    <link rel="stylesheet" href="/dist/style.2dfbfb1b29.min.css">
 </head>
 <body>
 <div id="app" >
