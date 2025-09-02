@@ -10,7 +10,8 @@
     <?php endif; ?>
     <?php
         $scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
-        $canonical = $scheme . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+        $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+        $canonical = $scheme . '://' . $_SERVER['HTTP_HOST'] . $path;
     ?>
     <link rel="canonical" href="<?php echo htmlspecialchars($canonical, ENT_QUOTES, 'UTF-8'); ?>">
     <?php if (!empty($extraHead)) echo strip_tags($extraHead, '<meta><link>'); ?>
