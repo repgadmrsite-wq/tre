@@ -16,7 +16,7 @@
     <?php if (!empty($extraHead)) echo strip_tags($extraHead, '<meta><link>'); ?>
     <title><?php echo htmlspecialchars($pageTitle ?? '', ENT_QUOTES, 'UTF-8'); ?></title>
     <link rel="shortcut icon" href="/favicon.ico" type="image/ico">
-    <link rel="stylesheet" href="/dist/style.10e9f9dd9f.min.css">
+    <link rel="stylesheet" href="/dist/style.84f9e581f7.min.css">
 </head>
 <body>
 <script>
