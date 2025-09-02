@@ -49,7 +49,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/partials/breadcrumb.php';
                                 </div>
                             </div>
                             <div class="d-none" lg="col-2 d-block" >
-                                <img src="/img/vpsgermany.svg" alt="سرور مجازی" >
+                                <img src="/img/vpsgermany.svg" width="1097" height="1039" loading="lazy" alt="سرور مجازی" >
                             </div>
                         </div>
                     </div>
@@ -1368,7 +1368,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/partials/breadcrumb.php';
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img loading="lazy" src="profile/digimoviz.png" alt="دیجی مویز" >
+                                    <img src="profile/digimoviz.png" width="64" height="64" loading="lazy" alt="دیجی مویز" >
                                     <div class="text-primary text-w-semibold" >سامان رمضانی</div>
                                     <div class="text-80 mr-auto" >دیجی مویز</div>
                                 </div>
@@ -1379,7 +1379,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/partials/breadcrumb.php';
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img loading="lazy" src="profile/myfilm.png" alt="مای فیلم" >
+                                    <img src="profile/myfilm.png" width="64" height="64" loading="lazy" alt="مای فیلم" >
                                     <div class="text-primary text-w-semibold" >علیرضا کریمی</div>
                                     <div class="text-80 mr-auto" >مای فیلم</div>
                                 </div>
@@ -1396,7 +1396,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/partials/breadcrumb.php';
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img loading="lazy" src="profile/opencart.png" alt="اپن کارت" >
+                                    <img src="profile/opencart.png" width="64" height="64" loading="lazy" alt="اپن کارت" >
                                     <div class="text-primary text-w-semibold" >صمد دانش خواه</div>
                                     <div class="text-80 mr-auto" >اپن کارت فارسی</div>
                                 </div>
@@ -1407,7 +1407,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/partials/breadcrumb.php';
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img loading="lazy" src="profile/asanapps.png" alt="آسان اپس" >
+                                    <img src="profile/asanapps.png" width="64" height="64" loading="lazy" alt="آسان اپس" >
                                     <div class="text-primary text-w-semibold" >سید حجت حسینی</div>
                                     <div class="text-80 mr-auto" >آسان اپس</div>
                                 </div>
@@ -1424,7 +1424,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/partials/breadcrumb.php';
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img loading="lazy" src="profile/bahabin.png" alt="بهابین" >
+                                    <img src="profile/bahabin.png" width="64" height="64" loading="lazy" alt="بهابین" >
                                     <div class="text-primary text-w-semibold" >مهدی وادونی</div>
                                     <div class="text-80 mr-auto" >بهابین</div>
                                 </div>
@@ -1435,7 +1435,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/partials/breadcrumb.php';
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img loading="lazy" src="profile/torob.png" alt="ترب" >
+                                    <img src="profile/torob.png" width="64" height="64" loading="lazy" alt="ترب" >
                                     <div class="text-primary text-w-semibold" >علی بابایی چشمه احمد رضایی</div>
                                     <div class="text-80 mr-auto" >ترب</div>
                                 </div>
@@ -1452,7 +1452,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/partials/breadcrumb.php';
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img loading="lazy" src="profile/damdaran.png" alt="دامداران" >
+                                    <img src="profile/damdaran.png" width="64" height="64" loading="lazy" alt="دامداران" >
                                     <div class="text-primary text-w-semibold" >نور الدین نور بخش جعفری دهکردی</div>
                                     <div class="text-80 mr-auto" >دامداران</div>
                                 </div>
@@ -1463,7 +1463,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/partials/breadcrumb.php';
 
                             <div class="user-cm">
                                 <div class="d-flex a-items-center mb-4">
-                                    <img loading="lazy" src="profile/vahabonline.png" alt="وهاب آنلاین" >
+                                    <img src="profile/vahabonline.png" width="50" height="50" loading="lazy" alt="وهاب آنلاین" >
                                     <div class="text-primary text-w-semibold" >وهاب سید چورته</div>
                                     <div class="text-80 mr-auto" >وهاب آنلاین</div>
                                 </div>
