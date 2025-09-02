@@ -79,9 +79,9 @@ include $_SERVER['DOCUMENT_ROOT'].'/partials/breadcrumb.php';
     <div class="container">
 
         <div class="ov">
-            <div class="cols-6" >
+            <div class="grid" sm="cols-1" md="cols-2" lg="cols-3">
 
-            <div class="p-relative">
+            <div class="p-relative" lg="col-1">
                 <div class="plan">
                     <div class="num">۱</div>
                     <div class="icon-dlg"></div>
@@ -130,7 +130,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/partials/breadcrumb.php';
                 </div>
             </div>
 
-            <div class="p-relative">
+            <div class="p-relative" lg="col-1">
                 <div class="plan">
                     <div class="num">۲</div>
                     <div class="icon-dlg"></div>
@@ -179,7 +179,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/partials/breadcrumb.php';
                 </div>
             </div>
 
-            <div class="p-relative">
+            <div class="p-relative" lg="col-1">
                 <div class="plan">
                     <div class="num">۳</div>
                     <div class="icon-dlg"></div>
@@ -229,7 +229,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/partials/breadcrumb.php';
                 </div>
             </div>
 
-            <div class="p-relative">
+            <div class="p-relative" lg="col-1">
                 <div class="plan">
                     <div class="num">۴</div>
                     <div class="icon-dlg"></div>
@@ -278,7 +278,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/partials/breadcrumb.php';
                 </div>
             </div>
             
-            <div class="p-relative">
+            <div class="p-relative" lg="col-1">
                 <div class="plan">
                     <div class="num">۵</div>
                     <div class="icon-dlg"></div>
@@ -327,7 +327,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/partials/breadcrumb.php';
                 </div>
             </div>
 
-            <div class="p-relative">
+            <div class="p-relative" lg="col-1">
                 <div class="plan">
                     <div class="num">۶</div>
                     <div class="icon-dlg"></div>

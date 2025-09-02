@@ -85,9 +85,9 @@ include $_SERVER['DOCUMENT_ROOT'].'/partials/breadcrumb.php';
         </div>
 
         <div class="ov">
-            <div class="grid cols-6" >
+            <div class="grid" sm="cols-1" md="cols-2" lg="cols-3">
 
-                <div class="p-relative">
+                <div class="p-relative" lg="col-1">
                     <div class="plan">
                         <div class="suggested-title">SUGGESTED</div>
                         <div class="num">۱</div>
@@ -137,7 +137,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/partials/breadcrumb.php';
                     </div>
                 </div>
 
-                <div class="p-relative">
+                <div class="p-relative" lg="col-1">
                     <div class="plan">
                         <div class="suggested-title">SUGGESTED</div>
                         <div class="num">۲</div>
@@ -187,7 +187,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/partials/breadcrumb.php';
                     </div>
                 </div>
 
-                <div class="p-relative">
+                <div class="p-relative" lg="col-1">
                     <div class="plan suggested">
                         <div class="suggested-title">SUGGESTED</div>
                         <div class="num">۳</div>
@@ -237,7 +237,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/partials/breadcrumb.php';
                     </div>
                 </div>
 
-                <div class="p-relative">
+                <div class="p-relative" lg="col-1">
                     <div class="plan">
                         <div class="suggested-title">SUGGESTED</div>
                         <div class="num">۴</div>
@@ -288,7 +288,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/partials/breadcrumb.php';
                     </div>
                 </div>
 
-                <div class="p-relative">
+                <div class="p-relative" lg="col-1">
                     <div class="plan">
                         <div class="suggested-title">SUGGESTED</div>
                         <div class="num">۵</div>
@@ -338,7 +338,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/partials/breadcrumb.php';
                     </div>
                 </div>
 
-                <div class="p-relative">
+                <div class="p-relative" lg="col-1">
                     <div class="plan">
                         <div class="suggested-title">SUGGESTED</div>
                         <div class="num">۶</div>
