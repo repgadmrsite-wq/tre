@@ -157,10 +157,9 @@ document.querySelectorAll("#faq .qa").forEach(function (el){
     }
 });
 
-const clientSlider = document.querySelector('.client-swiper-slider');
-if (clientSlider) {
+document.querySelectorAll('.client-swiper-slider').forEach(function (clientSlider) {
     let numOfSlides = clientSlider.querySelectorAll('.swiper-slide').length;
-    const swiper = new Swiper('.client-swiper-slider', {
+    const swiper = new Swiper(clientSlider, {
         direction: 'vertical',
         loop: true,
         slidesPerView: 1.86,
@@ -171,8 +170,8 @@ if (clientSlider) {
             disableOnInteraction: false
         },
         navigation: {
-            nextEl: '.slide-next',
-            prevEl: '.slide-prev',
+            nextEl: clientSlider.parentElement.querySelector('.slide-next'),
+            prevEl: clientSlider.parentElement.querySelector('.slide-prev'),
         },
     });
 
@@ -187,11 +186,10 @@ if (clientSlider) {
         barDiv.style.top = i / numOfSlides * 100 + '%';
     }
     setSlidesNavPos(0);
-}
+});
 
-const hostSlider = document.querySelector('.host-swiper-slider');
-if (hostSlider) {
-    const swiper2 = new Swiper('.host-swiper-slider', {
+document.querySelectorAll('.host-swiper-slider').forEach(function (hostSlider) {
+    const swiper2 = new Swiper(hostSlider, {
         direction: 'horizontal',
         loop: true,
         slidesPerView: 1,
@@ -202,15 +200,14 @@ if (hostSlider) {
             disableOnInteraction: false
         },
         navigation: {
-            nextEl: '.slide-next',
-            prevEl: '.slide-prev',
+            nextEl: hostSlider.parentElement.querySelector('.slide-next'),
+            prevEl: hostSlider.parentElement.querySelector('.slide-prev'),
         },
     });
-}
+});
 
-const hostFeatureSlider = document.querySelector('.host-swiper-fslider');
-if (hostFeatureSlider) {
-    const swiper3 = new Swiper('.host-swiper-fslider', {
+document.querySelectorAll('.host-swiper-fslider').forEach(function (hostFeatureSlider) {
+    const swiper3 = new Swiper(hostFeatureSlider, {
         direction: 'horizontal',
         loop: false,
         slidesPerView: 1.2,
@@ -235,11 +232,11 @@ if (hostFeatureSlider) {
             }
         },
         navigation: {
-            nextEl: '.slide-next',
-            prevEl: '.slide-prev',
+            nextEl: hostFeatureSlider.parentElement.querySelector('.slide-next'),
+            prevEl: hostFeatureSlider.parentElement.querySelector('.slide-prev'),
         },
     });
-}
+});
 
 let morePlanInfo = document.querySelector("#host-plans .more-info .button");
 if(morePlanInfo !== null){
