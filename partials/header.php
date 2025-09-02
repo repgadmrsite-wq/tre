@@ -48,7 +48,7 @@
 <nav id="top-nav" >
     <div class="container" >
         <div class="d-flex" >
-            <button class="mob-menu" aria-expanded="false" aria-controls="top-nav-menu"></button>
+            <button class="mob-menu" aria-label="باز کردن منو" aria-expanded="false" aria-controls="top-nav-menu"></button>
             <a class="logo" href="<?php echo $baseUrl; ?>"></a>
             <div class="nav-mid" id="top-nav-menu">
                 <ul>
