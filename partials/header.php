@@ -16,26 +16,25 @@
     <?php if (!empty($extraHead)) echo strip_tags($extraHead, '<meta><link>'); ?>
     <title><?php echo htmlspecialchars($pageTitle ?? '', ENT_QUOTES, 'UTF-8'); ?></title>
     <link rel="shortcut icon" href="/favicon.ico" type="image/ico">
-    <link rel="stylesheet" href="/dist/style.84f9e581f7.min.css">
+    <script>
+    (function () {
+        var saved = localStorage.getItem('theme') || 'light';
+        document.documentElement.dataset.theme = saved;
+        document.addEventListener('DOMContentLoaded', function () {
+            var toggle = document.getElementById('theme-toggle');
+            if (toggle) {
+                toggle.addEventListener('click', function () {
+                    var current = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+                    document.documentElement.dataset.theme = current;
+                    localStorage.setItem('theme', current);
+                });
+            }
+        });
+    })();
+    </script>
+    <link rel="stylesheet" href="/dist/style.b43ab3f802.min.css">
 </head>
 <body>
-<script>
-(function() {
-    var saved = localStorage.getItem('theme');
-    if (saved === 'dark') {
-        document.body.classList.add('dark');
-    }
-    document.addEventListener('DOMContentLoaded', function() {
-        var toggle = document.getElementById('theme-toggle');
-        if (toggle) {
-            toggle.addEventListener('click', function () {
-                var isDark = document.body.classList.toggle('dark');
-                localStorage.setItem('theme', isDark ? 'dark' : 'light');
-            });
-        }
-    });
-})();
-</script>
 <div id="app" >
 <section id="top-nav" >
     <div class="container" >
