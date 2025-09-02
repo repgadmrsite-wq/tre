@@ -2,17 +2,17 @@ let navbar = document.querySelector("#top-nav");
 if(navbar != null) {
     let navButton = document.querySelector("#top-nav .mob-menu");
     let navCover = document.querySelector("#top-nav .cover");
-    navButton.onclick = function () {
+    navButton.addEventListener('click', function () {
         navbar.classList.toggle("active");
-    }
-    navCover.onclick = function () {
+    });
+    navCover.addEventListener('click', function () {
         navbar.classList.remove("active");
-    }
+    });
 
     document.querySelectorAll("#top-nav a").forEach(function (el){
-        el.onclick = function (){
+        el.addEventListener('click', function (){
             navbar.classList.remove("active");
-        }
+        });
     });
 }
 
@@ -81,24 +81,24 @@ function megaMenuItems(isInit = false){
 
         if(isInit){
             let isMouseInMenu = false, lockOpen = false, timeOut;
-            el.onmouseover = function (){
+            el.addEventListener('mouseover', function (){
                 mItem.classList.add('active');
-            }
-            el.onmouseleave = function (){
+            });
+            el.addEventListener('mouseleave', function (){
                 lockOpen = false;
                 setTimeout(function (){
                     if(!isMouseInMenu)
                         mItem.classList.remove('active');
                 },200);
-            }
-            mItem.onmouseover = function () {
+            });
+            mItem.addEventListener('mouseover', function () {
                 if(lockOpen) return;
 
                 lockOpen = true;
                 isMouseInMenu = true;
                 mItem.classList.add('active');
-            }
-            mItem.onmouseleave = function (){
+            });
+            mItem.addEventListener('mouseleave', function (){
                 isMouseInMenu = false;
                 mItem.classList.remove('active');
 
@@ -107,7 +107,7 @@ function megaMenuItems(isInit = false){
                 timeOut = setTimeout(function (){
                     lockOpen = false;
                 },500);
-            }
+            });
         }
     })
 }
@@ -124,7 +124,7 @@ window.addEventListener("resize",function (){
 });
 
 document.querySelectorAll(".pricing-list li").forEach(function (el){
-    el.onclick = function (){
+    el.addEventListener('click', function (){
         document.querySelectorAll(".pricing-list li").forEach(function (el2) {
             el2.classList.remove("active");
         });
@@ -134,18 +134,18 @@ document.querySelectorAll(".pricing-list li").forEach(function (el){
         el.classList.add("active");
         let da = el.getAttribute("for");
         document.querySelector(".pricing-area-" + da).classList.add("active");
-    }
+    });
 });
 
 document.querySelectorAll(".pricing-area .more-domains").forEach(function (el){
-    el.onclick = function (){
+    el.addEventListener('click', function (){
         el.parentElement.querySelector(".grid").classList.add("active");
         el.style.display = "none";
-    }
+    });
 });
 
 document.querySelectorAll("#faq .qa").forEach(function (el){
-    el.onclick = function (){
+    el.addEventListener('click', function (){
         let hc = el.classList.contains("active");
         document.querySelectorAll("#faq .qa").forEach(function (el2) {
             el2.classList.remove("active");
@@ -154,7 +154,7 @@ document.querySelectorAll("#faq .qa").forEach(function (el){
             el.classList.add("active");
         else
             el.classList.remove("active");
-    }
+    });
 });
 
 document.querySelectorAll('.client-swiper-slider').forEach(function (clientSlider) {
@@ -240,10 +240,10 @@ document.querySelectorAll('.host-swiper-fslider').forEach(function (hostFeatureS
 
 let morePlanInfo = document.querySelector("#host-plans .more-info .button");
 if(morePlanInfo !== null){
-    morePlanInfo.onclick = function (){
+    morePlanInfo.addEventListener('click', function (){
         morePlanInfo.classList.toggle("active");
         document.querySelector("#host-plans-details").classList.toggle("active");
-    }
+    });
 }
 
 const offerSlider = document.querySelector('.offer-swiper-slider');
@@ -284,7 +284,7 @@ if (offerSlider) {
 
 if(document.querySelector(".home-plans") != null){
     document.querySelectorAll(".plans-pricing-list li").forEach(function (el){
-        el.onclick = function (){
+        el.addEventListener('click', function (){
             document.querySelectorAll(".plans-pricing-list li").forEach(function (el2) {
                 el2.classList.remove("active");
             });
@@ -292,7 +292,7 @@ if(document.querySelector(".home-plans") != null){
 
             let da = el.getAttribute("for");
             setHomeCurrentPlan(da - 1);
-        }
+        });
     });
 
     function setHomeCurrentPlan(m){
