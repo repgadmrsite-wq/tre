@@ -25,10 +25,10 @@
                 </div>
 
                 <div class="social" >
-                    <a href="https://www.instagram.com/persianmizban_com/"><div class="ins">
+                    <a href="https://www.instagram.com/persianmizban_com/" target="_blank" rel="noopener noreferrer"><div class="ins">
                         صفحه اینستاگرام
                     </div></a>
-                    <a href="https://tlgrm.in/Persian_Mizban"><div class="tg">
+                    <a href="https://tlgrm.in/Persian_Mizban" target="_blank" rel="noopener noreferrer"><div class="tg">
                         کانال تلگرام
                     </div></a>
                 </div>
