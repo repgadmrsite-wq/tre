@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no, shrink-to-fit=no">
-    <meta name="theme-color" content="#32228f">
+    <meta name="theme-color" id="theme-color-meta" content="#ffffff">
     <?php if (!empty($pageDescription)): ?>
     <meta name="description" content="<?php echo htmlspecialchars($pageDescription, ENT_QUOTES, 'UTF-8'); ?>">
     <?php endif; ?>
@@ -19,14 +19,22 @@
     <script>
     (function () {
         var saved = localStorage.getItem('theme') || 'light';
-        document.documentElement.dataset.theme = saved;
+        var root = document.documentElement;
+        var meta = document.getElementById('theme-color-meta');
+        root.dataset.theme = saved;
+        if (meta) {
+            meta.content = saved === 'dark' ? '#121212' : '#ffffff';
+        }
         document.addEventListener('DOMContentLoaded', function () {
             var toggle = document.getElementById('theme-toggle');
             if (toggle) {
                 toggle.addEventListener('click', function () {
-                    var current = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
-                    document.documentElement.dataset.theme = current;
+                    var current = root.dataset.theme === 'dark' ? 'light' : 'dark';
+                    root.dataset.theme = current;
                     localStorage.setItem('theme', current);
+                    if (meta) {
+                        meta.content = current === 'dark' ? '#121212' : '#ffffff';
+                    }
                 });
             }
         });
