@@ -20,7 +20,7 @@ include '../partials/header.php';
                 </div>
             </div>
             <div md="col-3" lg="col-8">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.5160086577152!2d51.3339091152604!3d35.73811988018101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8dfdeb1d0f0a47%3A0x9547a543dbbba254!2z2b7Ysdi024zZhiDZhduM2LLYqNin2YY!5e0!3m2!1sen!2snl!4v1652726104627!5m2!1sen!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe title="موقعیت پرشین میزبان روی نقشه" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.5160086577152!2d51.3339091152604!3d35.73811988018101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8dfdeb1d0f0a47%3A0x9547a543dbbba254!2z2b7Ysdi024zZhiDZhduM2LLYqNin2YY!5e0!3m2!1sen!2snl!4v1652726104627!5m2!1sen!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div md="col-6" lg="col-7 pr-4">
                 <div class="pt-2 mb-12">
