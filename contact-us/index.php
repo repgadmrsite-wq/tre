@@ -1,4 +1,9 @@
 <?php
+session_start();
+if (empty($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+$csrfToken = $_SESSION['csrf_token'];
 $pageTitle = 'تماس با پرشین میزبان | پرشین میزبان';
 $pageDescription = 'تماس با پرشین میزبان از طریق پنل کاربری، چت آنلاین، تماس تلفنی و فرم ارسال نظر امکان پذیر است. بهترین روش برای پشتیبانی فنی ارسال تیکت است.';
 include '../partials/header.php';
@@ -85,6 +90,7 @@ include '../partials/header.php';
         </div>
 
         <form action="/api/contact.php" method="post" class="grid cols-1" sm="cols-2" lg="cols-4">
+            <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($csrfToken, ENT_QUOTES, 'UTF-8'); ?>">
             <div>
                 <div class="icon icon-male"></div>
                 <label for="form-name">نام و نام خانوادگی</label>
