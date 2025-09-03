@@ -1,0 +1,1072 @@
+<?php
+$pageTitle = 'هاست دانلود، خرید هاست دانلود ایران | پرشین میزبان';
+$pageDescription = 'هاست دانلود پرشین میزبان، هاست دانلود ایران با پهنای باند نامحدود و ترافیک نیم بها به همراه پورت شبکه 10G و بدون کندی و محدودیت در سرعت';
+$breadcrumbs = [
+    '/' => 'پرشین میزبان',
+    '/web-hosting/' => 'خرید هاست',
+    '/web-hosting/iran-download-host' => 'هاست دانلود ایران',
+];
+include '../partials/header.php';
+include $_SERVER['DOCUMENT_ROOT'].'/partials/breadcrumb.php';
+?>
+<h1 class="d-none">هاست دانلود ایران پرشین میزبان</h1>
+
+
+<section id="host-slider" >
+    <div class="container">
+        <div class="p-relative">
+            <div class="swiper host-swiper-slider ml-14" sm="mr-14" >
+                <div class="swiper-wrapper">
+    
+                    <div class="swiper-slide">
+                        <div lg="grid cols-5 a-items-center" class="pt-10 pb-12"  >
+                            <div lg="col-3 pt-15 pb-20">
+                                <div class="text-orange text-170 text-w-bold mb-2" i-sm="text-130 mb-3" >
+                                   خرید هاست دانلود ایران از پرشین میزبان
+                                </div>
+                                <div class="text-90 mb-5" >
+                                   هاست دانلود ایران شرکت پرشین میزبان – باکیفیت ترین هاست دانلود در کشور
+                                </div>
+                                <div class="text-80 text-lh-4">
+                                    در پرشین میزبان از تکنولوژی RAID به همراه های هارد پرسرعت <b>Enterprise SSD</b> در هاست دانلود استفاده میکنیم.</br> به جرعت میتوان گفت کم تر هاستینگی در دنیا از این ترکیب با کیفیت استفاده میکند، سرویس هاست دانلود ایران با بکار گیری از سخت افزار های قدرتمند نسل <b>10 HP</b> و استفاده از کارت شبکه فیبرنوری و پورت 10 گیگ <b>بدون محدودیت</b>، جهت شتابدهی در عملکرد هاست دانلود به همراه کانفیگ های تخصصی، جایگاهی امن برای فایل های مهم کسب و کار شماست.
+                                </div>
+                            </div>
+                            <div class="d-none" lg="col-2 d-block" >
+                                <img src="/img/hostiran-s.svg" width="234" height="552" loading="lazy" alt="هاست دانلود ایران" >
+                            </div>
+                        </div>
+                    </div>
+                        <div class="swiper-slide">
+                        <div lg="grid cols-5 a-items-center" class="pt-10 pb-12"  >
+                            <div lg="col-3 pt-15 pb-20">
+                                <div class="text-orange text-170 text-w-bold mb-2" i-sm="text-130 mb-3" >
+                                    سرعت شگفت انگیز، مدیریت آسان با پشتیبانی ویژه
+                                </div>
+                                <div class="text-90 mb-5" >
+                                    تمام آنچه که از یک میزبانی دانلودی نیاز دارید در هاست دانلود ایران پرشین میزبان
+                                </div>
+                                <div class="text-80 text-lh-4">
+                                    در پرشین میزبان بدون دغدغه ترافیک مصرف کنید, چرا که این جا کلا <b>ترافیک نیم بها</b> و رایگانه در کنار <b>پورت 10 گیگ</b> بدون محدودیت نهایت سرعت را کسب و کار آنلاین شما تجربه خواهد کرد. این در حالیست که از کنترل پنل محبوب و قدرتمند <b>سی پنل</b> در تمام سرویس های <b>هاست دانلود</b> استفاده کرده ایم. ما همواره در قسمت پشتیبانی دلتنگ شنیدن صدای گرم شما هستیم, تا به صورت 24 ساعته مشکلات و دغدغه های کسب و کار آنلاین شمارا حل کنیم.
+                                </div>
+                            </div>
+                            <div class="d-none" lg="col-2 d-block" >
+                                <img src="/img/hostiran-sl.svg" width="299" height="695" loading="lazy" alt="هاست دانلود" >
+                            </div>
+                        </div>
+                    </div>
+
+    
+                </div>
+            </div>
+
+            <div class="slide-next"></div>
+            <div class="slide-prev d-none" sm="d-block" ></div>
+        </div>
+    </div>
+</section>
+
+<section id="host-links">
+    <div class="container-fluid" >
+        <a href="https://www.persianmizban.com/web-hosting/iran"><div class="button" >هاست ایران</div></a>
+        <a href="https://www.persianmizban.com/web-hosting/germany"><div class="button" >هاست آلمان</div></a>
+        <a href="https://www.persianmizban.com/web-hosting/wordpress"><div class="button" >هاست وردپرس</div></a>
+        <a href="https://www.persianmizban.com/web-hosting/iran-download-host"><div class="button active" >هاست دانلود ایران</div></a>
+        <a href="https://www.persianmizban.com/web-hosting/germany-download-host"><div class="button" >هاست دانلود آلمان</div></a>
+    </div>
+</section>
+
+<section id="host-plans">
+    <div class="container">
+
+        <div class="ov">
+            <div class="grid" sm="cols-1" md="cols-2" lg="cols-3">
+
+            <div class="p-relative" lg="col-1">
+                <div class="plan">
+                    <div class="num">۱</div>
+                    <div class="icon-dli"></div>
+                    <div class="plan-in">
+                        <div class="content">
+                            <div class="text-center text-120 text-w-semibold mb-2">پلن اول</div>
+                            <div class="text-center text-85"><span class="opacity-50">Download /</span> Plan <span
+                                    class="text-orange text-w-semibold">FIRST</span></div>
+                            <div class="price">
+                                ۱۵
+                                <small>هزار تومان <span class="text-black">/ ماهانه</span></small>
+                            </div>
+                            <ul>
+                                <li>
+                                    فضا:
+                                    <span>10GB</span>
+                                </li>
+                                <li>
+                                    ترافیک:
+                                    <span>نامحدود</span>
+                                </li>
+                                <li>
+                                    FTP:
+                                    <span>نامحدود</span>
+                                </li>
+                                <li>
+                                    تعداد دامنه:
+                                    <span>نامحدود</span>
+                                </li>
+                                <li>
+                                    پورت شبکه:
+                                    <span>10GB</span>
+                                </li>
+                                <li>
+                                    کنترل پنل:
+                                    <span>Cpanel</span>
+                                </li>
+                            </ul>
+
+                            <div class="button">
+                                <div class="icon"></div>
+                                <a href="https://www.persianmizban.com/my/cart.php?a=add&pid=29"><div class="mx-auto">ثبت سفارش</div></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-relative" lg="col-1">
+                <div class="plan">
+                    <div class="num">۲</div>
+                    <div class="icon-dli"></div>
+                    <div class="plan-in">
+                        <div class="content">
+                            <div class="text-center text-120 text-w-semibold mb-2">پلن دوم</div>
+                            <div class="text-center text-85"><span class="opacity-50">Download /</span> Plan <span
+                                    class="text-orange text-w-semibold">SECOND</span></div>
+                            <div class="price">
+                                ۳۰
+                                <small>هزار تومان <span class="text-black">/ ماهانه</span></small>
+                            </div>
+                            <ul>
+                                <li>
+                                    فضا:
+                                    <span>20GB</span>
+                                </li>
+                                <li>
+                                    ترافیک:
+                                    <span>نامحدود</span>
+                                </li>
+                                <li>
+                                    FTP:
+                                    <span>نامحدود</span>
+                                </li>
+                                <li>
+                                    تعداد دامنه:
+                                    <span>نامحدود</span>
+                                </li>
+                                <li>
+                                    پورت شبکه:
+                                    <span>10GB</span>
+                                </li>
+                                <li>
+                                    کنترل پنل:
+                                    <span>Cpanel</span>
+                                </li>
+                            </ul>
+
+                            <div class="button">
+                                <div class="icon"></div>
+                                <a href="https://www.persianmizban.com/my/cart.php?a=add&pid=30"><div class="mx-auto">ثبت سفارش</div></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-relative" lg="col-1">
+                <div class="plan">
+                    <div class="num">۳</div>
+                    <div class="icon-dli"></div>
+                    <div class="plan-in">
+                        <div class="icon-star"></div>
+                        <div class="content">
+                            <div class="text-center text-120 text-w-semibold mb-2">پلن سـوم</div>
+                            <div class="text-center text-85"><span class="opacity-50">Download /</span> Plan <span
+                                    class="text-orange text-w-semibold">THIRD</span></div>
+                            <div class="price">
+                                ۶۰
+                                <small>هزار تومان <span class="text-black">/ ماهانه</span></small>
+                            </div>
+                            <ul>
+                                <li>
+                                    فضا:
+                                    <span>40GB</span>
+                                </li>
+                                <li>
+                                    ترافیک:
+                                    <span>نامحدود</span>
+                                </li>
+                                <li>
+                                    FTP:
+                                    <span>نامحدود</span>
+                                </li>
+                                <li>
+                                    تعداد دامنه:
+                                    <span>نامحدود</span>
+                                </li>
+                                <li>
+                                    پورت شبکه:
+                                    <span>10GB</span>
+                                </li>
+                                <li>
+                                    کنترل پنل:
+                                    <span>Cpanel</span>
+                                </li>
+                            </ul>
+
+                            <div class="button">
+                                <div class="icon"></div>
+                                <a href="https://www.persianmizban.com/my/cart.php?a=add&pid=31"><div class="mx-auto">ثبت سفارش</div></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-relative" lg="col-1">
+                <div class="plan">
+                    <div class="num">۴</div>
+                    <div class="icon-dli"></div>
+                    <div class="plan-in">
+                        <div class="content">
+                            <div class="text-center text-120 text-w-semibold mb-2">پلن چـهارم</div>
+                            <div class="text-center text-85"><span class="opacity-50">Download /</span> Plan <span
+                                    class="text-orange text-w-semibold">FOURTH</span></div>
+                            <div class="price">
+                                ۱۲۰
+                                <small>هزار تومان <span class="text-black">/ ماهانه</span></small>
+                            </div>
+                            <ul>
+                                <li>
+                                    فضا:
+                                    <span>80GB</span>
+                                </li>
+                                <li>
+                                    ترافیک:
+                                    <span>نامحدود</span>
+                                </li>
+                                <li>
+                                    FTP:
+                                    <span>نامحدود</span>
+                                </li>
+                                <li>
+                                    تعداد دامنه:
+                                    <span>نامحدود</span>
+                                </li>
+                                <li>
+                                    پورت شبکه:
+                                    <span>10GB</span>
+                                </li>
+                                <li>
+                                    کنترل پنل:
+                                    <span>Cpanel</span>
+                                </li>
+                            </ul>
+
+                            <div class="button">
+                                <div class="icon"></div>
+                                <a href="https://www.persianmizban.com/my/cart.php?a=add&pid=32"><div class="mx-auto">ثبت سفارش</div></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="p-relative" lg="col-1">
+                <div class="plan">
+                    <div class="num">۵</div>
+                    <div class="icon-dli"></div>
+                    <div class="plan-in">
+                        <div class="content">
+                            <div class="text-center text-120 text-w-semibold mb-2">پلن پـنجم</div>
+                            <div class="text-center text-85"><span class="opacity-50">Download /</span> Plan <span
+                                    class="text-orange text-w-semibold">FIFTH</span></div>
+                            <div class="price">
+                                ۱۹۹
+                                <small>هزار تومان <span class="text-black">/ ماهانه</span></small>
+                            </div>
+                            <ul>
+                                <li>
+                                    فضا:
+                                    <span>200GB</span>
+                                </li>
+                                <li>
+                                    ترافیک:
+                                    <span>نامحدود</span>
+                                </li>
+                                <li>
+                                    FTP:
+                                    <span>نامحدود</span>
+                                </li>
+                                <li>
+                                    تعداد دامنه:
+                                    <span>نامحدود</span>
+                                </li>
+                                <li>
+                                    پورت شبکه:
+                                    <span>10GB</span>
+                                </li>
+                                <li>
+                                    کنترل پنل:
+                                    <span>Cpanel</span>
+                                </li>
+                            </ul>
+
+                            <div class="button">
+                                <div class="icon"></div>
+                                <a href="https://www.persianmizban.com/my/cart.php?a=add&pid=33"><div class="mx-auto">ثبت سفارش</div></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-relative" lg="col-1">
+                <div class="plan">
+                    <div class="num">۶</div>
+                    <div class="icon-dli"></div>
+                    <div class="plan-in">
+                        <div class="content">
+                            <div class="text-center text-120 text-w-semibold mb-2">پلن شـشم</div>
+                            <div class="text-center text-85"><span class="opacity-50">Download /</span> Plan <span
+                                    class="text-orange text-w-semibold">SIXTH</span></div>
+                            <div class="price">
+                                ۲۸۹
+                                <small>هزار تومان <span class="text-black">/ ماهانه</span></small>
+                            </div>
+                            <ul>
+                                <li>
+                                    فضا:
+                                    <span>500GB</span>
+                                </li>
+                                <li>
+                                    ترافیک:
+                                    <span>نامحدود</span>
+                                </li>
+                                <li>
+                                    FTP:
+                                    <span>نامحدود</span>
+                                </li>
+                                <li>
+                                    تعداد دامنه:
+                                    <span>نامحدود</span>
+                                </li>
+                                <li>
+                                    پورت شبکه:
+                                    <span>10GB</span>
+                                </li>
+                                <li>
+                                    کنترل پنل:
+                                    <span>Cpanel</span>
+                                </li>
+                            </ul>
+
+                            <div class="button">
+                                <div class="icon"></div>
+                                <a href="https://www.persianmizban.com/my/cart.php?a=add&pid=34"><div class="mx-auto">ثبت سفارش</div></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+        <div class="more-info">
+            <div class="button">
+                <div class="icon"></div>
+                مشاهده جزئیات پلن ها
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="host-plans-details">
+    <div class="ov">
+        <table>
+            <tr>
+                <td class="!border-bottom-none"></td>
+                <td class="!border-bottom-none">
+                    <div class="title">
+                        <a href="https://www.persianmizban.com/my/cart.php?a=add&pid=29"><div class="in">پلن اول</div></a>
+                    </div>
+                </td>
+                <td class="!border-bottom-none">
+                    <div class="title">
+                        <a href="https://www.persianmizban.com/my/cart.php?a=add&pid=30"><div class="in">پلن دوم</div></a>
+                    </div>
+                </td>
+                <td class="!border-bottom-none">
+                    <div class="title">
+                        <a href="https://www.persianmizban.com/my/cart.php?a=add&pid=31"><div class="in">پلن سـوم</div></a>
+                    </div>
+                </td>
+                <td class="!border-bottom-none">
+                    <div class="title">
+                        <a href="https://www.persianmizban.com/my/cart.php?a=add&pid=32"><div class="in">پلن چـهارم</div></a>
+                    </div>
+                </td>
+                <td class="!border-bottom-none">
+                    <div class="title">
+                        <a href="https://www.persianmizban.com/my/cart.php?a=add&pid=33"><div class="in">پلن پـنجم</div></a>
+                    </div>
+                </td>
+                <td class="!border-bottom-none">
+                    <div class="title">
+                        <a href="https://www.persianmizban.com/my/cart.php?a=add&pid=34"><div class="in">پلن شـشم</div></a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>فضای هاست</th>
+                <td>10GB</td>
+                <td>20GB</td>
+                <td>40GB</td>
+                <td>80GB</td>
+                <td>200GB</td>
+                <td>500GB</td>
+            </tr>
+            <tr>
+                <th>پهنای باند</th>
+                <td>نامحدود</td>
+                <td>نامحدود</td>
+                <td>نامحدود</td>
+                <td>نامحدود</td>
+                <td>نامحدود</td>
+                <td>نامحدود</td>
+            </tr>
+            <tr>
+                <th>دامین های قابل اتصال</th>
+                <td>نامحدود</td>
+                <td>نامحدود</td>
+                <td>نامحدود</td>
+                <td>نامحدود</td>
+                <td>نامحدود</td>
+                <td>نامحدود</td>
+            </tr>
+            <tr>
+                <th>FTP اکانت</th>
+                <td>نامحدود</td>
+                <td>نامحدود</td>
+                <td>نامحدود</td>
+                <td>نامحدود</td>
+                <td>نامحدود</td>
+                <td>نامحدود</td>
+            </tr>
+            <tr>
+                <th>پورت شبکه</th>
+                <td>10GB/s</td>
+                <td>10GB/s</td>
+                <td>10GB/s</td>
+                <td>10GB/s</td>
+                <td>10GB/s</td>
+                <td>10GB/s</td>
+            </tr>
+            <tr>
+                <th>انتقال رایگان</th>
+                <td>
+                    <div class="icon-yes"></div>
+                </td>
+                <td>
+                    <div class="icon-yes"></div>
+                </td>
+                <td>
+                    <div class="icon-yes"></div>
+                </td>
+                <td>
+                    <div class="icon-yes"></div>
+                </td>
+                <td>
+                    <div class="icon-yes"></div>
+                </td>
+                <td>
+                    <div class="icon-yes"></div>
+                </td>
+            </tr>
+            <tr>
+                <th>ترافیک نیم بها</th>
+                <td>
+                    <div class="icon-yes"></div>
+                </td>
+                <td>
+                    <div class="icon-yes"></div>
+                </td>
+                <td>
+                    <div class="icon-yes"></div>
+                </td>
+                <td>
+                    <div class="icon-yes"></div>
+                </td>
+                <td>
+                    <div class="icon-yes"></div>
+                </td>
+                <td>
+                    <div class="icon-yes"></div>
+                </td>
+            </tr>
+            <tr>
+                <th>SSL رایگان</th>
+                <td>
+                    <div class="icon-yes"></div>
+                </td>
+                <td>
+                    <div class="icon-yes"></div>
+                </td>
+                <td>
+                    <div class="icon-yes"></div>
+                </td>
+                <td>
+                    <div class="icon-yes"></div>
+                </td>
+                <td>
+                    <div class="icon-yes"></div>
+                </td>
+                <td>
+                    <div class="icon-yes"></div>
+                </td>
+            </tr>
+            <tr>
+                <th>آنتی تحریم</th>
+                <td>
+                    <div class="icon-yes"></div>
+                </td>
+                <td>
+                    <div class="icon-yes"></div>
+                </td>
+                <td>
+                    <div class="icon-yes"></div>
+                </td>
+                <td>
+                    <div class="icon-yes"></div>
+                </td>
+                <td>
+                    <div class="icon-yes"></div>
+                </td>
+                <td>
+                    <div class="icon-yes"></div>
+                </td>
+            </tr>
+            <tr>
+                <th>Anti Ddos Protection</th>
+                <td>
+                    <div class="icon-yes"></div>
+                </td>
+                <td>
+                    <div class="icon-yes"></div>
+                </td>
+                <td>
+                    <div class="icon-yes"></div>
+                </td>
+                <td>
+                    <div class="icon-yes"></div>
+                </td>
+                <td>
+                    <div class="icon-yes"></div>
+                </td>
+                <td>
+                    <div class="icon-yes"></div>
+                </td>
+            </tr>
+            <tr>
+                <th>DNS اختصاصی</th>
+                <td>
+                    <div class="icon-yes"></div>
+                </td>
+                <td>
+                    <div class="icon-yes"></div>
+                </td>
+                <td>
+                    <div class="icon-yes"></div>
+                </td>
+                <td>
+                    <div class="icon-yes"></div>
+                </td>
+                <td>
+                    <div class="icon-yes"></div>
+                </td>
+                <td>
+                    <div class="icon-yes"></div>
+                </td>
+            </tr>
+            <tr>
+                <th>وب سرور</th>
+                <td>Nginx</td>
+                <td>Nginx</td>
+                <td>Nginx</td>
+                <td>Nginx</td>
+                <td>Nginx</td>
+                <td>Nginx</td>
+            </tr>
+            <tr>
+                <th>سیستم عامل</th>
+                <td>CloudLinux</td>
+                <td>CloudLinux</td>
+                <td>CloudLinux</td>
+                <td>CloudLinux</td>
+                <td>CloudLinux</td>
+                <td>CloudLinux</td>
+            </tr>
+            <tr>
+                <th>لوکیشن سرور</th>
+                <td>پارس آنلاین/زیرساخت</td>
+                <td>پارس آنلاین/زیرساخت</td>
+                <td>پارس آنلاین/زیرساخت</td>
+                <td>پارس آنلاین/زیرساخت</td>
+                <td>پارس آنلاین/زیرساخت</td>
+                <td>پارس آنلاین/زیرساخت</td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<section id="host-features" >
+    <div class="container text-90 text-primary" lg="text-75" xl="text-90">
+        <div class="grid cols-1" sm="cols-2" lg="cols-4" >
+            <div class="my-1.5"><div class="icon-check" ></div> تیم پشتیبانی ویژه فنی</div>
+            <div class="my-1.5"><div class="icon-check" ></div>سرعت بدون محدودیت</div>
+            <div class="my-1.5"><div class="icon-check" ></div>انتقال رایگان اطلاعات</div>
+            <div class="my-1.5"><div class="icon-check" ></div>گارانتی برگشت وجه کامل ۱۴ روزه</div>
+            <div class="my-1.5"><div class="icon-check" ></div>هارد های Enterprise SSD</div>
+            <div class="my-1.5"><div class="icon-check" ></div>ارائه منابع واضح و شفاف</div>
+            <div class="my-1.5"><div class="icon-check" ></div>تحویل و ارتقاء کاملا آنی</div>
+            <div class="my-1.5"><div class="icon-check" ></div>ترافیک نیم‌بها</div>
+        </div>
+    </div>
+</section>
+
+<section id="host-info-grid">
+    <div class="container">
+        <div class="title">
+            ویژگی های خارق العاده هاست دانلود ایران
+            <img src="/img/logo-tg.jpg" alt="پرشین میزبان" >
+        </div>
+
+        <div class="grid cols-1 mt-10" sm="cols-2" lg="cols-4">
+            <div class="box">
+                <img src="/img/icon-hig-2.svg" alt="مانیتورینگ"/>
+                <div class="text-w-semibold">مانیتورینگ 24 ساعته</div>
+                <div class="text-80">در پرشین میزبان متخصصین مجرب به صورت 24 ساعته همه روزه سرور سایت و اپلیکیشن های شمارا رصد میکنند، تا در صورت رخداد هرگونه اختلال آن را سریعا به حالت STABLE برگردانند.</div>
+            </div>
+            <div class="box">
+                <img src="/img/icon-hig-4.svg" alt="آنتی اسپم"/>
+                <div class="text-w-semibold">آنتی اسپم</div>
+                <div class="text-80">بر روی تمام سرور های پرشین میزبان ویژگی آنتی اسپم صفحه لاگین و ایمیل فعال است. تا از دریافت یا ارسال ایمیل های اسپم که توسط افزونه یا قالب های مخرب تولید میشوند یا ورود ربات های مخرب  به صورت کاملا خودکار جلوگیری شود.</div>
+            </div>
+            <div class="box">
+                <img src="/img/icon-hig-4.svg" alt="آنتی تحریم"/>
+                <div class="text-w-semibold">آنتی تحریم</div>
+                <div class="text-80">روی کل شبکه سرور های پرشین میزبان سیاست آنتی تحریم اجرا شده است. تمام سرور و میزبانی ها بدون مشکل، ارتباطی پرسرعت با سایت ها و API های معروف خارج کشور بر قرار میکنند.</div>
+            </div>
+            <div class="box">
+                <img src="/img/icon-hig-3.svg" alt="پشتیبانی"/>
+                <div class="text-w-semibold">پشتیبانی پرآوازه</div>
+                <div class="text-80">در تمام طول شبانه روز هر زمان شما نیاز به پشتیبانی داشته باشید در لحظه در کنار شما هستیم. ما پاسخ گویی تیکتینگ کم تر از 5 دقیقه را گارانتی میکنیم.</div>
+            </div>
+            <div class="box">
+                <img src="/img/icon-server2.svg" alt="منابع سرور"/>
+                <div class="text-w-semibold">منابع اختصاصی</div>
+                <div class="text-80">در تمام پلن ها منابع سرور ها به صورت اختصاصی و ایزوله به هر کاربر ارائه میشود. تا سایت و اپلیکیشن شما همواره با نهایت سرعت در دسترس باشد.</div>
+            </div>
+            <div class="box">
+                <img src="/img/icon-hig-1.svg" alt="امنیت سرور"/>
+                <div class="text-w-semibold">امنیت استوار</div>
+                <div class="text-80">با تنظیم و بروز نگهداری فایروال های سخت افزاری و نرم افزاری در لایه های مختلف که در تمام شبکه سرور ها اعمال کردیم، سایت شما توان مقابله و خنثی سازی با انواع حملات را خواهد داشت.</div>
+            </div>
+            <div class="box">
+                <img src="/img/icon-hig-5.svg" alt="بکاپ"/>
+                <div class="text-w-semibold">آپلینک 10 گیگ</div>
+                <div class="text-80">هاست دانلود، با پورت 10 گیگ دانلود و آپلود همزمان بدون محدودیت ارائه میشود. مزیت این سرویس سخت افزار بروز نسل 10 HP است که سرعت انتقال فایل هارا چند برابر میکند.</div>
+            </div>
+            <div class="box">
+                <img src="/img/icon-hig-6.svg" alt="ssl"/>
+                <div class="text-w-semibold">گواهی نامه SSL</div>
+                <div class="text-80">به صورت اتوماتیک توسط سرور های پرشین میزبان گواهی نامه امنیتی SSL شرکتی کاملا رایگان روی تمام سایت و ساب دامنه های شما نصب و فعال میشود. همین طور فرایند تمدید SSL ها به صورت خودکار توسط سرور ها انجام میشود.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="host-pt">
+    <div class="container">
+        <div class="grid cols-11 a-items-center pb-12">
+            <div i-lg="d-none" class="col-3">
+                <img src="/img/dliran-host.svg" width="96" height="93" loading="lazy" alt="هاست دانلود" class="w-full">
+            </div>
+            <div class="col-8" i-lg="col-11">
+                <div class="text-w-semibold text-110 mb-4">هاست دانلود ایران پرشین میزبان، <u>بهترین هاست دانلود در ایران</u></div>
+                <div class="text-80 text-lh-5">
+<b>هاست دانلود ایران پرشین میزبان، پرسرعت ترین هاست دانلود  سی پنل در ایران است.</b> هاست دانلود با کیفیت سریع مدیون کانفیگ درست و بهینه وب سرور می باشد، ما با انتخاب درست و کانفیگ حرفه ای وب سرور Nginx نهایت سرعت و کیفیت را تقدیم شما میکنیم. هاست دانلود ایران پرشین میزبان با سیکل های <b>ماهانه</b>، <b>سه ماهه</b>، <b>شش ماهه</b> و <b>سالانه</b> ارائه میشود. ما در پرشین میزبان از تکنولوژی RAID به همراه های هارد پرسرعت هارد های <b>Enterprise SSD</b> استفاده میکنیم، به جرعت میتوان گفت کم تر هاستینگی در دنیا از این ترکیب با کیفیت استفاده میکنند، سرویس های هاست دانلود ایران در پرشین میزبان با بکار گیری از سخت افزار های بسیار قدرتمند <b>نسل 10 HP</b> که تحت مالکیت 100 درصدی شرکت میزبان داده فیدار می باشد و استفاده از کارت شبکه فیبرنوری بدون محدودیت پورت 10 گیگ جهت شتابدهی در عملکرد هاست دانلود به همراه کانفیگ های تخصصی، جایگاهی امن برای <b><span style="color: #333399;">فایل های مهم</span></b> کسب و کار شماست.</br>
+<b>هنگام خرید هاست دانلود ایران هیچ نگرانی بابت افزایش قیمت ها در تمدید های بعدی نداشته باشید، چراکه این پلن ها با زیرساختی مستحکم تحت مالکیت کامل شرکت میزبان داده فیدار بوده که در جهت تثبیت قیمت های میزبانی در کشور ارائه شده است.</br>
+<span style="color: #ff0000;">قیمت این سرویس ها تا تاریخ 1404/1/1 ابدا تغییری نخواهد کرد و قیمت پلن ها تا این تاریخ بسته شده است.</span></b>
+                    </b>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="host-exp">
+    <div class="bg-map"></div>
+    <div class="container p-relative z-2">
+        <div class="grid cols-11 a-items-center" xl="-mt-24 -mb-20">
+            <div i-lg="d-none" class="col-4 p-relative">
+                <div class="bg-speedometer"></div>
+                <img src="/img/img-pm-laptop.png" alt="پرشین میزبان" class="w-full">
+            </div>
+
+            <div class="col-7" i-lg="col-11">
+                <div class="text-(#a1e8ff) ">
+                    تجربه بی نظیر
+                </div>
+                <div class="text-w-semibold text-190 mb-4 p-relative" i-sm="text-160">
+                    بــــــی نهایت سرعت
+                    <div class="icon-speed"></div>
+                </div>
+                <div class="text-80 text-lh-5">عملکرد هاستینگ برای هر وب سایت و اپلیکیشنی بسیار مهم است. زیرا در صورتی که سرویس میزبانی شما عملکرد مناسبی نداشته باشد، به مرور کاربرانتان از آن دلسرد میشوند و وب سایتتان را ترک میکنند و موتور های جستجو هم دیگر به سراغ وب سایتتان نمی آیند و آن را نادیده می گیرند. اگر میخواهید که هم وب سایتتان در مجموع تجربه کاربری خوبی داشته باشد و هم رتبه ی خوبی در گوگل بدست بیاورید، بهتر است از پلن های پرسرعت <span style="color: #ff9900;"><b><a style="color: #ff9900;" href="https://www.persianmizban.com/web-hosting/iran">کوروش</a></b></span> یا <b><span style="color: #ff9900;"><a style="color: #ff9900;" href="https://www.persianmizban.com/web-hosting/germany">آدولف</a></span></b> و یا <span style="color: #ff9900;"><b><a style="color: #ff9900;" href="https://www.persianmizban.com/web-hosting/wordpress">جگوار</a></b></span> بهره بگیرید.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="host-why-pm">
+    <div class="container">
+        <div class="grid col-1 a-items-center pb-8" lg="cols-8">
+            <div lg="col-3" class="py-4">
+                <img src="/img/img-why-pm.png" alt="پرشین میزبان" class="w-full mx-auto d-block" i-lg="max-w-100">
+            </div>
+            <div lg="col-5">
+                <div class="text-w-semibold text-150 mb-8 text-primary">ذخیره سازی نوین</div>
+                <ul class="text-80 text-lh-5 mb-2">
+                    <li>ذخیره اطلاعات سایت و دیتابیس شما بر روی 3 هارد دیسک متفاوت با تکنولوژی همزمان Raid و Data Mirroring</li>
+                    <li>
+                        افزایش سرعت خواندن و نوشتن اطلاعات سایت شما بر روی هارد دیسک به دلیل استفاده از چندین هارد فوق سریع SSD NVMe
+                    </li>
+                    <li>
+                        ما از تمامی اطلاعات میزبانی شما به طور مداوم بکاپ کامل تهیه میکنیم تا همیشه از امکان بازیابی سایتتان اطمینان داشته باشید
+                    </li>
+                </ul>
+
+
+                <div class="text-w-semibold text-150 mb-8 text-primary">پشتیبانی پرآوازه</div>
+                <ul class="text-80 text-lh-5">
+                    <li>میزبانی شما در مرکز پشتیبانی پرشین میزبان 24 ساعته مانیتور میشود، تا در صورت بروز هر گونه اختلال، سریعا برای رفع آن اقدام کنیم.
+                    </li>
+                    <li>
+                        تیم پشتیبانی ما مفتخر است که در هر زمان راهنما و راهگشای شما باشد، فقط کافیست با ما در تماس باشید.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="faq">
+    <div class="container" >
+        <div class="title" >
+            <div class="icon-faq"></div>
+            <div class="my-auto">
+                <div class="text-110 text-w-semibold" >سوالات متداول</div>
+                <div class="text-80" >با پشتیبانی 24 ساعته و همه روزه سرویس های میزبانی پرشین میزبان سوالی باقی نمی ماند، با خیال راحت به توسعه کسب و کارتان بپردازید.</div>
+            </div>
+        </div>
+        
+        <div class="qa" >
+            <div class="d-flex a-items-center" >
+                <div class="icon" ></div>
+                <div class="q" >هاست دانلود چیست؟</div>
+            </div>
+            <div class="a" >در ساده ترین تعریف میتوان گفت: هاست دانلود به هاستی گفته میشود که فضای ذخیره سازی با حجم بالا بر روی سروری میزبانی شود که توانایی دانلود و آپلود همزمان بالایی داشته باشد، تا ترافیک ولود کم تری متوجه سایت اصلی شما بشود. همین طور در هاست دانلود به دلیل داشتن فضای زیاد و مقرون به صرفه بودن، امکان ذخیره سازی دیتا و بکاپ های خود را دارید.</div>
+        </div>
+        <div class="qa" >
+            <div class="d-flex a-items-center" >
+                <div class="icon" ></div>
+                <div class="q" >در پلن های هاست دانلود ایران امکان اتصال چند دامنه را دارم؟</div>
+            </div>
+            <div class="a" >در تمام پلن ها امکان Addon Domain و Park Domain نامحدود تنظیم شده و شما میتوانید بدون محدودیت دامنه در هاست دانلودتون اضافه و مدیریت کنید.</div>
+        </div>
+
+
+                <div class="qa" >
+            <div class="d-flex a-items-center" >
+                <div class="icon" ></div>
+                <div class="q" >آیا سخت افزار هاست دانلود متفاوت است؟</div>
+        </div>
+            <div class="a" >کاملا، به صورت کلی مدل سرور های استفاده شده توسط پرشین میزبان در سرور های هاست دانلود برند HP DL380 بوده، که مدل سرور هارد های حجم بالا را ساپورت میکند و مخصوص دیتای سنگین می باشد.</br>همین طور با استفاده از هارد های پرسرعت و حجیم به همراه استفاده از تکنولوژی RAID سرعت و امنیت فایل های شمارا تضمین میکند. این در حالی است که تمام سرور های هاست دانلود مجهز به کارت شبکه فیبرنوری  با ظرفیت 10 گیگابایت دانلود / آپلود همزمان بوده تا دیتای شما هیچ وقت در صف نماند یا متوجه کندی .. نشود.</div>
+        </div>
+                <div class="qa" >
+            <div class="d-flex a-items-center" >
+                <div class="icon" ></div>
+                <div class="q" >تفاوت هاست دانلود ایران نسبت با هاست خارج در چیست؟</div>
+            </div>
+            <div class="a" >هاست دانلود ایران با توجه به ساست های سازمان تنظیم مقررات کشور از محاسبه هزینه ی ترافیک کم تری برخوردار بوده و به صورت کلی سرور های هاست دانلود پرشین میزبان با ترافیک نیم بها ارایه میشود.</br>البته به جز تفاوت گفته شده تفاوت عمده ای در کیفیت و کارایی هاست دانلود ایران و هاست دالود خارج نبوده، چرا که هر دو لوکیشن از شبکه با پورت 10G و ترافیک نامحدود برخوردار هستند.</div>
+        </div>
+                <div class="qa" >
+            <div class="d-flex a-items-center" >
+                <div class="icon" ></div>
+                <div class="q" >آیا تمام پلن ها در هاست دانلود ایران ترافیک نیم بها دارند؟</div>
+            </div>
+            <div class="a" >بله, تمام پلن ها و سرور های میزبانی داخل ایران شرکت پرشین میزبان تعرفه ی محاسبه ترافیک نیم بها دارند.</div>
+        </div>
+        <div class="qa" >
+            <div class="d-flex a-items-center" >
+                <div class="icon" ></div>
+                <div class="q" >آیا می توان از این هاست به تنهایی برای میزبانی سایت استفاده کرد؟</div>
+            </div>
+            <div class="a" >خیر، به دلیل اینکه در هاست دانلود سرویس sql و ایمیل مسدود شده و تنها امکان استفاده از دستورات php و html را دارید.</br> در صورتی که سایت یا اسکریپتی که میخواید استفاده کنید نیاز به sql نداشته باشد، میتوانید از هاست دانلود به عنوان هاست اصلی سایتتون هم استفاده کنید..</div>
+        </div>
+        <div class="qa" >
+            <div class="d-flex a-items-center" >
+                <div class="icon" ></div>
+                <div class="q" >طریقه آپلود فایل بر روی هاست دانلود به چه صورت می باشد؟</div>
+            </div>
+            <div class="a" >امکان آپلود هر نوع فایلی را با استفاده از FTP و قسمت فایل منیجر کنترل پنل سی پنل دارید. همین طور میتوانید فایل های حجیمی را که قصد آپلود در هاست دانلودتون دارید را از طریق تیکت لینک آن را بفرستید تا ما برایتان فرایند آپلود را انجام دهیم. همین طور <b><span style="color: #31218f;"><a style="color: #31218f;" href="https://www.persianmizban.com/vps/iran">سرور مجازی ایران</a></span></b> با سیستم عامل ویندوز هم مناسب انجام آپلود های مکرر و سنگین می باشد.</div>
+        </div>
+        <div class="qa" >
+            <div class="d-flex a-items-center" >
+                <div class="icon" ></div>
+                <div class="q" >چگونه می توانم تنظیماتی اعمال کنم که به صورت خودکار نسخه های بکاپ سایت من روی هاست دانلود ذخیره شود؟</div>
+            </div>
+            <div class="a" >برای ذخیره کردن بکاپ های سایت و سیستم کسب و کار اصلی شما بر روی هاست دانلود تهیه شده از پرشین میزبان، میتوانید با کارشناس های ما مشاوره کنید تا راه کار و روش متناسب با نوع CMS مورد استفاده توسط وب سایت و کسب و کار شما خدمتتان ارائه کنند.</div>
+        </div>
+        <div class="qa" >
+            <div class="d-flex a-items-center" >
+                <div class="icon" ></div>
+                <div class="q" >از چه دامنه ای هنگام سفارش هاست دانلود استفاده کنم؟</div>
+            </div>
+            <div class="a" >شما مجاز به استفاده از هر دامنه ای هنگام سفارش هاست دانلود هستید. اما باید توجه کنید از دامنه ای استفاده کنید که مخصوص فایل های سایت شماست و به آن اختصاص دادید.</br> هر چند بعد از سفارش هاست میتوانید از طریق پنل کاربری در کم تر از چند ثانیه دامنه اصلی هاست رو تعویض کنید.</div>
+        </div>
+        <div class="qa" >
+            <div class="d-flex a-items-center" >
+                <div class="icon" ></div>
+                <div class="q" >آیا از هاست دانلود من بکاپ گرفته میشود؟</div>
+            </div>
+            <div class="a" >با توجه به قانون بین المللی هاست دانلود، از هاست های دانلود به دلیل داشتن حجم بالا بکاپ توسط هاستینگ تهیه نمیشود.</br>اما ما برای اطمینان خاطر دادن به شما در جهت اینکه اطلاعات شما هیچ وقت در پرشین میزبان از بین نمیرد بر روی تمام سرویس های هاست دانلود ارائه شده از سیستم RAID استفاده کردیم.</div>
+        </div>
+        <div class="qa" >
+            <div class="d-flex a-items-center" >
+                <div class="icon" ></div>
+                <div class="q" >آیا برای استفاده از هاست دانلود ایران با سیستم عامل ویندوز لپتاپ یا تلفن همراه امکان پذیر است؟</div>
+            </div>
+            <div class="a" >بله حتما، شما میتوانید با کامپیوتر، لپ تاپ و موبایل با هر سیستم عاملی به راحتی از طریق اینترنت و مرورگر به هاست دسترسی کامل داشته باشید.</div>
+        </div>
+                <div class="qa" >
+            <div class="d-flex a-items-center" >
+                <div class="icon" ></div>
+                <div class="q" >چگونه می توانیم از طریق پرشین میزبان کسب درآمد کنیم؟</div>
+            </div>
+            <div class="a" >از قسمت همکاری در فروش می توانید کسب درآمد کنید. با هر فروش موفق بین 20 تا 40 درصد پورسانت دریافت میکنید. در این خصوص کاربران باید در پرشین میزبان عضو شده و لینک همکاری در فروش مخصوص خودشان را از ناحیه کاربری دریافت کنند.</div>
+        </div>
+        <div class="qa" >
+            <div class="d-flex a-items-center" >
+                <div class="icon" ></div>
+                <div class="q" >پرشین میزبان چه کمپین و آفر های حمایتی برای کسب و کار های تازه تاسیس در نظر گرفته است؟</div>
+            </div>
+            <div class="a" >پرشین میزبان به کسب و کار های نوپا 20 درصد تخفیف برای اولین خرید ارائه میکند، همین طور نیازی به پرداخت هزینه برای دریافت قالب یا افزونه ندارند و موارد فنی مرتبط با سایت یا اپلیکیشن هاشونو به صورت رایگان میتوانند به پشتیبان فنی پرشین میزبان بسپارند. امید داریم با حمایت فنی و مالی از کار آفرین ها قدمی در مسیر حمایت از اشتغال آفرینی برداشته باشیم.</div>
+        </div>
+                <div class="qa" >
+            <div class="d-flex a-items-center" >
+                <div class="icon" ></div>
+                <div class="q" >چرا پرشین میزبان؟</div>
+            </div>
+            <div class="a" >گارانتی عودت وجه 14 روزه<br>ارائه پهنای باند نامحدود در تمام سرویس ها<br>انتقال رایگان اطلاعات سایت مشتری از شرکت های دیگر به پرشین میزبان<br>بهره گیری از فایروال های سخت افزاری قدرتمند به جهت افزایش امنیت در کل شبکه سرویس ها<br>بکاپ گیری منظم روزانه و نگهناری آرشیو بکاپ ها به مدت 7 روز<br>مانیتورینگ 24 ساعته حتی در روز های تعطیل سرور ها به جهت جلوگیری از بروز مشکلات احتمالی<br>استفاده از سرور های بروز و قدرتمند سخت افزاری با مالکیت 100 درصد انحصاری پرشین میزبان</div>
+        </div>
+    </div>
+</section>
+
+<section id="client-info">
+    <div class="container" >
+        <div class="grid cols-2 a-items-center" sm="cols-4" lg="cols-6">
+            <div class="col-2" sm="col-4" lg="col-2" >
+                <img class="w-full mx-auto d-block" i-lg="max-w-(414px)" src="/img/img-inside.png" alt="پرشین میزبان">
+            </div>
+            <div>
+                <div class="box box2" >
+                    <div class="c" >
+                        <div>سال های فعالیت</div>
+                        <div class="gr">+۱۶</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="box" >
+                    <div class="c" >
+                        <div>رضایت کاربران</div>
+                        <div class="gr">۹۸٪</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="box box2" >
+                    <div class="c" >
+                        <div>کاربران فعال</div>
+                        <div class="gr">+۹۰۰۰</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="box" >
+                    <div class="c" >
+                        <div>هاست های فعال</div>
+                        <div class="gr">+۵۶۰۰۰</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="client-comments">
+    <div class="container" >
+        <div class="p-relative" >
+            <div class="d-flex mb-8 pl-2" >
+                <div class="title" >
+                    <div class="icon-faq"></div>
+                    <div class="my-auto">
+                        <div class="text-120 mb-1.5 text-w-semibold" >نـظر مشتـریان</div>
+                        <div class="text-60 ltp pb-1" >USERCOMMENTS</div>
+                    </div>
+                </div>
+                <div class="button">
+                    <a href="../contact-us/#contact-comments"><div>ارسال نظر</div></a>
+                </div>
+            </div>
+
+            <div class="swiper client-swiper-slider" sm="mr-12">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="grid cols-1" md="cols-2" >
+
+                            <div class="user-cm">
+                                <div class="d-flex a-items-center mb-4">
+                                    <img src="/profile/digimoviz.png" width="64" height="64" loading="lazy" alt="دیجی مویز" >
+                                    <div class="text-primary text-w-semibold" >سامان رمضانی</div>
+                                    <div class="text-80 mr-auto" >دیجی مویز</div>
+                                </div>
+                                <div class="cm" >
+                                    با افتخار میتوان گفت ما جزو 3 سایت برتر فیلم و سریال در ایران هستیم. با وجود ترافیک بالا و مشکلات زیر ساختی که در هاستینگ های قبلی داشتیم مدت ها دنبال یک میزبانی مطمین بودیم، تا با سرور و کارشناس های مجرب پرشین میزبان آشنا شدیم.
+                                </div>
+                            </div>
+
+                            <div class="user-cm">
+                                <div class="d-flex a-items-center mb-4">
+                                    <img src="/profile/myfilm.png" width="64" height="64" loading="lazy" alt="مای فیلم" >
+                                    <div class="text-primary text-w-semibold" >علیرضا کریمی</div>
+                                    <div class="text-80 mr-auto" >مای فیلم</div>
+                                </div>
+                                <div class="cm" >
+                                    برند مای فیلم با بیش از چند میلیون کاربر و بیش از 5 هزار بازدید همزمان در حال فعالیت است. در هاستینگ های قبلی که میزبانی میشدیم سایتمان با کندی لود میشد، تا تمام سرویس هامون رو به پرشین میزبان منتقل کردیم، در حال حاضر سایت ما کم تر از 1 ثانیه لود میشود.
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="grid cols-1" md="cols-2" >
+
+                            <div class="user-cm">
+                                <div class="d-flex a-items-center mb-4">
+                                    <img src="/profile/opencart.png" width="64" height="64" loading="lazy" alt="اپن کارت" >
+                                    <div class="text-primary text-w-semibold" >صمد دانش خواه</div>
+                                    <div class="text-80 mr-auto" >اپن کارت فارسی</div>
+                                </div>
+                                <div class="cm" >
+                                    در مجموعه اپن کارت فارسی بیش از 100 قالب اپن کارتی فروشگاهی داریم، اصل سیستم مدیریت محتوا اپن کارت منابع اختصاصی و با کیفیت نیاز دارد، که با توجه به نصب قالب های گسترده فروشگاهی و پلاگین ها در هاست های پرسرعت پرشین میزبان همیشه سرعت لود 1 الی 2 ثانیه ای رو تجربه کردیم.
+                                </div>
+                            </div>
+
+                            <div class="user-cm">
+                                <div class="d-flex a-items-center mb-4">
+                                    <img src="/profile/asanapps.png" width="64" height="64" loading="lazy" alt="آسان اپس" >
+                                    <div class="text-primary text-w-semibold" >سید حجت حسینی</div>
+                                    <div class="text-80 mr-auto" >آسان اپس</div>
+                                </div>
+                                <div class="cm" >
+                                    ما در مجموعه آسان اپس بیش از 10 نوع محصول متنوع داریم. که اپ ساز سیریلا هم شامل محصولات ما میشود. این محصول در سراسر وب بیش از چند هزار کاربر دارد که قابلیت ساخت اپلکیشن اختصاصی سایت های فروشگاهی و وبلاگی را در 30 ثانیه امکان پذیر میکند. ما مدت ها دنبال سرور قوی به همراه کانفیگ امن و سریع برای راه اندازی این زیرساخت بودیم، تا تونستیم به پرشین میزبان اعتماد کنیم. ما پرشین میزبان رو به مشتری هامون پیشنهاد میکنیم.
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="grid cols-1" md="cols-2" >
+
+                            <div class="user-cm">
+                                <div class="d-flex a-items-center mb-4">
+                                    <img src="/profile/bahabin.png" width="64" height="64" loading="lazy" alt="بهابین" >
+                                    <div class="text-primary text-w-semibold" >مهدی وادونی</div>
+                                    <div class="text-80 mr-auto" >بهابین</div>
+                                </div>
+                                <div class="cm" >
+                                    ما در مجموعه بهابین به دلیل همکاری مستقیم با بانک مرکزی، نیاز به سرور اختصاصی از لوکیشن های مختلف داشتیم. مدت ها بدنبال شرکتی معتبر و متعهد از نظر پشتیبانی بودیم. چراکه ما نیاز به پشتیبانی 24 ساعته همه روزه واقعی داشتیم. ما 5 سال است که به پرشین میزبان اعتماد کردیم.
+                                </div>
+                            </div>
+
+                            <div class="user-cm">
+                                <div class="d-flex a-items-center mb-4">
+                                    <img src="/profile/torob.png" width="64" height="64" loading="lazy" alt="ترب" >
+                                    <div class="text-primary text-w-semibold" >علی بابایی چشمه احمد رضایی</div>
+                                    <div class="text-80 mr-auto" >ترب</div>
+                                </div>
+                                <div class="cm" >
+                                    به جرأت میتوان گفت پرشین میزبان از موفق ترین شرکت ها در حوزه هاستینگ و ارائه ی خدمات دیتاسنتری می باشد. طی چند سال گذشته در کنار این خدمات گسترده و مطمئن, تیم های مجرب فنی بسیار قوی این شرکت باعث اطمینان خاطر بوده و تجربه ی لذت بخشی از یک میزبان امن داشته ایم.
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="grid cols-1" md="cols-2" >
+
+                            <div class="user-cm">
+                                <div class="d-flex a-items-center mb-4">
+                                    <img src="/profile/damdaran.png" width="64" height="64" loading="lazy" alt="دامداران" >
+                                    <div class="text-primary text-w-semibold" >نور الدین نور بخش جعفری دهکردی</div>
+                                    <div class="text-80 mr-auto" >دامداران</div>
+                                </div>
+                                <div class="cm" >
+                                    برای ما خیلی مهمه که سایتمان بسیار پرسرعت، پایدار، پرقدرت و قابل اعتماد باشد تا بتواند ترافیک زیاد را تحمل کند. به دنبال هاستینگی بودیم که قابل اعتماد باشه تا هاست وردپرس پرشین میزبان را به مدیر فنی ما توصیه کردند.
+                                </div>
+                            </div>
+
+                            <div class="user-cm">
+                                <div class="d-flex a-items-center mb-4">
+                                    <img src="/profile/vahabonline.png" width="50" height="50" loading="lazy" alt="وهاب آنلاین" >
+                                    <div class="text-primary text-w-semibold" >وهاب سید چورته</div>
+                                    <div class="text-80 mr-auto" >وهاب آنلاین</div>
+                                </div>
+                                <div class="cm" >
+                                    ما در مجموعه وهاب آنلاین خدمات مربوط به CMS های WHMCS و وردپرس را به صورت اختصاصی انجام میدهیم. ما طی 15 سال گذشته در زمینه ی WHMCS فارسی خدمت کرده ایم و قالب و افزونه های اختصاصی متنوع ای را برای اولین بار نوشته ایم. با این سابقه و لیست کثیری از مشتریان به دنبال هاستینگی با سرور های قوی و سریع بودیم که با پرشین میزبان آشنا شدیم.
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="navigarion" >
+                <div class="slide-prev" ></div>
+                <div class="bar" ><div></div></div>
+                <div class="slide-next" ></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<?php include '../partials/footer.php'; ?>
